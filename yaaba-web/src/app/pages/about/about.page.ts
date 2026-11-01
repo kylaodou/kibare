@@ -88,7 +88,7 @@ const CREDITS: { t: L; items: L[] }[] = [
     t: { fr: 'Intelligence artificielle', en: 'Artificial intelligence' },
     items: [
       { fr: 'Traductions en mooré, dioula et fulfulde : premier jet par le modèle NLLB-200 (Meta), signalé sur chaque conte et à valider par un locuteur.', en: 'Translations into Mooré, Dioula and Fulfulde: first draft by the NLLB-200 model (Meta), flagged on each tale and awaiting review by a speaker.' },
-      { fr: 'Voix de lecture : synthèse vocale (Edge TTS en français et en anglais, MMS-TTS de Meta en langues nationales). Les voix de la communauté sont de vraies voix.', en: 'Read-aloud voices: speech synthesis (Edge TTS in French and English, Meta’s MMS-TTS in national languages). Community voices are real people.' },
+      { fr: 'Voix de lecture : synthèse vocale par IA, en français, en anglais et en langues nationales. Les voix de la communauté sont de vraies voix.', en: 'Read-aloud voices: AI speech synthesis, in French, English and the national languages. Community voices are real people.' },
       { fr: 'Illustrations vectorielles et logo : créations originales du projet.', en: 'Vector illustrations and logo: original creations of the project.' },
     ],
   },

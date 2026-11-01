@@ -17,7 +17,7 @@ Projet du module *Technologies Web Multimédia* — Master 1.
 | **33 contes** | Toutes les régions représentées : Yennenga, le Faux Départ du Moogho Naaba, les crocodiles de Sabou, le lac Bam, les pics de Sindou, contes gourmantchés (Équilbecq), gouin, lyélé, contes du recueil préscolaire MENAPLN/UNICEF… Chaque conte cite sa **source**. |
 | **Lecteur** | Illustration à gauche, **texte intégral** à droite ; paragraphe actif synchronisé avec l'image et la voix ; taille du texte réglable ; impression ; partage. |
 | **Langues** | Français et anglais rédigés ; **mooré, dioula, fulfulde** en premier jet de traduction automatique (NLLB-200), **signalé dans le lecteur** et à valider par des locuteurs. |
-| **Narration** | Un MP3 par paragraphe : voix neuronales (fr, en) et MMS-TTS (langues nationales) ; voix réelles de la communauté publiées après modération ; synthèse du navigateur en secours. |
+| **Narration** | Un MP3 par paragraphe en cinq langues, en voix de synthèse par IA ; voix réelles de la communauté publiées après modération ; synthèse du navigateur en secours. |
 | **Ambiance sonore** | Un enregistrement par région : archives de l'Exposition de 1931 (Gallica/BnF, domaine public), balafon sénoufo (CC BY 4.0) ; balafon synthétisé (Web Audio API) pour le Sahel. |
 | **Narration interactive** | Choix à faire au fil du récit, glossaire contextuel (mooré, fulfulde…), morale, quiz, passeport de tampons et badges. |
 | **Communauté** | Inscription / connexion (JWT), proposition de contes ou de voix, **notifications** (nouvelle demande pour l'admin, acceptation ou refus pour l'auteur), page des contributeurs, **commentaires** avec réponses. |
@@ -99,4 +99,4 @@ commentaires nécessitent l'API.
   « Les contes et légendes moaga : entre tradition orale, culture et éducation », *Recherches & Regards d'Afrique*, 2022.
 - **Sons** : Gallica/BnF 1931 (domaine public, via Wikimedia Commons) ; balafon par KONE IF (CC BY 4.0).
 - **Cartes** : geoBoundaries (CC BY 4.0) ; fond Esri, © contributeurs OpenStreetMap.
-- **IA** : NLLB-200 et MMS-TTS (Meta), Edge TTS — usage signalé dans l'interface.
+- **IA** : NLLB-200 (Meta) pour les traductions, synthèse vocale par IA pour la narration — usage signalé dans l'interface.
