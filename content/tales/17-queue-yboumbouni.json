@@ -1,0 +1,429 @@
+{
+  "slug": "la-queue-de-l-yboumbouni",
+  "type": "conte",
+  "region": "est",
+  "place": "Gayéri",
+  "coords": [
+    12.65,
+    0.49
+  ],
+  "people": "Gourmantché",
+  "language": "gulmancema",
+  "duration": 6,
+  "age": 6,
+  "featured": true,
+  "cover": 3,
+  "tags": [
+    "aventure",
+    "chant",
+    "enfant héros",
+    "animal fabuleux"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Diandia et la queue de l'Yboumbouni",
+      "subtitle": "Le petit chasseur et la bête fabuleuse",
+      "summary": "Trois jours après sa naissance, Diandia réclame déjà un arc. Son père lui lance un défi : rapporter la queue de l'Yboumbouni, la plus belle bête du monde. Le petit marche vers le Levant… et c'est une chanson qui lui sauvera la vie.",
+      "moral": "Le courage et la malice valent mieux que la force, et une belle chanson peut désarmer les plus redoutables."
+    },
+    "en": {
+      "title": "Diandia and the Tail of the Yboumbouni",
+      "subtitle": "The little hunter and the fabulous beast",
+      "summary": "Just three days after his birth, Diandia already asks for a bow. His father sets him a challenge: bring back the tail of the Yboumbouni, the most beautiful beast in the world. The boy walks towards the rising sun… and a song will save his life.",
+      "moral": "Courage and cunning are worth more than strength, and a beautiful song can disarm the most fearsome."
+    },
+    "moore": {
+      "title": "A Diandia ne Yboumbouni wã yagrã",
+      "subtitle": "Bãng-y tɩ b yãaga zĩm-bi-bɩɩgã.",
+      "summary": "A rogmã rasem a tãab bal poore, a Diandia zoe n kosame tɩ b kõ-a koomã. A ba wã yãka a sẽn na n maan bũmb ningã: wa ne Yboumbouni, rũnda sẽn yaa kãseng n yɩɩd dũniyã gill zugã. Bi-riblã kẽnga wĩntoogã sẽn watã nengẽ... la yɩɩl n na n fãag-a.",
+      "moral": "Kẽer la yam-yãkr yɩɩda pãng, la yɩɩl sẽn yaa sõma tõe n kɩtame tɩ ned ning sẽn zoet rabeemã paam raood wʋsgo."
+    },
+    "dioula": {
+      "title": "Diandia ni Yboumbouni ka kɔlɔnw",
+      "subtitle": "Jagokɛla fitini ni wara cɛɲumanba",
+      "summary": "A wolo tile saba dɔrɔn, Diandia y'a ɲini ka biri a kɔrɔ. A facɛ y'a ɲini a fɛ ko ale ka Yboumbouni suu ta, min ye wara cɛɲumanba ye. Deen be tagara tile bɔyɔrɔ la. ani dɔnkili dɔ bena a kisi.",
+      "moral": "K'a sɔrɔ mɔgɔ jaɲa ka bon ni a yɛrɛko ye."
+    },
+    "fulfulde": {
+      "title": "Diandia e ɓaawo Yboumbouni",
+      "subtitle": "Ɓiɗɗo yi'uɗo e dabbaaji mawɗi",
+      "summary": "Ko balɗe tati ɓaawo danygol maako, Diandia ɗon yiɗi jaɓugo. Baaba maako ɗon hokka mo haala: o warta ɓaawo Yboumbouni, dabbaaji ɗi ɓuri mawnugo nder duuniyaaru. Ɓiɗɗo on ɗon yaha to naange wurto... nden yimbe ɗon hisna yonki maako.",
+      "moral": "Ceyɗol e cembiɗɗo ɓuri sembe, nden yimbe mawnde waaway ɓurugo hulɓuki."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 20,
+            "y": 26
+          },
+          {
+            "k": "man-talk",
+            "x": 44,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child-up",
+            "x": 58,
+            "c": "#C9822B"
+          },
+          {
+            "k": "spear",
+            "x": 66
+          },
+          {
+            "k": "granary",
+            "x": 84,
+            "y": 24
+          }
+        ]
+      },
+      "text": {
+        "fr": "Trois jours seulement après sa naissance, le petit Diandia dit à son père Tangari : « Donne-moi un arc à la corde très solide. » Le père lui donna un arc à corde de peau de biche : elle cassa net. Puis de peau de buffle, puis de peau d'éléphant : toutes cassèrent. Il fallut que le père donne le tendon de son propre jarret pour faire une corde assez forte.",
+        "en": "Only three days after he was born, little Diandia said to his father Tangari: “Give me a bow with a very strong string.” His father gave him a bow strung with antelope hide: it snapped. Then buffalo hide, then elephant hide: they all snapped. In the end his father had to give the tendon of his own leg to make a string strong enough.",
+        "moore": "La rasem a tãab bal n looge, bi-bɩɩg a Diandia yeela a ba wã t'a Tangari: \"Bɩ y kõ maam boog sẽn tar koabg sẽn yaa kãsenga\". A baaba kõo yẽnda koom-koglg sẽn bĩng ne nin-buudã peen. B fãa ra paasa. A ba wã ra segd n kõ-a lame t'a naoã gãneg a meng tɩ b tõog n kɩt tɩ bãndgã pãng paase.",
+        "dioula": "A wolo tile saba dɔrɔn, Diandia y'a fɔ a facɛ Tangari ye ko: \"I ka kalan dɔ di ne ma min fanga ka bon kosɔbɛ.\" A facɛ ye kalan dɔ di a ma min tun sirinin lo ni kɔnɔbara ye. O kɔ, a y'o kɛ. O kɔ, misiw tun be dogo. Elefanw fana tun be dogo: u bɛɛ tun ye cɛnni kɛ. A facɛ tun ka ɲi k'a yɛrɛ sen don a la walisa a ka juru dɔ kɛ min barika ka bon.",
+        "fulfulde": "Ko balɗe tati ɓaawo jibina maako, Diandia mawɗo wi'i baaba mum Tangari: Haa mi ardu bee kaɓirɗum sembe. Baaba maako hokki mo ardu huɓɓunde e leggal antelope: o jeyi. Nden buffalo ɓoydi, nden elephant ɓoydi: ɓe fuu ɓe maaki. Haa fuɗɗoode baaba maako footi hokki ɓandu hoore mum ngam waɗugo laral ngal sembe."
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 86,
+            "y": 240
+          },
+          {
+            "k": "child",
+            "x": 40,
+            "c": "#C9822B"
+          },
+          {
+            "k": "acacia",
+            "x": 16,
+            "y": 26
+          },
+          {
+            "k": "grass",
+            "x": 60
+          },
+          {
+            "k": "birds",
+            "x": 70,
+            "y": 240
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Quand tu voudras m'offrir la queue d'une bête, lui dit son père, ne m'apporte que celle d'un Yboumbouni. » L'Yboumbouni est plus beau et plus grand que tous les animaux : assez fort pour porter cent éléphants, avec une longue queue ornée de cauris blancs et de perles d'or. Diandia marcha sept cents ans vers le Levant, là d'où viennent les choses extraordinaires.",
+        "en": "“When you wish to give me an animal's tail,” his father said, “bring me nothing but the tail of a Yboumbouni.” The Yboumbouni is more beautiful and taller than any other animal: strong enough to carry a hundred elephants, with a long tail adorned with white cowries and golden beads. Diandia walked for seven hundred years towards the East, where extraordinary things come from.",
+        "moore": "Yãmb sã n dat n kõ maam rũmsgugẽ, a ba wã yeela maam yaa: \"Bɩ y wa ne Yboumbouni rẽnna. \" Yboumbooni wã yaa bõn-sõngo la sẽn tar pãng tɩ tõe n zãad zĩm dãmb koabga, t'a gãnegd a zũng sẽn be ne bĩisã la sãnem tãnsã. A Diandia kẽnga yʋʋm 700 n kẽng Wɩɩgã, zĩig ning bõn-kãsems sẽn yaa toor-toorã yita.",
+        "dioula": "Ni i b'a fɛ ka begɛnw ta, a facɛ ko: \"I kana foyi di ne ma ni Yboumbouni ta tɛ.\" Yboumboun ye begɛnw bɛɛ cɛɲumanba ye ani u lɔyɔrɔ ka bon. U barika ka bon fɔɔ ka se ka filen kɛmɛ ta. O kɔ, u be to k'u kunbiri gwan ni misi jɛmanw ye ani saninlamanw ye. Diandia ye saan kɛmɛ wolonwula kɛ ka taga kɔrɔn fɛ. Kooba bɔra yɔrɔ min na.",
+        "fulfulde": "To on yiɗi hokkugo yam ɓanndu, baaba maako wi'i, ɗa wurtammi ko ɓurɗum ɓanndu Yboumbouni. Yboumboun ɓuri hayre e mawnugo diga dabbaaji goɗɗi: ɗon sembe ngam darnugo lifaaje 100, bee ɓanndu maɓɓuɗo bee laral njamndi e geese jaŋde. Diandia ɗon yaha duuɓi 700 haa fuunaaŋge, to kuuɗe manjum ɓadake."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "moon",
+            "x": 80,
+            "y": 300
+          },
+          {
+            "k": "yboumbouni",
+            "x": 42,
+            "s": 0.9
+          },
+          {
+            "k": "jar",
+            "x": 66,
+            "s": 1.4
+          },
+          {
+            "k": "child",
+            "x": 74,
+            "s": 0.8,
+            "c": "#C9822B"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Dans la forêt des Yboumbouni, il ne trouva que leur mère, seule. Touchée par le courage du petit, elle le cacha dans la jarre à viande séchée : « Ne fais aucun bruit, ou mes enfants te dévoreront. » À minuit, pendant que tous dormaient, elle coupa la queue du plus jeune et la donna à Diandia, qui s'enfuit en courant.",
+        "en": "In the forest of the Yboumbouni he found only their mother, alone. Moved by the boy's courage, she hid him in the jar of dried meat: “Don't make a sound, or my children will devour you.” At midnight, while they all slept, she cut off the youngest one's tail and gave it to Diandia, who ran away as fast as he could.",
+        "moore": "Yboumbouni wã weoogẽ, a yãaga b ma bal n be. A sẽn paam yãgrã, a solg-a lame n tɩgl ne namsg gãagẽ: \"Da maan yɩɩr ye, fo sã n pa wa rɩt m kambã\". Zĩig sʋka, b fãa sẽn da gõeeme, a kaoo sullã zoob n kõ a Diandia. La yẽ zoeeme tao-tao.",
+        "dioula": "Yumbouni ka yiritu kɔnɔ, a ye u bamuso dɔrɔn lo sɔrɔ. A y'a dogo a ka cɛfariya la. O kama, a ye denɲɛnin suu tigɛ k'a di Diandia ma. Ale bolila joona.",
+        "fulfulde": "Nder leɗɗe Yboumbouni o tawi tan inna maɓɓe, go'oto. Ngam sembe ɓiyum, o suuɗi mo nder kuuje leɗɗe: Taa waɗugo ko haani, ngam ɓiɓɓe am ɓe nyaama on. Ha wakkere jemma, wakkati ɓe fuu ɗaanii, o taƴi ɓii-koore maako bee nduu e hokki ɗum Diandia, mo ɗon hooti bana no o waawi."
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 14,
+            "y": 240
+          },
+          {
+            "k": "yboumbouni",
+            "x": 30,
+            "s": 0.8,
+            "a": "a-gallop"
+          },
+          {
+            "k": "yboumbouni",
+            "x": 12,
+            "s": 0.6,
+            "a": "a-gallop"
+          },
+          {
+            "k": "child-up",
+            "x": 72,
+            "c": "#C9822B",
+            "a": "a-hop"
+          },
+          {
+            "k": "drum",
+            "x": 86
+          }
+        ]
+      },
+      "text": {
+        "fr": "Au réveil, chaque jeune Yboumbouni chanta sa chanson : « Ma queue chasse-éléphants est-elle bien là ? Figuilan, dianyeu ! La mienne y est ! » Le plus petit chanta : « La mienne n'y est pas ! » Ils suivirent la piste de Diandia. Juste avant d'être rattrapé, le petit se retourna et chanta : « Ô père, ô père, l'Yboumbouni va me manger ! »",
+        "en": "When they woke, each young Yboumbouni sang its song: “Is my elephant-chasing tail still here? Figuilan, dianyeu! Mine is here!” The smallest sang: “Mine is not here!” They followed Diandia's trail. Just before they caught him, the boy turned round and sang: “O father, o father, the Yboumbouni is going to eat me!”",
+        "moore": "B sẽn yikã, b fãa ra yɩɩnda woto: \"Mam zo-rũng yãagda m buudu? Figuilan, a Diana! Mam sẽn be wã bee ka! Sẽn yaa bilfã yɩɩla: Mam sẽn pa be ka! B tũuda a Diandia. B sẽn wa n yõk-a wã, bi-bɩɩgã wẽnga a poorẽ n yɩɩl woto: \"Ba, ba, Yboumbouni na n dɩka maam!\"",
+        "dioula": "U ye wuli tuma min na, Yboumbouni sunguru kelen kelen bɛɛ y'a ka dɔnkili la ko: \"Yala ne be filenw kɔ wa? Figuilan, Diane! I ka kan k'a ye ko a tɛ se ka foyi kɛ. Ne ta ye yan! Mɔgɔ fitinin bɛɛ tun b'a fɔra ko: Ne tɛ yan! U tugura Diandia kɔ. Sanni u k'a minɛ, den y'a kɔ don a kaan na ko: \"Baba! Baba! Yumbouni bena ne domu!\"",
+        "fulfulde": "Nde ɓe ummito, Yboumbouni gooto e go'o ɗon werla yimbe maako: Ko woni ɓaawo ma? Figuilan, dianyeu! Miina ɗon haa! Ɓurɗo ɓooyma wurtini: Miina ɗon haa yaasi! Ɓe tokki laawol Diandia. Ɗon ɗon ɓaawo ɓe nangi mo, suka on tuuti o windi: \"O baaba, o baaba, Yboumbouni ɗon nyaama am!\""
+      },
+      "choice": {
+        "q": {
+          "fr": "Que vont faire les Yboumbouni en entendant la chanson ?",
+          "en": "What will the Yboumbouni do when they hear the song?",
+          "moore": "B sã n wa kelge, bõe la b na n maan?",
+          "dioula": "Yumbouniw bena mun lo kɛ n'u ye dɔnkili nin mɛn?",
+          "fulfulde": "Ko Yboumbouni'en waɗata to ɓe nani nden werra?"
+        },
+        "options": [
+          {
+            "fr": "Le dévorer aussitôt",
+            "en": "Devour him at once",
+            "moore": "Kẽng-y-yã-a tao-tao.",
+            "dioula": "Aw ye a domu joona.",
+            "fulfulde": "Hono ɗon nyaama mo."
+          },
+          {
+            "fr": "Aller chercher leur mère pour qu'elle l'entende",
+            "en": "Fetch their mother so she can hear it",
+            "moore": "Kẽng-y b ma wã tɩ yẽ wʋm.",
+            "dioula": "Aw ye na n'u bamuso ye walisa a k'a lamɛn.",
+            "fulfulde": "Wondiraama e inna maɓɓe ngam o nanngina ɗum."
+          },
+          {
+            "fr": "Pleurer",
+            "en": "Cry",
+            "moore": "Waas-y y yãbre.",
+            "dioula": "A ka kasi",
+            "fulfulde": "Njooyɗe"
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "La chanson leur plut tant qu'ils firent demi-tour pour la faire entendre à leur mère !",
+          "en": "They liked the song so much that they turned back to let their mother hear it!",
+          "moore": "B ra nonga yɩɩl-kãngã hal tɩ b leb n kõ b ma wã t'a wʋm-a!",
+          "dioula": "O dɔnkilila diyara u ye kosɔbɛ fɔɔ u y'u kuun yɛlɛma ka taga a fɔ u bamuso ye.",
+          "fulfulde": "Ɓe ngiɗi nden werra masin, ɓe ɓaawo ngam ɓe accaama to maama maɓɓe!"
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "hut",
+            "x": 70,
+            "y": 26
+          },
+          {
+            "k": "man-up",
+            "x": 40,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child-up",
+            "x": 52,
+            "c": "#C9822B"
+          },
+          {
+            "k": "woman-up",
+            "x": 26
+          },
+          {
+            "k": "drum",
+            "x": 14
+          }
+        ]
+      },
+      "text": {
+        "fr": "La chanson plut tant aux Yboumbouni qu'ils retournèrent chercher leur mère pour qu'elle entende chanter un humain. À chaque fois qu'ils revenaient, Diandia chantait de nouveau, et ils repartaient. Si bien qu'il arriva sain et sauf au village et offrit à son père la queue merveilleuse de l'Yboumbouni.",
+        "en": "The Yboumbouni liked the song so much that they went back to fetch their mother so she could hear a human sing. Each time they returned, Diandia sang again, and off they went once more. And so he reached the village safe and sound and gave his father the marvellous tail of the Yboumbouni.",
+        "moore": "A Yboumbouni nebã ra nonga yɩɩl-kãngã hal tɩ b lebg n wa tɩ bool b ma wã t'a wʋm ninsaal sẽn yimdã. B sã n wa, a Diandia leb n yɩɩnda la b le yikame. A sẽn wa n ta tẽn-kãng pʋgẽ wã, a paama laafɩ la a kõ a ba wã Yboumbouni wã yageng sẽn yaa kãsenga.",
+        "dioula": "O dɔnkilila diyara Yboumbouni somɔgɔw ye kosɔbɛ fɔɔ u kɔsegira ka na u bamuso weele walisa a k'a lamɛn. Tuma o tuma u kɔsegitɔ, Diandia tun be to ka dɔnkili la tugun. O kɔ, u bɔra yen tugu. O kama, a sera dugu la kɛnɛma ani ka Yboumbouni kɔlɔn cɛɲumanba di a facɛ ma.",
+        "fulfulde": "Yimɓe Yboumbouni yiɗde ndeen yimbe haa ɓe coodi ngam ɓe njaɓɓaama maama maɓɓe ngam o nanngina yimɓe ɗon wooda. Ko nde ɓe warnoo, Diandia fuɗɗii werlaade, nden ɓe njahi. Ngam maajum o yotti gariiri ɗon e ɓernde mum, hokki baaba maako dammugal Yboumbouni."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quel âge a Diandia quand il demande un arc ?",
+        "en": "How old is Diandia when he asks for a bow?",
+        "moore": "A Diandia sẽn na n kos tɩ b kõ-a zoodo, a tara yʋʋm bʋgo?",
+        "dioula": "Diandia be saan joli la tuma min na a b'a fɛ ka bow ta?",
+        "fulfulde": "How old is Diandia when he asks for a bow? Ko duuɓi meeɗi o ƴeewa ngam mo yaafana ɗum?"
+      },
+      "options": [
+        {
+          "fr": "Trois jours",
+          "en": "Three days",
+          "moore": "rasem a tãab pʋgẽ.",
+          "dioula": "Loon saba kɔnɔ.",
+          "fulfulde": "Balɗe tati"
+        },
+        {
+          "fr": "Trois ans",
+          "en": "Three years",
+          "moore": "Yʋʋm a tãab pʋgẽ",
+          "dioula": "Saan saba kɔnɔ",
+          "fulfulde": "duuɓi tati"
+        },
+        {
+          "fr": "Treize ans",
+          "en": "Thirteen years",
+          "moore": "Yʋʋm 13 pʋgẽ",
+          "dioula": "Saan 13 kɔnɔ",
+          "fulfulde": "duuɓi sappo e tati"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Dans quelle direction marche-t-il ?",
+        "en": "Which direction does he walk?",
+        "moore": "A kẽnda sor bʋg zugu?",
+        "dioula": "A be tagara sira juman lo la?",
+        "fulfulde": "Toonde o ɗon yaha?"
+      },
+      "options": [
+        {
+          "fr": "Vers le Levant (l'est)",
+          "en": "Towards the East",
+          "moore": "D sẽn kẽngd wa rɩtgã",
+          "dioula": "Ka taga kɔrɔn fɛ",
+          "fulfulde": "To Fuɗnaange"
+        },
+        {
+          "fr": "Vers le nord",
+          "en": "North",
+          "moore": "Tẽns sẽn be rɩtgẽ wã",
+          "dioula": "Saheli fan fɛ",
+          "fulfulde": "Naatowol"
+        },
+        {
+          "fr": "Vers la mer",
+          "en": "Towards the sea",
+          "moore": "N kẽngd ko-kãsengã nengẽ.",
+          "dioula": "Ka taga kɔgɔji fan fɛ.",
+          "fulfulde": "To maayo"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Qu'est-ce qui sauve Diandia ?",
+        "en": "What saves Diandia?",
+        "moore": "Bõe n fãag a Diandia?",
+        "dioula": "Mun lo ye Diandia kisi?",
+        "fulfulde": "Ko waɗi Diandia warti?"
+      },
+      "options": [
+        {
+          "fr": "Son arc",
+          "en": "His bow",
+          "moore": "A zũndã",
+          "dioula": "A ka kalanw",
+          "fulfulde": "Ko o ɗon wi'a"
+        },
+        {
+          "fr": "Une chanson",
+          "en": "A song",
+          "moore": "Yɩɩll a ye.",
+          "dioula": "Dɔnkili dɔ",
+          "fulfulde": "Yimbeere"
+        },
+        {
+          "fr": "Un cheval",
+          "en": "A horse",
+          "moore": "Pʋʋg a ye",
+          "dioula": "So dɔ",
+          "fulfulde": "Lodoowo"
+        }
+      ],
+      "answer": 1
+    }
+  ],
+  "glossary": [
+    {
+      "term": "cauris",
+      "lang": "fr",
+      "def": {
+        "fr": "Petits coquillages blancs qui servaient autrefois de monnaie et de parure en Afrique de l'Ouest.",
+        "en": "Small white shells once used as money and ornaments in West Africa.",
+        "moore": "Wakat ninga, Afirik Wɛtgã nebã ra tũnugda ne b sẽn boond tɩ ligd la bõn-naandsã.",
+        "dioula": "Wagati dɔ la, Afiriki tileben fan fɛ, u tun be nɛgɛsow don ka wari kɛ ani k'u masiri.",
+        "fulfulde": "Ɗe ceede ɓaleere ɗe naftiraama ngam huutore e ko ɓe ngaɗi nder Afrik hirnaange."
+      }
+    },
+    {
+      "term": "Figuilan, dianyeu",
+      "lang": "gulmancema",
+      "def": {
+        "fr": "Onomatopée du conte : le bruit de la queue qui fouette l'air (« flip, flap ! »).",
+        "en": "A sound word from the tale: the swish of the tail cutting the air (“swish, swoosh!”).",
+        "moore": "B sẽn yeel tɩ b na n yɩɩg-a lame wã, yaa woto: \"Bɩ y maan sũ-noog ne a Zezi\".",
+        "dioula": "O kuma kɔrɔ dɔ bɔra o maana la: a ka fɔɲɔ be tigɛra (swish, swoosh!).",
+        "fulfulde": "Wolde kalluɗum diga haala: swish of the tail cutting air (swish, swoosh!)."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « La queue d'Yboumbouni », conte gourmantché publié par F.-V. Équilbecq, Contes indigènes de l'Ouest africain français, t. II (1913, domaine public). Réécriture libre.",
+    "en": "Based on “La queue d'Yboumbouni”, a Gourmantché tale published by F.-V. Équilbecq, Contes indigènes de l'Ouest africain français, vol. II (1913, public domain). Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

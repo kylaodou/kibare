@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.angular/
+./vscode/
+target/
+yaaba-api/data/
+yaaba-api/uploads/
+*.log
+tools/.cache/
+tools/.venv/

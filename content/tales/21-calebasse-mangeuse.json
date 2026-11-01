@@ -1,0 +1,419 @@
+{
+  "slug": "la-calebasse-qui-avalait-tout",
+  "type": "conte",
+  "region": "cascades",
+  "place": "Banfora",
+  "coords": [
+    10.64,
+    -4.76
+  ],
+  "people": "Gouin",
+  "language": "cerma",
+  "duration": 4,
+  "age": 4,
+  "featured": true,
+  "cover": 3,
+  "tags": [
+    "courage",
+    "patience",
+    "chant",
+    "enfants"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "La calebasse qui avalait tout",
+      "subtitle": "Le petit bélier et la grande peur",
+      "summary": "Une calebasse géante roule dans le village en chantant et avale tout sur son passage. Hommes et bêtes se cachent. Seul un petit bélier rêve de lui répondre… mais sa mère veut d'abord qu'il devienne fort.",
+      "moral": "Il faut savoir attendre d'être prêt : la force se construit avec patience, et le courage d'un seul peut sauver tout un village."
+    },
+    "en": {
+      "title": "The Calabash That Swallowed Everything",
+      "subtitle": "The little ram and the great fear",
+      "summary": "A giant calabash rolls through the village singing and swallows everything in its path. People and animals hide. Only a little ram dreams of answering its song… but his mother wants him to grow strong first.",
+      "moral": "We must learn to wait until we are ready: strength is built with patience, and the courage of one can save a whole village."
+    },
+    "moore": {
+      "title": "A Kaalabasã sẽn dɩtẽ bũmb fãa wã",
+      "subtitle": "Pe-bilã la rabeem kãsengã",
+      "summary": "Bãng-y tɩ b sẽn yã bũmb ning fãa, a Zeova na n kɩtame t'a maan woto. Nebã ne rũmsã solgda b mens. Yaa pe-bil sẽn dat n leok a yɩɩl bal la b yãta. La a ma wã datame t'a lebg pãng pipi.",
+      "moral": "D segd n zãmsame tɩ d gũ hal tɩ d wa maan neere. Sũ-mare yaa pãng sẽn na yɩl n paam pãnga, la ned a yembr raood tõe n fãaga tẽn-tẽngã fãa."
+    },
+    "dioula": {
+      "title": "Kalabasigi min ye fɛɛn bɛɛ kunu",
+      "subtitle": "Sagaden fitini ni siranyaba",
+      "summary": "Kalabasigolo belebeleba dɔ be dugu kɔnɔ ka to k'a kaanw fɔ ani a b'o bɛɛ kunu. Mɔgɔw ni begɛnw b'u yɛrɛ dogo. Ni sagaden fitinin dɔ b'a fɛ ka dɔnkili la, a be se k'o jaabi. Nka a bamuso b'a fɛ a ka fanga sɔrɔ fɔlɔ.",
+      "moral": "An ka kan k'a lɔn an be se ka kɔnɔni kɛ fɔɔ ka taga se a laban ma. Ni mɔgɔ dɔ ye muɲuli kɛ, o tigi be fanga sɔrɔ ani a jaa ka gwɛlɛ fana. O la, mɔgɔ kelen dɔrɔn lo be se ka dugu bɛɛ kisi."
+    },
+    "fulfulde": {
+      "title": "Kalabash Mo Wurtini Koo ɗume",
+      "subtitle": "Ɗuum ɓerɗe e kulol mawndi",
+      "summary": "Gooto gooduɗo kalbaas ɗon ɓooyta nder gariiri boo o nyaami fuu ko woni haa laawol maako. Yimɓe e dabbaaji ɗon ɓoyma. Ko go'o ɓeydiiko ɗon ɗaana jaabugo yimbe maako... Ammaa inna maako yiɗi o ɓeyda sembe.",
+      "moral": "En njanngina haa en ɗonno haani: semmbe ina maɓɓata bee hakkiilo, nden cembiɗɗo gooto waaway hisna wuro fuu."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "giant-calabash",
+            "x": 56,
+            "a": "a-roll"
+          },
+          {
+            "k": "hut",
+            "x": 18,
+            "y": 26
+          },
+          {
+            "k": "hut",
+            "x": 84,
+            "y": 30,
+            "s": 0.8
+          },
+          {
+            "k": "palm",
+            "x": 30,
+            "y": 30,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il y a bien longtemps, une calebasse avait poussé dans un village. En grandissant, elle se mit à avaler tout ce qu'elle rencontrait. Elle roulait dans les ruelles en chantant : « Tunmmr, tunmmr, sagajigi kamelma, tunmmr ! » Et dès qu'on entendait sa chanson, hommes et bêtes couraient se cacher.",
+        "en": "Long, long ago, a calabash grew in a village. As it grew bigger, it began to swallow everything it came across. It rolled through the lanes singing: “Tunmmr, tunmmr, sagajigi kamelma, tunmmr!” And as soon as anyone heard its song, people and animals ran to hide.",
+        "moore": "Yʋʋm wʋsg sẽn looge, tẽn-tẽng a ye pʋgẽ, b ra wubda kaabg. A sẽn wa n bɩtẽ wã, a sɩngame n dɩgd bũmb nins fãa a sẽn da yãtã. A ra kẽnda sor-dãmbã n yɩɩndẽ: Tunmmr, tunmmr, sagajigi kamelma, tunmmm! La ned sã n wa wʋm a yɩɩlã, nebã ne rũmsã zoeeme n tɩ solg b mens.",
+        "dioula": "Wagatijan tɛmɛnin na, kalabasisi dɔ tun be falen dugu dɔ kɔnɔ. A tun be bonya tuma min na, a y'a daminɛ ka fɛɛn o fɛɛn sɔrɔ. A tun be to ka tɛmɛ siraw kan k'a fɔ ko: \"Tunmmr, tunmmr, sagajigi kamelma, tunmmm!\" O kɔ, mɔgɔ minw bɛɛ y'a kumakan mɛn dɔrɔn, mɔgɔw ni begɛnw bolila ka taga dogo.",
+        "fulfulde": "Wakkati ɗuɗɗum, wakkati ɗuɗɗi, kalabas ɓesdi nder gariiri. Nde o ɓeydi mawnugo, o fuɗɗi nyaamugo koo ɗume ko o hawti. O ɗon wurtina nder lamɓe ɗon ɗon woya: Tunmmr, tunmmr, sagajigi kamelma, tunmmm! Nden nde goɗɗo nani yimbe maako, yimɓe e dabbaaji ɗon hoola ngam ɓoyugo."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 76,
+            "y": 26
+          },
+          {
+            "k": "ram",
+            "x": 34,
+            "s": 1.3
+          },
+          {
+            "k": "ram",
+            "x": 52,
+            "s": 0.8,
+            "flip": true
+          },
+          {
+            "k": "rock",
+            "x": 66,
+            "s": 0.5
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un jour, un petit bélier dit à sa mère : « Aujourd'hui, je répondrai au chant de la calebasse ! » « Tu es encore trop petit », répondit-elle en lui donnant une grosse pierre. « Casse-la d'abord. » Le petit bélier fonça, et la pierre se fendit en deux. « Ce n'est pas encore assez. Attends. »",
+        "en": "One day, a little ram said to his mother: “Today I will answer the calabash's song!” “You are still too small,” she replied, giving him a big stone. “Break this first.” The little ram charged, and the stone split in two. “That is not enough yet. Wait.”",
+        "moore": "Daar a ye, pe-bil n yeel a ma: \"Bɩ m leok koabg yɩɩl rũndã!\" A yeelame tɩ yẽ ket n yaa yãaga. La a kõ-a kug kãsenga. Pipi, bɩ y kao-a. La karẽn-bilã sɩnga n pʋɩ a yiib tɩ kugã wã lebg bĩngd. La rẽ pa sek ye. La gũus-y.",
+        "dioula": "Loon dɔ, sagajigi fitini y'a fɔ a bamuso ye ko: \"N bena kalabasisi ka dɔnkili jaabi bi!\" A y'a jaabi ko: \"I denmisɛnnin lo halibi\". Fɔlɔ, i ka ban nin na.  Sagaden fitini ye juru don ani kabakuru tilannin lo fila ye. O tɛ se halibi. I kɔnɔni kɛ.",
+        "fulfulde": "Gooto nyalnde, go'o ɓikkoy wi'i mammu maako: \"Hono mi jaaboto yimbe kalbaas!\" \"A ɗonno ko sukaaɓe\", o jaabi mo, o hokki mo kaaƴe mawɗe. Burtina ɗum arande. Ɗuum ɓeydiingo, nden kaaƴe taƴi ɗiɗi. Ɗum haani haa jooni. Tawa."
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 240
+          },
+          {
+            "k": "ram",
+            "x": 46,
+            "s": 1.5,
+            "a": "a-hop"
+          },
+          {
+            "k": "rock",
+            "x": 62,
+            "s": 0.9
+          },
+          {
+            "k": "ram",
+            "x": 80,
+            "s": 1.1,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les saisons passèrent. Chaque fois, sa mère lui donnait une pierre plus grosse, et chaque fois il la cassait en morceaux plus petits. Pendant ce temps, tout le village vivait caché, sans personne pour le protéger. Enfin, le bélier devenu grand réduisit en poussière la plus énorme des pierres. « Maintenant, tu peux répondre », dit sa mère.",
+        "en": "The seasons went by. Each time, his mother gave him a bigger stone, and each time he broke it into smaller pieces. Meanwhile the whole village lived in hiding, with no one to protect it. At last the ram, now fully grown, smashed the biggest stone of all to dust. “Now you may answer,” said his mother.",
+        "moore": "Wakatã loogame. A ma wã da kõ-a-la kug sẽn yaa kãseng n yɩɩd a taabã, la wakat fãa a ra pãbd-a lame. La tẽngã fãa da zĩi n solg b mens tɩ ned pa be sẽn na n kogl-a ye. La baasgo, pe-bilã sẽn lebg kãsenga wã kɩtame tɩ kug ning sẽn yaa kãseng n yɩɩd fãa wã sãam. A ma yeelame: \"Sẽn wa n yaa moasã, y tõe n leokame\".",
+        "dioula": "Saanw tɛmɛna. Tuma o tuma, a bamuso tun b'a di kabakuru belebeleba dɔ ma. A y'o tigɛtigɛ ka kɛ farakuru fitininw ye. O wagati la, dugumɔgɔw bɛɛ tun be dogo. Mɔgɔ si tun tɛ yen k'u tanga. A laban, sagajigi min tun kɔrɔla ka ban, ale ye kabakuru belebeleba dɔ cici fɔɔ a kɛra buguri ye. A bamuso ko: \"Sisan aw be se k'a jaabi.",
+        "fulfulde": "Saawre'en ɗon ɓuwa. Koo nde o mari, mammu maako hokki mo hayre mawnde, nden boo ko'e wakkati fuu o taƴi ɗum haa ɓurɗe. Haa saa'i maajum yimɓe gariiri fuu ɗon njooɗoto, walaa mo ɗowanteeɗo. Haa sakkitii, go'o, ɓeydi mawɗo jooni, o haɓɓii hayre mawnde fuu haa leɗɗe. \"Jooni a waaway jaabugo\", sey inna maako wi'i."
+      },
+      "choice": {
+        "q": {
+          "fr": "Pourquoi la mère fait-elle attendre son petit ?",
+          "en": "Why does the mother make her little one wait?",
+          "moore": "Bõe yĩng tɩ ma wã kɩt t'a bi-puglã gũ?",
+          "dioula": "Mun na bamuso b'a to a deen be kɔnɔni kɛ?",
+          "fulfulde": "Ngam ɗume maama ɗon waɗa ɓikkoy maako ɗon ndaro?"
+        },
+        "options": [
+          {
+            "fr": "Pour qu'il soit assez fort le jour venu",
+            "en": "So that he is strong enough when the day comes",
+            "moore": "Sẽn na yɩl t'a tõog n tall pãnga, daarã sã n wa ta",
+            "dioula": "janko a ka se k'a yɛrɛ tanga o lon na,",
+            "fulfulde": "Ngam o sembe nde nyalnde warugo."
+          },
+          {
+            "fr": "Parce qu'elle a peur de la calebasse",
+            "en": "Because she is afraid of the calabash",
+            "moore": "Bala, a zoeeda gãndgã.",
+            "dioula": "Sabu a be siran kalabassi ɲɛ.",
+            "fulfulde": "Ngam o hulani kalfinaaɗo"
+          },
+          {
+            "fr": "Pour qu'il garde la maison",
+            "en": "So that he guards the house",
+            "moore": "Sẽn na yɩl t'a gũbg roogã.",
+            "dioula": "O la, a bena to ka soo kɔrɔsi.",
+            "fulfulde": "Ngam o ɗon sirya wuro."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Elle savait qu'on n'affronte pas un grand danger sans être prêt.",
+          "en": "She knew you do not face a great danger before you are ready.",
+          "moore": "A ra miime tɩ fo pa segd n wa paam zu-loees wʋsg ye.",
+          "dioula": "A tun b'a lɔn ko i tɛna se ka faratiba dɔ la fɔlɔ.",
+          "fulfulde": "O anndi on ɗon hawtaaki bee haɗiiji mawɗi haa on jeyaa."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "giant-calabash",
+            "x": 66
+          },
+          {
+            "k": "ram",
+            "x": 34,
+            "s": 1.6,
+            "a": "a-gallop"
+          },
+          {
+            "k": "hut",
+            "x": 12,
+            "y": 30,
+            "s": 0.7
+          }
+        ]
+      },
+      "text": {
+        "fr": "Quand la calebasse chanta « Tunmmr, tunmmr… », le bélier répondit de toute sa voix : « Tunmmr, tunmmr, mais sagajigi kamelma ! » Furieuse, la calebasse roula vers lui. Le bélier recula, prit son élan et lui donna un formidable coup de cornes.",
+        "en": "When the calabash sang “Tunmmr, tunmmr…”, the ram answered at the top of his voice: “Tunmmr, tunmmr, but sagajigi kamelma!” Furious, the calabash rolled towards him. The ram stepped back, took a run-up and gave it a mighty blow with his horns.",
+        "moore": "A sẽn wa n yɩɩnd a Tuni, tuni... a yeela woto: \"Tuni, tunni, la sagajigi kamelma!\" La pe-bilã yii n kẽnga taoor n wẽe a yɩɩl wʋsgo.",
+        "dioula": "Tuma min na kalabasigi ye Tunmmr, tunmmr... dɔnkili la, sagajigi y'a jaabi ni kaanba ye ko: Tummmr, Tunmmr, nka sagajigi kamelma! Kalabasigi dimininba tagara a fɛ. Sagaden ye sira ta ka bɔ a kɔrɔ, k'a kaan kɔrɔta.",
+        "fulfulde": "Nde kalabas ɗon werla Tunmmr, tunmmr..., baali on ɗon jaabi bee sawtu maako: Tummmr, Tunmmr, ammaa sagajigi kamelma! Furious, kalabas ɗon ɓoggi haa maako. Gooduɗo on o ƴetti, o hooti e mo'o. O hokki ɗum ɓernde mawnde bee koolaaji maako."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "ram",
+            "x": 50,
+            "s": 1.4
+          },
+          {
+            "k": "man-up",
+            "x": 28,
+            "c": "#00894A"
+          },
+          {
+            "k": "woman-up",
+            "x": 36
+          },
+          {
+            "k": "child-up",
+            "x": 68,
+            "c": "#D62828"
+          },
+          {
+            "k": "chicken",
+            "x": 78
+          },
+          {
+            "k": "goat",
+            "x": 88,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "La calebasse vola en éclats, comme les pierres, et rendit tout ce qu'elle avait avalé : les gens, les chèvres, les poules et les greniers. Tout le village sortit de sa cachette pour remercier le héros : « Merci, bélier ! Nbaa, merci bélier ! »",
+        "en": "The calabash shattered like the stones and gave back everything it had swallowed: people, goats, chickens and granaries. The whole village came out of hiding to thank the hero: “Thank you, ram! Nbaa, thank you, ram!”",
+        "moore": "A sẽn wa n dɩ wã, a lebg n kõ-a lame. Yaa neb la bʋʋs la piis ne kood bĩngrẽ. Tẽngã fãa yii b zĩiga n na n pʋʋs be-roogã barka. Nbaa, pʋʋs-y lame, ram!",
+        "dioula": "Kalabasigi tun be cɛnna i ko kabakuruw ani a ye fɛɛn minw bɛɛ kunu, a y'u bɛɛ di u ma: mɔgɔw, bakɔrɔninw, namaraw ani sumansilikɛyɔrɔw. Dugu kɔnɔ mɔgɔw bɛɛ bɔra u dogoyɔrɔ la ka na hero fo: \"Aw ye barika da ne ye, sagajigi! Nbaa, ne b'i fo, sagajigi!",
+        "fulfulde": "Kalabash ɗon ɓilla bana kaaƴe, o hokki koo ɗume ko o nyaami: yimɓe, geese, kokko'en e kuuje. Yimɓe fuu ngari diga ɓe ɓoydi ngam ɓe yetti gooto maɓɓe: \"Taaɗee, ram! Nbaa, yettiima, ram!"
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Que fait la calebasse géante ?",
+        "en": "What does the giant calabash do?",
+        "moore": "Bõe la gãandã maandẽ?",
+        "dioula": "Kalabasigɛ belebeleba be mun lo kɛ?",
+        "fulfulde": "Ko ɗume goomu kalbaas waɗi?"
+      },
+      "options": [
+        {
+          "fr": "Elle avale tout",
+          "en": "It swallows everything",
+          "moore": "A rɩka bũmb fãa.",
+          "dioula": "A be fɛɛn bɛɛ kunu.",
+          "fulfulde": "Ɗum nyaami koo ɗume."
+        },
+        {
+          "fr": "Elle donne de l'eau",
+          "en": "It gives water",
+          "moore": "A kõt koomã.",
+          "dioula": "A be jii di mɔgɔ ma.",
+          "fulfulde": "Ɗum hokkata ndiyam."
+        },
+        {
+          "fr": "Elle danse",
+          "en": "It dances",
+          "moore": "A dansame.",
+          "dioula": "A be dɔnkilila.",
+          "fulfulde": "O ɗon dansa."
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Comment le bélier devient-il fort ?",
+        "en": "How does the ram grow strong?",
+        "moore": "Wãn to la pe-bilã bɩt n paasdẽ?",
+        "dioula": "Sagaden be barika sɔrɔ cogo di?",
+        "fulfulde": "Noye ɓeydi mawɗum?"
+      },
+      "options": [
+        {
+          "fr": "En cassant des pierres",
+          "en": "By breaking stones",
+          "moore": "D sã n sãam kugã,",
+          "dioula": "Ka kabakuruw kari",
+          "fulfulde": "Ngam ɓe mburtina kaaƴe"
+        },
+        {
+          "fr": "En mangeant beaucoup",
+          "en": "By eating a lot",
+          "moore": "D sã n dɩt wʋsgo, d tõe n paama sũ-noog wʋsgo.",
+          "dioula": "N'i be dumuni caaman kɛ,",
+          "fulfulde": "Ngam nyaamugo ɗuuɗɗum"
+        },
+        {
+          "fr": "Grâce à un grigri",
+          "en": "Thanks to a charm",
+          "moore": "Yaa ne sũ-noog la b kõ-a.",
+          "dioula": "O ye n' ka kanuya yira.",
+          "fulfulde": "Ngam daliila goɗɗum booɗndi"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que se passe-t-il quand la calebasse se brise ?",
+        "en": "What happens when the calabash breaks?",
+        "moore": "La sã n wa sãamda, bõe la b maandẽ?",
+        "dioula": "Ni kalabasigi bɔnna tuma min na, mun lo be kɛ?",
+        "fulfulde": "Ko waɗi to calbaas ɓeydi?"
+      },
+      "options": [
+        {
+          "fr": "Elle rend tout ce qu'elle a avalé",
+          "en": "It gives back everything it swallowed",
+          "moore": "A leb n kõda bũmb nins fãa a sẽn dɩ wã.",
+          "dioula": "A ye fɛɛn minw bɛɛ kunu, a b'o di u ma.",
+          "fulfulde": "Ɗum hokkata koo ɗume ko o nyaami."
+        },
+        {
+          "fr": "Elle s'envole",
+          "en": "It flies away",
+          "moore": "A leb n yɩkame.",
+          "dioula": "A be boli ka taga.",
+          "fulfulde": "O ɗon ndilli"
+        },
+        {
+          "fr": "Elle repousse",
+          "en": "It grows back",
+          "moore": "A leb n yikdame.",
+          "dioula": "A be falen ka na.",
+          "fulfulde": "O ɓeydi mawnugo"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Nbaa",
+      "lang": "dioula",
+      "def": {
+        "fr": "Mot de remerciement et d'approbation employé dans le conte.",
+        "en": "A word of thanks and approval used in the tale.",
+        "moore": "B sẽn da yeel tɩ b pʋʋsda Wẽnnaam barka, la b sak n deeg-a wã.",
+        "dioula": "O ye barika la Ala ye ani a sɔnna o ma.",
+        "fulfulde": "Wolde ngam faamugo e jaɓugo nder haala."
+      }
+    },
+    {
+      "term": "calebasse",
+      "lang": "fr",
+      "def": {
+        "fr": "Fruit d'une plante grimpante qui, une fois séché et vidé, sert de récipient, d'instrument de musique ou d'ustensile.",
+        "en": "The fruit of a climbing plant which, once dried and hollowed, is used as a bowl, a musical instrument or a utensil.",
+        "moore": "Bõn-buud sẽn yiid n lebg tɩg la b kʋɩɩbã, a yaa bõn-buud bɩ bũmb ning b sẽn boond tɩ yɩɩl instrument wall tʋʋmde.",
+        "dioula": "O ye yɛlɛmanfɛnw deen dɔ ye min n'a jara ka kɛ dingɛ ye, a be kɛ i ko daga, fɔlikɛla wala baarakɛminan.",
+        "fulfulde": "Ɓuuru tagdi ɗon, nde ɗum ɓuwaa e nder maare, huwta bana bowl, masin wala kuuje."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « Une calebasse extraordinaire », conte gouin raconté par Mme Justine Fayama, publié sur abcBurkina.net. Réécriture libre.",
+    "en": "Based on “Une calebasse extraordinaire”, a Gouin tale told by Mrs Justine Fayama, published on abcBurkina.net. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

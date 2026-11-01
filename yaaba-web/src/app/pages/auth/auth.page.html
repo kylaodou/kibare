@@ -1,0 +1,86 @@
+<section class="auth">
+  <div class="visual bogolan">
+    <app-scene-art [art]="art" [enter]="true" />
+    <div class="quote">
+      <p>{{ 'auth.quote' | t }}</p>
+      <span>{{ 'auth.quoteSrc' | t }}</span>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" [class.on]="mode() === 'login'" [attr.aria-selected]="mode() === 'login'" (click)="switch('login')">{{ 'auth.login' | t }}</button>
+      <button type="button" role="tab" [class.on]="mode() === 'register'" [attr.aria-selected]="mode() === 'register'" (click)="switch('register')">{{ 'auth.register' | t }}</button>
+    </div>
+
+    <h1>{{ (mode() === 'login' ? 'auth.loginTitle' : 'auth.registerTitle') | t }}</h1>
+    <p class="muted">{{ (mode() === 'login' ? 'auth.loginText' : 'auth.registerText') | t }}</p>
+
+    <form (ngSubmit)="submit()" novalidate>
+      @if (mode() === 'register') {
+        <label class="field">
+          <span>{{ 'auth.name' | t }}</span>
+          <input type="text" name="name" [ngModel]="name()" (ngModelChange)="name.set($event)" autocomplete="name" maxlength="80" required />
+        </label>
+      }
+      <label class="field">
+        <span>{{ 'auth.email' | t }}</span>
+        <input type="email" name="email" [ngModel]="email()" (ngModelChange)="email.set($event)" autocomplete="email" required />
+      </label>
+      <label class="field">
+        <span>{{ 'auth.password' | t }}</span>
+        <span class="pass">
+          <input [type]="showPass() ? 'text' : 'password'" name="password" [ngModel]="password()" (ngModelChange)="password.set($event)"
+            [autocomplete]="mode() === 'login' ? 'current-password' : 'new-password'" required minlength="8" />
+          <button type="button" (click)="showPass.set(!showPass())" [attr.aria-label]="'auth.showPass' | t">
+            <i class="fa-regular" [class.fa-eye]="!showPass()" [class.fa-eye-slash]="showPass()"></i>
+          </button>
+        </span>
+        @if (mode() === 'register') {
+          <span class="strength" [attr.data-level]="strength()"><span></span><span></span><span></span><span></span></span>
+          <small>{{ 'auth.passHint' | t }}</small>
+        }
+      </label>
+      @if (mode() === 'register') {
+        <div class="two">
+          <label class="field">
+            <span>{{ 'auth.region' | t }} <em>({{ 'contrib.optional' | t }})</em></span>
+            <p-select [options]="regionOptions()" [ngModel]="region()" (ngModelChange)="region.set($event)" name="region" [placeholder]="'contrib.choose' | t" [showClear]="true" styleClass="w-full" appendTo="body" />
+          </label>
+          <label class="field">
+            <span>{{ 'auth.language' | t }} <em>({{ 'contrib.optional' | t }})</em></span>
+            <p-select [options]="langOptions()" [ngModel]="language()" (ngModelChange)="language.set($event)" name="language" [placeholder]="'contrib.choose' | t" [showClear]="true" styleClass="w-full" appendTo="body" />
+          </label>
+        </div>
+      }
+
+      @if (error()) {
+        <p class="error" role="alert"><i class="fa-solid fa-circle-exclamation"></i> {{ error() }}</p>
+      }
+      @if (!data.online()) {
+        <p class="error soft"><i class="fa-solid fa-plug-circle-xmark"></i> {{ 'auth.offline' | t }}</p>
+      }
+
+      <button type="submit" class="btn submit" [disabled]="!valid() || busy()">
+        @if (busy()) {
+          <i class="fa-solid fa-spinner fa-spin"></i>
+        }
+        {{ (mode() === 'login' ? 'auth.loginBtn' : 'auth.registerBtn') | t }}
+      </button>
+    </form>
+
+    <p class="switch">
+      @if (mode() === 'login') {
+        {{ 'auth.noAccount' | t }} <button type="button" (click)="switch('register')">{{ 'auth.register' | t }}</button>
+      } @else {
+        {{ 'auth.hasAccount' | t }} <button type="button" (click)="switch('login')">{{ 'auth.login' | t }}</button>
+      }
+    </p>
+    <ul class="perks">
+      <li><i class="fa-solid fa-microphone-lines"></i> {{ 'auth.perk1' | t }}</li>
+      <li><i class="fa-solid fa-feather-pointed"></i> {{ 'auth.perk2' | t }}</li>
+      <li><i class="fa-regular fa-comments"></i> {{ 'auth.perk3' | t }}</li>
+    </ul>
+    <a routerLink="/" class="back"><i class="fa-solid fa-arrow-left"></i> {{ 'nav.home' | t }}</a>
+  </div>
+</section>

@@ -1,0 +1,273 @@
+[
+  {
+    "code": "fr",
+    "name": "Français",
+    "native": "Français",
+    "family": "Romane",
+    "speakers": "Langue de l'administration et de l'école",
+    "regions": [],
+    "peoples": [],
+    "text": true,
+    "description": {
+      "fr": "Langue de travail et d'enseignement, utilisée ici pour le texte intégral de tous les contes.",
+      "en": "Working and teaching language, used here for the full text of every tale."
+    }
+  },
+  {
+    "code": "en",
+    "name": "English",
+    "native": "English",
+    "family": "Germanique",
+    "speakers": "Langue internationale",
+    "regions": [],
+    "peoples": [],
+    "text": true,
+    "description": {
+      "fr": "Traduction intégrale pour faire voyager les contes burkinabè au-delà des frontières.",
+      "en": "A full translation, so Burkinabè tales can travel beyond the country's borders."
+    }
+  },
+  {
+    "code": "moore",
+    "name": "Mooré",
+    "native": "Mòoré",
+    "family": "Gur (Oti-Volta)",
+    "speakers": "Plus de la moitié de la population",
+    "regions": [
+      "centre",
+      "centre-est",
+      "centre-nord",
+      "centre-ouest",
+      "centre-sud",
+      "nord",
+      "plateau-central"
+    ],
+    "peoples": [
+      "Mossi"
+    ],
+    "greeting": {
+      "text": "Ne y yibeoogo",
+      "meaning": {
+        "fr": "Bonjour (le matin)",
+        "en": "Good morning"
+      }
+    },
+    "thanks": {
+      "text": "Barka",
+      "meaning": {
+        "fr": "Merci",
+        "en": "Thank you"
+      }
+    },
+    "description": {
+      "fr": "Langue des Mossi et langue la plus parlée du pays. Les contes y sont dits lors des veillées, souvent ponctués de chants repris en chœur.",
+      "en": "Language of the Mossi and the most widely spoken in the country. Tales are told at evening gatherings, often punctuated by songs sung in chorus."
+    }
+  },
+  {
+    "code": "dioula",
+    "name": "Dioula",
+    "native": "Julakan",
+    "family": "Mandé",
+    "speakers": "Langue véhiculaire de l'Ouest",
+    "regions": [
+      "hauts-bassins",
+      "cascades",
+      "boucle-du-mouhoun"
+    ],
+    "peoples": [
+      "Dioula",
+      "Bobo",
+      "Sénoufo"
+    ],
+    "greeting": {
+      "text": "I ni sɔgɔma",
+      "meaning": {
+        "fr": "Bonjour (le matin)",
+        "en": "Good morning"
+      }
+    },
+    "thanks": {
+      "text": "I ni ce",
+      "meaning": {
+        "fr": "Merci / salut",
+        "en": "Thank you / hello"
+      }
+    },
+    "description": {
+      "fr": "Langue du commerce et des échanges, comprise bien au-delà de l'ouest du pays, de Bobo-Dioulasso jusqu'au Mali et à la Côte d'Ivoire.",
+      "en": "The language of trade, understood far beyond the west of the country, from Bobo-Dioulasso to Mali and Côte d'Ivoire."
+    }
+  },
+  {
+    "code": "fulfulde",
+    "name": "Fulfulde",
+    "native": "Fulfulde",
+    "family": "Atlantique",
+    "speakers": "Parlée par les Peuls",
+    "regions": [
+      "sahel",
+      "nord",
+      "est",
+      "centre-nord"
+    ],
+    "peoples": [
+      "Peuls"
+    ],
+    "greeting": {
+      "text": "Jam waali",
+      "meaning": {
+        "fr": "Bonjour (« as-tu passé la nuit en paix ? »)",
+        "en": "Good morning (“did you spend the night in peace?”)"
+      }
+    },
+    "thanks": {
+      "text": "A jaraama",
+      "meaning": {
+        "fr": "Merci",
+        "en": "Thank you"
+      }
+    },
+    "description": {
+      "fr": "Langue des Peuls, éleveurs du Sahel. Sa littérature orale est riche en contes initiatiques et en poésie pastorale.",
+      "en": "Language of the Fulani herders of the Sahel. Its oral literature is rich in initiation tales and pastoral poetry."
+    }
+  },
+  {
+    "code": "gulmancema",
+    "name": "Gulmancema",
+    "native": "Gulmancema",
+    "family": "Gur",
+    "speakers": "Parlée par les Gourmantché",
+    "regions": [
+      "est"
+    ],
+    "peoples": [
+      "Gourmantché"
+    ],
+    "description": {
+      "fr": "Langue du Gulmu, l'ancien royaume fondé selon la légende par Diaba Lompo.",
+      "en": "Language of Gulmu, the former kingdom founded, according to legend, by Diaba Lompo."
+    }
+  },
+  {
+    "code": "bissa",
+    "name": "Bissa",
+    "native": "Bisa",
+    "family": "Mandé",
+    "speakers": "Parlée par les Bissa",
+    "regions": [
+      "centre-est"
+    ],
+    "peoples": [
+      "Bissa"
+    ],
+    "description": {
+      "fr": "Langue mandé du Centre-Est, autour de Garango et Tenkodogo.",
+      "en": "A Mande language of the Centre-East, around Garango and Tenkodogo."
+    }
+  },
+  {
+    "code": "bwamu",
+    "name": "Bwamu",
+    "native": "Bwamu",
+    "family": "Gur",
+    "speakers": "Parlée par les Bwaba",
+    "regions": [
+      "boucle-du-mouhoun",
+      "hauts-bassins"
+    ],
+    "peoples": [
+      "Bwaba"
+    ],
+    "description": {
+      "fr": "Langue des Bwaba, peuple célèbre pour ses masques de feuilles et ses masques-planches.",
+      "en": "Language of the Bwaba, a people famous for their leaf masks and plank masks."
+    }
+  },
+  {
+    "code": "kasem",
+    "name": "Kasem",
+    "native": "Kasem",
+    "family": "Gur",
+    "speakers": "Parlée par les Kassena",
+    "regions": [
+      "centre-sud"
+    ],
+    "peoples": [
+      "Kassena"
+    ],
+    "description": {
+      "fr": "Langue des Kassena, dont les femmes ornent les maisons de Tiébélé de motifs peints.",
+      "en": "Language of the Kassena, whose women decorate the houses of Tiebele with painted patterns."
+    }
+  },
+  {
+    "code": "lobiri",
+    "name": "Lobiri",
+    "native": "Lobiri",
+    "family": "Gur",
+    "speakers": "Parlée par les Lobi",
+    "regions": [
+      "sud-ouest"
+    ],
+    "peoples": [
+      "Lobi"
+    ],
+    "description": {
+      "fr": "Langue du pays lobi, terre de l'or et des ruines de Loropéni.",
+      "en": "Language of Lobi country, land of gold and the Loropeni ruins."
+    }
+  },
+  {
+    "code": "dagara",
+    "name": "Dagara",
+    "native": "Dagaare",
+    "family": "Gur",
+    "speakers": "Parlée par les Dagara",
+    "regions": [
+      "sud-ouest"
+    ],
+    "peoples": [
+      "Dagara"
+    ],
+    "description": {
+      "fr": "Langue du Sud-Ouest, également parlée au Ghana, réputée pour ses chants accompagnés au xylophone.",
+      "en": "A language of the South-West, also spoken in Ghana, known for songs accompanied by the xylophone."
+    }
+  },
+  {
+    "code": "cerma",
+    "name": "Cerma",
+    "native": "Cerma (gouin)",
+    "family": "Gur",
+    "speakers": "Parlée par les Gouin",
+    "regions": [
+      "cascades"
+    ],
+    "peoples": [
+      "Gouin"
+    ],
+    "description": {
+      "fr": "Langue des Gouin de la région des Cascades, autour de Banfora et de Niangoloko.",
+      "en": "Language of the Gouin people of the Cascades region, around Banfora and Niangoloko."
+    }
+  },
+  {
+    "code": "lyele",
+    "name": "Lyélé",
+    "native": "Lyélé",
+    "family": "Gur (gourounsi)",
+    "speakers": "Parlée par les Lyela",
+    "regions": [
+      "centre-ouest"
+    ],
+    "peoples": [
+      "Lyela"
+    ],
+    "description": {
+      "fr": "Langue gourounsi des Lyela, autour de Réo dans le Centre-Ouest.",
+      "en": "Gurunsi language of the Lyela people, around Réo in the Centre-West."
+    }
+  }
+]

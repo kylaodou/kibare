@@ -1,0 +1,424 @@
+{
+  "slug": "les-pics-de-sindou",
+  "type": "legende",
+  "region": "cascades",
+  "place": "Pics de Sindou",
+  "coords": [
+    10.67,
+    -5.17
+  ],
+  "people": "Sénoufo",
+  "language": "dioula",
+  "duration": 5,
+  "age": 7,
+  "featured": true,
+  "cover": 3,
+  "tags": [
+    "génies",
+    "protection",
+    "lieu sacré",
+    "nature"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Les pics de Sindou et le génie serpent",
+      "subtitle": "Le village protégé",
+      "summary": "Pour mettre son peuple à l'abri, un vieux chasseur supplie les génies de la brousse. Un génie, sous la forme d'un serpent, le guide jusqu'à d'étranges aiguilles de pierre : les pics de Sindou.",
+      "moral": "Les lieux sacrés nous protègent tant que nous les respectons."
+    },
+    "en": {
+      "title": "The Sindou Peaks and the Serpent Spirit",
+      "subtitle": "The protected village",
+      "summary": "To keep his people safe, an old hunter pleads with the spirits of the bush. A spirit in the form of a serpent leads him to strange needles of stone: the Sindou Peaks.",
+      "moral": "Sacred places protect us as long as we respect them."
+    },
+    "moore": {
+      "title": "Sindou tãmbã la we-rũngã sɩɩgã",
+      "subtitle": "Tẽng ning b sẽn kogendã",
+      "summary": "Sẽn na yɩl n kogl a nin-buiidã, nin-kẽem-bi-poak n kos zĩn-dãmbã tɩ b sõng-a. Vʋʋsem sẽn yaa wa weoog n tall-a wã kɩtame t'a kẽed ne kug sẽn yaa to-to, sẽn boond tɩ Sindou Peaksã.",
+      "moral": "D sã n waoogd zĩ-kãens, b kogend-d lame."
+    },
+    "dioula": {
+      "title": "Sindou kuluw ni saa ka miiriya",
+      "subtitle": "Dugudennin min latanganin lo",
+      "summary": "Walisa k'a ka mɔgɔw latanga, jagokɛla kɔrɔ dɔ be deli kungo kɔnɔ jinaw fɛ. Hakilitigi dɔ ye saa ye min b'a bila ka taga ni kabakuru ye min be mɔgɔ kabakoya. O ye Sindou kuluw ye.",
+      "moral": "Yɔrɔ senumanw b'an tanga n'an b'u bonya."
+    },
+    "fulfulde": {
+      "title": "Sindou Peaks e Ruuhu Noofta",
+      "subtitle": "Duule ɗo ɗum sirɗina",
+      "summary": "Ngam hisna yimɓe maako, mawɗo duwoowo boo ɗon toro ruuhuuji nder leɗɗe. Ruuhu nder fuɗɗam ɓandu kooka ɗon hoola mo haa haɓɓooji kaaƴe ɗe mbaadi: Sindou Peaks.",
+      "moral": "Wuroji seniiɗi ɗon sirdo'en to en mawninaɓe."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 80,
+            "y": 220
+          },
+          {
+            "k": "hunter",
+            "x": 30
+          },
+          {
+            "k": "woman",
+            "x": 44
+          },
+          {
+            "k": "child",
+            "x": 52
+          },
+          {
+            "k": "man",
+            "x": 62,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "acacia",
+            "x": 88,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il y a bien longtemps, un peuple sénoufo cherchait une terre où vivre en paix. Partout où il s'installait, des guerriers venaient l'attaquer. Le vieux chasseur du groupe décida d'aller demander l'aide des génies de la brousse.",
+        "en": "Long ago, a Senufo people was searching for a land where they could live in peace. Wherever they settled, warriors came to attack them. The group's old hunter decided to go and ask the spirits of the bush for help.",
+        "moore": "Yʋʋm wʋsg sẽn looge, Senufo nin-buiidã ra baooda tẽng sẽn na yɩl n vɩɩmd laafɩ pʋgẽ. B sẽn da be zĩig ning fãa wã, sodaasã ra wa n zabda ne-ba. Saam-bi-poakã sẽn da yaa kʋdemdã yãka yam n na n kẽng n tɩ kos zĩn-dãmbã tɩ b sõng-a.",
+        "dioula": "Wagatijan tɛmɛninw na, Senufo dɔw tun be jamana dɔ ɲinina u be se ka sigi hɛɛrɛ la yɔrɔ min na. U tun be sigi yɔrɔ o yɔrɔ, kɛlɛdenw tun be na u kɛlɛ. U ka jagokɛla kɔrɔba y'a latigɛ ka taga dɛmɛ ɲini kungo kɔnɔ jinaw fɛ.",
+        "fulfulde": "Wakkati ɗuɗɗi, yimɓe Senufo ɗon ɗaɓɓita lesdi to ɓe njooɗoto nder jam. Koo to ɓe njooɗi, konu'en ɗon wara dow maɓɓe. Mawɗo duɗal mawɗo nder kawtal ngal waɗi anniya yahugo yahugo ruuhuuji duɗal ngam wallude."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "fire",
+            "x": 40
+          },
+          {
+            "k": "hunter",
+            "x": 26
+          },
+          {
+            "k": "snake",
+            "x": 60,
+            "s": 1.4,
+            "a": "a-swim"
+          },
+          {
+            "k": "rays",
+            "x": 60,
+            "y": -40
+          }
+        ]
+      },
+      "text": {
+        "fr": "Une nuit, près de son feu, le chasseur fit des offrandes et pria longuement. Au petit matin, un grand serpent apparut devant lui. Ses écailles brillaient étrangement, et il ne montrait aucune agressivité. Le chasseur comprit : c'était un génie qui avait pris la forme d'un serpent.",
+        "en": "One night, beside his fire, the hunter made offerings and prayed for a long time. At dawn, a great serpent appeared before him. Its scales shone strangely, and it showed no aggression. The hunter understood: it was a spirit that had taken the form of a serpent.",
+        "moore": "Daar a ye yʋngo, zĩ-yũudlã sẽn da be a bugum sɛɛgẽ, a maana maoong la a pʋʋsa wʋsg. Zĩigã sẽn vẽege, bõn-vɩɩg kãseng n zĩnd a Zezi taoore. A sãnemã ra yãgdame, la a ra pa tar pãng ye. Sẽn yãbd-a wã bãngame tɩ yaa sɩɩg sẽn maan wa weoogã.",
+        "dioula": "Loon dɔ sufɛ, jagokɛla ye saraka bɔ a ka tasuma gɛrɛfɛ ani a ye wagatijan kɛ delili la. Dugu gwɛra tuma min na, sa belebeleba dɔ y'a yɛrɛ yira a la. A ka sumanikɛminan tun be manamana cogo kabakoman na ani a tun tɛ se ka mɔgɔ fari faga. A y'a faamu ko jinɛ dɔ lo tun ye saa ye.",
+        "fulfulde": "Nder jemma go'oto, ɓaawo yiite maako, mawɗo du'aaji waɗi dokke boo o waɗa do'aare wakkati ɗuuɗugo. Nde nyalawma fu, haykaliiru mawɗo wari yeeso maako. Ɗu'um ɗon cembiɗina masin, nden o ɗon holla ɓeydaaki. Mawɗo yi'aama: ɗum ruuhu huutoraaki ɓandu weelo."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que doit faire le chasseur ?",
+          "en": "What should the hunter do?",
+          "moore": "Bõe la kogendã segd n maane?",
+          "dioula": "Sɔnnikɛla ka kan ka mun lo kɛ do?",
+          "fulfulde": "Ko honɗun mawɗo yiide waɗata?"
+        },
+        "options": [
+          {
+            "fr": "Suivre le serpent",
+            "en": "Follow the serpent",
+            "moore": "Kẽng-y weoogã",
+            "dioula": "I ka tugu saa kɔ",
+            "fulfulde": "Ɗaɗee kooka"
+          },
+          {
+            "fr": "Le tuer",
+            "en": "Kill it",
+            "moore": "Kʋ-y-yã-a!",
+            "dioula": "Aw k'a faga.",
+            "fulfulde": "Maɓu ɗum."
+          },
+          {
+            "fr": "S'enfuir",
+            "en": "Run away",
+            "moore": "Kẽng-y n zoe!",
+            "dioula": "Aw ye boli ka taga.",
+            "fulfulde": "Njaɓee"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Le chasseur rassembla les siens et suivit le génie…",
+          "en": "The hunter gathered his people and followed the spirit…",
+          "moore": "Kẽerã tigma a nin-buiidã la b tũ a sɩɩgã...",
+          "dioula": "Jagokɛla y'a ka mɔgɔw lajɛn ka tugu a kɔ.",
+          "fulfulde": "Jaayndiyanke'en mooɓti yimɓe muuɗum, ɓe tokki ruuhu..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "sun",
+            "x": 14,
+            "y": 240
+          },
+          {
+            "k": "peaks",
+            "x": 62,
+            "y": 30
+          },
+          {
+            "k": "snake",
+            "x": 34,
+            "s": 1.1,
+            "a": "a-swim"
+          },
+          {
+            "k": "hunter",
+            "x": 18
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le serpent glissa à travers la savane pendant des jours, jusqu'à un endroit extraordinaire : une falaise de grès découpée en aiguilles, en champignons et en tours de pierre, comme sculptée par des géants. « Ici, vous serez protégés », sembla dire le génie avant de disparaître entre les rochers.",
+        "en": "The serpent glided through the savannah for days, until it reached an extraordinary place: a sandstone cliff carved into needles, mushrooms and towers of stone, as if sculpted by giants. “Here you will be protected,” the spirit seemed to say before vanishing among the rocks.",
+        "moore": "Kẽerã ra kẽeda savannã pʋgẽ rasem wʋsgo, n tãag a sẽn ta zĩig sẽn yaa to-to. A ra yaa tãmb-tʋʋmd a ye, la b ra wẽed-a lame. A ra wẽnda wa gãn-dãmb n maan-a. Yaa woto la Sɩɩg-sõng yeel tɩ b na n kogl-y lame.",
+        "dioula": "A ye tile damanin kɛ kongokolon kɔnɔ fɔɔ ka taga se yɔrɔ kɛrɛnkɛrɛnnin dɔ la. A tun be komi a tun y'a fɔ ka sɔrɔ ka tunu faraw cɛma.",
+        "fulfulde": "Nyol ngol ɗon ƴeewa nder safannaaji ngam balɗe, haa o ɓadake nokkuure feere-feere: ko'e laral sandstone je ɓe njogii e nder kuuje, be fuunguuji e cuuɗi ɗi yimɓe mawnguɓe mbaɗani. \"Hande on ɗon njogita\", non ruuhu wi'i, ngam o ɓeydi nder kaaƴe."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "peaks",
+            "x": 70,
+            "y": 36,
+            "s": 0.9
+          },
+          {
+            "k": "hut",
+            "x": 22,
+            "y": 26
+          },
+          {
+            "k": "granary",
+            "x": 34,
+            "y": 24,
+            "s": 0.8
+          },
+          {
+            "k": "woman-pound",
+            "x": 48
+          },
+          {
+            "k": "child-up",
+            "x": 14
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le peuple s'installa au pied des pics et fonda un village qu'on appela Sindou, ce qui signifierait « le village protégé ». Les ennemis n'osèrent jamais s'approcher de ces rochers habités par les génies. Les habitants prospérèrent en paix.",
+        "en": "The people settled at the foot of the peaks and founded a village named Sindou, which is said to mean “the protected village”. Enemies never dared approach these rocks inhabited by spirits. The villagers prospered in peace.",
+        "moore": "Nebã zĩndame tãmbã tẽng zug n lugl tẽng sẽn boond t'a Sindou, sẽn dat n yeel t'a rat n yeelame t'a yaa tẽng ning b sẽn kogendã. B bɛɛbã ra pa saag n kolg kug-kãensã sẽn be zĩn-dãmb pʋsẽ ye. Tẽngã nebã ra vɩ laafɩ pʋgẽ.",
+        "dioula": "O dugumɔgɔw sigira kuluw jukɔrɔ ani u ye dugu dɔ sigi min tɔgɔ ko Sindou. Mɔgɔ juguw tun tɛ se ka gwɛrɛ o faraw la abada. Dugu mɔgɔw tun be hɛɛrɛ la.",
+        "fulfulde": "Yimɓe ɗon jooɗi haa saŋge koore nden ɓe mari wuro bi'eteeɗo Sindou, ɗum wi'i maanaa \"\"koore ɗo sirrude\"\" . Yimɓe naɓooɓe ɓe ngalaa ɓerɗe haa ɗo ɗiin laral nder ruuhuuji. Yimɓe gariiri ɗon ɓeyda nder jam."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "peaks",
+            "x": 50,
+            "y": 30
+          },
+          {
+            "k": "elder",
+            "x": 18
+          },
+          {
+            "k": "child",
+            "x": 28
+          },
+          {
+            "k": "birds",
+            "x": 60,
+            "y": 260
+          }
+        ]
+      },
+      "text": {
+        "fr": "Aujourd'hui encore, les Karaboro, les Turka, les Toussian et les Sénoufo considèrent les pics de Sindou comme sacrés. Une partie du site, demeure des génies, reste interdite. Les visiteurs du monde entier viennent admirer ces sculptures de la nature, à condition de respecter les règles des anciens.",
+        "en": "To this day, the Karaboro, Turka, Toussian and Senufo peoples regard the Sindou Peaks as sacred. Part of the site, home of the spirits, remains forbidden. Visitors from all over the world come to admire these sculptures of nature, as long as they respect the elders' rules.",
+        "moore": "Hal tɩ ta rũndã-rũndã, Karaboro, Turka, Toussian la Senufo nebã getame tɩ Sindou tãmbã yaa bõn-sõngo. B gɩdga zĩn-dãmbã sẽn be zĩig ninga. Dũniyã gill zugu, neb n wat n na n ges bõn-naands kãensã, b sã n sakd kãsem-dãmbã noyã.",
+        "dioula": "Hali bi, Karaboro, Turka, Toussian ani Senufo mɔgɔw b'a jati ko Sindou kuluw ka ɲi ka kɛ yɔrɔ senuman ye. O yɔrɔ la, jinaw be sigi yɔrɔ min na, a daganin tɛ. Duniɲa faan bɛɛ la, mɔgɔ caaman be na o batofɛnw filɛ n'u be diinan mɔgɔkɔrɔw ka sariyaw labato.",
+        "fulfulde": "Haa hande, yimɓe Karaboro, Turka, Toussian e Senufo ndaara Sindou Peaks bana ko haani. Gooto nder nokkuure, wuro ruuhuuji, ɗon haaje. Yimɓe ɗon ƴiwo nder duniyaaru fuu ɓe ngara ngam yi'ugo ɗi ɗo geɗe ɗe, to ɓe tokka umrooje mawɓe."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quelle forme prend le génie ?",
+        "en": "What form does the spirit take?",
+        "moore": "Wãn to la vʋʋsem sõngã maandẽ?",
+        "dioula": "Hakili senu be kɛ cogo di?",
+        "fulfulde": "Holi Ruuhu Allah ɗon waɗa?"
+      },
+      "options": [
+        {
+          "fr": "Un serpent",
+          "en": "A serpent",
+          "moore": "Wʋg a ye",
+          "dioula": "Sogojugu dɔ",
+          "fulfulde": "Wange"
+        },
+        {
+          "fr": "Un lion",
+          "en": "A lion",
+          "moore": "Yaa gɩgemde.",
+          "dioula": "Jaraw",
+          "fulfulde": "Lewre"
+        },
+        {
+          "fr": "Un oiseau",
+          "en": "A bird",
+          "moore": "Gʋdg a ye",
+          "dioula": "Dɔnɔnin dɔ",
+          "fulfulde": "Luttuɗo"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que signifierait le nom « Sindou » ?",
+        "en": "What is the name “Sindou” said to mean?",
+        "moore": "B yeelame tɩ yʋʋr ning sẽn boond t'a Sindou wã rat n yeelame tɩ bõe?",
+        "dioula": "Sindou tɔgɔ kɔrɔ ye mun ye?",
+        "fulfulde": "Ko honɗun innde Sindou wi'etee ko firti?"
+      },
+      "options": [
+        {
+          "fr": "Le village protégé",
+          "en": "The protected village",
+          "moore": "Tẽng ning b sẽn kogendã",
+          "dioula": "Dugudennin min latanganin lo",
+          "fulfulde": "Duule ɗo ɗum sirɗina"
+        },
+        {
+          "fr": "La grande pierre",
+          "en": "The great stone",
+          "moore": "Yaa kug-kãsengã.",
+          "dioula": "Kabakuru belebeleba",
+          "fulfulde": "Kammu mawndu ndu"
+        },
+        {
+          "fr": "La source",
+          "en": "The spring",
+          "moore": "Bõn-soabgã",
+          "dioula": "Sanjɛnɛ",
+          "fulfulde": "Fuuɓal"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "De quelle roche sont faits les pics ?",
+        "en": "What rock are the peaks made of?",
+        "moore": "Rɩk-bʋs n kɩt tɩ b naan tãns-kãense?",
+        "dioula": "O kuluw be bɔ farakuru juman lo la?",
+        "fulfulde": "Ko honɗun ko laato ɓesngu?"
+      },
+      "options": [
+        {
+          "fr": "Du grès",
+          "en": "Sandstone",
+          "moore": "Bõn-buudã",
+          "dioula": "Sandstone",
+          "fulfulde": "Sandstone"
+        },
+        {
+          "fr": "Du granite",
+          "en": "Granite",
+          "moore": "Gãrãnitã",
+          "dioula": "Granite",
+          "fulfulde": "Granite"
+        },
+        {
+          "fr": "Du marbre",
+          "en": "Marble",
+          "moore": "Bõn-buudã",
+          "dioula": "marmara",
+          "fulfulde": "Marble"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "grès",
+      "lang": "fr",
+      "def": {
+        "fr": "Roche formée de grains de sable soudés, que la pluie et le vent sculptent au fil des millénaires.",
+        "en": "A rock made of cemented sand grains, sculpted by rain and wind over thousands of years.",
+        "moore": "A yaa pĩig sẽn maan ne sobg sẽn bĩngd, la saagã la sobgã sẽn maan yʋʋm tusr la tusr.",
+        "dioula": "Saan waa caaman kɔnɔ, sanji ni fɔɲɔ ye kabakuru min dilan ni cɛncɛn kisɛ ye.",
+        "fulfulde": "Goomu diga cembel, ko ndiyam e hendu waɗi duuɓi ujineeri."
+      }
+    },
+    {
+      "term": "Sénoufo",
+      "lang": "fr",
+      "def": {
+        "fr": "Peuple du sud-ouest du Burkina Faso, du Mali et de la Côte d'Ivoire, réputé pour son balafon et ses sculptures.",
+        "en": "A people of south-western Burkina Faso, Mali and Côte d'Ivoire, renowned for the balafon and their sculptures.",
+        "moore": "Neb sẽn be Burkina Faso, Mali la Côte d'Ivoire soolmẽ wã, sẽn boond tɩ balafonã la b bõn-naandsã yĩnga.",
+        "dioula": "Burkina Faso woroduguyanfan na, Mali ani Côte d'Ivoire, mɔgɔ minw tɔgɔ bɔra balafon ani u ka danfɛnw kosɔn.",
+        "fulfulde": "Yimɓe Burkina Faso, Mali e Côte d'Ivoire haa saŋge hirnaange, ɓe anndiraa ngam balafonji maɓɓe."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Récit inspiré des traditions rapportées sur l'origine sacrée des pics de Sindou (trésorsdumonde.fr, visiteburkina.com). Les versions varient ; mise en récit libre.",
+    "en": "Story inspired by traditions reported about the sacred origin of the Sindou Peaks (tresorsdumonde.fr, visiteburkina.com). Versions vary; free narrative adaptation."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

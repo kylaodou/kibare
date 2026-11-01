@@ -1,0 +1,431 @@
+{
+  "slug": "do-et-les-masques-de-feuilles",
+  "type": "legende",
+  "region": "boucle-du-mouhoun",
+  "place": "Dédougou",
+  "coords": [
+    12.46,
+    -3.46
+  ],
+  "people": "Bwaba",
+  "language": "bwamu",
+  "duration": 5,
+  "age": 7,
+  "featured": true,
+  "cover": 3,
+  "tags": [
+    "masques",
+    "nature",
+    "pluie",
+    "renouveau"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Dô et les masques de feuilles",
+      "subtitle": "La légende du renouveau chez les Bwaba",
+      "summary": "La pluie ne vient plus, la terre s'épuise. Les anciens partent en brousse demander conseil à Dô, l'esprit de la vie qui se renouvelle. Sa réponse donnera naissance aux plus vivants des masques.",
+      "moral": "La vie se renouvelle sans cesse : il faut savoir accueillir chaque saison."
+    },
+    "en": {
+      "title": "Do and the Leaf Masks",
+      "subtitle": "The Bwaba legend of renewal",
+      "summary": "The rain no longer comes and the land is exhausted. The elders go into the bush to seek advice from Do, the spirit of ever-renewing life. His answer will give birth to the most living of masks.",
+      "moral": "Life renews itself endlessly: we must learn to welcome every season."
+    },
+    "moore": {
+      "title": "Dɩt-y n ges y sãnemã sẽn yaa bũmb ning",
+      "subtitle": "Bwaba siglgã sẽn lebg n wa n le paasdã kibarã",
+      "summary": "Sa-kãsengã pa le be ye, la tẽngã ra yaa toogo. Kãsem dãmbã kẽnda weoogẽ n baood sagls a Do nengẽ, sẽn yaa ned ning sẽn pa tõe n bas tɩ b vɩɩmã lebg yam-paalg ye. A leokrã na n kɩtame tɩ b rog mask nins sẽn tar vɩɩm to-to wã.",
+      "moral": "D vɩɩmã pa na n bas tɩ d wa paam yam ye."
+    },
+    "dioula": {
+      "title": "Do ni furaburuw",
+      "subtitle": "Bwaba ka kibaroya kura ye ko: \"Ala bena mɔgɔ wɛrɛw dɛmɛ\".",
+      "summary": "Sanji tɛ na tugun ani dugukolo bɛɛ banna. Diinan mɔgɔkɔrɔw be taga kungo kɔnɔ ka ladiliw ɲini Do fɛ. O ye ɲɛnamaya kɛcogo kura lo ye. A ka jaabili bena kɛ sababu ye mɔgɔ caaman be se ka fani don.",
+      "moral": "Ɲɛnamaya be yɛlɛma tuma bɛɛ: an ka ɲi k'a ɲini ka wagati bɛɛ ladon."
+    },
+    "fulfulde": {
+      "title": "Do e Maski Leaf",
+      "subtitle": "Legenda Bwaba nder ɓesngu",
+      "summary": "Liman ɗon wurtina, lesdi boo ɗon ɓeyda. Mawɓe ɓe njahi nder leɗɗe ngam ɗaɓɓita do, ruuhu nduumiiɗo. Jaaborgo maako hokkan ɓurɓe wonde maski.",
+      "moral": "Nyaawoore ɗon ɓeyda bee nyawugo: en njanngina jaɓɓude kala sahaa."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 50,
+            "y": 310,
+            "s": 1.2
+          },
+          {
+            "k": "baobab",
+            "x": 18,
+            "y": 24,
+            "c": "bare"
+          },
+          {
+            "k": "field",
+            "x": 60,
+            "c": "dry"
+          },
+          {
+            "k": "man",
+            "x": 86,
+            "c": "#2F3E6B"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Chez les Bwaba, dans la boucle du Mouhoun, on raconte qu'autrefois la terre s'épuisa. La pluie ne venait plus, les champs restaient secs et les gens perdaient courage.",
+        "en": "Among the Bwaba, in the Mouhoun bend, it is said that long ago the land grew exhausted. The rain stopped coming, the fields stayed dry and people were losing heart.",
+        "moore": "B sẽn da be bĩngẽ wã, b yetame tɩ tẽngã ra zoe n yaa toogo. Sa-kãsengã ra pa le saag ye, pʋʋgã kell n yaa kʋɩlgo la nebã da ka tar raood ye.",
+        "dioula": "Bwabaw cɛma, Mouhoun kɔkɛnɛ la, a fɔra ko wagatijan tɛmɛnin na, jamana tun banna. Sanji banna ka na, foro ja tigɛra. Mɔgɔw tun be fari faga.",
+        "fulfulde": "Nder Bwaba, nder dow Mouhoun, ɗum wi'i diga nde lesdi ndi ɓeydi. Liman ɗon humto, gese ɗon mbaadi nyaamdu, yimɓe boo ɗon ɓeyda."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 220
+          },
+          {
+            "k": "karite",
+            "x": 16,
+            "y": 24
+          },
+          {
+            "k": "elder",
+            "x": 36
+          },
+          {
+            "k": "elder",
+            "x": 46,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "leaf-mask",
+            "x": 72,
+            "s": 1.1
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les anciens partirent en brousse pour demander conseil. Là, au milieu des arbres, ils rencontrèrent Dô, l'esprit de la brousse, gardien de la vie qui renaît sans cesse.",
+        "en": "The elders went into the bush to seek advice. There, among the trees, they met Do, the spirit of the bush, guardian of life that is reborn again and again.",
+        "moore": "Kãsem dãmbã kẽnga bugumẽ n na n bao saglse. Be, tɩɩsã sʋka, b yãa a Do sẽn yaa bugum sɩɩgã. A geta vɩɩm sẽn wat n lebg n rogd wakat fãa wã yelle.",
+        "dioula": "O cɛkɔrɔba nunu tagara kongo kɔnɔ ka ladiliw ɲini. O yɔrɔ la, u ye Do kunbɛn yiriw cɛma. Ale lo be niin jati fɛɛn nafamanba ye ani a be ɲɛnamaya kɛ fɔɔ abada.",
+        "fulfulde": "Mawɓe ɓe njahi nder leɗɗe ngam ɗaɓɓita ko mbi'i. Nder leɗɗe ɗe ɗon, ɓe kawti Do, ruuhu duule, mo ɗowanteeɗo yonki nde maayi ko'e mum."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "leaf-mask",
+            "x": 50,
+            "s": 1.3
+          },
+          {
+            "k": "elder-sit",
+            "x": 24
+          },
+          {
+            "k": "acacia",
+            "x": 86,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Dô leur dit : « Je viendrai au village. Mais vous ne me verrez que vêtu de feuilles fraîches, car je suis la vie qui renaît à chaque saison. »",
+        "en": "Do told them: “I will come to the village. But you will only see me dressed in fresh leaves, for I am the life that is reborn every season.”",
+        "moore": "A Do yeela bãmb yaa: \"Mam na n wa tẽn-gãongã pʋgẽ. La yãmb na n yãenda maam bal tɩ m yeelg ne vãad sẽn yaa kɩdgã, bala mam yaa vɩɩm ning b sẽn dogd wakat fãa.",
+        "dioula": "I y'a fɔ u ye ko: \"Ne bena na dugu kɔnɔ. Nka aw bena ne ye ni furaburu ɲanamanw dɔrɔn lo ye, sabu ne le be ɲɛnamaya kɛ kokura tuma bɛɛ.",
+        "fulfulde": "Do wi'i ɓe: Mi wari haa gariiri. Ammaa on ngi'ay yam tan ɓorniiɗo bee leɗɗe kese, ngam mi woni yonki ngol maɓɓitan nder wakkati fuu."
+      },
+      "choice": {
+        "q": {
+          "fr": "De quoi seront faits les masques de Dô ?",
+          "en": "What will Do's masks be made of?",
+          "moore": "Bõe la b na n maan a Do maskã?",
+          "dioula": "Do ka masiridenw bena kɛ mun lo la?",
+          "fulfulde": "Ko honɗun maski Do'en waɗata?"
+        },
+        "options": [
+          {
+            "fr": "De bois peint",
+            "en": "Painted wood",
+            "moore": "Dɩt sẽn yaa bĩngd",
+            "dioula": "Jigɛ min dilanna ni fani ye",
+            "fulfulde": "Wood wood wood wood wood"
+          },
+          {
+            "fr": "De feuilles fraîches",
+            "en": "Fresh leaves",
+            "moore": "Dĩng sẽn yaa waasg",
+            "dioula": "Fura kuraw",
+            "fulfulde": "Fuuɗeeje"
+          },
+          {
+            "fr": "De métal",
+            "en": "Metal",
+            "moore": "Metallã",
+            "dioula": "Minanw",
+            "fulfulde": "Lemmbi"
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "Des feuilles fraîches, cueillies pour chaque fête : vivantes, comme Dô.",
+          "en": "Fresh leaves, picked for each festival: alive, like Do himself.",
+          "moore": "B ra yãkda vãad sẽn yaa toor-toor n na n kõ b taabã.",
+          "dioula": "A ye furaburu minw woloma ɲanagwɛ o ɲanagwɛ la, u be yen. U ɲanaman lo i ko Do yɛrɛ.",
+          "fulfulde": "Fuuɗeeje, ɗe ɓe ngurtina ngam kala juulde: booɗɗum, bana Do hoore maako."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "cloud",
+            "x": 30,
+            "y": 280
+          },
+          {
+            "k": "cloud",
+            "x": 74,
+            "y": 300,
+            "s": 0.8
+          },
+          {
+            "k": "leaf-mask",
+            "x": 34
+          },
+          {
+            "k": "leaf-mask",
+            "x": 54,
+            "s": 1.1
+          },
+          {
+            "k": "drum",
+            "x": 74
+          },
+          {
+            "k": "man-up",
+            "x": 82,
+            "c": "#00894A"
+          },
+          {
+            "k": "woman-up",
+            "x": 14
+          }
+        ]
+      },
+      "text": {
+        "fr": "Depuis, au début de la saison des pluies, de jeunes initiés s'enveloppent de feuilles et de lianes. Les masques de feuilles dansent au son des tambours pour appeler la pluie et purifier le village.",
+        "en": "Since then, at the start of the rainy season, young initiates wrap themselves in leaves and vines. The leaf masks dance to the sound of the drums to call the rain and purify the village.",
+        "moore": "Rẽ tɛka, saagã sɩngrẽ wã, kom-bɩɩsã sã n wa kẽed roogẽ, b pakda b mens ne vãad la tɩɩs sẽn yaa zẽnem. Bãagrã sẽn da pakd vãad wã yɩɩlda ne b tãmbã sẽn boond tɩ saag n yɩlg tẽngã.",
+        "dioula": "Kabi o tuma, sanji wagati daminɛ na, kanbelew ni sunguruw be to ka u yɛrɛ datugu furaburu ani rezɛnyiri la. O faniw be dansi ka taga ni fɔɲɔ mankan ye walisa sanji ka ben ani k'o dugu saniya.",
+        "fulfulde": "Gila ndeen, to fuɗɗam sahaa ndiyam ɗon wara, sukaaɓe ɓe njanngina hoore maɓɓe nder leɗɗe e laami. Maski leɗɗe ɗon kolli to nder ko'e ɓooyi ngam nodda ndiyam bee limtinugo gariiri."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 14,
+            "y": 300
+          },
+          {
+            "k": "plank-mask",
+            "x": 40
+          },
+          {
+            "k": "leaf-mask",
+            "x": 60
+          },
+          {
+            "k": "plank-mask",
+            "x": 80,
+            "s": 0.9
+          },
+          {
+            "k": "drum",
+            "x": 22
+          }
+        ]
+      },
+      "text": {
+        "fr": "Faits chaque année, les masques de feuilles ne durent que le temps de la fête : comme la végétation, ils naissent puis retournent à la terre. À Dédougou, le FESTIMA célèbre les masques venus de toute l'Afrique de l'Ouest.",
+        "en": "Made anew each year, the leaf masks last only as long as the festival: like plants, they are born and then return to the earth. In Dédougou, FESTIMA celebrates masks from all over West Africa.",
+        "moore": "Yʋʋmd fãa, b sã n lebg n naan-b tɩ b rɩkd vãadã, b pa tõe n maan bũmb a to ye. B leb n yaa wa tɩɩs sẽn dogdẽ la b yaool n lebg n kẽ tẽngã pʋgẽ. Dédougou, FESTIMA wã maanda maskã sẽn yit Afirik Wɛtgã fãa.",
+        "dioula": "Saan o saan, u be to ka fani kuraw dilan. U be kɛ i n'a fɔ yiriw ani u be segi ka na dugukolo kan. Dédougou, FESTIMA be masiriw labɛnna Afiriki tileben fan bɛɛ la.",
+        "fulfulde": "Ko hitaande kala ɓe keewi, ɓesngu leɗɗe ɗon nguurdi tan wakkati juulde: bana dabareeji, ɗi maayi ngam warugo nder lesdi. Nder Dédougou, FESTIMA ɗon marɓe maski diga nder Afrik hirnaange fuu."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qui est Dô ?",
+        "en": "Who is Do?",
+        "moore": "Yaa ãnd n yaa a Do?",
+        "dioula": "Do ye jɔn lo ye?",
+        "fulfulde": "Moye woni Do?"
+      },
+      "options": [
+        {
+          "fr": "Un roi guerrier",
+          "en": "A warrior king",
+          "moore": "Rĩm sẽn yaa sodaagã",
+          "dioula": "Masacɛ kɛlɛbaga dɔ lo",
+          "fulfulde": "Laamiiɗo konujo"
+        },
+        {
+          "fr": "L'esprit de la brousse et du renouveau",
+          "en": "The spirit of the bush and of renewal",
+          "moore": "Yaa ne b sẽn da yaa nin-paalsã la b sẽn pa tõe n paam bũmb nins fãa a Zeova sẽn kõ wã",
+          "dioula": "O ye \" yirituninw\" ni \"fanga kura\" lo ye.",
+          "fulfulde": "Ruuhu duɗal e ɓeydaago"
+        },
+        {
+          "fr": "Un chasseur",
+          "en": "A hunter",
+          "moore": "Ned sẽn baood zĩm-biisi",
+          "dioula": "Jagokɛla dɔ",
+          "fulfulde": "Lamarɗo"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Quand dansent les masques de feuilles ?",
+        "en": "When do the leaf masks dance?",
+        "moore": "Wakat bʋg la b naan yɩɩl ne seb-vɩɩsã?",
+        "dioula": "Fani ɲagamininw be dansi tuma juman?",
+        "fulfulde": "Toye maski leɗɗe ɗon nyaamo?"
+      },
+      "options": [
+        {
+          "fr": "Au début de la saison des pluies",
+          "en": "At the start of the rainy season",
+          "moore": "Saasã sɩngrẽ,",
+          "dioula": "Sanjiba daminɛtuma na,",
+          "fulfulde": "Ha fuɗɗam sahaa ndiyam"
+        },
+        {
+          "fr": "En pleine saison sèche",
+          "en": "In the middle of the dry season",
+          "moore": "D sã n wa beẽ, d na n paama sũ-noog wʋsgo.",
+          "dioula": "Sanjɛnɛ tuma na,",
+          "fulfulde": "Nder caka sahaa maɓɓere"
+        },
+        {
+          "fr": "Chaque vendredi",
+          "en": "Every Friday",
+          "moore": "Zuif-rãmbã ra maanda yɩɩre.",
+          "dioula": "Lɔgɔkun o loon,",
+          "fulfulde": "Ko kala joomee"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Dans quelle ville se tient le FESTIMA ?",
+        "en": "In which town is FESTIMA held?",
+        "moore": "Tẽnga bʋg la FESTIMA beẽ?",
+        "dioula": "FESTIMA be kɛ dugu juman lo la?",
+        "fulfulde": "Nder wuro moye FESTIMA waɗi?"
+      },
+      "options": [
+        {
+          "fr": "Dédougou",
+          "en": "Dédougou",
+          "moore": "Dédougou",
+          "dioula": "Dédougou",
+          "fulfulde": "Dédougou"
+        },
+        {
+          "fr": "Gaoua",
+          "en": "Gaoua",
+          "moore": "Gaoua",
+          "dioula": "Gaoua ka koo",
+          "fulfulde": "Gaoua"
+        },
+        {
+          "fr": "Banfora",
+          "en": "Banfora",
+          "moore": "Bãndbõog",
+          "dioula": "Banfora ka baara",
+          "fulfulde": "Banfora"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Dô",
+      "lang": "bwamu",
+      "def": {
+        "fr": "Puissance de la brousse et du renouveau chez les Bwaba et les Bobo, représentée notamment par les masques de feuilles.",
+        "en": "The power of the bush and of renewal among the Bwaba and Bobo, represented in particular by leaf masks.",
+        "moore": "B sẽn yã tɩ b yaa nin-buiidã, b wilgame tɩ b tara pãng wʋsg n tõe n paam vɩɩm paalgã.",
+        "dioula": "Yiri ni yiriw ka fanga ani kura ye Bwaba ni Bobo cɛ, u be se k'o yira kɛrɛnkɛrɛnnenya la fura ɲagamininw fɛ.",
+        "fulfulde": "Nguurndam duɗal e ɓeydaaki nder Bwaba be Bobo, ɗum hollii ha go'o ngam huutoreeji leɗɗe."
+      }
+    },
+    {
+      "term": "Bwaba",
+      "lang": "fr",
+      "def": {
+        "fr": "Peuple de la boucle du Mouhoun et du nord-ouest du pays, réputé pour ses masques ; leur langue est le bwamu.",
+        "en": "A people of the Mouhoun bend and the north-west, renowned for their masks; their language is Bwamu.",
+        "moore": "Yaa Mouhoun nebã sẽn be mogrã la sa-yɩgẽ wã, b yʋʋr boond tɩ b maaskoor yĩnga. B goama yaa Bwamu.",
+        "dioula": "Mouhoun ka mara ani kɔgɔdugu ni tileben fan fɛ, u be tɔgɔba la u ka masirilenw kosɔn. U ka kaan ye Bwamu lo ye.",
+        "fulfulde": "Yimɓe Mouhoun e woyla hirnaange, ɓe anndiraa ngam ɓalli maɓɓe; ɗemngal maɓɓe woni Bwamu."
+      }
+    },
+    {
+      "term": "FESTIMA",
+      "lang": "fr",
+      "def": {
+        "fr": "Festival international des masques et des arts, organisé à Dédougou.",
+        "en": "The International Festival of Masks and Arts, held in Dédougou.",
+        "moore": "Dãm-n-taag ning sẽn boond tɩ International Festival of Masks and Arts wã, a maana Dédougou.",
+        "dioula": "Dɛmɛna ka ɲanagwɛ min kɛra Dédougou dugu la.",
+        "fulfulde": "Festival International of Masks and Arts, waɗaa nder Dédougou."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Croyances bwaba autour de Dô et des masques de feuilles, présentées ici sous forme de légende. Les rites varient d'un village à l'autre.",
+    "en": "Bwaba beliefs surrounding Do and the leaf masks, presented here as a legend. Rituals vary from one village to another."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

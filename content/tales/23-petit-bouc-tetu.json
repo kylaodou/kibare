@@ -1,0 +1,332 @@
+{
+  "slug": "le-petit-bouc-tetu",
+  "type": "conte",
+  "region": "cascades",
+  "place": "Sindou",
+  "coords": [
+    10.72,
+    -5.05
+  ],
+  "people": "Gouin",
+  "language": "cerma",
+  "duration": 3,
+  "age": 3,
+  "featured": true,
+  "cover": 1,
+  "tags": [
+    "obéissance",
+    "chant",
+    "animaux",
+    "enfants"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le petit bouc têtu et l'hyène",
+      "subtitle": "Une chanson pour rentrer à la maison",
+      "summary": "Un petit bouc qui n'écoute jamais sa mère s'aventure au cœur de la grande forêt… et tombe nez à nez avec l'hyène. Il ne lui reste qu'une arme : sa chanson.",
+      "moral": "Il faut écouter les conseils de ses parents ; et quand on a fait une bêtise, garder son calme aide à s'en sortir."
+    },
+    "en": {
+      "title": "The Stubborn Little Goat and the Hyena",
+      "subtitle": "A song to get back home",
+      "summary": "A little goat who never listens to his mother wanders into the heart of the great forest… and comes face to face with the hyena. He has only one weapon left: his song.",
+      "moral": "Listen to your parents' advice; and when you have made a mistake, keeping calm helps you get out of trouble."
+    },
+    "moore": {
+      "title": "Bãag-n-taarã ne a Zĩigã",
+      "subtitle": "Yɩɩll sẽn na yɩl n lebg n wa tẽngã pʋgẽ",
+      "summary": "Ko-kẽeng sẽn pa kelg a ma wã kẽnda gãengo pʋga. la a wa n yãaga ne hiɛnã. A tara zab-teed a ye bala: yɩɩl.",
+      "moral": "D kelg d roagdbã saglsã, la y sã n maan yel-wẽnde, sũ-bʋgsem sõngda tõnd tɩ d pa wa paam zu-loees ye."
+    },
+    "dioula": {
+      "title": "Galen, i tun be se ka mun lo kɛ?",
+      "subtitle": "Dɔnkili dɔ min b'a to an be kɔsegi soo.",
+      "summary": "Tuma min na a bamuso tun b'a fɛ ka mɛnni kɛ, bakɔrɔnin dɔ tagara don yirituba kɔnɔ. ani ka taga ɲɛɛ na ni o ye. A ka kɛlɛkɛminan kelen dɔrɔn lo b'a bolo: a ka dɔnkili.",
+      "moral": "N'i ye fili dɔ kɛ, n'i dusu sumanin lo, o bena i dɛmɛ ka bɔ gwɛlɛya dɔw la."
+    },
+    "fulfulde": {
+      "title": "Ɗuum Baabajo Ɓiɗɗo Yiite e Hineene",
+      "subtitle": "Yimbe ngam warugo saare",
+      "summary": "Ɗuum ɓikkoy go'o nanataa inna maako ɗon yaasi nder leɗɗe mawɗe... nden o ɗon wara yeeso bee hyena. O woodi konu go'oto tan: yimbe maako.",
+      "moral": "Njaɓu ko maama'en ma mbi'i; to a waɗii hakke, boo ngam taaɗa wallude."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 20,
+            "y": 26
+          },
+          {
+            "k": "goat",
+            "x": 44,
+            "s": 1.2
+          },
+          {
+            "k": "goat",
+            "x": 60,
+            "s": 0.8,
+            "flip": true,
+            "a": "a-hop"
+          },
+          {
+            "k": "forest-edge",
+            "x": 88,
+            "y": 20
+          }
+        ]
+      },
+      "text": {
+        "fr": "Autrefois, dans un village, vivait un petit bouc têtu qui n'écoutait jamais sa mère. Un matin, il prit la route de la forêt. « Mon enfant, ne t'éloigne pas, lui dit sa mère : dans la forêt, il y a le lion, la panthère et l'hyène. » Mais il fit la sourde oreille.",
+        "en": "Once upon a time, in a village, there lived a stubborn little goat who never listened to his mother. One morning he set off towards the forest. “My child, don't wander off,” his mother said. “In the forest there is the lion, the leopard and the hyena.” But he turned a deaf ear.",
+        "moore": "Daar a ye, tẽn-tẽng pʋgẽ, raoor sẽn yaa gãn-koabg n da pa kelgd a ma wã. Daar a ye, yẽ kẽnga weoogẽ. A ma yeela woto: \"M bi-ribl, bɩ y ra wa ye\". La a Zezi wʋma b tʋb n ka wʋm ye.",
+        "dioula": "Wagati dɔ la, bakɔrɔnin tun be dugu dɔ kɔnɔ ani a tun tɛ mɛnni kɛ a bamuso fɛ. Loon dɔ sɔgɔma, a tagara yiritu la. A bamuso ko: \"Ne deen, kana taga. Suman kɔnɔ, jara ni wara ani kongosogow be yen. Nka a ma mɛnni kɛ.",
+        "fulfulde": "Wakkati feere, nder gariiri go'oto ɗon jooɗi e ɓikkoy boobooɗo mo nanaama. Go'o subaka o fuɗɗi yahugo haa leɗɗe. \"Ɓiɗɗo am, taa wurto\", inna maako wi'i. Naa ley ladde ɗon le'o, e leepaaru e hyena. Ammaa o yaafani noppi maako."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "karite",
+            "x": 14,
+            "y": 26
+          },
+          {
+            "k": "goat",
+            "x": 40,
+            "s": 1,
+            "flip": true
+          },
+          {
+            "k": "hyena",
+            "x": 66,
+            "s": 1.3,
+            "flip": true
+          },
+          {
+            "k": "bush",
+            "x": 88
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il avança, avança, avança, sans s'en rendre compte, jusqu'au milieu de la grande forêt. Et tout à coup, il se retrouva face à l'hyène ! Tremblant, il se mit à chanter : « Ma mère m'a dit de ne pas aller en forêt, mon père m'a dit de ne pas aller en forêt… Le lion est en forêt ! La panthère est en forêt ! L'hyène est en forêt ! »",
+        "en": "He walked on and on and on, without noticing, right into the middle of the great forest. And suddenly he found himself face to face with the hyena! Trembling, he began to sing: “My mother told me not to go into the forest, my father told me not to go into the forest… The lion is in the forest! The leopard is in the forest! The hyena is in the forest!”",
+        "moore": "A ra kẽnda ne a meng n pa yãendẽ, la a gãenda weoogã pʋga. La tao-tao bala, a yãame t'a nee hyena wã nin-kãnga! A sẽn wa n zoet rabeemã, a yɩɩla woto: \"Mam ma yeela maam tɩ m ra kẽed logodo. M ba wã yeelame tɩ m ra kẽng logodo... Yaa gɩgemd n be weoogẽ! Bãng-y tɩ gɩgemdã bee weoogẽ! A hyena wã bee weoogẽ!",
+        "dioula": "A tun be to ka taga, a ma foyi ye. A tagara don yirituba kɔnɔ. O kɔ, a y'a yɛrɛ sɔrɔ ɲɛɛ na ni o ye! A yɛrɛyɛrɛtɔ y'a daminɛ ka dɔnkili la ko: \"N bamuso tun b'a fɔ ne ye n kana don yiritu kɔnɔ, n facɛ fana tun b'o fɔra... Jara be yiritu kɔnɔ! Leoparidi be yiritu kɔnɔ! O ye tulogweren ye!",
+        "fulfulde": "O ɗon yaha haa e dow, haa e nder caka leɗɗe mawɗe. Nden o tawi hoore maako yeeso bee hyena! O ɗon kolli, o fuɗɗi windi: Mama am wi'i yam naa yahugo nder ladde, baaba am wi'ii yam naa yahdugo nder ladda... Lewre ɗon nder leɗɗe! Leopard ɗon nder leɗɗe! Hyenna ɗon nder ladde!"
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "goat",
+            "x": 70,
+            "s": 1,
+            "a": "a-gallop"
+          },
+          {
+            "k": "hyena",
+            "x": 34,
+            "s": 1.2,
+            "a": "a-dance"
+          },
+          {
+            "k": "acacia",
+            "x": 88,
+            "y": 28
+          }
+        ]
+      },
+      "text": {
+        "fr": "La chanson amusa tant l'hyène qu'elle se mit à danser à reculons en riant : « Hiii, petit bouc, ne me fais pas rire comme ça ! » Le petit bouc en profita pour courir vers la maison. Quand l'hyène, revenue à elle, allait le rattraper, il reprenait sa chanson… et elle se remettait à danser.",
+        "en": "The song amused the hyena so much that she started dancing backwards, laughing: “Heee, little goat, don't make me laugh like that!” The little goat took the chance to run towards home. Whenever the hyena came to her senses and was about to catch him, he started his song again… and she began dancing once more.",
+        "moore": "Yɩɩllã yɩɩl-kãng kɩtame tɩ b yãgd n na n wa dans poorẽ, la b yãgsame: \"Hee, malɛkẽ, da kɩt tɩ m yãg woto ye!\" Malɛka rɩka sor n zoe n kẽng a yiri. A sẽn da wa n na n yõk-a wã, a leb n yɩɩnda. La a leb n sɩngame n na n yɩɩl.",
+        "dioula": "O dɔnkilila ye hyenɛ ninsɔndiya fɔɔ a y'a daminɛ ka kɔ donyɔrɔ dan, k'a yɛrɛ yɛlɛ ko: \"Hee, bakɔrɔnin dennin, kana ne to n be yɛlɛ ten! Bakɔrɔnin denin ye sira ta ka boli ka taga soo. Tuma o tuma, ni a tun b'a fɛ k'a minɛ, a tun be to ka dɔnkili la tugun. A y'a daminɛ ka dɔɔn kɛ tugun.",
+        "fulfulde": "Yimre nden waɗi hyena booɗeeje haa o fuɗɗi yi'ugo dow, o ɗon nyiya: Heee, mbodoowo, taa waɗam nanki bana non! Mbodoowo maayi laawol ngam yahde saare. To hyena wari to maako, o fuɗɗi windi... o fuɗɗiti yiɗugo."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que doit faire le petit bouc pour s'en sortir ?",
+          "en": "What must the little goat do to escape?",
+          "moore": "Bõe la kambã segd n maan tɩ b põsẽ?",
+          "dioula": "A ka ɲi ka mun lo kɛ walisa k'a yɛrɛ tanga?",
+          "fulfulde": "Koye ɓikkoy go'o waɗata ngam yaasi?"
+        },
+        "options": [
+          {
+            "fr": "Continuer à chanter en courant vers la maison",
+            "en": "Keep singing while running home",
+            "moore": "D ket n yɩɩndda d sã n zoet n dabd ne d zakã.",
+            "dioula": "I to ka dɔnkili la n'i be boli ka taga soo.",
+            "fulfulde": "Wanoo haa o ɗon hoola"
+          },
+          {
+            "fr": "Se battre avec l'hyène",
+            "en": "Fight the hyena",
+            "moore": "Kẽng-y ne y zoobã.",
+            "dioula": "I ka kan k'i yɛrɛ tanga o ma.",
+            "fulfulde": "haɓana bee hyena"
+          },
+          {
+            "fr": "Se cacher dans un arbre",
+            "en": "Hide in a tree",
+            "moore": "Bĩng-y tɩɩgẽ.",
+            "dioula": "I dogo yiri dɔ kɔnɔ.",
+            "fulfulde": "Hidhina nder leggal"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Tant qu'il chantait, l'hyène dansait au lieu de le poursuivre !",
+          "en": "As long as he sang, the hyena danced instead of chasing him!",
+          "moore": "A sẽn da wa n yɩɩndẽ wã, a ra paagd-a ye.",
+          "dioula": "Tuma min na a tun be dɔnkili lara, o tuma na, u ye dansi kɛ sanni ka tugu a kɔ!",
+          "fulfulde": "To o ɗon werra, hyena'en ɓe ngaɗi haa ɓe njogii mo!"
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 220
+          },
+          {
+            "k": "hut",
+            "x": 70,
+            "y": 26
+          },
+          {
+            "k": "goat",
+            "x": 48,
+            "s": 1.2
+          },
+          {
+            "k": "goat",
+            "x": 58,
+            "s": 0.8,
+            "flip": true
+          },
+          {
+            "k": "hyena",
+            "x": 14,
+            "s": 0.7
+          }
+        ]
+      },
+      "text": {
+        "fr": "Chanson après chanson, le petit bouc arriva enfin chez lui, à bout de souffle, et se blottit contre sa mère. Depuis ce jour, il écoute ses conseils. Et les enfants qui entendent ce conte apprennent la chanson par cœur… au cas où ils croiseraient un jour l'hyène.",
+        "en": "Song after song, the little goat finally reached home, out of breath, and snuggled up to his mother. From that day on, he has listened to her advice. And the children who hear this tale learn the song by heart… just in case they ever meet the hyena.",
+        "moore": "Yɩɩll n pʋgd yɩɩl a taaba, la bʋʋgã waame n ta be. A ra pa le tar sɩɩs ye. Sẽn sɩng ne a daarã, a kelg-a lame. La kambã sẽn kelgd-a wã zãmsda yɩɩlã n bãng n pa yã ye. B sã n wa yã-a, b na n maana woto.",
+        "dioula": "O kɔ, a y'a kaan bɔ ka taga soo. A tun be fiɲɛ ɲinina ani a ye muso minɛ ni kanuya ye. Kabi o loon, a y'a ka ladiliw lamɛn. Ni denmisɛnw ye o maana mɛn, u b'o dɔnkilila kalan n'u hakili bɛɛ ye. N'u ye hyenɛ kunbɛn, o dɔrɔn lo.",
+        "fulfulde": "Yimre ɓaawo yimre, go'o boojo wari haa saare, o wurtini nyawugo maako. Gila nden wakkati, o nana ko o wi'i. Bana non, sukaaɓe nanondirɓe haala on ɗon njanngina nden song dow ɓernde. Ko ngam ɓe taway hiina."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quel est le défaut du petit bouc ?",
+        "en": "What is the little goat's flaw?",
+        "moore": "Ko-kãnga sẽn yaa bõne wã pãn-komsem yaa bõe?",
+        "dioula": "O kɔ, a y'a fɔ ko: \"N'i ye n ka muso furuɲɔgɔn dɔ ye, o tuma na i bena taga\".",
+        "fulfulde": "Ko honɗun woni ko ɓeydaare go'o?"
+      },
+      "options": [
+        {
+          "fr": "Il n'écoute pas sa mère",
+          "en": "He doesn't listen to his mother",
+          "moore": "A pa kelgd a ma ye.",
+          "dioula": "A tɛ mɛnni kɛ a bamuso fɛ.",
+          "fulfulde": "O nanaayi nyaako maako."
+        },
+        {
+          "fr": "Il est gourmand",
+          "en": "He is greedy",
+          "moore": "A yaa zãmb soaba.",
+          "dioula": "A ye wasabali ye.",
+          "fulfulde": "O marɗo ɓernde"
+        },
+        {
+          "fr": "Il ment",
+          "en": "He lies",
+          "moore": "A zãmbda.",
+          "dioula": "A be ngalon tigɛra.",
+          "fulfulde": "O ɗon fewja."
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que fait l'hyène quand le bouc chante ?",
+        "en": "What does the hyena do when the goat sings?",
+        "moore": "Ko-kãnga sã n yɩɩldẽ, a maanda bõe?",
+        "dioula": "Tuma min na bakɔrɔnin be dɔnkili lara, a be mun lo kɛ?",
+        "fulfulde": "Ko honɗun hyena waɗi to go'o ɗon werra?"
+      },
+      "options": [
+        {
+          "fr": "Elle danse à reculons",
+          "en": "She dances backwards",
+          "moore": "A yɩɩlda poorẽ.",
+          "dioula": "A be dansi kɛ ka taga kɔfɛ.",
+          "fulfulde": "O ɗon yi'a dow"
+        },
+        {
+          "fr": "Elle s'endort",
+          "en": "She falls asleep",
+          "moore": "A ra gãeeda.",
+          "dioula": "A be sinɔgɔra.",
+          "fulfulde": "O ɗaani"
+        },
+        {
+          "fr": "Elle pleure",
+          "en": "She cries",
+          "moore": "A yãbdame.",
+          "dioula": "A be kasi.",
+          "fulfulde": "O ɗon ngiiwi."
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "panthère",
+      "lang": "fr",
+      "def": {
+        "fr": "Grand félin tacheté (léopard) qui vivait autrefois dans les forêts du sud-ouest du Burkina Faso.",
+        "en": "A large spotted cat (leopard) that once lived in the forests of south-western Burkina Faso.",
+        "moore": "Kẽer sẽn tar gãag n yaa bãad-dãmb (leopard) sẽn da be Burkĩna Faso zĩiga.",
+        "dioula": "O ye dingɛ belebeleba dɔ ye (leopard), min tun be to ka ɲɛnamaya kɛ Burkina Faso worodugu ni tileben fan fɛ.",
+        "fulfulde": "Cuuɗal mawɗo (leopard) mo ɗon jooɗii nder ladde fuunaaŋgo Burkina Faso."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « L'hyène et le bouc », conte gouin raconté par Mme Justine Fayama, publié sur abcBurkina.net. Réécriture libre.",
+    "en": "Based on “L'hyène et le bouc”, a Gouin tale told by Mrs Justine Fayama, published on abcBurkina.net. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

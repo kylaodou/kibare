@@ -1,0 +1,380 @@
+{
+  "slug": "le-lievre-qui-traya-la-vache-de-brousse",
+  "type": "conte",
+  "region": "est",
+  "place": "Bogandé",
+  "coords": [
+    12.97,
+    -0.14
+  ],
+  "people": "Gourmantché",
+  "language": "gulmancema",
+  "duration": 4,
+  "age": 5,
+  "featured": false,
+  "cover": 2,
+  "tags": [
+    "ruse",
+    "lièvre",
+    "Outênou",
+    "animaux"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le lièvre qui traya la vache de brousse",
+      "subtitle": "Trop malin pour son propre bien",
+      "summary": "Une vache sauvage, devenue furieuse, blesse tous ceux qui l'approchent. Outênou, le seigneur du ciel, promet un grigri de malice à celui qui saura la traire. Les plus forts échouent… mais le lièvre a une idée.",
+      "moral": "La malice ouvre bien des portes, mais trop de malice fait peur, même aux plus puissants."
+    },
+    "en": {
+      "title": "The Hare Who Milked the Wild Cow",
+      "subtitle": "Too clever for his own good",
+      "summary": "A wild cow, grown furious, wounds everyone who comes near her. Outênou, lord of the sky, promises a charm of cunning to whoever can milk her. The strongest fail… but the hare has an idea.",
+      "moral": "Cunning opens many doors, but too much cunning frightens even the mightiest."
+    },
+    "moore": {
+      "title": "Ko-yãang ning sẽn dɩt rũngã wã",
+      "subtitle": "A yaa yam soaba n na n maan a meng neere.",
+      "summary": "Rõng sẽn yaa kãsenga, a sãame n namsd ned ning fãa sẽn wat-a nengẽ. A Outênou, yĩngr naabã kãabda ned ning fãa sẽn tõe n dɩt-a wã a yam. Sẽn yɩɩd fãa, b sã n pa tõog ye... La sãtgã tara yam.",
+      "moral": "Zĩig kengda noor wʋsgo, la zĩrĩ wʋsg zoeta pãng soab me rabeem."
+    },
+    "dioula": {
+      "title": "Lɔnnikɛla min ye misi lamɔ",
+      "subtitle": "A tun ka ɲi k'a yɛrɛ nafa ɲini.",
+      "summary": "Ni misi dɔ y'a fari faga, mɔgɔ o mɔgɔ tun b'a gɛrɛfɛ, a be se k'o tigi mandimi. Otonou, sankolo tigi Ala ye a daa di ko mɔgɔ o mɔgɔ b'a lamɔ ka kɛ hakilitigi ye. Fanga min b'a la ka see sɔrɔ, o ye nin ye: Nka, sagaden ye miiriya dɔ sɔrɔ.",
+      "moral": "Mɔgɔ minw ka fanga ka bon, mɔgɔjuguw be siran o tigi ɲa."
+    },
+    "fulfulde": {
+      "title": "Laruɗo Duuɗugo Go'o",
+      "subtitle": "Too smart for his own good",
+      "summary": "Go'o digaalu, ɗon ɓeyda masin, ɗon woonda fuu mo ɓadake maako. Outênou, laamiiɗo asama, ɗon alkawal ko'e mum booɗeeje haa koo moye mo waawi nyaamugo maako. Ɓurɓe footi... Ammaa laana woodi miijo.",
+      "moral": "Wurooji ɗon uddita dammugal ɗuuɗal, ammaa ɓurugo wurooji hullata koo gooduɗo sembe."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "wild-cow",
+            "x": 50,
+            "s": 1.2
+          },
+          {
+            "k": "acacia",
+            "x": 16,
+            "y": 24
+          },
+          {
+            "k": "hyena",
+            "x": 82,
+            "flip": true,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "Dans la brousse, une vache sauvage avait mis bas, et elle était devenue si méchante que personne n'osait l'approcher. À coups de cornes, elle chassait tous ceux qui s'avançaient trop près d'elle.",
+        "en": "Out in the bush, a wild cow had given birth, and she had become so fierce that no one dared approach her. With her horns, she drove away anyone who came too close.",
+        "moore": "La b sẽn da be weoogẽ wã, naand n dogame. A ra yaa zo-rãmba tɩ ned pa tõe n kolg a nengẽ ye. A ra zãada a yɩɩl n digd ned ning fãa sẽn da wa be-a taoorã.",
+        "dioula": "O kɔ, u y'a ye ko misi dɔ tun be yiritu la ani a tun diminin lo kosɔbɛ fɔɔ mɔgɔ si ma sɔn ka gwɛrɛ a la. Ni mɔgɔ o mɔgɔ tun surunyana a la kojugu, a y'a kɛ u be boli ka bɔ yen.",
+        "fulfulde": "Nder leɗɗe, go'o diga lesdi danyani, nden o ɓeydi masin haa walaa mo yotti yahugo maako. E ko'e maako, o ɗon riiwi koo moye ɓadake."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "rays",
+            "x": 50
+          },
+          {
+            "k": "sky-man",
+            "x": 50,
+            "y": 140
+          },
+          {
+            "k": "lion",
+            "x": 22,
+            "s": 0.9
+          },
+          {
+            "k": "elephant",
+            "x": 78,
+            "s": 0.8
+          },
+          {
+            "k": "hare",
+            "x": 56,
+            "s": 1.3
+          }
+        ]
+      },
+      "text": {
+        "fr": "Outênou, le seigneur du ciel, réunit tous les animaux. « À celui qui saura traire cette vache, je donnerai un grigri de malice ! » Le lion essaya, l'éléphant essaya, l'hyène essaya. La bête enragée cassait les pattes des uns et trouait le flanc des autres. Personne n'y parvint.",
+        "en": "Outênou, lord of the sky, gathered all the animals. “To whoever can milk this cow, I will give a charm of cunning!” The lion tried, the elephant tried, the hyena tried. The raging beast broke some animals' legs and gored others' sides. No one succeeded.",
+        "moore": "A Outênou, yĩngr zu-soaba, tigsa rũmsã fãa. Sẽn tõe n dɩt-a la m na kõ-a yam sẽn tar sɩlem. Rũngã sẽn da yaa kãsenga wã pãbre rũms kẽer nao, n wẽ neb a taabã nug-n-tɩrs. Ned baa a yen pa tõog ye.",
+        "dioula": "Outênou, sankolo tigi ye bɛganw bɛɛ lajɛn. Ni mɔgɔ min be se ka nin misi nɔnɔ di, ne bena o tigi dɛmɛ ni n'a ka hakilitigiya ye! O wara tun be dɔw seen kari ani ka dɔ wɛrɛw fari faga. Mɔgɔ si ma se.",
+        "fulfulde": "Outênou, laamiiɗo asama, mooɓti dabbaaji fuu. To goɗɗo waawata ƴamugo go'o, mi hokkan mo yamɗitol! Le'o foondini, nduufo foondini. Hyena foondini! Dabba ɗon kaɓɓa kootoy goɗɗe e ɓanngina woɓɓe. Walaa gooduɗo."
+      },
+      "choice": {
+        "q": {
+          "fr": "Comment le lièvre va-t-il approcher la vache ?",
+          "en": "How will the hare approach the cow?",
+          "moore": "Wãn to la ko-yãangã na n wa pẽg ne fõ wã?",
+          "dioula": "Dɔnkirilabagaw be se ka taga misi gɛrɛfɛ cogo di?",
+          "fulfulde": "Noy labbal ngal ɓadoto haa ley?"
+        },
+        "options": [
+          {
+            "fr": "Par la force",
+            "en": "By force",
+            "moore": "Ne pãng",
+            "dioula": "Ni fanga ye",
+            "fulfulde": "Ngam sembe"
+          },
+          {
+            "fr": "En lui parlant de ce qu'elle désire le plus",
+            "en": "By talking about what she wants most",
+            "moore": "A sẽn gomd bũmb ning a sẽn dat n yɩɩd yelle",
+            "dioula": "A be min fɛ ka tɛmɛ fɛɛn bɛɛ kan, a b'o fɔ",
+            "fulfulde": "Ngam haalaaji dow ko o yiɗi ɓurɗum"
+          },
+          {
+            "fr": "En l'endormant",
+            "en": "By putting her to sleep",
+            "moore": "Yaa ne a sẽn kɩt tɩ b gãe zʋʋgẽ wã.",
+            "dioula": "N'i y'a la a ka sinɔgɔ la,",
+            "fulfulde": "Ngam waɗugo mo ɗaanaago"
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "Le lièvre savait ce que la vache désirait par-dessus tout…",
+          "en": "The hare knew what the cow wanted above all else…",
+          "moore": "La b ra miime tɩ bũmb nins fãa sẽn yɩɩd yaa bõn-buudã.",
+          "dioula": "A tun b'a lɔn a ka fɛɛnw ye fɛɛn minw ye, o bɛɛ la.",
+          "fulfulde": "Ko'e nder ɓooyi ɗon andi ko baali yiɗi ɓuri koo ɗume..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 240
+          },
+          {
+            "k": "wild-cow",
+            "x": 56,
+            "s": 1.1
+          },
+          {
+            "k": "hare",
+            "x": 34,
+            "s": 1.5
+          },
+          {
+            "k": "calabash",
+            "x": 42
+          },
+          {
+            "k": "grass",
+            "x": 80
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le lièvre prit une calebasse et s'approcha doucement. « Puissante vache, le seigneur Outênou cherche une mère qui n'a qu'un seul petit. Si tu remplis cette calebasse de ton lait, il en fera un grigri de fécondité pour toi. » La vache, qui rêvait d'avoir un autre veau, se laissa traire sans un coup de corne.",
+        "en": "The hare took a calabash and crept closer. “Mighty cow, lord Outênou is looking for a mother with only one calf. If you fill this calabash with your milk, he will make it into a fertility charm for you.” The cow, who dreamed of having another calf, let herself be milked without a single thrust of her horns.",
+        "moore": "Laarã rɩka a sẽn da tar n na n kẽe. La a Zeova sẽn yaa pãng soaba, a baooda ma ne bi-bil a ye. Y sã n pid ne y piisã, a na n kɩtame tɩ b yɩ bõn-naandg yãmb yĩnga. Koɛɛgã sẽn da rat n paam bi-bil a to wã sakame tɩ b kõ-a-la peoog baa a yembr ye.",
+        "dioula": "A ye kalabasisi dɔ ta ka gwɛrɛ a la. Siraba, Matigi Outênou be ba ɲini min b'a ka misiden kelen dɔrɔn sɔrɔ. N'i ye nɔnɔ kɛ ka tɛmɛ o kan, a bena i dɛmɛ k'a sɔrɔ i tɛ deen sɔrɔla. Misi min tun b'a fɛ ka misiden wɛrɛ wolo, ale y'a to u y'a kolo n'o tɛ.",
+        "fulfulde": "Laru ɗon ɗaɓɓi kalfinaajo boo ɓadake. Koowo marɗo baawɗe, laamɗo Outênou ɗon ɗaɓɓita inna bee ɓikkoy go'oto tan. To a heewi kalbasji ɗi'e bee leɗɗe ma, o waɗan ɗum nder ɓernde maako. Goo, mo ɗon ɗaana heɓugo gooduɗo nyaama feere, laatini hoore mum haa ɓe mbaɗata bee leɗɗe ɗe walaa kootoy."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "rays",
+            "x": 50
+          },
+          {
+            "k": "sky-man",
+            "x": 52,
+            "y": 140
+          },
+          {
+            "k": "hare",
+            "x": 40,
+            "s": 1.5
+          },
+          {
+            "k": "calabash",
+            "x": 48
+          },
+          {
+            "k": "bush",
+            "x": 84
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le lièvre apporta le lait à Outênou et lui raconta sa ruse. Outênou réfléchit, puis lui dit : « Merci pour ce lait que nul autre n'a pu obtenir. Mais je ne te donnerai pas le grigri de malice : tu es déjà si rusé qu'avec lui, tu finirais par me chasser du ciel ! »",
+        "en": "The hare brought the milk to Outênou and told him about his trick. Outênou thought for a moment, then said: “Thank you for this milk that no one else could obtain. But I will not give you the charm of cunning: you are already so clever that with it, you would end up chasing me out of the sky!”",
+        "moore": "Laarã talla piis n wa ne a Outênou la a togs-a t'a sẽn maan bũmb ningã. A Outênou tagsa bilf n yaool n yeel tɩ: \"M pʋʋsda yãmb barka ne pi-kãngã, ned baa a yen sẽn pa tõe n paam ye. La mam ka na n kõ yãmb yam-yãkrã ye. Yãmb zoe n yaa nin-tɩrs tɩ y tõe n zãagame n dig m ne saasẽ!",
+        "dioula": "A tagara ni nɔnɔ ye Outênou fɛ ani a y'a fɔ a ye ko ale be se ka dɔ fara a ka baara kan. O kɔ, a y'a miiri dɔɔni ani k'a fɔ ko: \"Ne b'i fo i ye nɔnɔ min di mɔgɔ si ma. Nka ne tɛna i nɛgɛ ka n'i yɛrɛ dogo. I ye hakilitigi ye fɔɔ o la, i bena ban ka ne gwɛn ka bɔ sankolo la!",
+        "fulfulde": "Laru ɗon wari bee leɗɗe haa Outênou, o wi'i mo dow kuugal maako. Outênou ɗon ɗaɓɓita hakkiilo, nden o wi'i: Taaɗee ngam leɗɗe ɗe goɗɗo waawaa heɓugo. Ammaa mi hokkanay ma yamɗitol ɓerɗe mon: a ɗonno boo mari hakkillo, ngam bee maajum, a wurtinanmi diga dow!"
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qui est Outênou ?",
+        "en": "Who is Outênou?",
+        "moore": "Ãnd n yaa a Outênou?",
+        "dioula": "Jɔn lo ye Outênou ye?",
+        "fulfulde": "Moye woni Outênou?"
+      },
+      "options": [
+        {
+          "fr": "Le seigneur du ciel des Gourmantché",
+          "en": "The Gourmantché lord of the sky",
+          "moore": "Yaa yĩngr naab sẽn yaa Gourmantché wã.",
+          "dioula": "Sankolotigi Gourmantché",
+          "fulfulde": "Gourmantché laamɗo kammu"
+        },
+        {
+          "fr": "Un chasseur",
+          "en": "A hunter",
+          "moore": "Ned sẽn baood zĩm-biisi",
+          "dioula": "Jagokɛla dɔ",
+          "fulfulde": "Lamarɗo"
+        },
+        {
+          "fr": "Le roi des lièvres",
+          "en": "King of the hares",
+          "moore": "B sẽn yaa naandã rĩmã",
+          "dioula": "Dɔnkiw ka masacɛ",
+          "fulfulde": "Laamiiɗo laamɓe"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que désire la vache plus que tout ?",
+        "en": "What does the cow want most of all?",
+        "moore": "Bõe la ko-kãnga dat n yɩɩd fãa?",
+        "dioula": "Sogo nin be mun lo fɛ ka tɛmɛ fɛɛn bɛɛ kan?",
+        "fulfulde": "Ko woni ko gooduɗo ɓurɓe yiɗi?"
+      },
+      "options": [
+        {
+          "fr": "De l'herbe fraîche",
+          "en": "Fresh grass",
+          "moore": "Dĩm-dãmb sẽn yaa naandã",
+          "dioula": "Jigɛkɛnɛw",
+          "fulfulde": "Fuuɗeeje"
+        },
+        {
+          "fr": "Un autre veau",
+          "en": "Another calf",
+          "moore": "Bãag a to n wa.",
+          "dioula": "Denmisɛn wɛrɛ.",
+          "fulfulde": "Ɗerewol feere"
+        },
+        {
+          "fr": "Être tranquille",
+          "en": "Peace and quiet",
+          "moore": "La bãane la gãn-kɛgenga",
+          "dioula": "Hɛrɛ ni lafiya",
+          "fulfulde": "Jam e jam"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Pourquoi Outênou refuse-t-il le grigri au lièvre ?",
+        "en": "Why does Outênou refuse to give the hare the charm?",
+        "moore": "Bõe yĩng t'a Outênou pa rat n kõ wũnda a sũ-sãanga?",
+        "dioula": "Mun na Outênou t'a fɛ ka lasigidenw tando?",
+        "fulfulde": "Ngam ɗume Outênou ɗon haɓɓa hokki haako'en ɓernde?"
+      },
+      "options": [
+        {
+          "fr": "Le lièvre est déjà trop rusé",
+          "en": "The hare is already too cunning",
+          "moore": "La sã n yaa woto, a na n yɩɩg-a lame.",
+          "dioula": "Dɔnnikɛla ka ɲi yɛrɛ le.",
+          "fulfulde": "Laru ɗon ɓeyda boo."
+        },
+        {
+          "fr": "Le lait était mauvais",
+          "en": "The milk was bad",
+          "moore": "Piigã ra yaa wẽnga.",
+          "dioula": "Dusu tun man ɲi.",
+          "fulfulde": "Laki ɗon ɓilla"
+        },
+        {
+          "fr": "Il l'a perdu",
+          "en": "He lost it",
+          "moore": "A ra pa mi-a ye.",
+          "dioula": "A y'a ye ko a tun tɛ foyi yera.",
+          "fulfulde": "O majjini ɗum."
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Outênou",
+      "lang": "gulmancema",
+      "def": {
+        "fr": "Nom de Dieu, seigneur du ciel, dans les contes gourmantché recueillis au début du XXᵉ siècle.",
+        "en": "The name of God, lord of the sky, in Gourmantché tales collected in the early 20th century.",
+        "moore": "Wẽnnaam yʋʋr sẽn yaa yĩngr zu-soaba, gourmantché kibarã pʋgẽ. A paama a yʋʋrã yʋʋmd 1900 wã sɩngrẽ.",
+        "dioula": "Ala tɔgɔ, sankolo tigi. O tɔgɔ kofɔra Gourmantché ka maana dɔw kɔnɔ saan 1900 wagati daminɛ na.",
+        "fulfulde": "Innde Allah, laamiiɗo asama, nder gootol Gourmantché ko hawriti e fuɗɗoode karnijum 20."
+      }
+    },
+    {
+      "term": "grigri",
+      "lang": "fr",
+      "def": {
+        "fr": "Amulette ou objet protecteur auquel on attribue un pouvoir.",
+        "en": "An amulet or protective object believed to hold power.",
+        "moore": "B ra tẽedame tɩ yaa bõn-vɩɩs sẽn tar pãng n kogend nebã.",
+        "dioula": "U tun b'a miiri ko fɛɛn dɔ be se k'u tanga.",
+        "fulfulde": "Ko'e ko'e dow ko'e maɓɓe, koo huunde ɗe ɓe ɗon goonɗina ngam hokkude baawɗe."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « Le lièvre qui traya la vache de brousse », conte gourmantché recueilli à Bogandé en 1911 auprès du conteur Bendioua, publié par F.-V. Équilbecq (1913, domaine public). Réécriture libre.",
+    "en": "Based on “Le lièvre qui traya la vache de brousse”, a Gourmantché tale told by Bendioua in Bogandé in 1911 and published by F.-V. Équilbecq (1913, public domain). Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

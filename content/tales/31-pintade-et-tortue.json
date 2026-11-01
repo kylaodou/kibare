@@ -1,0 +1,166 @@
+{
+  "slug": "la-pintade-et-la-tortue",
+  "type": "conte",
+  "region": "plateau-central",
+  "place": "Ziniaré",
+  "coords": [12.58, -1.3],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 4,
+  "age": 4,
+  "featured": false,
+  "cover": 0,
+  "tags": ["pardon", "amitié", "animaux"],
+  "i18n": {
+    "fr": {
+      "title": "La mère pintade et la tortue",
+      "subtitle": "Le pardon refusé",
+      "summary": "Chaque jour, la tortue garde les petits de son amie la pintade partie au marché. Un après-midi, elle s'assoupit… et la pintade, furieuse, refuse tout pardon.",
+      "moral": "Savoir pardonner l'erreur d'un ami, c'est aussi se protéger soi-même."
+    },
+    "en": {
+      "title": "Mother Guinea Fowl and the Tortoise",
+      "subtitle": "The refused forgiveness",
+      "summary": "Every day the tortoise looks after the chicks of her friend the guinea fowl while she goes to market. One afternoon the tortoise dozes off… and the furious guinea fowl refuses to forgive her.",
+      "moral": "Knowing how to forgive a friend's mistake also protects ourselves."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          { "k": "sun", "x": 82, "y": 300 },
+          { "k": "guinea-fowl", "x": 30, "s": 1.6 },
+          { "k": "partridge", "x": 40, "s": 0.8 },
+          { "k": "partridge", "x": 46, "s": 0.7 },
+          { "k": "tortoise", "x": 62, "s": 1.4 },
+          { "k": "acacia", "x": 88, "y": 28 }
+        ]
+      },
+      "text": {
+        "fr": "Au bord d'une mare vivaient deux grandes amies : la mère pintade et la tortue. Le marché était loin, très loin. Alors, chaque fois que la pintade partait chercher de quoi manger, elle confiait ses petits à sa voisine. « Veille bien sur eux, je reviens vite ! » « Va tranquille, répondait la tortue, et rapporte-nous quelque chose de bon. »",
+        "en": "Beside a pond lived two great friends: Mother Guinea Fowl and the Tortoise. The market was far, very far away. So whenever the guinea fowl went to look for food, she left her chicks with her neighbour. “Watch over them well, I'll be back soon!” “Off you go,” the tortoise would answer, “and bring us back something good.”"
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "lake",
+        "items": [
+          { "k": "tortoise", "x": 24, "s": 1.4 },
+          { "k": "partridge", "x": 58, "s": 0.7 },
+          { "k": "guinea-fowl", "x": 86, "s": 1.4, "flip": true },
+          { "k": "bush", "x": 40, "y": 10 }
+        ]
+      },
+      "text": {
+        "fr": "Un après-midi brûlant, la tortue, épuisée, ferma les yeux un instant et s'endormit. L'un des petits aperçut sa mère qui revenait au loin et partit tout seul à sa rencontre. Quand la pintade vit son enfant marcher seul près de l'eau, son cœur bondit de colère.",
+        "en": "One scorching afternoon the exhausted tortoise closed her eyes for a moment and fell asleep. One of the chicks saw its mother coming back in the distance and set off alone to meet her. When the guinea fowl saw her little one walking alone near the water, her heart leapt with anger."
+      },
+      "choice": {
+        "q": { "fr": "Que devrait faire la mère pintade ?", "en": "What should Mother Guinea Fowl do?" },
+        "options": [
+          { "fr": "Écouter son amie et lui pardonner", "en": "Listen to her friend and forgive her" },
+          { "fr": "La chasser pour toujours", "en": "Drive her away for ever" }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Hélas, la pintade n'écouta que sa colère…",
+          "en": "Alas, the guinea fowl listened only to her anger…"
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          { "k": "guinea-fowl", "x": 30, "s": 1.6 },
+          { "k": "tortoise", "x": 62, "s": 1.3, "flip": true },
+          { "k": "baobab", "x": 86, "y": 26, "s": 0.8 }
+        ]
+      },
+      "text": {
+        "fr": "« Quelle voisine es-tu donc ? Tu as mis la vie de mes enfants en danger ! » La tortue baissa la tête : « Pardonne-moi, la fatigue m'a vaincue. » Elle s'excusa encore et encore, mais la pintade ne voulut rien entendre et la chassa de chez elle.",
+        "en": "“What kind of neighbour are you? You put my children's lives in danger!” The tortoise lowered her head: “Forgive me, tiredness got the better of me.” She apologised again and again, but the guinea fowl would not listen and drove her away."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          { "k": "tortoise", "x": 16, "s": 1.2 },
+          { "k": "monkey", "x": 34, "s": 0.9 },
+          { "k": "hare", "x": 48, "s": 0.9 },
+          { "k": "partridge", "x": 60 },
+          { "k": "elephant", "x": 80, "s": 0.7 },
+          { "k": "guinea-fowl", "x": 96, "s": 1.3, "flip": true }
+        ]
+      },
+      "text": {
+        "fr": "Triste, la tortue alla trouver tous les animaux de la brousse : le singe, le lièvre, la perdrix, et même l'éléphant. Un à un, ils vinrent plaider sa cause auprès de la pintade. Mais la pintade resta fermée comme une calebasse bouchée : elle refusa tout pardon.",
+        "en": "Saddened, the tortoise went to see all the animals of the bush: the monkey, the hare, the partridge and even the elephant. One by one they came to plead her case with the guinea fowl. But the guinea fowl stayed shut like a stoppered calabash: she refused all forgiveness."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "lake",
+        "items": [
+          { "k": "guinea-fowl", "x": 40, "s": 1.6, "flip": true },
+          { "k": "acacia", "x": 14, "y": 26 },
+          { "k": "birds", "x": 70, "y": 250 }
+        ]
+      },
+      "text": {
+        "fr": "Puis vint le jour où la pintade dut repartir au marché. Son amie n'étant plus là, elle laissa ses petits seuls au bord de la mare. À son retour, la mare était silencieuse : ses petits étaient tombés dans l'eau. Ce jour-là, la pintade comprit trop tard ce que coûte un pardon refusé.",
+        "en": "Then came the day when the guinea fowl had to go back to the market. With her friend gone, she left her chicks alone beside the pond. When she returned, the pond was silent: her little ones had fallen into the water. That day the guinea fowl understood, too late, the cost of refusing to forgive."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": { "fr": "Pourquoi la tortue n'a-t-elle pas surveillé les petits ?", "en": "Why didn't the tortoise watch the chicks?" },
+      "options": [
+        { "fr": "Elle s'est endormie de fatigue", "en": "She fell asleep from tiredness" },
+        { "fr": "Elle est partie au marché", "en": "She went to the market" },
+        { "fr": "Elle était fâchée", "en": "She was angry" }
+      ],
+      "answer": 0
+    },
+    {
+      "q": { "fr": "Qui vient demander pardon pour la tortue ?", "en": "Who comes to ask forgiveness for the tortoise?" },
+      "options": [
+        { "fr": "Les animaux de la brousse", "en": "The animals of the bush" },
+        { "fr": "Les petits de la pintade", "en": "The guinea fowl's chicks" },
+        { "fr": "Personne", "en": "No one" }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "pintade",
+      "lang": "fr",
+      "def": {
+        "fr": "Oiseau au plumage gris tacheté de blanc, très présent dans les cours et la brousse du Burkina Faso.",
+        "en": "A bird with grey, white-spotted plumage, very common in the yards and bush of Burkina Faso."
+      }
+    },
+    {
+      "term": "mare",
+      "lang": "fr",
+      "def": {
+        "fr": "Petite étendue d'eau qui se remplit à la saison des pluies.",
+        "en": "A small body of water that fills up in the rainy season."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « La mère pintade et la tortue » (conte n° 1), Recueil de contes pour les structures d'éducation préscolaire au Burkina Faso, MENAPLN avec l'appui de l'UNICEF, 2022. Réécriture libre ; le texte original, en français et en langues nationales, est à consulter dans le recueil.",
+    "en": "Based on “La mère pintade et la tortue” (tale no. 1), Recueil de contes pour les structures d'éducation préscolaire au Burkina Faso, MENAPLN with support from UNICEF, 2022. Free retelling; the original text, in French and national languages, can be found in the collection."
+  }
+}

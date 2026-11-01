@@ -1,0 +1,427 @@
+{
+  "slug": "awa-et-les-murs-de-tiebele",
+  "type": "recit",
+  "region": "centre-sud",
+  "place": "Tiébélé",
+  "coords": [
+    11.1,
+    -0.96
+  ],
+  "people": "Kassena",
+  "language": "kasem",
+  "duration": 5,
+  "age": 6,
+  "featured": true,
+  "cover": 0,
+  "tags": [
+    "art",
+    "transmission",
+    "femmes",
+    "architecture"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Awa et les murs peints de Tiébélé",
+      "subtitle": "Quand les femmes écrivent l'histoire sur les murs",
+      "summary": "À Tiébélé, les maisons sont couvertes de motifs rouges, noirs et blancs. Cette année, la petite Awa a enfin le droit d'aider sa grand-mère à les peindre. Chaque dessin, découvre-t-elle, raconte quelque chose.",
+      "moral": "Les traditions restent vivantes quand on les transmet de génération en génération."
+    },
+    "en": {
+      "title": "Awa and the Painted Walls of Tiebele",
+      "subtitle": "When women write history on the walls",
+      "summary": "In Tiebele, houses are covered in red, black and white patterns. This year, little Awa is finally allowed to help her grandmother paint them. Every design, she discovers, tells a story.",
+      "moral": "Traditions stay alive when they are passed down from generation to generation."
+    },
+    "moore": {
+      "title": "Awa ne a Tiebele wallã sẽn da yaa vẽenema",
+      "subtitle": "Pagbã sẽn gʋlsd pĩnd wẽndẽ wallã,",
+      "summary": "A Tiebele, roogã yaa miuug ne wĩnd la pemse. Yʋʋmd kãngã, a Awa sẽn pa yãendã paama sor n na n sõng-a t'a ma wãb-ba. A sã n bãng bũmb ning fãa, a gomda yell wʋsgo.",
+      "moral": "Tẽnsã sẽn dɩkd b toorẽ kibay n kõt nebã, b ket n vɩɩme."
+    },
+    "dioula": {
+      "title": "Awa ni Tiebele dugu laminikogow",
+      "subtitle": "Ni musow ye tarikiko sɛbɛn kogo kan,",
+      "summary": "Tiebele dugu la, boonw bɛɛ ye finman ni jɛman ani wulen ye. Saan nin na, Awa be se k'a mamamuso dɛmɛ a ka u dilan. A be koo minw bɛɛ faamu, u ye maanaw lo fɔ.",
+      "moral": "O la, an be to ka mɔgɔw kalan u koo la."
+    },
+    "fulfulde": {
+      "title": "Awa e walluuji ɗi Tiebele waɗi",
+      "subtitle": "Nde rewɓe mbinndi taariika dow walluuji",
+      "summary": "Nder Tiebele, cuuɗi ɗon ɓooydi e laabi cembiɗɗi, ɗi laatooji e laabi. Nder hitaande ndu, Awa ɓii-ɓiyɗo ɗon mari laawol wallude nana maako haa o wallina ɗe. Ko o heɓii fuu, ko haala.",
+      "moral": "Aadaaji ɗon njooɗata to ɓe njaltina diga nder ɓiyum."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "painted-house",
+            "x": 34,
+            "y": 26
+          },
+          {
+            "k": "painted-house",
+            "x": 70,
+            "y": 36,
+            "s": 0.7
+          },
+          {
+            "k": "granary",
+            "x": 90,
+            "y": 30,
+            "s": 0.8
+          },
+          {
+            "k": "chicken",
+            "x": 56
+          }
+        ]
+      },
+      "text": {
+        "fr": "À Tiébélé, dans le pays kassena, les maisons ne ressemblent à aucune autre. Leurs murs de terre sont couverts de dessins géométriques rouges, noirs et blancs, qui brillent sous le soleil.",
+        "en": "In Tiebele, in Kassena country, the houses are like no others. Their earthen walls are covered with geometric designs in red, black and white that gleam in the sun.",
+        "moore": "A Tiebele, Kassena tẽngẽ wã, zakã pa wõnd a taabã ye. B sẽn da naan b tẽngrã yagensã ne wĩndgã, b zãmsa a kɩdemsã n maan-b wa sãnem la zĩn-bilg.",
+        "dioula": "Tiebele dugu la, Kassena jamana na, boonw tɛ i n'a fɔ mɔgɔ tɔw. U ka kogow tun ye dugukolo ye ani u tun be ja, finman ani gwɛman kɛ k'u dilan ni tile ye.",
+        "fulfulde": "Nder Tiebele, nder lesdi Kassena, cuuɗi ɗi nandi bee feere. Caggal maɓɓe candi lesdi ɗon hawta bee geometriji nder ɓale, ɓale e laaɓɗum ɗi ɗon yiila nder naange."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "painted-house",
+            "x": 64,
+            "y": 30,
+            "s": 0.9
+          },
+          {
+            "k": "woman-talk",
+            "x": 26,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child-up",
+            "x": 38,
+            "c": "#D62828"
+          },
+          {
+            "k": "jar",
+            "x": 48
+          }
+        ]
+      },
+      "text": {
+        "fr": "Chaque année, après les récoltes, les femmes se réunissent pour repeindre les murs. Cette année-là, la petite Awa avait enfin le droit de les aider. Elle en sautait de joie !",
+        "en": "Every year, after the harvest, the women gather to repaint the walls. That year, little Awa was finally allowed to help. She jumped for joy!",
+        "moore": "Yʋʋmd fãa, tigisgã poore, pagbã tigimdame n na n maneg n ning b wallã. Yʋʋmd kãng bala, a Awa ra tõog n sõng-a lame. A yɩɩ noog n kʋɩɩse!",
+        "dioula": "Saan o saan, suman tigɛ bannin kɔ, musow be ɲɔgɔn lajɛn ka kogow dilan. O saan na, Awa tun be se k'a dɛmɛ. A y'a daminɛ ka sanfɛla fiyɛ ni ninsɔndiya ye!",
+        "fulfulde": "Ko hitaande kala, ɓaawo re'ugo, rewɓe ɗon kawta ngam ɓe ceerno walluki. Nder hitaande maajum, Awa ɓii-ɓiyɗo o heɓiri laawol wallude. O ɗon ƴetti ngam seyo!"
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "woman-talk",
+            "x": 30,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child",
+            "x": 42,
+            "c": "#D62828"
+          },
+          {
+            "k": "jar",
+            "x": 54
+          },
+          {
+            "k": "calabash",
+            "x": 62
+          },
+          {
+            "k": "calabash",
+            "x": 70
+          },
+          {
+            "k": "painted-house",
+            "x": 84,
+            "y": 34,
+            "s": 0.6
+          }
+        ]
+      },
+      "text": {
+        "fr": "Sa grand-mère lui montra les couleurs : la terre rouge, le noir de la pierre broyée et le blanc du kaolin. « Toutes viennent de la terre qui nous nourrit », lui dit-elle.",
+        "en": "Her grandmother showed her the colours: red earth, black from crushed stone and white from kaolin. “They all come from the earth that feeds us,” she told her.",
+        "moore": "A ma-bi-poak wilga a pagã farb nins sẽn yaa: tẽng miuug, kug sẽn palemd ne wĩndg la kaolin. A yeela a pagã tɩ b fãa yita tẽngã sẽn kõt tõnd rɩɩbã pʋgẽ.",
+        "dioula": "A mamamuso y'a yira a la ko dugukolo bilenman, fariman ni kaburukun gwɛman lo. A y'a fɔ a ye ko: \"U bɛɛ bɔra dugukolo min na, o lo b'an balo.",
+        "fulfulde": "Maama maako holli mo limɗe: leydi nyaami, ɓaleere daga kaaƴe jeewti e njamndi diga kaolin. Ɓe fuu ɓe ƴiwoyi daga leydi ɗon nyaama en, o wi'i mo."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "painted-house",
+            "x": 50,
+            "y": 20,
+            "s": 1.2
+          },
+          {
+            "k": "woman",
+            "x": 18,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child",
+            "x": 82,
+            "c": "#D62828",
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Awa traça des lignes, des losanges et des triangles. Sa grand-mère lui expliqua que les motifs racontent la vie : la calebasse, le filet du pêcheur, ou encore le python, animal respecté chez les Kassena.",
+        "en": "Awa drew lines, diamonds and triangles. Her grandmother explained that the patterns tell of life: the calabash, the fisherman's net, or the python, an animal respected by the Kassena.",
+        "moore": "Awa ra vẽnega liniir, diamaand la tãnsãasgo. A ma-bi-poakã wilgame tɩ b sẽn maand bũmb ninsã wilgda vɩɩmã: yaa zĩm-gãong, bɩ zĩm-gɛtb wall piitõn. Kassena rãmbã waoogda rũms a ye.",
+        "dioula": "Awa ye siraw, dayamɛnw ani sabajanw dilan. A mamamuso y'a ɲɛfɔ ko u ye fɛɛn minw kɛ, olu b'an dɛmɛ k'a lɔn an be se ka ɲɛnamaya kɛ cogo min na.",
+        "fulfulde": "Awa waɗi ko'e, diamondji e tatooji. Maama maako holli mo, ko haalaji ɗi ɗon anndina dow nguurndam: kalabash, dabbol kalluɗo, malla python, dabbaaje ɗe Kassena'en teddini."
+      },
+      "choice": {
+        "q": {
+          "fr": "Qui peint traditionnellement les murs de Tiébélé ?",
+          "en": "Who traditionally paints the walls of Tiebele?",
+          "moore": "Yaa ãnd n maand wallã ne Tibèle?",
+          "dioula": "Jɔn lo be Tiebele laminikogow dilan?",
+          "fulfulde": "Mo ɗon taƴa wallugo tiebele?"
+        },
+        "options": [
+          {
+            "fr": "Les femmes",
+            "en": "The women",
+            "moore": "Pagbã sẽn da yaa b rãmba",
+            "dioula": "Musow ka koo",
+            "fulfulde": "Debbo'en"
+          },
+          {
+            "fr": "Les chasseurs",
+            "en": "The hunters",
+            "moore": "B ra baoodda b mens n na n yãgdẽ.",
+            "dioula": "Jagokɛlaw ka baara la.",
+            "fulfulde": "Wondɓe yi'aago"
+          },
+          {
+            "fr": "Le roi",
+            "en": "The king",
+            "moore": "Rĩm a ye wã",
+            "dioula": "Masacɛ ye min kɛ, o filɛ nin ye:",
+            "fulfulde": "Laamiiɗo"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Ce savoir-faire se transmet de mère en fille.",
+          "en": "This skill is passed down from mother to daughter.",
+          "moore": "Yaa b sẽn dɩkd-a n moond koɛɛgã.",
+          "dioula": "O seko be yɛlɛma ka bɔ bamuso dɔ fɛ ka taga deen wɛrɛ fɛ.",
+          "fulfulde": "Fuu anndal ngal ɗum jaɓaama diga maama haa ɓiɗɗo debbo."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 220
+          },
+          {
+            "k": "painted-house",
+            "x": 52,
+            "y": 26
+          },
+          {
+            "k": "woman",
+            "x": 80,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child-up",
+            "x": 88,
+            "c": "#D62828"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Une fois les murs terminés, on les polit avec une décoction de gousses de néré, qui protège les peintures de la pluie. Awa contempla son œuvre : elle aussi, désormais, écrivait l'histoire de sa famille sur les murs.",
+        "en": "Once the walls were finished, they were polished with a decoction of néré pods that protects the paint from the rain. Awa gazed at her work: she too was now writing her family's story on the walls.",
+        "moore": "B sã n wa na n maan b wallã, b da ningda a ne néré wã sẽn yaa bũmb sẽn kogend-a la saagã. Awa geta a tʋʋmã: yẽ me ra gʋlsda a zakã kibarã wall-rãmbã zugu.",
+        "dioula": "O kɔ, u ye néré kisɛ dɔ kɛ k'o kogow fin. Awa y'a ɲɛɛ sin a ka baara ma: ale fana tun be sɛbɛri kɛra k'a somɔgɔw ka koo lakali kogow kan.",
+        "fulfulde": "Nde walluuji ɗi timmini, ɓe njotti bee decoction néré caps ngam hisna limngal diga ndiyam. Awa ɗon ndaara kuugal maako: o boo ɗon winnda haala saare maako dow gite."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quelles sont les trois couleurs des murs de Tiébélé ?",
+        "en": "What are the three colours of Tiebele's walls?",
+        "moore": "Yaa wall a Tiebele sẽn tar balã la b yaa ne sãnem-rãmba.",
+        "dioula": "Tiebele ka kogow ye mun lo ye?",
+        "fulfulde": "Ko honɗun woni leɗɗe tati ɗe Tiebele waɗi?"
+      },
+      "options": [
+        {
+          "fr": "Rouge, noir et blanc",
+          "en": "Red, black and white",
+          "moore": "Dũniyã gill zugu, d sẽn tõe n maan bũmb ninsã fãa yaa sõma.",
+          "dioula": "Kɔrɛmugu, finman ani gwɛman",
+          "fulfulde": "Ɓanndu, ɓerɗe e laaɓu"
+        },
+        {
+          "fr": "Bleu, vert et jaune",
+          "en": "Blue, green and yellow",
+          "moore": "Bĩng ne sãnem, la bu-zũnd",
+          "dioula": "Jii, kɛnɛ ani kɔrɔn fɛ",
+          "fulfulde": "Blue, green e yellow"
+        },
+        {
+          "fr": "Violet, orange et rose",
+          "en": "Purple, orange and pink",
+          "moore": "Bõn-kaamã la b zĩm-kãsemsã",
+          "dioula": "Fani ye min ye a ka fin ye, o be se k'a kɛ ni furaburu ye.",
+          "fulfulde": "Ko e purple, orange e pink"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "D'où viennent les couleurs ?",
+        "en": "Where do the colours come from?",
+        "moore": "Yaa bõe yĩng tɩ b yaa ne sãnem-gãndb?",
+        "dioula": "O farimanw bɔra min?",
+        "fulfulde": "Toonde ɓaleeji ɗi ɗon ƴiwo?"
+      },
+      "options": [
+        {
+          "fr": "Du marché de la ville",
+          "en": "From the town market",
+          "moore": "Tẽnga raagẽ wã",
+          "dioula": "Dugu lɔgɔfiyɛ la.",
+          "fulfulde": "Daga gariiri marndal"
+        },
+        {
+          "fr": "De la terre et des pierres",
+          "en": "From earth and stones",
+          "moore": "Yaa tẽng la kugã pʋgẽ.",
+          "dioula": "Dugukolo ni kabakuruw fɛ,",
+          "fulfulde": "Daga lesdi e kaaƴe"
+        },
+        {
+          "fr": "Des fleurs",
+          "en": "From flowers",
+          "moore": "B sẽn yiisd-b tɩ b yiidẽ wã",
+          "dioula": "Furuw fɛ",
+          "fulfulde": "Daga fuɗɗi"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Avec quoi protège-t-on les peintures de la pluie ?",
+        "en": "What protects the paintings from the rain?",
+        "moore": "Bõe n kogend bõn-kãens ne saagdgã?",
+        "dioula": "Mun lo b'o jaa nunu tanga sanji ma?",
+        "fulfulde": "Ko waɗi ngam hisnaade kuuje ɗe diga nguurndam?"
+      },
+      "options": [
+        {
+          "fr": "Une décoction de gousses de néré",
+          "en": "A decoction of néré pods",
+          "moore": "Nẽ mẽ kãm tanhmã amnhĩ tomnuj to ho ri apa.",
+          "dioula": "Néré kisɛw ka dumuni dilanna n'o ye",
+          "fulfulde": "Decoction of néré pods"
+        },
+        {
+          "fr": "De la cire",
+          "en": "Wax",
+          "moore": "Dɩt-yãk",
+          "dioula": "Wolo ye min ye",
+          "fulfulde": "Wax"
+        },
+        {
+          "fr": "Du sable",
+          "en": "Sand",
+          "moore": "Kẽerã",
+          "dioula": "Sanbɛrɛ",
+          "fulfulde": "Sand"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Kassena",
+      "lang": "fr",
+      "def": {
+        "fr": "Peuple du Centre-Sud du Burkina Faso et du nord du Ghana ; leur langue est le kasem.",
+        "en": "A people of south-central Burkina Faso and northern Ghana; their language is Kasem.",
+        "moore": "Neb sẽn be Burkina Faso zĩ-gõogo la Gana rɩtgo; b goama yaa Kasem.",
+        "dioula": "Burkina Faso worodugu ɲafan ni Gana saheli fan fɛ mɔgɔw lo; u ka kaan ye kasem ye.",
+        "fulfulde": "Yimɓe Burkina Faso e woyla Gana; ɗemngal maɓɓe ko Kasem."
+      }
+    },
+    {
+      "term": "néré",
+      "lang": "fr",
+      "def": {
+        "fr": "Arbre de la savane (Parkia biglobosa) dont les graines donnent le soumbala, un condiment très apprécié.",
+        "en": "A savannah tree (Parkia biglobosa) whose seeds are used to make soumbala, a much-loved condiment.",
+        "moore": "Sawanã tɩɩg (Parkia biglobosa) sẽn tar bõn-buud n maand soumbala, tɩ yaa bũmb ning b sẽn nong wʋsg.",
+        "dioula": "A kisɛ be kɛ ka suman dilan. O ye tulu kasadiman dɔ lo ye min koo ka di mɔgɔw ye kosɔbɛ.",
+        "fulfulde": "Ɗuum duɗal (Parkia biglobosa) ɗi mburi mum'en naftira ngam waɗugo soumbala, ko ɗum ɓurɗo yiɗde."
+      }
+    },
+    {
+      "term": "kaolin",
+      "lang": "fr",
+      "def": {
+        "fr": "Argile blanche très fine, utilisée comme pigment.",
+        "en": "A very fine white clay used as a pigment.",
+        "moore": "Yaa wa b sẽn da boond tɩ \"pãnd\" wã.",
+        "dioula": "O tun ye bɔgɔ gwɛman finin lo ye.",
+        "fulfulde": "Lindi ɓaleere mawnde huwti ngam huutore."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Tradition des peintures murales de la cour royale de Tiébélé (Kassena). Awa est un personnage de fiction ; les techniques décrites sont celles rapportées par les habitants.",
+    "en": "The tradition of wall painting at the royal court of Tiebele (Kassena). Awa is a fictional character; the techniques described are those reported by local residents."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

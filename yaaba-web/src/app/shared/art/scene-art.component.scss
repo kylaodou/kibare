@@ -1,0 +1,295 @@
+:host {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  --px: 0;
+  --py: 0;
+}
+
+.art,
+.art ::ng-deep svg {
+  width: 100%;
+  height: 100%;
+}
+
+.art ::ng-deep {
+  g,
+  circle,
+  path,
+  rect,
+  ellipse {
+    transform-box: fill-box;
+  }
+
+  .kb {
+    transform-origin: 50% 60%;
+    animation: kb 24s ease-in-out infinite alternate;
+  }
+
+  .layer-far {
+    transform: translate(calc(var(--px) * -10px), calc(var(--py) * -4px));
+    transition: transform 0.6s var(--ease);
+  }
+  .layer-mid {
+    transform: translate(calc(var(--px) * -5px), calc(var(--py) * -2px));
+    transition: transform 0.6s var(--ease);
+  }
+  .layer-items {
+    transform: translate(calc(var(--px) * 6px), calc(var(--py) * 3px));
+    transition: transform 0.6s var(--ease);
+  }
+
+  .enter {
+    animation: enter 0.9s var(--ease) both;
+  }
+
+  .a-sway {
+    transform-origin: 50% 100%;
+    animation: sway 4s ease-in-out infinite alternate;
+  }
+  .a-sway-slow {
+    transform-origin: 50% 100%;
+    animation: sway-slow 7s ease-in-out infinite alternate;
+  }
+  .a-breathe {
+    transform-origin: 50% 100%;
+    animation: breathe 3.6s ease-in-out infinite;
+  }
+  .a-bob {
+    animation: bob 3s ease-in-out infinite;
+  }
+  .a-hop {
+    transform-origin: 50% 100%;
+    animation: hop 2.4s var(--ease) infinite;
+  }
+  .a-gallop {
+    transform-origin: 50% 100%;
+    animation: gallop 0.9s ease-in-out infinite;
+  }
+  .a-swim {
+    animation: swim 6s ease-in-out infinite alternate;
+  }
+  .a-drift {
+    animation: drift 30s linear infinite alternate;
+  }
+  .a-fly {
+    animation: fly 9s ease-in-out infinite alternate;
+  }
+  .a-glow {
+    transform-origin: 50% 50%;
+    animation: glow 4s ease-in-out infinite;
+  }
+  .a-pulse {
+    animation: pulse 3s ease-in-out infinite;
+  }
+  .a-twinkle {
+    animation: twinkle 3.2s ease-in-out infinite;
+  }
+  .a-flicker {
+    transform-origin: 50% 100%;
+    animation: flicker 0.35s ease-in-out infinite alternate;
+  }
+  .a-pound {
+    animation: pound 1.1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  }
+  .a-dance {
+    transform-origin: 50% 100%;
+    animation: dance 1.6s ease-in-out infinite;
+  }
+  .a-float {
+    animation: float 5s ease-in-out infinite;
+  }
+  .a-peck {
+    transform-origin: 30% 100%;
+    animation: peck 2.2s ease-in-out infinite;
+  }
+  .a-ripple {
+    animation: ripple 4s ease-in-out infinite alternate;
+  }
+  .a-glint {
+    animation: pulse 2.2s ease-in-out infinite;
+  }
+}
+
+.static ::ng-deep * {
+  animation: none !important;
+}
+
+@keyframes kb {
+  from { transform: scale(1); }
+  to { transform: scale(1.045); }
+}
+@keyframes enter {
+  from { opacity: 0; transform: translateY(18px); }
+}
+@keyframes sway {
+  from { transform: rotate(-2.5deg); }
+  to { transform: rotate(2.5deg); }
+}
+@keyframes sway-slow {
+  from { transform: rotate(-0.8deg); }
+  to { transform: rotate(0.8deg); }
+}
+@keyframes breathe {
+  50% { transform: scaleY(1.015); }
+}
+@keyframes bob {
+  50% { transform: translateY(-4px); }
+}
+@keyframes hop {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-10px); }
+}
+@keyframes gallop {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  25% { transform: translateY(-5px) rotate(-1.5deg); }
+  75% { transform: translateY(-2px) rotate(1deg); }
+}
+@keyframes swim {
+  from { transform: translateX(-14px); }
+  to { transform: translateX(14px); }
+}
+@keyframes drift {
+  from { transform: translateX(-40px); }
+  to { transform: translateX(60px); }
+}
+@keyframes fly {
+  0% { transform: translate(-30px, 6px); }
+  50% { transform: translate(10px, -8px); }
+  100% { transform: translate(40px, 4px); }
+}
+@keyframes glow {
+  50% { transform: scale(1.05); }
+}
+@keyframes pulse {
+  50% { opacity: 0.6; }
+}
+@keyframes twinkle {
+  50% { opacity: 0.25; }
+}
+@keyframes flicker {
+  from { transform: scale(1, 1); }
+  to { transform: scale(0.94, 1.08); }
+}
+@keyframes pound {
+  0%, 100% { transform: translateY(-18px); }
+  50% { transform: translateY(0); }
+}
+@keyframes dance {
+  0%, 100% { transform: rotate(-3deg) translateY(0); }
+  50% { transform: rotate(3deg) translateY(-6px); }
+}
+@keyframes float {
+  50% { transform: translateY(-12px); }
+}
+@keyframes peck {
+  0%, 70%, 100% { transform: rotate(0); }
+  80% { transform: rotate(18deg); }
+}
+@keyframes ripple {
+  from { transform: translateX(-8px); }
+  to { transform: translateX(8px); }
+}
+
+.art ::ng-deep {
+  .a-roll {
+    transform-origin: 50% 100%;
+    animation: roll 3s ease-in-out infinite alternate;
+  }
+  .a-rain {
+    animation: rain 0.6s linear infinite;
+  }
+}
+
+@keyframes roll {
+  from { transform: translateX(-10px) rotate(-6deg); }
+  to { transform: translateX(10px) rotate(6deg); }
+}
+@keyframes rain {
+  from { transform: translateY(-20px); }
+  to { transform: translateY(20px); }
+}
+
+/* ---------- mode film : caméra, entrées, particules ---------- */
+
+.art ::ng-deep {
+  .cam-push,
+  .cam-pull,
+  .cam-pan-r,
+  .cam-pan-l,
+  .cam-rise {
+    transform-origin: 50% 62%;
+    animation: 16s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+  }
+  .cam-push { animation-name: cam-push; }
+  .cam-pull { animation-name: cam-pull; }
+  .cam-pan-r { animation-name: cam-pan-r; }
+  .cam-pan-l { animation-name: cam-pan-l; }
+  .cam-rise { animation-name: cam-rise; }
+
+  .walk-l,
+  .walk-r {
+    animation: 1.8s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+  .walk-l { animation-name: walk-l; }
+  .walk-r { animation-name: walk-r; }
+
+  .p-mote { animation: mote 9s ease-in-out infinite; opacity: 0; }
+  .p-firefly { animation: firefly 6s ease-in-out infinite; opacity: 0; }
+  .p-flock { animation: flock 14s linear infinite; }
+}
+
+@keyframes cam-push {
+  from { transform: scale(1.02); }
+  to { transform: scale(1.16) translate(-1%, 1%); }
+}
+@keyframes cam-pull {
+  from { transform: scale(1.2) translate(2%, 2%); }
+  to { transform: scale(1.03); }
+}
+@keyframes cam-pan-r {
+  from { transform: scale(1.14) translate(4%, 0); }
+  to { transform: scale(1.14) translate(-4%, 0); }
+}
+@keyframes cam-pan-l {
+  from { transform: scale(1.14) translate(-4%, 0); }
+  to { transform: scale(1.14) translate(4%, 0); }
+}
+@keyframes cam-rise {
+  from { transform: scale(1.18) translate(0, -4%); }
+  to { transform: scale(1.06) translate(0, 1%); }
+}
+@keyframes walk-l {
+  0% { transform: translateX(-320px); opacity: 0; }
+  10% { opacity: 1; }
+  20%, 60% { translate: 0 -4px; }
+  40%, 80% { translate: 0 0; }
+  100% { transform: translateX(0); }
+}
+@keyframes walk-r {
+  0% { transform: translateX(320px); opacity: 0; }
+  10% { opacity: 1; }
+  20%, 60% { translate: 0 -4px; }
+  40%, 80% { translate: 0 0; }
+  100% { transform: translateX(0); }
+}
+@keyframes mote {
+  0% { opacity: 0; transform: translate(0, 0); }
+  30% { opacity: 0.7; }
+  100% { opacity: 0; transform: translate(30px, -90px); }
+}
+@keyframes firefly {
+  0%, 100% { opacity: 0; transform: translate(0, 0); }
+  40% { opacity: 1; transform: translate(14px, -18px); }
+  70% { opacity: 0.4; transform: translate(-10px, -30px); }
+}
+@keyframes flock {
+  from { transform: translate(-60px, 90px); }
+  to { transform: translate(860px, 40px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .art ::ng-deep * {
+    animation: none !important;
+  }
+}

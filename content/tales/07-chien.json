@@ -1,0 +1,421 @@
+{
+  "slug": "pourquoi-le-chien-vit-avec-l-homme",
+  "type": "conte",
+  "region": "centre-nord",
+  "place": "Kongoussi",
+  "coords": [
+    13.33,
+    -1.53
+  ],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 4,
+  "age": 4,
+  "featured": false,
+  "cover": 2,
+  "tags": [
+    "animaux",
+    "hospitalité",
+    "conte étiologique",
+    "enfants"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Pourquoi le chien vit avec l'homme",
+      "subtitle": "Le feu, le tô et l'amitié",
+      "summary": "Par une nuit froide d'harmattan, l'hyène envoie son ami le chien chercher du feu au village des hommes. Mais là-bas, le chien découvre la chaleur d'un foyer…",
+      "moral": "On reste là où l'on est accueilli avec bonté."
+    },
+    "en": {
+      "title": "Why the Dog Lives with People",
+      "subtitle": "Fire, tô and friendship",
+      "summary": "On a cold harmattan night, the hyena sends her friend the dog to fetch fire from the people's village. But there, the dog discovers the warmth of a home…",
+      "moral": "We stay where we are welcomed with kindness."
+    },
+    "moore": {
+      "title": "Bõe yĩng tɩ wãoog vɩɩ ne nebã?",
+      "subtitle": "Bõn-kãng, a to la zoodo.",
+      "summary": "Zĩ-kãnga, a tʋmda a zoa wã t'a wa tɩ bugum kogl tẽngã. La be, bi-riblã yãenda roogã waoogr...",
+      "moral": "D sã n wa be zĩig ning b sẽn na n bool-d ne nonglem, d ket n beeẽ."
+    },
+    "dioula": {
+      "title": "Mun na wulu be ni mɔgɔw ye?",
+      "subtitle": "Tasuma, kanuya ani teriya",
+      "summary": "Loon dɔ, a ye marifakɛlɛ kɛ. A y'a ka denbaya kɔnɔ mɔgɔw bila tasuma na. Nka o yɔrɔ la, wulu be soo dɔ ka suma sɔrɔ.",
+      "moral": "Mɔgɔ be se ka sɔn an ma yɔrɔ min na, an b'o kɛ."
+    },
+    "fulfulde": {
+      "title": "Ngam ɗume dogge ɗon jooɗoto bee yimɓe",
+      "subtitle": "Naange, to e bonde",
+      "summary": "Nder jemma harmatana, hyena ɗon nelda nyawɗo maako doggo ngam o hoɗugo yiite diga gariiri yimɓe. Ammaa ɗon, dogol heɓii ɓernde wuro...",
+      "moral": "En njooɗoto to ɓe njaɓata en."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "night",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "moon",
+            "x": 20,
+            "y": 300
+          },
+          {
+            "k": "acacia",
+            "x": 76,
+            "y": 26
+          },
+          {
+            "k": "dog",
+            "x": 40,
+            "s": 1.3
+          },
+          {
+            "k": "hyena",
+            "x": 60,
+            "flip": true,
+            "s": 1.2
+          },
+          {
+            "k": "rock",
+            "x": 88,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "Autrefois, le chien vivait en brousse avec son amie l'hyène. Une nuit d'harmattan, le vent soufflait si froid que les deux compagnons grelottaient sous les étoiles.",
+        "en": "Long ago, the dog lived in the bush with his friend the hyena. One harmattan night, the wind blew so cold that the two companions shivered under the stars.",
+        "moore": "Sẽn deng wʋsgo, bi-riblã ra beẽ ne a zoa a ye. Daar a ye, sobgã ra yaa wa sãnem tɩ b tũud-n-taas a yiibã fãa wã zoe n yɛɛsame.",
+        "dioula": "A saan tɛmɛninw na, wulu tun be to ka ɲɛnamaya kɛ yiritu kɔnɔ n'a teri ye. O tɔgɔ ko hyena. Loon dɔ, fɔɲɔ tun be fiɲɛba bɔ fɔɔ u fila bɛɛ yɛrɛyɛrɛla lolow kɔrɔ.",
+        "fulfulde": "Wakkati ɗuɗɗum, dogol jooɗii nder leɗɗe bee bandiraawo maako hyenya. Nder jemma go'o, yahugo ɗon mari masin haa yimɓe ɗiɗo ɓe njahi ɗon njogii nder dow koode."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "moon",
+            "x": 80,
+            "y": 300
+          },
+          {
+            "k": "hyena",
+            "x": 36,
+            "s": 1.4
+          },
+          {
+            "k": "dog",
+            "x": 62,
+            "flip": true,
+            "s": 1.3
+          },
+          {
+            "k": "bush",
+            "x": 14
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Va chercher du feu au village des hommes, dit l'hyène. Moi, j'ai peur d'eux. Toi, tu cours vite. Rapporte une braise et nous aurons chaud. »",
+        "en": "“Go and fetch fire from the people's village,” said the hyena. “I'm afraid of them. You're a fast runner. Bring back an ember and we'll be warm.”",
+        "moore": "\"Bɩ y tɩ wa n dɩ bugum tẽngã nebã tẽn-tẽngã\", la a yeel woto. Mam zoees-b lame. Yãmb zoeesda tao-tao. Kẽng-y ne bugum n wa tɩ d na n paam sũ-noogo.",
+        "dioula": "\"Taga tasuma ɲini mɔgɔw ka dugu la\", o kɔrɔ ko: \"A' ye taga\". Ne be siran u ɲa. I be boli joona. I ka na ni tasuma ye, an bena funteni sɔrɔ.",
+        "fulfulde": "Yahu to warde yiite diga gariiri yimɓe, wi'i hyena. Mi hulani ɓe. On ɗon maaro. Wurtina ko'e leɗɗe, nden kam en ɗon nyaama."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "village",
+        "items": [
+          {
+            "k": "moon",
+            "x": 86,
+            "y": 300
+          },
+          {
+            "k": "hut",
+            "x": 20,
+            "y": 26
+          },
+          {
+            "k": "fire",
+            "x": 50
+          },
+          {
+            "k": "woman-talk",
+            "x": 38,
+            "c": "#D62828"
+          },
+          {
+            "k": "child",
+            "x": 62
+          },
+          {
+            "k": "dog",
+            "x": 76,
+            "flip": true,
+            "s": 1.1
+          },
+          {
+            "k": "calabash",
+            "x": 44
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le chien partit. Près des cases, il vit un grand feu autour duquel une famille dînait. Une femme lui tendit un morceau de tô, et un enfant vint le caresser.",
+        "en": "The dog set off. Near the huts, he saw a big fire where a family was having dinner. A woman held out a piece of tô to him, and a child came over to stroke him.",
+        "moore": "A wãabã yikame. A yãame tɩ b sẽn da rɩtẽ wã, ro-kãseng n yõogd bugum. Pag n kõ-a t'a wa rɩt a naoorã, la bi-ribl n kolg n na n kʋ-a.",
+        "dioula": "Wulu bɔra. A ye tasumaba dɔ ye boonw gɛrɛfɛ. Muso dɔ ye boloci dɔ di a ma, deen dɔ nana k'a bugɔ.",
+        "fulfulde": "Mbira'en ɗon wurta. Haade cuuɗi, o yi'i yiite mawnde nder to saare ɗon nyaama. Debbo hokki mo feccere to, nden ɓiɗɗo wari haa o ɓanngina mo."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va faire le chien ?",
+          "en": "What will the dog do?",
+          "moore": "Bõe la bi-riblã na n maane?",
+          "dioula": "A bena mun lo kɛ?",
+          "fulfulde": "Koye nyawɗo on waɗata?"
+        },
+        "options": [
+          {
+            "fr": "Rapporter le feu à l'hyène",
+            "en": "Take the fire back to the hyena",
+            "moore": "Tall bugmã n lebs ne hiɛnã.",
+            "dioula": "Aw ye tasuma ta ka taga ni a ye i ko o tun y'a fɔ cogo min na.",
+            "fulfulde": "Wurtina yiite to hyena"
+          },
+          {
+            "fr": "Rester près du feu avec les hommes",
+            "en": "Stay by the fire with the people",
+            "moore": "D kell n zĩnd ne nin-buiidã bugumã sɛɛgẽ.",
+            "dioula": "Aw ye to tasuma kɔrɔ ni jama ye.",
+            "fulfulde": "Toɗɗee e yimɓe bee yiite."
+          },
+          {
+            "fr": "Voler le repas et s'enfuir",
+            "en": "Steal the meal and run",
+            "moore": "Yãk-y rɩɩbã n zoe.",
+            "dioula": "I ka dumuni bɔsi ani i boli.",
+            "fulfulde": "Ɓooydi nyaamdu nden ɗon hiito"
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "Bien au chaud, le ventre plein, le chien oublia complètement sa mission…",
+          "en": "Warm and with a full belly, the dog completely forgot his mission…",
+          "moore": "A sẽn da tar sũ-noog la a maagã, a yĩmame t'a zoe n basa a tʋʋmd zãng fasɩ.",
+          "dioula": "A tun be yɔrɔ bɛɛ sumanin ani a kɔnɔ fanin lo. O kɔ, a ɲinɛna a ka baara kɔ pewu.",
+          "fulfulde": "Waro e nder ɓernde heewu, dogol man wi'i o ɗon waɗa ko yiɗi..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "village",
+        "items": [
+          {
+            "k": "moon",
+            "x": 16,
+            "y": 300
+          },
+          {
+            "k": "hut",
+            "x": 80,
+            "y": 26
+          },
+          {
+            "k": "fire",
+            "x": 46
+          },
+          {
+            "k": "dog",
+            "x": 60,
+            "s": 1.1
+          },
+          {
+            "k": "child-sit",
+            "x": 30
+          },
+          {
+            "k": "elder-sit",
+            "x": 20
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Ici, on me nourrit, on me protège et j'ai chaud, pensa-t-il. Pourquoi repartir ? » En échange, il promit de garder la maison et de prévenir la famille quand un danger approcherait.",
+        "en": "“Here they feed me, protect me and keep me warm,” he thought. “Why go back?” In return, he promised to guard the home and warn the family whenever danger came near.",
+        "moore": "A ra tagsdame tɩ b rɩt-m lame, n kogl-m la b gũuda maam. A ra pʋlemame t'a na n gũuda a zakã, la a wa keoogd b zagsã neb wakat fãa.",
+        "dioula": "A tun b'a miiri ko: \"O yɔrɔ la, u be ne balo ani ka n tanga. Mun na a tun ka ɲi ka kɔsegi? A y'a daa di ko n'o koo dɔ kɛra, a bena to k'a somɔgɔw lasɔmi.",
+        "fulfulde": "\"Hande ɓe nyaamaammi, ɓe ɗon ɗowanammi e ɓe ɗon waɗa mi boɗɗum\", o meeɗaani. Ko waɗi o hooti? Ha nder ceede, o holli hokki wuro maako hakkillo e waajugo saare nde haɗuɗo ɓadake."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "moon",
+            "x": 50,
+            "y": 310
+          },
+          {
+            "k": "hyena",
+            "x": 24,
+            "s": 1.2
+          },
+          {
+            "k": "hut",
+            "x": 76,
+            "y": 30,
+            "s": 0.8
+          },
+          {
+            "k": "dog",
+            "x": 66,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "En brousse, l'hyène attendit longtemps. Depuis, chaque nuit, elle hurle pour appeler son ancien compagnon. Et le chien, de la cour des hommes, lui répond en aboyant.",
+        "en": "Out in the bush, the hyena waited and waited. Ever since, every night, she howls to call her old companion. And the dog, from the people's yard, answers her with a bark.",
+        "moore": "La b ra gũuda ne b sũy fãa. Rẽ tɛka, a ra kelgdame n boond a zo-rãmbã. La a zakã sẽn be tẽngã pʋga, b leok-a lame ne b sãbsgo.",
+        "dioula": "O kɔ, u ye n'a ye. Kabi o tuma, a be kule ka wele a taamaɲɔgɔn kɔrɔ la. O kɔ, a ye wulu dɔ kɛ ka muso jaabi.",
+        "fulfulde": "Nder leɗɗe, hyena ɗon hoola. Gila ndeen, ko jemma kala o ɗon haalaa ngam noddugo mo. Nden doggo, diga nder suudu yimɓe, o jaaboto bee habbugo."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Pourquoi l'hyène envoie-t-elle le chien au village ?",
+        "en": "Why does the hyena send the dog to the village?",
+        "moore": "Bõe yĩng tɩ b sẽn boond-b tɩ hyena wã tʋmda a zakã tẽn-gãongã?",
+        "dioula": "Mun na i b'a fɔ ko o wulu be taga dugu kɔnɔ?",
+        "fulfulde": "Ngam ɗume hyena ɗon nelda dogol haa gariiri?"
+      },
+      "options": [
+        {
+          "fr": "Pour chercher du feu",
+          "en": "To fetch fire",
+          "moore": "Sẽn na yɩl n wa ne bugum.",
+          "dioula": "Ka tasuma mana.",
+          "fulfulde": "Ngam warugo yiite"
+        },
+        {
+          "fr": "Pour voler des poulets",
+          "en": "To steal chickens",
+          "moore": "Sẽn na yɩl n soog piisã",
+          "dioula": "Ka namaraw son",
+          "fulfulde": "To steal hen's"
+        },
+        {
+          "fr": "Pour trouver de l'eau",
+          "en": "To find water",
+          "moore": "Sẽn na yɩl n paam koomã",
+          "dioula": "Ka jii sɔrɔ",
+          "fulfulde": "Ngam heɓugo ndiyam"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que donne la femme au chien ?",
+        "en": "What does the woman give the dog?",
+        "moore": "Pagã kõ-a-la bõe?",
+        "dioula": "Muso be mun lo di wulu ma?",
+        "fulfulde": "Ko debbo hokkata dogol ngol?"
+      },
+      "options": [
+        {
+          "fr": "Une braise",
+          "en": "An ember",
+          "moore": "Bãm-bõoneg",
+          "dioula": "Tasuma dɔ",
+          "fulfulde": "Ɗuum ɓooyɗo"
+        },
+        {
+          "fr": "Un morceau de tô",
+          "en": "A piece of tô",
+          "moore": "A to wãbg a ye.",
+          "dioula": "I ka dɔrɔmɔni dɔ ye.",
+          "fulfulde": "Ɗuum ɓanndu ton"
+        },
+        {
+          "fr": "Une corde",
+          "en": "A rope",
+          "moore": "Bãag n yaa ne bãnd",
+          "dioula": "Fanga dɔ",
+          "fulfulde": "Ɗuum ɓanndu"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Que promet le chien en échange ?",
+        "en": "What does the dog promise in return?",
+        "moore": "Bõe la bi-riblã pʋlem tɩ b na n kõ-a?",
+        "dioula": "A b'a daa di mun lo la?",
+        "fulfulde": "Ko honɗun dogol hokkata?"
+      },
+      "options": [
+        {
+          "fr": "De garder la maison",
+          "en": "To guard the home",
+          "moore": "B gũuda b zakã pʋgẽ.",
+          "dioula": "Ka soo kɔrɔsi",
+          "fulfulde": "Ngam ɗowanugo saare"
+        },
+        {
+          "fr": "De chasser l'hyène",
+          "en": "To chase the hyena away",
+          "moore": "Sẽn na yɩl n digd bẽedã.",
+          "dioula": "Ka hyenɛ gwɛn ka bɔ yen.",
+          "fulfulde": "To jaɓɓugo hyena diga"
+        },
+        {
+          "fr": "De rapporter du bois",
+          "en": "To bring firewood",
+          "moore": "Sẽn na yɩl n wa ne bugum.",
+          "dioula": "Ka lɔgɔ ta ka na ni a ye",
+          "fulfulde": "Ngam wurtina leɗɗe njamndi"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "harmattan",
+      "lang": "fr",
+      "def": {
+        "fr": "Vent sec et poussiéreux venu du Sahara, qui souffle en saison sèche ; les nuits deviennent alors fraîches.",
+        "en": "A dry, dusty wind from the Sahara that blows in the dry season, making the nights cool.",
+        "moore": "Saara wã sãoong sẽn yaa kʋɩlgo, la bugum sẽn beẽ n kɩtd tɩ yʋngã yɩ noogo.",
+        "dioula": "Saan o saan, fɔɲɔ be bɔ Sahara jamana na ani a be buguri kɛ. O lo b'a to suu be sumaya.",
+        "fulfulde": "Windi njayri, ɓeydi e leɗɗe diga Sahara ɗon hoola nder sahaaji njayri."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte étiologique populaire en Afrique de l'Ouest, raconté notamment lors des veillées en pays mossi. Version libre.",
+    "en": "A popular West African origin tale, told notably during evening gatherings in Mossi country. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

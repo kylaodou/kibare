@@ -1,0 +1,142 @@
+{
+  "slug": "l-origine-des-yeux-du-hibou",
+  "type": "conte",
+  "region": "centre-sud",
+  "place": "Manga",
+  "coords": [11.66, -1.07],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 3,
+  "age": 4,
+  "featured": false,
+  "cover": 2,
+  "tags": ["origines", "honnêteté", "partage", "oiseaux"],
+  "i18n": {
+    "fr": {
+      "title": "L'origine des yeux du hibou",
+      "subtitle": "Le sac aux mille yeux",
+      "summary": "Chargé de distribuer les yeux à tous les oiseaux, le hibou garde pour lui les deux plus gros. Mal lui en prend : depuis ce jour, il ne sort plus que la nuit.",
+      "moral": "Ce que l'on nous confie à partager doit être partagé honnêtement."
+    },
+    "en": {
+      "title": "How the Owl Got Its Eyes",
+      "subtitle": "The bag of a thousand eyes",
+      "summary": "Given the task of handing out eyes to all the birds, the owl keeps the two biggest for himself. It does him no good: ever since, he only comes out at night.",
+      "moral": "What we are entrusted to share must be shared honestly."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "forest",
+        "items": [
+          { "k": "rays", "x": 50, "y": 180 },
+          { "k": "owl", "x": 46, "s": 2.4 },
+          { "k": "sack", "x": 60, "s": 1.8 },
+          { "k": "karite", "x": 14, "y": 24 }
+        ]
+      },
+      "text": {
+        "fr": "Au commencement, les oiseaux n'avaient pas encore d'yeux. Un jour, le Créateur appela le hibou et lui tendit un grand sac. « Dedans, il y a des yeux de toutes les tailles. Distribue-les aux oiseaux de la brousse, à chacun selon sa taille : les gros yeux aux gros oiseaux, les petits aux petits. »",
+        "en": "In the beginning, birds did not yet have eyes. One day the Creator called the owl and handed him a large bag. “Inside are eyes of every size. Hand them out to the birds of the bush, each according to its size: big eyes for big birds, small ones for small birds.”"
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          { "k": "owl", "x": 50, "s": 1.5 },
+          { "k": "sack", "x": 60, "s": 1.1 },
+          { "k": "guinea-fowl", "x": 24, "s": 1.2 },
+          { "k": "partridge", "x": 34 },
+          { "k": "bird-small", "x": 74, "y": 30 },
+          { "k": "chicken", "x": 86 }
+        ]
+      },
+      "text": {
+        "fr": "Le hibou rassembla tous les oiseaux et commença la distribution. Mais au fond du sac, il découvrit deux yeux immenses et brillants. « Ceux-là sont bien trop beaux pour les autres », pensa-t-il. Et il les cacha sous son aile.",
+        "en": "The owl gathered all the birds and began handing out the eyes. But at the bottom of the bag he found two huge, shining eyes. “These are far too beautiful for the others,” he thought. And he hid them under his wing."
+      },
+      "choice": {
+        "q": { "fr": "Qu'aurait dû faire le hibou ?", "en": "What should the owl have done?" },
+        "options": [
+          { "fr": "Donner les gros yeux à un gros oiseau", "en": "Give the big eyes to a big bird" },
+          { "fr": "Les garder pour lui", "en": "Keep them for himself" }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Mais le hibou attendit son tour, avec son secret sous l'aile…",
+          "en": "But the owl waited for his turn, with his secret under his wing…"
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          { "k": "owl", "x": 50, "s": 1.9 },
+          { "k": "guinea-fowl", "x": 22, "s": 1.2, "a": "a-hop" },
+          { "k": "partridge", "x": 32, "a": "a-hop" },
+          { "k": "chicken", "x": 74, "flip": true, "a": "a-hop" },
+          { "k": "bird-small", "x": 84, "y": 40 }
+        ]
+      },
+      "text": {
+        "fr": "Quand tous les oiseaux eurent leurs yeux, le hibou sortit enfin les siens et les plaça sur son visage. Ils étaient si grands que sa tête changea complètement : on aurait dit un masque ! Les oiseaux éclatèrent de rire. « Ouh, qu'il est laid, le hibou ! »",
+        "en": "When all the birds had their eyes, the owl finally took out his own and placed them on his face. They were so big that his whole head changed: he looked like a mask! The birds burst out laughing. “Ooh, how ugly the owl is!”"
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "forest",
+        "items": [
+          { "k": "moon", "x": 78, "y": 300 },
+          { "k": "karite", "x": 40, "y": 20, "s": 1.2 },
+          { "k": "owl", "x": 42, "y": 120, "s": 1.3 }
+        ]
+      },
+      "text": {
+        "fr": "Honteux, le hibou s'envola se cacher au plus profond de la forêt. Il n'osa plus se montrer de jour et ne sortit plus que la nuit, quand tout le monde dort. Voilà pourquoi, aujourd'hui encore, le hibou a de si grands yeux et ne vit que la nuit.",
+        "en": "Ashamed, the owl flew off to hide in the depths of the forest. He no longer dared show himself by day and only came out at night, when everyone is asleep. That is why, to this day, the owl has such big eyes and lives only at night."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": { "fr": "Que devait faire le hibou avec le sac ?", "en": "What was the owl supposed to do with the bag?" },
+      "options": [
+        { "fr": "Distribuer les yeux à tous les oiseaux", "en": "Hand out the eyes to all the birds" },
+        { "fr": "Le cacher dans la forêt", "en": "Hide it in the forest" },
+        { "fr": "Le vendre au marché", "en": "Sell it at the market" }
+      ],
+      "answer": 0
+    },
+    {
+      "q": { "fr": "Pourquoi le hibou ne sort-il que la nuit ?", "en": "Why does the owl only come out at night?" },
+      "options": [
+        { "fr": "Il a honte depuis que les oiseaux se sont moqués de lui", "en": "He has been ashamed since the birds laughed at him" },
+        { "fr": "Il a peur du soleil", "en": "He is afraid of the sun" },
+        { "fr": "Il dort toute la journée par paresse", "en": "He sleeps all day out of laziness" }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "hibou",
+      "lang": "fr",
+      "def": {
+        "fr": "Oiseau de nuit aux grands yeux ronds. Dans les contes du Burkina, il est souvent lié au mystère et à la nuit.",
+        "en": "A night bird with big round eyes. In Burkinabè tales it is often linked to mystery and the night."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « L'origine des yeux du hibou » (conte n° 2), Recueil de contes pour les structures d'éducation préscolaire au Burkina Faso, MENAPLN avec l'appui de l'UNICEF, 2022. Réécriture libre.",
+    "en": "Based on “L'origine des yeux du hibou” (tale no. 2), Recueil de contes pour les structures d'éducation préscolaire au Burkina Faso, MENAPLN with support from UNICEF, 2022. Free retelling."
+  }
+}

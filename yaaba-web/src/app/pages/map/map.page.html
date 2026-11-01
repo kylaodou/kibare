@@ -1,0 +1,192 @@
+<div class="map-page" [class.panel-closed]="!panelOpen()">
+  <!-- ============ CARTE ============ -->
+  <div class="stage" id="map-canvas">
+    @if (view() === '2d') {
+      <app-map2d
+        [tales]="filtered()"
+        [selectedRegion]="selectedRegion()"
+        [selectedTale]="selectedTale()"
+        (regionSelect)="selectRegion($event)"
+        (taleSelect)="selectTale($event)"
+      />
+    } @else {
+      @defer (on immediate) {
+        <app-map3d
+          [tales]="filtered()"
+          [selectedRegion]="selectedRegion()"
+          [selectedTale]="selectedTale()"
+          (regionSelect)="selectRegion($event)"
+          (taleSelect)="selectTale($event)"
+        />
+      } @loading (minimum 300ms) {
+        <div class="loading">
+          <i class="fa-solid fa-cube fa-bounce"></i>
+          <span>{{ 'map.loading3d' | t }}</span>
+        </div>
+      }
+    }
+
+    <!-- barre d'outils -->
+    <div class="toolbar">
+      <div class="seg" id="map-mode" role="group" [attr.aria-label]="'map.mode' | t">
+        <button type="button" [class.on]="view() === '2d'" (click)="setMode('2d')" [attr.aria-pressed]="view() === '2d'">
+          <i class="fa-solid fa-map"></i> 2D
+        </button>
+        <button type="button" [class.on]="view() === '3d'" (click)="setMode('3d')" [attr.aria-pressed]="view() === '3d'">
+          <i class="fa-solid fa-cube"></i> 3D
+        </button>
+      </div>
+
+      <div class="search" id="map-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="search"
+          [ngModel]="query()"
+          (ngModelChange)="query.set($event); searchOpen.set(true)"
+          (focus)="searchOpen.set(true)"
+          (keydown.escape)="searchOpen.set(false)"
+          [placeholder]="'map.search' | t"
+          [attr.aria-label]="'map.search' | t"
+        />
+        @if (searchOpen() && query().length >= 2) {
+          <ul class="results card" role="listbox">
+            @for (t of results(); track t.slug) {
+              <li>
+                <button type="button" (click)="selectTale(t.slug)">
+                  <i class="fa-solid {{ typeIcon[t.type] }}"></i>
+                  <span>
+                    <strong>{{ text(t).title }}</strong>
+                    <small>{{ t.place }} · {{ data.regionMap().get(t.region)?.name }}</small>
+                  </span>
+                </button>
+              </li>
+            } @empty {
+              <li class="empty">{{ 'map.noResult' | t }}</li>
+            }
+          </ul>
+        }
+      </div>
+    </div>
+
+    <div class="filters" id="map-filters">
+      @for (ty of allTypes; track ty) {
+        <button type="button" class="filter" [class.on]="types().has(ty)" (click)="toggleType(ty)" [attr.aria-pressed]="types().has(ty)">
+          <i class="fa-solid {{ typeIcon[ty] }}"></i>
+          <span class="ft">{{ 'type.' + ty + 's' | t }}</span>
+        </button>
+      }
+      <p-select
+        [options]="langOptions()"
+        [ngModel]="lang()"
+        (ngModelChange)="lang.set($event)"
+        [placeholder]="'map.allLanguages' | t"
+        [showClear]="true"
+        size="small"
+        styleClass="lang-select"
+        appendTo="body"
+      />
+    </div>
+
+    <div class="corner">
+      <button type="button" class="round" (click)="startTour()" [pTooltip]="'map.help' | t" tooltipPosition="left" [attr.aria-label]="'map.help' | t">
+        <i class="fa-solid fa-circle-question"></i>
+      </button>
+      @if (selectedRegion()) {
+        <button type="button" class="round" (click)="selectRegion(null)" [pTooltip]="'map.reset' | t" tooltipPosition="left" [attr.aria-label]="'map.reset' | t">
+          <i class="fa-solid fa-expand"></i>
+        </button>
+      }
+      <button type="button" class="round panel-toggle" (click)="panelOpen.set(!panelOpen())" [attr.aria-label]="'map.panel' | t">
+        <i class="fa-solid" [class.fa-chevron-right]="panelOpen()" [class.fa-list]="!panelOpen()"></i>
+      </button>
+    </div>
+
+    <div class="legend">
+      <span><i class="pin-dot legende"></i>{{ 'type.legendes' | t }}</span>
+      <span><i class="pin-dot conte"></i>{{ 'type.contes' | t }}</span>
+      <span><i class="pin-dot recit"></i>{{ 'type.recits' | t }}</span>
+    </div>
+  </div>
+
+  <!-- ============ PANNEAU ============ -->
+  <aside class="panel" id="map-panel" [attr.aria-label]="'map.panel' | t">
+    @if (taleInfo(); as t) {
+      <!-- fiche conte -->
+      <div class="pane reveal">
+        <button type="button" class="back" (click)="back()"><i class="fa-solid fa-arrow-left"></i> {{ data.regionMap().get(t.region)?.name }}</button>
+        <div class="preview">
+          <app-scene-art [art]="t.scenes[t.cover ?? 0].art" />
+        </div>
+        <span class="chip chip-red"><i class="fa-solid {{ typeIcon[t.type] }}"></i> {{ 'type.' + t.type | t }}</span>
+        <h2>{{ text(t).title }}</h2>
+        <p class="muted">{{ text(t).summary }}</p>
+        <ul class="facts">
+          <li><i class="fa-solid fa-location-dot"></i> {{ t.place }}</li>
+          <li><i class="fa-solid fa-people-group"></i> {{ t.people }}</li>
+          <li><i class="fa-regular fa-clock"></i> {{ t.duration }} min · {{ 'tale.age' | t: { age: t.age } }}</li>
+        </ul>
+        <a class="btn btn-block" [routerLink]="['/contes', t.slug]">
+          <i class="fa-solid fa-play"></i> {{ 'map.listen' | t }}
+        </a>
+      </div>
+    } @else if (regionInfo(); as r) {
+      <!-- fiche région -->
+      <div class="pane reveal">
+        <button type="button" class="back" (click)="back()"><i class="fa-solid fa-arrow-left"></i> {{ 'map.allRegions' | t }}</button>
+        <span class="eyebrow">{{ 'map.region' | t }}</span>
+        <h2>{{ r.name }}</h2>
+        <p class="muted">{{ r.description | tx }}</p>
+        <dl class="region-facts">
+          <div><dt>{{ 'map.capital' | t }}</dt><dd>{{ r.capital }}</dd></div>
+          <div><dt>{{ 'map.peoples' | t }}</dt><dd>{{ r.peoples.join(', ') }}</dd></div>
+          <div>
+            <dt>{{ 'map.languages' | t }}</dt>
+            <dd>
+              @for (l of r.languages; track l) {
+                <a class="chip chip-green" routerLink="/langues" [fragment]="l">{{ data.languageMap().get(l)?.name }}</a>
+              }
+            </dd>
+          </div>
+        </dl>
+        <h3 class="list-title">{{ 'map.talesHere' | t: { n: regionTales().length } }}</h3>
+        <ul class="tale-list">
+          @for (t of regionTales(); track t.slug) {
+            <li>
+              <button type="button" (click)="selectTale(t.slug)">
+                <span class="thumb"><app-scene-art [art]="t.scenes[t.cover ?? 0].art" [animate]="false" /></span>
+                <span class="tl-text">
+                  <strong>{{ text(t).title }}</strong>
+                  <small><i class="fa-solid {{ typeIcon[t.type] }}"></i> {{ 'type.' + t.type | t }} · {{ t.duration }} min</small>
+                </span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </li>
+          } @empty {
+            <li class="empty">{{ 'map.noTaleFilter' | t }}</li>
+          }
+        </ul>
+      </div>
+    } @else {
+      <!-- accueil du panneau -->
+      <div class="pane reveal">
+        <span class="eyebrow">{{ 'map.explore' | t }}</span>
+        <h2>{{ 'map.intro.title' | t }}</h2>
+        <p class="muted">{{ 'map.intro.text' | t }}</p>
+        <div class="progress-box">
+          <i class="fa-solid fa-compass"></i>
+          <span>{{ 'map.visited' | t: { n: visitedCount(), total: data.regions().length } }}</span>
+        </div>
+        <ul class="region-list">
+          @for (r of regionList(); track r.code) {
+            <li>
+              <button type="button" (click)="selectRegion(r.code)" [class.visited]="progress.state().regionsVisited.includes(r.code)">
+                <span class="rl-name">{{ r.name }}</span>
+                <span class="rl-count">{{ r.count }}</span>
+              </button>
+            </li>
+          }
+        </ul>
+      </div>
+    }
+  </aside>
+</div>

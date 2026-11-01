@@ -1,0 +1,122 @@
+.veil {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: transparent;
+
+  &.no-target {
+    background: rgb(20 17 14 / 0.55);
+    animation: fade 0.3s ease both;
+  }
+}
+
+.spot {
+  position: fixed;
+  z-index: 1101;
+  border-radius: 14px;
+  box-shadow: 0 0 0 9999px rgb(20 17 14 / 0.55);
+  outline: 3px solid var(--y-yellow);
+  pointer-events: none;
+  transition: top 0.35s var(--ease), left 0.35s var(--ease), width 0.35s var(--ease), height 0.35s var(--ease);
+}
+
+.card {
+  position: fixed;
+  z-index: 1102;
+  width: min(360px, calc(100vw - 32px));
+  padding: 20px;
+  background: var(--surface);
+  color: var(--text);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-3);
+  outline: none;
+  animation: pop 0.35s var(--ease) both;
+  transition: top 0.35s var(--ease), left 0.35s var(--ease);
+
+  h3 {
+    font-size: 1.2rem;
+    margin: 12px 0 6px;
+  }
+
+  p {
+    color: var(--text-2);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ico {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--y-red-soft);
+  color: var(--y-red-ink);
+}
+
+.count {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-3);
+}
+
+.close {
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  color: var(--text-3);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background: var(--surface-2);
+    color: var(--text);
+  }
+}
+
+.progress {
+  display: flex;
+  gap: 4px;
+  margin: 18px 0 16px;
+
+  span {
+    flex: 1;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--surface-3);
+    transition: background-color 0.3s;
+    &.on {
+      background: var(--y-red);
+    }
+  }
+}
+
+.foot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  .grow {
+    flex: 1;
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}

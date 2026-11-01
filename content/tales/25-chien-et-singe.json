@@ -1,0 +1,326 @@
+{
+  "slug": "le-chien-et-le-singe",
+  "type": "conte",
+  "region": "cascades",
+  "place": "Mangodara",
+  "coords": [
+    9.9,
+    -4.35
+  ],
+  "people": "Gouin",
+  "language": "cerma",
+  "duration": 4,
+  "age": 6,
+  "featured": false,
+  "cover": 1,
+  "tags": [
+    "amitié",
+    "travail",
+    "conte étiologique",
+    "animaux"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Pourquoi le chien et le singe sont ennemis",
+      "subtitle": "Le trou d'eau du marigot",
+      "summary": "Le chien et le singe étaient inséparables. Mais sur la route de la belle-famille, l'un creuse un trou d'eau pendant que l'autre se dérobe… et une fiancée va tout changer.",
+      "moral": "Celui qui profite du travail des autres finit par le payer : l'amitié ne survit pas à la paresse et à la trahison."
+    },
+    "en": {
+      "title": "Why the Dog and the Monkey Are Enemies",
+      "subtitle": "The water hole in the dry stream",
+      "summary": "The dog and the monkey were inseparable. But on the road to the in-laws, one digs a water hole while the other slips away… and a fiancée will change everything.",
+      "moral": "Whoever takes advantage of others' work pays for it in the end: friendship does not survive laziness and betrayal."
+    },
+    "moore": {
+      "title": "Bõe yĩng tɩ wũnd ne bõangã yaa bɛɛba?",
+      "subtitle": "Ko-kãsengã pʋgẽ, koom sẽn be ko-kãnga pʋgẽ wã",
+      "summary": "A zakã ne a bõoneg ra pa tõe n welg ye. La b sẽn wa n na n kẽng b logtoɛɛmb nengẽ wã, ned a yembr kogda koom gãag tɩ a to wã lebgdẽ. La pʋg-sadb na n toeemame.",
+      "moral": "Ned ning sẽn dɩkd neb a taabã tʋʋmde, na n wa yaooda. Zĩ-nongre pa tõe n paam tɩ ned yɩ gãn-tɩrg la b zãmb ye."
+    },
+    "dioula": {
+      "title": "Mun na wulu ni bɔnw ye juguw ye?",
+      "subtitle": "Ji min be jii la baji kɔnɔ, o ye dingɛ dɔ ye.",
+      "summary": "Wulu ni wulu tun tɛ faranna ɲɔgɔn na. Nka, u tagara ni muso cɛmanw ye. U dɔ ye dingɛ sogi ka sɔrɔ a tɔɲɔgɔn bolila ka taga. ani kɔɲɔmuso dɔ bena koo bɛɛ yɛlɛma.",
+      "moral": "Mɔgɔ min be baara kɛ ka tɔɔw nafa sɔrɔ, o tigi bena a sara. Teriya tɛ se ka to ni mɔgɔ ye n'a kɛra salabagatɔ ye ani k'a janfa."
+    },
+    "fulfulde": {
+      "title": "Ngam ɗume Dogge e Monkey ɗon wondi cemmbe",
+      "subtitle": "Ɗuɓɓule ndiyam nder ɓandu njamndi",
+      "summary": "Dog e monkey ɓe tawaa. Ammaa nder laawol to surbaaɓe, gooto ɗon ɗaɓɓa ndiyam ngam goɗɗo boo ɗon hoola... nden debbo mo o yiɗiri boo waylirta koo ɗume.",
+      "moral": "Mo huutoroo kuuɗe yimɓe feere ɗon nafata ɗum nder wakkere: duɗal walaa ɗo ɓeydaaki ngam yidde e luulnugo."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "dog",
+            "x": 40,
+            "s": 1.3
+          },
+          {
+            "k": "monkey",
+            "x": 58,
+            "s": 1.2,
+            "flip": true
+          },
+          {
+            "k": "karite",
+            "x": 14,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Autrefois, le chien et le singe étaient de vrais amis. Ils se promenaient ensemble et se confiaient tous leurs secrets. Un jour, le chien demanda au singe de l'accompagner chez sa fiancée, dans un village voisin. Pour y aller, il fallait traverser un marigot à sec.",
+        "en": "Long ago, the dog and the monkey were true friends. They went everywhere together and shared all their secrets. One day the dog asked the monkey to come with him to visit his fiancée in a neighbouring village. To get there, they had to cross a dried-up stream.",
+        "moore": "Sẽn deng wʋsgo, zo-rũng ne bõangã ra yaa sõsdba. B kẽnga zĩig fãa ne taaba, n togs b yel-solemsã. Daar a ye, bi-riblã kosa bõangã t'a wa ne yẽ n tɩ ges a pʋg-sadgã sẽn be tẽn-kʋdg pʋgẽ. B ra segd n pɩʋʋga kʋɩlgã sẽn da yaa koom-koglg zug n ta be.",
+        "dioula": "Wagatijan tɛmɛninw na, wulu ni bɔn tun ye teri sɔbɛw ye. U tagara yɔrɔ bɛɛ ɲɔgɔn fɛ ani u y'u ka sekuruw fɔ ɲɔgɔn ye. Loon dɔ, wulu ye n' muso weele ka na bɔ a gɛrɛfɛ dugu dɔ la. Walisa ka se yen, u tun ka ɲi ka kɔ dɔ tigɛ.",
+        "fulfulde": "Wakkati ɗuɗɗi, dog e monkey ɓe ngalaa ɓalli. Ɓe njahi nder nokkuuje fuu bee maɓɓe ɓe mbaɗi sirru maɓɓe. Go'o nyalnde, doggo o noddi monkey ngam yahude bee maako to wuro go'oto. Ngam ɓe njaha ton, ɓe njotti kooki."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "river",
+        "items": [
+          {
+            "k": "dog",
+            "x": 40,
+            "s": 1.2,
+            "a": "a-peck"
+          },
+          {
+            "k": "monkey",
+            "x": 72,
+            "s": 1.1,
+            "a": "a-hop"
+          },
+          {
+            "k": "palm",
+            "x": 88,
+            "y": 36
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Aide-moi à creuser un trou ici, dit le chien, nous aurons de l'eau pour boire au retour. » « Je ne veux pas me salir », répondit le singe en filant devant. Le chien, lui, creusa patiemment jusqu'à trouver l'eau, puis reprit la route, couvert de terre.",
+        "en": "“Help me dig a hole here,” said the dog, “so we'll have water to drink on the way back.” “I don't want to get dirty,” answered the monkey, scampering ahead. The dog patiently dug until he found water, then set off again, covered in earth.",
+        "moore": "\"Bɩ y sõng-m tɩ m kog zĩiga\", a yeelame. \"Nedã na n dɩka koom d sẽn wa n lebg n ta wã\". A leokame t'a pa rat tɩ b yĩgimd ye, la a zoe n kẽnga taoor ye. A gãda koom n yaool n leb n kẽnga tẽngã pʋgẽ.",
+        "dioula": "Ne dɛmɛ ka dingɛ sogi yan,  wulu y'a fɔ ko:  o la an bena jii min sira fɛ.  Ne t'a fɛ ka nɔgɔ,  n ye kuma ta k'o kɛ. A ye ji sogi fɔɔ a y'a sɔrɔ jii tun b'a kɔnɔ. O kɔ, a segira ka taga dugukolo la.",
+        "fulfulde": "Help me dig a hole here, said the dog, so we'll have water to drink on the way back.  I don't wanna get dirty, answered the monkey, scamping ahead.   ‬\"Mi yiɗi njiɗde bee ndiyam nder laawol\". Mbira on ɗon maɓɓina bee hakkiilo haa o heɓii ndiyam, nden o fuɗɗiti, nder leydi."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 76,
+            "y": 26
+          },
+          {
+            "k": "monkey",
+            "x": 40,
+            "s": 1.1
+          },
+          {
+            "k": "woman-talk",
+            "x": 54,
+            "c": "#D62828"
+          },
+          {
+            "k": "dog",
+            "x": 22,
+            "s": 1.1
+          }
+        ]
+      },
+      "text": {
+        "fr": "Au village, il trouva le singe en pleine conversation avec sa fiancée. Quand le chien voulut repartir avec elle, la jeune fille déclara : « Tu es tout sale, je ne veux plus de toi. C'est le singe que je veux ! » Rouge de colère, le chien rentra seul.",
+        "en": "In the village he found the monkey deep in conversation with his fiancée. When the dog wanted to leave with her, the young woman declared: “You're filthy, I don't want you any more. It's the monkey I want!” Red with anger, the dog went home alone.",
+        "moore": "A yãee bõangã sẽn da gomd ne a pʋg-sadgã. A zakã sẽn dat n loog ne-a wã, bi-bɩɩgã yeela a woto: \"Fo yaa rẽgd soaba, m pa le rat foom ye. Yaa wa m sẽn dat n yɩll ne zĩm-gãongã! A sũ-yikrã kɩtame t'a dogmã kẽng a yembr.",
+        "dioula": "A y'a ka muso ye dugu kɔnɔ. Tuma min na wulu tun b'a fɛ ka taga n'a ye, sunguru y'a fɔ ko: \"I nɔgɔlen lo. Ne t'i fɛ tugun. Ne b'a fɛ ka n' ka sagaden ye! A tun diminin lo kosɔbɛ, a tagara soo ale kelen.",
+        "fulfulde": "Nder gariiri o tawi moomooɗo ɗon haalaa e gorko maako. Nde doggo yiɗi yahude bee maako, debbo on wi'i: \"Oɗon ɓeydi laaɓɗum, mi yiɗaa. Ko monkey mi yiɗi! Ɓernde ɓeydi, doggo yahi wuro maako."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va faire le chien, arrivé au trou d'eau ?",
+          "en": "What will the dog do when he reaches the water hole?",
+          "moore": "A sã n wa ta koomẽ wã, a na n maana bõe?",
+          "dioula": "Ni a sera jii kɔnɔ tuma min na, a bena mun lo kɛ?",
+          "fulfulde": "Ko woni ko doggo waɗata to o hawti nder ndiyam?"
+        },
+        "options": [
+          {
+            "fr": "Attendre le singe pour lui donner une leçon",
+            "en": "Wait for the monkey to teach him a lesson",
+            "moore": "La gũus-y tɩ malɛkã zãms-a lekoll n kõ-a.",
+            "dioula": "I ka kɔnɔni kɛ janko n'o tɛ, i bena kalan sɔrɔ a la.",
+            "fulfulde": "E nder ɗon haa monkey on ekkitina mo lekki"
+          },
+          {
+            "fr": "Boucher le trou",
+            "en": "Fill in the hole",
+            "moore": "Tẽeg-y zĩiga.",
+            "dioula": "A to o yɔrɔ ka fa.",
+            "fulfulde": "Fulɓe haaɓre"
+          },
+          {
+            "fr": "Pardonner",
+            "en": "Forgive",
+            "moore": "Kẽng-y n kõ-yã.",
+            "dioula": "N'i yafara ne ma, yafa n ma.",
+            "fulfulde": "Maafugo ngam ma'a"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Le chien but, puis se cacha dans l'eau…",
+          "en": "The dog drank, then hid in the water…",
+          "moore": "A wãbame, n sig koomẽ.",
+          "dioula": "A ye dɔrɔ min, o kɔ a y'a dogo jii la.",
+          "fulfulde": "Dogol ɗon njari, nden o ɓoydi nder ndiyam..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "river",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 220
+          },
+          {
+            "k": "monkey",
+            "x": 50,
+            "s": 1.2,
+            "a": "a-gallop"
+          },
+          {
+            "k": "dog",
+            "x": 30,
+            "y": -10,
+            "s": 1
+          },
+          {
+            "k": "palm",
+            "x": 86,
+            "y": 36
+          }
+        ]
+      },
+      "text": {
+        "fr": "Au marigot, le chien but, puis se glissa dans son trou d'eau, ne laissant dépasser que le bout de sa queue. Plus tard, le singe arriva, assoiffé, et se pencha pour boire. Le chien bondit hors de l'eau ! Le singe s'enfuit dans les arbres. Depuis ce jour, le singe reste en haut des branches, et le chien aboie dès qu'il l'aperçoit.",
+        "en": "At the stream, the dog drank, then slipped into his water hole, leaving only the tip of his tail showing. Later the monkey arrived, thirsty, and bent down to drink. The dog leapt out of the water! The monkey fled into the trees. Since that day, the monkey stays high up in the branches, and the dog barks as soon as he sees him.",
+        "moore": "A rɩka rãam n yaool n kẽ koomẽ wã, la a gãnegda a yagrã tãnd bala. La rẽ poore, bõn-bilã waa n dɩka koom. A wãbga koomẽ! B sẽn yã wã, b zoe n kẽe tɩɩsã pʋgẽ. Sẽn sɩng ne a daarã, malɛkã pa be rũmsẽ ye. A sã n yãend-a wã, a kelgdame.",
+        "dioula": "A ye jii min kɔlɔn dɔ kɔnɔ, a y'a daminɛ ka ji ta. O kɔ, a donna a ka dingɛ kɔnɔ k'a kuncɛw bɛɛ bɔ yen. Kɔfɛ, minnɔgɔ tun b'a la ka na n'a ye. A y'a kunbiri gwan k'a daa biri jii kan. Wulu bɔra jii la! O tuma na, majigilennin bolila ka taga yiriw kɔnɔ. Kabi o loon na, n'a ye, wulu be lɔ a bolow kan ani wulu b'a kaan bɔ.",
+        "fulfulde": "Nder ndiyam, dogol ɗon njarno, nden o ɓeydi nder ndiyam maako, o acci tan ko fuɗnaaki. Ɓaawo maajum, ɓooya warii, o mari marɓe, o suɓii ngam njara. Mbira oo ƴetti diga ndiyam! Maaki'en ɗon ndoggi haa leɗɗe. Gila nden nyalnde, ɓoyma ɗon jooɗa haa juuɗe nder limce, nden dogol boo ɗon haɓɓo nde o yi'i mo."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Pourquoi le singe refuse-t-il de creuser ?",
+        "en": "Why does the monkey refuse to dig?",
+        "moore": "Bõe yĩng tɩ bõangã pa rat n dig ye?",
+        "dioula": "Mun na majigilennin tɛ sɔn ka dingɛ sogi?",
+        "fulfulde": "Ngam ɗume majji'en ɗon njaɓa ?"
+      },
+      "options": [
+        {
+          "fr": "Il ne veut pas se salir",
+          "en": "He doesn't want to get dirty",
+          "moore": "A pa rat n yɩ rẽgd ye.",
+          "dioula": "A t'a fɛ ka nɔgɔ.",
+          "fulfulde": "O yiɗi naa' ngam o laato laaɓɗum."
+        },
+        {
+          "fr": "Il est malade",
+          "en": "He is ill",
+          "moore": "A yaa bãad-n-taase.",
+          "dioula": "A man kɛnɛ.",
+          "fulfulde": "O ɗon nyawdi."
+        },
+        {
+          "fr": "Il n'a pas soif",
+          "en": "He isn't thirsty",
+          "moore": "A ka tar rã-yũud ye.",
+          "dioula": "A minnɔgɔ tɛ a la.",
+          "fulfulde": "O ɗon moƴƴa."
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Depuis ce jour, où vit le singe ?",
+        "en": "Since that day, where does the monkey live?",
+        "moore": "Sẽn sɩng ne daar kãng, zĩn-kãng vɩɩ yɛ?",
+        "dioula": "Kabi o loon na, n'o tɛ, mun lo kɛra?",
+        "fulfulde": "Gila nden nyalnde, to nde monkey jooɗoto?"
+      },
+      "options": [
+        {
+          "fr": "En haut des arbres",
+          "en": "High in the trees",
+          "moore": "D sã n wa be tɩɩsã sʋka, d na n paama sũ-noogo.",
+          "dioula": "Yiriw sanfɛ.",
+          "fulfulde": "Ɗuum ɗon haa leɗɗe"
+        },
+        {
+          "fr": "Dans l'eau",
+          "en": "In the water",
+          "moore": "Ko-kãsengã pʋgẽ.",
+          "dioula": "Jii kɔnɔ",
+          "fulfulde": "Nder ndiyam"
+        },
+        {
+          "fr": "Au village",
+          "en": "In the village",
+          "moore": "Tẽnga pʋgẽ.",
+          "dioula": "Dugu kɔnɔ.",
+          "fulfulde": "Nder wuro"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "marigot",
+      "lang": "fr",
+      "def": {
+        "fr": "Petit cours d'eau ou mare qui se remplit à la saison des pluies et s'assèche en saison sèche.",
+        "en": "A small stream or pond that fills in the rainy season and dries up in the dry season.",
+        "moore": "Yaa koom-koglg sẽn yaa bilf n pid ne saaga wakate, la a kʋɩɩs ne kooma wakate.",
+        "dioula": "A be kɛ kɔlɔn wala baji dennin ye min be falen sanji wagati la ani a be ja jara jara jara jara tuma na.",
+        "fulfulde": "Ɗuum ko ndiyam malla poondi ɓiiɓal ngal heewi nder sahaa leɗɗe nden ɗon maaki nder sahaa njamndi."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « Le chien et le singe », conte gouin raconté par Mme Justine Fayama, publié sur abcBurkina.net. Réécriture libre.",
+    "en": "Based on “Le chien et le singe”, a Gouin tale told by Mrs Justine Fayama, published on abcBurkina.net. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

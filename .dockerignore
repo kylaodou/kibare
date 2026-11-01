@@ -1,0 +1,7 @@
+yaaba-web/node_modules
+yaaba-web/dist
+yaaba-web/.angular
+yaaba-api/target
+yaaba-api/data
+yaaba-api/uploads
+**/.git

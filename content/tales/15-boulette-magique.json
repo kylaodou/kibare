@@ -1,0 +1,489 @@
+{
+  "slug": "la-boulette-magique",
+  "type": "conte",
+  "region": "est",
+  "place": "Piéla",
+  "coords": [
+    12.7,
+    -0.13
+  ],
+  "people": "Gourmantché",
+  "language": "gulmancema",
+  "duration": 5,
+  "age": 5,
+  "featured": true,
+  "cover": 2,
+  "tags": [
+    "famine",
+    "magie",
+    "justice",
+    "récompense"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "La boulette magique",
+      "subtitle": "Le canari qui se remplit tout seul",
+      "summary": "En pleine famine, un éleveur de poulets poursuit chaque jour une petite boulette de mil qui roule plus vite que lui. Le jour où il l'attrape enfin, elle lui offre un trésor… que le roi voudra lui voler.",
+      "moral": "La ruse et la patience viennent à bout de la faim, et la force injuste finit toujours par être punie."
+    },
+    "en": {
+      "title": "The Magic Millet Ball",
+      "subtitle": "The pot that fills itself",
+      "summary": "In a time of famine, a chicken keeper chases a little millet ball every day, but it always rolls away faster than he can run. The day he finally catches it, it gives him a treasure… which the king will try to steal.",
+      "moral": "Cleverness and patience overcome hunger, and unjust force is always punished in the end."
+    },
+    "moore": {
+      "title": "B sẽn na n maan bũmb ning fãa wã, b tõe n maana a woto.",
+      "subtitle": "B sẽn da na n pidsd b mensã, yaa bõn-buud ninga.",
+      "summary": "La sã n wa yaa kom wakate, kok-koglg na n digda bugum sẽn pa tar pãng tɩ b tõe n zoe. A sã n wa paam-a wã, a na n paama arzɛk wʋsgo. Rĩmã na n baoo-a lame.",
+      "moral": "Ned sã n tar yam la sũ-mar, a tõogda komã. La ned sã n pa maan wẽnga, a na n paama sɩbgr wakat fãa."
+    },
+    "dioula": {
+      "title": "O ye \"Maleti bolo\" lo ye.",
+      "subtitle": "Min be fa a yɛrɛ la",
+      "summary": "Ni kɔngɔ be don jamana kɔnɔ, kokolontigi b'a ka misidenw gwɛn loon o loon. Nka a be taga joona joona. A mana o sɔrɔ loon min na, a ye nafoloba dɔ sɔrɔ. Masacɛ bena a ɲini k'o sonya.",
+      "moral": "Hakilitigiya ni muɲuli be kɔngɔ ban. Nka, mɔgɔ min ma sɔn ka fanga sɔrɔ, o tigi laban ye tɔɔrɔ le ye."
+    },
+    "fulfulde": {
+      "title": "Ballum Millet Magic",
+      "subtitle": "Ko potol ngol heewi hoore mum",
+      "summary": "Nder wakkati warugo, mawɗo kokko ɗon ɗaɓɓa balli ɓaleere nder nyalawma fuu, ammaa ɗum ɗon ɓeyda bee saffuki. Nde o heɓii nde, ɗum hokkata mo jawdi... Nde laamiiɗo yiɗi ɓajugo.",
+      "moral": "Hakkiilo e hakkiilo ɗon ceyri nyaamdu, nden semmbe kalluɗum boo ɗon ceya haa sakkindi."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 310,
+            "s": 1.2
+          },
+          {
+            "k": "baobab",
+            "x": 16,
+            "y": 24,
+            "c": "bare"
+          },
+          {
+            "k": "man",
+            "x": 44,
+            "c": "#C9822B"
+          },
+          {
+            "k": "chicken",
+            "x": 56
+          },
+          {
+            "k": "chicken",
+            "x": 62,
+            "flip": true
+          },
+          {
+            "k": "rock",
+            "x": 84,
+            "s": 0.7
+          }
+        ]
+      },
+      "text": {
+        "fr": "Au temps d'une grande famine, dans le pays gourmantché, vivait un éleveur de poulets. Chaque matin, il partait dans la brousse fouiller les termitières pour nourrir ses volailles, et chaque matin il prenait le même chemin.",
+        "en": "In a time of great famine, in Gourmantché country, there lived a man who kept chickens. Every morning he went into the bush to dig in the termite mounds to feed his birds, and every morning he took the same path.",
+        "moore": "Wakat ning kom sẽn da yaa kãseng n zĩndã, Gourmantché tẽngẽ wã, rao a ye ra tara piis. Daar fãa, a ra kẽnda weoogẽ n na n zõog tãmbã sẽn be koom-koglgã pʋgẽ wã tɩ b rɩd a piisã. La daar fãa, yẽ me ra tũud sor ning sẽn yaa to-to wã.",
+        "dioula": "Kɔngɔba tun be yen. Mɔgɔ dɔ tun be yen min tun ye kokɔrɔw mara. Sɔgɔma o sɔgɔma, a tun be taga yiritu kɔnɔ ka dingɛw sogi. O kɔ, a tun b'a fɛ k'o sira kelen lo ta.",
+        "fulfulde": "Nder wakkati naange mawɗo, nder lesdi Gourmantché, goɗɗo jooɗii mo ɗon mari kokkoji. Ko jemma fuu o yahdi nder leɗɗe ngam o ɗaɓɓita haa nder kooseeje termites ngam o nyaama colli maako, nden kam ko jemma fuu omo yaha laawol gootol."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "acacia",
+            "x": 80,
+            "y": 26
+          },
+          {
+            "k": "man-point",
+            "x": 30,
+            "c": "#C9822B"
+          },
+          {
+            "k": "millet-ball",
+            "x": 60,
+            "a": "a-roll"
+          },
+          {
+            "k": "termite-mound",
+            "x": 70,
+            "y": 6
+          },
+          {
+            "k": "grass",
+            "x": 48
+          }
+        ]
+      },
+      "text": {
+        "fr": "Sur ce chemin, une petite boulette de farine de mil l'attendait toujours. « Éleveur, attrape-moi si tu peux, et tu pourras me manger ! » criait-elle. L'homme courait, courait, mais la boulette roulait jusqu'à son trou et y disparaissait avant qu'il ne l'atteigne.",
+        "en": "On that path, a little ball of millet flour was always waiting for him. “Chicken keeper, catch me if you can, and you may eat me!” it would cry. The man ran and ran, but the ball rolled to its hole and vanished before he could reach it.",
+        "moore": "A sẽn da be sorã zugã, a ra gũuda ne miis-poak bĩng bilf n na n dɩ. Dɩlla, sã n tõe, bɩ f yõk-m la f rɩ maam! Rao wã zoe n zoetame, la b ra wa n yãe balã sẽn na yɩl n tõog n ta zĩig ning a sẽn da beẽ.",
+        "dioula": "O sira kan, mugu dɔ tun be to k'a kɔnɔ. Dɔnkiɲana, n'i be se ka ne minɛ, i be se k'a dumu! A bena kasi. A bolila ka taga, nka a ye bɔlɔsi ta k'a yɛrɛ datugu.",
+        "fulfulde": "Nder laawol ngol, feeroore ɓaleere nder mayre ɗonno haajo maako. Kokke keeper, hawta am to a waawi, nden kam a waaway nyaamugo yam! ɗum boowan. Yimɓe ɗon ndoggi, ammaa ballol ngol ɓoli haa maɓɓere nden o majjini ngam o heɓay."
+      },
+      "choice": {
+        "q": {
+          "fr": "Comment l'éleveur pourrait-il attraper la boulette ?",
+          "en": "How could the chicken keeper catch the ball?",
+          "moore": "Wãn to la piisã gũudã tõog n paam koglgã?",
+          "dioula": "A tun be se ka bɔ cogo di?",
+          "fulfulde": "Noye mawɗo kokko'en heɓiri ballo?"
+        },
+        "options": [
+          {
+            "fr": "Courir encore plus vite",
+            "en": "Run even faster",
+            "moore": "Kẽng-y n zoe tao-tao.",
+            "dioula": "I ka boli joona yɛrɛ.",
+            "fulfulde": "Njaɓu ɓeydaaki"
+          },
+          {
+            "fr": "Boucher son trou en cachette",
+            "en": "Secretly block its hole",
+            "moore": "B sẽn da na n maan bũmb ningã, b pa tõe n yã ye.",
+            "dioula": "A ka kɛnɛkɛnɛ dogo la.",
+            "fulfulde": "Ɓernde ɓooyɗo eɓɓooji mum"
+          },
+          {
+            "fr": "Abandonner",
+            "en": "Give up",
+            "moore": "Kõ-y n kõome.",
+            "dioula": "I kana a to o ye nɔɔ jugu to i kan.",
+            "fulfulde": "Hokka ko'e ma."
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "Un jour, il prit un autre chemin et boucha le trou avec des feuilles…",
+          "en": "One day he took another path and blocked the hole with leaves…",
+          "moore": "Daar a ye, a kẽnga sor a to n kɩt tɩ b pa le tõe n paam-a ye.",
+          "dioula": "Loon dɔ, a ye sira wɛrɛ ta ka dingɛ datugu ni furaburuw ye.",
+          "fulfulde": "Go'o nyalnde o waɗi laawol feere, o ɓaŋgi haaɗol ngol bee leɗɗe..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 14,
+            "y": 250
+          },
+          {
+            "k": "man-up",
+            "x": 46,
+            "c": "#C9822B"
+          },
+          {
+            "k": "millet-ball",
+            "x": 56,
+            "y": 70,
+            "s": 1.2
+          },
+          {
+            "k": "jar",
+            "x": 68,
+            "s": 1.3
+          },
+          {
+            "k": "whip",
+            "x": 76
+          },
+          {
+            "k": "bush",
+            "x": 88
+          }
+        ]
+      },
+      "text": {
+        "fr": "Ce jour-là, la boulette ne trouva plus son trou, et l'éleveur l'attrapa. « Ne me mange pas ! supplia-t-elle. Je vais te donner de quoi manger toute ta vie. » Elle lui offrit un canari, un pot en terre, et une cravache. « Dis seulement : canari, remplis-toi ! Quant à la cravache, je te dirai plus tard à quoi elle sert. »",
+        "en": "That day the ball could not find its hole, and the chicken keeper caught it. “Don't eat me!” it begged. “I will give you enough to eat for the rest of your life.” It gave him a clay pot and a whip. “Just say: pot, fill yourself! As for the whip, I will tell you later what it is for.”",
+        "moore": "Daar kãng bala, b ra pa tõe n yã koglgã ye. La piisã gãagda yõk-a lame. A bõosa maam tɩ m da rɩ ye. Mam na n kõo yãmb rɩɩb sẽn sek y vɩɩmã tõre. D yeel-y lame: \"Tõnd sẽn tar koomã, bɩ y pids y meng!\" La mam na n wilga yãmb bũmb ning sẽn kɩt tɩ b pãb-y wã.",
+        "dioula": "O loon na, a tun tɛ se k'a ka bɔlɔsi sɔrɔ. A ye o kɛ. Kana ne domu! A ye delili kɛ. Ne bena dumuni di i ma fɔɔ ka se i sii tɔɔ ma. O ye daga dɔ ni bere dɔ d'a ma. A fɔ dɔrɔn ko: \"Firi, i k'i yɛrɛ fa!\" Nka, n'a sɔrɔ o tɛ se ka kɛ.",
+        "fulfulde": "Nder nyalnde maajum, ballon heɓataa toɓere maako, nden boo mawɗo kokko o hawti. Don't eat me! it begged. Mi hokkan ma nyaamdu haa nduumi. Ndaa tan wi'a: pot, keewi hoore ma! Ngam ɓeydaare, mi wi'ay on ko ɗum waɗi."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 18,
+            "y": 26
+          },
+          {
+            "k": "jar",
+            "x": 46,
+            "s": 1.4
+          },
+          {
+            "k": "man-talk",
+            "x": 34,
+            "c": "#C9822B"
+          },
+          {
+            "k": "woman",
+            "x": 60
+          },
+          {
+            "k": "child-up",
+            "x": 70
+          },
+          {
+            "k": "child-up",
+            "x": 78,
+            "c": "#D62828"
+          }
+        ]
+      },
+      "text": {
+        "fr": "De retour chez lui, l'éleveur réunit sa femme et ses enfants. « Canari, remplis-toi ! » Aussitôt le pot déborda de galettes de mil et de sauce au beurre. Toute la famille mangea à sa faim, et cela dura un mois entier, alors que tout le pays souffrait.",
+        "en": "Back home, the chicken keeper gathered his wife and children. “Pot, fill yourself!” At once the pot overflowed with millet cakes and butter sauce. The whole family ate their fill, and it went on for a whole month, while the rest of the land went hungry.",
+        "moore": "A sẽn lebg n wa be a zakã pʋgẽ, a tigma a pagã ne a kambã. Pãnd-y n pids y meng! Wakat kãng bala, b rɩka bur ne bur sẽn yaa wa ye. B fãa rɩka rɩɩb n tɩge, la b ra pa be ye. La kom yõk-b lame tẽngã pʋga.",
+        "dioula": "A kɔsegira soo tuma min na, a y'a muso n'a deenw lajɛn. Bɔlɔn kɔnɔ, i k'i yɛrɛ fa! O yɔrɔnin bɛɛ, bɔgɔdaga tun fara ɲimiw ni manamanaliw la. O bɛɛ ka domuni kɛ fɔɔ ka fa. A kɛra o cogo le ra, fɔ karo kelen; nka kɔngɔ nana se jamana tɔw ma.",
+        "fulfulde": "Nde o wari wuro, mo ɗon nyaamo kokko'en mooɓti debbo maako e sukaaɓe maako. Pot, fulina hoore ma! Ɗoon potol ngal ɓeydi bee kuukle e soosi ƴam. Yimɓe fuu nyaami ɓe cuumi, ɓe njooɗi nder lebbi go'oto. Ammaa yimɓe lesdi ndii ɗon njaabo."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "palace",
+            "x": 62,
+            "y": 34,
+            "s": 0.8
+          },
+          {
+            "k": "king-talk",
+            "x": 40,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "jar",
+            "x": 48,
+            "s": 1.1
+          },
+          {
+            "k": "man",
+            "x": 22,
+            "c": "#C9822B"
+          },
+          {
+            "k": "man",
+            "x": 86,
+            "c": "#00894A"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Mais le chef du pays, le bâdo, entendit parler du canari merveilleux. Il fit venir l'éleveur et lui prit son trésor de force. Le pauvre homme retourna voir la boulette : « C'est maintenant que la cravache va te servir », lui dit-elle.",
+        "en": "But the chief of the land, the bâdo, heard about the marvellous pot. He summoned the chicken keeper and took his treasure by force. The poor man went back to the millet ball. “Now is the time for the whip,” it told him.",
+        "moore": "La tẽnga naab sẽn boond t'a Baado wʋma bõn-kãsenga. A bool-a lame n dɩk a paoongã ne pãng. La naong soabã leb n kẽnga ra-kãnga. A yeelame t'a na n sɩnga a meng ne b sãbsã.",
+        "dioula": "Nka o jamana kuntigi min ye Bawo ye, ale nana o daga cɛɲumanba ko mɛn. A ye kɔlɔntigi wele ka na n'a ka nafolo ye. O sigɛnbagatɔ segira ka taga sumansi kɛ. A y'a fɔ a ye ko sisan lo u bena se ka bugɔ.",
+        "fulfulde": "Ammaa mawɗo lesdi, Baado nani haala ka'e kayre nden. O noddi mo ɗon nyaamo kokko boo o hocci jawdi maako bee sembe. Limanjo on fuɗɗiti to ballum miila. Jooni woni wakkati haɓɓugo,  o wi'i mo."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "palace",
+            "x": 50,
+            "y": 34,
+            "s": 0.8
+          },
+          {
+            "k": "king",
+            "x": 36,
+            "c": "#2F3E6B",
+            "a": "a-hop"
+          },
+          {
+            "k": "whip",
+            "x": 44,
+            "y": 60,
+            "a": "a-dance"
+          },
+          {
+            "k": "man-point",
+            "x": 22,
+            "c": "#C9822B"
+          },
+          {
+            "k": "woman-up",
+            "x": 70
+          },
+          {
+            "k": "jar",
+            "x": 84
+          }
+        ]
+      },
+      "text": {
+        "fr": "Devant le chef, l'éleveur ordonna : « Cravache, frappe le bâdo ! » La cravache se mit à danser et à fouetter le chef, qui hurlait. « Arrête-la, on te rend ton canari ! » cria la femme du chef. Le canari rendu, l'éleveur dit : « Cravache, laisse-le en paix. » Et il rentra chez lui avec son bien.",
+        "en": "Before the chief, the chicken keeper commanded: “Whip, strike the bâdo!” The whip began to dance and lash the chief, who howled. “Stop it, and we'll give back your pot!” cried the chief's wife. Once the pot was returned, the keeper said: “Whip, leave him in peace.” And he went home with what was his.",
+        "moore": "A sẽn da wa n be wã taoorẽ, a yeelame: \"Bɩ y wẽ bug-raoogã ne bĩngã\". B ra sɩngame n naand la b pãbd tẽnga naab ning sẽn yãgdẽ. \"Bɩ y bas-a, la d na n lebs-y y potã!\" T'a zu-soabã pagã kelemde. B sẽn lebs koglgã, gũudã yeela a woto: \"Bɩ y pãb-a la y bas-a laafi\". La yẽ kẽnga ne bũmb nins sẽn yaa bãmb n kẽng be.",
+        "dioula": "A y'a fɔ a ye ko: \"Burutigi, i ka bugɔ ni bere ye!\" O kɔ, a y'a daminɛ ka to ka dɔrɔw ci. A to, an bena i ka berew di i ma!  Kuntigi muso kasira. O kɔ, a tagara n'a ka minan ye soo.",
+        "fulfulde": "yeeso mawɗo, mawɗo kokko waɗi umroore: Whip, hit the bâdo! Whip fuɗɗi nandi e ɓanngugo mawɗo, mo haɗi. Stop ɗum, nden min hokkan bo'o ma! debbo mawɗo boo ɗon wuuri. Nde potal ngal dilli, mawɗo suudu wi'i: \"Whip, acca mo nder jam\". O hooti wuro bee ko o mari."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "De quoi est faite la boulette magique ?",
+        "en": "What is the magic ball made of?",
+        "moore": "Bõe la b maan ne piisã?",
+        "dioula": "O bɔlɔfɛn ye mun lo ye?",
+        "fulfulde": "Ko honɗun ko pelle majji waɗetee?"
+      },
+      "options": [
+        {
+          "fr": "De farine de mil",
+          "en": "Millet flour",
+          "moore": "Dĩm-dãmb sẽn yaa bẽk",
+          "dioula": "Furu min be kɛ ka mugu tɛntɛnnin dumu",
+          "fulfulde": "Millet flour"
+        },
+        {
+          "fr": "D'argile",
+          "en": "Clay",
+          "moore": "A Clay sẽn yaa ned ning sẽn maand woto wã",
+          "dioula": "Clay ka koo",
+          "fulfulde": "Clay"
+        },
+        {
+          "fr": "De beurre de karité",
+          "en": "Shea butter",
+          "moore": "Dĩm-dãmb sẽn yaa bõn-naandb",
+          "dioula": "Sɔgɔsɔgɔnin min be se ka kɛ tulu ye, o ye:",
+          "fulfulde": "Beurre bee ɓamɗe"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que fait le canari quand on lui parle ?",
+        "en": "What does the pot do when spoken to?",
+        "moore": "B sã n wa gomd ne-a, a maanda bõe?",
+        "dioula": "Ni mɔgɔ be kuma n'a ye, a be mun lo kɛ?",
+        "fulfulde": "Ko honɗun potiral waɗata to ɓe wolwani?"
+      },
+      "options": [
+        {
+          "fr": "Il chante",
+          "en": "It sings",
+          "moore": "A yɩɩla.",
+          "dioula": "A be dɔnkili lara.",
+          "fulfulde": "O ɗon werna."
+        },
+        {
+          "fr": "Il se remplit de nourriture",
+          "en": "It fills with food",
+          "moore": "A pida ne rɩɩb wʋsgo.",
+          "dioula": "A fanin be dumuni na.",
+          "fulfulde": "Ɗum heewi nyaamdu"
+        },
+        {
+          "fr": "Il disparaît",
+          "en": "It disappears",
+          "moore": "A loogdame.",
+          "dioula": "A be tunu pewu.",
+          "fulfulde": "Ɗum ɗon wayla."
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Qui vole le canari ?",
+        "en": "Who steals the pot?",
+        "moore": "Ãnd n na n soog potã?",
+        "dioula": "Jɔn lo b'o forokoniw son?",
+        "fulfulde": "Mo ɓooydi potal ngal?"
+      },
+      "options": [
+        {
+          "fr": "L'hyène",
+          "en": "The hyena",
+          "moore": "A hyena wã",
+          "dioula": "O ye tulogwerenw ye.",
+          "fulfulde": "Hyenna"
+        },
+        {
+          "fr": "Le chef du pays",
+          "en": "The chief of the land",
+          "moore": "Tẽngã naabã",
+          "dioula": "Jamana kuntigi",
+          "fulfulde": "Mawɗo lesdi ndin"
+        },
+        {
+          "fr": "Un voisin",
+          "en": "A neighbour",
+          "moore": "Ned sẽn be tõnd zakẽ wã",
+          "dioula": "Ne sigiɲɔgɔn dɔ lo",
+          "fulfulde": "Goomu ɓooyi"
+        }
+      ],
+      "answer": 1
+    }
+  ],
+  "glossary": [
+    {
+      "term": "canari",
+      "lang": "fr",
+      "def": {
+        "fr": "Grand pot en terre cuite où l'on conserve l'eau ou les aliments.",
+        "en": "A large earthenware pot used to keep water or food.",
+        "moore": "B ra maanda bõn-buud sẽn yaa gãn ne tẽn-gãongã n kogend koom bɩ rɩɩb.",
+        "dioula": "O tun ye bɔgɔdaga belebeleba dɔ ye min tun be kɛ ka jii wala dumuni mara.",
+        "fulfulde": "Ɗuum woni ko'e leɗɗe mawɗe ngam ɗo ɓe ɗon hoola ndiyam malla nyaamdu."
+      }
+    },
+    {
+      "term": "bâdo",
+      "lang": "gulmancema",
+      "def": {
+        "fr": "« Chef, roi » en gulmancema, la langue des Gourmantché.",
+        "en": "“Chief, king” in Gulmancema, the language of the Gourmantché.",
+        "moore": "Sẽn yaa Gourmantché wã buud-gomd ning sẽn boond tɩ Gulmancema wã pʋgẽ.",
+        "dioula": "Fanga, masacɛ ka kaan ye Gulmancema ye.",
+        "fulfulde": "Chief, king in Gulmancema, ɗemngal Gourmantché."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « La nyinkona », conte gourmantché recueilli à Piéla en 1911 et publié par F.-V. Équilbecq, Contes indigènes de l'Ouest africain français, t. II (1913, domaine public). Réécriture libre.",
+    "en": "Based on “La nyinkona”, a Gourmantché tale collected in Piéla in 1911 and published by F.-V. Équilbecq, Contes indigènes de l'Ouest africain français, vol. II (1913, public domain). Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

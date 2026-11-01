@@ -1,0 +1,89 @@
+<section class="head">
+  <div class="container head-grid">
+    <div>
+      <span class="eyebrow">{{ 'pass.eyebrow' | t }}</span>
+      <h1>{{ 'pass.title' | t }}</h1>
+      <label class="name">
+        <span>{{ 'pass.traveler' | t }}</span>
+        <input type="text" [ngModel]="progress.state().name ?? ''" (ngModelChange)="setName($event)" [placeholder]="'pass.namePh' | t" maxlength="40" />
+        <i class="fa-solid fa-pen"></i>
+      </label>
+    </div>
+    <dl class="stats">
+      <div><dt>{{ completed() }}<small>/{{ data.tales().length }}</small></dt><dd>{{ 'pass.talesDone' | t }}</dd></div>
+      <div><dt>{{ stamps().length }}<small>/{{ data.regions().length }}</small></dt><dd>{{ 'pass.stamps' | t }}</dd></div>
+      <div><dt>{{ earned() }}<small>/{{ badges().length }}</small></dt><dd>{{ 'pass.badges' | t }}</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="container body">
+  <div class="book card">
+    <div class="page left">
+      <h2><i class="fa-solid fa-map"></i> {{ 'pass.map' | t }}</h2>
+      <app-mini-map [stamps]="stamps()" [interactive]="true" [showLabels]="true" (regionClick)="openRegion($event)" />
+    </div>
+    <div class="page right">
+      <h2><i class="fa-solid fa-stamp"></i> {{ 'pass.collection' | t }}</h2>
+      <div class="stamp-grid">
+        @for (r of regions(); track r.code) {
+          <a class="slot" [class.on]="r.stamped" routerLink="/carte" [queryParams]="{ region: r.code }" [attr.title]="r.name">
+            @if (r.stamped) {
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="4 3" />
+                <path d="M50,24 L56,42 L75,42 L60,53 L66,72 L50,61 L34,72 L40,53 L25,42 L44,42Z" fill="currentColor" />
+              </svg>
+            } @else {
+              <i class="fa-solid fa-plus"></i>
+            }
+            <span>{{ r.name }}</span>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+
+  <h2 class="sec-title">{{ 'pass.badgesTitle' | t }}</h2>
+  <div class="badges">
+    @for (b of badges(); track b.id) {
+      <div class="badge card" [class.earned]="b.earned">
+        <span class="b-ico"><i class="fa-solid {{ b.icon }}"></i></span>
+        <strong>{{ 'badge.' + b.id + '.title' | t }}</strong>
+        <small>{{ 'badge.' + b.id + '.text' | t }}</small>
+        <span class="b-prog">
+          @if (b.earned) {
+            <i class="fa-solid fa-check"></i> {{ 'pass.earned' | t }}
+          } @else {
+            {{ b.progress }}
+          }
+        </span>
+      </div>
+    }
+  </div>
+
+  @if (ongoing().length) {
+    <h2 class="sec-title">{{ 'pass.ongoing' | t }}</h2>
+    <div class="grid">
+      @for (t of ongoing(); track t.slug) {
+        <app-tale-card [tale]="t" [compact]="true" />
+      }
+    </div>
+  }
+
+  <h2 class="sec-title">{{ 'pass.favorites' | t }}</h2>
+  @if (favorites().length) {
+    <div class="grid">
+      @for (t of favorites(); track t.slug) {
+        <app-tale-card [tale]="t" [compact]="true" />
+      }
+    </div>
+  } @else {
+    <p class="muted empty"><i class="fa-regular fa-heart"></i> {{ 'pass.noFav' | t }}</p>
+  }
+
+  <div class="reset">
+    <p class="muted">{{ 'pass.localNote' | t }}</p>
+    <button type="button" class="btn btn-ghost btn-sm" (click)="reset()"><i class="fa-solid fa-trash-can"></i> {{ 'pass.reset' | t }}</button>
+  </div>
+</section>
+<p-confirmdialog />

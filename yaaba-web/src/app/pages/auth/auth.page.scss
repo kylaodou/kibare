@@ -1,0 +1,233 @@
+.auth {
+  display: grid;
+  min-height: calc(100dvh - var(--header-h) - 1px);
+
+  @media (min-width: 960px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.visual {
+  position: relative;
+  display: none;
+  overflow: hidden;
+  background: #ffffff;
+  border-right: 1px solid var(--border);
+
+  @media (min-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    padding: 48px clamp(32px, 5vw, 72px);
+  }
+
+  app-scene-art {
+    display: block;
+    aspect-ratio: 16 / 11;
+    border-radius: var(--radius-l);
+    overflow: hidden;
+    box-shadow: var(--shadow-3);
+  }
+}
+
+.quote {
+  padding: 22px 26px;
+  background: var(--y-ochre-soft);
+  border-radius: var(--radius);
+  color: var(--text-2);
+
+  p {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.45;
+    margin: 0 0 8px;
+    color: var(--y-red);
+  }
+  span {
+    font-size: 0.85rem;
+    color: var(--text-2);
+  }
+}
+
+.panel {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: clamp(28px, 6vw, 64px) 24px;
+
+  h1 {
+    font-size: 2rem;
+    margin: 28px 0 6px;
+  }
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid var(--border);
+
+  button {
+    flex: 1;
+    padding: 12px;
+    border: 0;
+    background: none;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--text-3);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+
+    &.on {
+      color: var(--y-red);
+      border-bottom-color: var(--y-ochre);
+    }
+  }
+}
+
+form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  > span {
+    font-weight: 700;
+    font-size: 0.88rem;
+    em {
+      font-weight: 400;
+      color: var(--text-3);
+    }
+  }
+  input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1.5px solid var(--border-strong);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: var(--y-red);
+    }
+  }
+  small {
+    color: var(--text-3);
+    font-size: 0.8rem;
+  }
+}
+
+.pass {
+  position: relative;
+  button {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border: 0;
+    background: none;
+    color: var(--text-3);
+    cursor: pointer;
+  }
+}
+
+.strength {
+  display: flex;
+  gap: 4px;
+  span {
+    flex: 1;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--surface-3);
+  }
+  &[data-level='1'] span:nth-child(-n + 1),
+  &[data-level='2'] span:nth-child(-n + 2) {
+    background: var(--y-ochre);
+  }
+  &[data-level='3'] span:nth-child(-n + 3),
+  &[data-level='4'] span {
+    background: var(--y-green);
+  }
+}
+
+.two {
+  display: grid;
+  gap: 16px;
+  @media (min-width: 520px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+:host ::ng-deep .w-full {
+  width: 100%;
+}
+
+.error {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: #fdecec;
+  color: #a1121f;
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  &.soft {
+    background: var(--y-yellow-soft);
+    color: var(--y-yellow-ink);
+  }
+}
+
+.submit {
+  height: 52px;
+  margin-top: 4px;
+}
+
+.switch {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--text-2);
+  button {
+    border: 0;
+    background: none;
+    color: var(--y-red);
+    font-weight: 800;
+    cursor: pointer;
+  }
+}
+
+.perks {
+  list-style: none;
+  padding: 18px 0 0;
+  margin: 20px 0 0;
+  border-top: 1px solid var(--border);
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-2);
+  i {
+    width: 22px;
+    color: var(--y-ochre);
+  }
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text-3);
+}

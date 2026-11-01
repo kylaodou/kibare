@@ -1,0 +1,497 @@
+{
+  "slug": "yennenga",
+  "type": "legende",
+  "region": "centre-est",
+  "place": "Tenkodogo",
+  "coords": [
+    11.78,
+    -0.37
+  ],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 6,
+  "age": 7,
+  "featured": true,
+  "cover": 1,
+  "tags": [
+    "courage",
+    "liberté",
+    "origines",
+    "cheval"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Yennenga, la princesse cavalière",
+      "subtitle": "La légende de la mère du peuple mossi",
+      "summary": "Fille d'un roi guerrier, Yennenga est la meilleure cavalière du royaume. Mais son père refuse de la laisser se marier. Un soir, elle s'élance sur son étalon blanc vers une vie nouvelle… et vers la naissance d'un peuple.",
+      "moral": "Le courage et la liberté ouvrent des chemins nouveaux : un peuple entier peut naître d'un acte de bravoure."
+    },
+    "en": {
+      "title": "Yennenga, the Horsewoman Princess",
+      "subtitle": "The legend of the mother of the Mossi people",
+      "summary": "Daughter of a warrior king, Yennenga is the finest rider in the kingdom. But her father refuses to let her marry. One evening, she rides off on her white stallion towards a new life… and the birth of a people.",
+      "moral": "Courage and freedom open new paths: a whole people can be born from a single act of bravery."
+    },
+    "moore": {
+      "title": "A Yennenga, b sẽn boond tɩ pag-rãmb naaba",
+      "subtitle": "A Mozi nebã ma wã kibarã",
+      "summary": "Rĩm-soab biiga, a Yennenga yaa rĩm-dãmb sẽn be tẽng zug n so wã. La a ba wã pa sak n bas-a t'a kẽ kãadem ye. Wĩndg a ye, a kẽnga a sãnem buudu zugu n na n wa paam vɩɩm paalgã. la neb buud rogem.",
+      "moral": "B sẽn maan sũ-mar la b sẽn paam tɩ b pa tar pãng n maandẽ wã, b tõe n kɩtame tɩ neb wʋsg lebg nin-buiidã."
+    },
+    "dioula": {
+      "title": "Yennenga, sootigi muso ka masamuso",
+      "subtitle": "Mosisiw ka bamuso tɔgɔ ko \"Mosi\"",
+      "summary": "Masacɛ ka muso, Yennenga ye masacɛ bɛɛ la ɲuman ye. Nka a facɛ banna k'a to a ye furu. Loon dɔ wulafɛ, a ye soo gwɛman ta ka taga ɲɛnamaya kura sɔrɔ. ani ka siya dɔ wolo.",
+      "moral": "Juguya ni hɔɔrɔnya ye sira kuraw dayɛlɛ: mɔgɔ bɛɛ be se ka wolo jagwɛlɛya dɔ sababu la."
+    },
+    "fulfulde": {
+      "title": "Yennenga, laamiiɗo mo'o fuɗɗiijo",
+      "subtitle": "Legenda dow inna yimɓe Mossi",
+      "summary": "Ɓiɗɗo laamiiɗo konu, Yennenga woni mo ɓurɗo hawrugo nder laamu. Ammaa baaba maako ɗon haɓɓa mo o ware. Nder jemma go'o, o ɗon dilli dow leggal maako ɓaleere haa o heɓan yonki kesam... e jibinol yimɓe.",
+      "moral": "Ceyɗol e fergol ina wayli laawol kesal: yimɓe fuu mbaawata jibina diga kuugal go'o."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "palace",
+            "x": 48,
+            "y": 34,
+            "s": 0.85
+          },
+          {
+            "k": "king",
+            "x": 22
+          },
+          {
+            "k": "princess",
+            "x": 74
+          },
+          {
+            "k": "drum",
+            "x": 9,
+            "s": 0.9
+          },
+          {
+            "k": "grass",
+            "x": 90
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il y a très longtemps, au royaume de Gambaga, vivait le roi Nédéga. Sa fille, Yennenga, était la plus habile cavalière du pays. Elle maniait la lance et l'arc mieux que bien des guerriers, et menait les troupes de son père à la victoire.",
+        "en": "Long, long ago, in the kingdom of Gambaga, lived King Nedega. His daughter, Yennenga, was the most skilful rider in the land. She handled the spear and the bow better than many warriors, and led her father's troops to victory.",
+        "moore": "Sẽn deng wʋsgo, Gambaga soolmẽ la rĩm a Nedega da be. A bi-pugl a ye, a Yennenga ra yaa karẽn-biis sẽn da tar minim n yɩɩd b taabã fãa tẽngã pʋgẽ. A ra zãada tãb-biis ne a zabdbã n yɩɩd sodaas wʋsg ye. La a kɩtame t'a ba wã sodaasã tõog zabrã.",
+        "dioula": "Wagatijan tɛmɛnin na, masacɛ Nedega tun be Gambaga mara la. A denmuso Yennenga tun ye sotigiba ye o jamana na. A ye taman ni kalan kɛ ka tɛmɛ kɛlɛden caaman kan. O kɔ, a y'a facɛ ka sɔrɔdasiw ɲɛminɛ k'u dɛmɛ u sera Ala ma.",
+        "fulfulde": "Wakkati ɗuɗɗum, wakkati ɗuɗɗi, nder laamorde Gambaga, Laamiiɗo Nedega jooɗii. Ɓiɗɗo maako, Yennenga, o ɗon moodi dow ko ɓuri annduki nder lesdi. O huutoraaki laami e kaɓirɗe ɓurɗi haani, o hoɗini konu baaba maako haa o heɓti jaalorgal."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 300
+          },
+          {
+            "k": "cloud",
+            "x": 70,
+            "y": 290
+          },
+          {
+            "k": "acacia",
+            "x": 84,
+            "y": 30
+          },
+          {
+            "k": "rider",
+            "x": 46,
+            "s": 1.15
+          },
+          {
+            "k": "birds",
+            "x": 66,
+            "y": 240
+          },
+          {
+            "k": "grass",
+            "x": 20
+          },
+          {
+            "k": "grass",
+            "x": 72
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le roi tenait tant à sa fille guerrière qu'il refusait de la marier. Les saisons passaient. Yennenga gagnait toutes les batailles, mais dans son cœur, elle rêvait de fonder sa propre famille.",
+        "en": "The king valued his warrior daughter so much that he refused to let her marry. Seasons went by. Yennenga won every battle, but in her heart she dreamed of starting a family of her own.",
+        "moore": "Rĩmã ra nanda a bi-pugl sẽn yaa sodaas wʋsgã hal t'a pa sak n kõ-a kãadem ye. Wakat fãa ra yaa woto. A Yennenga tõogame n zabd ne nebã fãa, la a sũurẽ wã, a ra tʋlla n na n lugl a zakã.",
+        "dioula": "Masacɛ tun b'a denmuso jati mɔgɔbaba ye fɔɔ a ma sɔn k'a to a ka furu. Saan caaman tɛmɛna. Yennenga ye see sɔrɔ kɛlɛw bɛɛ la, nka a tun b'a fɛ ka denbaya kura sigi.",
+        "fulfulde": "Laamiiɗo boo o mawnini ɓiyum mo konu, haa o hokki mo debbo. Saawre'en ɗon ɓuwa. Yennenga o heɓii nder konu fuu, ammaa nder ɓernde maako o yi'i o fuɗɗitoo arande mum."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 80,
+            "y": 230
+          },
+          {
+            "k": "field",
+            "x": 34,
+            "c": "dry"
+          },
+          {
+            "k": "princess",
+            "x": 72,
+            "flip": true
+          },
+          {
+            "k": "man-talk",
+            "x": 88,
+            "flip": true,
+            "c": "#2F3E6B"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Pour faire comprendre son chagrin, elle sema un champ de gombo. Quand les plantes furent mûres, elle les laissa sécher sur pied, sans les récolter. À ceux qui s'en étonnaient, elle répondit : « Voilà ce que je deviens : un fruit que l'on laisse se perdre. »",
+        "en": "To show her sorrow, she sowed a field of okra. When the plants were ripe, she let them wither on their stalks without harvesting them. To those who wondered why, she replied: “This is what I am becoming: a fruit left to go to waste.”",
+        "moore": "A sẽn na n wilg a sũ-sãangã, a bʋga okra pʋʋgẽ. Bãagrã sã n wa bɩ, a basdame tɩ b kʋdg b tɩɩsẽ la a pa tigsd-b ye. A yeela neb nins sẽn da sokd a meng bũmb ning yĩngã: \"Mam lebga bõn-kãng bala, tɩ b bas tɩ mam wom biis n sãam\".",
+        "dioula": "A ye okra sɛnɛ walisa k'a ka dusukasi yira. N'u kɔgɔra tuma min na, a y'a to u jara k'u ka berew tigɛ. Minw tun b'a yɛrɛ ɲininga ko mun na, a y'u jaabi ko: \"Ne kɛra i n'a fɔ yiri min tora ka cɛn.",
+        "fulfulde": "Ngam holla ɓernde maako, o sowi gese okra. Nde leɗɗe ɗen ɓeydi, o acci ɗe njogitaaki dow ko'e maɓɓe. To yimɓe ɓe ɗon wondude ngam ɗume, o jaabi: \"Ɗum woni ko mi laatoto: ɓiɓɓe ɗi aɗa acca."
+      },
+      "choice": {
+        "q": {
+          "fr": "À ton avis, que va faire Yennenga ?",
+          "en": "What do you think Yennenga will do?",
+          "moore": "Yãmb tagsdame tɩ a Yennenga na n maana bõe?",
+          "dioula": "I b'a miiri ko Yennenga bena mun lo kɛ?",
+          "fulfulde": "Ko honno on ngi'i Yennenga waɗata?"
+        },
+        "options": [
+          {
+            "fr": "Obéir et rester au palais",
+            "en": "Obey and stay at the palace",
+            "moore": "Sak-y n kell n zĩnd roogã pʋgẽ.",
+            "dioula": "I ka mɛnni kɛ ani to i ka soo kɔnɔ.",
+            "fulfulde": "On ɗowtano, on njooɗoto nder suudu laamiiɗo."
+          },
+          {
+            "fr": "Partir à cheval, loin du royaume",
+            "en": "Ride away, far from the kingdom",
+            "moore": "Kẽng-y n zãag y soolmã.",
+            "dioula": "I ka boli ka taga, yɔrɔjan masaya la.",
+            "fulfulde": "Wota, yaasi daga laamu"
+          },
+          {
+            "fr": "Déclarer la guerre à son père",
+            "en": "Declare war on her father",
+            "moore": "B sẽn yeel tɩ b zab ne a ba wã,",
+            "dioula": "A k'a facɛ kɛlɛ.",
+            "fulfulde": "Wondira konu dow baaba maako."
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "Yennenga choisit la liberté : une nuit, elle sella son étalon blanc…",
+          "en": "Yennenga chose freedom: one night, she saddled her white stallion…",
+          "moore": "A Yennenga yãka yam n na n paam lohorem. Daar a ye, a rɩka b bugum-vɩɩg sẽn yaa pemse...",
+          "dioula": "Yennenga ye hɔɔrɔnya sugandi: suu dɔ, a y'a ka bere gwɛman siri.",
+          "fulfulde": "Yennenga suɓii ferde: jemma go'o, o soornii mowal maako weelo..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "moon",
+            "x": 18,
+            "y": 300
+          },
+          {
+            "k": "karite",
+            "x": 12,
+            "y": 20,
+            "s": 1.1
+          },
+          {
+            "k": "rider",
+            "x": 56,
+            "s": 1.1
+          },
+          {
+            "k": "acacia",
+            "x": 90,
+            "y": 24
+          },
+          {
+            "k": "bush",
+            "x": 32
+          }
+        ]
+      },
+      "text": {
+        "fr": "Une nuit, elle monta sur son étalon et s'enfuit. Le cheval galopa sans s'arrêter, à travers la savane et les forêts, si loin qu'il la conduisit jusqu'à une région qu'elle ne connaissait pas.",
+        "en": "One night, she mounted her stallion and fled. The horse galloped without stopping, across the savannah and through the forests, so far that it carried her to a land she had never seen.",
+        "moore": "Daar a ye yʋngo, a kẽnga bĩng n zoe. A ra pa tol n basd a sãambã, n lebgd savanẽ wã la we-raoogã pʋgẽ hal tɩ yẽ kẽng tẽng ning a sẽn da zɩ n yã.",
+        "dioula": "Loon dɔ sufɛ, a yɛlɛla soo kan ka boli. A tun be to ka taga n'a ye yɔrɔ dɔ la a ma deli k'o ye.",
+        "fulfulde": "Nder jemma go'oto, o ɗon dilla dow koolaajo maako. Lodo ɗon ɓadake, o ɗon ƴiwo nder safanne e nder leɗɗe haa o wurtini mo to lesdi ɗe o yi'ataako."
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 250
+          },
+          {
+            "k": "hut",
+            "x": 20,
+            "y": 22,
+            "s": 0.95
+          },
+          {
+            "k": "hunter",
+            "x": 42
+          },
+          {
+            "k": "princess",
+            "x": 62,
+            "flip": true
+          },
+          {
+            "k": "horse",
+            "x": 82,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Là vivait un chasseur solitaire nommé Rialé. Il accueillit la cavalière épuisée, partagea avec elle son repas et son abri. Peu à peu, ils apprirent à se connaître, et de leur amour naquit un fils.",
+        "en": "There lived a solitary hunter named Riale. He welcomed the exhausted rider and shared his food and shelter with her. Little by little they came to know each other, and from their love a son was born.",
+        "moore": "A Riale yʋʋr sẽn boond t'a Riale ra vɩɩ be. A reega pʋg-kãngã sẽn da yaa zoeta, n dɩt a rɩɩb la a gãneg ne-a. B sẽn nong taab to-to wã, b paama biig.",
+        "dioula": "Mɔgɔ dɔ tun be yen min tɔgɔ ko Riale. A ye muso sɛgɛnin kunbɛn ani a y'a ka dumuni ni soo di a ma. Dɔɔni dɔɔni, u y'u lɔn ka ɲɛ ani u ye dencɛ sɔrɔ.",
+        "fulfulde": "Wonɗo ton, mawɗo duɗal biyeteeɗo Riale. O jaɓɓii mo ɗon ɓadake, o nyaami bee maako e nder suudu. Ɓaawo ɓaawo ɓe anndi, ngam ɓe ngiɗi goɗɗo, ɓiɗɗo gorko danyani."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 50,
+            "y": 310
+          },
+          {
+            "k": "baobab",
+            "x": 14,
+            "y": 26
+          },
+          {
+            "k": "horse",
+            "x": 40
+          },
+          {
+            "k": "child-up",
+            "x": 58
+          },
+          {
+            "k": "woman",
+            "x": 70,
+            "c": "#D62828"
+          },
+          {
+            "k": "hunter",
+            "x": 84,
+            "flip": true
+          },
+          {
+            "k": "star",
+            "x": 82,
+            "y": 280,
+            "s": 0.5
+          }
+        ]
+      },
+      "text": {
+        "fr": "Pour honorer le cheval qui avait guidé sa mère, l'enfant fut nommé Ouédraogo, « l'étalon ». On le considère comme l'ancêtre des Mossi. Aujourd'hui encore, l'Étalon de Yennenga est la plus haute récompense du FESPACO, le grand festival du cinéma africain de Ouagadougou.",
+        "en": "To honour the horse that had guided his mother, the child was named Ouedraogo, “the stallion”. He is regarded as the ancestor of the Mossi. To this day, the Golden Stallion of Yennenga is the highest award of FESPACO, the great African film festival held in Ouagadougou.",
+        "moore": "Sẽn na yɩl n waoog a ma wã, b boola biigã t'a Ouedraogo. B get-a lame t'a yaa Mossi yaab. Hal tɩ ta rũndã, Yennenga sãnem-paalã yaa FESPACO ning sẽn get Afrɩka filim kibs nins b sẽn maand Ouagadougou wã kũun sẽn yɩɩd fãa.",
+        "dioula": "A bamuso ye soo min ɲɛminɛ, u y'o deen tɔgɔ la ko Ouedraogo. O kɔrɔ ko \"sumantigi\". A be jati ko a ye Mossi ka buruju dɔ ye. Halibi, Yennenga ka sanuda ye FESPACO ka saraba ye. O ye afiriki filimu ɲanagwɛba dɔ ye min be kɛ Ouagadougou dugu la.",
+        "fulfulde": "Ngam teddina ɓiyiiko mo o hoolaama, ɓe noddi ɓiɗɗo oo Ouedraogo, taƴre. O laatii ko ardiiɗo Mossi. Haa hande, Golden Stallion of Yennenga woni jaajol ɓurngal FESPACO, festival film Afrik mawɗo mo waɗetee nder Ouagadougou."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quel animal accompagne Yennenga dans sa fuite ?",
+        "en": "Which animal carries Yennenga as she flees?",
+        "moore": "Rũng bʋg n tʋk a Yennenga t'a zoe?",
+        "dioula": "Yennenga be boli tuma min na, begɛn jumɛn lo b'a bolo?",
+        "fulfulde": "Ko dabbaaji woni ɗon dilli Yennenga nder nde o ɗon hiito?"
+      },
+      "options": [
+        {
+          "fr": "Un étalon blanc",
+          "en": "A white stallion",
+          "moore": "Bĩng sẽn yaa pemse",
+          "dioula": "Dɔgɔdaga gwɛman dɔ",
+          "fulfulde": "Lodo ɓaleere"
+        },
+        {
+          "fr": "Un chameau",
+          "en": "A camel",
+          "moore": "Kamel sẽn yaa a soaba",
+          "dioula": "Ɲɔgɔmɛ dɔ",
+          "fulfulde": "Kamel"
+        },
+        {
+          "fr": "Un éléphant",
+          "en": "An elephant",
+          "moore": "A yãnda",
+          "dioula": "Sankaba dɔ",
+          "fulfulde": "Goomu gooduɗo"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que signifie le nom Ouédraogo ?",
+        "en": "What does the name Ouedraogo mean?",
+        "moore": "T'a Ouedraogo yʋʋr võor yaa bõe?",
+        "dioula": "O tɔgɔ ko Ouedraogo kɔrɔ ye mun ye?",
+        "fulfulde": "Ko inde Ouedraogo firti?"
+      },
+      "options": [
+        {
+          "fr": "Le fils du roi",
+          "en": "The king's son",
+          "moore": "Rĩm biigã",
+          "dioula": "Masacɛ dencɛ",
+          "fulfulde": "Ɓiɗɗo laamiiɗo"
+        },
+        {
+          "fr": "L'étalon",
+          "en": "The stallion",
+          "moore": "B sẽn yã wã yaa:",
+          "dioula": "O ye jagokɛbaga ye.",
+          "fulfulde": "Lodoowo"
+        },
+        {
+          "fr": "Le chasseur",
+          "en": "The hunter",
+          "moore": "Kẽerã sẽn yãbd-a wã",
+          "dioula": "Jagokɛla nin ye min ye",
+          "fulfulde": "Lamarɗo"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Que plante Yennenga pour exprimer sa tristesse ?",
+        "en": "What does Yennenga plant to express her sadness?",
+        "moore": "Bõe la a Yennenga maan n wilg t'a sũur sãama wʋsgo?",
+        "dioula": "Yennenga be mun lo kɛ walisa k'a dusukasi fɔ?",
+        "fulfulde": "Ko Yennenga ɗon waɗi ngam holla ɓernde maako?"
+      },
+      "options": [
+        {
+          "fr": "Du mil",
+          "en": "Millet",
+          "moore": "A mi mi mi",
+          "dioula": "Fanga ye min ye, o ye",
+          "fulfulde": "Millet"
+        },
+        {
+          "fr": "Un baobab",
+          "en": "A baobab",
+          "moore": "Baobab",
+          "dioula": "Baabɔn",
+          "fulfulde": "Baabaab"
+        },
+        {
+          "fr": "Du gombo",
+          "en": "Okra",
+          "moore": "A Okra",
+          "dioula": "Okola ka koo",
+          "fulfulde": "Okra"
+        }
+      ],
+      "answer": 2
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Ouédraogo",
+      "lang": "moore",
+      "def": {
+        "fr": "« L'étalon » en mooré ; nom du fils de Yennenga, ancêtre des Mossi, et aujourd'hui l'un des noms de famille les plus répandus du pays.",
+        "en": "“The stallion” in Mooré; the name of Yennenga's son, ancestor of the Mossi, and today one of the most common family names in the country.",
+        "moore": " Mooré wã pʋgẽ, b sẽn boond tɩ buudu; yaa Yennenga bi-ribl yʋʋr la a ye. A yaa Mossi nin-buiidã yaab n da be tẽngã pʋga.",
+        "dioula": "Sogo min tɔgɔ ko Mooré; Yennenga dencɛ tɔgɔ lo, ale ye Mossiw buruju ye. Bi, a ye jamana ka somɔgɔw tɔgɔ dɔ ye.",
+        "fulfulde": "L'estallion e Mooré; innde ɓiɗɗo Yennenga, ardi mo Mossi, nden hannde gooto nder suudu ɓurɗo haani nder leydi ndin."
+      }
+    },
+    {
+      "term": "gombo",
+      "lang": "fr",
+      "def": {
+        "fr": "Plante potagère (okra) dont les fruits verts sont très utilisés dans les sauces burkinabè.",
+        "en": "Okra, a vegetable whose green pods are widely used in Burkinabè sauces.",
+        "moore": "A Okra yaa bõn-buud sẽn tar sãnemd tɩ b tũnugda ne a Burkinabè wã.",
+        "dioula": "O ye sɛnɛfɛn dɔ ye min be kɛ Burkina Faso ka sumanw kɔnɔ.",
+        "fulfulde": "Okra, go'o ko ɓesnguɗi ɗi je ɗon huutore nder kuuje Burkinabè."
+      }
+    },
+    {
+      "term": "FESPACO",
+      "lang": "fr",
+      "def": {
+        "fr": "Festival panafricain du cinéma et de la télévision de Ouagadougou, créé en 1969. Son grand prix est l'Étalon d'or de Yennenga.",
+        "en": "The Pan-African Film and Television Festival of Ouagadougou, founded in 1969. Its top prize is the Golden Stallion of Yennenga.",
+        "moore": "Yaa b sẽn lugl yʋʋmd 1969 wã n na n wilg tɩ b yaa Afrɩka filim la televiziõ kibsã. A sẽn paam-a to-to wã yaa Zĩis Yennenga.",
+        "dioula": "O ye Ouagadougou ka Pan-African Film and Television Festival ye, min sigira senkan na saan 1969. O ye Yennenga ka sanu bere ye.",
+        "fulfulde": "Festival Film e Telefisyon Pan-Afrika nder Ouagadougou, ɗum haɓɓii nder hitaande 1969. Ko ɓuri heewde ko golden Stallion of Yennenga."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Légende fondatrice du peuple mossi, transmise par la tradition orale. Les versions varient selon les régions (nom du chasseur, lieu de la rencontre, raison du départ).",
+    "en": "Founding legend of the Mossi people, passed down through oral tradition. Versions differ from region to region (the hunter's name, where they met, why she left)."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

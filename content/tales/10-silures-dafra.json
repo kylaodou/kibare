@@ -1,0 +1,445 @@
+{
+  "slug": "les-silures-sacres-de-dafra",
+  "type": "legende",
+  "region": "hauts-bassins",
+  "place": "Dafra (Bobo-Dioulasso)",
+  "coords": [
+    11.13,
+    -4.26
+  ],
+  "people": "Bobo",
+  "language": "dioula",
+  "duration": 5,
+  "age": 7,
+  "featured": false,
+  "cover": 1,
+  "tags": [
+    "lieu sacré",
+    "nature",
+    "animaux sacrés",
+    "Bobo-Dioulasso"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Les silures sacrés de Dafra",
+      "subtitle": "Les gardiens de la mare cachée",
+      "summary": "Au creux d'une faille près de Bobo-Dioulasso, une mare abrite d'énormes poissons que nul n'a le droit de pêcher. Pour les habitants, ce ne sont pas des poissons ordinaires…",
+      "moral": "Respecter les lieux sacrés, c'est aussi protéger la nature qui nous fait vivre."
+    },
+    "en": {
+      "title": "The Sacred Catfish of Dafra",
+      "subtitle": "Guardians of the hidden pool",
+      "summary": "In a rocky gorge near Bobo-Dioulasso, a pool is home to huge fish that no one is allowed to catch. For the local people, they are no ordinary fish…",
+      "moral": "Respecting sacred places also means protecting the nature that keeps us alive."
+    },
+    "moore": {
+      "title": "Dafra zĩm-bil sẽn yaa sõma wã",
+      "subtitle": "B sẽn solg koglgã gũudbã",
+      "summary": "B sẽn be koglg a ye pʋgẽ, b pa tõe n yõk zĩm-dãmb wʋsg koomẽ wã ye. Tẽngã neb pa maand zĩm-biis ye.",
+      "moral": "D sã n waoogd zĩ-sõamyã, d kogendda bũmb nins sẽn kɩt tɩ tõnd vɩɩme."
+    },
+    "dioula": {
+      "title": "Dafra ka jɛgɛ senumanw",
+      "subtitle": "Jigɛyɔrɔ dogobagaw",
+      "summary": "Bobo-Dioulasso gɛrɛfɛ, kɔlɔn dɔ kɔnɔ, jɛgɛ belebeleba dɔw be yen. A daganin tɛ mɔgɔ si ka olu minɛ. Dugumɔgɔw fɛ, u tɛ jɛgɛw ye.",
+      "moral": "Ka bonya la yɔrɔ senumanw kan, o kɔrɔ ko an ka ɲi k'an janto danfɛnw na minw b'an kisi."
+    },
+    "fulfulde": {
+      "title": "Ko Fedde Ceniiɗe Dafra",
+      "subtitle": "Wonaaɓe poolgu ɓurndi ndin",
+      "summary": "Nder nder ɓolde ko'e kaaƴe haa to Bobo-Dioulasso, poolgal ɗon woodi kalluɗum mawɗo ngam walaa mo haani nangi. Ngam yimɓe gariiri, ɓe wonaa liƴƴi goɗɗi...",
+      "moral": "Ngam mawnugo nokkuuje ceniiɗe boo ina yiɗi haɗugo tageefooji ɗi ɗon waɗa en njooɗoto."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 300
+          },
+          {
+            "k": "peaks",
+            "x": 66,
+            "y": 30,
+            "s": 0.75
+          },
+          {
+            "k": "karite",
+            "x": 22,
+            "y": 20
+          },
+          {
+            "k": "man",
+            "x": 40,
+            "c": "#00894A"
+          },
+          {
+            "k": "chicken",
+            "x": 46
+          }
+        ]
+      },
+      "text": {
+        "fr": "Au sud-est de Bobo-Dioulasso, au creux d'une faille entre des falaises de grès, se cache une mare : Dafra. On y descend par un étroit sentier de pierres, à travers une végétation fraîche et dense.",
+        "en": "South-east of Bobo-Dioulasso, at the bottom of a gorge between sandstone cliffs, lies a hidden pool: Dafra. You reach it by a narrow stone path through cool, dense vegetation.",
+        "moore": "Bobo-Dioulasso soolmã sẽn be zĩ-kãsengã wĩntoogã pʋga, la kʋɩlgã zugẽ wã, b yãta koglg a ye. Y sã n wa kẽed-a lame, y na n tũuda kug sẽn yaa koangd la tɩɩs wʋsg sẽn be zĩig ningã.",
+        "dioula": "Bobo-Dioulasso woroduguyanfan na, cɛncɛn gwanninw cɛmancɛ la, u ye jii dogoyɔrɔ dɔ sɔrɔ min tɔgɔ ko Dafra. I be tɛmɛ kabakurujan dɔ fɛ ka se yen.",
+        "fulfulde": "Naadi fuunaaŋge Bobo-Dioulasso, nder fombina hakkunde cukalel sandstone, ɗon haandi pool ɓoyma: Dafra. On njototo nder laawol go'o nder leɗɗe booɗnde."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "palm",
+            "x": 12,
+            "y": 34
+          },
+          {
+            "k": "catfish",
+            "x": 40,
+            "y": -40,
+            "s": 1.3
+          },
+          {
+            "k": "catfish",
+            "x": 68,
+            "y": -20,
+            "flip": true
+          },
+          {
+            "k": "catfish",
+            "x": 82,
+            "y": -50,
+            "s": 0.8
+          },
+          {
+            "k": "rock",
+            "x": 90,
+            "y": 30,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "Dans ses eaux vivent d'énormes silures. Pour les habitants de la région, ce ne sont pas des poissons ordinaires : ils sont les gardiens de la mare et, dit-on, les messagers des ancêtres.",
+        "en": "Huge catfish live in its waters. For the people of the region, they are no ordinary fish: they are the guardians of the pool and, it is said, messengers of the ancestors.",
+        "moore": "A sẽn be koomẽ wã, zĩm-dãmb wʋsg n be. Tẽngã neb pa zĩm-dãmb ye. B yetame tɩ b yaa koom koglgã gũudba, la b yaa yaab rãmbã tʋmtʋmdb.",
+        "dioula": "O kɔ, a be to ka kɛ yɔrɔ barikaman ye. O yɔrɔ mɔgɔw fɛ, u tɛ jɛgɛw ye. U be jii kɔrɔsi ani u b'a fɔ ko u ye faaw ka cidenw ye.",
+        "fulfulde": "Cuuɓal mawɗo ɗon jooɗoto nder ndiyamji maako. Ngam yimɓe nokkuure nde'e, ɓeen wonaa liƴƴi goɗɗi: ɓe ngoni laamɓe poolgu e, ɗum wi'etee, nelotooɓe maama'en."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "elder",
+            "x": 24,
+            "y": 4
+          },
+          {
+            "k": "woman",
+            "x": 36,
+            "y": 4,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "chicken",
+            "x": 46,
+            "y": 4
+          },
+          {
+            "k": "catfish",
+            "x": 70,
+            "y": -36,
+            "flip": true,
+            "s": 1.2
+          },
+          {
+            "k": "karite",
+            "x": 88,
+            "y": 34,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "Selon la tradition, celui qui vient à Dafra avec un vœu apporte une offrande, souvent un poulet, sous la conduite des gardiens du lieu. Si les silures acceptent l'offrande, on dit que le vœu sera entendu.",
+        "en": "According to tradition, anyone who comes to Dafra with a wish brings an offering, often a chicken, guided by the keepers of the site. If the catfish accept the offering, it is said the wish will be heard.",
+        "moore": "B yetame tɩ ned sã n wa Dafra ne a datem, a na n talla kũun sẽn yaa pipi piisẽ. B sã n sak tɩ b kõ-a, b yetame t'a na n paama a kosgã.",
+        "dioula": "Mɔgɔw ka laɲinita ye ko mɔgɔ o mɔgɔ be na Dafra dugu kɔnɔ, a k'o tigi di. O mɔgɔw b'a fɛ ka saraka bɔ Ala ye. Tuma caaman na, u be taga ni soso dɔ ye. N'o jɛgɛ sɔnna, a fɔra ko Ala bena sɔn o ma.",
+        "fulfulde": "E nder aada, koo moye wari to Dafra bee ko yiɗi o wurtina sadaka, haa ɗuuɗal e kokko, ngam ɓe ɗon jaɓɓa. To kalluɗo jaɓii kirsaaji, ɗum wi'i ko yiɗi."
+      },
+      "choice": {
+        "q": {
+          "fr": "Pourquoi, d'après toi, est-il interdit de pêcher ces silures ?",
+          "en": "Why do you think it is forbidden to catch these catfish?",
+          "moore": "Bõe yĩng tɩ yãmb tagsdẽ tɩ b gɩdg-d n yõk zĩm-kãnga?",
+          "dioula": "Mun na i b'a miiri ko a daganin tɛ ka o jɛgɛw minɛ?",
+          "fulfulde": "Ngam ɗume mbi'oton ɗum haɗani moƴƴugo ɗii leɗɗe?"
+        },
+        "options": [
+          {
+            "fr": "Parce qu'ils sont trop gros",
+            "en": "Because they are too big",
+            "moore": "Bala b yaa wʋsg wʋsgo.",
+            "dioula": "Sabu u ka bon kojugu.",
+            "fulfulde": "Ngam ɓe mawnude masin"
+          },
+          {
+            "fr": "Parce qu'ils sont sacrés et protègent la communauté",
+            "en": "Because they are sacred and protect the community",
+            "moore": "Bala, b yaa bõn-sõamyã la b kogend tẽngã.",
+            "dioula": "Sabu u ka ɲi ani u be mɔgɔw tanga",
+            "fulfulde": "Ngam ɓe ko'e maɓɓe ceniiɗe e ɗon wallu ummaatoore nden"
+          },
+          {
+            "fr": "Parce qu'ils sont toxiques",
+            "en": "Because they are poisonous",
+            "moore": "Bala b yaa zuloolem.",
+            "dioula": "Sabu u ye baga ye.",
+            "fulfulde": "Ngam ɓe ɗon mari haɗuɗum"
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "Les silures sont liés à la protection de toute la communauté.",
+          "en": "The catfish are bound to the protection of the whole community.",
+          "moore": "B sẽn na n kogl-b tẽngã fãa wã, b segd n dɩka sardã.",
+          "dioula": "O kɔ, u be se k'a fɔ ko an ka ɲi ka mɔgɔw bɛɛ tanga.",
+          "fulfulde": "Catfish ɗon haani hakkilantaago ummaatoore fuu."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 80,
+            "y": 220
+          },
+          {
+            "k": "elder",
+            "x": 30,
+            "y": 4
+          },
+          {
+            "k": "child",
+            "x": 40,
+            "y": 4,
+            "c": "#D62828"
+          },
+          {
+            "k": "catfish",
+            "x": 64,
+            "y": -40
+          }
+        ]
+      },
+      "text": {
+        "fr": "Pêcher ou blesser un silure de Dafra est strictement interdit. Les anciens racontent que la disparition des silures annoncerait un grand malheur pour toute la ville.",
+        "en": "Catching or harming a catfish of Dafra is strictly forbidden. The elders say that if the catfish were ever to disappear, it would foretell a great misfortune for the whole city.",
+        "moore": "B gɩdgda ned sẽn tar bĩng n pa tõe n yõk a Dafra wã. Kãsem dãmbã yeelame tɩ sã n wa yɩ woto, tẽngã fãa na n paama zu-loees wʋsgo.",
+        "dioula": "A daganin tɛ ka jɛgɛ dɔ minɛ wala k'a faga. Diinan mɔgɔkɔrɔw y'a fɔ ko n'o jɛgɛ tununa, o tun bena bɔnɛba lase dugu bɛɛ ma.",
+        "fulfulde": "Hande ko haani ngam hangooɓe dafra. Mawɓe mbi'i to kalluɗo ngal fuɗɗii, ɗum annabi habaru masin ngam gariiri fuu."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 86,
+            "y": 300
+          },
+          {
+            "k": "mosque",
+            "x": 54,
+            "y": 34,
+            "s": 0.85
+          },
+          {
+            "k": "woman",
+            "x": 18,
+            "c": "#00894A"
+          },
+          {
+            "k": "man",
+            "x": 26,
+            "c": "#F4EFE6"
+          },
+          {
+            "k": "child",
+            "x": 32
+          }
+        ]
+      },
+      "text": {
+        "fr": "Depuis des générations, les habitants de Bobo-Dioulasso, l'ancienne Sya, protègent ainsi la mare. Ce lieu sacré rappelle que la nature et les croyances anciennes forment ensemble le patrimoine d'un peuple.",
+        "en": "For generations, the people of Bobo-Dioulasso, the old city of Sya, have protected the pool in this way. This sacred place reminds us that nature and ancient beliefs together form a people's heritage.",
+        "moore": "Yʋʋm wʋsg pʋgẽ, Bobo-Dioulasso nebã sẽn be Sya tẽn-kʋdgã pʋsẽ wã kogla koom koglgã woto. Tẽngã sẽn yaa sõngo tẽegda tõnd tɩ b naanegã ne pĩnd wẽndẽ tẽnsã fãa naag taab n kɩtdame tɩ nebã paam vɩɩm sẽn kõn sa.",
+        "dioula": "Bobo-Dioulasso dugumɔgɔw ye jii mara o cogo la kabi wagatijan. O yɔrɔ senuman b'a yira ko danfɛnw ni batofɛn kɔrɔw ye mɔgɔw ka cɛɛn dɔ lo ye.",
+        "fulfulde": "Nder duuɓi, yimɓe Bobo-Dioulasso, gariiri mawɗi Sya, ɗon ɗowtana poolgu nder laawol ngol. nokkuure nde'e nder Allah ɗon hajjina en dow tagdi e no goonɗinki jamanuɗi hawti bee yimɓe."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Près de quelle ville se trouve Dafra ?",
+        "en": "Which city is Dafra near?",
+        "moore": "Tẽnga bʋg n be Dafra pʋga?",
+        "dioula": "Dafra be dugu juman gɛrɛfɛ?",
+        "fulfulde": "Ɗume gariiri ɗon ɓadi Dafra?"
+      },
+      "options": [
+        {
+          "fr": "Bobo-Dioulasso",
+          "en": "Bobo-Dioulasso",
+          "moore": "Bobo-Dioulasso",
+          "dioula": "Bobo-Dioulasso",
+          "fulfulde": "Bobo-Dioulasso"
+        },
+        {
+          "fr": "Kaya",
+          "en": "Kaya",
+          "moore": "A Kaya",
+          "dioula": "Kaya ye koo jugu dɔ kɛ",
+          "fulfulde": "Kaya"
+        },
+        {
+          "fr": "Dori",
+          "en": "Dori",
+          "moore": "Dori wã",
+          "dioula": "Dori ka koo",
+          "fulfulde": "Dori ɗon"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Quelle offrande apporte-t-on souvent aux silures ?",
+        "en": "What offering is often brought to the catfish?",
+        "moore": "Bõe la b kõt zĩm-gãongã?",
+        "dioula": "Tuma caaman na, u be saraka juman lo bɔ jɛgɛw ye?",
+        "fulfulde": "Ko honɗun ɓe ɗon hokkata kiita?"
+      },
+      "options": [
+        {
+          "fr": "Du riz",
+          "en": "Rice",
+          "moore": "Rɩs-kãnga",
+          "dioula": "Risi",
+          "fulfulde": "Rice"
+        },
+        {
+          "fr": "Un poulet",
+          "en": "A chicken",
+          "moore": "Dĩis n kõ-a lame.",
+          "dioula": "Dɔnki dɔ",
+          "fulfulde": "Koore nden"
+        },
+        {
+          "fr": "Des fleurs",
+          "en": "Flowers",
+          "moore": "Dĩngã",
+          "dioula": "Furuw",
+          "fulfulde": "Ɗuumɓe"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Quel est l'ancien nom de Bobo-Dioulasso ?",
+        "en": "What is the old name of Bobo-Dioulasso?",
+        "moore": "Bobo-Dioulasso yʋʋr sẽn da boondẽ wã yaa bõe?",
+        "dioula": "Bobo-Dioulasso tɔgɔ kɔrɔ ye mun ye?",
+        "fulfulde": "Hol ko innde Bobo-Dioulasso nden?"
+      },
+      "options": [
+        {
+          "fr": "Sya",
+          "en": "Sya",
+          "moore": "Yaa yaa",
+          "dioula": "Sya ye",
+          "fulfulde": "Sya ɗon"
+        },
+        {
+          "fr": "Noungou",
+          "en": "Nungu",
+          "moore": "Nungu",
+          "dioula": "Nungu ka koo",
+          "fulfulde": "Nungu"
+        },
+        {
+          "fr": "Gambaga",
+          "en": "Gambaga",
+          "moore": "Gambaga",
+          "dioula": "Gambaga",
+          "fulfulde": "Gambaga"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "silure",
+      "lang": "fr",
+      "def": {
+        "fr": "Grand poisson-chat d'eau douce, reconnaissable à ses longs barbillons.",
+        "en": "A large freshwater catfish, recognisable by its long whiskers (barbels).",
+        "moore": "B sẽn boond tɩ \"tõnd\" yaa koom-koɛɛg zĩm a ye.",
+        "dioula": "Jiiɲumanba dɔ, a b'a lɔn a ka biɲɛjanw fɛ.",
+        "fulfulde": "Ɗuum ko kalji ndiyam ɓii-ɓaaɗam, ɗum anndaama ngam haaki maako (barbels)."
+      }
+    },
+    {
+      "term": "Sya",
+      "lang": "fr",
+      "def": {
+        "fr": "Nom ancien du quartier historique de Bobo-Dioulasso, cœur de la ville.",
+        "en": "The old name of Bobo-Dioulasso's historic quarter, the heart of the city.",
+        "moore": "Bobo-Dioulasso tẽn-kʋdgã yʋʋr sẽn boond tɩ tẽnga pʋga.",
+        "dioula": "Bobo-Dioulasso ka dugu tɔgɔ kɔrɔ, o ye duguba dusukun na.",
+        "fulfulde": "Innde ndeen arandeeji taariika Bobo-Dioulasso, ɓernde wuro."
+      }
+    },
+    {
+      "term": "Dioula",
+      "lang": "dioula",
+      "def": {
+        "fr": "Langue mandingue très parlée dans l'ouest du Burkina Faso et langue des échanges commerciaux.",
+        "en": "A Manding language widely spoken in western Burkina Faso and a language of trade.",
+        "moore": "Yaa Manding buud-gomd sẽn be Burkĩna Faso rɩtgẽ wã, la yaa raagdã buud-gomde.",
+        "dioula": "Mandinga kaan lo be fɔ kɔrɔn fɛ Burkina Faso ani jagoyɔrɔ la.",
+        "fulfulde": "Ɗemngal Manding ngal haani e hirnaange Burkina Faso nden ɗemngal jaaynde."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Site sacré de Dafra, près de Bobo-Dioulasso. Croyances et pratiques transmises par la tradition orale ; le récit est présenté ici de manière simplifiée.",
+    "en": "The sacred site of Dafra, near Bobo-Dioulasso. Beliefs and practices passed down by oral tradition; presented here in simplified form."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

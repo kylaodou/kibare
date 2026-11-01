@@ -1,0 +1,380 @@
+{
+  "slug": "les-deux-voleurs",
+  "type": "conte",
+  "region": "est",
+  "place": "Kantchari",
+  "coords": [
+    12.48,
+    1.51
+  ],
+  "people": "Gourmantché",
+  "language": "gulmancema",
+  "duration": 4,
+  "age": 8,
+  "featured": false,
+  "cover": 2,
+  "tags": [
+    "confiance",
+    "amitié",
+    "ruse",
+    "honnêteté"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Les deux voleurs et le puits",
+      "subtitle": "Qui veut tromper son ami se trompe lui-même",
+      "summary": "Deux voleurs décident de devenir honnêtes et achètent des pagnes bleus. Mais ni l'un ni l'autre n'a vraiment confiance en son compère. Au fond d'un vieux puits, chacun prépare sa ruse…",
+      "moral": "Celui qui cherche à tromper son ami finit trompé à son tour : la confiance se gagne par la loyauté."
+    },
+    "en": {
+      "title": "The Two Thieves and the Well",
+      "subtitle": "Whoever tricks his friend tricks himself",
+      "summary": "Two thieves decide to turn honest and buy bundles of blue cloth. But neither truly trusts the other. At the bottom of an old well, each one prepares his trick…",
+      "moral": "Whoever tries to cheat a friend ends up cheated: trust is earned through loyalty."
+    },
+    "moore": {
+      "title": "Zãmb a yiibã ne koom koglgã",
+      "subtitle": "Ned ning sẽn belg a zoa wã, yaa yẽ mengã n belgdẽ.",
+      "summary": "Zãmb a yiib n yãk yam n na n yɩ pʋ-peelem dãmba, la b ra baooda fu-vɩɩs sẽn yaa ne peendã. La ned ka tẽed a to ye. B sẽn be kʋdemd yaoogã zugẽ, ned kam fãa maanda a sɩlem.",
+      "moral": "Ned ning fãa sẽn dat n belg a zoa wã, b na n maana-a-la woto. D sã n kɩs sɩd ne ned toɛy-toɛyã, d tõe n paama pʋɩɩr wʋsgo."
+    },
+    "dioula": {
+      "title": "soon fila ani kɔlɔn",
+      "subtitle": "Ni mɔgɔ min b'a teri nɛgɛ, o tigi b'a yɛrɛ le nɛgɛ.",
+      "summary": "Sotigiw fila y'a latigɛ ka kɛ mɔgɔ kɔnɔgwɛw ye ani k'u ka fani san. Nka, u fila si t'u jigi la ɲɔgɔn kan. K'a sɔrɔ kɔlɔn kɔrɔ dɔ kɔnɔ, mɔgɔ kelen kelen bɛɛ be u ka fɛɛrɛ labɛnna.",
+      "moral": "Mɔgɔ min b'a teri janfa, o tigi fana be janfa. An ka limaniya sababu fɛ, an be se k'an jigi la a kan."
+    },
+    "fulfulde": {
+      "title": "Wurooji ɗiɗo e ndiyam",
+      "subtitle": "Mo fooɗani bandiraawo muuɗum, o fooɗana hoore maako.",
+      "summary": "Wurooɓe ɗiɗo ɓe njogii ngam ɓe mbaɗa gooŋga'en e ɓe coodi ceede cembiɗe. Ammaa go'oto nder maɓɓe ɗon hoola nyawɗo. Nder leggal mawngal, kala ɗon haɓɓana ko o yiɗi...",
+      "moral": "Mo ɗaɓɓitaani ɓoyma goɗɗo, o ɓeydaama: goonɗinki heɓata nder haaki."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 16,
+            "y": 26
+          },
+          {
+            "k": "man-talk",
+            "x": 40,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "man",
+            "x": 54,
+            "flip": true,
+            "c": "#C9822B"
+          },
+          {
+            "k": "acacia",
+            "x": 84,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Dans un village gourmantché vivaient deux amis, voleurs de métier, qui ne se faisaient aucune confiance. Un jour, des marchands dioula s'arrêtèrent au village. « Volons-leur quelque chose ! » proposa le premier. « Non, répondit le second, changeons de vie : allons plutôt ramasser du bois et gagnons honnêtement quelques cauris. »",
+        "en": "In a Gourmantché village lived two friends, thieves by trade, who did not trust each other at all. One day, Dioula merchants stopped in the village. “Let's steal something from them!” said the first. “No,” replied the second, “let's change our ways: let's gather firewood instead and earn a few cowries honestly.”",
+        "moore": "Gourmantché tẽngẽ, b ra yaa zo-rãmb a yiib sẽn da pa kɩs sɩd ne taaba. Daar a ye, Dioula raagdbã wa n tɩ be tẽn-kãng pʋgẽ. Bɩ d yibe bũmb b nengẽ! Pipi soabã yeelame. La a yiib soabã leokame: \"Bɩ d toeem d manesmã. Bɩ d tigs bugum n paam sãnem-biis wʋsgo\".",
+        "dioula": "Gwɛlɛko tun be dugu dɔ la min tɔgɔ ko Gourmantché. U fila tun ye soonw ye ani u tun t'u jigi la ɲɔgɔn kan fewu. Loon dɔ, Dioula ka jagokɛlaw nana sigi dugu kɔnɔ. \"An ka fɛɛn dɔ son u ma!\" Mɔgɔ fɔlɔ y'a fɔ. A filanan y'a jaabi ko: \"An ka an ka kokɛtaw yɛlɛma. An ye lɔgɔ lajɛn k'o kɛ, ka wari sɔrɔ ni kɔnɔgwɛ ye\".",
+        "fulfulde": "Nder wuro Gourmantché ɗon wondi bandiraaɓe ɗiɗo, ɓooyɓe nder kuuɗe maɓɓe, ɓe mbaawataa goɗɗum. Go'o go'o, mawɓe Dioula ndilli nder gariiri. Jajino ɓe ko'e maɓɓe! wi'i arandeejo. Naa, jaabi ɗiɗaɓo,la en beddina laabi men: laatake ngollanaade leɗɗe ngam waɗugo goɗɗum nder gooŋga."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "well",
+            "x": 50
+          },
+          {
+            "k": "man",
+            "x": 30,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "cloth-bundle",
+            "x": 38
+          },
+          {
+            "k": "cloth-bundle",
+            "x": 64
+          },
+          {
+            "k": "man-point",
+            "x": 74,
+            "flip": true,
+            "c": "#C9822B"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Ils vendirent leurs fagots et achetèrent trois ballots de pagnes bleus. Pour les protéger des voleurs, ils les cachèrent au fond d'un vieux puits sec. Le lendemain, le premier dit : « Descends dans le puits, attache les ballots à la corde, je les remonterai. » Mais en secret, il comptait garder toute la marchandise pour lui.",
+        "en": "They sold their bundles of wood and bought three bales of blue cloth. To protect them from thieves, they hid them at the bottom of an old dry well. The next day the first one said: “Go down into the well and tie the bales to the rope, I'll pull them up.” But secretly he meant to keep all the goods for himself.",
+        "moore": "B ra koosda b tɩɩsã, n bao bõn-buud a tãabo. B sẽn na n kogl-b ne wagdrã yĩnga, b peega bãmb koom roog kʋdemdã pʋgẽ. Vẽkembeoogo, pipi soabã yeelame: \"Kʋs-y n kẽ puudu la y loe tãnsã ne bãndã tɩ m na n zẽka bãmb\". La a ra rat n dɩka teed nins fãa sẽn be wã.",
+        "dioula": "U y'u ka lɔgɔw feere ani u ye fani saba san. Walisa k'u tanga soonw ma, u y'u dogo kɔlɔn kɔrɔ dɔ kɔnɔ. O dugusagwɛ, mɔgɔ fɔlɔ y'a fɔ ko: \"Taga kɔlɔn kɔnɔ ka taga o nɛgɛw siri juru la. Ne bena u sama\". Nka a tun b'a fɛ k'o fɛnw bɛɛ mara dogo la.",
+        "fulfulde": "Ɓe kuuwi ko'e maɓɓe ɗe mbaɗi e ɓe coodi ceede tati. Ngam hisnaago ɓe daga ɓooyɓe, ɓe suuɗa ɗe nder leɗɗe mawɗe. Nde ndeen, arandeejo wi'i: Njahi nder mayre nden ɗaɓɓita balɗe to ɓolde, mi wurtinan ɗe. Ammaa o yiɗi waɗugo ko haani ngam maako."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 220
+          },
+          {
+            "k": "well",
+            "x": 50
+          },
+          {
+            "k": "man-up",
+            "x": 36,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "rock",
+            "x": 26,
+            "s": 0.5
+          },
+          {
+            "k": "cloth-bundle",
+            "x": 70
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il remonta un ballot, puis un deuxième, et alla chercher une grosse pierre pour la jeter sur son compagnon. Mais l'homme au fond du puits se méfiait. Il se cacha à l'intérieur du dernier ballot et cria : « Tire fort, celui-ci est le plus lourd ! »",
+        "en": "He pulled up one bale, then a second, and went to fetch a big stone to throw down on his companion. But the man at the bottom of the well was suspicious. He hid inside the last bale and shouted: “Pull hard, this one is the heaviest!”",
+        "moore": "A zẽka a tãmbã n kẽng tɩ b wa wʋk kug-kãseng n na n kʋ a tũud-n-taagã. La rao ning sẽn da be yẽegẽ wã ra pa mi-a ye. A solg-a lame n yeel tɩ: \"Tõndã pãng, yaa woto la toog n yɩɩd!\"",
+        "dioula": "A ye kabakuru belebeleba dɔ ta ka taga a tɔɲɔgɔn bon. Nka, cɛɛ min tun be kɔlɔn jukɔrɔ, ale tun b'a miiri ko a tɛ koo ɲuman lɔn. A dogonin tun be a ka fanibugu laban kɔnɔ ani k'a fɔ ko: \"I jija, nin ye doniba ye!\"",
+        "fulfulde": "O ƴetti go'o, nden o wurtini ɗiɗaɓo, o yahi haa o hocca kaaƴe mawɗe ngam o hokka mo. Ammaa gorko nder hooseere ndiyam ɗon moodi. O ɓoydi nder balli ɓaawo e o ɗon wi'a: Haaɗa, ngol ɓuri sembe!"
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va-t-il se passer quand la pierre tombera dans le puits ?",
+          "en": "What will happen when the stone falls into the well?",
+          "moore": "La kugã sã n lʋɩ koom-koglgã pʋgẽ, bõe la na n maane?",
+          "dioula": "Ni kabakuru benna kɔlɔn kɔnɔ, mun lo bena kɛ?",
+          "fulfulde": "Ko waɗi to kaaƴe maayi nder mayre?"
+        },
+        "options": [
+          {
+            "fr": "Elle tombera dans un puits vide",
+            "en": "It will fall into an empty well",
+            "moore": "A na n lʋɩɩs yaoog sẽn ka beẽ wã pʋgẽ.",
+            "dioula": "A bena ben kɔlɔn dɔ kɔnɔ, yɔrɔ min tun tɛ foyi ye.",
+            "fulfulde": "O hooti nder leɗɗe ɗe walaa goɗɗo."
+          },
+          {
+            "fr": "Elle blessera le second voleur",
+            "en": "It will hurt the second thief",
+            "moore": "A na n maana wagdr a yiib soabã wẽng wʋsgo.",
+            "dioula": "O bena ben soon filanan kan.",
+            "fulfulde": "Ɗum waɗay ɓooyɗo ɗiɗawru."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Le second voleur était déjà sorti, caché dans le ballot !",
+          "en": "The second thief was already out, hidden in the bale!",
+          "moore": "A yiib soabã ra zoe n beẽ, a solg-a lame.",
+          "dioula": "Sotigi filanan tun bɔra ka ban. A dogonin tun be dingɛ kɔnɔ!",
+          "fulfulde": "Ɓaaraɗo ɗiɗmo ɗon wari, o ɓoydi nder suudu!"
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "village",
+        "items": [
+          {
+            "k": "moon",
+            "x": 80,
+            "y": 300
+          },
+          {
+            "k": "hut",
+            "x": 22,
+            "y": 26
+          },
+          {
+            "k": "elder-sit",
+            "x": 46
+          },
+          {
+            "k": "man-talk",
+            "x": 62,
+            "c": "#C9822B"
+          },
+          {
+            "k": "man",
+            "x": 82,
+            "flip": true,
+            "c": "#2F3E6B"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le premier voleur jeta la pierre dans le puits vide, cacha les trois ballots et rentra chez lui, tout fier. À peine arrivé, il vit son compagnon, bien vivant, qui l'attendait avec l'oncle de la famille. Devant les anciens, sa trahison éclata au grand jour, et il dut rendre toute la marchandise. Depuis, au village, on dit : « Qui creuse un piège pour son ami y tombe lui-même. »",
+        "en": "The first thief threw the stone into the empty well, hid the three bales and went home, very pleased with himself. As soon as he arrived, he saw his companion, alive and well, waiting for him with the family's uncle. Before the elders, his betrayal came to light, and he had to give back all the goods. Since then, in the village, they say: “Whoever digs a trap for his friend falls into it himself.”",
+        "moore": "Raob ning sẽn deng n wa wã lobame, n solg gãndã la a lebg n kẽng a yiri. A sũur da noom ne yẽ mengã wʋsgo. A sẽn wa wã, a yãame t'a zoa wã ne a zakã nedã gũuda-a lame. A sẽn da zãmb-a wã, kãsem dãmbã yãame tɩ b ra segd n lebs a paoongã fãa. Sẽn sɩng ne rẽ, tẽn-kãng pʋgẽ b yetame tɩ ned ning sẽn digd bugum a zoa yĩnga, yẽ meng n lʋɩt a nugẽ.",
+        "dioula": "Sotigi fɔlɔ ye kabakuru fili kɔlɔn kɔnɔ, ka baga saba dogo. A segira soo a dusu diyara kosɔbɛ. A sera dɔrɔn, a y'a teri ye. A tun be kɛnɛ ani a sii tɔɔrɔnin lo. A ka janfa bɔra diinan mɔgɔkɔrɔw fɛ ani a tun ka kan k'a bololafɛnw bɛɛ kɔsegi. Kabi o wagati la, u b'a fɔ dugu kɔnɔ ko: \"Mɔgɔ min be jɔsi sogi a teri kama, ale yɛrɛ be ben yen\".",
+        "fulfulde": "Ɓaara'en arandeeji ɓe ɗon maɓɓina hayre nder mayri, ɓoydi koose tati boo, ɓe njahi wuro maɓɓe, ɓe njanngini hoore maɓɓe. Nde o wari, o yi'i mo ɗon yahda bee maako, o nyawɗo e ɓeydiiko boo, o ɗon ndottimo bee baaba saare. Wakkati mawɓe, ɓe anndini mo o haani hokkude maako fuu. Gila nden wakkati, nder gariiri ɗon wi'a: \"Oye ɓooyɗo kaɓirɗe ngam bandiraawo maako o wara nder mayre\"."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qu'achètent les deux amis ?",
+        "en": "What do the two friends buy?",
+        "moore": "Bõe la zo-rãmbã ra na n kos?",
+        "dioula": "O teriw be mun lo san?",
+        "fulfulde": "Ko honɗun ardiiɓe ɗiɗo ɓe njaɓata?"
+      },
+      "options": [
+        {
+          "fr": "Des pagnes bleus",
+          "en": "Blue cloth",
+          "moore": "Bõn-kaalgã sẽn yaa wa ne bĩisã",
+          "dioula": "Fani ye bulu ye",
+          "fulfulde": "Ɗuum ɓanndu nduu"
+        },
+        {
+          "fr": "Des chèvres",
+          "en": "Goats",
+          "moore": "Ko-kẽengã",
+          "dioula": "Gɛwɔnw",
+          "fulfulde": "Lammaji"
+        },
+        {
+          "fr": "Du sel",
+          "en": "Salt",
+          "moore": "Zĩisã",
+          "dioula": "kɔgɔ",
+          "fulfulde": "Lamarɗe"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Où cachent-ils leurs ballots ?",
+        "en": "Where do they hide their bales?",
+        "moore": "B zĩiga b sẽn maandã bee yɛ?",
+        "dioula": "U b'u ka balaw dogo yɔrɔ juman?",
+        "fulfulde": "To ɓe ɓoydi balɗe maɓɓe?"
+      },
+      "options": [
+        {
+          "fr": "Dans un grenier",
+          "en": "In a granary",
+          "moore": "B sẽn da tigim-a wã pʋgẽ",
+          "dioula": "A tun be sumansi kɔnɔ.",
+          "fulfulde": "Nder suudu ɓanndu"
+        },
+        {
+          "fr": "Au fond d'un puits sec",
+          "en": "At the bottom of a dry well",
+          "moore": "Zĩ-kãnga pʋgẽ,",
+          "dioula": "Jii dɔ gwannin kɔlɔn jukɔrɔ la.",
+          "fulfulde": "Nder leggal ɓii-ɓaaɗam"
+        },
+        {
+          "fr": "Sous un baobab",
+          "en": "Under a baobab",
+          "moore": "Baobab tɩɩgẽ",
+          "dioula": "Baaburu dɔ jukɔrɔ",
+          "fulfulde": "Ha nder baobab"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Comment le second voleur sort-il du puits ?",
+        "en": "How does the second thief get out of the well?",
+        "moore": "Wãn to la wagd a yiib soabã yi puudu?",
+        "dioula": "Sotigi filanan be bɔ kɔlɔn kɔnɔ cogo di?",
+        "fulfulde": "Noye ɓoowo ɗiɗaɓo wurta nder mayre?"
+      },
+      "options": [
+        {
+          "fr": "Caché dans un ballot",
+          "en": "Hidden inside a bale",
+          "moore": "B sẽn solg-a balẽ wã pʋgẽ",
+          "dioula": "A dogonin be dingɛ kɔnɔ.",
+          "fulfulde": "Ɓoydi nder balɗe"
+        },
+        {
+          "fr": "Avec une échelle",
+          "en": "With a ladder",
+          "moore": "Ne tãb-kẽndre",
+          "dioula": "Ni yɛlɛmisɛn dɔ ye",
+          "fulfulde": "E dow ladder"
+        },
+        {
+          "fr": "Un génie l'aide",
+          "en": "A spirit helps him",
+          "moore": "Sɩɩg sõng-a lame.",
+          "dioula": "Hakili senu b'a dɛmɛna.",
+          "fulfulde": "Ruuhu walli mo"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Dioula",
+      "lang": "fr",
+      "def": {
+        "fr": "Ici, marchands itinérants qui voyageaient de village en village ; c'est aussi le nom d'une langue et d'un peuple.",
+        "en": "Here, travelling merchants who went from village to village; it is also the name of a language and a people.",
+        "moore": "Be, ra yaa ra-tãagdb sẽn da kẽnd tẽn-tẽng n kẽng tẽng a to; la yaa buud-gomd ne nin-buiidã yʋʋr me.",
+        "dioula": "O yɔrɔ la, jagokɛlaw tun be taga dugu ni dugu. U ka kaan ani u ka siya tɔgɔ lo fana ye o yɔrɔ la.",
+        "fulfulde": "Ɗoon, mawɓe jaaynde ɓe njotti diga gariiri haa gariiri; ɗum woni innde ɗemngal e yimɓe."
+      }
+    },
+    {
+      "term": "pagne",
+      "lang": "fr",
+      "def": {
+        "fr": "Pièce de tissu que l'on noue autour de la taille ou du corps.",
+        "en": "A length of cloth wrapped around the waist or body.",
+        "moore": "A yaa fut sẽn pakd a pʋga, wall a yĩngã.",
+        "dioula": "Fanijan min be fani dɔ lamini a cɛsirinan wala a fari fan fɛ.",
+        "fulfulde": "Ɗuum ɓandu juutundu dow ɓalli maa e ɓanndu."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « Les deux voleurs », conte gourmantché publié par F.-V. Équilbecq, Contes indigènes de l'Ouest africain français, t. III (1913, domaine public). Réécriture libre.",
+    "en": "Based on “Les deux voleurs”, a Gourmantché tale published by F.-V. Équilbecq, Contes indigènes de l'Ouest africain français, vol. III (1913, public domain). Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

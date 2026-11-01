@@ -1,0 +1,149 @@
+@if (auth.user(); as u) {
+  <section class="head">
+    <div class="container head-row">
+      <div class="who">
+        <span class="avatar">{{ u.name.slice(0, 1).toUpperCase() }}</span>
+        <div>
+          <span class="eyebrow">{{ 'account.eyebrow' | t }}</span>
+          <h1>{{ u.name }}</h1>
+          <p class="muted">{{ u.email }} · {{ 'account.since' | t }} {{ u.createdAt | date: 'MMMM y' }}</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a routerLink="/contribuer" class="btn"><i class="fa-solid fa-feather-pointed"></i> {{ 'account.newContrib' | t }}</a>
+        @if (auth.isAdmin()) {
+          <a routerLink="/admin" class="btn btn-ghost"><i class="fa-solid fa-gauge-high"></i> {{ 'nav.dashboard' | t }}</a>
+        }
+      </div>
+    </div>
+    <div class="container kpis">
+      <div><strong>{{ counts().total }}</strong><span>{{ 'account.k.total' | t }}</span></div>
+      <div><strong>{{ counts().pending }}</strong><span>{{ 'account.k.pending' | t }}</span></div>
+      <div><strong>{{ counts().approved }}</strong><span>{{ 'account.k.approved' | t }}</span></div>
+      <div><strong>{{ progress.completed().length }}</strong><span>{{ 'pass.talesDone' | t }}</span></div>
+    </div>
+  </section>
+
+  <section class="container body">
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" [class.on]="tab() === 'contributions'" (click)="tab.set('contributions')">
+        <i class="fa-solid fa-feather-pointed"></i> {{ 'account.tab.contrib' | t }}
+      </button>
+      <button type="button" role="tab" [class.on]="tab() === 'notifications'" (click)="tab.set('notifications')">
+        <i class="fa-regular fa-bell"></i> {{ 'notif.title' | t }}
+        @if (notifs.unread()) {
+          <span class="count">{{ notifs.unread() }}</span>
+        }
+      </button>
+      <button type="button" role="tab" [class.on]="tab() === 'profile'" (click)="tab.set('profile')">
+        <i class="fa-regular fa-user"></i> {{ 'account.tab.profile' | t }}
+      </button>
+    </div>
+
+    @switch (tab()) {
+      @case ('contributions') {
+        @if (loading()) {
+          <p class="muted">…</p>
+        } @else if (!contributions().length) {
+          <div class="empty card">
+            <i class="fa-solid fa-feather-pointed"></i>
+            <h2>{{ 'account.empty.title' | t }}</h2>
+            <p class="muted">{{ 'account.empty.text' | t }}</p>
+            <a routerLink="/contribuer" class="btn">{{ 'account.newContrib' | t }}</a>
+          </div>
+        } @else {
+          <ol class="timeline">
+            @for (c of contributions(); track c.id) {
+              <li class="item card" [attr.data-status]="c.status">
+                <span class="dot">
+                  <i class="fa-solid" [class.fa-hourglass-half]="c.status === 'PENDING'" [class.fa-check]="c.status === 'APPROVED'" [class.fa-xmark]="c.status === 'REJECTED'"></i>
+                </span>
+                <div class="it-body">
+                  <div class="it-top">
+                    <span class="chip" [class.chip-yellow]="c.status === 'PENDING'" [class.chip-green]="c.status === 'APPROVED'" [class.chip-red]="c.status === 'REJECTED'">
+                      {{ 'admin.s.' + c.status | t }}
+                    </span>
+                    <span class="kind">
+                      <i class="fa-solid" [class.fa-microphone-lines]="c.kind === 'voice'" [class.fa-feather-pointed]="c.kind === 'story'"></i>
+                      {{ (c.kind === 'voice' ? 'contrib.voice.title' : 'contrib.story.title') | t }}
+                    </span>
+                    <time>{{ c.createdAt | date: 'd MMM y, HH:mm' }}</time>
+                  </div>
+                  <h3>{{ taleTitle(c) }}</h3>
+                  <p class="muted small">{{ data.languageMap().get(c.language)?.name }} · {{ data.regionMap().get(c.region)?.name }}</p>
+                  @if (c.status === 'PENDING') {
+                    <p class="note">{{ 'account.pendingNote' | t }}</p>
+                  }
+                  @if (c.reviewNote) {
+                    <p class="note review"><i class="fa-solid fa-quote-left"></i> {{ c.reviewNote }}</p>
+                  }
+                  <div class="it-actions">
+                    @if (c.audioUrl) {
+                      <audio [src]="data.mediaUrl(c.audioUrl)" controls preload="none"></audio>
+                    }
+                    @if (link(c); as l) {
+                      <a [routerLink]="l" class="btn btn-sm btn-green"><i class="fa-solid fa-eye"></i> {{ 'account.seePublished' | t }}</a>
+                    }
+                  </div>
+                </div>
+              </li>
+            }
+          </ol>
+        }
+      }
+      @case ('notifications') {
+        <div class="notif-head">
+          <span class="muted">{{ notifs.items().length }} notification(s)</span>
+          @if (notifs.unread()) {
+            <button type="button" class="btn btn-ghost btn-sm" (click)="notifs.markAll()"><i class="fa-solid fa-check-double"></i> {{ 'notif.readAll' | t }}</button>
+          }
+        </div>
+        <ul class="notifs">
+          @for (n of notifs.items(); track n.id) {
+            <li>
+              <button type="button" [class.unread]="!n.read" (click)="openNotif(n)">
+                <span class="n-ico" [attr.data-type]="n.type"><i class="fa-solid {{ icon[n.type] }}"></i></span>
+                <span class="n-txt">
+                  <span>{{ n.message }}</span>
+                  <small>{{ n.createdAt | date: 'd MMM y, HH:mm' }}</small>
+                </span>
+                @if (!n.read) {
+                  <span class="new">{{ 'notif.new' | t }}</span>
+                }
+              </button>
+            </li>
+          } @empty {
+            <li class="empty-line">{{ 'notif.empty' | t }}</li>
+          }
+        </ul>
+      }
+      @case ('profile') {
+        <form class="profile card" (ngSubmit)="save()">
+          <label class="field">
+            <span>{{ 'auth.name' | t }}</span>
+            <input name="name" [ngModel]="name()" (ngModelChange)="name.set($event)" maxlength="80" required />
+            <small>{{ 'account.nameHint' | t }}</small>
+          </label>
+          <div class="two">
+            <label class="field">
+              <span>{{ 'auth.region' | t }}</span>
+              <p-select [options]="regionOptions()" [ngModel]="region()" (ngModelChange)="region.set($event)" name="region" [showClear]="true" [placeholder]="'contrib.choose' | t" styleClass="w-full" />
+            </label>
+            <label class="field">
+              <span>{{ 'auth.language' | t }}</span>
+              <p-select [options]="langOptions()" [ngModel]="language()" (ngModelChange)="language.set($event)" name="language" [showClear]="true" [placeholder]="'contrib.choose' | t" styleClass="w-full" />
+            </label>
+          </div>
+          <label class="field">
+            <span>{{ 'account.bio' | t }}</span>
+            <textarea name="bio" rows="4" maxlength="400" [ngModel]="bio()" (ngModelChange)="bio.set($event)" [placeholder]="'account.bioPh' | t"></textarea>
+          </label>
+          <div class="p-actions">
+            <button type="button" class="btn btn-ghost" (click)="auth.logout()"><i class="fa-solid fa-right-from-bracket"></i> {{ 'nav.logout' | t }}</button>
+            <button type="submit" class="btn" [disabled]="saving() || name().trim().length < 2">{{ 'account.save' | t }}</button>
+          </div>
+        </form>
+      }
+    }
+  </section>
+}

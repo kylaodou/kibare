@@ -1,0 +1,465 @@
+{
+  "slug": "yadega-et-pabre",
+  "type": "recit",
+  "region": "nord",
+  "place": "Gourcy",
+  "coords": [
+    13.21,
+    -2.36
+  ],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 6,
+  "age": 9,
+  "featured": false,
+  "cover": 3,
+  "tags": [
+    "histoire",
+    "royaume",
+    "fraternité",
+    "courage"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Yadéga, Pabré et la naissance du Yatenga",
+      "subtitle": "Comment une sœur courageuse fit naître un royaume",
+      "summary": "Écarté du trône par son frère cadet, le prince Yadéga refuse de faire couler le sang. Mais sa sœur Pabré, elle, ne supporte pas l'injustice. Une nuit, elle s'empare des insignes royaux…",
+      "moral": "La sagesse évite les guerres inutiles, et le courage d'une seule personne peut changer l'histoire."
+    },
+    "en": {
+      "title": "Yadega, Pabre and the Birth of Yatenga",
+      "subtitle": "How a brave sister gave birth to a kingdom",
+      "summary": "Passed over for the throne in favour of his younger brother, Prince Yadega refuses to shed blood. But his sister Pabre cannot bear the injustice. One night, she takes the royal insignia…",
+      "moral": "Wisdom avoids pointless wars, and the courage of a single person can change history."
+    },
+    "moore": {
+      "title": "Yadega, Pabre la Yatenga rogmã",
+      "subtitle": "Wãn to la saam-bi-poak sẽn tar raoodã dog Rĩung?",
+      "summary": "A Yadega sẽn lebg a yao wã naab n na n dɩ naam, a pa rat tɩ b zɩɩm daag ye. La a saam-bi-poak a Pabre pa tõe n tol n deeg wẽnga ye. Daar a ye yʋngo, a rɩka rĩmã bãnd n kõ-a.",
+      "moral": "Yamã zãagda zab sẽn pa tar yõod ye, la ned a yembr raood tõe n kɩtame tɩ b toeem yɛlã."
+    },
+    "dioula": {
+      "title": "Yadega, Pabre ani Yatenga wolocogo",
+      "subtitle": "Balimamuso jaa gwɛlɛya dɔ ye masaya sɔrɔ cogo min na,",
+      "summary": "A kɔrɔcɛ dɔgɔman ka masaya kosɔn, a ma sɔn ka joli bɔn. Nka, a balimamuso Pabre tɛ se ka tilenbaliyako muɲu. Loon dɔ sufɛ, a ye masaso ka tagamasiyɛn ta.",
+      "moral": "Hakilitigiya be se ka kɛlɛw bali ani mɔgɔ kelen jaabili be se k'a dɛmɛ ka koo dɔw kɛ."
+    },
+    "fulfulde": {
+      "title": "Yadega, Pabre e jibinol Yatenga",
+      "subtitle": "No gooduɗo debbo mo cembiɗɗo hokki laamu",
+      "summary": "Ɓeydiɗo ngam laamu haa ɓiyum, Prince Yadega ɗon haɓɓa ƴiiƴam. Ammaa ɓikkoy maako Pabre waawataa jaɓugo hakkillo. Nder jemma go'o, o hoo'i dow laamorde...",
+      "moral": "Hakkiilo ɗon haɗana konu ɗi walaa ko nafata, nden cembiɗɗo gooto waaway wayla taariha."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "palace",
+            "x": 56,
+            "y": 34,
+            "s": 0.85
+          },
+          {
+            "k": "king-talk",
+            "x": 24,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "elder",
+            "x": 84,
+            "flip": true
+          },
+          {
+            "k": "man",
+            "x": 92,
+            "c": "#00894A"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il y a près de cinq siècles, à la mort d'un grand roi mossi, son fils aîné Yadéga se trouvait loin de la capitale. Lorsqu'il revint, le pouvoir avait déjà été confié à son frère cadet, Koumdoumyé.",
+        "en": "Nearly five centuries ago, when a great Mossi king died, his eldest son Yadega was far from the capital. When he returned, power had already been handed to his younger brother, Kumdumye.",
+        "moore": "Yʋʋm kobs a nu sẽn looge, rĩm-kãseng a ye sẽn yaa Mossi wã sã n wa ki, a bi-pugl a yembr sẽn boond t'a Yadega ra zãra ne tẽngã. A sẽn wa n lebg n wa wã, a kom-biigã a Kumdumye paama naamã.",
+        "dioula": "Saan kɛmɛkulu 5 ɲɔgɔn tɛmɛnin na, masacɛ Mossi dɔ sara. A dencɛ kɔrɔba Yadega tun tɛ duguba la tugun. A kɔsegira tuma min na, a kɔrɔcɛ Kumdumye lo tun ye fanga sɔrɔ.",
+        "fulfulde": "Nder duuɓi 5 ɓaawo, nde laamiiɗo Moosi mawɗo maayi, ɓiɗɗo maako mawɗo Yadega ɗon yaasi wuro man. Nde o wardi, laamu ɗon haɓa to ɓiyum, Kumdumye."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 80,
+            "y": 220
+          },
+          {
+            "k": "baobab",
+            "x": 24,
+            "y": 24
+          },
+          {
+            "k": "man",
+            "x": 54,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "horse",
+            "x": 72,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Yadéga se sentit trahi. Il aurait pu lever une armée. Mais il refusa de déclencher une guerre entre frères, qui aurait fait couler le sang de son propre peuple.",
+        "en": "Yadega felt betrayed. He could have raised an army. But he refused to start a war between brothers that would have spilled the blood of his own people.",
+        "moore": "A Yadega ra tagsdame tɩ b zãmb-a lame. A ra tõe n kɩtame tɩ b tãag-a lame. La a zãgsame n na n sɩng zabr ne ba-biis sẽn da na n kɩt tɩ b kʋ a nin-buiidã.",
+        "dioula": "Yadega tun b'a miiri ko a kɛra mɔgɔ janfaminin ye. A tun be se ka sɔrɔdasi caaman lajɛn. Nka, a banna ka kɛlɛ daminɛ balimaw cɛ. O tun bena a yɛrɛ ka mɔgɔw faga.",
+        "fulfulde": "Yadega nani o haani. O waawi waɗugo konu. Ammaa o haɓɓi ngam o wurtina yimɓe maako nder konu."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "village",
+        "items": [
+          {
+            "k": "moon",
+            "x": 14,
+            "y": 300
+          },
+          {
+            "k": "palace",
+            "x": 60,
+            "y": 34,
+            "s": 0.85
+          },
+          {
+            "k": "woman",
+            "x": 30,
+            "c": "#D62828"
+          },
+          {
+            "k": "calabash",
+            "x": 36
+          }
+        ]
+      },
+      "text": {
+        "fr": "Sa sœur, Pabré, ne pouvait accepter cette injustice. Une nuit, elle se glissa sans bruit dans le palais et emporta les insignes royaux, ces objets sacrés qui donnent au roi son autorité.",
+        "en": "His sister, Pabre, could not accept this injustice. One night, she slipped silently into the palace and took the royal insignia, the sacred objects that give a king his authority.",
+        "moore": "A saam-bi-poak a Pabre ra pa tõe n sak tɩ b maan-a woto ye. Daar a ye yʋngo, a kẽe lalgã pʋgẽ n dɩk rĩmã bãnd-n-taarã. Yaa bũmb nins sẽn yaa sõma tɩ b kõt rĩmã pãn-tõogã.",
+        "dioula": "A balimamuso Pabre tun tɛ se k'o tilenbaliyako muɲu. Loon dɔ sufɛ, a donna masaso kɔnɔ ani ka masacɛ ka tagamasiɲɛw ta. O ye fɛɛn senuman dɔw ye minw be se k'a dɛmɛ ka kuntigiya kɛ.",
+        "fulfulde": "Walaa go'o maako, Pabre, o jaɓataa haala ka. Nder jemma go'oto, o natti wuro laamiiɗo nder duumiije o hocci ko woni dow laamu."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va faire Pabré des insignes royaux ?",
+          "en": "What will Pabre do with the royal insignia?",
+          "moore": "Bõe la a Pabre na n maan ne rĩmã bãndã?",
+          "dioula": "Pabri bena mun lo kɛ masaso ka tagamasiyɛnw na?",
+          "fulfulde": "Ko Pabre waɗata e ko'e laamu?"
+        },
+        "options": [
+          {
+            "fr": "Les cacher pour toujours",
+            "en": "Hide them forever",
+            "moore": "B solg-b wakat sẽn kõn sa.",
+            "dioula": "I k'u dogo fɔɔ abada.",
+            "fulfulde": "Hidhina ɓe haa foroy."
+          },
+          {
+            "fr": "Les apporter à son frère Yadéga",
+            "en": "Bring them to her brother Yadega",
+            "moore": "Kẽng-y bãmb ne a ba-biigã, a Yadega.",
+            "dioula": "Aw ye na n'u ye a kɔrɔcɛ Yadega fɛ.",
+            "fulfulde": "Wurtina ɓe to bandiraawo maako Yadega."
+          },
+          {
+            "fr": "Les rendre au nouveau roi",
+            "en": "Give them back to the new king",
+            "moore": "Le kẽn-y n kõ rĩm ning sẽn wa n be wã.",
+            "dioula": "Aw k'u di masacɛ kura ma.",
+            "fulfulde": "hokke ɗe laamiiɗo keso on."
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "Pabré prit la route du nord pour rejoindre Yadéga…",
+          "en": "Pabre took the road north to join Yadega…",
+          "moore": "A Pabre kẽnga sa-kãsengã n kẽng Yadega.",
+          "dioula": "Pabre tagara saheli sira fɛ ka taga Yadega...",
+          "fulfulde": "Pabre yahi laawol ngal haa woyla ngam hawtaade Yadega..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 86,
+            "y": 240
+          },
+          {
+            "k": "rider",
+            "x": 50,
+            "c": "#D62828"
+          },
+          {
+            "k": "acacia",
+            "x": 16,
+            "y": 26
+          },
+          {
+            "k": "grass",
+            "x": 30
+          },
+          {
+            "k": "grass",
+            "x": 74
+          }
+        ]
+      },
+      "text": {
+        "fr": "Elle chevaucha vers le nord, sans s'arrêter, et remit les insignes à Yadéga. Grâce à eux, il pouvait désormais régner sans avoir à combattre son frère.",
+        "en": "She rode north without stopping and handed the insignia to Yadega. With them, he could now reign without having to fight his brother.",
+        "moore": "A kẽnga rɩtgo, n pa bas ye. La a kõ-a-la bãnã. A ra tõe n dɩ naam ne b saam-biigã, la a pa segd n zab ne-a ye.",
+        "dioula": "A tagara kɔgɔdugu fan fɛ ani a ma lɔ. O kɔ, a ye tagamasiyɛn di Yadega ma. O kama, a tun be se ka kuntigiya kɛ n'u ye.",
+        "fulfulde": "O ɗon yaha haa woyla, o ɗon ummo ngam yidde Yadega. O waawi laamiiɓe ɓe'e, ammaa o waawaa haɓugo bee bandiraawo maako."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 18,
+            "y": 300
+          },
+          {
+            "k": "hut",
+            "x": 70,
+            "y": 26
+          },
+          {
+            "k": "hut",
+            "x": 84,
+            "y": 34,
+            "s": 0.75
+          },
+          {
+            "k": "granary",
+            "x": 92,
+            "y": 22,
+            "s": 0.8
+          },
+          {
+            "k": "king",
+            "x": 40,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "woman",
+            "x": 52,
+            "c": "#D62828"
+          },
+          {
+            "k": "man-up",
+            "x": 62,
+            "c": "#00894A"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Yadéga s'installa dans la région de Gourcy et fonda un nouveau royaume : le Yatenga, « la terre de Yadéga ». Plus tard, Ouahigouya en devint la capitale.",
+        "en": "Yadega settled in the Gourcy area and founded a new kingdom: Yatenga, “the land of Yadega”. Later, Ouahigouya became its capital.",
+        "moore": "A Yadega zĩnda Gourcy soolmẽ wã, n lugl rĩung a ye: Yatenga. Rẽ poore, Ouahigouya lebga a tẽn-kãsengã.",
+        "dioula": "Yadega sigira Gourcy mara la ani a ye masaya kura sigi: Yatenga, Yadega jamana. Kɔfɛ, Ouahigouya kɛra a ka duguba ye.",
+        "fulfulde": "Yadega jooɗori nder gourcy e tiggi laamu keso: Yatenga, leydi Yadega. Ɓaawo, Ouahigouya laati laamorgo ma."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "village",
+        "items": [
+          {
+            "k": "moon",
+            "x": 80,
+            "y": 300
+          },
+          {
+            "k": "fire",
+            "x": 50
+          },
+          {
+            "k": "elder-sit",
+            "x": 34
+          },
+          {
+            "k": "child-sit",
+            "x": 62,
+            "flip": true,
+            "c": "#D62828"
+          },
+          {
+            "k": "child-sit",
+            "x": 70,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les Mossi se souviennent de Pabré comme d'une femme juste et courageuse. Sans elle, dit-on, le Yatenga n'aurait peut-être jamais existé.",
+        "en": "The Mossi remember Pabre as a fair and courageous woman. Without her, it is said, Yatenga might never have existed.",
+        "moore": "A Pabre ra yaa pag sẽn tar sũ-noogo, la raood wʋsgo. B yetame tɩ sã n da ka beẽ, a Yatenga ra pa na n zĩnd ye.",
+        "dioula": "Musaw hakili b'a la ko Pabre tun ye muso cɛɲumanba ani jagwɛlɛyabaga dɔ ye. U b'a fɔ ko n'o tɛ, Yatenga tun tɛna kɛ yen abada.",
+        "fulfulde": "Mossi'en ɗon haalana Pabre bana debbo mo o mari hakkiilo e sembe. Walaa maako, ɗum wi'i, Yatenga waawataa wonugo."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Que signifie « Yatenga » ?",
+        "en": "What does “Yatenga” mean?",
+        "moore": "Bõe la Yatenga rat n yeel?",
+        "dioula": "Yatenga kɔrɔ ko di?",
+        "fulfulde": "Ko Yatenga maaki?"
+      },
+      "options": [
+        {
+          "fr": "La terre de Yadéga",
+          "en": "The land of Yadega",
+          "moore": "Yaa Yadega tẽngã.",
+          "dioula": "Yadega ka jamana",
+          "fulfulde": "Luttuɗe Yadega"
+        },
+        {
+          "fr": "Le grand fleuve",
+          "en": "The great river",
+          "moore": "Ko-kãsengã sẽn yaa kãseng n yɩɩd",
+          "dioula": "Jiiba nin be tɛmɛ",
+          "fulfulde": "Lodo mawnde"
+        },
+        {
+          "fr": "Le palais du nord",
+          "en": "The northern palace",
+          "moore": "B sẽn da be rɩtg soolmẽ wã",
+          "dioula": "Kɔrɔn fɛ, a ka masabonba tun be yen.",
+          "fulfulde": "Laamu ngal hirnaange"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Qu'a emporté Pabré ?",
+        "en": "What did Pabre take?",
+        "moore": "Bõe la a Pabre rɩka?",
+        "dioula": "Pabre ye mun lo ta?",
+        "fulfulde": "Ko Pabre waɗi?"
+      },
+      "options": [
+        {
+          "fr": "Le cheval du roi",
+          "en": "The king's horse",
+          "moore": "Rĩmã wed-rũngã",
+          "dioula": "Masacɛ ka so.",
+          "fulfulde": "Lodo laamiiɗo"
+        },
+        {
+          "fr": "Les insignes royaux",
+          "en": "The royal insignia",
+          "moore": "Rĩmã bãnd-rãmbã",
+          "dioula": "Masacɛ ka tagamasiyɛnw",
+          "fulfulde": "Ko woni laamorde laamu"
+        },
+        {
+          "fr": "De l'or",
+          "en": "Gold",
+          "moore": "Zĩisã",
+          "dioula": "Sankaba",
+          "fulfulde": "Ɓannduɗe"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Pourquoi Yadéga ne fait-il pas la guerre ?",
+        "en": "Why does Yadega not go to war?",
+        "moore": "Bõe yĩng t'a Yadega pa kẽng zabrẽ?",
+        "dioula": "Mun na Yadega tɛ taga kɛlɛ la?",
+        "fulfulde": "Ngam ɗume Yadega yahataa haa konu?"
+      },
+      "options": [
+        {
+          "fr": "Il a peur",
+          "en": "He is afraid",
+          "moore": "A zoeeme.",
+          "dioula": "A be siran.",
+          "fulfulde": "O hulnii"
+        },
+        {
+          "fr": "Il refuse de faire couler le sang de son peuple",
+          "en": "He refuses to spill his people's blood",
+          "moore": "A zãgsame n na n sãam a nin-buiidã zɩɩm.",
+          "dioula": "A banna k'a ka mɔgɔw joli bɔn.",
+          "fulfulde": "O ɗon haɓana warugo ƴiiƴam yimɓe maako."
+        },
+        {
+          "fr": "Il n'a pas de cheval",
+          "en": "He has no horse",
+          "moore": "A ka tar wed ye.",
+          "dioula": "A tɛ so si sɔrɔ.",
+          "fulfulde": "O walaa koyngal."
+        }
+      ],
+      "answer": 1
+    }
+  ],
+  "glossary": [
+    {
+      "term": "tenga",
+      "lang": "moore",
+      "def": {
+        "fr": "« Terre, pays » en mooré. On le retrouve dans Yatenga ou Tenkodogo.",
+        "en": "“Land, country” in Mooré, found in names such as Yatenga or Tenkodogo.",
+        "moore": "Tẽnga, tẽng sẽn be Mooré wã pʋgẽ. B yãnda yʋy wala Yatenga bɩ Tenkodogo.",
+        "dioula": "Tuma, jamana Mooré kɔnɔ, min be sɔrɔ tɔgɔ dɔw la i n'a fɔ Yatenga walima Tenkodogo.",
+        "fulfulde": "Land, leydi  nder Mooré, tawi e innde bana Yatenga malla Tenkodogo."
+      }
+    },
+    {
+      "term": "insignes royaux",
+      "lang": "fr",
+      "def": {
+        "fr": "Objets sacrés (bonnets, amulettes, armes…) qui symbolisent et légitiment le pouvoir du roi.",
+        "en": "Sacred objects (caps, amulets, weapons…) that symbolise and legitimise the king's power.",
+        "moore": "Yaa bõn-sõma (sẽn yaa kãbre, tãnsãb la zab) sẽn makd rĩm pãng la b kõt-a sor.",
+        "dioula": "Fɛn senumanw (gɛnɛsogo, nɛgɛbɛnnanw, marifa...) minw b'a yira ko masacɛ ka fanga ye fɛɛn senuman ye.",
+        "fulfulde": "Kujeji ceniiɗi (caps, amuletes, weapons...) ɗi marki e haani laamu laamiiɗo."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Récit historique de la fondation du royaume mossi du Yatenga (vers le XVIe siècle), selon la tradition orale. Les noms et les détails varient selon les sources.",
+    "en": "Historical account of the founding of the Mossi kingdom of Yatenga (around the 16th century), according to oral tradition. Names and details vary between sources."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

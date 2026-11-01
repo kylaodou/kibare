@@ -1,0 +1,74 @@
+<section class="head">
+  <div class="container">
+    <span class="eyebrow">{{ 'lib.eyebrow' | t }}</span>
+    <div class="head-row">
+      <div>
+        <h1>{{ 'lib.title' | t }}</h1>
+        <p class="lead">{{ 'lib.lead' | t }}</p>
+      </div>
+      <button type="button" class="btn btn-green" (click)="surprise()">
+        <i class="fa-solid fa-shuffle"></i> {{ 'lib.surprise' | t }}
+      </button>
+    </div>
+
+    <div class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" [ngModel]="q()" (ngModelChange)="q.set($event)" [placeholder]="'lib.search' | t" [attr.aria-label]="'lib.search' | t" />
+    </div>
+
+    <div class="types" role="tablist">
+      @for (ty of types; track ty) {
+        <button type="button" role="tab" [class.on]="type() === ty" [attr.aria-selected]="type() === ty" (click)="type.set(ty)">
+          @if (ty !== 'all') {
+            <i class="fa-solid {{ typeIcon[ty] }}"></i>
+          }
+          {{ (ty === 'all' ? 'lib.all' : 'type.' + ty + 's') | t }}
+        </button>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="container body">
+  <div class="filters">
+    <p-select [options]="regionOptions()" [ngModel]="regionSel() ?? region() ?? null" (ngModelChange)="regionSel.set($event)" [placeholder]="'lib.region' | t" [showClear]="true" [filter]="true" styleClass="f-select" />
+    <p-select [options]="langOptions()" [ngModel]="lang()" (ngModelChange)="lang.set($event)" [placeholder]="'lib.language' | t" [showClear]="true" styleClass="f-select" />
+    <button type="button" class="toggle" [class.on]="kids()" (click)="kids.set(!kids())" [attr.aria-pressed]="kids()">
+      <i class="fa-solid fa-child-reaching"></i> {{ 'lib.kids' | t }}
+    </button>
+    <button type="button" class="toggle" [class.on]="favs()" (click)="favs.set(!favs())" [attr.aria-pressed]="favs()">
+      <i class="fa-heart" [class.fa-solid]="favs()" [class.fa-regular]="!favs()"></i> {{ 'lib.favs' | t }}
+    </button>
+    <span class="grow"></span>
+    <p-select [options]="sortOptions()" [ngModel]="sort()" (ngModelChange)="sort.set($event)" styleClass="f-select sort">
+      <ng-template #selectedItem let-item>
+        <span><i class="fa-solid fa-arrow-down-wide-short"></i> {{ item.label }}</span>
+      </ng-template>
+    </p-select>
+  </div>
+
+  <div class="count">
+    <span>{{ 'lib.count' | t: { n: results().length } }}</span>
+    @if (activeFilters()) {
+      <button type="button" class="link" (click)="reset()"><i class="fa-solid fa-xmark"></i> {{ 'lib.reset' | t }}</button>
+    }
+  </div>
+
+  @if (results().length) {
+    <div class="grid">
+      @for (t of results(); track t.slug; let i = $index) {
+        <app-tale-card [tale]="t" class="reveal" [style.animation-delay.ms]="Math.min(i, 8) * 50" />
+      }
+    </div>
+  } @else {
+    <div class="empty">
+      <span class="e-ico"><i class="fa-solid fa-feather-pointed"></i></span>
+      <h2>{{ 'lib.empty.title' | t }}</h2>
+      <p>{{ 'lib.empty.text' | t }}</p>
+      <div class="e-actions">
+        <button type="button" class="btn btn-ghost" (click)="reset()">{{ 'lib.reset' | t }}</button>
+        <a routerLink="/contribuer" class="btn"><i class="fa-solid fa-microphone-lines"></i> {{ 'nav.contribute' | t }}</a>
+      </div>
+    </div>
+  }
+</section>

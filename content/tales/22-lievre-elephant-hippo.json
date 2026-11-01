@@ -1,0 +1,358 @@
+{
+  "slug": "le-lievre-l-elephant-et-l-hippopotame",
+  "type": "conte",
+  "region": "cascades",
+  "place": "Niangoloko",
+  "coords": [
+    10.28,
+    -4.92
+  ],
+  "people": "Gouin",
+  "language": "cerma",
+  "duration": 4,
+  "age": 4,
+  "featured": false,
+  "cover": 2,
+  "tags": [
+    "ruse",
+    "lièvre",
+    "force",
+    "humour"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le lièvre, l'éléphant et l'hippopotame",
+      "subtitle": "La grande corde de la brousse",
+      "summary": "Qui est le plus fort, l'éléphant de la terre ou l'hippopotame de l'eau ? Pour le savoir, le malicieux lièvre achète une très longue corde… et invente un bœuf imaginaire.",
+      "moral": "La force sans réflexion se laisse facilement duper : mieux vaut réfléchir que tirer sans savoir pourquoi."
+    },
+    "en": {
+      "title": "The Hare, the Elephant and the Hippo",
+      "subtitle": "The great rope of the bush",
+      "summary": "Who is stronger, the elephant of the land or the hippo of the water? To find out, the mischievous hare buys a very long rope… and invents an imaginary ox.",
+      "moral": "Strength without thought is easily fooled: better to think than to pull without knowing why."
+    },
+    "moore": {
+      "title": "Dɩlla, bõn-buudã la a Hippo wã",
+      "subtitle": "Bõn-buudã gãn-kãsengã",
+      "summary": "Ãnd n yɩɩd-a, tẽng kibrã bɩ koom naandgã? Sẽn na yɩl n bãng rẽ, b raagã ra baooda gãn-kãsenga. la a na n maana bõn-naandg sẽn yaa bũmbu.",
+      "moral": "Sẽn pa tagsdẽ wã pãng yaa nana n belg-a: sã n tagsd sõma, tɩ yɩɩd f sẽn na n tall bũmb n ka mi a võore."
+    },
+    "dioula": {
+      "title": "Lɔnnikɛla, Elefan ani Zowasi",
+      "subtitle": "Yiriba min be yirituninw cɛma,",
+      "summary": "Jɔn le ka fisa, dugukolo kan fili wa, walima jii kɔnɔ wɔɔrɔnan? Walisa k'o lɔn, musokɔnɔman b'a ka jurujan dɔ san. ani ka misi dɔ kɛ a yɛrɛ ye.",
+      "moral": "Fanga min tɛ miirili la, o be se ka kɛ ko mɔgɔ b'a yɛrɛ nigɛ. A ka fisa k'a miiri ka tɛmɛ ka fanga sɔrɔ n'a t'a lɔn fɛɛn min kama."
+    },
+    "fulfulde": {
+      "title": "Laru, Elefant e Hippo",
+      "subtitle": "Luttudu mawnde nder duule",
+      "summary": "Mo ɓuri sembe, ko'e njamndi leydi naa to ndiyam? Ngam anndugo, ɓeydaani on ɗon sooda kaɓirɗe mawɗe... O waɗi ko o wi'i, \"Ko ɗum woni ɓernde maako\".",
+      "moral": "Nguurndam walaa hakkillo ɗon fooɗina masin: ɓeyda hakkillo ngam toɓugo haa anndataa daliila."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "hare",
+            "x": 46,
+            "s": 1.6
+          },
+          {
+            "k": "rope",
+            "x": 60
+          },
+          {
+            "k": "acacia",
+            "x": 16,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un jour, le lièvre se demanda qui était le plus fort de la brousse : l'éléphant ou l'hippopotame ? Il acheta une grosse et longue corde, en attacha un bout à un arbre, et partit trouver l'éléphant en traînant la corde derrière lui.",
+        "en": "One day, the hare wondered who was the strongest in the bush: the elephant or the hippo? He bought a big, long rope, tied one end to a tree, and set off to find the elephant, dragging the rope behind him.",
+        "moore": "Daar a ye, ra-kãnga sokame tɩ yaa zũnd bɩ nẽ? A ra baooda ko-kãseng n loe a yiri n tɩ yãend a nao wã, n dɩk ko-kãng.",
+        "dioula": "Loon dɔ, a y'a yɛrɛ ɲininga ko: \"Jɔn ka fanga ka bon kongo kɔnɔ? A ye jurujan dɔ san, k'a kuncɛ a fan kelen na ka taga filen yɔrɔ ɲini.",
+        "fulfulde": "Go'o nyalnde, laana wondiri mo ɓurɗo semmbe nder leɗɗe: nduujo malla hippot? O soodi limce mawnde, nde ɓadake, o dammbi haa leggal, nden o fuɗɗi ɗaɓɓugo nduu, o wurtini limce."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "elephant",
+            "x": 40,
+            "s": 1.1
+          },
+          {
+            "k": "hare",
+            "x": 68,
+            "s": 1.5,
+            "flip": true
+          },
+          {
+            "k": "rope",
+            "x": 78
+          },
+          {
+            "k": "karite",
+            "x": 90,
+            "y": 30,
+            "s": 0.7
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Ami éléphant, on m'a offert un bœuf, mais il est si lourd que je n'arrive pas à le tirer. Si tu y parviens, il est à toi ! » L'éléphant prit la corde. Puis le lièvre courut au fleuve et dit exactement la même chose à l'hippopotame, en lui donnant l'autre bout de la corde.",
+        "en": "“Friend elephant, someone gave me an ox, but it is so heavy I can't pull it. If you can, it's yours!” The elephant took the rope. Then the hare ran to the river and told the hippo exactly the same thing, handing him the other end of the rope.",
+        "moore": "M zoa wã, ned n kõ maam rũmsg la a yaa toog wʋsg tɩ m pa tõe n tall-a ye. Fo sã n tõe, yaa f soaba! Tĩndã rɩka ko-kãnga. Rẽ poore, b zoe n kẽng koom-koglgã nengẽ n yeel a ye bũmb ning sẽn yɩ to-to. B kõ-a-la ko-kãnga.",
+        "dioula": "N teri Elefan, mɔgɔ dɔ ye misi di ne ma. Nka a ka gwɛlɛ kojugu n tɛ se k'a sama. N'i be se, i ka kan k'o di! Elefan ye juru ta. O kɔ, musokɔnɔman bolila ka taga baji daa la ani a y'o fɔ nɛnɛkɛcɛ ye. A ye juru nin laban di a ma.",
+        "fulfulde": "Firde elephant, goɗɗo hokki yam go'o, ammaa o ɓurndi masin mi waawaa jonta. To a waawi, ɗum maaɗa! Elefanti ɗon njaɓɓa ko'e ma. Nden laana ɗon ndilli haa maayo o wi'i hippotol ngal ko haani, o hokki mo ɓaawo maɓɓere."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va-t-il se passer ?",
+          "en": "What will happen?",
+          "moore": "Bõe n na n maane?",
+          "dioula": "Mun lo bena kɛ?",
+          "fulfulde": "Ko ɗume waɗata?"
+        },
+        "options": [
+          {
+            "fr": "L'éléphant et l'hippopotame vont tirer l'un contre l'autre",
+            "en": "The elephant and the hippo will pull against each other",
+            "moore": "Wʋs ne rĩmã na n wẽega taaba.",
+            "dioula": "Elefan ni lilin bena ɲɔgɔn kunbɛn.",
+            "fulfulde": "Elefan e hippo ɗon hawta bee maɓɓe"
+          },
+          {
+            "fr": "Ils trouveront un vrai bœuf",
+            "en": "They will find a real ox",
+            "moore": "B na n yãa rũms sẽn yaa sɩd soaba.",
+            "dioula": "U bena misi sɔbɛ dɔ sɔrɔ.",
+            "fulfulde": "Ɓe heɓan le'i goonga."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Chacun croyait tirer un bœuf… mais tirait l'autre !",
+          "en": "Each one thought he was pulling an ox… but was pulling the other!",
+          "moore": "B fãa ra tagsdame tɩ b sẽn na n kʋ rũmsã... La a ra wẽnda taabã!",
+          "dioula": "U bɛɛ tun b'a miiri ko a be misi dɔ le sama. Nka, a tun be dɔ wɛrɛ sama!",
+          "fulfulde": "Gooto e maɓɓe ɗon ɗaɓɓa o ɗon ɓanngina ko'e maako... Ammaa o ɗon wurtina woɓɓe!"
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "river",
+        "items": [
+          {
+            "k": "elephant",
+            "x": 20,
+            "s": 0.9,
+            "a": "a-breathe"
+          },
+          {
+            "k": "rope",
+            "x": 50,
+            "s": 1.6
+          },
+          {
+            "k": "hippo",
+            "x": 80,
+            "y": -6,
+            "s": 1.1
+          },
+          {
+            "k": "hare",
+            "x": 50,
+            "y": 40,
+            "s": 1.2,
+            "a": "a-hop"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les voilà qui tirent, tirent et tirent encore, chacun de son côté, sans que rien ne bouge. Ils redoublent d'efforts toute la journée, pendant que le lièvre, caché dans les herbes, se tient les côtes de rire.",
+        "en": "There they are, pulling and pulling and pulling again, each on his own side, without anything moving. They double their efforts all day long, while the hare, hidden in the grass, holds his sides with laughter.",
+        "moore": "B bee be, b sẽn digd n getẽ la b lebgd n wẽeddẽ. Ned kam fãa ra bee a meng poorẽ, tɩ bũmb ka yik ye. B maanda b sẽn tõe fãa daarã tõre, tɩ sã n wa beẽ wã sẽn solg-a weoogẽ wã, a yãgd-b lame.",
+        "dioula": "U be to ka taga u yɛrɛ gɛrɛfɛ, foyi tɛ se k'u lamaga. U be baara kɛ ka tɛmɛ tile bɛɛ kan. Nka, musoman nin b'a ɲɛɛw biri a kɔrɔ ni yɛlɛko ye.",
+        "fulfulde": "Ɗon ɓe ɗon, ɓe ɗon ɓuwaa e ɓuwaa, gooto fuu nder yaasi maako, walaa ko ɗon hoola. Ɓe ɓeydi kuugal maɓɓe nder nyalnde fuu, nden kam kaani, mo jippii nder leɗɗe, ɗon ɗaɓɓita bee nyi'e."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "river",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 220
+          },
+          {
+            "k": "elephant",
+            "x": 36,
+            "s": 0.95
+          },
+          {
+            "k": "hippo",
+            "x": 62,
+            "y": 10,
+            "s": 1,
+            "flip": true
+          },
+          {
+            "k": "rope",
+            "x": 50,
+            "y": 4
+          }
+        ]
+      },
+      "text": {
+        "fr": "Épuisés, ils eurent la même idée : aller voir ce fameux bœuf. Chacun suivit la corde… et ils se retrouvèrent nez à nez au milieu ! « Toi ? Mais où est le bœuf ? » Ils comprirent la farce du lièvre. Depuis, dit-on, l'éléphant et l'hippopotame se méfient des cadeaux trop lourds, et le lièvre ne s'approche plus ni du fleuve, ni des grands arbres.",
+        "en": "Exhausted, they had the same idea: to go and see this famous ox. Each one followed the rope… and they met nose to nose in the middle! “You? But where is the ox?” They understood the hare's prank. Since then, they say, the elephant and the hippo are wary of heavy gifts, and the hare keeps away from both the river and the tall trees.",
+        "moore": "B sẽn da wa n yaa toogo, b ra tagsdame tɩ b na n kẽng n tɩ yãa rũnna. B fãa tũu ko-kãnga. La b ra yãnda taab n be sʋka! Yãmb yaa bõe? La sã n yaa ne rũmsã, b wʋmda ra-kãnga sẽn gomd bũmb ningã võore. B yetame tɩ hal rẽ tɛka, bõn-yũudr ne a zũudu pa nong kũun nins sẽn yaa toog ye. La b yeelame tɩ rũnda zãagda ne kʋɩlgã la tɩɩs nins sẽn tar kãn-kãe wã ye.",
+        "dioula": "U tun sɛgɛnnin lo kosɔbɛ ani u y'a miiri ko: \"Aw ka taga misi nin filɛ\". U kelen kelen bɛɛ tun be to ka tugu juru kɔ. O kɔ, u ye ɲɔgɔn kunbɛn o yɔrɔ cɛmancɛ la! I ka koo tɛ kelen ye. Nka misi nin be min? U y'a faamu ko wuluw ka kuma ye tulogweren ye. U b'a fɔ ko elefan ni libu tɛ sɔn ka fɛɛn nafamanw di u ma. O kɔ, a be to k'a yɛrɛ tanga baji ani yirijanw ma.",
+        "fulfulde": "Ɓe njogii, ɓe mari miijo go'o: ɓe njahi ndaara ndeen koore nden anndunde. Gooto fuu tokki ko'e maɓɓere... Ɓe hawti bee ɓernde haa caka maɓɓe! On? Ammaa to o ɗon haa? Ɓe paama ko haani'en mbi'i. Diga saa'i maajum, ɓe mbiyi, elefant e hippo ɗon mbaawaa hokkude dokke ɗe ɓurɗe mawnugo, nden kam labbol ɗon njogga maayo boo bee leɗɗe mawɗe."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Que veut savoir le lièvre ?",
+        "en": "What does the hare want to know?",
+        "moore": "Bõe la sãnemdã dat n bãng?",
+        "dioula": "Dɔnnikɛbaga b'a fɛ ka mun lo lɔn?",
+        "fulfulde": "Ko honɗun haani anndugo?"
+      },
+      "options": [
+        {
+          "fr": "Qui est le plus fort",
+          "en": "Who is the strongest",
+          "moore": "Ãnd n yaa pãng soaba?",
+          "dioula": "Jɔn le ye mɔgɔ barikaman ye?",
+          "fulfulde": "Mo woni ɓurɗo sembe"
+        },
+        {
+          "fr": "Qui est le plus rapide",
+          "en": "Who is the fastest",
+          "moore": "Ãnd n yaa ned sẽn tar taoorã?",
+          "dioula": "Jɔn lo ye mɔgɔ bɛɛ laganfilila?",
+          "fulfulde": "Mo woni ɓurɗo saffugo?"
+        },
+        {
+          "fr": "Qui est le plus sage",
+          "en": "Who is the wisest",
+          "moore": "Ãnd n yaa yam soaba?",
+          "dioula": "Jɔn le ye hakilitigi ye?",
+          "fulfulde": "Mo woni mo ɓuri faamude"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Qu'est-ce que le lièvre prétend avoir reçu ?",
+        "en": "What does the hare claim to have been given?",
+        "moore": "Bõe la b yeel tɩ b kõ bi-beesã?",
+        "dioula": "A fɔra ko u ye mun lo di a ma?",
+        "fulfulde": "Ko honɗun haani hokki?"
+      },
+      "options": [
+        {
+          "fr": "Un bœuf",
+          "en": "An ox",
+          "moore": "Rõog a ye",
+          "dioula": "Misiri dɔ",
+          "fulfulde": "Ɗuum ko bee leɗɗe"
+        },
+        {
+          "fr": "Un trésor",
+          "en": "A treasure",
+          "moore": "D sã n wa tar arzɛkã, d tõe n paama-a lame.",
+          "dioula": "Nafolotigiya",
+          "fulfulde": "Ko jawdi"
+        },
+        {
+          "fr": "Un tambour",
+          "en": "A drum",
+          "moore": "Bãnd sẽn yaa bĩngd",
+          "dioula": "Dɔɔni dɔ",
+          "fulfulde": "Ɗuum ɓooyi"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Où se retrouvent l'éléphant et l'hippopotame ?",
+        "en": "Where do the elephant and the hippo meet?",
+        "moore": "Ãndẽ la bõn-buudã ne a rĩmã taabd taaba?",
+        "dioula": "Elefan ni lilin be ɲɔgɔn kunbɛn yɔrɔ juman?",
+        "fulfulde": "To leyɗe e hippotiral hawti?"
+      },
+      "options": [
+        {
+          "fr": "Au milieu de la corde",
+          "en": "In the middle of the rope",
+          "moore": "B sẽn da be tãbgã sʋka.",
+          "dioula": "N' ye juru dɔ siri n' na,",
+          "fulfulde": "Nder caka kaɓirɗe"
+        },
+        {
+          "fr": "Chez le lièvre",
+          "en": "At the hare's home",
+          "moore": "D sã n wa be ne tãb-biis roogẽ, d na n paama sũ-noogo.",
+          "dioula": "A be taga dogo la a ka soo kɔnɔ.",
+          "fulfulde": "Nder wuro laamɓe"
+        },
+        {
+          "fr": "Au marché",
+          "en": "At the market",
+          "moore": "Zĩ-gũudã pʋgẽ",
+          "dioula": "Fɛɛn minw be feere,",
+          "fulfulde": "Nder fannu"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Gouin",
+      "lang": "fr",
+      "def": {
+        "fr": "Peuple de la région des Cascades, autour de Banfora et Niangoloko ; leur langue est le cerma.",
+        "en": "A people of the Cascades region, around Banfora and Niangoloko; their language is Cerma.",
+        "moore": "B yaa Cascades soolmẽ wã neb sẽn be Banfora ne Niangoloko pʋga. B goama yaa Cerma.",
+        "dioula": "U be bɔ kaskad mara la, Banfora ani Niangoloko gɛrɛfɛ. U ka kaan ye Cerma ye.",
+        "fulfulde": "Yimɓe nder diiwaan Cascades, haandi Banfora e Niangoloko; ɗemngal maɓɓe ko Cerma."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « Le lièvre, l'éléphant et l'hippopotame », conte gouin raconté par Mme Justine Fayama, publié sur abcBurkina.net. Ce motif du tir à la corde existe dans de nombreuses cultures africaines. Réécriture libre.",
+    "en": "Based on “Le lièvre, l'éléphant et l'hippopotame”, a Gouin tale told by Mrs Justine Fayama, published on abcBurkina.net. This tug-of-war motif is found in many African cultures. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

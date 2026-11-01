@@ -1,0 +1,438 @@
+{
+  "slug": "le-secret-des-ruines-de-loropeni",
+  "type": "recit",
+  "region": "sud-ouest",
+  "place": "Loropéni",
+  "coords": [
+    10.3,
+    -3.54
+  ],
+  "people": "Lobi",
+  "language": "lobiri",
+  "duration": 5,
+  "age": 8,
+  "featured": true,
+  "cover": 0,
+  "tags": [
+    "histoire",
+    "patrimoine mondial",
+    "or",
+    "mystère"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le secret des ruines de Loropéni",
+      "subtitle": "Des murailles de pierre vieilles de mille ans",
+      "summary": "Au pays lobi se dressent de mystérieuses murailles de pierre. Qui les a bâties, et pourquoi ? Une petite fille pose la question à son grand-père, qui lui raconte ce que savent les anciens… et les archéologues.",
+      "moral": "Les pierres gardent la mémoire de ceux qui nous ont précédés : à nous de la transmettre."
+    },
+    "en": {
+      "title": "The Secret of the Loropeni Ruins",
+      "subtitle": "Stone walls a thousand years old",
+      "summary": "In Lobi country stand mysterious stone walls. Who built them, and why? A little girl asks her grandfather, who tells her what the elders… and the archaeologists know.",
+      "moral": "Stones keep the memory of those who came before us: it is up to us to pass it on."
+    },
+    "moore": {
+      "title": "Loropeni wã sẽn be roogã yel-solemdã",
+      "subtitle": "A sẽn maan yʋʋm tusr n kõ-b la kugã.",
+      "summary": "A Lobi tẽn-tẽngã pʋgẽ, b tara kug-wals sẽn yaa yel-solemse. Ãnd n naan-b lame, la bõe yĩnga? Bi-pugl a ye sokda a yaab-rãmbã, t'a yeel-b tɩ kãsem dãmbã... la b bãngd-b lame.",
+      "moral": "A Zezi sẽn da wa n kõ tõndã, b tẽega d neb nins sẽn deng-b wã. Yaa tõnd bal n na n wilg tɩ b yaa bãmb la b tall tõndo."
+    },
+    "dioula": {
+      "title": "Loropeni ka yɔrɔ kɔrɔw ye min ye ngalon lo ye",
+      "subtitle": "San waa kelen ɲɔgɔn ka kabakuru kogow",
+      "summary": "Lobi mara la, kogow ye kabakuru ye minw tun ka kan ka kɛ dogoyɔrɔ ye. Jɔn lo y'u lɔ ani mun na? Denmisɛn dɔ y'a bɛmacɛ ɲininga. A ye min fɔ a ye, o kɔrɔ ko: \"I ka kan k'o kɛ\". Arkeoloziw b'o lɔn.",
+      "moral": "Minw kɔnna an ɲa, kabakuruw le bɛ olugu hakiri to o ra. An yɛrɛ ta lo ye k'a yira mɔgɔw ra."
+    },
+    "fulfulde": {
+      "title": "Sirru Loruopeni Ruunji",
+      "subtitle": "Caggal kaaƴe duuɓi ujuneeje",
+      "summary": "Nder lesdi Lobi ɗon woodi cuuɗi ɗije mawɗe. Moy waɗi ɗe, e ngam ɗume? Suka debbo ƴami baaba maako, o wi'i mo ko mawɓe... e archaeologists anndini.",
+      "moral": "Kamɓe ɗon cembiɗina yimɓe ɓe ardii en, ɗum haa meeɗen ngam hokkugoɗum."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "ruins",
+            "x": 50,
+            "y": 30
+          },
+          {
+            "k": "karite",
+            "x": 12,
+            "y": 26
+          },
+          {
+            "k": "bush",
+            "x": 86,
+            "y": 20
+          },
+          {
+            "k": "grass",
+            "x": 30
+          }
+        ]
+      },
+      "text": {
+        "fr": "Dans le sud-ouest du Burkina Faso, au pays lobi, se dressent de mystérieuses murailles de pierre latéritique : les ruines de Loropéni. Certaines atteignent six mètres de haut.",
+        "en": "In south-western Burkina Faso, in Lobi country, stand mysterious walls of laterite stone: the ruins of Loropeni. Some of them are six metres high.",
+        "moore": "Burkina Faso, sẽn be Lobi soolmẽ wã, zĩ-wũndgẽ wã, b tara gãn-kɛgeng n maan ne pĩnda: Loropeni. Bãmb kẽer tara mitr a yoob n ta.",
+        "dioula": "Burkina Faso worodugu-dugudenniman na, Lobi jamana la, kogo dɔw be yen minw tun ye latɛriti kabakuru ye. Loropeni dugu cɛnninw lo. U dɔw lɔra mɛtɛrɛ wɔɔrɔ.",
+        "fulfulde": "Nder worgo hirnaange Burkina Faso, nder lesdi Lobi, ɗon dari walluuji ɓurɗi anndugo: ko'e loropeni. Woɓɓe maɓɓe ɗon mawngu mitaji joweego."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "ruins",
+            "x": 70,
+            "y": 34,
+            "s": 0.8
+          },
+          {
+            "k": "elder",
+            "x": 30
+          },
+          {
+            "k": "child",
+            "x": 42,
+            "c": "#D62828",
+            "flip": true
+          },
+          {
+            "k": "acacia",
+            "x": 12,
+            "y": 28,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Qui a construit ces murs, Grand-père ? » demanda un jour une petite fille. Le vieil homme sourit : « Personne ne le sait avec certitude. Mais écoute ce que racontent les anciens… »",
+        "en": "“Who built these walls, Grandfather?” a little girl asked one day. The old man smiled: “No one knows for certain. But listen to what the elders say…”",
+        "moore": "\"N-a Zeova n na n sõng-y lame tɩ y tõog n yɩ nin-sõma?\" Kãsemã puka: \"Ned ka mi vẽeneg ye. La kelg kãsem dãmbã sẽn yetã.",
+        "dioula": "Jɔn lo ye kogow lɔ, n'i facɛ? Lon dɔ sunguru dɔ y'a ɲininga ko: \"Mun na an be dugu nin lamini?\" Cɛkɔrɔba y'a daa yɛlɛ ko: \"Mɔgɔ si tɛ se k'o fɔ tigitigi. Nka, mɔgɔkɔrɔbaw ka kuma lamɛn.",
+        "fulfulde": "?Soowo maɓɓini wallol ɗii, mawɗo? ? ƴami ɓiɗɗo debbo go'o nder nyalnde. Mawɗo on ɗon maɓɓito: \"Walaa mo anndi bee gooŋga\". Ammaa nana ko mawɓe mbi'a..."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "river",
+        "items": [
+          {
+            "k": "sun",
+            "x": 20,
+            "y": 220
+          },
+          {
+            "k": "man",
+            "x": 30,
+            "y": 6,
+            "c": "#C9822B"
+          },
+          {
+            "k": "woman",
+            "x": 42,
+            "y": 6
+          },
+          {
+            "k": "gold",
+            "x": 56,
+            "y": 6
+          },
+          {
+            "k": "calabash",
+            "x": 64,
+            "y": 6
+          },
+          {
+            "k": "palm",
+            "x": 88,
+            "y": 40
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Il y a plus de mille ans, cette région était célèbre pour son or. Les orpailleurs le tiraient de la terre et des rivières. Puis l'or voyageait vers le nord, à travers le désert, jusqu'aux grandes villes marchandes. »",
+        "en": "“More than a thousand years ago, this region was famous for its gold. Gold-panners drew it from the earth and the rivers. Then the gold travelled north, across the desert, to the great trading cities.”",
+        "moore": "Yʋʋm tusr sẽn looge, tẽn-kãng ra yaa bãan ne a sãnem. Zĩis-dãmb ra yiisda a Zeova ne b koomã. Rẽ poore, sãnemã kẽnga sa-kãsengã n kẽng tẽn-kãsems nins sẽn dag n tʋmd teedã pʋsẽ wã.",
+        "dioula": "Saan waa kelen ni kɔ tɛmɛnin na, o mara tun tɔgɔ bɔra a ka sanu kosɔn. Ziranɛgɛlaw tun b'a sɔrɔ u ye dugukolo ni bajiw bɔ. O kɔ, sanu tagara kɔgɔdugu fan fɛ kongokolon kɔnɔ ka taga jago kɛ dugubaw la.",
+        "fulfulde": " Ɓurɗe duuɓi ujune, nokkuure nden ɗon anndina ngam jaɓol ma. Yimɓe ɓooyɗi e go'oto ɓe njogii ɗum daga leydi e nder maayoji. Nden jaŋde nden yahi haa woyla, nder ladde, to gariiri mawɗi ɗi kuuɓantoo."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 220
+          },
+          {
+            "k": "ruins",
+            "x": 46,
+            "y": 30
+          },
+          {
+            "k": "man",
+            "x": 16,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "gold",
+            "x": 24
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Les murailles protégeaient peut-être cette richesse, et les gens qui la gardaient. On dit que les lieux furent habités par les Lohron puis les Koulango, avant d'être abandonnés il y a environ deux siècles. »",
+        "en": "“Perhaps the walls protected that wealth, and the people who guarded it. It is said the site was inhabited by the Lohron and then the Koulango, before being abandoned about two centuries ago.”",
+        "moore": "Tõe tɩ b ra kogla arzɛkã ne neb nins sẽn da gũud-a wã. B yeelame tɩ Lohron la Koulango neb n da be zĩigã, hal sẽn deng yʋʋm kobs a yiib sẽn looge.",
+        "dioula": "N'a sɔrɔ kogow tun b'o nafolo ni a kɔrɔsibagaw latanga. A fɔra yen ko Lohronw ni Koulangow tun be yɔrɔ nin la, sanni u ka to yen saan kɛmɛ fila ɲɔgɔn kɔnɔ.",
+        "fulfulde": "Mooɗa wallol ɗon ɗowanta jawdi boo, e yimɓe ɗon ɗowante. Ɗum wi'i nokku ɗon ɗon jooɗorugo Lohron nden Koulango, ngam ɓe acci ɗum duuɓi ɗiɗi ɓaawo."
+      },
+      "choice": {
+        "q": {
+          "fr": "D'après toi, à quoi servaient ces murs ?",
+          "en": "What do you think these walls were for?",
+          "moore": "Yãmb tagsdame tɩ b ra maanda bõe ne wall-kãensã?",
+          "dioula": "I b'a miiri ko kogo nunu tun ye mun lo ye?",
+          "fulfulde": "Ko honno mbi'oton wallol ngol waɗi?"
+        },
+        "options": [
+          {
+            "fr": "À protéger l'or et les habitants",
+            "en": "To protect the gold and the inhabitants",
+            "moore": "Sẽn na yɩl n kogl sãnemã la neb nins sẽn be tẽngã pʋgẽ wã.",
+            "dioula": "Ka sanu ni dugumɔgɔw tanga",
+            "fulfulde": "Ngam hakkilanaago jawdi e yimɓe ɗon njooɗiiɓe ton"
+          },
+          {
+            "fr": "À enfermer des animaux",
+            "en": "To pen in animals",
+            "moore": "D sã n maand bõn-vɩɩs ne bũmbu,",
+            "dioula": "Ka sɛbɛnin don begɛnw na",
+            "fulfulde": "To pen nder dabbaaji"
+          },
+          {
+            "fr": "À décorer le paysage",
+            "en": "To decorate the landscape",
+            "moore": "B sẽn na n maneg tẽngã",
+            "dioula": "Ka jamana yɔrɔ bɛɛ cɛɲa",
+            "fulfulde": "Ngam mawnugo nokkuure"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "C'est l'hypothèse la plus souvent avancée, liée au commerce de l'or.",
+          "en": "That is the most common hypothesis, linked to the gold trade.",
+          "moore": "Yaa rẽ n kɩt tɩ b tagsdẽ tɩ yaa ra-kãsems la b segd n maan ne sãnemdã.",
+          "dioula": "O lo ye miiriya jɛnsɛnninba ye min ɲɛsinna sanu feereli ma.",
+          "fulfulde": "Ɗu'um woni miijo ɓurɗo haani, hawti e jaaynde goɗɗum."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 300
+          },
+          {
+            "k": "ruins",
+            "x": 56,
+            "y": 32,
+            "s": 0.9
+          },
+          {
+            "k": "child-up",
+            "x": 30,
+            "c": "#D62828"
+          },
+          {
+            "k": "elder",
+            "x": 20
+          },
+          {
+            "k": "star",
+            "x": 86,
+            "y": 280,
+            "s": 0.5
+          }
+        ]
+      },
+      "text": {
+        "fr": "« En 2009, ces ruines ont été inscrites au patrimoine mondial de l'UNESCO. C'est le premier site du Burkina Faso à avoir reçu cet honneur. » La fillette posa la main sur les pierres : elles avaient tant d'histoires à raconter.",
+        "en": "“In 2009, these ruins were added to UNESCO's World Heritage List. It was the first site in Burkina Faso to receive that honour.” The girl laid her hand on the stones: they had so many stories to tell.",
+        "moore": " Yʋʋmd 2009 wã, b talla bõn-kãens UNESCO sẽn gʋls tɩ b lebg dũniyã paoongã. Yaa Burkina Faso pipi zĩiga sẽn paam waoogre. Bi-puglã gãda a nug kugã zugu: b ra tara kibar wʋsg n na n togs-b ye.",
+        "dioula": " Saan 2009, o tomow donna UNESCO ka diɲɛ nafolo tɔgɔ sɛbɛnin na. O yɔrɔ tun ye Burkina Faso jamana fɔlɔ ye min y'o bonya sɔrɔ. Muso nin y'a bolo la kabakuruw kan: u tun be koo caaman fɔra.",
+        "fulfulde": " Nder 2009, ɗi ɓaawoji ɓeydani nder UNESCO List World Heritage. Ɗum woni nokku arande nder Burkina Faso ngam heɓugo teddungal ngal. Debbo o waɗi juuɗe maako dow kaaƴe: ɓe mari haala ɗuuɗal habaru."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quelle richesse a rendu la région célèbre ?",
+        "en": "What resource made the region famous?",
+        "moore": "Bõe n kɩt tɩ tẽn-kãng lebg yʋʋr sẽn boond t'a Zɛde?",
+        "dioula": "Fɛɛn juman lo y'o mara tɔgɔba lase?",
+        "fulfulde": "Ko honɗun waɗi nokkuure nden famɗi?"
+      },
+      "options": [
+        {
+          "fr": "Le sel",
+          "en": "Salt",
+          "moore": "Zĩisã",
+          "dioula": "kɔgɔ",
+          "fulfulde": "Lamarɗe"
+        },
+        {
+          "fr": "L'or",
+          "en": "Gold",
+          "moore": "Zĩisã",
+          "dioula": "Sankaba",
+          "fulfulde": "Ɓannduɗe"
+        },
+        {
+          "fr": "Le coton",
+          "en": "Cotton",
+          "moore": "Bõn-kaamã",
+          "dioula": "Fanga ye min ye",
+          "fulfulde": "Cotton"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "En quelle année les ruines ont-elles été inscrites à l'UNESCO ?",
+        "en": "In which year were the ruins listed by UNESCO?",
+        "moore": "Yʋʋmd bʋgo la UNESCO sẽn gʋls bõn-naandsã?",
+        "dioula": "UNESCO ye o yɔrɔ halakiw kofɔ saan jumɛn?",
+        "fulfulde": "Nder hitaande nde UNESCO taƴii ko'e mayri?"
+      },
+      "options": [
+        {
+          "fr": "1960",
+          "en": "1960",
+          "moore": "Yʋʋmd 1960 wã",
+          "dioula": "Saan 1960",
+          "fulfulde": "1960"
+        },
+        {
+          "fr": "2009",
+          "en": "2009",
+          "moore": "Yʋʋmd 2009 wã",
+          "dioula": "Saan 2009 la",
+          "fulfulde": "2009 dow"
+        },
+        {
+          "fr": "2020",
+          "en": "2020",
+          "moore": "A Zeova Kaset rãmbã sẽn paam n deeg b lisgã 2020",
+          "dioula": "Saan 2020 la",
+          "fulfulde": "Koolol"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Jusqu'à quelle hauteur certains murs s'élèvent-ils ?",
+        "en": "How tall are some of the walls?",
+        "moore": "Bĩngã kẽer yaa neb sẽn tall n ta zĩ-bʋgo?",
+        "dioula": "Dugu kogo dɔw lɔra ka se yɔrɔ jumɛn ma?",
+        "fulfulde": "Ɗeje diga dow walluuji ɗi?"
+      },
+      "options": [
+        {
+          "fr": "Environ 6 mètres",
+          "en": "About 6 metres",
+          "moore": "A sẽn ta mɛtri 6 wã",
+          "dioula": "Sanni a ka se mɛtɛrɛ 6 ɲɔgɔn ma.",
+          "fulfulde": "Ko mita 6"
+        },
+        {
+          "fr": "1 mètre",
+          "en": "1 metre",
+          "moore": "1 m",
+          "dioula": "1 mɛtɛrɛ",
+          "fulfulde": "1 mita"
+        },
+        {
+          "fr": "50 mètres",
+          "en": "50 metres",
+          "moore": "Mɛtri 50",
+          "dioula": "Metiri 50",
+          "fulfulde": "50 mita"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "latérite",
+      "lang": "fr",
+      "def": {
+        "fr": "Roche rouge, riche en fer, typique des régions tropicales, utilisée comme pierre de construction.",
+        "en": "A red, iron-rich rock typical of tropical regions, used as a building stone.",
+        "moore": "Yaa roog sẽn yaa miuug la a tara ratem wʋsg n be zĩ-bʋs nins sẽn sobd tẽngã. A ra maanda woto ne kugã.",
+        "dioula": "A tun ye farikolokɔnɔ farala dɔ ye min ka ɲi ka lɔ.",
+        "fulfulde": "Goomu ndu, je ɗon mari ferru je ɗon haandi nder nokkuuje tropikal, ɗum naftira bana hayre maɓɓugo."
+      }
+    },
+    {
+      "term": "orpailleur",
+      "lang": "fr",
+      "def": {
+        "fr": "Personne qui cherche de l'or à la main, dans la terre ou les rivières.",
+        "en": "Someone who searches for gold by hand, in the soil or in rivers.",
+        "moore": "Ned ning sẽn baood sãnem ne a nugẽ, t'a bao tẽngã pʋgẽ bɩ kʋɩlgã pʋga.",
+        "dioula": "Mɔgɔ min be sanu ɲinina a bolow fɛ, dugukolo kɔnɔ wala bajiw kɔnɔ.",
+        "fulfulde": "Mo ɗaɓɓitaago daɗde bee jungo, nder leydi malla nder maayo."
+      }
+    },
+    {
+      "term": "Lobi",
+      "lang": "lobiri",
+      "def": {
+        "fr": "Peuple du sud-ouest du Burkina Faso, connu pour son architecture et sa statuaire ; leur langue est le lobiri.",
+        "en": "A people of south-western Burkina Faso known for their architecture and sculpture; their language is Lobiri.",
+        "moore": "Burkina Faso sẽn be zĩ-wũndã, b mii b bugum la b meebã yĩnga. B goama yaa Lobiri.",
+        "dioula": "Burkina Faso worodugu-dugudennin dɔ, u be min lɔn a ka boonw lɔli ni a ka danfɛnw lalagali kosɔn. U ka kaan ye Lobiri lo ye.",
+        "fulfulde": "Yimɓe Burkina Faso feerooturu anndiraa ngam geɗe maɓɓe e taƴe; ɗemngal maɓɓe woni Lobiri."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Ruines de Loropéni, inscrites au patrimoine mondial de l'UNESCO en 2009. Le dialogue est une mise en récit ; les informations historiques suivent les connaissances actuelles, encore discutées par les chercheurs.",
+    "en": "The Ruins of Loropeni, listed as a UNESCO World Heritage Site in 2009. The dialogue is a narrative device; the historical information follows current knowledge, still debated by researchers."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

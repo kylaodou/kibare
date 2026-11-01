@@ -1,0 +1,392 @@
+{
+  "slug": "l-homme-du-puits",
+  "type": "conte",
+  "region": "nord",
+  "place": "Ouahigouya",
+  "coords": [
+    13.58,
+    -2.42
+  ],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 5,
+  "age": 8,
+  "featured": false,
+  "cover": 1,
+  "tags": [
+    "gratitude",
+    "ingratitude",
+    "animaux",
+    "sagesse"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "L'homme du puits et les animaux reconnaissants",
+      "subtitle": "Les bêtes n'oublient pas",
+      "summary": "En pleine famine, un promeneur sauve d'un vieux puits un lion, un singe, un serpent… et un homme. « Ne fais pas sortir l'homme ! » le préviennent les animaux. Il ne les écoute pas.",
+      "moral": "La reconnaissance ne dépend pas de l'apparence : il faut juger chacun sur ses actes."
+    },
+    "en": {
+      "title": "The Man in the Well and the Grateful Animals",
+      "subtitle": "Animals do not forget",
+      "summary": "During a famine, a passer-by rescues a lion, a monkey, a snake… and a man from an old well. “Don't pull the man out!” the animals warn him. He doesn't listen.",
+      "moral": "Gratitude does not depend on appearances: we must judge each one by their deeds."
+    },
+    "moore": {
+      "title": "Ned ning sẽn be bobgo wã ne rũms nins sẽn da pʋʋsd barkã",
+      "subtitle": "Rɩtbã pa yĩmdẽ ye",
+      "summary": "La kom sã n wa be, ned sẽn da loogd zĩigã fãaga gɩgemde, bõoneg la kibr. la rao sẽn yi roog kʋdemdã pʋgẽ. Ra yiis rao wã ye! Rɩtbã keoogda-a lame. A pa kelgd-m ye.",
+      "moral": "D sẽn pʋʋsd Wẽnnaam barka, pa rẽnd tɩ d get nebã b neng ye. Yaa ne tʋʋm-wẽnsã la d segd n kao ned kam fãa bʋʋdo."
+    },
+    "dioula": {
+      "title": "Adamaden min tun be kɔlɔn kɔnɔ ani baganw minw tun be Jehova waleɲuman lɔn",
+      "subtitle": "Baganw tɛ ɲinɛ u kɔ",
+      "summary": "Kɔngɔ wagati la, mɔgɔ dɔ be tɛmɛtɔ ye jara, bɔn, sa... ani cɛ dɔ min bɔra kɔlɔn kɔrɔ dɔ kɔnɔ. Kana cɛɛ sama ka bɔ yen! Baganw b'a lasɔmi. A tɛ mɛnni kɛ.",
+      "moral": "An ka kan k'an mɔgɔ bɛɛ kiti a ka kɛwaliw kosɔn."
+    },
+    "fulfulde": {
+      "title": "Yimɓe nder ndiyam e dabbaaji booɗotooɗi",
+      "subtitle": "Leɗɗe naa' manndataa",
+      "summary": "Nder warugo naange, goɗɗo mo ɗon yahda to laawol o hisni le'o, monkey, koofol... e goɗɗo ƴuuruɗo nder mayre mawɗe.  Taa ƴeew neɗɗo! Leewuji ɗon hokkata mo habaru. O nanaayi.",
+      "moral": "Allah hokkata en mangu ngam o holliiɓe ko'e maɓɓe. Ngam non, eɗen ngaɗa kiita dow kuuɗe maako."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 310,
+            "s": 1.2
+          },
+          {
+            "k": "well",
+            "x": 50
+          },
+          {
+            "k": "man-point",
+            "x": 30,
+            "c": "#F4EFE6"
+          },
+          {
+            "k": "acacia",
+            "x": 84,
+            "y": 26
+          },
+          {
+            "k": "baobab",
+            "x": 10,
+            "y": 26,
+            "c": "bare"
+          }
+        ]
+      },
+      "text": {
+        "fr": "La famine régnait sur tout le pays. Un homme partit en brousse chercher des fruits sauvages. Arrivé près d'un vieux puits, il se pencha et découvrit, tout au fond, un homme, un lion, un singe et un serpent, tombés là et incapables de remonter.",
+        "en": "Famine reigned over the whole land. A man went into the bush to look for wild fruit. Reaching an old well, he leaned over and saw, at the very bottom, a man, a lion, a monkey and a snake, who had fallen in and could not climb out.",
+        "moore": "Kom n wa be tẽngã gill zugu. Rao n kẽnga bugumẽ wã n na n bao biis sẽn yaa weoogd. A sẽn ta kʋdemd yaoodẽ wã, a wõgemdame n yã rao ne gɩgemde la bõoneg la ki-bees sẽn lʋɩ b pʋgẽ tɩ b pa tõe n yi ye.",
+        "dioula": "Kɔngɔ tun be jamana yɔrɔ bɛɛ la. Cɛɛ dɔ tagara yiritu kɔnɔ ka kongoyiri ɲini. A sera kɔlɔn kɔrɔ dɔ la. A jigira ka mɔgɔ dɔ ye o kɔlɔn jukɔrɔ, jara, bɔn ani sa minw tun benna a kɔnɔ, u ma se ka bɔ yen.",
+        "fulfulde": "Nde weelo waɗi nder lesdi fuu. Goɗɗo yahi nder leɗɗe ngam ɗaɓɓita nyaamdu. Nde o wari to ndiyam ɓuuɓam, o yaari haa ɗon, o yi'i nder duniyaaru neɗɗo, e lewru, e majje e njamndi, ɓe mballi nder nden, ammaa ɓe mbaawataa wurtaago."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "well",
+            "x": 48
+          },
+          {
+            "k": "rope",
+            "x": 40,
+            "s": 0.8
+          },
+          {
+            "k": "monkey",
+            "x": 64,
+            "s": 0.9
+          },
+          {
+            "k": "lion",
+            "x": 80,
+            "s": 0.8
+          },
+          {
+            "k": "snake",
+            "x": 26
+          },
+          {
+            "k": "man-up",
+            "x": 34,
+            "c": "#F4EFE6"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il attacha de longues lianes à une branche et les lança dans le puits. Le singe sortit le premier, puis le lion, puis le serpent. « Surtout, ne fais pas sortir cet homme ! » le prévinrent les animaux. « Comment ? Je vous ai sauvés, et j'abandonnerais mon semblable ? » Et il aida l'homme à remonter.",
+        "en": "He tied long vines to a branch and threw them down the well. The monkey climbed out first, then the lion, then the snake. “Whatever you do, don't pull that man out!” the animals warned him. “What? I saved you, and I should abandon one of my own kind?” And he helped the man climb out.",
+        "moore": "A sẽbga tɩɩs-kãsemse tɩ b gãneg a taab la a lob-ba. Pipi, yaa wa we-rũngã n yi. Rẽ poore, yaa gɩgemdã la kibayã. B sẽn da wa n na n maan bũmb ning fãa, bɩ y ra yiis rao-kãng ye. Bõe la a maan-yã? Mam fãaga yãmb la m segd n basa m buud ned a ye bɩ? La yẽ sõnga rao wã t'a yi.",
+        "dioula": "A ye rezɛnyirijanw siri yiriboro dɔ la k'u fili kɔlɔn kɔnɔ. O kɔ, jara bɔra fɔlɔ. O kɔ, saa bɔra. I mana min kɛ, kana o cɛ sama ka bɔ yen! Baganw y'a lasɔmi. Mun lo? Ne y'i kisi, ne ka kan k'a to n yɛrɛ ta mɔgɔ dɔ ye bɔ yen wa? A y'o cɛɛ dɛmɛ a bɔra.",
+        "fulfulde": "O haɓɓii limce ɓerɗe haa karallaagal, o hocci ɗe nder mayre. Wuro ɓooyɗo fu, nden lewru boo, nden ko weelo. Ko'e ko waɗata, taa ƴiwnde neɗɗo on! Dentuɓe ɗon hokki mo hakkillo. Ko honɗun? Mi hisni ma, nden kam mi acca goɗɗo nder yimɓe am? O walli neɗɗo o'o."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "monkey",
+            "x": 60,
+            "y": 60,
+            "s": 1
+          },
+          {
+            "k": "karite",
+            "x": 64,
+            "y": 20,
+            "s": 1.1
+          },
+          {
+            "k": "man",
+            "x": 34,
+            "c": "#F4EFE6"
+          },
+          {
+            "k": "lion",
+            "x": 16,
+            "s": 0.8
+          },
+          {
+            "k": "calabash",
+            "x": 44
+          }
+        ]
+      },
+      "text": {
+        "fr": "Quelques jours plus tard, la faim tenaillait toujours notre homme. Le singe lui jeta des fruits du haut des arbres. Le lion lui apporta de la viande. Les animaux, reconnaissants, l'aidaient chaque jour. Mais l'homme sauvé, lui, était devenu le serviteur du chef, et il était jaloux de son bienfaiteur.",
+        "en": "A few days later, the man was still starving. The monkey threw him fruit from the treetops. The lion brought him meat. Grateful, the animals helped him every day. But the man he had saved had become the chief's servant, and he was jealous of his rescuer.",
+        "moore": "Daar a wãn poore, kom da ket n yõkda raoã. Bãagrã lob-a-la biis tɩɩs zutẽ. Yaa gɩgemd n wa ne a namsa. A sẽn da mi n pʋʋsd a Zeova barka, rũmsã sõng-a lame daar fãa. La rao ning a sẽn fãagã lebga naabã tʋmtʋmd n maan sũ-kiir ne yẽ.",
+        "dioula": "Loon damanin o kɔ, kɔngɔ tun b'a la. O tuma na, a ye yiriw kunfɛyiriw fili ka kisɛ kɛ. Jara y'a di a ma sogo. A tun be Jehova waleɲuman lɔn sabu a tun b'a fɛ u k'ale dɛmɛ loon o loon. Nka, a tun ye cɛɛ min kisi, ale kɛra kuntigi ka baaraden ye. A ɲangoya tun b'a la k'o tigi lo bɔsi.",
+        "fulfulde": "Balɗe goɗɗe ɓaawo maajum, gorko on ɗon maaya. Maaki'en ɗon wurtina mo nyaamdu diga dow leɗɗe. Lewru hokki mo leggal. O yetti, dabbaaji mballi mo nder nyalnde fuu. Ammaa neɗɗo mo o hisni waɗi maccuɗo mawɗo, nden o ɗon yiɗde kisndam maako."
+      },
+      "choice": {
+        "q": {
+          "fr": "Qui va se montrer ingrat ?",
+          "en": "Who will prove ungrateful?",
+          "moore": "Ãnda n na n yɩ neb sẽn ka mi Wẽnnaam barka?",
+          "dioula": "Jɔn lo bena kɛ mɔgɔ tɛrɛɲuman ye?",
+          "fulfulde": "Moy torraay?"
+        },
+        "options": [
+          {
+            "fr": "Le lion",
+            "en": "The lion",
+            "moore": "Yaa gɩgemdã.",
+            "dioula": "Jaraw ka kan k'a ye.",
+            "fulfulde": "Lamu ɗon"
+          },
+          {
+            "fr": "L'homme sauvé du puits",
+            "en": "The man saved from the well",
+            "moore": "Rao ning b sẽn fãag n yi koom-koglgã pʋgẽ wã",
+            "dioula": "Cɛ min kisira kɔlɔn kɔnɔ,",
+            "fulfulde": "Yimɓe ɓe ɗon hisna diga nder mayre"
+          },
+          {
+            "fr": "Le serpent",
+            "en": "The snake",
+            "moore": "A weoogã",
+            "dioula": "Sa nin ye",
+            "fulfulde": "Nyol ngol"
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "L'homme sauvé alla raconter des mensonges au chef…",
+          "en": "The rescued man went to tell lies to the chief…",
+          "moore": "Ned ning b sẽn fãagã kẽngame n tɩ zãmb a naabã.",
+          "dioula": "Mɔgɔ min kisira, ale tagara ngalon tigɛ kuntigi ye.",
+          "fulfulde": "Goɗɗo mo ɓe kisni yahi wi'ugo ko o mari habaru..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "village",
+        "items": [
+          {
+            "k": "palace",
+            "x": 60,
+            "y": 34,
+            "s": 0.8
+          },
+          {
+            "k": "king-talk",
+            "x": 44,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "man",
+            "x": 30,
+            "c": "#C9822B"
+          },
+          {
+            "k": "man",
+            "x": 18,
+            "c": "#F4EFE6"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il accusa son sauveur d'avoir volé la viande du chef. Le promeneur fut arrêté et jeté en prison. Mais le serpent, qui n'avait pas oublié, mordit le fils du chef, puis glissa à l'oreille du prisonnier : « Voici les feuilles qui le guériront. »",
+        "en": "He accused his rescuer of stealing the chief's meat. The passer-by was arrested and thrown into prison. But the snake, who had not forgotten, bit the chief's son, then whispered in the prisoner's ear: “Here are the leaves that will cure him.”",
+        "moore": "A yeelame tɩ a koglg-a lame t'a yiba a naab namsgã. B yõka ned ning sẽn da be zĩigã n kẽes-a bi-bees roogẽ. La we-raoogã sẽn da pa yĩm n kʋ wã, a sãame tɩ b na n sãoog-a lame.",
+        "dioula": "A y'a fɔ ko a ka mɔgɔ min ye a kisibaga faga, ale lo ye kuntigi nin sogo son. U ye cɛɛ minɛ ani k'a don kaso la. Nka sa min tun ma ɲinɛ, ale ye kuntigi dencɛ dɔ nɛni. O kɔ, a y'a fɔ kasoden tulo la ko: \"A furaburu minw bena kɛnɛya\".",
+        "fulfulde": "O ɗon ceede mo o hisni ngam ɓooyugo leggal hooreejo. Ɓe nangi mo ɓe ɗon yahda e nder suudu. Ammaa haaje, mo wi'ataa, o nyaami ɓiɗɗo mawɗo, nden o haani nder noppi maccuɗo: \"Ɗo woni leɗɗe ɗe huuwtan mo\"."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "palace",
+            "x": 62,
+            "y": 34,
+            "s": 0.8
+          },
+          {
+            "k": "king",
+            "x": 46,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "man-up",
+            "x": 32,
+            "c": "#F4EFE6"
+          },
+          {
+            "k": "child-up",
+            "x": 56,
+            "c": "#00894A"
+          },
+          {
+            "k": "snake",
+            "x": 18
+          }
+        ]
+      },
+      "text": {
+        "fr": "Aucun guérisseur ne parvint à sauver l'enfant du chef. Alors le prisonnier proposa son remède, et le garçon guérit. Il raconta toute son histoire, et le chef comprit la vérité. Le menteur fut chassé du village, et le bon promeneur fut honoré. Les anciens disent depuis : « Les bêtes savent ce qu'est la reconnaissance ; les hommes doivent l'apprendre. »",
+        "en": "No healer could save the chief's child. Then the prisoner offered his remedy, and the boy recovered. He told his whole story, and the chief understood the truth. The liar was driven from the village, and the good man was honoured. Since then the elders say: “Animals know what gratitude is; people must learn it.”",
+        "moore": "Ned sẽn na n sãoogd bãadã pa tõe n fãag a naab biigã ye. Rẽ poore, bi-bɛɛgã kõ-a lame tɩ b maag a yĩng n sãoog biigã. A goma a kibarã fãa, la sodaas kãsem soab wʋmame tɩ yaa sɩda. B digda zãmb soabã n yiis tẽn-kãng pʋgẽ, la b waoogd nin-sõngã. Rẽ tɛka, kãsem dãmbã yeelame tɩ: \"Rĩimã mii bark pʋʋsgo; nebã segd n zãmsame\".",
+        "dioula": "Fangabaga si tɛ se ka kuntigi dencɛ kisi. O kɔ, kasoden y'a ka bana furakɛ ani a kɛnɛyara. A y'a ka koo bɛɛ lakali ani kuntigi ye tiɲɛn faamu. U ye ngalontigɛla gwɛn ka bɔ dugu kɔnɔ, ani u y'a bonya. Kabi o tuma, diinan mɔgɔkɔrɔw b'a fɔ ko: \"Sogow be barika la Ala ye. Mɔgɔw ka ɲi k'o faamu\".",
+        "fulfulde": "Walaa mo ɗon wallina ɓiy mawɗo. Nden maccuɗo on hokki mo yamiroore maako, nden suka on ummi. O wi'i haala maako fuu, nden ardiiɗo on faama goonga. Goonga ɗon ɓe riiwi nder gariiri, nden boo neɗɗo mo boɗɗum ɗon teddina. Gila nden wakkati, mawɓe ɗon mbi'a: Diinaje anndi ko hokkugo ngam marude; yimɓe doole ɓe njanngino ɗum."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qui le promeneur sauve-t-il du puits ?",
+        "en": "Whom does the passer-by rescue from the well?",
+        "moore": "Sẽn da beẽ wã fãagda ãnd n yi koom-koglgã pʋgẽ?",
+        "dioula": "Mɔgɔ min be tɛmɛsira kan, ale ye jɔn lo bɔsi kɔlɔn kɔnɔ?",
+        "fulfulde": "Moy mo ɗon yahda nder ndiyam ɗo'o ?"
+      },
+      "options": [
+        {
+          "fr": "Un homme, un lion, un singe et un serpent",
+          "en": "A man, a lion, a monkey and a snake",
+          "moore": "Ned, gɩgemd, bõang la kibayã",
+          "dioula": "Adamaden, jara, majigɛ ani saa",
+          "fulfulde": "Yimɗo, lewru, monkey e weelo"
+        },
+        {
+          "fr": "Un enfant",
+          "en": "A child",
+          "moore": "Biiga sẽn yaa bi-ribl",
+          "dioula": "Denmisɛn dɔ",
+          "fulfulde": "Ɓiɗɗo"
+        },
+        {
+          "fr": "Une vache",
+          "en": "A cow",
+          "moore": "Ko-kãnga",
+          "dioula": "Misi dɔ",
+          "fulfulde": "Koomoy"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Comment le serpent aide-t-il son sauveur ?",
+        "en": "How does the snake help its rescuer?",
+        "moore": "Wãn to la we-rũngã sõngd a fãagdbã?",
+        "dioula": "Sogow be se k'a dɛmɛ cogo di?",
+        "fulfulde": "Noy hoolaare walliɗo maako?"
+      },
+      "options": [
+        {
+          "fr": "Il lui donne un remède",
+          "en": "It gives him a remedy",
+          "moore": "A na n paama tɩɩm a ye.",
+          "dioula": "O b'a dɛmɛ ka furakɛ.",
+          "fulfulde": "Ɗum hokkata mo huwugo"
+        },
+        {
+          "fr": "Il ouvre la prison",
+          "en": "It opens the prison",
+          "moore": "A pakda bi-bees roogã.",
+          "dioula": "O be kaso dayɛlɛ.",
+          "fulfulde": "Ɗum wayliti suudu ceerno"
+        },
+        {
+          "fr": "Il mord le menteur",
+          "en": "It bites the liar",
+          "moore": "A sã n da wa zãmbda, a gɩdgdda ned ning sẽn belgdã.",
+          "dioula": "A be galontigɛla dɔ cin.",
+          "fulfulde": "O ɗon nyaama ko'e mon"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "liane",
+      "lang": "fr",
+      "def": {
+        "fr": "Longue tige souple de plante grimpante, solide comme une corde.",
+        "en": "A long, flexible stem of a climbing plant, as strong as a rope.",
+        "moore": "Bãag sẽn yaa sẽk n tar pãng wa logto.",
+        "dioula": "O ye yirijan dɔ ta ye min be yɛlɛla ka taga yen. A fanga ka bon i ko juru.",
+        "fulfulde": "Ɗuum ɓanndu ndu'un ɗon haaɗta, e foondugo bana leɗɗe ɗe ɓe ngarta."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « L'ingratitude », conte populaire burkinabè publié sur abcBurkina.net ; ce récit de l'homme sauvé et des animaux reconnaissants circule dans toute l'Afrique de l'Ouest. La suite est complétée selon les versions les plus courantes. Réécriture libre.",
+    "en": "Based on “L'ingratitude”, a Burkinabè folk tale published on abcBurkina.net; this story of the rescued man and the grateful animals is told throughout West Africa. The ending follows the most common versions. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

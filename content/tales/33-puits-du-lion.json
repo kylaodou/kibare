@@ -1,0 +1,206 @@
+{
+  "slug": "le-puits-du-lion",
+  "type": "conte",
+  "region": "centre-ouest",
+  "place": "Koudougou",
+  "coords": [12.25, -2.36],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 5,
+  "age": 5,
+  "featured": true,
+  "cover": 3,
+  "tags": ["partage", "ruse", "lièvre", "sécheresse"],
+  "i18n": {
+    "fr": {
+      "title": "Le puits du lion",
+      "subtitle": "L'intelligence vaut mieux que la force",
+      "summary": "Pendant une grande sécheresse, tous les animaux creusent ensemble un puits… que le lion garde pour lui seul. M'ba Fanni le lièvre a un plan.",
+      "moral": "Ce que l'on a bâti ensemble se partage ; et l'on ne fait pas de mal à qui nous a fait du bien."
+    },
+    "en": {
+      "title": "The Lion's Well",
+      "subtitle": "Brains beat brawn",
+      "summary": "During a great drought, all the animals dig a well together… which the lion keeps for himself alone. M'ba Fanni the hare has a plan.",
+      "moral": "What we build together is shared; and we do not harm those who have done us good."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "sahel",
+        "items": [
+          { "k": "sun", "x": 80, "y": 320, "s": 1.4 },
+          { "k": "baobab", "x": 14, "y": 26, "c": "bare" },
+          { "k": "lion", "x": 50, "s": 1 },
+          { "k": "hare", "x": 30 },
+          { "k": "elephant", "x": 76, "s": 0.8 },
+          { "k": "monkey", "x": 62, "s": 0.8 }
+        ]
+      },
+      "text": {
+        "fr": "Il y a très, très longtemps, quand les animaux parlaient comme les hommes, la savane était verte et l'eau ne manquait nulle part. Puis vint une terrible sécheresse. Rivières et marigots s'asséchèrent un à un, et les animaux commencèrent à mourir de soif. Le lion, roi de la brousse, réunit alors tout le monde en grande assemblée.",
+        "en": "A very, very long time ago, when animals spoke like people, the savannah was green and there was water everywhere. Then came a terrible drought. Rivers and backwaters dried up one by one, and the animals began to die of thirst. The lion, king of the bush, then called everyone to a great assembly."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "sahel",
+        "items": [
+          { "k": "well", "x": 50 },
+          { "k": "hare", "x": 34, "a": "a-hop" },
+          { "k": "elephant", "x": 74, "s": 0.8 },
+          { "k": "monkey", "x": 62, "s": 0.8 },
+          { "k": "snake", "x": 22 },
+          { "k": "lion", "x": 88, "s": 0.8, "flip": true }
+        ]
+      },
+      "text": {
+        "fr": "Chacun donna son idée. Quand vint son tour, M'ba Fanni le lièvre déclara : « Achetons des outils chez les hommes et creusons un grand puits. Il nous fera vivre jusqu'aux pluies ! » Tous applaudirent. Pendant dix jours, ils creusèrent ensemble, et l'eau finit par jaillir.",
+        "en": "Everyone gave an idea. When his turn came, M'ba Fanni the hare declared: “Let's buy tools from the humans and dig a great well. It will keep us alive until the rains!” Everyone cheered. For ten days they dug together, and at last the water gushed out."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "sahel",
+        "items": [
+          { "k": "well", "x": 44 },
+          { "k": "lion", "x": 58, "s": 1.2, "flip": true },
+          { "k": "monkey", "x": 14, "s": 0.8 },
+          { "k": "snake", "x": 24 },
+          { "k": "hare", "x": 86, "flip": true }
+        ]
+      },
+      "text": {
+        "fr": "Mais à peine le puits fut-il plein que le lion se coucha sur la margelle. « Ce puits est à moi seul. Je suis le roi ! Celui qui approche, je le dévore. » Le singe, le serpent et l'épervier vinrent le supplier ; il les chassa tous. Même l'assemblée réunie par l'éléphant ne trouva aucune solution.",
+        "en": "But no sooner was the well full than the lion lay down on its rim. “This well is mine alone. I am the king! Whoever comes near, I will devour.” The monkey, the snake and the hawk came to beg him; he drove them all away. Even the assembly called by the elephant could find no solution."
+      },
+      "choice": {
+        "q": { "fr": "Comment le lièvre peut-il battre le lion ?", "en": "How can the hare beat the lion?" },
+        "options": [
+          { "fr": "Par la ruse", "en": "By cunning" },
+          { "fr": "En se battant", "en": "By fighting" },
+          { "fr": "En partant loin", "en": "By going far away" }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "« Laissez-moi faire, dit le lièvre. Le lion va apprendre que l'intelligence vaut mieux que la force. »",
+          "en": "“Leave it to me,” said the hare. “The lion is going to learn that brains beat brawn.”"
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          { "k": "acacia", "x": 52, "y": 24, "s": 1.2 },
+          { "k": "lion", "x": 50, "s": 1.1 },
+          { "k": "rope", "x": 50, "s": 1 },
+          { "k": "hare", "x": 28, "a": "a-hop" },
+          { "k": "cloud", "x": 80, "y": 260 }
+        ]
+      },
+      "text": {
+        "fr": "Le lièvre revint en courant, une longue corde sur l'épaule : « Alerte ! Un vent terrible arrive, il emporte tout ! Je cours attacher mes enfants à un arbre ! » « Pas question, rugit le lion. Je suis le roi, c'est moi qu'on attache d'abord ! » Le lièvre ne se fit pas prier et ficela solidement le lion au tronc d'un grand arbre.",
+        "en": "The hare came running back with a long rope over his shoulder: “Alert! A terrible wind is coming, it's carrying everything away! I'm running to tie my children to a tree!” “Out of the question,” roared the lion. “I'm the king, I get tied up first!” The hare didn't need telling twice and bound the lion tightly to the trunk of a big tree."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "sahel",
+        "items": [
+          { "k": "well", "x": 54 },
+          { "k": "hare", "x": 40, "a": "a-hop" },
+          { "k": "monkey", "x": 66, "s": 0.8, "a": "a-hop" },
+          { "k": "elephant", "x": 82, "s": 0.8 },
+          { "k": "drum", "x": 24 },
+          { "k": "partridge", "x": 70 }
+        ]
+      },
+      "text": {
+        "fr": "Puis il se mit à chanter et à danser : « J'ai attaché le lion, venez boire à son puits ! » Tous les animaux accoururent, burent et se lavèrent en riant. Le lion resta attaché dix jours sans boire ; il demanda pardon, mais personne ne l'écoutait plus.",
+        "en": "Then he began to sing and dance: “I've tied up the lion, come and drink from his well!” All the animals came running, drank and washed, laughing. The lion stayed tied up for ten days without a drink; he begged forgiveness, but no one listened to him any more."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          { "k": "mouse", "x": 44, "s": 1.6 },
+          { "k": "lion", "x": 60, "s": 1.1, "flip": true },
+          { "k": "grass", "x": 20 },
+          { "k": "hare", "x": 12, "a": "a-hop" }
+        ]
+      },
+      "text": {
+        "fr": "Mais la souris trahit les siens : elle rongea la corde et libéra le lion. Pour tout remerciement, le lion furieux l'écrasa et l'enfonça dans le sol, puis se cacha pour guetter le lièvre. Le lièvre, plus rapide, bondit dans les hautes herbes et s'échappa. C'est pourquoi la souris vit sous la terre, et le lièvre détale dès qu'il voit le lion.",
+        "en": "But the mouse betrayed her own: she gnawed through the rope and set the lion free. As his only thanks, the furious lion crushed her and pushed her into the ground, then hid to lie in wait for the hare. The hare, quicker, leapt into the tall grass and escaped. That is why the mouse lives underground, and the hare bolts as soon as he sees the lion."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": { "fr": "Qui a eu l'idée de creuser un puits ?", "en": "Whose idea was it to dig a well?" },
+      "options": [
+        { "fr": "Le lièvre", "en": "The hare" },
+        { "fr": "Le lion", "en": "The lion" },
+        { "fr": "L'éléphant", "en": "The elephant" }
+      ],
+      "answer": 0
+    },
+    {
+      "q": { "fr": "Quelle ruse utilise le lièvre ?", "en": "What trick does the hare use?" },
+      "options": [
+        { "fr": "Il annonce un vent terrible", "en": "He announces a terrible wind" },
+        { "fr": "Il empoisonne l'eau", "en": "He poisons the water" },
+        { "fr": "Il appelle les chasseurs", "en": "He calls the hunters" }
+      ],
+      "answer": 0
+    },
+    {
+      "q": { "fr": "Qui libère le lion ?", "en": "Who frees the lion?" },
+      "options": [
+        { "fr": "La souris", "en": "The mouse" },
+        { "fr": "Le singe", "en": "The monkey" },
+        { "fr": "Le serpent", "en": "The snake" }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "M'ba",
+      "lang": "moore",
+      "def": {
+        "fr": "Titre respectueux placé devant le nom des animaux dans les contes (« père », « maître ») : M'ba Soamba le lièvre, M'ba Katre la hyène.",
+        "en": "A respectful title placed before animals' names in tales (“father”, “master”): M'ba Soamba the hare, M'ba Katre the hyena."
+      }
+    },
+    {
+      "term": "marigot",
+      "lang": "fr",
+      "def": {
+        "fr": "Bras de rivière ou mare qui se remplit à la saison des pluies et s'assèche en saison sèche.",
+        "en": "A river backwater or pond that fills in the rainy season and dries up in the dry season."
+      }
+    },
+    {
+      "term": "margelle",
+      "lang": "fr",
+      "def": {
+        "fr": "Rebord de pierre ou de terre qui entoure l'ouverture d'un puits.",
+        "en": "The stone or earth rim around the opening of a well."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « Le puits du lion » (conte n° 19), Recueil de contes pour les structures d'éducation préscolaire au Burkina Faso, MENAPLN avec l'appui de l'UNICEF, 2022. Réécriture libre ; les personnages y portent leurs noms de conte (M'Ba Fanni le lièvre, M'Ba Pouna le lion, M'Ba Yibre l'éléphant).",
+    "en": "Based on “Le puits du lion” (tale no. 19), Recueil de contes pour les structures d'éducation préscolaire au Burkina Faso, MENAPLN with support from UNICEF, 2022. Free retelling; in it the characters bear their tale names (M'Ba Fanni the hare, M'Ba Pouna the lion, M'Ba Yibre the elephant)."
+  }
+}

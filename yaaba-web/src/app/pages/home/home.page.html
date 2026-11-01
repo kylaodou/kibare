@@ -1,0 +1,187 @@
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text reveal">
+      <span class="eyebrow">{{ 'home.eyebrow' | t }}</span>
+      <h1>
+        {{ 'home.title.a' | t }}
+        <span class="accent">{{ 'home.title.b' | t }}</span>
+      </h1>
+      <p class="lead">{{ 'home.lead' | t }}</p>
+      <div class="ctas" id="hero-cta">
+        <a routerLink="/carte" class="btn">
+          <i class="fa-solid fa-map-location-dot"></i>
+          {{ 'home.cta.map' | t }}
+        </a>
+        <a [routerLink]="['/contes', today().slug]" class="btn btn-ghost">
+          <i class="fa-solid fa-play"></i>
+          {{ 'home.cta.listen' | t }}
+        </a>
+      </div>
+      <dl class="stats">
+        <div>
+          <dt>{{ data.tales().length }}</dt>
+          <dd>{{ 'home.stats.tales' | t }}</dd>
+        </div>
+        <div>
+          <dt>{{ data.regions().length }}</dt>
+          <dd>{{ 'home.stats.regions' | t }}</dd>
+        </div>
+        <div>
+          <dt>{{ languageCount() }}</dt>
+          <dd>{{ 'home.stats.languages' | t }}</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="hero-art reveal" style="animation-delay: 120ms">
+      <div class="frame">
+        <app-scene-art [art]="hero" [parallax]="true" [enter]="true" />
+      </div>
+      <a class="today card" id="today" [routerLink]="['/contes', today().slug]">
+        <span class="today-ico"><i class="fa-solid fa-moon"></i></span>
+        <span class="today-text">
+          <small>{{ 'home.today' | t }}</small>
+          <strong>{{ todayText().title }}</strong>
+        </span>
+        <span class="play"><i class="fa-solid fa-play"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROVERBE ============ -->
+<section class="proverb bogolan">
+  <div class="band-tiebele"></div>
+  <div class="container proverb-grid">
+    <i class="fa-solid fa-quote-left q-mark" aria-hidden="true"></i>
+    <figure>
+      <blockquote>{{ 'home.proverb.text' | t }}</blockquote>
+      <figcaption>{{ 'home.proverb.by' | t }}</figcaption>
+    </figure>
+    <div class="proverb-side">
+      <p>{{ 'home.proverb.note' | t }}</p>
+      <a routerLink="/a-propos" class="btn btn-on-dark btn-sm">
+        {{ 'home.proverb.cta' | t }}
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="band-danfani"></div>
+</section>
+
+<!-- ============ REPRENDRE ============ -->
+@if (resume().length) {
+  <section class="container resume">
+    <h2 class="h-small"><i class="fa-solid fa-bookmark"></i> {{ 'home.resume' | t }}</h2>
+    <div class="resume-list">
+      @for (r of resume(); track r.slug) {
+        <a class="resume-item card" [routerLink]="['/contes', r.slug]">
+          <span class="ri-title">{{ r.tale.i18n[i18n.lang()].title }}</span>
+          <span class="ri-meta">{{ 'home.resumeScene' | t: { n: r.scene + 1, total: r.tale.scenes.length } }}</span>
+          <span class="ri-bar"><span [style.width.%]="((r.scene + 1) / r.tale.scenes.length) * 100"></span></span>
+        </a>
+      }
+    </div>
+  </section>
+}
+
+<!-- ============ COMMENT ÇA MARCHE ============ -->
+<section class="section how">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ 'home.how.eyebrow' | t }}</span>
+      <h2>{{ 'home.how.title' | t }}</h2>
+    </div>
+    <ol class="steps">
+      @for (s of steps; track s.title; let i = $index) {
+        <li class="step">
+          <span class="step-ico {{ s.color }}"><i class="fa-solid {{ s.icon }}"></i></span>
+          <span class="step-n">0{{ i + 1 }}</span>
+          <h3>{{ s.title | t }}</h3>
+          <p>{{ s.text | t }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CONTES À LA UNE ============ -->
+<section class="section featured">
+  <div class="container">
+    <div class="section-head row">
+      <div>
+        <span class="eyebrow">{{ 'home.featured.eyebrow' | t }}</span>
+        <h2>{{ 'home.featured.title' | t }}</h2>
+      </div>
+      <a routerLink="/contes" class="btn btn-ghost btn-sm">
+        {{ 'home.featured.all' | t }}
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+    <div class="tales-grid">
+      @for (t of featured(); track t.slug) {
+        <app-tale-card [tale]="t" />
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARTE ============ -->
+<section class="section map-teaser">
+  <div class="container map-grid">
+    <div>
+      <span class="eyebrow">{{ 'home.map.eyebrow' | t }}</span>
+      <h2>{{ 'home.map.title' | t }}</h2>
+      <p class="lead">{{ 'home.map.lead' | t }}</p>
+      <ul class="checks">
+        <li><i class="fa-solid fa-cube"></i> {{ 'home.map.f1' | t }}</li>
+        <li><i class="fa-solid fa-layer-group"></i> {{ 'home.map.f2' | t }}</li>
+        <li><i class="fa-solid fa-filter"></i> {{ 'home.map.f3' | t }}</li>
+      </ul>
+      <a routerLink="/carte" class="btn btn-green">
+        <i class="fa-solid fa-earth-africa"></i>
+        {{ 'home.map.cta' | t }}
+      </a>
+    </div>
+    <div class="map-box">
+      <app-mini-map [dots]="dots()" [interactive]="true" [showLabels]="true" (regionClick)="regionClick($event)" />
+      <span class="map-hint"><i class="fa-solid fa-hand-pointer"></i> {{ 'home.map.hint' | t }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LANGUES ============ -->
+<section class="section langs">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">{{ 'home.langs.eyebrow' | t }}</span>
+      <h2>{{ 'home.langs.title' | t }}</h2>
+      <p class="lead">{{ 'home.langs.lead' | t }}</p>
+    </div>
+    <div class="greetings">
+      @for (l of nationalLanguages(); track l.code) {
+        <a class="greet card" routerLink="/langues" [fragment]="l.code">
+          <span class="g-word">{{ l.greeting!.text }}</span>
+          <span class="g-lang">{{ l.name }}</span>
+          <span class="g-mean">{{ l.greeting!.meaning[i18n.lang()] }}</span>
+        </a>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTRIBUER ============ -->
+<section class="container">
+  <div class="contribute">
+    <div class="c-ico"><i class="fa-solid fa-microphone-lines"></i></div>
+    <div class="c-text">
+      <h2>{{ 'home.contrib.title' | t }}</h2>
+      <p>{{ 'home.contrib.text' | t }}</p>
+    </div>
+    <a routerLink="/contribuer" class="btn btn-on-dark">
+      {{ 'home.contrib.cta' | t }}
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>

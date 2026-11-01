@@ -1,0 +1,429 @@
+{
+  "slug": "l-orpheline-et-le-gombo",
+  "type": "conte",
+  "region": "est",
+  "place": "Bogandé",
+  "coords": [
+    13.02,
+    -0.2
+  ],
+  "people": "Gourmantché",
+  "language": "gulmancema",
+  "duration": 5,
+  "age": 7,
+  "featured": true,
+  "cover": 2,
+  "tags": [
+    "orpheline",
+    "amour maternel",
+    "justice",
+    "bonté"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "L'orpheline et le gombo",
+      "subtitle": "L'amour d'une mère plus fort que tout",
+      "summary": "Maltraitée par sa marâtre, une petite orpheline doit rapporter du gombo frais en pleine saison sèche. Une nuit, sa mère lui parle en rêve : « Sème des graines sur ma tombe. »",
+      "moral": "La bonté finit toujours par être récompensée, et la méchanceté se retourne contre ceux qui la pratiquent."
+    },
+    "en": {
+      "title": "The Orphan and the Okra",
+      "subtitle": "A mother's love stronger than anything",
+      "summary": "Mistreated by her stepmother, a little orphan girl is ordered to bring back fresh okra in the middle of the dry season. One night, her mother speaks to her in a dream: “Sow seeds on my grave.”",
+      "moral": "Kindness is always rewarded in the end, and cruelty turns against those who practise it."
+    },
+    "moore": {
+      "title": "B sẽn yaa sik-m-mengã ne b sẽn yaa Okra wã",
+      "subtitle": "Maam nonglmã yɩɩda bũmb fãa.",
+      "summary": "A ma-biiga sẽn yaa bi-ribl n namsd a pagã, b kɩtame tɩ fẽngd yãag wa ne okra sẽn ya sãnem wakate. Daar a ye yʋngo, a ma goma ne-a zãmsd pʋgẽ: \"Bãag bõn-buud m yaoogẽ\".",
+      "moral": "La sũ-bʋgsem sã n wa paamda barka, a na n kɩtame tɩ ned ning sẽn maand-a wẽnga maan wẽng wʋsgo."
+    },
+    "dioula": {
+      "title": "Fantanw ni Okra",
+      "subtitle": "Kanuya min be bamuso fɛ, o ka bon ni fɛɛn bɛɛ ye.",
+      "summary": "A bamuso ye tilenbaliyako kɛ a la. O kama, u y'a fɔ denfacɛ dɔ ye ko a ka taga ni sumanw ye sanjiba wagati la. Loon dɔ sufɛ, a bamuso kumana a fɛ siko la ko: \"I ka kisɛ seri ne suu kan\".",
+      "moral": "Mɔgɔ min be ɲumanya kɛ, o tigi bena duga sɔrɔ. Nka mɔgɔ minw b'o kɛ, juguya b'olu kan."
+    },
+    "fulfulde": {
+      "title": "Ɓiɗɗo Baaba e Ocra",
+      "subtitle": "Yiɗde debbo ɓurɗo fuu",
+      "summary": "Ngam o ɗon moodi e deerɗam maako, debbo on ɗon umri hokkugo okra ɓeydiɗum nder caka sahaaji. Nder jemma go'o, inna maako wolwi bee maako nder lekki: Woldi seedam dow yenaande am.",
+      "moral": "Nyakkere ɗon heɓata ko'e mum nder wakkere, nden boo kalluɗum ɗon wurtina yimɓe ɓe ngaɗani ɗum."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 16,
+            "y": 26
+          },
+          {
+            "k": "woman-talk",
+            "x": 40,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child",
+            "x": 54,
+            "c": "#C9822B"
+          },
+          {
+            "k": "child-up",
+            "x": 70,
+            "c": "#D62828"
+          },
+          {
+            "k": "calabash",
+            "x": 60
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un homme avait deux épouses, et chacune lui avait donné une fille. Il mourut, et bientôt l'une des mères le suivit. L'autre femme garda les deux fillettes, mais elle gâtait sa propre fille et confiait à l'orpheline les travaux les plus durs.",
+        "en": "A man had two wives, and each had given him a daughter. He died, and soon one of the mothers followed him. The other woman kept both girls, but she spoiled her own daughter and gave the orphan all the hardest chores.",
+        "moore": "Rao a yembr da tara pagb a yiib, la ned kam fãa ra kõ-a bi-pugli. A kiime, la ka loɛɛg ye tɩ ma-rãmb a yembr tũ-a. Pag a to wã ra pa ne bi-pugli wã ye, la yẽ me rɩka a kambã n kõ sik-m-mengã tʋʋm nins fãa sẽn yaa toog wʋsgã.",
+        "dioula": "Cɛɛ dɔ tun ye muso fila sɔrɔ, u kelen kelen bɛɛ tun ye denmuso di a ma. A sara ani a bamuso dɔ tugura a kɔ. Muso wɛrɛ ye sunguru fila bɛɛ to yen, nka a y'a denmuso yɛrɛ cɛn ani ka baara gwɛlɛw bɛɛ di denfagayɔrɔla ma.",
+        "fulfulde": "Goɗɗo woodi rewɓe ɗiɗo, ɓe fuu ɓe hokki maako ɓiɗɗo debbo. O maayi, nden wakkati go'oto nder inna maako tokki mo. Debbo mo go'oto ɗon jogii sukaaɓe ɗiɗo fuu, ammaa o ɓeyda ɓiɗɗo maako boo o hokki danygol mawɗo kuugal."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 80,
+            "y": 310,
+            "s": 1.2
+          },
+          {
+            "k": "field",
+            "x": 40,
+            "c": "dry"
+          },
+          {
+            "k": "child",
+            "x": 70,
+            "c": "#C9822B"
+          },
+          {
+            "k": "calabash",
+            "x": 76
+          },
+          {
+            "k": "baobab",
+            "x": 14,
+            "y": 22,
+            "c": "bare"
+          }
+        ]
+      },
+      "text": {
+        "fr": "En pleine saison sèche, la marâtre exigeait du gombo frais pour la sauce. Mais rien ne pousse quand la terre est brûlée ! Chaque soir, la fillette rentrait les mains vides, et chaque soir elle était grondée et punie.",
+        "en": "In the middle of the dry season, the stepmother demanded fresh okra for the sauce. But nothing grows when the earth is scorched! Every evening the girl came home empty-handed, and every evening she was scolded and punished.",
+        "moore": "La sã n wa yaa kiid wakate, a ma-rãmbã ra kotame tɩ b rɩk okra sẽn ya sõma. La tẽngã sã n wa yõogd bugum, b pa le wub ye! Wĩnd fãa, bi-puglã ra wa n waa be ne nus sẽn ka tar ye. La wĩndg fãa b da sɩbgda a menga la b sɩbgd-a lame.",
+        "dioula": "Saan n'a ka sumanw tun be ɲini ka bɔ o yɔrɔ la. Nka, dugukolo mana jɛni tuma min na, foyi tɛ falen! Loon o loon wulafɛ, a tun be kɔsegi soo n'a bololakolon ye. O kɔ, u tun b'a nɛni ani k'a bugɔ.",
+        "fulfulde": "Nder wakkati sahaa naa'o, mamaajo debbo boo o yiɗi okra ɓeydi. Ammaa to duniyaaru ɗon yiite, walaa ko ɓanngata! Nyalnde fuu, suka debbo on wari wuro maako bee juuɗe mum ɗe walaa ko'e muuɗum."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "rays",
+            "x": 48
+          },
+          {
+            "k": "woman",
+            "x": 48,
+            "y": 40,
+            "c": "#F4EFE6",
+            "a": "a-float"
+          },
+          {
+            "k": "child-sit",
+            "x": 30,
+            "c": "#C9822B"
+          },
+          {
+            "k": "field",
+            "x": 70,
+            "y": -10,
+            "s": 0.6
+          }
+        ]
+      },
+      "text": {
+        "fr": "Une nuit, sa mère lui apparut en rêve : « Demain, sème des graines de gombo sur ma tombe. Tu y trouveras chaque matin de quoi faire la sauce. » À peine les graines furent-elles en terre qu'elles poussèrent, fleurirent et donnèrent de beaux fruits verts. Ce jour-là, personne ne gronda l'orpheline.",
+        "en": "One night her mother appeared to her in a dream: “Tomorrow, sow okra seeds on my grave. Every morning you will find what you need for the sauce.” No sooner were the seeds in the ground than they sprouted, flowered and bore fine green pods. That day, no one scolded the orphan.",
+        "moore": "Daar a yembre, a ma puka ne-a yĩn-geeba: \"Bosgo, bʋk okra bõn-buud mam yaoogẽ\". Y sã n wa nong bõn-buudã, y na n paama bũmb ning y sẽn dat tɩ b rɩ. Daar kãng, ned baa a yen ka zab ne kamb-bilã ye.",
+        "dioula": "Loon dɔ sufɛ, a bamuso y'a yɛrɛ yira a la siko la. A ko: \"Sani, i ka okra kisɛ seri ne suu kan\". Sɔgɔma o sɔgɔma, i bena fɛɛn min sɔrɔ ka suman dumu, i bena o sɔrɔ. O kisɛ tun be dugukolo kan tuma min na, a y'a daminɛ k'a falen ani k'a kɛ yiri ye. O lon na, mɔgɔ si ma sɔn ka deen falatɔw kɔrɔfɔ.",
+        "fulfulde": "Gooto jemma, inna maako waŋgini mo nder lekki: \"Jam wurtina seeduki okra dow kawtal am\". Ko'e subaka on heɓan ko haaniɗon ngam salsu. So seedhe ɗon ɓadake nder lesdi, ɗe maɓɓiti, ɗi fuɗɗii bee leɗɗe booɗɗe. Nder nyalnde maajum walaa mo ɗon haɓɓa danygol."
+      },
+      "choice": {
+        "q": {
+          "fr": "D'où vient ce gombo miraculeux ?",
+          "en": "Where does this miraculous okra come from?",
+          "moore": "Bõe n kɩt tɩ bõn-bãn-kãnga yaa bõn-naandg?",
+          "dioula": "O kabako bɔra min?",
+          "fulfulde": "Toye okra nanondirɗum ngol ƴiwo?"
+        },
+        "options": [
+          {
+            "fr": "De l'amour de sa mère, qui veille sur elle",
+            "en": "From the love of her mother, who watches over her",
+            "moore": "A ma sẽn nong-a wã yĩnga, a geta yẽ yelle.",
+            "dioula": "A bamuso ka kanuya kosɔn, min b'a janto a la.",
+            "fulfulde": "Ngam yiide maako, mo ɗon hakkilana dow maako."
+          },
+          {
+            "fr": "D'un marché lointain",
+            "en": "From a distant market",
+            "moore": "Yaa zĩ-zãrgẽ wã la b sẽn wa n na n yãendã.",
+            "dioula": "Ka bɔ yɔrɔjan na.",
+            "fulfulde": "Daga gariiri ɓaawo ɗon"
+          },
+          {
+            "fr": "D'un voleur",
+            "en": "From a thief",
+            "moore": "Zãmbg sẽn yi n kʋ-a wã yĩnga.",
+            "dioula": "Solikɛbaga dɔ fɛ.",
+            "fulfulde": "Daga ɓoyɗo"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Même absente, sa mère continuait de prendre soin d'elle.",
+          "en": "Even though she was gone, her mother still took care of her.",
+          "moore": "Baa a sẽn da loogã, a ma ra ket n geta-a lame.",
+          "dioula": "Hali n'a tun tɛ yen, a bamuso y'a janto a la.",
+          "fulfulde": "Koo nde o maayi, amma de'i maako ɗon cujidana mo."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 240
+          },
+          {
+            "k": "field",
+            "x": 48
+          },
+          {
+            "k": "child-up",
+            "x": 66,
+            "c": "#C9822B"
+          },
+          {
+            "k": "calabash",
+            "x": 74
+          },
+          {
+            "k": "birds",
+            "x": 40,
+            "y": 240
+          }
+        ]
+      },
+      "text": {
+        "fr": "Chaque fois que la fillette revenait près de la tombe en pleurant : « Ma marâtre m'envoie chercher du gombo ! », les plants sortaient de terre et se couvraient de fruits. Un jour, elle entendit même la voix douce de sa mère : « Viens cueillir tes gombos, ils sont là, devant toi. »",
+        "en": "Each time the girl came back to the grave crying, “My stepmother sends me to fetch okra!”, the plants rose from the earth and covered themselves with pods. One day she even heard her mother's gentle voice: “Come and pick your okra, it is right here before you.”",
+        "moore": "Wakat ning fãa bi-puglã sẽn wa n wat yaoogẽ wã, a \"ma-rɩtgã\" ra tʋmda maam tɩ m bao okra. Bãagrã yikame n yals tẽngã zugu la b gãnegd b mens ne bõn-buudb. Daar a ye, a baa wʋma a ma koɛɛg sẽn yaa sũ-bʋgsem: \"Kẽng n yãk f okra wã. A bee ka fo taoore\".",
+        "dioula": "Tuma o tuma, sunguru tun be kɔsegi ka na kaburu la a kasitɔ. N' bamuso b'a ci n' ma ko n ka taga okra ta. O kɔ, yiriw bɔra dugukolo kan k'u yɛrɛ datugu ni suman ye. Loon dɔ, a ye a bamuso ka kumakan mɛn: \"Na i ka okra ta. A be yan i ɲɛ kɔrɔ\".",
+        "fulfulde": "Ko nde suka debbo wari to yenaande boo, o ɗon maaro, \"Daajo am sendani yam ngam mi hoɗugo okra!\", leɗɗe ɗe ummi diga lesdi e ɓesda bee potɗe. Gooto nyalnde o nani ko maama mum wi'i: \"Woo, ngollani okra maaɗa, ɗon haa yeeso ma\"."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 76,
+            "y": 26
+          },
+          {
+            "k": "woman",
+            "x": 36,
+            "c": "#F4EFE6"
+          },
+          {
+            "k": "child-up",
+            "x": 48,
+            "c": "#C9822B"
+          },
+          {
+            "k": "child",
+            "x": 58,
+            "c": "#D62828"
+          },
+          {
+            "k": "mortar",
+            "x": 24
+          }
+        ]
+      },
+      "text": {
+        "fr": "Quand la marâtre apprit ce prodige, elle refusa d'y croire et punit encore la fillette. Alors la mère revint au village pour défendre son enfant, et la méchante femme dut quitter la concession. Mais la mère revenue resta bonne : elle prit soin des deux fillettes comme de ses propres filles. « Je ne serai pas méchante comme elle l'a été », dit-elle.",
+        "en": "When the stepmother heard of this wonder, she refused to believe it and punished the girl again. Then the mother came back to the village to defend her child, and the wicked woman had to leave the family compound. But the returning mother remained kind: she cared for both girls as her own daughters. “I will not be cruel as she was,” she said.",
+        "moore": "A ma-rãmbã sẽn wʋm bõn-bãn kãngã, a pa tẽ tɩ b maana woto ye. La yẽ sɩbg-a lame. Rẽ poore, ma wã lebg n wa tẽngã pʋgẽ n na n kogl a biigã. La pagã sẽn yaa wẽn-naandã ra segd n basa zakã rãmb roogã. La a ma wã sẽn lebg n wa wã kell n yaa nimbãan-zoɛt soaba. A gesa bi-bõonegã fãa wa b kamb menga. A yeelame tɩ m pa na n yɩ nin-wẽng wa a pagã ye.",
+        "dioula": "A bamuso kɔrɔmuso y'o kabako mɛn tuma min na, a ma sɔn k'a la o la ani a ye sunguru nin jalaki tugun. O kɔ, muso nin kɔsegira dugu kɔnɔ ka na a deen tanga. Muso jugu tun ka ɲi k'a ka denbaya to yen. Nka, muso min kɔsegira ka na, ale tora k'a janto a denmuso fila bɛɛ la i ko a yɛrɛ b'a kɛ cogo min na. A ko: \"Ne tɛna kɛ mɔgɔ fariman ye i n'a fɔ ale tun b'a la cogo min na.",
+        "fulfulde": "Nde mamaajo debbo nani haalaaji ɗi'i, o njaɓaayi goonɗinki ɗum nden o torra suka on. Sey debbo on wari haa gariiri ngam hisna ɓiyum, nden debbo mo boni ɗon o wurtina wuro. Ammaa inna mo wartii ɗon boo o laatini ɓe belɗum: o hoo'i bee sukaaɓe ɗiɗo fuu bana ɓiɓɓe maako. Mi laatoto meere bana maako, o wi'i."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Que doit rapporter l'orpheline ?",
+        "en": "What must the orphan bring back?",
+        "moore": "Bõe la kambã na n wa ne?",
+        "dioula": "Fɛɛn juman lo ka kan ka di denfaw ye?",
+        "fulfulde": "Ko honɗun yimbhe on warata?"
+      },
+      "options": [
+        {
+          "fr": "Du gombo frais",
+          "en": "Fresh okra",
+          "moore": "A raab sẽn yaa wa bĩngd",
+          "dioula": "Okrasi kuraw",
+          "fulfulde": "Okra ɓii-ɓuuɗi"
+        },
+        {
+          "fr": "De l'eau",
+          "en": "Water",
+          "moore": "Kooma koomã",
+          "dioula": "Jii",
+          "fulfulde": "ndiyam"
+        },
+        {
+          "fr": "Du bois",
+          "en": "Firewood",
+          "moore": "Dɩt sẽn yaa gãndg",
+          "dioula": "Fani min be jɛni",
+          "fulfulde": "Ɗuumɗam"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Où sème-t-elle les graines ?",
+        "en": "Where does she sow the seeds?",
+        "moore": "A bʋtda bõn-buudã yɛ?",
+        "dioula": "A be sumanw dan yɔrɔ juman?",
+        "fulfulde": "Toye o sowi seedam?"
+      },
+      "options": [
+        {
+          "fr": "Dans le champ du chef",
+          "en": "In the chief's field",
+          "moore": "A sẽn be taoor soabã zĩigẽ wã,",
+          "dioula": "Kuntigi ka foro kɔnɔ.",
+          "fulfulde": "Nder fannu hooreejo"
+        },
+        {
+          "fr": "Sur la tombe de sa mère",
+          "en": "On her mother's grave",
+          "moore": "A ma yaoogẽ wã,",
+          "dioula": "A bamuso ka kaburu kan.",
+          "fulfulde": "Nder leggal baaba mum"
+        },
+        {
+          "fr": "Près du puits",
+          "en": "Near the well",
+          "moore": "Pʋʋgã sɛɛgẽ",
+          "dioula": "Jii kɔlɔn gɛrɛfɛ",
+          "fulfulde": "Haade naange"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Comment la mère traite-t-elle l'autre fillette ?",
+        "en": "How does the mother treat the other girl?",
+        "moore": "Wãn to la ma wã manesem yaa ne bi-pugl a taabã?",
+        "dioula": "Muso be sunguru min minɛ, a b'o jati cogo di?",
+        "fulfulde": "Noye maama boo ɗon huuwana suka debbo mo?"
+      },
+      "options": [
+        {
+          "fr": "Avec bonté",
+          "en": "With kindness",
+          "moore": "Ne sõmblem",
+          "dioula": "Ni ɲumanya ye",
+          "fulfulde": "Nder yidde"
+        },
+        {
+          "fr": "Avec méchanceté",
+          "en": "With cruelty",
+          "moore": "Ne wẽnemã yĩnga",
+          "dioula": "Ni mɔgɔjuguw ye",
+          "fulfulde": "E haalooɓe kalluɗum"
+        },
+        {
+          "fr": "Elle la chasse",
+          "en": "She sends her away",
+          "moore": "A kɩtame tɩ b loog n kẽng.",
+          "dioula": "A b'a bila ka taga.",
+          "fulfulde": "O wurtini mo yaasi."
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "marâtre",
+      "lang": "fr",
+      "def": {
+        "fr": "Belle-mère, seconde épouse du père. Dans les contes, elle est souvent dure avec l'orpheline.",
+        "en": "Stepmother, the father's other wife. In tales she is often harsh to the orphan.",
+        "moore": "A ma-rãmbã, yaa ba wã pagã a to. A sã n gomd ne kamb sẽn pa tar bũmbu, a yaa wẽnga.",
+        "dioula": "A bamuso kɔrɔmuso, a facɛ muso dɔ. Tuma caaman na, a be kuma ka gɛlɛn falatɔw fɛ.",
+        "fulfulde": "Maama mo'o, debbo baaba maako go'oto. Nder kaalis o ɗon waɗa ko wooɗi to danygol."
+      }
+    },
+    {
+      "term": "concession",
+      "lang": "fr",
+      "def": {
+        "fr": "Ensemble des cases où vit une grande famille, entourées d'un mur ou d'une haie.",
+        "en": "The group of huts where an extended family lives, enclosed by a wall or hedge.",
+        "moore": "B sẽn yaa logtoɛɛmb sull b sẽn be ne zakã, wall b sẽn pak-b ne gãagã.",
+        "dioula": "O ye boonw jɛnkulu ye, u be yɔrɔ min na denbaya dɔ b'u ka soo kɔnɔ. U be kogo wala kulu barikaman dɔ lamini yen.",
+        "fulfulde": "Goomu cuuɗi ɗo saare mawnde jooɗoto, nder suudu wallugo malla ko'e."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « Les orphelines », conte gourmantché publié par F.-V. Équilbecq, Contes indigènes de l'Ouest africain français, t. II (1913, domaine public). Réécriture libre et adoucie pour le jeune public.",
+    "en": "Based on “Les orphelines”, a Gourmantché tale published by F.-V. Équilbecq, Contes indigènes de l'Ouest africain français, vol. II (1913, public domain). Free retelling, softened for young readers."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

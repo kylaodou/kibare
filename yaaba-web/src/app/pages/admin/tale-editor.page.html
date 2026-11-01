@@ -1,0 +1,218 @@
+<header class="ph">
+  <div>
+    <a routerLink="/admin/contes" class="more"><i class="fa-solid fa-arrow-left"></i> {{ 'admin.nav.tales' | t }}</a>
+    <h1>{{ (isNew() ? 'admin.newTale' : 'editor.title') | t }}</h1>
+    <p class="muted">{{ 'editor.lead' | t }}</p>
+  </div>
+  @if (!isNew()) {
+    <a class="btn btn-ghost btn-sm" [routerLink]="['/contes', slug()]" target="_blank"><i class="fa-solid fa-eye"></i> {{ 'editor.preview' | t }}</a>
+  }
+</header>
+
+@if (t(); as tale) {
+  <!-- métadonnées -->
+  <section class="card block">
+    <h2>{{ 'editor.meta' | t }}</h2>
+    <div class="grid4">
+      <label class="field">
+        <span>{{ 'contrib.taleType' | t }}</span>
+        <select [ngModel]="tale.type" (ngModelChange)="setField('type', $event)">
+          @for (ty of types; track ty) {
+            <option [value]="ty">{{ 'type.' + ty | t }}</option>
+          }
+        </select>
+      </label>
+      <label class="field">
+        <span>{{ 'lib.region' | t }}</span>
+        <select [ngModel]="tale.region" (ngModelChange)="setField('region', $event)">
+          @for (r of data.regions(); track r.code) {
+            <option [value]="r.code">{{ r.name }}</option>
+          }
+        </select>
+      </label>
+      <label class="field">
+        <span>{{ 'editor.place' | t }}</span>
+        <input [ngModel]="tale.place" (ngModelChange)="setField('place', $event)" />
+      </label>
+      <label class="field">
+        <span>{{ 'editor.people' | t }}</span>
+        <input [ngModel]="tale.people" (ngModelChange)="setField('people', $event)" />
+      </label>
+      <label class="field">
+        <span>{{ 'lib.language' | t }}</span>
+        <select [ngModel]="tale.language" (ngModelChange)="setField('language', $event)">
+          @for (l of data.languages(); track l.code) {
+            <option [value]="l.code">{{ l.name }}</option>
+          }
+        </select>
+      </label>
+      <label class="field">
+        <span>{{ 'editor.coords' | t }}</span>
+        <input [ngModel]="tale.coords.join(', ')" (ngModelChange)="setCoords($event)" placeholder="12.37, -1.52" />
+      </label>
+      <label class="field">
+        <span>{{ 'editor.duration' | t }}</span>
+        <input type="number" min="1" max="60" [ngModel]="tale.duration" (ngModelChange)="setField('duration', +$event)" />
+      </label>
+      <label class="field">
+        <span>{{ 'editor.age' | t }}</span>
+        <input type="number" min="2" max="18" [ngModel]="tale.age" (ngModelChange)="setField('age', +$event)" />
+      </label>
+    </div>
+  </section>
+
+  <!-- textes -->
+  <section class="card block">
+    <div class="b-head">
+      <h2>{{ 'editor.texts' | t }}</h2>
+      <div class="langtabs" role="tablist">
+        @for (l of langs; track l) {
+          <button type="button" role="tab" [class.on]="lang() === l" (click)="lang.set(l)">
+            {{ langName(l) }}
+            @if (hasLang(l)) {
+              <span class="dot" aria-hidden="true"></span>
+            }
+          </button>
+        }
+      </div>
+    </div>
+    <div class="grid2">
+      <label class="field">
+        <span>{{ 'editor.tTitle' | t }} ({{ langName(lang()) }})</span>
+        <input [ngModel]="text('title')" (ngModelChange)="setText('title', $event)" maxlength="160" />
+      </label>
+      <label class="field">
+        <span>{{ 'editor.tSubtitle' | t }}</span>
+        <input [ngModel]="text('subtitle')" (ngModelChange)="setText('subtitle', $event)" maxlength="200" />
+      </label>
+      <label class="field full">
+        <span>{{ 'contrib.summary' | t }}</span>
+        <textarea rows="2" [ngModel]="text('summary')" (ngModelChange)="setText('summary', $event)"></textarea>
+      </label>
+      <label class="field full">
+        <span>{{ 'contrib.moral' | t }}</span>
+        <input [ngModel]="text('moral')" (ngModelChange)="setText('moral', $event)" />
+      </label>
+    </div>
+
+    <h2 class="mt">{{ 'editor.paragraphs' | t: { n: tale.scenes.length } }}</h2>
+    @for (s of tale.scenes; track $index; let i = $index) {
+      <div class="para">
+        <div class="p-art">
+          <div class="thumb"><app-scene-art [art]="s.art" [animate]="false" /></div>
+          <select (change)="setPreset(i, $any($event.target).value)">
+            <option value="">{{ 'editor.changeArt' | t }}</option>
+            @for (p of presets; track p.id) {
+              <option [value]="p.id">{{ p.label }}</option>
+            }
+          </select>
+        </div>
+        <div class="field">
+          <div class="p-head">
+            <strong>§ {{ i + 1 }}</strong>
+            <span class="grow"></span>
+            <button type="button" class="ib" (click)="move(i, -1)" [disabled]="i === 0" [title]="'editor.up' | t"><i class="fa-solid fa-arrow-up"></i></button>
+            <button type="button" class="ib" (click)="move(i, 1)" [disabled]="i === tale.scenes.length - 1" [title]="'editor.down' | t"><i class="fa-solid fa-arrow-down"></i></button>
+            <button type="button" class="ib" (click)="addScene(i)" [title]="'editor.addAfter' | t"><i class="fa-solid fa-plus"></i></button>
+            <button type="button" class="ib no" (click)="removeScene(i)" [disabled]="tale.scenes.length === 1" [title]="'admin.delete' | t"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+          <textarea class="big" [ngModel]="s.text[lang()]" (ngModelChange)="setScene(i, $event)" [placeholder]="'editor.paraPh' | t: { lang: langName(lang()) }"></textarea>
+          @if (lang() !== 'fr' && s.text['fr']) {
+            <small>FR : {{ s.text['fr'] }}</small>
+          }
+        </div>
+      </div>
+    }
+    <div class="bulk">
+      <strong><i class="fa-solid fa-paste"></i> {{ 'editor.bulkTitle' | t: { lang: langName(lang()) } }}</strong>
+      <small class="muted">{{ 'editor.bulkHint' | t }}</small>
+      <textarea rows="5" [ngModel]="bulk()" (ngModelChange)="bulk.set($event)"></textarea>
+      <div><button type="button" class="btn btn-ghost btn-sm" (click)="importBulk()" [disabled]="!bulk().trim()"><i class="fa-solid fa-scissors"></i> {{ 'editor.split' | t }}</button></div>
+    </div>
+  </section>
+
+  <!-- source & droits -->
+  <section class="card block">
+    <h2>{{ 'editor.sourceRights' | t }}</h2>
+    <div class="grid2">
+      <label class="field">
+        <span>{{ 'tale.source' | t }} (FR)</span>
+        <textarea rows="3" [ngModel]="tale.source['fr']" (ngModelChange)="setSource('fr', $event)"></textarea>
+      </label>
+      <label class="field">
+        <span>{{ 'tale.source' | t }} (EN)</span>
+        <textarea rows="3" [ngModel]="tale.source['en']" (ngModelChange)="setSource('en', $event)"></textarea>
+      </label>
+      <label class="field full">
+        <span>{{ 'editor.rights' | t }}</span>
+        <input [ngModel]="tale.rights ?? ''" (ngModelChange)="setField('rights', $event)" [placeholder]="'editor.rightsPh' | t" />
+        <small>{{ 'editor.rightsHint' | t }}</small>
+      </label>
+    </div>
+  </section>
+
+  <!-- voix -->
+  <section class="card block">
+    <h2>{{ 'editor.voices' | t }}</h2>
+    @if (isNew()) {
+      <p class="hint">{{ 'editor.saveFirst' | t }}</p>
+    } @else {
+      <ul class="tracks">
+        @for (a of tracks(); track a.id) {
+          <li>
+            <strong>{{ langName(a.lang) }}</strong> · {{ a.narrator }}
+            <audio [src]="a.url" controls preload="none"></audio>
+            <button type="button" class="ib no" (click)="deleteTrack(a)" [title]="'admin.delete' | t"><i class="fa-solid fa-trash-can"></i></button>
+          </li>
+        } @empty {
+          <li class="muted">{{ 'editor.noVoice' | t }}</li>
+        }
+      </ul>
+      <div class="grid4">
+        <label class="field">
+          <span>{{ 'contrib.language' | t }}</span>
+          <select [ngModel]="upLang()" (ngModelChange)="upLang.set($event)">
+            @for (l of data.languages(); track l.code) {
+              <option [value]="l.code">{{ l.name }}</option>
+            }
+          </select>
+        </label>
+        <label class="field">
+          <span>{{ 'admin.narrator' | t }}</span>
+          <input [ngModel]="upNarrator()" (ngModelChange)="upNarrator.set($event)" />
+        </label>
+        <label class="field">
+          <span>{{ 'admin.file' | t }}</span>
+          <input type="file" accept="audio/*" (change)="pick($event)" />
+        </label>
+        <div class="field">
+          <span>&nbsp;</span>
+          <button type="button" class="btn btn-green btn-sm" (click)="upload()" [disabled]="!upFile() || !upNarrator().trim()"><i class="fa-solid fa-upload"></i> {{ 'admin.upload.cta' | t }}</button>
+        </div>
+      </div>
+    }
+  </section>
+
+  <div class="savebar">
+    <label class="check">
+      <input type="checkbox" [ngModel]="tale.published" (ngModelChange)="setField('published', $event)" />
+      {{ 'editor.publish' | t }}
+    </label>
+    <label class="check">
+      <input type="checkbox" [ngModel]="tale.featured" (ngModelChange)="setField('featured', $event)" />
+      {{ 'editor.featured' | t }}
+    </label>
+    <span class="grow"></span>
+    <a routerLink="/admin/contes" class="btn btn-ghost btn-sm">{{ 'pass.resetNo' | t }}</a>
+    <button type="button" class="btn btn-sm" (click)="save()" [disabled]="saving()">
+      @if (saving()) {
+        <i class="fa-solid fa-spinner fa-spin"></i>
+      } @else {
+        <i class="fa-solid fa-floppy-disk"></i>
+      }
+      {{ 'editor.save' | t }}
+    </button>
+  </div>
+} @else {
+  <div class="skeleton"></div>
+}

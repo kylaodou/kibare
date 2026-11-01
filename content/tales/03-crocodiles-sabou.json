@@ -1,0 +1,484 @@
+{
+  "slug": "crocodiles-sabou",
+  "type": "legende",
+  "region": "centre-ouest",
+  "place": "Sabou",
+  "coords": [
+    12.07,
+    -2.23
+  ],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 5,
+  "age": 6,
+  "featured": true,
+  "cover": 3,
+  "tags": [
+    "animaux sacrés",
+    "gratitude",
+    "eau",
+    "pacte"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Les crocodiles sacrés de Sabou",
+      "subtitle": "Le pacte entre un chasseur et un crocodile",
+      "summary": "Perdu en brousse au cœur de la saison sèche, un chasseur va mourir de soif. Un crocodile surgit… et, au lieu de l'attaquer, le guide vers l'eau. Ainsi naquit l'amitié entre les gens de Sabou et les crocodiles.",
+      "moral": "La gratitude crée des liens qui traversent les générations : on protège ceux qui nous ont sauvés."
+    },
+    "en": {
+      "title": "The Sacred Crocodiles of Sabou",
+      "subtitle": "The pact between a hunter and a crocodile",
+      "summary": "Lost in the bush at the height of the dry season, a hunter is dying of thirst. A crocodile appears… and instead of attacking him, leads him to water. This is how the friendship between the people of Sabou and the crocodiles began.",
+      "moral": "Gratitude creates bonds that last for generations: we protect those who saved us."
+    },
+    "moore": {
+      "title": "Sabou bu-zẽmbã sẽn yaa sõma wã",
+      "subtitle": "B sẽn maan zood ne zĩm-biis la bõn-buudã sʋka",
+      "summary": "Sẽn yaa-a beẽ wã, sã n wa paam tɩ b pa le tar koom ye. Bõn-buud n waame. la b pa zabd-a ye, a tallda-a lame n kẽng koomẽ. Woto la taab sẽn zĩnd Sabou nebã ne bu-zẽmbã sʋka.",
+      "moral": "D sã n pʋʋsd Wẽnnaam barka, d na n paama zood sẽn kaoosd yʋʋm wʋsgo. Tõnd kogend neb nins sẽn fãag tõndã."
+    },
+    "dioula": {
+      "title": "Sabou ka kongosogow",
+      "subtitle": "Jagokɛla ni kongosogo ka bɛnbaliyako",
+      "summary": "K'a to yiritunin kɔnɔ, sanjiba wagati la, kɔgɔnin dɔ be ɲini ka sa minnɔgɔ fɛ. Dɔgɔtɔrɔ dɔ y'a ye ko: \"Duguba dɔ bɔra\". ani k'a bila jii la. O cogo la, Sabou dugumɔgɔw ni kongosogow ka teriya daminɛna.",
+      "moral": "N'an be Jehova waleɲuman lɔn, o b'a to an be jɛnɲɔgɔnya ɲuman kɛ ni mɔgɔ wɛrɛw ye. An be minw tanga, an b'olu latanga."
+    },
+    "fulfulde": {
+      "title": "Ko'e Cukalelji Cukalelɓe nder Sabou",
+      "subtitle": "Hakkiilo hakkunde duwoowo e crocodile",
+      "summary": "Wonduki nder duunde e ɓurɗe sahaa, mawɗo wuyɓe maayi ngam nyaamdu. Ko crocodile wooda... to o ɗon haɓɓa mo, o waddata maako haa ndiyam. Ɗon no dowol hakkunde yimɓe Sabou e crocodiles fuɗɗii.",
+      "moral": "Ma'anaaki ɗon waɗa bandidoji ɗi ɓeydaama diga duuɓi: en njogiiɓe ɓe kuccini en."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 70,
+            "y": 310,
+            "s": 1.2
+          },
+          {
+            "k": "baobab",
+            "x": 20,
+            "y": 24,
+            "c": "bare"
+          },
+          {
+            "k": "hunter",
+            "x": 52
+          },
+          {
+            "k": "rock",
+            "x": 82,
+            "s": 0.8
+          },
+          {
+            "k": "grass",
+            "x": 36
+          }
+        ]
+      },
+      "text": {
+        "fr": "Autrefois, un chasseur de la région de Sabou partit seul en brousse. La saison sèche était terrible : les mares avaient disparu, les arbres avaient perdu leurs feuilles et le soleil brûlait la terre.",
+        "en": "Long ago, a hunter from the Sabou area went alone into the bush. The dry season was terrible: the ponds had vanished, the trees had lost their leaves and the sun was scorching the earth.",
+        "moore": "Sẽn deng wʋsgo, Sabo tẽn-tẽngã ra yaa zĩn-dãmb n beẽ. La saagã ra yaa toogo. Ko-kãnga, koom koglgã ra pa le be ye, tɩɩsã ra ka tar vãad ye, la wĩntoogã ra yõogda tẽngã.",
+        "dioula": "A saan caaman ye nin ye, jagokɛla dɔ bɔra Sabou mara la ka taga yiritu kɔnɔ a kelen. Sanjɛnɛ tun ka jugu kosɔbɛ. Jiiyɔrɔw tun banna, yiriw tun tɛ yen tugun ani tile tun be dugukolo jɛni.",
+        "fulfulde": "Wakkati ɗuɗɗum, mawɗo duɗal diga nokkuure Sabou yahi nder leɗɗe. Sahaa ɓillaare ɗon kaɗana: laamooji ɗi mbaynii, lekki ɗe maayi leɗɗe maɓɓe e naange ɗon yiite lesdi."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 20,
+            "y": 220
+          },
+          {
+            "k": "acacia",
+            "x": 60,
+            "y": 20,
+            "s": 1.2
+          },
+          {
+            "k": "elder-sit",
+            "x": 58,
+            "c": "#C9822B"
+          },
+          {
+            "k": "calabash",
+            "x": 70
+          },
+          {
+            "k": "birds",
+            "x": 30,
+            "y": 240
+          }
+        ]
+      },
+      "text": {
+        "fr": "Après des jours de marche, le chasseur s'égara. Sa gourde était vide, ses forces l'abandonnaient. Il s'assit à l'ombre d'un acacia, persuadé qu'il ne reverrait jamais son village.",
+        "en": "After days of walking, the hunter lost his way. His gourd was empty and his strength was failing. He sat down in the shade of an acacia, convinced he would never see his village again.",
+        "moore": "A sẽn kẽed n kẽnd rasem a wãn poore, zĩ-yũudrã ra pa le tõe n paam sore ye. A ra pa tar pãng ye. A zĩi akasi tɩɩs bi-bees maasmẽ, a sẽn da tẽed t'a pa na n le yã a tẽn-kãng ye.",
+        "dioula": "Tile damanin o kɔ, jagokɛla y'a ka sira bila. A ka kurukuru tun tɛ foyi ye ani a fanga tun be dɔgɔyara. A sigira akasiyiriw jukɔrɔ, a lanin tun b'a la ko ale tɛna a ka dugu ye tugun.",
+        "fulfulde": "Caggal balɗe e nder yahugo, mawɗo du'aare o majjini laawol. Ko'e maako ɗon maaya, semmbe maako boo ɗon ɓilla. O jooɗii nder nyiwre acacia, o ɗon hoola dow mo waawataa yi'ugo gariiri maako boo."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 220
+          },
+          {
+            "k": "acacia",
+            "x": 18,
+            "y": 22
+          },
+          {
+            "k": "hunter",
+            "x": 30
+          },
+          {
+            "k": "crocodile",
+            "x": 64,
+            "flip": true,
+            "s": 1.1
+          }
+        ]
+      },
+      "text": {
+        "fr": "C'est alors qu'un crocodile apparut. Au lieu de l'attaquer, l'animal se mit lentement en marche, se retournant de temps en temps, comme pour l'inviter à le suivre.",
+        "en": "Just then, a crocodile appeared. Instead of attacking him, the animal slowly began to walk away, turning back from time to time, as if inviting him to follow.",
+        "moore": "La wakat kãng bala, bõn-buud n wa. La a pa zab-a ye, la wakat n zĩnd t'a lebg n tũ-a.",
+        "dioula": "O tuma na, ngɔrɔnin dɔ y'a yɛrɛ yira. Nka, a ma se k'a kɛlɛ. A y'a daminɛ ka bɔ yen dɔɔni dɔɔni ani tuma dɔw la, a tun be segi ka na n'a ye i ko a b'a fɛ a ka tugu ale kɔ.",
+        "fulfulde": "Ɗon e ɗon, crocodile wari. Ammaa to dabbaaji ɗi'i ɗon haɓɓa mo, ɓe njogii bee ɓernde laaɓɗum."
+      },
+      "choice": {
+        "q": {
+          "fr": "Le chasseur doit-il suivre le crocodile ?",
+          "en": "Should the hunter follow the crocodile?",
+          "moore": "Rẽ yĩnga, ned ning sẽn baood zĩn-dãmb segd n tũda a buudu?",
+          "dioula": "Yala a ka ɲi jagokɛla k'o tɔɔn kɔ wa?",
+          "fulfulde": "Hol no jahaajo ɗon tokki coccorgal?"
+        },
+        "options": [
+          {
+            "fr": "Oui, il n'a plus rien à perdre",
+            "en": "Yes, he has nothing left to lose",
+            "moore": "A pa tar bũmb n na n bas ye.",
+            "dioula": "Ɔnhɔn, foyi tɛ a fɛ k'a to yen.",
+            "fulfulde": "Ee, o walaa ko o majji."
+          },
+          {
+            "fr": "Non, il doit s'enfuir",
+            "en": "No, he should run away",
+            "moore": "A ra segd n zoeeme.",
+            "dioula": "Ayi, a ka kan ka boli.",
+            "fulfulde": "Na, o ɗon mbaadi."
+          },
+          {
+            "fr": "Il doit le chasser avec son arc",
+            "en": "He should hunt it with his bow",
+            "moore": "A segd n yãaga ne a zab-n-taase.",
+            "dioula": "A ka kan k'a ta ni a bolo ye.",
+            "fulfulde": "O haani yi'ugo bee kaɓirɗum maako."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Le chasseur décida de faire confiance à l'animal et le suivit pas à pas…",
+          "en": "The hunter decided to trust the animal and followed it step by step…",
+          "moore": "Kẽerã yãka yam n na n teeg rũnda, la a tũ-a naoor ne naoore.",
+          "dioula": "O kɔ, a y'a latigɛ ka la o sogo kan ani k'o bato.",
+          "fulfulde": "Mawɗo yi'i goonɗinki dabbaajo nden o tokki mo dow laawol..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 76,
+            "y": 250
+          },
+          {
+            "k": "palm",
+            "x": 12,
+            "y": 34
+          },
+          {
+            "k": "palm",
+            "x": 20,
+            "y": 40,
+            "s": 0.8
+          },
+          {
+            "k": "hunter",
+            "x": 32,
+            "y": 2
+          },
+          {
+            "k": "crocodile",
+            "x": 62,
+            "y": -24,
+            "s": 1.1
+          },
+          {
+            "k": "birds",
+            "x": 60,
+            "y": 250
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le crocodile le conduisit jusqu'à une mare d'eau fraîche, cachée derrière les rôniers. Le chasseur but longuement, se reposa à l'ombre et retrouva ses forces. Il avait été sauvé.",
+        "en": "The crocodile led him to a pool of cool water hidden behind the palm trees. The hunter drank deeply, rested in the shade and regained his strength. He had been saved.",
+        "moore": "A Zezi sẽn wa n be wã, a ra pa yãend-a ye. A ra yũuda rãam wʋsgo, n vʋʋs zĩ-gũumẽ la a paam pãng me. A ra zoe n paama fãagre.",
+        "dioula": "O kɔ, a tagara n'a ye jii la. A ye dɔrɔ min ka suma, a tora k'a fari faga. A tun kisira.",
+        "fulfulde": "Crocodile'en hoodi mo to poolde ndiyam ɓernde ɓoymaago dow leɗɗe palmi. Mawɗo yi'aare boowi, o hawti nder nyiwre nden o heɓii semmbe. O hisni."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "hut",
+            "x": 14,
+            "y": 34,
+            "s": 0.8
+          },
+          {
+            "k": "hut",
+            "x": 26,
+            "y": 40,
+            "s": 0.6,
+            "c": "dark"
+          },
+          {
+            "k": "elder",
+            "x": 36
+          },
+          {
+            "k": "hunter",
+            "x": 48
+          },
+          {
+            "k": "crocodile",
+            "x": 72,
+            "y": -26
+          },
+          {
+            "k": "crocodile",
+            "x": 86,
+            "y": -46,
+            "s": 0.8,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "De retour au village, il raconta tout. Les anciens scellèrent alors un pacte : plus personne ne ferait de mal aux crocodiles, et l'on s'installerait près de la mare. Les crocodiles, eux, veilleraient sur les habitants.",
+        "en": "Back in the village, he told everyone what had happened. The elders then sealed a pact: no one would ever harm the crocodiles again, and the people would settle near the pool. The crocodiles, in return, would watch over the villagers.",
+        "moore": "A sẽn lebg n wa tẽngẽ wã, a togsda neb fãa bũmb ning sẽn maanã. Rẽ poore, kãsem dãmbã maana kaool tɩ ned baa a yen da na n le maan bõn-naandsã wẽng ye. La nebã ra segd n zĩnda koom koglgã sɛɛgẽ. B sẽn da wa n na n dɩka b sẽbre wã, bu-zẽmsã ra gũuda tẽngã nebã.",
+        "dioula": "A kɔsegira dugu kɔnɔ ka na koo min kɛ, a y'o lakali mɔgɔw ye. O kɔ, cɛkɔrɔbaw ye layidu ta ko mɔgɔ si tɛna sɔn ka tɔrisenw faga tugun. Mɔgɔw tun bena sigi o jii kɔrɔ. O kɔ, u tun be to ka dugumɔgɔw kɔrɔsi.",
+        "fulfulde": "Nde o wari nder gariiri, o wi'i yimɓe ko waɗi. Sey mawɓe ɓe'e waɗi alkawal: walaa mo torraay ɓerɗe nguu, yimɓe boo njooɗoto haa caka poolgu. Ko crocodiles, nder ceerno maɓɓe, ɓe ɗon ndaara yimɓe gariiri."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 310
+          },
+          {
+            "k": "karite",
+            "x": 16,
+            "y": 30
+          },
+          {
+            "k": "child",
+            "x": 36,
+            "c": "#D62828"
+          },
+          {
+            "k": "man-point",
+            "x": 46
+          },
+          {
+            "k": "chicken",
+            "x": 56
+          },
+          {
+            "k": "crocodile",
+            "x": 76,
+            "y": -2,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Aujourd'hui encore, les crocodiles de Sabou sont considérés comme sacrés et liés aux ancêtres. Les visiteurs leur offrent des poulets, et l'on dit que la mort de l'un d'eux est pleurée comme celle d'un membre de la famille.",
+        "en": "To this day, the crocodiles of Sabou are considered sacred and linked to the ancestors. Visitors offer them chickens, and it is said that when one of them dies, it is mourned like a member of the family.",
+        "moore": "Hal tɩ ta rũndã, b getame tɩ Sabou bu-zẽmbã yaa bõn-sõamyã la b tara zood ne yaab rãmbã. Neb nins sẽn wa n be wã kõ-b-la piis la b yetame tɩ ned sã n ki, a yãbdame wala zakã neda.",
+        "dioula": "Halibi, u be bonya la o kongosogow kan ani u b'u ɲɛɛ tugu u faaw lo kan. Mɔgɔ minw be na, olu b'u di ka kokɔrɔw kɛ. U ko n'u dɔ sara, u be kasi i n'a fɔ denbaya kɔnɔ mɔgɔ dɔ.",
+        "fulfulde": "Haa hande, crocodiles Sabou ɗon laama ko habaru e ardiiɓe. Yimɓe ɗon njaha ɓe hokkata ɓe kokko, nden ɗum wi'i to gooto maɓɓe maayi, o boowo bana gooduɗo saare."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qui a sauvé le chasseur perdu ?",
+        "en": "Who saved the lost hunter?",
+        "moore": "Ãnd n fãag zĩ-bi-zĩigã?",
+        "dioula": "Jɔn lo ye jagokɛla tununa kisi?",
+        "fulfulde": "Moy kissi mawɗo mo'o?"
+      },
+      "options": [
+        {
+          "fr": "Un lion",
+          "en": "A lion",
+          "moore": "Yaa gɩgemde.",
+          "dioula": "Jaraw",
+          "fulfulde": "Lewre"
+        },
+        {
+          "fr": "Un crocodile",
+          "en": "A crocodile",
+          "moore": "Ko-ko-kẽengã",
+          "dioula": "Dɔgɔtɔrɔ dɔ ye ngɔrɔnan ye.",
+          "fulfulde": "Ko crocodile"
+        },
+        {
+          "fr": "Un oiseau",
+          "en": "A bird",
+          "moore": "Gʋdg a ye",
+          "dioula": "Dɔnɔnin dɔ",
+          "fulfulde": "Luttuɗo"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Qu'a-t-il trouvé grâce à lui ?",
+        "en": "What did he find thanks to it?",
+        "moore": "Bõe la a yãame?",
+        "dioula": "A ye mun lo sɔrɔ o kosɔn?",
+        "fulfulde": "Ko o heɓii ngam maajum?"
+      },
+      "options": [
+        {
+          "fr": "De l'or",
+          "en": "Gold",
+          "moore": "Zĩisã",
+          "dioula": "Sankaba",
+          "fulfulde": "Ɓannduɗe"
+        },
+        {
+          "fr": "Une mare d'eau fraîche",
+          "en": "A pool of cool water",
+          "moore": "Ko-kãseng sẽn yaa koom sẽn ya sõama",
+          "dioula": "Jiɲumanba dɔ",
+          "fulfulde": "Pool ndiyam laaɓɗum"
+        },
+        {
+          "fr": "Un autre village",
+          "en": "Another village",
+          "moore": "Tẽng a to me.",
+          "dioula": "Dugu wɛrɛ lo.",
+          "fulfulde": "Ɗereeji goɗɗi"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Que promettent les habitants de Sabou ?",
+        "en": "What do the people of Sabou promise?",
+        "moore": "Bõe la Sabou nebã pʋlem-yã?",
+        "dioula": "Sabou dugumɔgɔw b'a daa di mun lo la?",
+        "fulfulde": "Ko honɗun yimɓe Sabou ɗon alkawal?"
+      },
+      "options": [
+        {
+          "fr": "De ne jamais faire de mal aux crocodiles",
+          "en": "Never to harm the crocodiles",
+          "moore": "Pa bao n maan bõn-naandbã wẽng ye.",
+          "dioula": "Kana na foyi kɛ ngɔrɔninw la abada.",
+          "fulfulde": "To naa' ngam waɗugo ko wooɗaa to crocodiliiɓe"
+        },
+        {
+          "fr": "De quitter la région",
+          "en": "To leave the region",
+          "moore": "B sẽn na n bas tẽn-kãng",
+          "dioula": "Ka bɔ o mara la",
+          "fulfulde": "To wurta nder lesdi ndin"
+        },
+        {
+          "fr": "De chasser tous les animaux",
+          "en": "To hunt every animal",
+          "moore": "Sẽn na yɩl n paam rũmsã fãa wã",
+          "dioula": "Ka bɛganw bɛɛ faga",
+          "fulfulde": "To yi'a dabbaaji fuu"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "rônier",
+      "lang": "fr",
+      "def": {
+        "fr": "Grand palmier de la savane (Borassus), dont on utilise les feuilles, le bois et les fruits.",
+        "en": "A tall savannah palm (Borassus) whose leaves, wood and fruit are all used.",
+        "moore": "A yaa saavãn-tõnd sẽn tar zẽnem (Borassus) n tʋmd ne a sãnem, tɩɩs la biis fãa.",
+        "dioula": "A ye savanɛ yiri dɔ ye (Borassus), a furaburu, lɔgɔ ani yiridenw bɛɛ be kɛ.",
+        "fulfulde": "Ɗuum duɗal savannah (Borassus) je kuuje, lekki e ɗi fuu naftiraama."
+      }
+    },
+    {
+      "term": "saison sèche",
+      "lang": "fr",
+      "def": {
+        "fr": "Période d'octobre à mai environ, sans pluie, durant laquelle souffle l'harmattan.",
+        "en": "Roughly October to May, a period without rain when the harmattan wind blows.",
+        "moore": "Sẽn yɩɩd fãa, yaa zĩ-likr kiuugã n tãag bõn-naandgã.",
+        "dioula": "O kɔ, saan 10nan na ka taga se mɛkalo ma. Sanji tɛ ben tuma min na, fɔɲɔ be fiyɛ.",
+        "fulfulde": "Ko e lewru oktoobar haa lewru Mee, wakkati daande walaa ndiyam to humre harmatana ɗon fiya."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Légende fondatrice de la mare aux crocodiles sacrés de Sabou (Boulkiemdé), transmise par la tradition orale locale.",
+    "en": "Founding legend of the sacred crocodile pool of Sabou (Boulkiemdé province), passed down through local oral tradition."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

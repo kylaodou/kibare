@@ -1,0 +1,441 @@
+{
+  "slug": "le-miel-et-les-genies-nains",
+  "type": "conte",
+  "region": "est",
+  "place": "Fada N'Gourma",
+  "coords": [
+    12.06,
+    0.36
+  ],
+  "people": "Gourmantché",
+  "language": "gulmancema",
+  "duration": 5,
+  "age": 6,
+  "featured": false,
+  "cover": 2,
+  "tags": [
+    "génies",
+    "ruse",
+    "abeilles",
+    "courage"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le chasseur, le miel et les génies nains",
+      "subtitle": "Trente-trois invités affamés",
+      "summary": "Seule dans sa case au fond de la brousse, une femme voit arriver un petit génie, puis deux, puis trente-trois. Ils ont tout mangé… et veulent maintenant la manger, elle. Heureusement, une tourterelle veille.",
+      "moral": "L'intelligence vient à bout de la gloutonnerie, et l'aide vient parfois des plus petits."
+    },
+    "en": {
+      "title": "The Hunter, the Honey and the Little Spirits",
+      "subtitle": "Thirty-three hungry guests",
+      "summary": "Alone in her hut deep in the bush, a woman sees one little spirit arrive, then two, then thirty-three. They have eaten everything… and now they want to eat her. Luckily, a turtledove is watching.",
+      "moral": "Cleverness overcomes greed, and help sometimes comes from the smallest creatures."
+    },
+    "moore": {
+      "title": "Kẽerã, Zĩ-poakã la Sʋtãamba sẽn yaa bõne",
+      "subtitle": "Neb nins kom sẽn tarã sõor yɩɩ pis-tã la a tãabo.",
+      "summary": "Pag a ye sẽn be a gãagẽ wã pʋgẽ, tɩ b yãend sɩɩg a yembr n watã, la rẽ poore a yiib n wa, la rẽ poor bɩ a na n yɩɩ tãabo. B rɩka bũmb fãa... La masã, b rat n dɩ-a lame. La sũ-noog yĩnga, yaa wa ne tãb-biis sẽn get tõndã.",
+      "moral": "Yamã yɩɩda yĩn-migsã, la wakat ninga, bõn-vɩɩs nins sẽn yaa bilf n yɩɩd fãa wã me tõe n sõng-b lame."
+    },
+    "dioula": {
+      "title": "Jagokɛla, Li ani Hakilitigi fitininw",
+      "subtitle": "Mɔgɔ 33 minw tun be kɔngɔ bolo, u nana.",
+      "summary": "Muso dɔ b'a kelen na a ka boon kɔnɔ yiritu jukɔrɔ. A be hakili fitinin dɔ ye, o kɔ, mɔgɔ fila, ani mɔgɔ bisaba ni saba. U ye fɛɛn bɛɛ dumu. Sisan, u b'a fɛ k'a domu. N'a sɔrɔ, kɔlɔn dɔ b'o filɛra.",
+      "moral": "Hakilitigiya be wasabaliya kɛlɛ. Tuma dɔw la, hali danfɛn fitininw yɛrɛ lo b'an dɛmɛ."
+    },
+    "fulfulde": {
+      "title": "Lamarɗo, Honey e Ɓiidooji Ɗii",
+      "subtitle": "Yimɓe nyaamdu cappanɗe tati e tati",
+      "summary": "Gooto nder suudu maako haa ɓernde duunde, debbo boo ɗon yi'a ruuhu go'o wari, nden ɗiɗo, nden cappanɗe tati. Ɓe nyaami koo ɗume... e jooni ɓe ngiɗi nyaamugo mo. Bana no wooɗi, go'o e ɗon ndaara.",
+      "moral": "Hakkiilo ɗon ɓaŋgita ko'e man, bana non wallude boo ɗon wara diga tageefooji mawnguɗi."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "hut",
+            "x": 26,
+            "y": 24
+          },
+          {
+            "k": "woman-pound",
+            "x": 52,
+            "c": "#00894A"
+          },
+          {
+            "k": "calabash",
+            "x": 66
+          },
+          {
+            "k": "karite",
+            "x": 86,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un chasseur vivait avec sa femme dans une case isolée, au fond de la brousse. Un jour qu'il était parti chasser, sa femme préparait le repas du soir lorsqu'un tout petit génie, haut comme une calebasse, entra dans la cour.",
+        "en": "A hunter lived with his wife in a lonely hut deep in the bush. One day while he was out hunting, his wife was cooking the evening meal when a tiny spirit, no taller than a calabash, walked into the yard.",
+        "moore": "Ned sẽn da baood zĩm-biisi, a ne a pagã ra beẽ n vɩ gãag pʋgẽ. Daar a ye, a pagã sẽn da wa n segl rɩɩb wakat ning b sẽn da beẽ wã, bõn-bil sẽn ka ta koabg n kẽed rʋʋnde.",
+        "dioula": "Jagokɛla dɔ n'a muso tun be boon kelen kɔnɔ yiritu jukɔrɔ. Loon dɔ, a tun be ɲini ka taga kongo kɔnɔ. A muso tun b'a fɛ k'a ka dumuni tobi tuma min na mɛlɛkɛ dennin dɔ donna a ka luu kɔnɔ.",
+        "fulfulde": "Lamarɗo jooɗii bee debbo maako nder suudu go'oto haa ɓernde leɗɗe. Gooto nyalnde nde o ɗon yiya, debbo maako ɗon nyaama nyamndu to ruuhu matinɗo, ɓurɗum mawnugo diga kalbaas, wari nder suudu."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "hut",
+            "x": 18,
+            "y": 24
+          },
+          {
+            "k": "woman-talk",
+            "x": 34,
+            "c": "#00894A"
+          },
+          {
+            "k": "dwarf",
+            "x": 50
+          },
+          {
+            "k": "dwarf",
+            "x": 58,
+            "flip": true
+          },
+          {
+            "k": "dwarf",
+            "x": 66
+          },
+          {
+            "k": "dwarf",
+            "x": 74,
+            "flip": true
+          },
+          {
+            "k": "dwarf",
+            "x": 82
+          }
+        ]
+      },
+      "text": {
+        "fr": "Effrayée, la femme lui dit poliment : « Assieds-toi, je te servirai quand la sauce sera prête. » Un deuxième génie arriva, puis un troisième… Ils furent bientôt trente-trois, assis en rond au milieu de la cour. Ils mangèrent tout le repas sans rien laisser, puis sortirent leurs petits couteaux pour dévorer la cuisinière.",
+        "en": "Frightened, the woman said politely: “Sit down, I'll serve you when the sauce is ready.” A second spirit arrived, then a third… Soon there were thirty-three of them sitting in a circle in the yard. They ate the whole meal, leaving nothing, then took out their little knives to devour the cook.",
+        "moore": "Pagã sẽn zoe rabeem n yeel-a tɩ yaa ne yam: \"Bɩ y zĩnd, m na n kõ-y-yã sobgã sã n wa segl\". La ka la bilfu, b ra yaa neb a tãabo n zĩ zulung pʋgẽ. B rɩka rɩɩbã fãa, n pa bas bũmb ye. La b ra yiisda b sʋʋs-n-tɩrsã n na n dɩt koglg soabã.",
+        "dioula": "Muso siranna, a y'a fɔ ni bonya ye ko: \"Sigi ka sigi. Ni dumuni labɛnna tuma min na, n bena i sɔn\". A filanan nana, o kɔ, sabanan... O kɔ, u mɔgɔ bi saba ni saba sigira ɲɔgɔn fɛ kɛnɛma. U ye dumuni bɛɛ dumu, u ma foyi to. O kɔ, u y'u ka murujanw bɔ walisa k'o kɛ n'u be kofin kɛra.",
+        "fulfulde": "Debbo ɗon hulna, o wi'i bee boɗɗum: \"Njaŋge, mi hokkay ma to saawsi ɗon haɓɓii\". Ɗoon e ɗon ɓe tati e tati njooɗi nder dabare nder suudu. Ɓe nyaami nyamndu fuu, ɓe acci hay huunde, nden ɓe ƴetti kaaƴe maɓɓe ngam ɓe nyaama cuwɗo."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "acacia",
+            "x": 70,
+            "y": 30
+          },
+          {
+            "k": "hunter",
+            "x": 36
+          },
+          {
+            "k": "beehive",
+            "x": 72,
+            "y": 112,
+            "s": 0.8
+          },
+          {
+            "k": "bird-small",
+            "x": 52,
+            "y": 90
+          },
+          {
+            "k": "bush",
+            "x": 16
+          }
+        ]
+      },
+      "text": {
+        "fr": "Pendant ce temps, le chasseur revenait avec un gâteau de miel. Une tourterelle se posa au milieu du chemin et lui cria : « À ta case ! À ta case ! » Le chasseur comprit qu'un danger menaçait sa femme et courut de toutes ses forces.",
+        "en": "Meanwhile, the hunter was on his way home with a honeycomb. A turtledove landed in the middle of the path and cried: “To your hut! To your hut!” The hunter understood that his wife was in danger and ran as fast as he could.",
+        "moore": "La a ra zãada zĩm-biis n dabda. B sẽn yã wã, b ra pa tõe n paam tɩ b bãng a Zeova ye. A yãagdã bãngame tɩ a pagã beed n be bãaga, la a zoe tao-tao.",
+        "dioula": "O wagati la, jagokɛla tun be sira kan ka taga soo ni lii ye. Jigɛden dɔ tagara se sira cɛmancɛ la ka kule ko: \"I ka boon kɔnɔ! Aw ka taga aw ka boon kɔnɔ! Jagokɛla y'a faamu ko a muso tun be farati la ani a bolila joona.",
+        "fulfulde": "Nder wakkati maajum, mannduɗo ɗon yaha wuro bee ɓolde. Gooto go'o ɗon ɓooya nder laawol, o wi'i: \"To suudu maaɗa!\" To suudu maaɗa! Hunde on andini debbo maako ɗon nder haɗiiji, o jippii bana o waawi."
+      },
+      "choice": {
+        "q": {
+          "fr": "Comment le chasseur peut-il sauver sa femme ?",
+          "en": "How can the hunter save his wife?",
+          "moore": "Wãn to la zĩm-bi-poak tõe n fãag a pagã?",
+          "dioula": "Jɔnkɛ be se k'a muso kisi cogo di?",
+          "fulfulde": "Noy jaayndeowo warata debbo maako?"
+        },
+        "options": [
+          {
+            "fr": "Se battre contre trente-trois génies",
+            "en": "Fight thirty-three spirits",
+            "moore": "Kʋs-y nin-vɩɩs a tãabo.",
+            "dioula": "I ka mɔgɔ bisaba ni saba kɛlɛ.",
+            "fulfulde": "Wondira bee ruuhuuji cappanɗe tati e tati."
+          },
+          {
+            "fr": "Les amadouer avec son miel",
+            "en": "Win them over with his honey",
+            "moore": "B tõog-b lame ne b zoodo.",
+            "dioula": "A ka u dɛmɛ k'u sɔrɔ a ka kanuya kosɔn.",
+            "fulfulde": "Wattina ɓe bee ɓernde maako"
+          },
+          {
+            "fr": "Appeler le village",
+            "en": "Call the village",
+            "moore": "Wa n bool tẽn-gãongã.",
+            "dioula": "Aw ye dugu mɔgɔw wele.",
+            "fulfulde": "Wondira wuro ngoo."
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "Il leur offrit son miel… et prépara une ruse bien plus piquante.",
+          "en": "He offered them his honey… and prepared a far more stinging trick.",
+          "moore": "A kõ-b-la a zoodo... la b segla bũmb sẽn yaa toog n yɩɩd a taabã.",
+          "dioula": "A y'a ka teriya di u ma... ka fɛɛrɛ dɔ labɛn min ka jugu ni o ye.",
+          "fulfulde": "O hokki ɓe ko o yiɗi... nden o waɗiri mo huutoreeɗum ɓurɗo ɗum."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "hut",
+            "x": 16,
+            "y": 24
+          },
+          {
+            "k": "hunter",
+            "x": 32
+          },
+          {
+            "k": "dwarf",
+            "x": 50
+          },
+          {
+            "k": "dwarf",
+            "x": 58,
+            "flip": true
+          },
+          {
+            "k": "dwarf",
+            "x": 66
+          },
+          {
+            "k": "dwarf",
+            "x": 74
+          },
+          {
+            "k": "calabash",
+            "x": 42
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Ne tuez pas ma femme ! Je vous donne mieux que sa chair », dit le chasseur en partageant son miel. Les génies se régalèrent. « Rapporte-nous-en encore, ou nous vous mangerons tous les deux ! » Le chasseur partit secouer une ruche entière, abeilles comprises, dans une gourde bien fermée.",
+        "en": "“Don't kill my wife! I'll give you something better than her flesh,” said the hunter, sharing his honey. The spirits feasted. “Bring us more, or we'll eat you both!” The hunter went and shook a whole beehive, bees and all, into a tightly closed gourd.",
+        "moore": "Da kʋ maam ne m pagã ye! A sẽn da wa n dɩt a waoogrã, a yeelame: \"Mam na n kõo yãmb bũmb ning sẽn yaa sõma n yɩɩd a yĩng ye\". Sʋtãamba ra maanda rɩɩb wʋsgo. Kẽng-y n kõ tõnd tɩ d na n dɩ yãmb a yiibã fãa!",
+        "dioula": "Kana ne muso faga! Ne bena fɛɛn dɔ di i ma min ka fisa n'a sogo ye. \" Jagokɛla y'o fɔ k'a b'a ka li di a ma. Hakilitigiw tun be dumuni kɛra. Aw ye dɔ fara an kan, walima an bena aw fila bɛɛ domu!  Jagokɛla tagara ka misiw bɛɛ yuguyugu k'u kɛ kala kelen na.",
+        "fulfulde": " Taa mbar debbo am! Mi hokkan ma ko ɓuri ɓalli maako, \"joondi wi'i, o dilli bee njamndi. Ruuhu'en ɗon nyaama. Haa en ɓeydi, malla min nyaaman on ɗiɗo! Jaaynde o yahi e moƴƴi bee bee bee fuu haa nder go'o."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "moon",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "hut",
+            "x": 20,
+            "y": 24
+          },
+          {
+            "k": "bees",
+            "x": 56,
+            "y": 60
+          },
+          {
+            "k": "dwarf",
+            "x": 50,
+            "a": "a-hop"
+          },
+          {
+            "k": "dwarf",
+            "x": 64,
+            "flip": true,
+            "a": "a-hop"
+          },
+          {
+            "k": "dwarf",
+            "x": 78,
+            "a": "a-hop"
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Tournez-vous vers la porte, dit-il, cette friandise-là s'avale par la nuque ! » Il jeta la gourde au milieu d'eux et s'enferma dans sa case. La gourde éclata, et les abeilles furieuses piquèrent les génies, qui s'enfuirent dans toutes les directions. Depuis ce jour, dit-on, les génies n'habitent jamais les arbres où vivent des abeilles.",
+        "en": "“Turn towards the door,” he said, “this treat is swallowed through the back of the neck!” He threw the gourd into their midst and shut himself in his hut. The gourd burst, and the furious bees stung the spirits, who fled in every direction. Since that day, they say, spirits never live in trees where bees have their hives.",
+        "moore": "A wẽnemdame n na n kẽe noorẽ, la a yeelame: \"B rɩka bõn-kãnga ne b gãagã\". La a lobga koobgã bãmb sʋka, n kẽes a meng roogẽ. B sẽn da wa n dɩka b zĩmã, b ra zoeeme. B yetame tɩ hal daar kãng tɛka, zĩn-dãmbã pa le vɩ tɩɩs pʋsẽ sẽn be bõn-buudb sẽn tar b pʋse ye.",
+        "dioula": "A y'a fɔ ko: \"O tuma na, mɔgɔ be taga n'o sogo ye a kɔ kan\". O kɔ, a tagara o fili dugu kɔnɔ. O kɔ, u ye jinɛw bugɔ. U bolila ka taga faan bɛɛ la. Kabi o wagati la, u b'a fɔ ko mɔgɔ si tɛ se ka ɲɛnamaya kɛ yiriw kɔnɔ.",
+        "fulfulde": "O wi'i, \"Ndaa ko o ɗon waɗana haa ɓaawo dammugal!\" O wurtini go'o nder caka maɓɓe, o suuɗi hoore maako nder suudu muuɗum. Gourd ɓoggi, beeje ɗon kaɗol boo ɗon nyaamda ruumiiɓe ɓe ɗon ndilli haa kootoye fuu. Diga nyalnde nden, ɓe mbi'i, ruuhuuji ɗon jooɗoto nder leɗɗe to beeje woodi koore maɓɓe."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Combien de génies nains arrivent dans la cour ?",
+        "en": "How many little spirits come into the yard?",
+        "moore": "Vʋʋsem dãmb wʋsg n wa be roogẽ wã?",
+        "dioula": "Hakilitigi fitinin joli be don kɛnɛma?",
+        "fulfulde": "Yimɓe ɗuuɗɓe nder ɓerɗe maaru ɓe ngari haa suudu?"
+      },
+      "options": [
+        {
+          "fr": "Trois",
+          "en": "Three",
+          "moore": "A tãabã",
+          "dioula": "3",
+          "fulfulde": "3 Ɗuum"
+        },
+        {
+          "fr": "Treize",
+          "en": "Thirteen",
+          "moore": "A 13",
+          "dioula": "13",
+          "fulfulde": "13"
+        },
+        {
+          "fr": "Trente-trois",
+          "en": "Thirty-three",
+          "moore": "A tãabo la pis-tã.",
+          "dioula": "Mɔgɔ bi saba ni saba (33)",
+          "fulfulde": "Yimɓe cappanɗe tati e tati"
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "q": {
+        "fr": "Quel oiseau prévient le chasseur ?",
+        "en": "Which bird warns the hunter?",
+        "moore": "Kẽer n keoogd zĩm-biisi?",
+        "dioula": "Dɔnkililabaga ka kan k'a lasɔmi kɔnɔ juman lo fɛ?",
+        "fulfulde": "Ɗume nder colli ɗon wa'i manjo?"
+      },
+      "options": [
+        {
+          "fr": "Une tourterelle",
+          "en": "A turtledove",
+          "moore": "Dɩt-pʋʋg sẽn yaa bẽdg",
+          "dioula": "Jigɛmisɛn dɔ",
+          "fulfulde": "Duuba tortugo"
+        },
+        {
+          "fr": "Un calao",
+          "en": "A hornbill",
+          "moore": "A sã n wa tar bĩis-n-tɩrsã,",
+          "dioula": "O ye ɲɛgɛn dɔ ye.",
+          "fulfulde": "Ɗuum ɓannduɗo"
+        },
+        {
+          "fr": "Un vautour",
+          "en": "A vulture",
+          "moore": "B sẽn yã wã, b ra yaa wa bu-zẽmbã.",
+          "dioula": "Jigɛmisɛn dɔ",
+          "fulfulde": "Ɗuum ɓooyɗo"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Qu'est-ce qui fait fuir les génies ?",
+        "en": "What drives the spirits away?",
+        "moore": "Bõe n kɩt tɩ b yĩn-wẽnsã loogdẽ?",
+        "dioula": "Mun lo be mɔgɔ hakili ɲagami?",
+        "fulfulde": "Ko waɗi ruuhuuji ɗon njahi?"
+      },
+      "options": [
+        {
+          "fr": "Le feu",
+          "en": "Fire",
+          "moore": "Bõn-kãng yaa bugum.",
+          "dioula": "Tasuma",
+          "fulfulde": "Yiite"
+        },
+        {
+          "fr": "Les abeilles",
+          "en": "Bees",
+          "moore": "Dẽn-biis",
+          "dioula": "Kɔnɔminanw",
+          "fulfulde": "Bee bee bees"
+        },
+        {
+          "fr": "Les chiens",
+          "en": "Dogs",
+          "moore": "A zo-rãmba",
+          "dioula": "Wuluw",
+          "fulfulde": "Dogs"
+        }
+      ],
+      "answer": 1
+    }
+  ],
+  "glossary": [
+    {
+      "term": "génie",
+      "lang": "fr",
+      "def": {
+        "fr": "Être surnaturel des contes ouest-africains, souvent petit et rusé, qui habite la brousse, les arbres ou les rochers. Les Gourmantché les appellent pora.",
+        "en": "A supernatural being in West African tales, often small and cunning, who lives in the bush, in trees or rocks. The Gourmantché call them pora.",
+        "moore": "Yaa bõn-vɩɩs sẽn be dũniyã zug Afirik tẽnsẽ, n yaa nin-bõoneg la nin-tɩrsã. A vɩ weoogẽ, tɩɩsã wall kugẽ wã pʋgẽ. Gourmantché wã boond-b lame tɩ pora.",
+        "dioula": "Afiriki tileben fan fɛ, mɔgɔ min ka ca ani a be dogo. A be to yiritu kɔnɔ, yiriw wala farayɔrɔw la. Gourmantchéw b'u wele ko pora.",
+        "fulfulde": "Gooto ɓurɗo nanuki nder kaalaaji Afrik hirnaange, boo ɗuuɗugo e mo cembiɗɗo, o jooɗii nder leɗɗe, nder lekki malla ko'e maare. Gourmantché noddita ɓe pora."
+      }
+    },
+    {
+      "term": "gourde",
+      "lang": "fr",
+      "def": {
+        "fr": "Calebasse ronde à petite ouverture, utilisée comme récipient.",
+        "en": "A round calabash with a narrow opening, used as a container.",
+        "moore": "Bãag sẽn yaa bĩng ne gãnd sẽn yaa kãenkãe, n da rɩkd wa koglg.",
+        "dioula": "Kalabasigilan birilaman ni daa fitini dɔ ye, a be kɛ minan ye.",
+        "fulfulde": "Kalabash ɓooyɗo e koɗol, huutoreeɗum bana kaɓirɗe."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « Le miel aux tyityirgas », conte gourmantché recueilli à Fada N'Gourma en 1912 auprès de l'écolier Talata, publié par F.-V. Équilbecq (1913, domaine public). Réécriture libre.",
+    "en": "Based on “Le miel aux tyityirgas”, a Gourmantché tale told by the schoolboy Talata in Fada N'Gourma in 1912 and published by F.-V. Équilbecq (1913, public domain). Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

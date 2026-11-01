@@ -1,0 +1,296 @@
+{
+  "slug": "la-mouche-maconne-et-le-crapaud",
+  "type": "conte",
+  "region": "plateau-central",
+  "place": "Zorgho",
+  "coords": [
+    12.25,
+    -0.62
+  ],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 4,
+  "age": 4,
+  "featured": false,
+  "cover": 1,
+  "tags": [
+    "politesse",
+    "humour",
+    "animaux",
+    "chacun son tour"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "La mouche maçonne et le crapaud",
+      "subtitle": "Chacun son tour à table",
+      "summary": "Invités chez la belle-famille de la mouche maçonne, le crapaud et la mouche doivent se laver les mains avant de manger. Mais un crapaud marche sur ses mains… La revanche sera savoureuse.",
+      "moral": "Qui se moque de l'embarras d'un ami connaîtra le même embarras : l'entraide vaut mieux que la ruse."
+    },
+    "en": {
+      "title": "The Mason Wasp and the Toad",
+      "subtitle": "Everyone's turn at the table",
+      "summary": "Invited to the mason wasp's in-laws, the toad and the wasp must wash their hands before eating. But a toad walks on his hands… The revenge will be delicious.",
+      "moral": "Whoever laughs at a friend's difficulty will face the same difficulty: helping each other is worth more than trickery."
+    },
+    "moore": {
+      "title": "B sẽn boond tɩ Mason Wasp ne a Zĩigã",
+      "subtitle": "B fãa waa taab roogẽ.",
+      "summary": "B sẽn bool-b tɩ b wa yãg-a wã, b segd n pese b nus n yaool n dɩ. La sã n yaa gãnd sẽn kẽnd a nusã zugu... Sẽn na n yɩ-a wã na n yɩɩ noogo.",
+      "moral": "Ned ning sẽn yãgd a zoa zu-loeesã na n paama zu-loees a yembre: ned sã n sõng taab, yaa sõma tɩ yɩɩd yel-wẽnde."
+    },
+    "dioula": {
+      "title": "Masɔn ni kɔgɔnin",
+      "subtitle": "Mɔgɔ bɛɛ ka kan ka na dumuni kɛ.",
+      "summary": "O kɔ, u b'a ɲini a fɛ ko a k'u bolow ko sanni a ka dumuni kɛ. Nka, a bolow be to ka kɛ ɲamaɲama ye. O bena kɛ sababu ye an be se ka mɔnɛ bɔ.",
+      "moral": "Mɔgɔ min be yɛlɛ a teri ka gwɛlɛyaw ma, o tigi fana bena gwɛlɛya kelen sɔrɔ. Ka ɲɔgɔn dɛmɛ, o nafa ka bon ni nɛgɛtigɛbana ye."
+    },
+    "fulfulde": {
+      "title": "Mason Wasp e Toad",
+      "subtitle": "Yimɓe fuu ɓe ɗon njogii dow nyaamdu.",
+      "summary": "Nde ɓe noddi to surugo'en mason wasp, bewar e warko'en ɗon haani limce maɓɓe ngam nyaamugo. Ammaa go'o ɗon yaha dow juuɗe maako... Hakkiilo boo ɗum ɓeydaay.",
+      "moral": "Mo ɗon nyi'aago saɗugo bandiraawo maako, o heɓan saɗugo: wallude woɓɓe ɓuri ɓernde."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 66,
+            "y": 26
+          },
+          {
+            "k": "toad",
+            "x": 34,
+            "s": 1.6
+          },
+          {
+            "k": "wasp",
+            "x": 46,
+            "y": 60,
+            "s": 1.4
+          },
+          {
+            "k": "old-woman",
+            "x": 84,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un jour, la mouche maçonne demanda au crapaud de l'accompagner chez sa belle-famille. Arrivés, ils saluèrent les beaux-parents, et la belle-mère leur servit un beau plat de riz à la viande, avec de l'eau pour se laver les mains.",
+        "en": "One day, the mason wasp asked the toad to come with her to visit her in-laws. When they arrived, they greeted the parents-in-law, and the mother-in-law served them a fine dish of rice with meat, along with water to wash their hands.",
+        "moore": "Daar a ye, b sẽn da boond tɩ \"Mason Wasp\" wã kosa ra-rɩtã t'a wa ges a rẽnna. B sẽn wa wã, b pʋʋsda b ma-rãmbã. La a ma-rãmbã kõ-b-la bur ne namse la koom n na n kos b nusã.",
+        "dioula": "Loon dɔ, o muso ye kurukuruba weele ka na a bololafɛnw filɛ. U sera yen tuma min na, u ye u birancɛw fo. A bamuso y'u sɔn dumuni ɲuman dɔ la ni sogo ani jii ye walisa k'u bolo ko.",
+        "fulfulde": "Gooto nyalnde, gooduɗo mawɓe moftal ngal noddi toodi ngam o yahda bee maako haa o yahugo deerɗi mum'en. Nde ɓe ngari, ɓe njaɓi surbaaɓe maɓɓe, nden suka debbo hokkiɓe ko'e mum e nyamndu e ndiyam ngam ɓe loota juuɗe."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "calabash",
+            "x": 50,
+            "s": 1.6
+          },
+          {
+            "k": "wasp",
+            "x": 50,
+            "y": 50,
+            "s": 1.4,
+            "a": "a-bob"
+          },
+          {
+            "k": "toad",
+            "x": 28,
+            "s": 1.5,
+            "a": "a-hop"
+          },
+          {
+            "k": "jar",
+            "x": 14
+          }
+        ]
+      },
+      "text": {
+        "fr": "La mouche se lava les mains et s'envola directement au bord du plat. Le crapaud se lava aussi les mains… mais pour venir jusqu'au plat, il dut sauter en posant ses mains par terre ! « Tes mains sont sales, retourne les laver », lui dit-on. Il y retourna, revint en sautant, et se salit encore. Pendant ce temps, la mouche vida le plat sans l'attendre.",
+        "en": "The wasp washed her hands and flew straight to the edge of the dish. The toad washed his hands too… but to reach the dish, he had to hop with his hands on the ground! “Your hands are dirty, go and wash them again,” they told him. He went back, hopped back, and got dirty again. Meanwhile, the wasp emptied the dish without waiting for him.",
+        "moore": "A sẽn wa n na n tɩ yɩg-a wã, a zãaga a nusã n leb n kẽed ne koglgã. A Zĩigã me peega a nusã... La a sẽn na n ta zĩigã, a ra segd n wõgemda ne a nus tẽnga. B yeel-a lame: \"Yãmb nusã yaa rẽgd n paase, kẽng n kos-b ye\". A leb n kẽnga, a leb n kẽe koom-koglgã pʋgẽ la a lebg n wa yɩ rẽgd. La a sẽn wa n be wã, a pa gũ-a ye.",
+        "dioula": "O kɔ, a y'a bolow ko ani ka boli ka taga se minan daa la. Kɔnɔbara fana y'a bolow ko. Nka walisa ka se o minan kɔrɔ, a tun ka kan k'a bolo la duguma! U y'a fɔ a ye ko: \"I bolow nɔgɔlen lo, taga u ko tugu\". A segira ka taga, a ye sinsin kuraw kan. O kɔ, a ye minan dɔ bɔ ka sɔrɔ k'a kɔnɔni kɛ.",
+        "fulfulde": "Wesp ɗon loota juuɗe maako, o dilli haa ɓaawo nyaamdu. Baaba boo o loɓii juuɗe maako... Ammaa ngam o haaɓana ko'e maako, o fota bee juuɗe muuɗum dow lesdi! \"Jawɗe ma ɗon laaɓaa, yah ɓe ngaɗa ɗe\". Ɓe mbi'i mo. O hooti, o ƴetti haa o fuɗɗiti, nden o ɓanngini. Haa wakkati maajum, go'o ɗon maɓɓina kootoyeere nden."
+      },
+      "choice": {
+        "q": {
+          "fr": "Comment le crapaud pourrait-il prendre sa revanche ?",
+          "en": "How could the toad get his revenge?",
+          "moore": "Wãn to la b tõe n sɩbg-a?",
+          "dioula": "A tun be se k'a mɔnɛ bɔ cogo di?",
+          "fulfulde": "Noy ɓoymaaru heɓan kisndam maako?"
+        },
+        "options": [
+          {
+            "fr": "En invitant la mouche chez lui, au bord de l'eau",
+            "en": "By inviting the wasp to his home by the water",
+            "moore": "A sẽn bool a ye wã n wa be koomã pʋga,",
+            "dioula": "A ye waranin weele a ka soo jii gɛrɛfɛ.",
+            "fulfulde": "Ngam o nodda haako to wuro maako haa ndiyam"
+          },
+          {
+            "fr": "En lui volant sa part",
+            "en": "By stealing her share",
+            "moore": "A sẽn na n zã a pʋɩɩrã",
+            "dioula": "A ka wari cɛtigɛ cogo min na, a y'o le kɛ.",
+            "fulfulde": "Ngam ɓe ɓooydi ko o hokki mo"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Quelques jours plus tard, ce fut au tour du crapaud d'inviter son amie…",
+          "en": "A few days later, it was the toad's turn to invite his friend…",
+          "moore": "Daar a wãn poore, ra yaa b zoa wã sẽn na n bool-a tɩ b wa.",
+          "dioula": "Loon dɔ, a ye teri dɔ weele ka na.",
+          "fulfulde": "Balɗe seɗɗa ɓaawo maajum, ɗum warti to duɗal ngam nodda bandiraawo maako..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 220
+          },
+          {
+            "k": "toad",
+            "x": 40,
+            "y": -24,
+            "s": 1.6
+          },
+          {
+            "k": "wasp",
+            "x": 22,
+            "y": 60,
+            "s": 1.4,
+            "a": "a-bob"
+          },
+          {
+            "k": "calabash",
+            "x": 60,
+            "y": -24
+          },
+          {
+            "k": "palm",
+            "x": 10,
+            "y": 36,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "Quelques jours plus tard, le crapaud invita la mouche chez ses beaux-parents, qui vivaient au fond de la mare. Le repas fut servi sous l'eau ! Le crapaud plongea et mangea tranquillement. La mouche, elle, plongeait, remontait aussitôt pour respirer… et ne put avaler une seule bouchée. Depuis ce jour, chacun sait que celui qui se moque de son ami connaîtra son tour.",
+        "en": "A few days later, the toad invited the wasp to his in-laws, who lived at the bottom of the pond. The meal was served underwater! The toad dived in and ate in peace. The wasp kept diving and immediately coming back up to breathe… and couldn't swallow a single bite. Since that day, everyone knows that whoever mocks a friend will get their turn.",
+        "moore": "Daar a wãn poore, b bool-a lame t'a wa tɩ ges a sɩdb rãmbã sẽn da be koom koglgã zug. B rɩka rɩɩbã koomẽ wã! A ra kẽeme n dɩtẽ. A ra ket n kẽnda koomẽ, la a leb n vʋʋsdame. La b pa tõog n dɩd a ye. Sẽn sɩng ne wakat kãng, nebã fãa miime tɩ ned ning sẽn na n yaal a zoa wã na n paama a toore.",
+        "dioula": "Loon damanin o kɔ, a ye muso weele ka na bɔ a kɔrɔmuso n'a burancɛ fɛ. U tun be to k'o jii nin jigi yɔrɔ dɔ la. U tun be dumuni kɛ jii jukɔrɔ! Kɔnɔbara donna ka dumuni kɛ hɛɛrɛ la. O kɔ, a tora ka sin jii la ani o yɔrɔnin bɛɛ, a tun be kɔsegi ka na n'a ye. ani a tun tɛ se ka dɔ nin min. Kabi o loon na, mɔgɔ bɛɛ b'a lɔn ko ni mɔgɔ min ye teri dɔ lɔgɔbɔ, a bena bɔnɛ a ka baara la.",
+        "fulfulde": "Balɗe goɗɗe ɓaawo, duɗal ngal noddi duɗal to saare maako, ɓe njooɗi dow poolgu. Nyaamdu ɗon hawrana nder ndiyam! Dabba'en ɗon maaro nder jam. Wesp ɗon ɓeyda wurtaago e ɗon ɗon warto haa o nyaama... e waawataa ɓooyugo go'oto. Gila nden nyalnde, koo moye anndi gooduɗo moofta bandiraawo maako heɓan laawol."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Pourquoi le crapaud a-t-il toujours les mains sales ?",
+        "en": "Why are the toad's hands always dirty?",
+        "moore": "Bõe yĩng tɩ b nus yaa rẽgd wakat fãa?",
+        "dioula": "Mun na tɔrisenw bolo nɔgɔlen lo tuma bɛɛ?",
+        "fulfulde": "Ngam ɗume juuɗe ɓooyma ɗon laaɓta?"
+      },
+      "options": [
+        {
+          "fr": "Il saute en posant les mains par terre",
+          "en": "He hops with his hands on the ground",
+          "moore": "A leb n zẽka a nusã tẽnga.",
+          "dioula": "A be sanfɛla la ni a bolow ye duguma",
+          "fulfulde": "O ɗon ƴeewa bee juuɗe maako dow lesdi"
+        },
+        {
+          "fr": "Il ne se lave pas",
+          "en": "He doesn't wash",
+          "moore": "A pa tol n kosd a meng ye.",
+          "dioula": "A tɛ ko.",
+          "fulfulde": "O ɗon lootaay."
+        },
+        {
+          "fr": "Il joue dans la boue",
+          "en": "He plays in the mud",
+          "moore": "A yɩɩda b sẽn be koomẽ wã pʋgẽ.",
+          "dioula": "A be to ka tulogwerenw kɛ.",
+          "fulfulde": "O ɗon njula nder leɗɗe"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Où se passe le repas chez le crapaud ?",
+        "en": "Where is the meal served at the toad's home?",
+        "moore": "Ãndẽ la b kõt rɩɩb ne rũmsã?",
+        "dioula": "Kɔnɔbara ka soo la, u be dumuni di min ma?",
+        "fulfulde": "Toye nyaamdu nder wuro duɗal?"
+      },
+      "options": [
+        {
+          "fr": "Sous l'eau",
+          "en": "Underwater",
+          "moore": "Ko-kãsengã pʋgẽ",
+          "dioula": "Jii jukɔrɔ",
+          "fulfulde": "Ha nder ndiyam"
+        },
+        {
+          "fr": "Dans un arbre",
+          "en": "In a tree",
+          "moore": "A tɩɩgẽ.",
+          "dioula": "Yiri dɔ kɔnɔ.",
+          "fulfulde": "Nder leggal"
+        },
+        {
+          "fr": "Au marché",
+          "en": "At the market",
+          "moore": "Zĩ-gũudã pʋgẽ",
+          "dioula": "Fɛɛn minw be feere,",
+          "fulfulde": "Nder fannu"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "mouche maçonne",
+      "lang": "fr",
+      "def": {
+        "fr": "Guêpe solitaire qui construit son nid avec de la boue, comme un maçon.",
+        "en": "A solitary wasp that builds its nest out of mud, like a mason.",
+        "moore": "A yaa wa b sẽn boond tɩ \"kẽngr\" n naan a zĩiga.",
+        "dioula": "A be kɛ i n'a fɔ mɔgɔ dɔ, a b'a ka ɲaga lɔ ni bɔgɔ ye.",
+        "fulfulde": "Wassol gootol ɗon nyiɓɓa ɓandu maako diga cembiɗam, bana mawɗo."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « La mouche maçonne et le crapaud », conte traduit du mooré, publié sur abcBurkina.net. Réécriture libre.",
+    "en": "Based on “La mouche maçonne et le crapaud”, a tale translated from Mooré, published on abcBurkina.net. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

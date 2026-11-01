@@ -1,0 +1,458 @@
+{
+  "slug": "les-vaches-sorties-de-l-eau",
+  "type": "legende",
+  "region": "sahel",
+  "place": "Oursi",
+  "coords": [
+    14.67,
+    -0.45
+  ],
+  "people": "Peul",
+  "language": "fulfulde",
+  "duration": 5,
+  "age": 6,
+  "featured": true,
+  "cover": 2,
+  "tags": [
+    "patience",
+    "élevage",
+    "eau",
+    "origines"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le Berger et les vaches sorties de l'eau",
+      "subtitle": "Une légende peule du Sahel",
+      "summary": "Au bord d'une mare du Sahel, un jeune homme sans troupeau joue de la flûte. Un soir, une voix monte des eaux et lui fait une promesse… à une seule condition : ne jamais se retourner.",
+      "moral": "La patience et la confiance sont récompensées ; la curiosité impatiente fait perdre une partie des dons reçus."
+    },
+    "en": {
+      "title": "The Herdsman and the Cattle from the Water",
+      "subtitle": "A Fulani legend from the Sahel",
+      "summary": "On the shore of a pond in the Sahel, a young man with no herd plays his flute. One evening, a voice rises from the water and makes him a promise… on one condition: he must never look back.",
+      "moral": "Patience and trust are rewarded; impatient curiosity makes us lose part of what we are given."
+    },
+    "moore": {
+      "title": "Koɛɛg ne rũng sẽn be koomã pʋgẽ wã",
+      "subtitle": "A Fulani kibar sẽn yit Sahel soolmẽ wã",
+      "summary": "A sã n be Sahel soolmẽ wã, rao a ye sẽn pa tar rũngã yɩɩlda a piisã. Daar a ye yʋngo, koɛɛg n yi koomã pʋgẽ n kãab-a lame tɩ: La a sã n wa maan woto, a pa na n bao n ges b poorẽ ye.",
+      "moral": "D sã n pa tar sũ-mar la d kɩs sɩd ne a Zeova, d na n paama barka. La d sã n ka tar sũ-mare, d tõe n basame tɩ bũmb kẽer paoog tõndo."
+    },
+    "dioula": {
+      "title": "A ye sagadɛndɛbaga ni begɛnmisɛnw labɔ jii la.",
+      "subtitle": "Sahɛli jamana ka fulaniw ka maana dɔ",
+      "summary": "Sahɛli jamana na, cɛnin dɔ be flɛri kɛra a ka piyɔti la. Loon dɔ wulafɛ, kumakan dɔ bɔra jii la ka layidu ta a ye ko: Ni koo kelen dɔrɔn lo kɛra, a man kan ka segi k'a ɲɛɛ sin a ma.",
+      "moral": "An be muɲu ani ka la tɔɔw la. N'an b'a fɛ k'o lɔn, an t'a to u k'an jigi la an kan tugun."
+    },
+    "fulfulde": {
+      "title": "Yimɓe ɓeen e dabbaaji diga ndiyam",
+      "subtitle": "Legenda Fulani diga Sahel",
+      "summary": "Nder maayo nder Sahel, goɗɗo sukaajo mo walaa kawtal ɗon jooɗora bee fiila. Nder jemma go'o, wolde ƴetti diga ndiyam nden waɗi alkawal... e haala go'o: o waawaa yi'ugo ɓaawo.",
+      "moral": "Hoto ɗon hokkata belɗum ngam haɓɓugo beɗuki; ɓernde fuɗɗam yaajugo waɗata en njokki feere nder ko ɗum hokkimo."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 76,
+            "y": 220
+          },
+          {
+            "k": "acacia",
+            "x": 14,
+            "y": 34,
+            "s": 0.9
+          },
+          {
+            "k": "shepherd",
+            "x": 30,
+            "y": 6
+          },
+          {
+            "k": "birds",
+            "x": 60,
+            "y": 240
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il y a très longtemps, au bord d'une grande mare du Sahel, vivait un jeune homme pauvre. Il n'avait ni troupeau ni famille. Chaque soir, il s'asseyait au bord de l'eau et jouait de la flûte pour oublier sa solitude.",
+        "en": "Long, long ago, on the shore of a great pond in the Sahel, there lived a poor young man. He had neither herd nor family. Every evening he sat by the water and played his flute to forget his loneliness.",
+        "moore": "Yʋʋm wʋsg sẽn looge, tẽn-kɩtgã noorẽ, kom-bɩɩg a ye n da be Sahel soolmẽ wã. A ra pa tar rũng wall zakã ye. A ra pa beẽd koomã sɛɛg ye.",
+        "dioula": "Wagatijan tɛmɛnin na, fantan dɔ tun be Sahɛli mara la. A tun siginin be kɔlɔnba dɔ daa la. A tun tɛ ni sagakulu ye ani a ka denbaya fana tun tɛ yen. Loon o loon wulafɛ, a tun be sigi jii daa la ka flɛn kɛ walisa k'a ɲɛɛ bɔ a kelenya kan.",
+        "fulfulde": "Wakkati ɗuɗɗum, wakkati ɗuɗɗi, nder sahel haa daande ndiyam mawɗo, goɗɗo sukaajo mo'o marɓe jooɗoto. O walaa bandol e yimɓe maako. Koo jemma o jooɗi bee ndiyam e mo fahinta ngam o yejjita goɗɗum."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "moon",
+            "x": 70,
+            "y": 300
+          },
+          {
+            "k": "rays",
+            "x": 66,
+            "y": -30
+          },
+          {
+            "k": "shepherd",
+            "x": 26,
+            "y": 6
+          },
+          {
+            "k": "acacia",
+            "x": 10,
+            "y": 34,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un soir, une voix sortit des eaux : « Ta musique m'a touché. Demain, à l'aube, marche vers le soleil levant en jouant de ta flûte. Un troupeau te suivra. Mais surtout, ne te retourne pas avant d'avoir atteint ton campement. »",
+        "en": "One evening, a voice rose from the water: “Your music has touched me. Tomorrow at dawn, walk towards the rising sun playing your flute. A herd will follow you. But above all, do not look back until you reach your camp.”",
+        "moore": "Daar a ye yʋngo, koɛɛg n yi koomã pʋgẽ: \"Yãmb yɩɩl sɩɩsa maam. Sã n yaa vẽkembeoogẽ, bɩ y kẽne wĩntoogã sẽn watã taoore. B na n tũu yãmb ne bãensã. La sẽn yɩɩd fãa, bɩ y ra ges poorẽ tɩ b pa yã yãmb ye.",
+        "dioula": "Loon dɔ wulafɛ, kumakan dɔ bɔra jii la ko: \"I ka dɔnkiliw ye ne sɔrɔ. Sini sɔgɔma sɔgɔmada joona, aw ye taga tile bɔyɔrɔ la ka flɛnfɔ. Jigɛ dɔ bena tugu i kɔ. Nka min kɔrɔtanin lo ka tɛmɛ o bɛɛ kan, i kana sinsin kɔfɛ fɔɔ n'i sera i ka sigiyɔrɔ la.",
+        "fulfulde": "Nder jemma go'o, wolde ƴetti diga ndiyam: \"Woldi ma meemi yam. Nyalnde, to winde naange ɗon wurta, njogge nyaamo maaɗa. Yimɓe ɓe ɗon tokki on. Ammaa ɓurɗum fuu, taa ndaara haa to a hawti nder suudu."
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "sun",
+            "x": 88,
+            "y": 240
+          },
+          {
+            "k": "shepherd",
+            "x": 70
+          },
+          {
+            "k": "cow",
+            "x": 48
+          },
+          {
+            "k": "cow",
+            "x": 30,
+            "s": 0.9
+          },
+          {
+            "k": "cow",
+            "x": 14,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "À l'aube, il obéit. Derrière lui, il entendit des clapotis, puis des meuglements : une à une, des vaches aux longues cornes en forme de lyre sortaient de la mare et le suivaient !",
+        "en": "At dawn, he obeyed. Behind him he heard splashing, then lowing: one by one, cows with long lyre-shaped horns were coming out of the pond and following him!",
+        "moore": "A sẽn wa n na n yãgẽ, a sakame. A sẽn be a poorẽ wã, b wʋma koe-koɛɛg n wa. Koɛɛg ne yɩɩl sẽn yaa wa laar ra yii koom koglgã pʋgẽ n pʋgd-a lame!",
+        "dioula": "Dugu gwɛra tuma na, a ye mɛnni kɛ Jehova fɛ. A ye mankan mɛn a kɔfɛ, ka to k'a kaan bɔ. U kelen kelen bɛɛ tun be bɔra jii la ka tugu a kɔ!",
+        "fulfulde": "Nde naange wurtini, o ɗowtani. To ɓaawo maako o nani wurtugo, nden boo mo ɗon maaro: go'oto gaɗa goɗɗo, baali bee kaariji njamndi haa ɓe ƴiwoyi diga nder poolgu, ɓe tokki mo!"
+      },
+      "choice": {
+        "q": {
+          "fr": "Le bruit est si étonnant… Que doit faire le berger ?",
+          "en": "The sounds are so amazing… What should the herdsman do?",
+          "moore": "B sẽn gomd bũmb ningã yaa bõn-kãsenga. Bõe la pe-kɩɩmdã segd n maane?",
+          "dioula": "O mankanw ka di mɔgɔ ye. A tun ka ɲi ka mun lo kɛ do?",
+          "fulfulde": "Ɗee nannge ɗon mawnina... Ko woni ko laamiiɗo baali'en waɗata?"
+        },
+        "options": [
+          {
+            "fr": "Se retourner pour voir",
+            "en": "Look back to see",
+            "moore": "Ges-y n gese.",
+            "dioula": "I ka segi k'a filɛ",
+            "fulfulde": "Ndaaree to ɓaawo ngam yi'ugo"
+          },
+          {
+            "fr": "Continuer sans se retourner",
+            "en": "Keep walking without looking back",
+            "moore": "Kẽng n kẽnd tɩ f ra ges poorẽ ye",
+            "dioula": "I kana i ɲɛɛ tugu kɔ ka taama",
+            "fulfulde": "Wonduki e hoolaaki ngam taa ngi'i ɓaawo"
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "C'est ce que demandait la voix… mais la tentation était très forte.",
+          "en": "That is what the voice had asked… but the temptation was very strong.",
+          "moore": "Yaa woto la koɛɛgã sẽn sok-a wã. La makrã ra yaa kãsenga.",
+          "dioula": "O kumakan tun y'o lo fɔ. Nka kɔrɔbɔli tun ka bon kosɔbɛ.",
+          "fulfulde": "Ɗun woni ko wolde ƴamiri... Ammaa kalluka ɗon mawndi."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "sun",
+            "x": 50,
+            "y": 310
+          },
+          {
+            "k": "shepherd",
+            "x": 62,
+            "flip": true
+          },
+          {
+            "k": "cow",
+            "x": 40
+          },
+          {
+            "k": "cow",
+            "x": 22,
+            "s": 0.85
+          },
+          {
+            "k": "hut",
+            "x": 88,
+            "y": 20,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il marcha longtemps. Mais à quelques pas du campement, la curiosité fut trop forte : il se retourna. Aussitôt, les vaches qui n'étaient pas encore sorties replongèrent dans la mare et disparurent.",
+        "en": "He walked for a long time. But just a few steps from the camp, his curiosity was too strong: he looked back. At once, the cows that had not yet come out plunged back into the pond and vanished.",
+        "moore": "A ra kẽndame hal tɩ kaoos. La a sẽn da be logtorã n zãag-a wã, a ra nong n bãnga bũmb wʋsgo. A wẽnemdame n ges b poorẽ. La tao-tao bala, naandã sẽn da pa yi wã leb n kẽe koom koglgã pʋgẽ n menemame.",
+        "dioula": "A ye tagama kɛ wagatijan. Nka, a tun be yɔrɔ jaɲa dɔɔni dɔrɔn u ka sigiyɔrɔ la. A y'a daminɛ k'a yɛrɛ filɛ kɔfɛ. O yɔrɔnin bɛɛ, misi minw tun ma bɔ fɔlɔ, olu kɔsegira jii la ani u tununa.",
+        "fulfulde": "O ɗon yaha wakkati ɗuɗɗum. Ammaa to o ɗon haa nokkuure booɗnde, ɓernde maako ɗon maaki masin: o ndaari. Ɗoon, sappooji ɗi ɓe ɗon njiɗi haa fuɗɗam ɓe mburtini nder ladde nden ɓe maayi."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "acacia",
+            "x": 14,
+            "y": 30
+          },
+          {
+            "k": "shepherd",
+            "x": 36
+          },
+          {
+            "k": "cow",
+            "x": 56
+          },
+          {
+            "k": "cow",
+            "x": 72,
+            "flip": true,
+            "s": 0.9
+          },
+          {
+            "k": "calabash",
+            "x": 44
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il garda le troupeau qui l'avait suivi et devint, dit-on, le premier pasteur. Depuis, les Peuls prennent soin de leurs vaches comme d'un trésor confié par l'eau.",
+        "en": "He kept the herd that had followed him and became, it is said, the first herdsman. Ever since, the Fulani have cared for their cattle like a treasure entrusted to them by the water.",
+        "moore": "A ra ket n zãada piis nins sẽn da tũuda a Zezi wã, la b yeelame t'a lebga pipi pe-kɩɩm. Rẽ tɛka, a Fulani wã geta b rũmsã wa ligdi.",
+        "dioula": "A ye sagakuluw mara ani a kɛra u ka fɔlɔgɛnbaga ye. Kabi o tuma, Fulani mɔgɔw be janto u ka misiw na i ko nafolo min kalifara u ma jii fɛ.",
+        "fulfulde": "O waɗi kuuje ɗe tokkake maako, o laati, ɗum wi'i, ardiiɗo nyamndu. Gila ndeen, Fulani'en ɗon hakkiilo bee dabbaaji maɓɓe bana jawdi ɗum ndiyam hokkataɓe."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "moon",
+            "x": 30,
+            "y": 310
+          },
+          {
+            "k": "acacia",
+            "x": 84,
+            "y": 34,
+            "s": 0.9
+          },
+          {
+            "k": "birds",
+            "x": 60,
+            "y": 230
+          }
+        ]
+      },
+      "text": {
+        "fr": "Et l'on raconte que les vaches restées au fond de la mare y vivent encore… attendant un berger plus patient.",
+        "en": "And they say the cows that stayed at the bottom of the pond still live there… waiting for a more patient herdsman.",
+        "moore": "B yetame tɩ rap nins sẽn da be koom koglgã zug wã ket n vɩɩ be. La b gũuda pe-kɩɩm sẽn na n yɩ sũ-mar soaba.",
+        "dioula": "U b'a fɔ ko misi minw tora kɔlɔn jukɔrɔ, olu bele be yen. ka sagagbɛnbaga dɔ makɔnɔ min muɲunin lo.",
+        "fulfulde": "Ɓe mbi'i leyɗe ɗe njooɗake dow poolgu ɗon njooɗii ton... ngam ɓe ɗonno haa ɓe njettoowo nyaamo mo ɓeydaaki."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quelle condition la voix impose-t-elle ?",
+        "en": "What condition does the voice set?",
+        "moore": "Bõe la koɛɛgã wilgdẽ?",
+        "dioula": "Kuma be mun lo fɔ?",
+        "fulfulde": "Ko honɗun woni haala ko wolde ɗon waɗana?"
+      },
+      "options": [
+        {
+          "fr": "Ne pas se retourner",
+          "en": "Not to look back",
+          "moore": "La b pa getẽ ye.",
+          "dioula": "N' ma segi ka miiri o la.",
+          "fulfulde": "Taa ndaara dow maajum."
+        },
+        {
+          "fr": "Ne pas jouer de flûte",
+          "en": "Not to play the flute",
+          "moore": "Pa f sẽn na n yɩɩl fluutã ye.",
+          "dioula": "N' ma flɛn kɛ",
+          "fulfulde": "To naa' to nafoya bee fiilo"
+        },
+        {
+          "fr": "Partir la nuit",
+          "en": "To leave at night",
+          "moore": "Sẽn na yɩl n yi yʋngo",
+          "dioula": "Ka taga suu fɛ.",
+          "fulfulde": "To wurta jemma"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "D'où sortent les vaches ?",
+        "en": "Where do the cows come from?",
+        "moore": "Sʋtãana yii yɛ?",
+        "dioula": "U bɔra min?",
+        "fulfulde": "Toonde ko'e leyɗe ƴiwo?"
+      },
+      "options": [
+        {
+          "fr": "D'une forêt",
+          "en": "A forest",
+          "moore": "Yaa logd pʋgẽ.",
+          "dioula": "Yiri dɔ kɔnɔ",
+          "fulfulde": "Wonde nder lesdi"
+        },
+        {
+          "fr": "D'une mare",
+          "en": "A pond",
+          "moore": "Ko-kãsengã pʋgẽ",
+          "dioula": "Jiiboyɔrɔ dɔ",
+          "fulfulde": "Lodo nder ndiyam"
+        },
+        {
+          "fr": "D'une grotte",
+          "en": "A cave",
+          "moore": "Gɛt sẽn be zĩig ningã",
+          "dioula": "Yɔrɔ dɔ kɔnɔ, dingɛyɔrɔ la.",
+          "fulfulde": "Go'o nder go'o"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Quelle qualité cette légende met-elle en valeur ?",
+        "en": "Which quality does this legend highlight?",
+        "moore": "Bõe la kibar kãngã wilgd-do?",
+        "dioula": "O ye jogo juman lo yira?",
+        "fulfulde": "Ko honɗun woni ko haala ngal holli?"
+      },
+      "options": [
+        {
+          "fr": "La force",
+          "en": "Strength",
+          "moore": "Tʋʋmdã pãng",
+          "dioula": "Fanga min b'a la",
+          "fulfulde": "Nguurndam"
+        },
+        {
+          "fr": "La patience",
+          "en": "Patience",
+          "moore": "D sũ-marã yĩnga",
+          "dioula": "muɲuli",
+          "fulfulde": "Sabbuure"
+        },
+        {
+          "fr": "La vitesse",
+          "en": "Speed",
+          "moore": "B sẽn maand bũmb ning fãa wã yaa sõma",
+          "dioula": "Tɛmɛni",
+          "fulfulde": "Lamarɗe"
+        }
+      ],
+      "answer": 1
+    }
+  ],
+  "glossary": [
+    {
+      "term": "pulaaku",
+      "lang": "fulfulde",
+      "def": {
+        "fr": "Code de conduite peul fait de patience, de retenue, de dignité et de sens de l'honneur.",
+        "en": "The Fulani code of conduct, made of patience, restraint, dignity and a sense of honour.",
+        "moore": "A Fulani wã sẽn maand sũ-mar, yõk-m-meng la waoogre.",
+        "dioula": "Fulani ka sariya, min be mɔgɔ jija a k'a muɲu, k'a yɛrɛ tanga kojuguw ma ani k'a bonya.",
+        "fulfulde": "Fuli code of conduct, waɗii nder hakkiilo, sakkitol, daraja e nanuki teddungal."
+      }
+    },
+    {
+      "term": "Peuls",
+      "lang": "fr",
+      "def": {
+        "fr": "Peuple d'éleveurs présent dans toute l'Afrique de l'Ouest ; au Burkina Faso, surtout au Sahel. Ils parlent le fulfulde.",
+        "en": "A pastoral people found across West Africa; in Burkina Faso, mainly in the Sahel. They speak Fulfulde.",
+        "moore": "Neb sẽn yaa bãad-dãmb Afrika Wɛtg tẽnsẽ wã; Burkina Faso, n yɩɩd fãa Sahel soolmẽ. B gomda Fulfulde.",
+        "dioula": "O ye sagadɛndɛbaga dɔw ye Afiriki tileben fan bɛɛ la. Burkina Faso, Sahɛli mara la. U be fɔ fulfulde.",
+        "fulfulde": "Yimɓe ɓe ɗon laato nder Afrik hirnaange; Burkina Faso, ɓurna fuu nder Sahel. Ɓe ɗon mbi'a Fulfulde."
+      }
+    },
+    {
+      "term": "Oursi",
+      "lang": "fr",
+      "def": {
+        "fr": "Village du Sahel burkinabè connu pour sa mare et ses dunes, lieu de rencontre des éleveurs.",
+        "en": "A village in Burkina Faso's Sahel known for its pond and dunes, a meeting place for herders.",
+        "moore": "Tẽng a ye sẽn be Burkina Faso soolmã pʋgẽ, b boond-a lame tɩ saaga.",
+        "dioula": "Burkina Faso mara la, Sahɛli jamana na. Dugu dɔ tɔgɔ bɔra a ka kɔlɔnw ni dunbaw kosɔn ani sagadɛndɛbagaw tun be ɲɔgɔn lajɛn yen.",
+        "fulfulde": "Duule nder Sahel Burkina Faso anndiraa ngam laana e dunes, nokkuure mooɓtorɗe."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Variante d'un mythe peul sur l'origine du bétail, sorti des eaux. Raconté au Sahel et dans tout le monde peul, sous de nombreuses formes.",
+    "en": "A variant of a Fulani myth about the origin of cattle, which came out of the water. Told in the Sahel and throughout the Fulani world in many forms."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

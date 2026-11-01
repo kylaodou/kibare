@@ -1,0 +1,449 @@
+{
+  "slug": "les-hippopotames-de-tengrela",
+  "type": "legende",
+  "region": "cascades",
+  "place": "Lac de Tengréla (Banfora)",
+  "coords": [
+    10.66,
+    -4.84
+  ],
+  "people": "Karaboro",
+  "language": "dioula",
+  "duration": 5,
+  "age": 6,
+  "featured": false,
+  "cover": 2,
+  "tags": [
+    "animaux",
+    "protection",
+    "lac",
+    "pacte"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Les hippopotames du lac de Tengréla",
+      "subtitle": "Les protecteurs du lac",
+      "summary": "Près de Banfora, un lac paisible abrite une famille d'hippopotames que les villageois considèrent comme leurs protecteurs. Mais d'où vient ce lien si étroit entre les hommes et les géants du lac ?",
+      "moral": "Ceux qui nous protègent méritent notre respect, même lorsqu'ils sont différents de nous."
+    },
+    "en": {
+      "title": "The Hippos of Lake Tengrela",
+      "subtitle": "Protectors of the lake",
+      "summary": "Near Banfora, a peaceful lake is home to a family of hippos that the villagers regard as their protectors. But where does this close bond between people and the giants of the lake come from?",
+      "moral": "Those who protect us deserve our respect, even when they are different from us."
+    },
+    "moore": {
+      "title": "Tengrela ko-kãsengã hippo rãmbã",
+      "subtitle": "Ko-kãsengã kogendbã",
+      "summary": "Tẽngã neb sẽn get tɩ yaa b kogendbã, a Zeova Kaset rãmbã tara bãaga. La bõe n kɩt tɩ b pa tar zood sõma ne tẽn-kãsengã nin-buiidã ye?",
+      "moral": "Sẽn kogend-b tõndã segd n paama waoogre, baa b sã n yaa toor ne tõndo."
+    },
+    "dioula": {
+      "title": "Tengrela kɔlɔn ka jigitigɛsow",
+      "subtitle": "Dɔgɔji kɔrɔsibagaw",
+      "summary": "Banfora gɛrɛfɛ, bada dɔ be yen min kɔnɔna na. O yɔrɔ la, u ye jigitigɛden dɔw sɔrɔ minw b'u tanga. Nka, mɔgɔw ni kɔlɔnw cɛ teriya ka bon cogo di?",
+      "moral": "Minw b'an tanga, an ka kan k'olu bonya hali n'u tɛ kelen ye ni anw ye."
+    },
+    "fulfulde": {
+      "title": "Hippo'en nder maayo Tengrela",
+      "subtitle": "Wurooji maayo",
+      "summary": "Haade Banfora, ladde mo jam ɗon wondi nder saare hippos je yimɓe gariiri'en ndaara bana ko ɓe ngaɗata. Ammaa toye bondol hakkunde yimɓe e mawɓe nder maayo ɗon ƴiwo?",
+      "moral": "Yimɓe ɗowanteeɓe en njaɓii no mbaɗata, koo to ɓe feere."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 72,
+            "y": 250
+          },
+          {
+            "k": "palm",
+            "x": 10,
+            "y": 36
+          },
+          {
+            "k": "palm",
+            "x": 18,
+            "y": 42,
+            "s": 0.8
+          },
+          {
+            "k": "hippo",
+            "x": 52,
+            "y": -24
+          },
+          {
+            "k": "hippo",
+            "x": 74,
+            "y": -44,
+            "s": 0.7,
+            "flip": true
+          },
+          {
+            "k": "birds",
+            "x": 40,
+            "y": 240
+          }
+        ]
+      },
+      "text": {
+        "fr": "Près de Banfora, au milieu des rizières et des rôniers, s'étend le lac de Tengréla. Ses eaux calmes abritent une famille d'hippopotames que l'on voit souvent émerger, au lever du jour.",
+        "en": "Near Banfora, among rice fields and palm trees, lies Lake Tengrela. Its calm waters are home to a family of hippos that can often be seen surfacing at daybreak.",
+        "moore": "A Tengrela ko-kãsengã bee n be Banfora tẽn-kɩrse, roog sẽn yaa rũmsa la tɩɩs nins b sẽn boond tɩ palms sʋka. A sẽn be koom-koglgã pʋgẽ wã, a yaa wa b sẽn yãgdẽ tɩ sã n vẽege, b na n yãa bõn-buudã.",
+        "dioula": "Tengrela baji be Banfora gɛrɛfɛ, yiriw ni kɔlɔnw cɛma. O yɔrɔ la, u be se ka kɛ ni burujuw ye. Tuma caaman na, an b'u ye tile bɔtɔ.",
+        "fulfulde": "Haade Banfora, caka gese riso e leɗɗe palmi'en, woni maayo Tengrela. Limanji maako ɗon laaɓɓa nder wuro saare hippos, ɗi seɗɗa ina ngi'i ɓe ɓeyda to wuttudu."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 20,
+            "y": 220
+          },
+          {
+            "k": "woman",
+            "x": 30,
+            "y": 4,
+            "c": "#D62828"
+          },
+          {
+            "k": "child",
+            "x": 38,
+            "y": 4
+          },
+          {
+            "k": "man",
+            "x": 46,
+            "y": 4,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "elder",
+            "x": 22,
+            "y": 4
+          },
+          {
+            "k": "palm",
+            "x": 88,
+            "y": 36
+          }
+        ]
+      },
+      "text": {
+        "fr": "On raconte qu'autrefois, des guerriers menaçaient le village. Les habitants durent fuir à la hâte. Poursuivis, ils arrivèrent au bord du lac : devant eux, l'eau ; derrière eux, leurs ennemis.",
+        "en": "It is said that long ago, warriors threatened the village. The people had to flee in haste. Pursued, they reached the shore of the lake: before them, the water; behind them, their enemies.",
+        "moore": "B yetame tɩ pĩnd wẽndẽ, sodaasã ra wa n namsdẽ tẽngã. Nebã ra zoe n põsame. B sẽn yãg-b n dabd ko-kãsengã noorẽ wã, koomã ra lʋɩt b taoore, la b bɛɛbã ra gũuda b poorẽ.",
+        "dioula": "A fɔra ko wagatijan tɛmɛninw na, kɛlɛden dɔw tun be dugu kɔnɔ. Mɔgɔw tun ka kan ka boli joona. O tugura o kɔ minkɛ, o sera bada ra. Ji tun bɛ o ɲa fɛ; o juguw tun bɛ o kɔ fɛ.",
+        "fulfulde": "Ɓe mbi'i diga nde, konuɓe ɗon haɗina gariiri ndin. Yimɓe ɓe ɗon mbaadi. Ɓe tokki ɓe, ɓe ngari haa maayo. Limanji ɗon yeeso maɓɓe, koo to'o ɓaawo maɓɓe, ɓe ngartiri bee konne'en maɓɓe."
+      },
+      "choice": {
+        "q": {
+          "fr": "Qui va venir en aide aux villageois ?",
+          "en": "Who will come to the villagers' aid?",
+          "moore": "Ãnd n na n sõng tẽn-kãng nebã?",
+          "dioula": "Jɔn lo bena na dugumɔgɔw dɛmɛ?",
+          "fulfulde": "Moy wari wallude yimɓe gariiri?"
+        },
+        "options": [
+          {
+            "fr": "Les hippopotames du lac",
+            "en": "The hippos of the lake",
+            "moore": "Zĩigã na-kẽem dãmbã",
+            "dioula": "Jiiba kɔnɔ, u be i n'a fɔ jigɛw.",
+            "fulfulde": "Hippoji nder ladde"
+          },
+          {
+            "fr": "Un roi voisin",
+            "en": "A neighbouring king",
+            "moore": "Rĩm sẽn be a to wã sʋka",
+            "dioula": "Masacɛ min tun be sigi an gɛrɛfɛ, ale lo y'o masacɛ ye.",
+            "fulfulde": "Laamiiɗo mo ɗon jooɗoto bee maako"
+          },
+          {
+            "fr": "Personne",
+            "en": "No one",
+            "moore": "Ned ka be ye.",
+            "dioula": "Mɔgɔ si tɛ yen.",
+            "fulfulde": "Walaa goɗɗo."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Les eaux se mirent à bouillonner…",
+          "en": "The water began to churn…",
+          "moore": "Kooma sɩngame n wa...",
+          "dioula": "Ji tun be ɲini ka bɔn.",
+          "fulfulde": "ndiyam fuɗɗi ɓeydaago..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 80,
+            "y": 220
+          },
+          {
+            "k": "hippo",
+            "x": 36,
+            "y": -20,
+            "s": 1.2
+          },
+          {
+            "k": "hippo",
+            "x": 58,
+            "y": -30
+          },
+          {
+            "k": "hippo",
+            "x": 76,
+            "y": -18,
+            "s": 1.1,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Alors, les hippopotames sortirent de l'eau en grondant. Ils se placèrent entre les fugitifs et leurs poursuivants. Effrayés par ces géants, les guerriers rebroussèrent chemin.",
+        "en": "Then the hippos rose from the water, bellowing. They placed themselves between the fugitives and their pursuers. Terrified by these giants, the warriors turned back.",
+        "moore": "Rẽ poore, b yii koomã pʋgẽ n wa ne sũ-sãang wʋsgo. B ra bee neb nins sẽn zoe wã ne b karen-biisã sʋka. B sẽn wa n yɛɛs ne nin-kãsemsã, sodaasã leb n wẽnemdame.",
+        "dioula": "O kɔ, u ye jigɛkisɛw bɔ jii la ka mankan ci. U y'u yɛrɛ bila mɔgɔ bolila ni u nɔfɛ mɔgɔw cɛ. O kɛlɛdenw siranna u ka murujanw ɲɛ.",
+        "fulfulde": "Nden hippos'en ƴetti diga ndiyam, ɓe ɗon njogge. Ɓe ɗon ndilli hakkunde yimɓe ɓe njogii e ɓaawo maɓɓe. Ngam hulɓe yimɓe ɓe'e, konu'en ɓen ummii."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "hut",
+            "x": 14,
+            "y": 34,
+            "s": 0.8
+          },
+          {
+            "k": "elder",
+            "x": 30,
+            "y": 4
+          },
+          {
+            "k": "man-up",
+            "x": 40,
+            "y": 4,
+            "c": "#00894A"
+          },
+          {
+            "k": "hippo",
+            "x": 70,
+            "y": -26
+          },
+          {
+            "k": "palm",
+            "x": 90,
+            "y": 36
+          }
+        ]
+      },
+      "text": {
+        "fr": "Depuis ce jour, un pacte unit les habitants de Tengréla et les hippopotames : personne ne doit leur faire de mal. On les considère comme les protecteurs du village.",
+        "en": "Since that day, a pact has bound the people of Tengrela and the hippos: no one must ever harm them. They are regarded as the village's protectors.",
+        "moore": "Sẽn sɩng ne daar kãng, b sigla taab n yeel tɩ ned baa a yen ka segd n maan-b wẽng ye. B get-b lame tɩ b yaa tẽn-kãng kogendba.",
+        "dioula": "Kabi o loon na, bɛn dɔ sigira Tengrela dugumɔgɔw ni kɔndɔnw cɛ. Mɔgɔ si man kan ka foyi kɛ u la abada. U be dugu kɔnɔ mɔgɔw tangabaga ye.",
+        "fulfulde": "Gila nden nyalnde, alkawal waɗii yimɓe Tengrela e hippos: walaa mo waawi wallude ɓe. Ɓe ɗon laatii ko ɓe ɗowanteeɓe gariiri."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 86,
+            "y": 300
+          },
+          {
+            "k": "field",
+            "x": 24,
+            "y": 20,
+            "s": 0.6
+          },
+          {
+            "k": "man",
+            "x": 40,
+            "y": 4,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child",
+            "x": 46,
+            "y": 4,
+            "c": "#D62828"
+          },
+          {
+            "k": "hippo",
+            "x": 74,
+            "y": -40,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "Aujourd'hui, pêcheurs et piroguiers partagent le lac avec eux en gardant une distance respectueuse. Et lorsqu'un hippopotame s'aventure près des champs, on l'écarte doucement, sans jamais le blesser.",
+        "en": "Today, fishermen and boatmen share the lake with them, keeping a respectful distance. And when a hippo wanders close to the fields, it is gently steered away, never harmed.",
+        "moore": "Rũndã-rũndã, zĩm-gãandbã ne koom-kogendb me rɩka b sẽn be ko-kãsengã pʋgẽ wã n pa tar zoodo. La sã n wa yaa ne tig-biis sẽn be pʋʋgẽ wã, b zãad-a lame tɩ pa nams-a ye.",
+        "dioula": "Bi, mɔnnikɛlaw ni kurun bolilaw be taga baji la n'u ye. U b'o yɔrɔ kelen to u fɛ ani u t'a ɲini ka mɔgɔw bali k'u dɛmɛ. Ni tɔnba dɔ be to ka yaala kongo kɔnɔ, a be taga n'a ye yɔrɔjan. A tɛ foyi kɛ a la abada.",
+        "fulfulde": "Hannde, yimɓe wuurɓe e mawɓe ndiyam ɗon njogii bee maɓɓe nder maayo, ɓe ɗowtanaago. To hippo ɗon yaasi to gese, ɗum ɓeydaaki bee laaɓɗum, walaa ko waɗata mo."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Près de quelle ville se trouve le lac de Tengréla ?",
+        "en": "Which town is Lake Tengrela near?",
+        "moore": "Tẽnga bʋg n be Tengrela ko-kãsengã sɛɛgẽ?",
+        "dioula": "Tengrela kɔlɔn be dugu jumɛn gɛrɛfɛ?",
+        "fulfulde": "Ɗume gariiri ɓadi maayo Tengrela?"
+      },
+      "options": [
+        {
+          "fr": "Banfora",
+          "en": "Banfora",
+          "moore": "Bãndbõog",
+          "dioula": "Banfora ka baara",
+          "fulfulde": "Banfora"
+        },
+        {
+          "fr": "Ouahigouya",
+          "en": "Ouahigouya",
+          "moore": "A Ouahigouya",
+          "dioula": "Ouahigouya",
+          "fulfulde": "Ouahigouya"
+        },
+        {
+          "fr": "Tenkodogo",
+          "en": "Tenkodogo",
+          "moore": "Tenkodogo",
+          "dioula": "Tenkodogo",
+          "fulfulde": "Tenkodogo"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Comment les hippopotames ont-ils aidé les villageois ?",
+        "en": "How did the hippos help the villagers?",
+        "moore": "Wãn to la b sõng tẽn-kɩtbã?",
+        "dioula": "U ye dugumɔgɔw dɛmɛ cogo di?",
+        "fulfulde": "Noy hippos'en mballi yimɓe gariiri?"
+      },
+      "options": [
+        {
+          "fr": "En les portant sur leur dos",
+          "en": "By carrying them on their backs",
+          "moore": "B sẽn tall-b b poorẽ wã,",
+          "dioula": "O la, u bena to k'u ta u kɔ kan.",
+          "fulfulde": "Ngam ɓe ɗon ɓuwa ɗe dow cembam maɓɓe"
+        },
+        {
+          "fr": "En effrayant leurs ennemis",
+          "en": "By frightening their enemies",
+          "moore": "B sẽn na n maan tɩ b bɛɛbã yɛɛs-b lame",
+          "dioula": "U tun b'u juguw fari faga.",
+          "fulfulde": "Ngam hulugo konne'en maɓɓe"
+        },
+        {
+          "fr": "En leur montrant un chemin",
+          "en": "By showing them a path",
+          "moore": "Yaa ne a sẽn wilg-b sorã",
+          "dioula": "I ka sira yira u la,",
+          "fulfulde": "Ngam hollaɓe laawol."
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Que fait-on quand un hippopotame approche des champs ?",
+        "en": "What do people do when a hippo approaches the fields?",
+        "moore": "Nebã maanda bõe sã n wa paam tɩ b yãgdẽ?",
+        "dioula": "Ni tɔnba dɔ sera foro la, mɔgɔw be mun lo kɛ?",
+        "fulfulde": "Ko yimɓe ngaɗata to hippo ɓadake haa gese?"
+      },
+      "options": [
+        {
+          "fr": "On l'écarte doucement",
+          "en": "They gently steer it away",
+          "moore": "B zãaga-a lame ne sũ-bʋgsem.",
+          "dioula": "U b'a ɲɛɛ tugu a kɔrɔ dɔɔni dɔɔni.",
+          "fulfulde": "Ɓe ɗon njogii ɗum bee laaɓɗum"
+        },
+        {
+          "fr": "On le chasse",
+          "en": "They hunt it",
+          "moore": "B baooda a soaba.",
+          "dioula": "U be taga a ɲini.",
+          "fulfulde": "Ɓe ɗon yi'a ɗum."
+        },
+        {
+          "fr": "On quitte le village",
+          "en": "They leave the village",
+          "moore": "B yiisa tẽn-gãongã.",
+          "dioula": "U be taga dugu kɔnɔ.",
+          "fulfulde": "Ɓe ɗon wurta nder gariiri."
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Tengréla",
+      "lang": "fr",
+      "def": {
+        "fr": "Lac et village de la région des Cascades, près de Banfora, connus pour leurs hippopotames et leurs nénuphars.",
+        "en": "A lake and village in the Cascades region near Banfora, known for its hippos and water lilies.",
+        "moore": "Tẽnga la koom sẽn be Cascades soolmẽ wã, n pẽdgd Banfora. A yaa tẽn-kãng yʋʋr sẽn boond t'a hipposã ne a lilii wã yĩnga.",
+        "dioula": "Jiiba ani dugu dɔ be yen kaskadw mara la, Banfora gɛrɛfɛ. A tɔgɔ bɔra a ka jɛnɛkɛlaw n'a ka ji ɲagamininw kosɔn.",
+        "fulfulde": "Laku e wuro nder diiwaan Cascades ɓadi Banfora, anndiraa ngam hippos be water lilies."
+      }
+    },
+    {
+      "term": "pirogue",
+      "lang": "fr",
+      "def": {
+        "fr": "Embarcation longue et étroite, souvent taillée dans un tronc d'arbre.",
+        "en": "A long, narrow boat, often carved from a tree trunk.",
+        "moore": "A yaa koom-koglg sẽn zãad n ya bilfu, tɩ b ra maand a woto ne tɩɩg zug.",
+        "dioula": "A tun ye kurunjan dɔ ye, a tun ka jan ani a tun man jan. Tuma caaman na, u tun b'a dan yiri dɔ la.",
+        "fulfulde": "Lodo, ɓeydiingo, nder ɗuuɗal diga leggal."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Récit inspiré des croyances locales autour du lac de Tengréla, où les hippopotames sont protégés par les habitants. La scène de la fuite est une mise en récit libre de cette tradition de protection.",
+    "en": "Story inspired by local beliefs around Lake Tengrela, where the hippos are protected by the villagers. The escape scene is a free narrative rendering of this tradition of protection."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

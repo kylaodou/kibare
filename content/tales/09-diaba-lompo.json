@@ -1,0 +1,443 @@
+{
+  "slug": "diaba-lompo",
+  "type": "legende",
+  "region": "est",
+  "place": "Pama",
+  "coords": [
+    11.25,
+    0.7
+  ],
+  "people": "Gourmantché",
+  "language": "gulmancema",
+  "duration": 5,
+  "age": 8,
+  "featured": false,
+  "cover": 1,
+  "tags": [
+    "origines",
+    "royaume",
+    "sagesse",
+    "ciel"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Diaba Lompo, le roi venu du ciel",
+      "subtitle": "La fondation du royaume du Gulmu",
+      "summary": "Dans les terres de l'Est, les habitants vivaient dispersés et se querellaient. Une nuit, une lumière descend sur une colline près de Pama. En son cœur, un homme : Diaba Lompo.",
+      "moral": "L'unité d'un peuple naît de la justice et de la sagesse."
+    },
+    "en": {
+      "title": "Diaba Lompo, the King from the Sky",
+      "subtitle": "The founding of the kingdom of Gulmu",
+      "summary": "In the lands of the East, people lived scattered and quarrelled. One night, a light descends on a hill near Pama. At its heart stands a man: Diaba Lompo.",
+      "moral": "A people's unity is born of justice and wisdom."
+    },
+    "moore": {
+      "title": "Diaba Lompo, saasẽ rĩmã",
+      "subtitle": "Gulmu soolmã siglg wakate",
+      "summary": "Tẽns nins sẽn be Wẽndã pʋsẽ, nebã ra pa be n vɩ ye. Daar a ye yʋngo, vẽenem n sigd tãnga sẽn pẽ Pamã zugu. A zugẽ, rao a ye n be: Diaba Lompo.",
+      "moral": "Tẽngã zems-n-taar yita tɩrlem la yam pʋgẽ."
+    },
+    "dioula": {
+      "title": "Diaba Lompo, sankolo masacɛ",
+      "subtitle": "Gulmu ka masaya sigi sen kan",
+      "summary": "K'a sɔrɔ a tun be to ka taga n'u ye kɔrɔn fɛ. Loon dɔ sufɛ, yeelenba dɔ bɔra kulu kan Pama gɛrɛfɛ. A cɛ dɔ be yen min tɔgɔ ko Diaba Lompo.",
+      "moral": "Mɔgɔ ka bɛnbaliya be bɔ tilenninya ni hakilitigiya lo la."
+    },
+    "fulfulde": {
+      "title": "Diaba Lompo, Laamiiɗo dow kammu",
+      "subtitle": "Fedde laamu Gulmu",
+      "summary": "Nder lesdi fuunaaŋge, yimɓe ɗon njooɗana bee haɓre. Nder jemma go'oto, jayngol ɗon wurtina dow hooseere ɓadi Pama. Nder ɓernde maako ɗon dari goɗɗo: Diaba Lompo.",
+      "moral": "Goomu yimɓe ɗon umma nder gooŋgaaku e hikma."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "sun",
+            "x": 20,
+            "y": 220
+          },
+          {
+            "k": "hut",
+            "x": 26,
+            "y": 26,
+            "s": 0.8
+          },
+          {
+            "k": "man-talk",
+            "x": 46,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "man-talk",
+            "x": 58,
+            "flip": true,
+            "c": "#00894A"
+          },
+          {
+            "k": "hut",
+            "x": 82,
+            "y": 30,
+            "s": 0.7,
+            "c": "dark"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il y a bien longtemps, dans les terres de l'Est couvertes de forêts et de collines, les habitants vivaient en petits groupes dispersés. Sans chef pour les unir, ils se disputaient souvent pour un champ ou un point d'eau.",
+        "en": "Long ago, in the lands of the East covered with forests and hills, people lived in small scattered groups. With no leader to unite them, they often quarrelled over a field or a water hole.",
+        "moore": "Sẽn deng pĩnd wẽndẽ, tẽns nins sẽn be Wẽndã pʋsẽ wã, neb da yaa sull-rãmb la tãns n vɩ zĩis a taaba. B ra pa tar taoor soab sẽn na n kɩt tɩ b zems taaba, la naoor wʋsgo, b da zabda ne taab pʋʋg bɩ koom koglg yĩng ye.",
+        "dioula": "A saan caaman ye nin ye, kɔrɔn fɛ jamana minw tun be yiritu ni tintinw kan, mɔgɔw tun siginin be jɛnkulu denninw kɔnɔ. U tun tɛ ni kuntigi ye min be se k'u kaan bɛn. O kama, u tun be ɲɔgɔn kɛlɛ foro wala dingɛ dɔ kosɔn.",
+        "fulfulde": "Wakkati ɓurɗi, nder lesdi fuunaaŋge je ɗon hawta bee leɗɗe e kooseeje, yimɓe njooɗoto nder kawtal mawɗe. Ngam walaa ardiiɗo mo hawta ɓe, ɓe ɗon haɓana ngam gese malla ndiyam."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "rays",
+            "x": 50
+          },
+          {
+            "k": "sky-man",
+            "x": 50,
+            "y": 70,
+            "s": 1.1
+          },
+          {
+            "k": "star",
+            "x": 50,
+            "y": 300,
+            "s": 0.6
+          },
+          {
+            "k": "acacia",
+            "x": 14,
+            "y": 30
+          },
+          {
+            "k": "karite",
+            "x": 88,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Une nuit, raconte la tradition, une grande lumière descendit du ciel sur une colline près de Pama. Au cœur de cette lumière se tenait un homme. Il s'appelait Diaba Lompo.",
+        "en": "One night, tradition tells, a great light came down from the sky onto a hill near Pama. At the heart of that light stood a man. His name was Diaba Lompo.",
+        "moore": "Zĩig a yembr yʋngo, b yetame tɩ vẽenem kãseng n yi yĩngr n sig tãnga sẽn pẽ Pamã zugu. La vẽenemã sʋka, rao a ye n da be. A yʋʋr da yaa Diaba Lompo.",
+        "dioula": "Lɔnnikɛla dɔw y'a fɔ ko suu dɔ la, yeelenba dɔ bɔra sankolo la ka jigi kulu kan Pam gɛrɛfɛ. Cɛɛ dɔ tun be o yeelen nin cɛmancɛ la. A tɔgɔ tun ko Diaba Lompo.",
+        "fulfulde": "Nder jemma go'o, haala wi'i, jayngol mawɗo wari diga dow dow dow hooseere ɓadi Pama. Nder ɓernde jayngol ngol ɗon dari goɗɗo. Innde maako ɗon wi'a Diaba Lompo."
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 240
+          },
+          {
+            "k": "king-talk",
+            "x": 50,
+            "c": "#F4EFE6"
+          },
+          {
+            "k": "man",
+            "x": 24,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "woman",
+            "x": 32
+          },
+          {
+            "k": "child",
+            "x": 38
+          },
+          {
+            "k": "man-up",
+            "x": 72,
+            "c": "#00894A"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les habitants, d'abord effrayés, finirent par s'approcher. L'homme leur parla avec calme et sagesse. Il régla leurs disputes avec justice et leur apprit à vivre ensemble.",
+        "en": "At first frightened, the people eventually came closer. The man spoke to them calmly and wisely. He settled their quarrels fairly and taught them to live together.",
+        "moore": "Pipi, nebã ra yɛɛsame tɩ b wa n kolg taab. Rao wã goma ne-b ne sũ-bʋgsem la yam. A ra welgda b no-koɛɛmã ne pʋ-peelem la a zãms-b tɩ b vɩɩmd taab sõma.",
+        "dioula": "A daminɛ na, u tun siranna. Nka a laban, u y'u magwɛrɛ ɲɔgɔn na. Cɛɛ y'a ka kuma fɔ u ye ni dususuman ani hakilitigiya ye. A y'u ka bɛnbaliya ɲɛnabɔ tilenninya la ani k'a yira u la ko u ka ɲi ka to ɲɔgɔn fɛ.",
+        "fulfulde": "Sahaa fu, yimɓe ɓe kulnii ɓesngu. O wolwani ɓe bee hakkillo e faamu. O haɓɓiti haɓre maɓɓe nder gooŋgaaku, o ekkitiniɓe ɓe njooɗoduki."
+      },
+      "choice": {
+        "q": {
+          "fr": "Qu'est-ce qui fait d'un étranger un chef respecté ?",
+          "en": "What makes a stranger a respected leader?",
+          "moore": "Bõe n kɩt tɩ nebã waoogd sãan-biig?",
+          "dioula": "Mun lo be mɔgɔ wɛrɛ kɛ kuntigi ɲuman ye?",
+          "fulfulde": "Ko waɗi neɗɗo mo ɓe anndaa o laamiiɗo mo yimɓe mawnina?"
+        },
+        "options": [
+          {
+            "fr": "Sa force",
+            "en": "His strength",
+            "moore": "A pãngã",
+            "dioula": "A ka fanga",
+            "fulfulde": "Nguurndam maako"
+          },
+          {
+            "fr": "Sa sagesse et sa justice",
+            "en": "His wisdom and fairness",
+            "moore": "A yam la a tɩrlmã",
+            "dioula": "A ka hakilitigiya n'a ka tilenninya kosɔn,",
+            "fulfulde": "Hakkiilo maako e gooŋgaaku maako"
+          },
+          {
+            "fr": "Sa richesse",
+            "en": "His wealth",
+            "moore": "A paoongã yĩnga",
+            "dioula": "A ka nafolo ye min ye, a y'o kɛ.",
+            "fulfulde": "Ɓuurndi maako"
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "C'est par la justice que Diaba Lompo gagna la confiance de tous.",
+          "en": "It was through fairness that Diaba Lompo won everyone's trust.",
+          "moore": "Yaa ne tɩrlem la a Diaba Lompo paam neb fãa kɩs-sɩd.",
+          "dioula": "O kosɔn, mɔgɔ bɛɛ tun b'a jigi la Diaba Lompo kan.",
+          "fulfulde": "Hono nder hakkillo nde Diaba Lompo heɓii goɗɗum haɓɓooɓe."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 300
+          },
+          {
+            "k": "palace",
+            "x": 56,
+            "y": 34,
+            "s": 0.85
+          },
+          {
+            "k": "king",
+            "x": 30,
+            "c": "#F4EFE6"
+          },
+          {
+            "k": "drum",
+            "x": 20
+          },
+          {
+            "k": "horse",
+            "x": 86,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Diaba Lompo fonda le royaume du Gulmu, le pays des Gourmantché. Ses descendants régnèrent pendant des siècles, et la capitale s'établit plus tard à Noungou, l'actuelle Fada N'Gourma.",
+        "en": "Diaba Lompo founded the kingdom of Gulmu, the land of the Gourmantché. His descendants reigned for centuries, and the capital was later established at Nungu, today's Fada N'Gourma.",
+        "moore": "A Diaba Lompo lugla a Gulmu soolmã, sẽn yaa Gourmantché tẽngã. A yagensã rɩka naam yʋʋm kobs-gĩndse, la b sẽn wa n naan maan tẽnga pʋga yaa Nungu.",
+        "dioula": "Diaba Lompo ye Gulmu mara sigi sen kan. A bɔnsɔnw ye masaya kɛ saan kɛmɛkulu caaman kɔnɔ. Kɔfɛ, u y'a ka duguba sigi Nungu la, min be weele bi ko Fada N'Gourma.",
+        "fulfulde": "Diaba Lompo waɗi laamu Gulmu, lesdi Gourmantché. Ɓi'imɓe maako laamani duuɓi ɗuuɗɗi, nden gariiri man ɓaawo ɗon ɓe ummi nder Nungu, Fada N'Gourma hannde."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "star",
+            "x": 30,
+            "y": 290,
+            "s": 0.4
+          },
+          {
+            "k": "fire",
+            "x": 50
+          },
+          {
+            "k": "elder-sit",
+            "x": 36
+          },
+          {
+            "k": "child-sit",
+            "x": 62,
+            "flip": true
+          },
+          {
+            "k": "child-sit",
+            "x": 68,
+            "flip": true,
+            "c": "#D62828"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Selon d'autres récits, Diaba Lompo aurait été un prince venu du pays mossi. Mais tous s'accordent sur un point : il est l'ancêtre fondateur des rois gourmantché, et la colline où il serait apparu est encore respectée aujourd'hui.",
+        "en": "According to other accounts, Diaba Lompo was a prince who came from Mossi country. But all agree on one point: he is the founding ancestor of the Gourmantché kings, and the hill where he is said to have appeared is still revered today.",
+        "moore": "Sã n yaa ne yɛl a taab, Diaba Lompo ra yaa naab sẽn yit Mossi tẽngẽ wã. La ned kam fãa sakda bũmb a ye: yaa Gourmantché rĩm-dãmbã yaab sẽn lugl yẽ wã, la tãnga ning b sẽn yet tɩ b yãkã ket n waoogdame rũndã-rũndã.",
+        "dioula": "Ka kɛɲɛ ni kunnafoni wɛrɛw ye, Diaba Lompo tun ye masacɛ dɔ ye min bɔra Mossi ka jamana na. Nka, u bɛɛ b'a fɔ ko a ye Gourmantché masaw bɛmacɛ ye. A fɔra k'u be kulu min kan, o yɔrɔ tun ka di mɔgɔw ye halibi.",
+        "fulfulde": "E wi'uki dow ko feere, Diaba Lompo o laamiiɗo mo wari diga lesdi Mossi. Ammaa fuu ɓe ɗon njaɓɓa dow huunde go'o: o woni ardiiɗo laamiiɓe Gourmantché, nden ko haani mo wurtina haa jooni."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Comment, selon la légende, Diaba Lompo est-il arrivé ?",
+        "en": "According to the legend, how did Diaba Lompo arrive?",
+        "moore": "Sã n yaa ne lagem-n-taar ning sẽn wilgdã, wãn to la a Diaba Lompo wa?",
+        "dioula": "Lɔnnikɛla dɔ ko: \"Diaba Lompo sera cogo di?\"",
+        "fulfulde": "E wi'ugo kaalankaagal, hol nde Diaba Lompo wari?"
+      },
+      "options": [
+        {
+          "fr": "Descendu du ciel dans une lumière",
+          "en": "Down from the sky in a light",
+          "moore": "B yi yĩngr n wa ne vẽenem.",
+          "dioula": "Ka bɔ sankolo la ka na yeelenba dɔ kɔnɔ.",
+          "fulfulde": "Daga dow nder jayngol"
+        },
+        {
+          "fr": "Par le fleuve",
+          "en": "By the river",
+          "moore": "Ko-kãsengã sɛɛgẽ",
+          "dioula": "Jii kɔrɔ.",
+          "fulfulde": "Nder maayo"
+        },
+        {
+          "fr": "Sur un éléphant",
+          "en": "On an elephant",
+          "moore": "Wa ne bõn-buudã.",
+          "dioula": "I ka filen dɔ kan.",
+          "fulfulde": "Nder leyɗe nduu"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Quel royaume a-t-il fondé ?",
+        "en": "Which kingdom did he found?",
+        "moore": "Rĩungã bʋg la a yãkã?",
+        "dioula": "A ye masaya juman lo sɔrɔ?",
+        "fulfulde": "Laamu ngal o heɓii?"
+      },
+      "options": [
+        {
+          "fr": "Le Yatenga",
+          "en": "Yatenga",
+          "moore": "Yatenga",
+          "dioula": "Yatenga ka koo",
+          "fulfulde": "Yatenga"
+        },
+        {
+          "fr": "Le Gulmu",
+          "en": "Gulmu",
+          "moore": "Gõog-n-tɩrga",
+          "dioula": "Gulenw",
+          "fulfulde": "Gulmu"
+        },
+        {
+          "fr": "Le Mali",
+          "en": "Mali",
+          "moore": "Mali wã",
+          "dioula": "Mali jamana na",
+          "fulfulde": "Mali"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Quel est le nom actuel de Noungou ?",
+        "en": "What is Nungu called today?",
+        "moore": "Rũndã-rũndã, b boond a Nungu tɩ bõe?",
+        "dioula": "Nungu tɔgɔ ye di bi?",
+        "fulfulde": "Hol ko noddirta Nungu hannde?"
+      },
+      "options": [
+        {
+          "fr": "Fada N'Gourma",
+          "en": "Fada N'Gourma",
+          "moore": "A Fada N'Gourma",
+          "dioula": "Fada N'Gourma ka koo",
+          "fulfulde": "Fada N'Gourma"
+        },
+        {
+          "fr": "Ouagadougou",
+          "en": "Ouagadougou",
+          "moore": "A Ouagadougou",
+          "dioula": "Ouagadougou",
+          "fulfulde": "Ouagadougou"
+        },
+        {
+          "fr": "Dori",
+          "en": "Dori",
+          "moore": "Dori wã",
+          "dioula": "Dori ka koo",
+          "fulfulde": "Dori ɗon"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Gulmu",
+      "lang": "gulmancema",
+      "def": {
+        "fr": "Nom du pays et de l'ancien royaume des Gourmantché, dans l'est du Burkina Faso.",
+        "en": "Name of the land and former kingdom of the Gourmantché, in eastern Burkina Faso.",
+        "moore": "Tẽnga la Gourmantché soolmã yʋʋr sẽn da be Burkina Faso rɩtgẽ wã.",
+        "dioula": "Jamana tɔgɔ ani Gourmantché mara kɔrɔ, Burkina Faso kɔrɔn fɛ.",
+        "fulfulde": "Innde leydi e laamu go'o Gourmantché, fuunaaŋge Burkina Faso."
+      }
+    },
+    {
+      "term": "Gulmancema",
+      "lang": "gulmancema",
+      "def": {
+        "fr": "Langue des Gourmantché, parlée dans l'Est du Burkina Faso et dans les pays voisins.",
+        "en": "The language of the Gourmantché, spoken in eastern Burkina Faso and neighbouring countries.",
+        "moore": "Gourmantché buud-gomdã, sẽn be Burkina Faso ne tẽns nins sẽn pẽdgd a soabã soolmẽ wã.",
+        "dioula": "Gourmantché kaan lo, a be fɔ Burkina Faso kɔrɔn fɛ ani jamana sigiɲɔgɔnw la.",
+        "fulfulde": "Ɗemngal Gourmantché, ɗum ɗon bolle nder fuunaaŋge Burkina Faso e leyɗe ɓadake."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Légende fondatrice du royaume gourmantché (Gulmu). Plusieurs versions coexistent : ancêtre descendu du ciel ou prince venu du pays mossi.",
+    "en": "Founding legend of the Gourmantché kingdom (Gulmu). Several versions coexist: an ancestor who came down from the sky, or a prince from Mossi country."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

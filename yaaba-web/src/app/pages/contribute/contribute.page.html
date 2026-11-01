@@ -1,0 +1,195 @@
+<section class="head">
+  <div class="container">
+    <span class="eyebrow">{{ 'contrib.eyebrow' | t }}</span>
+    <h1>{{ 'contrib.title' | t }}</h1>
+    <p class="lead">{{ 'contrib.lead' | t }}</p>
+  </div>
+</section>
+
+<section class="container body">
+  @if (sent()) {
+    <div class="thanks card reveal">
+      <div class="thanks-art"><app-scene-art [art]="thanksArt" [enter]="true" /></div>
+      <div class="thanks-text">
+        <h2>{{ 'contrib.thanks.title' | t }}</h2>
+        <p>{{ 'contrib.thanks.text' | t }}</p>
+        <div class="row">
+          <button type="button" class="btn" (click)="again()"><i class="fa-solid fa-plus"></i> {{ 'contrib.thanks.again' | t }}</button>
+          <a routerLink="/contes" class="btn btn-ghost">{{ 'nav.library' | t }}</a>
+        </div>
+      </div>
+    </div>
+  } @else {
+    @if (!data.online()) {
+      <div class="offline">
+        <i class="fa-solid fa-plug-circle-xmark"></i>
+        <p>{{ 'contrib.offline' | t }}</p>
+      </div>
+    }
+
+    <!-- étapes -->
+    <ol class="stepper" [attr.aria-label]="'contrib.steps' | t">
+      @for (k of stepKeys; track k; let i = $index) {
+        <li [class.on]="step() === i" [class.done]="step() > i" [attr.aria-current]="step() === i ? 'step' : null">
+          <span class="n">
+            @if (step() > i) {
+              <i class="fa-solid fa-check"></i>
+            } @else {
+              {{ i + 1 }}
+            }
+          </span>
+          <span class="l">{{ k | t }}</span>
+        </li>
+      }
+    </ol>
+
+    <div class="panel card">
+      @switch (step()) {
+        @case (0) {
+          <h2>{{ 'contrib.q1' | t }}</h2>
+          <div class="kinds">
+            <button type="button" class="kind" [class.on]="kind() === 'voice'" (click)="choose('voice')">
+              <span class="k-ico red"><i class="fa-solid fa-microphone-lines"></i></span>
+              <strong>{{ 'contrib.voice.title' | t }}</strong>
+              <span>{{ 'contrib.voice.text' | t }}</span>
+            </button>
+            <button type="button" class="kind" [class.on]="kind() === 'story'" (click)="choose('story')">
+              <span class="k-ico green"><i class="fa-solid fa-feather-pointed"></i></span>
+              <strong>{{ 'contrib.story.title' | t }}</strong>
+              <span>{{ 'contrib.story.text' | t }}</span>
+            </button>
+          </div>
+        }
+
+        @case (1) {
+          @if (kind() === 'voice') {
+            <h2>{{ 'contrib.q2voice' | t }}</h2>
+            <div class="fields">
+              <label class="field">
+                <span>{{ 'contrib.tale' | t }}</span>
+                <p-select [options]="taleOptions()" [ngModel]="taleSlug()" (ngModelChange)="taleSlug.set($event)" [filter]="true" [placeholder]="'contrib.choose' | t" styleClass="w-full" />
+              </label>
+              <label class="field">
+                <span>{{ 'contrib.language' | t }}</span>
+                <p-select [options]="langOptions()" [ngModel]="language()" (ngModelChange)="language.set($event)" [placeholder]="'contrib.choose' | t" styleClass="w-full" />
+                <small>{{ 'contrib.languageHint' | t }}</small>
+              </label>
+            </div>
+          } @else {
+            <h2>{{ 'contrib.q2story' | t }}</h2>
+            <div class="fields">
+              <label class="field full">
+                <span>{{ 'contrib.storyTitle' | t }}</span>
+                <input pInputText [ngModel]="title()" (ngModelChange)="title.set($event)" maxlength="140" />
+              </label>
+              <label class="field">
+                <span>{{ 'contrib.region' | t }}</span>
+                <p-select [options]="regionOptions()" [ngModel]="region()" (ngModelChange)="region.set($event)" [placeholder]="'contrib.choose' | t" styleClass="w-full" />
+              </label>
+              <label class="field">
+                <span>{{ 'contrib.language' | t }}</span>
+                <p-select [options]="langOptions()" [ngModel]="language()" (ngModelChange)="language.set($event)" [placeholder]="'contrib.choose' | t" styleClass="w-full" />
+              </label>
+              <label class="field">
+                <span>{{ 'contrib.taleType' | t }}</span>
+                <p-select [options]="typeOptions()" [ngModel]="taleType()" (ngModelChange)="taleType.set($event)" styleClass="w-full" />
+              </label>
+              <label class="field">
+                <span>{{ 'contrib.moral' | t }} <em>({{ 'contrib.optional' | t }})</em></span>
+                <input pInputText [ngModel]="moral()" (ngModelChange)="moral.set($event)" maxlength="300" />
+              </label>
+              <label class="field full">
+                <span>{{ 'contrib.summary' | t }} <em>({{ 'contrib.optional' | t }})</em></span>
+                <input pInputText [ngModel]="summary()" (ngModelChange)="summary.set($event)" maxlength="400" />
+              </label>
+              <label class="field full">
+                <span>{{ 'contrib.storyText' | t }}</span>
+                <textarea pTextarea rows="9" [ngModel]="story()" (ngModelChange)="story.set($event)" maxlength="20000" [placeholder]="'contrib.storyPh' | t"></textarea>
+                <small>{{ 'contrib.chars' | t: { n: story().length } }}</small>
+              </label>
+            </div>
+          }
+        }
+
+        @case (2) {
+          <h2>{{ (kind() === 'voice' ? 'contrib.q3voice' : 'contrib.q3story') | t }}</h2>
+          <p class="muted">{{ (kind() === 'voice' ? 'contrib.tip.voice' : 'contrib.tip.story') | t }}</p>
+          @if (kind() === 'voice') {
+            <!-- une séquence par paragraphe : la voix sera synchronisée avec le texte et l'illustration -->
+            <div class="seg-head">
+              <strong>{{ 'contrib.segCount' | t: { done: segDone(), total: script().length } }}</strong>
+              <span class="seg-bar"><span [style.width.%]="script().length ? (segDone() / script().length) * 100 : 0"></span></span>
+            </div>
+            <ol class="segs">
+              @for (para of script(); track $index; let i = $index) {
+                <li class="seg" [class.ok]="segments()[i]">
+                  <div class="seg-text">
+                    <span class="seg-n">{{ 'contrib.paraN' | t: { n: i + 1 } }}</span>
+                    <p>{{ para }}</p>
+                  </div>
+                  <app-recorder [compact]="true" (recorded)="setSegment(i, $event)" />
+                </li>
+              }
+            </ol>
+          } @else {
+            <div class="rec-grid single">
+              <app-recorder (recorded)="audio.set($event)" />
+            </div>
+          }
+          <ul class="tips">
+            <li><i class="fa-solid fa-volume-low"></i> {{ 'contrib.tip1' | t }}</li>
+            <li><i class="fa-solid fa-mobile-screen"></i> {{ 'contrib.tip2' | t }}</li>
+            <li><i class="fa-solid fa-heart"></i> {{ 'contrib.tip3' | t }}</li>
+          </ul>
+        }
+
+        @case (3) {
+          <h2>{{ 'contrib.q4' | t }}</h2>
+          <div class="signed">
+            <span class="s-av">{{ (auth.user()?.name ?? '?').slice(0, 1).toUpperCase() }}</span>
+            <span>
+              <strong>{{ auth.user()?.name }}</strong>
+              <small>{{ 'contrib.signedAs' | t }}</small>
+            </span>
+          </div>
+          <label class="consent">
+            <input type="checkbox" [ngModel]="consent()" (ngModelChange)="consent.set($event)" />
+            <span>{{ 'contrib.consent' | t }}</span>
+          </label>
+          <div class="recap">
+            <h3>{{ 'contrib.recap' | t }}</h3>
+            <ul>
+              <li><i class="fa-solid fa-tag"></i> {{ (kind() === 'voice' ? 'contrib.voice.title' : 'contrib.story.title') | t }}</li>
+              @if (tale(); as t) {
+                <li><i class="fa-solid fa-book-open"></i> {{ t.i18n[i18n.lang()].title }}</li>
+              } @else {
+                <li><i class="fa-solid fa-book-open"></i> {{ title() }}</li>
+              }
+              <li><i class="fa-solid fa-language"></i> {{ data.languageMap().get(language() ?? '')?.name }}</li>
+              @if (kind() === 'voice') {
+                <li><i class="fa-solid fa-circle-check"></i> {{ 'contrib.segCount' | t: { done: segDone(), total: script().length } }}</li>
+              } @else {
+                <li><i class="fa-solid" [class.fa-circle-check]="audio()" [class.fa-circle-minus]="!audio()"></i> {{ (audio() ? 'contrib.withAudio' : 'contrib.noAudio') | t }}</li>
+              }
+            </ul>
+          </div>
+        }
+      }
+
+      @if (step() > 0) {
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" (click)="back()"><i class="fa-solid fa-arrow-left"></i> {{ 'contrib.back' | t }}</button>
+          <button type="button" class="btn" [disabled]="!canNext() || sending()" (click)="next()">
+            @if (sending()) {
+              <i class="fa-solid fa-spinner fa-spin"></i> {{ 'contrib.sending' | t }}
+            } @else if (step() === 3) {
+              <i class="fa-solid fa-paper-plane"></i> {{ 'contrib.send' | t }}
+            } @else {
+              {{ 'contrib.next' | t }} <i class="fa-solid fa-arrow-right"></i>
+            }
+          </button>
+        </div>
+      }
+    </div>
+  }
+</section>

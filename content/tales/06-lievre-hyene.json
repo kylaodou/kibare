@@ -1,0 +1,463 @@
+{
+  "slug": "le-lievre-et-l-hyene",
+  "type": "conte",
+  "region": "centre-nord",
+  "place": "Kaya",
+  "coords": [
+    13.09,
+    -1.08
+  ],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 4,
+  "age": 4,
+  "featured": true,
+  "cover": 1,
+  "tags": [
+    "ruse",
+    "animaux",
+    "gourmandise",
+    "enfants"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le Lièvre, l'Hyène et le champ partagé",
+      "subtitle": "Un conte de ruse et de gourmandise",
+      "summary": "L'hyène gourmande et le lièvre malin cultivent un champ ensemble. « Je prends ce qui pousse au-dessus de la terre ! » décide l'hyène. Le lièvre sourit… et sème des arachides.",
+      "moral": "La gourmandise rend aveugle : la réflexion vaut mieux que l'avidité."
+    },
+    "en": {
+      "title": "The Hare, the Hyena and the Shared Field",
+      "subtitle": "A tale of cunning and greed",
+      "summary": "The greedy hyena and the clever hare farm a field together. “I'll take whatever grows above the ground!” declares the hyena. The hare smiles… and plants peanuts.",
+      "moral": "Greed makes you blind: thinking is worth more than grabbing."
+    },
+    "moore": {
+      "title": "Dẽmbã, a Zĩ-kãnga la b sẽn da pʋɩd zĩig ningã",
+      "subtitle": "A sẽn gomd yam-tɩrgã la a zãmbã yelle",
+      "summary": "Zĩigã ne a zũurã sẽn yaa yam soaba, b tigimda pʋʋg n tʋmd taaba. \"Mam na n dɩka bũmb ning fãa sẽn bɩ tẽngã zugu!\" - Zĩ-kãnga yetame. Laagã puka sũ-noogo. la b bʋt-b nãagse.",
+      "moral": "La yaa wa y sẽn nong n na n maan bũmb ningã."
+    },
+    "dioula": {
+      "title": "Lɔnnikɛla, ɲanamini ani foro min be mɔgɔw fɛ",
+      "subtitle": "O ye kuma dɔ ye min be fɔ ko mɔgɔ ka nanbara ani wasabaliya lo b'a la.",
+      "summary": "O kɔ, a ye yiri dɔ sɛnɛ. \"Fɛɛn o fɛɛn be falen dugukolo kan, ne bena o bɛɛ ta!\" Kɔnɔ nin y'a fɔ ko: \"Ne ye min kɛ, n bena o ta\". Dɔnkɛnin be yɛlɛmisɛnw kɛ. ani ka yiridenw turu.",
+      "moral": "Ɲaniyakow be mɔgɔ fiɲɛntɔya. Ka miiri, o nafa ka bon ni minɛli ye."
+    },
+    "fulfulde": {
+      "title": "Hare, Hyena e Firo Saɗtoto",
+      "subtitle": "Ko haala ɓerɗe e yiɗde",
+      "summary": "Hyenna mo'o marɗo ɓernde e haani mari hakkiilo ɗon kaɓirtee nder gese. Mi hoo'ay ko ɓeydi dow leydi!  wi'i hyena. Laru ɗon maɓɓana... nden ɓe ɗon ndilla ko'e maɓɓe.",
+      "moral": "Yiɗuki ɗon waɗa on wumɓe: hakkilanaago ɓuri ko o hocca."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "karite",
+            "x": 16,
+            "y": 26
+          },
+          {
+            "k": "hare",
+            "x": 42,
+            "s": 1.5
+          },
+          {
+            "k": "hyena",
+            "x": 64,
+            "flip": true,
+            "s": 1.2
+          },
+          {
+            "k": "grass",
+            "x": 86
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il était une fois, au temps où les animaux parlaient, un lièvre et une hyène qui décidèrent de cultiver un champ ensemble. Le lièvre était petit mais très malin ; l'hyène était grande, forte… et terriblement gourmande.",
+        "en": "Once upon a time, when animals could talk, a hare and a hyena decided to farm a field together. The hare was small but very clever; the hyena was big, strong… and terribly greedy.",
+        "moore": "Daar a ye, rũms sã n da tõe n gomde, ra-rɩt ne reemã yãka yam n na n tɩ bɩɩs pʋʋg ne taaba. La ra-kãng yaa bilf la a yam da tar wʋsgo. A hyena wã me ra tara pãng n yɩɩd a taabã. la a yaa tʋlsem soaba.",
+        "dioula": "Wagati dɔ la, kongosogow tun be se ka kuma tuma min na, musokɔnɔman ni kungosogoba y'a latigɛ k'u bena foro dɔ sɛnɛ ɲɔgɔn fɛ. A tun ka dɔgɔ, nka a tun ye hakilitigi ye. A tun ka bon ani fanga tun b'a la. ani a ka wasabaliya juguyara.",
+        "fulfulde": "Wakkati go'o, nde dabbaaji ɗon haalaa, ɓooya e hyena ɓe njottini ɓe ngaɗa bee maɓɓe. Laru ɗon ɓilla, ammaa ɗon mari hakkillo masin. Hyaena ɗon mawnina, ɗon sembe... nden boo o ɗon moodi nyaamdu."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "acacia",
+            "x": 80,
+            "y": 26
+          },
+          {
+            "k": "hare",
+            "x": 34,
+            "s": 1.6
+          },
+          {
+            "k": "hyena",
+            "x": 58,
+            "flip": true,
+            "s": 1.3
+          },
+          {
+            "k": "field",
+            "x": 50,
+            "y": -26,
+            "s": 0.7
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Partageons équitablement, dit l'hyène en se léchant les babines. Moi, je prendrai tout ce qui pousse au-dessus de la terre. Toi, tu auras ce qui pousse en dessous. » Le lièvre accepta en souriant.",
+        "en": "“Let's share fairly,” said the hyena, licking her lips. “I'll take everything that grows above the ground. You can have whatever grows below.” The hare agreed with a smile.",
+        "moore": "\"Bɩ d pʋɩɩ ne tɩrlem\", la a yeel-a lame, n yãg a noore. M na n dɩka bũmb nins fãa sẽn be tẽng zug wã. Y tõe n dɩlla bũmb ning fãa sẽn bɩ tẽng zug. Kẽerã sakame ne sũ-noogo.",
+        "dioula": "\"An ka kɛ kelen ye\", o kɔrɔ ko an k'a daa lamɔ. Fɛɛn o fɛɛn be falen dugukolo kan, ne bena o bɛɛ ta. I be se ka fɛɛn o fɛɛn sɔrɔ duguma, i k'o dumu. Dɔnkɔnɔ y'a kaan to a ma ni yɛlɛmisɛn ye.",
+        "fulfulde": "\"Taa en njokka e nder hakkiilo\", wii hyena, o lammi haani maako. Mi hoo'ay koo ɗume ko ɗon ɓura dow lesdi. On waawi nyaamugo ko ɗon ɓesda dow. Laarol on jaɓii bee seema."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 18,
+            "y": 220
+          },
+          {
+            "k": "field",
+            "x": 50,
+            "y": 10,
+            "c": "dry"
+          },
+          {
+            "k": "granary",
+            "x": 84,
+            "y": 10
+          },
+          {
+            "k": "hare",
+            "x": 70,
+            "s": 1.4,
+            "a": "a-hop"
+          },
+          {
+            "k": "hyena",
+            "x": 26,
+            "s": 1.2
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le lièvre planta… des arachides ! À la récolte, l'hyène n'eut que des feuilles sèches, tandis que le lièvre remplissait ses greniers de bonnes graines.",
+        "en": "The hare planted… peanuts! At harvest time, the hyena got nothing but dry leaves, while the hare filled his granaries with good nuts.",
+        "moore": "Bãagã sẽn bʋdg... A mi m'a pa yã ye! La sã n wa ta tigsgã wakate, b ra pa paam bũmb a ye bal ye.",
+        "dioula": "A ye musoman dɔ suu don. O ye nuguw lo ye! Simantigɛ tuma na, yiriw tun be ja ka kɛ. Nka, wuluw tun b'u sumansiyɔrɔw fa ni kɔgɔ ye.",
+        "fulfulde": "Laruɗo ɗon mawnina... ko'e njamndi! Nder wakkati re'ugo, hyena ɗon heɓu goɗɗum sey leɗɗe njaruɗe, nden haani boo ɗon keewi ko o nyaama bee ɓesngu."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 80,
+            "y": 220
+          },
+          {
+            "k": "hyena",
+            "x": 40,
+            "s": 1.5
+          },
+          {
+            "k": "hare",
+            "x": 70,
+            "flip": true,
+            "s": 1.4
+          },
+          {
+            "k": "rock",
+            "x": 88,
+            "s": 0.7
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Cette année, tu m'as trompée, grogna l'hyène. Mais l'an prochain, c'est moi qui prendrai ce qui pousse sous la terre ! » Le lièvre hocha la tête, l'air innocent.",
+        "en": "“This year you tricked me,” growled the hyena. “But next year, I'll take whatever grows under the ground!” The hare nodded, looking innocent.",
+        "moore": "Yʋʋmd kãngã, yãmb zãmbda maam. Yẽ ra wẽnda ne y sẽn na n maan bũmb ningã. La yʋʋmd ning sẽn pʋgdã, mam na n dɩka bũmb nins fãa sẽn yi tẽngã pʋgẽ wã!",
+        "dioula": "O saan na, i ye ne nɛgɛ. I ye jigɛkisɛ dɔ ŋunuŋununa. Nka san nata la, n'a kɛra fɛɛn o fɛɛn ye dugukolo jukɔrɔ, ne bena o bɛɛ ta!",
+        "fulfulde": "Taare ndee a foofi yam,  haɗi hyena. Amma hitaande warugo, mi hoo'ay ko ɓanngata nder lesdi! Dimbhe noddi, o yi'i mo walaa hakke."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va planter le lièvre cette fois-ci ?",
+          "en": "What will the hare plant this time?",
+          "moore": "Wakat kãnga, bõe la sãnemã na n bʋd?",
+          "dioula": "O tuma na, a bena mun lo dan?",
+          "fulfulde": "Ko honɗun laamiyanke'en ɗon mawnina?"
+        },
+        "options": [
+          {
+            "fr": "Encore des arachides",
+            "en": "Peanuts again",
+            "moore": "A leb n dɩka burã.",
+            "dioula": "Nɛnɛw tugunin lo.",
+            "fulfulde": "Fuuɗeeji boo"
+          },
+          {
+            "fr": "Du mil",
+            "en": "Millet",
+            "moore": "A mi mi mi",
+            "dioula": "Fanga ye min ye, o ye",
+            "fulfulde": "Millet"
+          },
+          {
+            "fr": "Des ignames",
+            "en": "Yams",
+            "moore": "Dĩm-dãmb",
+            "dioula": "Yɔrɔ minw be se ka kɛ yen",
+            "fulfulde": "Yams"
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "Le malin sema du mil, dont les épis poussent tout en haut des tiges !",
+          "en": "The clever hare sowed millet, whose ears grow at the very top of the stalks!",
+          "moore": "Kẽer sẽn tar yamã bʋda miis, la a tʋb bɩt n be tigs-n-soab zugu!",
+          "dioula": "Lɔnnikɛla tun be misɛli dan. A tulow tun be falen ka bɔ yiriflaburuw sanfɛ!",
+          "fulfulde": "Wuro mari hakkiilo ɗon piyaa feero, e noppi maako boo ɗon ɓura haa dow leɗɗe!"
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 20,
+            "y": 300
+          },
+          {
+            "k": "field",
+            "x": 48,
+            "y": 10
+          },
+          {
+            "k": "hare",
+            "x": 22,
+            "s": 1.4,
+            "a": "a-hop"
+          },
+          {
+            "k": "hyena",
+            "x": 80,
+            "flip": true,
+            "s": 1.3
+          },
+          {
+            "k": "calabash",
+            "x": 32
+          }
+        ]
+      },
+      "text": {
+        "fr": "À la récolte, le lièvre coupa les beaux épis de mil, et l'hyène n'eut que des racines. Furieuse, elle comprit que sa gourmandise l'avait, une fois de plus, rendue aveugle.",
+        "en": "At harvest time, the hare cut the fine ears of millet, and the hyena got nothing but roots. Furious, she realised that her greed had blinded her once again.",
+        "moore": "La sã n wa ta tigsgã wakate, b ra kaooda rũmsã sẽn yaa sõma wã. A sũur sãama wʋsgo, t'a bãng tɩ a tʋlsemã leb n kɩtame t'a lebg zoangre.",
+        "dioula": "Simantigɛ tuma na, wuluw tun be se ka kɛ ɲimi ye. A dimina kosɔbɛ ani a y'a faamu ko wasabaliya tun b'a la ka kɛ fiɲɛntɔ ye tugun.",
+        "fulfulde": "Nder wakkati re'ugo, ɓeynguure ɗe maɓɓere njogii, nden hiina boo heɓan ko fuɗɗam. O ɗon ɓeyda, o anndi ngam yidde maako boo maayi mo."
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "baobab",
+            "x": 20,
+            "y": 22
+          },
+          {
+            "k": "hyena",
+            "x": 70,
+            "y": 30,
+            "s": 0.9,
+            "flip": true
+          },
+          {
+            "k": "hare",
+            "x": 40,
+            "s": 1.2
+          }
+        ]
+      },
+      "text": {
+        "fr": "Depuis ce jour, dit-on, l'hyène rôde la nuit en ricanant de dépit, et le lièvre, prudent, ne dort plus que d'un œil.",
+        "en": "Ever since, they say, the hyena prowls at night cackling with spite, and the cautious hare sleeps with one eye open.",
+        "moore": "B yetame tɩ hal sɩngrẽ wã, yʋngo, b sẽn na n yãgdẽ, a sã n wa beẽ wã pa tar sũ-sãang ye. La a gãda ne gũusgu.",
+        "dioula": "U b'a fɔ ko kabi o wagati, u be to ka filɛli kɛ suu kɔnɔ.",
+        "fulfulde": "Diga saa'i maajum, ɓe mbi'a, hyena ɗon yahu nder jemma bee ɓeydaago, nden haani ɗon ɗaana e gite goɗɗe."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quelle part l'hyène choisit-elle la première année ?",
+        "en": "Which share does the hyena choose in the first year?",
+        "moore": "Yʋʋmd pipi wã, a rɩtda pʋɩɩr bʋg?",
+        "dioula": "A saan fɔlɔ la, a be mun lo kɛ?",
+        "fulfulde": "Ko honɗun hiina'en suɓata nder hitaande arande?"
+      },
+      "options": [
+        {
+          "fr": "Ce qui pousse au-dessus de la terre",
+          "en": "What grows above the ground",
+          "moore": "Sẽn bɩt tẽngã zugu",
+          "dioula": "Min be falen dugukolo kan",
+          "fulfulde": "Ko ɗon ɓura dow lesdi"
+        },
+        {
+          "fr": "Ce qui pousse sous la terre",
+          "en": "What grows below the ground",
+          "moore": "Sẽn bɩt tẽng zug wã",
+          "dioula": "Min be falen dugukolo jukɔrɔ",
+          "fulfulde": "Ko ɗon ɓuwa ley lesdi"
+        },
+        {
+          "fr": "Tout le champ",
+          "en": "The whole field",
+          "moore": "Zĩ-kãnga fãa",
+          "dioula": "O foro bɛɛ kɔnɔ.",
+          "fulfulde": "Firo fuu"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que plante le lièvre la première année ?",
+        "en": "What does the hare plant the first year?",
+        "moore": "Bõe la b yiisa pipi yʋʋmdã pʋgẽ?",
+        "dioula": "A saan fɔlɔ la, a be mun lo dan?",
+        "fulfulde": "Ko honɗun woni ko haani ɗon piyan nder hitaande arande?"
+      },
+      "options": [
+        {
+          "fr": "Du mil",
+          "en": "Millet",
+          "moore": "A mi mi mi",
+          "dioula": "Fanga ye min ye, o ye",
+          "fulfulde": "Millet"
+        },
+        {
+          "fr": "Des arachides",
+          "en": "Peanuts",
+          "moore": "Dĩmbã sẽn yaa wa ne bẽdgã",
+          "dioula": "Furu kasadimanw",
+          "fulfulde": "Fuuɗeeji"
+        },
+        {
+          "fr": "Du maïs",
+          "en": "Maize",
+          "moore": "Koom-kẽengã",
+          "dioula": "Jigɛminɛn",
+          "fulfulde": "Koɗol"
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "q": {
+        "fr": "Quel défaut fait perdre l'hyène ?",
+        "en": "Which flaw makes the hyena lose?",
+        "moore": "Bõe n kɩt tɩ b pa tõogd ye?",
+        "dioula": "Mun lo be se k'a to hyenɛ ye bɔnɛ sɔrɔ?",
+        "fulfulde": "Ko honɗun waɗi hyena'en ɓe ɗon njaɓa?"
+      },
+      "options": [
+        {
+          "fr": "La paresse",
+          "en": "Laziness",
+          "moore": "B sẽn yaa gãne",
+          "dioula": "Fanga be mɔgɔ la",
+          "fulfulde": "Lamarol"
+        },
+        {
+          "fr": "La gourmandise",
+          "en": "Greed",
+          "moore": "B sẽn yaa zãmb dãmba",
+          "dioula": "Nafoloɲini",
+          "fulfulde": "Yiɗde"
+        },
+        {
+          "fr": "La timidité",
+          "en": "Shyness",
+          "moore": "Zĩ-kãsems sẽn yaa yãndã",
+          "dioula": "Ɲɔgɔnkunbɛnko",
+          "fulfulde": "Nyalɗi"
+        }
+      ],
+      "answer": 1
+    }
+  ],
+  "glossary": [
+    {
+      "term": "mil",
+      "lang": "fr",
+      "def": {
+        "fr": "Céréale résistante à la sécheresse, cultivée dans tout le Burkina Faso ; ses grains sont au sommet de la tige.",
+        "en": "A drought-resistant cereal grown all over Burkina Faso; its grains grow at the top of the stalk.",
+        "moore": "Yaa bõn-buud sẽn pa tar kom la a bɩɩgd Burkina Faso wã fãa. A koodã bɩtame n be roog zugẽ.",
+        "dioula": "O kisɛ be sɔrɔ Burkina Faso jamana yɔrɔ bɛɛ la. A ka sumanw be falen a yirifilan sanfɛyɔrɔ la.",
+        "fulfulde": "Ɗuum ɓesngu ɗon haɓɓa bee weelo nder Burkina Faso fuu; ɓesngu maako boo ɗon mawnina haa dow leɗɗe."
+      }
+    },
+    {
+      "term": "grenier",
+      "lang": "fr",
+      "def": {
+        "fr": "Petite construction en terre, surélevée et coiffée de paille, où l'on conserve les récoltes.",
+        "en": "A small raised mud building with a thatched roof, used to store the harvest.",
+        "moore": "B ra tara gãag sẽn yaa bĩis n zãad koodã.",
+        "dioula": "O tun ye bɔgɔ boon dennin dɔ ye, a sanfɛla tun be bɔnin ni binw ye. A tun be suman mara yɔrɔ la.",
+        "fulfulde": "Ɗereeji cembiɗɗi ɗi ɗon ɓuwaa bee daande, ɗum naftira ngam ɗo ɓe ngarta."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte populaire mettant en scène le lièvre rusé et l'hyène gloutonne, héros favoris des veillées mossi. Le motif du partage des récoltes se retrouve dans de nombreuses cultures du monde.",
+    "en": "A folk tale starring the cunning hare and the greedy hyena, favourite characters of Mossi evening storytelling. The crop-sharing motif is found in many cultures around the world."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

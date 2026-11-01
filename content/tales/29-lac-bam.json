@@ -1,0 +1,420 @@
+{
+  "slug": "la-naissance-du-lac-bam",
+  "type": "legende",
+  "region": "centre-nord",
+  "place": "Lac Bam (Kongoussi)",
+  "coords": [
+    13.4,
+    -1.52
+  ],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 5,
+  "age": 7,
+  "featured": true,
+  "cover": 3,
+  "tags": [
+    "eau",
+    "origines",
+    "respect",
+    "lac"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "La naissance du lac Bam",
+      "subtitle": "La femme qui commandait à la pluie",
+      "summary": "Éconduite et moquée dans le village de Pouni, une étrange vieille femme fait tomber des pluies comme on n'en avait jamais vu. Quand l'eau se retire, un immense lac est né : le lac Bam.",
+      "moral": "Il faut accueillir l'étranger avec respect : on ne sait jamais quelle force il porte en lui."
+    },
+    "en": {
+      "title": "The Birth of Lake Bam",
+      "subtitle": "The woman who commanded the rain",
+      "summary": "Turned away and mocked in the village of Pouni, a strange old woman brings down rains such as no one had ever seen. When the water draws back, a huge lake has been born: Lake Bam.",
+      "moral": "Strangers must be welcomed with respect: we never know what power they carry within them."
+    },
+    "moore": {
+      "title": "Bam ko-kãsengã rogem",
+      "subtitle": "Pag ning sẽn da na n kõ saagã noorã",
+      "summary": "B sẽn wẽnemd b mens n na n yaal-a Pouni tẽn-tẽngã, pag a yembr sẽn yaa zoangã kɩtame tɩ saag lʋɩ wa ned sẽn da zɩ n yã ye. Koɛɛgã sẽn wa n boogdẽ wã, koomã rogame tɩ b boond-a t'a Bam koɛɛg.",
+      "moral": "D sã n wa paam d zoens ne waoogre, d pa tõe n bãng b pãng ye."
+    },
+    "dioula": {
+      "title": "Bam baji wolola",
+      "subtitle": "Muso min tun ye sanji sigi, ale lo y'o kɛ.",
+      "summary": "Muso kɔrɔman dɔ ye sanji ben ka na. O tun ma deli ka kɛ fɔlɔ. Ni jii be bɔ yen, o kɔ, bajiba dɔ kɛra: Bam bada.",
+      "moral": "An ka kan k'an janto lonanw na ni bonya ye sabu an t'a lɔn u be se ka fanga min sɔrɔ."
+    },
+    "fulfulde": {
+      "title": "Ɓamtaare Ladiwol Bam",
+      "subtitle": "Debbo mo yamiri ndiyam ɗon wara",
+      "summary": "Nde ɓe njokki e nder wuro Pouni, debbo mawɗo mo ɓe mbaadi ɗon wara ndiyam bana goɗɗo meeɗaayi yi'ugo. Nde ndiyam ɗon ɓeyda, ladde mawnde jibini: ladde Bam.",
+      "moral": "Woniɓe doole ɓe njaɓata e mawninki: en anndaa ko baawɗe ɗe ɗon haani nder maɓɓe."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 310,
+            "s": 1.2
+          },
+          {
+            "k": "hut",
+            "x": 24,
+            "y": 26
+          },
+          {
+            "k": "hut",
+            "x": 72,
+            "y": 30,
+            "s": 0.8
+          },
+          {
+            "k": "old-woman",
+            "x": 46
+          },
+          {
+            "k": "field",
+            "x": 50,
+            "y": -14,
+            "c": "dry",
+            "s": 0.7
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il y a très longtemps, dans la région de l'actuel Kongoussi, il n'y avait pas de lac. Les gens creusaient la terre sèche pour trouver de l'eau. Un jour, une vieille femme inconnue, couverte de poussière, arriva au village de Pouni et demanda l'hospitalité.",
+        "en": "A very long time ago, in the area of today's Kongoussi, there was no lake. People dug into the dry earth to find water. One day an unknown old woman, covered in dust, arrived in the village of Pouni and asked for hospitality.",
+        "moore": "Sẽn deng wʋsgo, Kongoussi sẽn yaa zĩig ning rũndã-rũndã wã pa tar koom-koglg ye. Nebã ra kẽeda tẽngã pʋgẽ n bao koom. Daar a ye, pag sẽn da pa mi n be ne bugum n wa Pouni tẽngẽ wã kosame tɩ b kõ-a waoogr.",
+        "dioula": "Wagatijan tɛmɛnin na, Kongoussi mara yɔrɔ la, baji tun tɛ yen. Mɔgɔw tun be dugukolo sogi walisa ka jii sɔrɔ. Loon dɔ, muso kɔrɔman dɔ nana Pouni dugu la ani a ye lonanw ladon.",
+        "fulfulde": "Wakkati ɗuɗɗi, nder nokkuure Kongoussi hannde, walaa maayo. Yimɓe ɗon ɗaɓɓa nder leydi ngam ɓe keɓa ndiyam. Go'o nyalnde goɗɗo debbo mo anndaa, o ɓeydi e leɗɗe, wari haa wuro Pouni o tori mo yaajugo."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 70,
+            "y": 26
+          },
+          {
+            "k": "old-woman",
+            "x": 30
+          },
+          {
+            "k": "man-point",
+            "x": 52,
+            "flip": true,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "woman-talk",
+            "x": 62,
+            "flip": true,
+            "c": "#00894A"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Mais à Pouni, personne ne voulut d'elle. On se moqua de ses haillons et on lui ferma les portes. Blessée, la vieille femme leva les yeux vers le ciel et murmura des paroles que personne ne comprit. Les nuages, alors, se mirent à s'amonceler au-dessus des collines.",
+        "en": "But in Pouni no one would take her in. They mocked her rags and shut their doors on her. Hurt, the old woman raised her eyes to the sky and murmured words no one understood. Then the clouds began to pile up above the hills.",
+        "moore": "La Pouni, ned baa a yen pa sak n deeg-a ye. B ra yaalda a futã, n sul b kʋɩlen-kãens ne yẽ. A sẽn wa n namsdẽ wã, pagã zẽka a nin-tɩrs yĩngri la a gom goam tɩ ned pa wʋmd ye. La sa-tãamba sɩngame n yikd tãmsã zugu.",
+        "dioula": "Nka, Pouni dugu la, mɔgɔ si tun t'a ladon. U tun be yɛlɛ a ka faniw ma ani k'u daa tugu. A tun be to ka kuma ni mɔgɔ si ye. O kɔ, sankabaw tora ka bɔ kuluw kan.",
+        "fulfulde": "Ammaa to Pouni walaa mo jaɓata. Ɓe njokki limce maako, ɓe ɓornii dammugal maɓɓe dow maako. O ɓeydi, debbo mawɗo on ummi gite maako dow kammu o haɓɓii bolle ɗe walaa mo anndaa. Nden duule fuɗɗi ɓurnugo dow hooseere."
+      },
+      "choice": {
+        "q": {
+          "fr": "Qu'est-ce que les habitants auraient dû faire ?",
+          "en": "What should the villagers have done?",
+          "moore": "Bõe la tẽn-kãng nebã ra segd n maane?",
+          "dioula": "Dugumɔgɔw tun ka kan ka mun lo kɛ do?",
+          "fulfulde": "Ko honɗun yimɓe gariiri ɓen waɗata?"
+        },
+        "options": [
+          {
+            "fr": "L'accueillir avec respect",
+            "en": "Welcome her with respect",
+            "moore": "B pʋʋs-y-la ne waoogre.",
+            "dioula": "Aw k'a ladon ni bonya ye.",
+            "fulfulde": "Jaɓɓorgo mo bee mawninki"
+          },
+          {
+            "fr": "La chasser plus loin",
+            "en": "Chase her further away",
+            "moore": "Kẽng-y n kẽng yɩɩgẽ.",
+            "dioula": "A to a ka taga n'a ye yɔrɔjan.",
+            "fulfulde": "Wondira mo ɓeydi yaasi."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Trop tard : la pluie commençait déjà à tomber…",
+          "en": "Too late: the rain was already beginning to fall…",
+          "moore": "Sẽn paase, sa-kãsengã ra sɩngda n kelemdame.",
+          "dioula": "A tun ka ɲi. Sanji tun be benna ka ban.",
+          "fulfulde": "Too laat: ndiyam ɗon fuɗɗi wara..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "night",
+        "ground": "river",
+        "items": [
+          {
+            "k": "rain",
+            "x": 50,
+            "y": 300
+          },
+          {
+            "k": "cloud",
+            "x": 30,
+            "y": 270,
+            "c": "storm"
+          },
+          {
+            "k": "cloud",
+            "x": 72,
+            "y": 280,
+            "c": "storm"
+          },
+          {
+            "k": "hut",
+            "x": 26,
+            "y": 20,
+            "s": 0.8
+          },
+          {
+            "k": "hut",
+            "x": 64,
+            "y": 26,
+            "s": 0.7,
+            "c": "dark"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il plut pendant des jours et des nuits. Des torrents de boue dévalèrent des collines, emportant tout sur leur passage. Les cases de Pouni s'effondrèrent, et les champs disparurent sous les eaux. Les habitants s'enfuirent vers les hauteurs.",
+        "en": "It rained for days and nights. Torrents of mud rushed down from the hills, sweeping everything away. The huts of Pouni collapsed, and the fields vanished under the water. The villagers fled to higher ground.",
+        "moore": "Roogã saaga rasem ne yʋngo. B sẽn da wa n be tãensã zugã, b ra wʋkda koom-koglgã. Pouni logtoɛɛmbã ra waame, la koomẽ wã sẽn da be pʋʋsã fãa saaga. Tẽngã neb zoe n kẽng tẽn-kʋdg sẽn be yĩngri.",
+        "dioula": "Sanji tun be ben tile ni suu bɛɛ. Kuluw tun be woyo ka bɔgɔ ben. O ye fɛɛn bɛɛ cɛ. Pouni ka boonw tun benna ani jii tun be foro minw kan, u bɛɛ tununa. Dugu mɔgɔw bolila ka taga yɔrɔjan.",
+        "fulfulde": "Woni ndiyam nder nyalɗe e jemma. Ɗuum waɗi ndiyam ɓii-ɓaawu ɗon ƴiwo diga dow hooseere, e ɗam fuu. Cuuɗe Pouni ɗon maɓɓina, bee gese boo ɗon maɓɓita nder ndiyam. Yimɓe gariiri ndoggi haa nokkuure ɓurɗe."
+      }
+    },
+    {
+      "art": {
+        "sky": "dawn",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 240
+          },
+          {
+            "k": "old-woman",
+            "x": 60
+          },
+          {
+            "k": "king-talk",
+            "x": 40,
+            "c": "#F4EFE6"
+          },
+          {
+            "k": "calabash",
+            "x": 50
+          },
+          {
+            "k": "chicken",
+            "x": 30
+          },
+          {
+            "k": "granary",
+            "x": 84,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le chef du village voisin, Zimtanga, comprit qu'il fallait apaiser la vieille femme. Il vint vers elle avec respect et lui offrit des présents. Touchée, elle lui fit une promesse : « L'eau ne montera jamais jusqu'à Zimtanga. »",
+        "en": "The chief of the neighbouring village, Zimtanga, understood that the old woman had to be appeased. He came to her respectfully and offered her gifts. Touched, she made him a promise: “The water will never rise as far as Zimtanga.”",
+        "moore": "Tẽnga sẽn be zĩig ning n pẽ wã naab a Zimtanga ra miime tɩ yaa tɩlae tɩ b bels pagã. A waa a pagã nengẽ ne waoogre, n kõ-a kũunã. A sẽn paam n bãng a Zeova wã, a yeela a Davɩɩd woto: \"Ninsaalã pa na n le wa n ta Zimtanga ye\".",
+        "dioula": "Dugu sigiɲɔgɔn Zimtanga tun b'a lɔn ko a ka ɲi k'o muso dusu saalo. A y'a ɲini k'o muso dɛmɛ. A y'a daa di ko: \"Jii tena se ka wili fɔɔ Zimtanga\".",
+        "fulfulde": "Mawɗo gariiri ɓadake, Zimtanga, anndi debbo mawɗo on foondaaki. O yahi to maako bee hakkiilo o hokki mo dokke. O hawti, o waɗi alkawal: Lam ndiyam naa' ma'ata haa Zimtanga."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "birds",
+            "x": 50,
+            "y": 240
+          },
+          {
+            "k": "palm",
+            "x": 10,
+            "y": 36
+          },
+          {
+            "k": "man",
+            "x": 22,
+            "y": 4,
+            "c": "#00894A"
+          },
+          {
+            "k": "field",
+            "x": 80,
+            "y": 30,
+            "s": 0.5
+          }
+        ]
+      },
+      "text": {
+        "fr": "Quand les pluies cessèrent, un immense lac s'étendait là où se trouvait Pouni : le lac Bam, le plus grand lac naturel du Burkina Faso. Aujourd'hui, ses rives nourrissent des milliers de familles qui y cultivent des légumes. Mais le lac est menacé par l'ensablement : à nous, à notre tour, de le respecter et de le protéger.",
+        "en": "When the rains stopped, a vast lake lay where Pouni had been: Lake Bam, the largest natural lake in Burkina Faso. Today its shores feed thousands of families who grow vegetables there. But the lake is threatened by silting: it is now our turn to respect and protect it.",
+        "moore": "Sa-kãnga saaga sẽn wa n basã, Pouni zĩiga ra bee koom mogr sẽn yaa kãseng wʋsgo. Yaa Bam mogrã la Burkĩna Faso me sẽn yaa kãsengã. Rũndã-rũndã, a kʋɩlgã rɩtame tɩ b zakã rãmb tusa. La sẽn yaa rẽ yĩnga, d segd n saka la d kogl-a lame.",
+        "dioula": "Sanjiba nunu nana dabila tuma min na, Pouni tun be yɔrɔ min na, o yɔrɔ la, baji belebele dɔ tun be yen. O ye Bam baji ye. Bi, a ka bada la, denbaya waa caaman be sɛnɛ kɛ yen. Nka, a be komi o baji be ɲini ka tunu. An lo ka kan k'a bonya ani k'a tanga sisan.",
+        "fulfulde": "Nde ndiyamji ummi, nokkuure Pouni ɗon woodi ladde mawnde: ladde Bam, ladde ɓurɗe fuu nder Burkina Faso. Hannde, nder maayo maako ɗon nyaama yimɓe ɗuuɗɓe. Ammaa maayo ɗon hawta bee ɓeydaaki: jooni ɗum en ngam mawnugo e hisnaago."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Comment les habitants de Pouni reçoivent-ils la vieille femme ?",
+        "en": "How do the people of Pouni receive the old woman?",
+        "moore": "Wãn to la Pouni nebã reegd pag-kẽemdã?",
+        "dioula": "Pouni dugumɔgɔw be muso kɔrɔman minɛ cogo di?",
+        "fulfulde": "No yimɓe Pouni jaɓata debbo mawɗo?"
+      },
+      "options": [
+        {
+          "fr": "Ils la chassent et se moquent d'elle",
+          "en": "They mock her and turn her away",
+          "moore": "B yaalda a pagã la b lebgd-a n basdẽ.",
+          "dioula": "U b'a lɔgɔbɔ ani k'a ɲɔti ka bɔ yen",
+          "fulfulde": "Ɓe ɗon njogii mo ɓe ɗon wo \" i mo"
+        },
+        {
+          "fr": "Ils l'invitent à manger",
+          "en": "They invite her to eat",
+          "moore": "B bool-a lame tɩ b wa rɩ.",
+          "dioula": "U b'a weele dumuni na.",
+          "fulfulde": "Ɓe noddi mo nyaamugo"
+        },
+        {
+          "fr": "Ils la font reine",
+          "en": "They make her queen",
+          "moore": "B kɩtame t'a lebg rĩm-poakã.",
+          "dioula": "U b'a kɛ masamuso ye.",
+          "fulfulde": "Ɓe waɗata mo laamiiɗo"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Quel village est épargné par les eaux ?",
+        "en": "Which village is spared by the waters?",
+        "moore": "Tẽnga bʋg n paam koomã fãagr?",
+        "dioula": "Ji ye dugu juman kisi?",
+        "fulfulde": "Yimɓe wuro man ɓe njokki ndiyam?"
+      },
+      "options": [
+        {
+          "fr": "Zimtanga",
+          "en": "Zimtanga",
+          "moore": "Zimbaas",
+          "dioula": "Zimtanga ka koo",
+          "fulfulde": "Zimtanga"
+        },
+        {
+          "fr": "Pouni",
+          "en": "Pouni",
+          "moore": "Pouni wã",
+          "dioula": "Pouniw",
+          "fulfulde": "Pouni"
+        },
+        {
+          "fr": "Ouagadougou",
+          "en": "Ouagadougou",
+          "moore": "A Ouagadougou",
+          "dioula": "Ouagadougou",
+          "fulfulde": "Ouagadougou"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Quel est le plus grand lac naturel du Burkina Faso ?",
+        "en": "What is the largest natural lake in Burkina Faso?",
+        "moore": "Burkina Faso sẽn yaa zĩ-kãsengã yaa bʋgo?",
+        "dioula": "Burkina Faso danfɛnba ye mun lo ye?",
+        "fulfulde": "Ko woni laana ɓurɗo mawnude nder Burkina Faso?"
+      },
+      "options": [
+        {
+          "fr": "Le lac Bam",
+          "en": "Lake Bam",
+          "moore": "Bam lakã",
+          "dioula": "Bam baji",
+          "fulfulde": "Laku Bam"
+        },
+        {
+          "fr": "Le lac de Tengréla",
+          "en": "Lake Tengrela",
+          "moore": "Tengrela ko-kãsengã",
+          "dioula": "Tengrela kɔlɔn",
+          "fulfulde": "Laku Tengrela"
+        },
+        {
+          "fr": "La mare d'Oursi",
+          "en": "The Oursi pond",
+          "moore": "A Oursi koom koglgã",
+          "dioula": "Osi kɔlɔn",
+          "fulfulde": "Lodo Oursi"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "ensablement",
+      "lang": "fr",
+      "def": {
+        "fr": "Accumulation de sable et de terre au fond d'un lac, qui le rend moins profond et menace sa survie.",
+        "en": "The build-up of sand and soil at the bottom of a lake, making it shallower and threatening its survival.",
+        "moore": "Ko-kãsengã zugẽ, ko-yũud la tẽnga sẽn be n kɩt tɩ koomã pa tar pãng ye.",
+        "dioula": "Sanbɛrɛ ni dugukolo be lajɛn baji jukɔrɔ, o b'a to a be jaɲa ani a be se ka sa.",
+        "fulfulde": "Luttu e leydi nder leɗɗe, ngam ɗum waɗa nde ɓeydi boo ɗon haɗana nguurndam maako."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Tradition orale mossi de Zimtanga et de Bam sur l'origine du lac, rapportée dans un document pédagogique de géographie du ministère burkinabè des Enseignements secondaires (IRD, BEEP). Mise en récit libre.",
+    "en": "Mossi oral tradition from Zimtanga and Bam about the lake's origin, reported in a geography teaching document from Burkina Faso's Ministry of Secondary Education (IRD, BEEP). Free narrative adaptation."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

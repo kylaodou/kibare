@@ -1,0 +1,250 @@
+@if (tale(); as t) {
+  <!-- ============ EN-TÊTE DU CONTE ============ -->
+  <section class="tale-head">
+    <div class="container">
+      <a routerLink="/contes" class="back"><i class="fa-solid fa-arrow-left"></i> {{ 'nav.library' | t }}</a>
+      <div class="chips">
+        <span class="chip chip-red"><i class="fa-solid {{ typeIcon[t.type] }}"></i> {{ 'type.' + t.type | t }}</span>
+        <a class="chip" routerLink="/carte" [queryParams]="{ conte: t.slug }"><i class="fa-solid fa-location-dot"></i> {{ t.place }} · {{ region()?.name }}</a>
+        <span class="chip chip-green"><i class="fa-solid fa-people-group"></i> {{ t.people || ('tale.community' | t) }}</span>
+        <span class="chip"><i class="fa-regular fa-clock"></i> {{ t.duration }} min · {{ 'tale.age' | t: { age: t.age } }}</span>
+      </div>
+      <h1>{{ text()!.title }}</h1>
+      @if (text()!.subtitle) {
+        <p class="subtitle">{{ text()!.subtitle }}</p>
+      }
+    </div>
+  </section>
+
+  <!-- ============ BARRE D'OUTILS ============ -->
+  <div class="tools">
+    <div class="container tools-row">
+      <div class="langs" role="group" [attr.aria-label]="'tale.readIn' | t">
+        @for (l of languages(); track l.code) {
+          <button type="button" [class.on]="textLang() === l.code" (click)="changeLang(l.code)" [attr.aria-pressed]="textLang() === l.code">
+            {{ l.name }}
+          </button>
+        }
+      </div>
+      <div class="tools-right">
+        <div class="size" role="group" [attr.aria-label]="'tale.textSize' | t">
+          <button type="button" (click)="fontSize.set(fontSize() > 15 ? fontSize() - 2 : 15)" [attr.aria-label]="'tale.smaller' | t" [pTooltip]="'tale.smaller' | t" tooltipPosition="bottom"><span class="a1">A</span></button>
+          <span class="sz">{{ fontSize() }}</span>
+          <button type="button" (click)="fontSize.set(fontSize() < 29 ? fontSize() + 2 : 29)" [attr.aria-label]="'tale.bigger' | t" [pTooltip]="'tale.bigger' | t" tooltipPosition="bottom"><span class="a2">A</span></button>
+        </div>
+        <button type="button" class="ib" [class.on]="favorite()" (click)="progress.toggleFavorite(t.slug)" [attr.aria-label]="'card.fav' | t" [pTooltip]="(favorite() ? 'card.unfav' : 'card.fav') | t" tooltipPosition="bottom">
+          <i class="fa-heart" [class.fa-solid]="favorite()" [class.fa-regular]="!favorite()"></i>
+        </button>
+        <button type="button" class="ib" (click)="share()" [attr.aria-label]="'tale.share' | t" [pTooltip]="'tale.share' | t" tooltipPosition="bottom"><i class="fa-solid fa-share-nodes"></i></button>
+        <button type="button" class="ib hide-sm" (click)="print()" [attr.aria-label]="'tale.print' | t" [pTooltip]="'tale.print' | t" tooltipPosition="bottom"><i class="fa-solid fa-print"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============ LECTURE : ILLUSTRATION À GAUCHE, TEXTE À DROITE ============ -->
+  <section class="container reader">
+    <aside class="visual">
+      <div class="frame">
+        @for (s of [current()!]; track active()) {
+          <app-scene-art class="art-in" [art]="s.art" [parallax]="true" [cinema]="active()" />
+          @if (playing() && caption()) {
+            <p class="caption" aria-hidden="true">{{ caption() }}</p>
+          }
+        }
+        <span class="counter">{{ active() + 1 }} / {{ t.scenes.length }}</span>
+      </div>
+      <div class="dots" role="tablist" [attr.aria-label]="'tale.progress' | t">
+        @for (s of t.scenes; track $index) {
+          <button type="button" role="tab" [class.on]="$index === active()" [class.done]="$index < active()" [attr.aria-label]="'tale.sceneN' | t: { n: $index + 1 }" (click)="scrollTo($index)"></button>
+        }
+      </div>
+      <p class="summary">{{ text()!.summary }}</p>
+    </aside>
+
+    <article class="story" [style.font-size.px]="fontSize()" [attr.lang]="textLang() === 'en' ? 'en' : textLang() === 'fr' ? 'fr' : null">
+      @for (para of paragraphs(); track $index; let i = $index) {
+        <div #para class="para" [attr.data-i]="i" [class.active]="i === active()" (click)="playing() ? playFrom(i) : active.set(i)">
+          <p>
+            @for (sentence of para; track $index; let si = $index) {<span class="sentence" [class.speaking]="i === active() && narration.current() === si">@for (p of sentence; track $index) {@if (p.term) {<button type="button" class="term" (click)="$event.stopPropagation(); gloss.set(p.term); op.toggle($event)">{{ p.text }}</button>} @else {<span>{{ p.text }}</span>}}</span>{{ ' ' }}}
+          </p>
+        </div>
+
+        @if (t.scenes[i].choice; as c) {
+          <div class="choice" [class.answered]="answers()[i] !== undefined">
+            <span class="c-label"><i class="fa-solid fa-hand-pointer"></i> {{ 'tale.yourTurn' | t }}</span>
+            <h3>{{ c.q | tx: textLang() }}</h3>
+            <div class="c-opts">
+              @for (o of c.options; track $index) {
+                <button type="button" [disabled]="answers()[i] !== undefined" [class.picked]="answers()[i] === $index" [class.right]="answers()[i] !== undefined && $index === c.answer" (click)="answer(i, $index)">
+                  <span class="letter">{{ 'ABC'[$index] }}</span> {{ o | tx: textLang() }}
+                </button>
+              }
+            </div>
+            @if (answers()[i] !== undefined) {
+              <p class="reveal">
+                <strong>{{ (answers()[i] === c.answer ? 'tale.wellSeen' : 'tale.otherWay') | t }}</strong>
+                {{ c.reveal | tx: textLang() }}
+                @if (!playing() && i < t.scenes.length - 1) {
+                  <button type="button" class="link" (click)="canPlay() ? playFrom(i + 1) : scrollTo(i + 1)">{{ 'tale.continueStory' | t }} <i class="fa-solid fa-arrow-down"></i></button>
+                }
+              </p>
+            }
+          </div>
+        }
+      }
+
+      <!-- ============ FIN ============ -->
+      <div id="fin" class="end">
+        <div class="end-mark" aria-hidden="true"><span class="band-danfani"></span><i class="fa-solid fa-star"></i><span class="band-danfani"></span></div>
+        @if (text()!.moral) {
+          <div class="moral bogolan">
+            <span class="m-label">{{ 'tale.moral' | t }}</span>
+            <p>{{ text()!.moral }}</p>
+          </div>
+        }
+      </div>
+    </article>
+  </section>
+
+  <section class="container after">
+    <div class="after-grid">
+      <div class="col">
+        @if (t.quiz.length) {
+          <app-quiz [items]="t.quiz" [lang]="textLang()" (done)="quizDone($event)" />
+        }
+        <div class="end-actions">
+          <button type="button" class="btn btn-ghost btn-sm" [class.liked]="liked()" (click)="like()">
+            <i class="fa-thumbs-up" [class.fa-solid]="liked()" [class.fa-regular]="!liked()"></i> {{ 'tale.like' | t }}
+            @if (t.likes) {
+              <span class="cnt">{{ t.likes }}</span>
+            }
+          </button>
+          <button type="button" class="btn btn-ghost btn-sm" (click)="share()"><i class="fa-solid fa-share-nodes"></i> {{ 'tale.share' | t }}</button>
+          <a class="btn btn-ghost btn-sm" routerLink="/contribuer" [queryParams]="{ conte: t.slug, langue: t.language }"><i class="fa-solid fa-microphone"></i> {{ 'tale.recordYours' | t }}</a>
+        </div>
+      </div>
+      <aside class="col side">
+        @if (t.glossary.length) {
+          <div class="box card">
+            <h3><i class="fa-solid fa-book"></i> {{ 'tale.glossary' | t }}</h3>
+            <dl>
+              @for (g of t.glossary; track g.term) {
+                <div>
+                  <dt>{{ g.term }} <small>{{ langName(g.lang) }}</small></dt>
+                  <dd>{{ g.def | tx: textLang() }}</dd>
+                </div>
+              }
+            </dl>
+          </div>
+        }
+        <div class="box card">
+          <h3><i class="fa-solid fa-scroll"></i> {{ 'tale.source' | t }}</h3>
+          <p>{{ t.source | tx: textLang() }}</p>
+          @if (t.contributors?.length) {
+            <h3 class="mt"><i class="fa-solid fa-people-group"></i> {{ 'tale.contributors' | t }}</h3>
+            <ul class="contribs">
+              @for (c of t.contributors; track c.name) {
+                <li><strong>{{ c.name }}</strong> · {{ 'tale.role.' + c.role | t }}</li>
+              }
+            </ul>
+          }
+          @if (tracks().length) {
+            <h3 class="mt"><i class="fa-solid fa-microphone-lines"></i> {{ 'tale.voices' | t }}</h3>
+            <ul class="contribs">
+              @for (a of tracks(); track a.id) {
+                <li><strong>{{ a.narrator }}</strong> · {{ langName(a.lang) }}</li>
+              }
+            </ul>
+          }
+        </div>
+      </aside>
+    </div>
+
+    <app-comments [slug]="t.slug" />
+
+    <div class="related">
+      <h2>{{ 'tale.related' | t }}</h2>
+      <div class="related-grid">
+        @for (r of related(); track r.slug) {
+          <app-tale-card [tale]="r" [compact]="true" />
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LECTEUR AUDIO ============ -->
+  <div class="player">
+    <div class="player-inner">
+      <button type="button" class="pl-btn" (click)="step(-1)" [disabled]="active() === 0" [attr.aria-label]="'tale.prev' | t"><i class="fa-solid fa-backward-step"></i></button>
+      <button type="button" class="pl-play" (click)="togglePlay()" [disabled]="!canPlay()" [attr.aria-label]="'tale.play' | t">
+        <i class="fa-solid" [class.fa-pause]="playing()" [class.fa-play]="!playing()"></i>
+      </button>
+      <button type="button" class="pl-btn" (click)="step(1)" [disabled]="active() === t.scenes.length - 1" [attr.aria-label]="'tale.next' | t"><i class="fa-solid fa-forward-step"></i></button>
+      <div class="pl-info">
+        @if (track(); as tr) {
+          <strong><i class="fa-solid fa-microphone-lines"></i> {{ langName(tr.lang) }} — {{ tr.narrator }}</strong>
+        } @else if (canPlay()) {
+          <strong>
+            @if (playing()) {
+              <span class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            }
+            {{ (hasRecorded() ? 'tale.voiceIn' : 'tale.synthIn') | t: { lang: langName(textLang()) } }}
+          </strong>
+        } @else {
+          <strong>{{ 'tale.noVoiceLang' | t: { lang: langName(textLang()) } }}</strong>
+        }
+        <small>{{ 'tale.sceneOf' | t: { n: active() + 1, total: t.scenes.length } }}</small>
+      </div>
+      @if (tracks().length) {
+        <select class="voice-sel" [ngModel]="track()?.id ?? 0" (ngModelChange)="pickTrack($event)" [attr.aria-label]="'tale.voices' | t">
+          <option [value]="0">{{ 'tale.textVoice' | t }}</option>
+          @for (a of tracks(); track a.id) {
+            <option [value]="a.id">{{ langName(a.lang) }} — {{ a.narrator }}</option>
+          }
+        </select>
+      }
+      <button type="button" class="pl-btn" data-music [class.on]="ambience.playing()" (click)="ambience.toggle()" [pTooltip]="'tale.ambience' | t" tooltipPosition="top" [attr.aria-label]="'tale.ambience' | t">
+        <i class="fa-solid fa-music"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- tampon du passeport -->
+  @if (stamped()) {
+    <div class="stamp-overlay" (click)="stamped.set(false)">
+      <div class="stamp-card card" (click)="$event.stopPropagation()" role="dialog" aria-modal="true">
+        <div class="stamp">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="4 3" />
+            <circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M50,26 L55.6,42.3 L72.8,42.6 L59.1,52.9 L64.1,69.4 L50,59.6 L35.9,69.4 L40.9,52.9 L27.2,42.6 L44.4,42.3Z" fill="currentColor" />
+          </svg>
+          <span>{{ region()?.name }}</span>
+        </div>
+        <h2>{{ 'tale.stampTitle' | t }}</h2>
+        <p>{{ 'tale.stampText' | t: { region: region()?.name ?? '' } }}</p>
+        <div class="stamp-actions">
+          <button type="button" class="btn btn-ghost btn-sm" (click)="stamped.set(false)">{{ 'tale.continue' | t }}</button>
+          <button type="button" class="btn btn-sm" (click)="openPassport()"><i class="fa-solid fa-stamp"></i> {{ 'tale.seePassport' | t }}</button>
+        </div>
+      </div>
+    </div>
+  }
+
+  <p-popover #op>
+    @if (gloss(); as g) {
+      <div class="gloss-pop">
+        <strong>{{ g.term }}</strong>
+        <small>{{ langName(g.lang) }}</small>
+        <p>{{ g.def | tx: textLang() }}</p>
+      </div>
+    }
+  </p-popover>
+} @else {
+  <section class="container missing">
+    <i class="fa-solid fa-book-open"></i>
+    <h1>{{ 'tale.notFound' | t }}</h1>
+    <a routerLink="/contes" class="btn">{{ 'nav.library' | t }}</a>
+  </section>
+}

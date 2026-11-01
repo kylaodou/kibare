@@ -1,0 +1,115 @@
+<header class="bar">
+  <div class="inner">
+    <a routerLink="/" class="brand" [attr.aria-label]="'nav.home' | t">
+      <app-logo [size]="46" [tagline]="'brand.tagline' | t" />
+    </a>
+
+    <nav class="links" [attr.aria-label]="'a11y.mainNav' | t">
+      @for (item of nav; track item.path) {
+        <a [routerLink]="item.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: item.exact }">{{ item.key | t }}</a>
+      }
+    </nav>
+
+    <div class="actions">
+      <div class="lang" role="group" [attr.aria-label]="'header.lang' | t">
+        <button type="button" [class.on]="i18n.lang() === 'fr'" [attr.aria-pressed]="i18n.lang() === 'fr'" (click)="i18n.set('fr')" lang="fr">FR</button>
+        <button type="button" [class.on]="i18n.lang() === 'en'" [attr.aria-pressed]="i18n.lang() === 'en'" (click)="i18n.set('en')" lang="en">EN</button>
+      </div>
+      <button type="button" class="icon-btn" id="tour-sound" data-music [class.active]="ambience.playing()" (click)="ambience.toggle()"
+        [pTooltip]="(ambience.playing() ? 'header.soundOff' : 'header.soundOn') | t" tooltipPosition="bottom"
+        [attr.aria-label]="(ambience.playing() ? 'header.soundOff' : 'header.soundOn') | t" [attr.aria-pressed]="ambience.playing()">
+        <i class="fa-solid" [class.fa-music]="ambience.playing()" [class.fa-volume-xmark]="!ambience.playing()"></i>
+      </button>
+      <button type="button" class="icon-btn hide-xs" (click)="theme.toggle()" [pTooltip]="(theme.dark() ? 'header.light' : 'header.dark') | t"
+        tooltipPosition="bottom" [attr.aria-label]="(theme.dark() ? 'header.light' : 'header.dark') | t">
+        <i class="fa-solid" [class.fa-sun]="theme.dark()" [class.fa-moon]="!theme.dark()"></i>
+      </button>
+
+      @if (auth.user(); as u) {
+        <button type="button" class="icon-btn bell" (click)="np.toggle($event)" [attr.aria-label]="'notif.title' | t">
+          <i class="fa-regular fa-bell"></i>
+          @if (notifs.unread()) {
+            <span class="badge">{{ notifs.unread() > 9 ? '9+' : notifs.unread() }}</span>
+          }
+        </button>
+        <p-popover #np styleClass="notif-pop">
+          <div class="np">
+            <div class="np-head">
+              <strong>{{ 'notif.title' | t }}</strong>
+              @if (notifs.unread()) {
+                <button type="button" class="link" (click)="notifs.markAll()">{{ 'notif.readAll' | t }}</button>
+              }
+            </div>
+            <ul>
+              @for (n of notifs.items().slice(0, 8); track n.id) {
+                <li>
+                  <button type="button" [class.unread]="!n.read" (click)="open(n, np.hide.bind(np))">
+                    <i class="fa-solid {{ icon[n.type] }}"></i>
+                    <span>
+                      <span class="msg">{{ n.message }}</span>
+                      <small>{{ n.createdAt | date: 'd MMM, HH:mm' }}</small>
+                    </span>
+                  </button>
+                </li>
+              } @empty {
+                <li class="empty">{{ 'notif.empty' | t }}</li>
+              }
+            </ul>
+            <a class="np-all" routerLink="/compte" fragment="notifications" (click)="np.hide()">{{ 'notif.all' | t }}</a>
+          </div>
+        </p-popover>
+
+        <button type="button" class="avatar" (click)="um.toggle($event)" [attr.aria-label]="u.name">{{ initials(u.name) }}</button>
+        <p-popover #um>
+          <div class="um">
+            <div class="um-head">
+              <strong>{{ u.name }}</strong>
+              <small>{{ u.email }}</small>
+            </div>
+            <a routerLink="/compte" (click)="um.hide()"><i class="fa-regular fa-user"></i> {{ 'nav.account' | t }}</a>
+            <a routerLink="/contribuer" (click)="um.hide()"><i class="fa-solid fa-feather-pointed"></i> {{ 'nav.contribute' | t }}</a>
+            <a routerLink="/passeport" (click)="um.hide()"><i class="fa-solid fa-stamp"></i> {{ 'nav.passport' | t }}</a>
+            @if (auth.isAdmin()) {
+              <a routerLink="/admin" (click)="um.hide()"><i class="fa-solid fa-gauge-high"></i> {{ 'nav.dashboard' | t }}</a>
+            }
+            <button type="button" (click)="um.hide(); auth.logout()"><i class="fa-solid fa-right-from-bracket"></i> {{ 'nav.logout' | t }}</button>
+          </div>
+        </p-popover>
+      } @else {
+        <a routerLink="/connexion" class="btn btn-ghost btn-sm hide-sm">{{ 'nav.login' | t }}</a>
+        <a routerLink="/contribuer" class="btn btn-sm hide-sm"><i class="fa-solid fa-feather-pointed"></i> {{ 'nav.contribute' | t }}</a>
+      }
+
+      <button type="button" class="icon-btn burger" (click)="menu.set(true)" [attr.aria-label]="'header.menu' | t">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<p-drawer [visible]="menu()" (visibleChange)="menu.set($event)" position="right" [style]="{ width: 'min(86vw, 340px)' }">
+  <ng-template #header>
+    <app-logo [size]="38" />
+  </ng-template>
+  <nav class="drawer-links">
+    @for (item of nav; track item.path) {
+      <a [routerLink]="item.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: item.exact }" (click)="menu.set(false)">
+        <i class="fa-solid {{ item.icon }}"></i> {{ item.key | t }}
+      </a>
+    }
+    <a routerLink="/passeport" routerLinkActive="active" (click)="menu.set(false)"><i class="fa-solid fa-stamp"></i> {{ 'nav.passport' | t }}</a>
+    <a routerLink="/contribuer" routerLinkActive="active" (click)="menu.set(false)"><i class="fa-solid fa-feather-pointed"></i> {{ 'nav.contribute' | t }}</a>
+    @if (auth.loggedIn()) {
+      <a routerLink="/compte" routerLinkActive="active" (click)="menu.set(false)"><i class="fa-regular fa-user"></i> {{ 'nav.account' | t }}</a>
+      @if (auth.isAdmin()) {
+        <a routerLink="/admin" routerLinkActive="active" (click)="menu.set(false)"><i class="fa-solid fa-gauge-high"></i> {{ 'nav.dashboard' | t }}</a>
+      }
+    } @else {
+      <a routerLink="/connexion" routerLinkActive="active" (click)="menu.set(false)"><i class="fa-solid fa-right-to-bracket"></i> {{ 'nav.login' | t }}</a>
+    }
+    <button type="button" class="drawer-theme" (click)="theme.toggle()">
+      <i class="fa-solid" [class.fa-sun]="theme.dark()" [class.fa-moon]="!theme.dark()"></i>
+      {{ (theme.dark() ? 'header.light' : 'header.dark') | t }}
+    </button>
+  </nav>
+</p-drawer>

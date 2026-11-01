@@ -1,0 +1,434 @@
+{
+  "slug": "l-anneau-du-chef",
+  "type": "conte",
+  "region": "centre-ouest",
+  "place": "Réo",
+  "coords": [
+    12.32,
+    -2.47
+  ],
+  "people": "Lyela",
+  "language": "lyele",
+  "duration": 6,
+  "age": 8,
+  "featured": true,
+  "cover": 3,
+  "tags": [
+    "destin",
+    "justice",
+    "foi",
+    "suspense"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "L'anneau du chef et le silure",
+      "subtitle": "« Si Dieu ne tue pas, le chef ne peut pas tuer »",
+      "summary": "Un père a donné à son fils un nom qui défie le pouvoir : « Si-Dieu-ne-tue-pas-le-chef-ne-peut-tuer ». Vexé, le chef lui confie son anneau d'or… et attend qu'il le perde.",
+      "moral": "Personne n'est maître du destin d'autrui : la vérité et la justice finissent par triompher de l'orgueil des puissants."
+    },
+    "en": {
+      "title": "The Chief's Ring and the Catfish",
+      "subtitle": "“If God does not kill, the chief cannot kill”",
+      "summary": "A father gave his son a name that defies power: “If-God-does-not-kill-the-chief-cannot-kill”. Offended, the chief entrusts him with his golden ring… and waits for him to lose it.",
+      "moral": "No one controls the destiny of another: truth and justice triumph in the end over the pride of the powerful."
+    },
+    "moore": {
+      "title": "A Zĩ-bɩɩgã zoobã ne a Katɩ wã",
+      "subtitle": "Wẽnnaam sã n ka kʋʋd, naabã me pa tõe n kʋ ye.",
+      "summary": "Ba a ye kõo a bi-riblã yʋʋr sẽn kɩɩsd pãn-soaadbã: \"Ned sã n pa kʋʋd Wẽnnaam, yẽ ka tõe n kʋ\". A sẽn wa n sãam a sũurã, naabã kõo yẽ sãnem sõorgã. la a gũuda t'a bas-a.",
+      "moral": "Ned ka tõe n dɩka a to sor ye: sɩd la tɩrlem tõogda pãng rãmbã wuk-m-mengã."
+    },
+    "dioula": {
+      "title": "Masacɛ ka bolokunnaden ni jɛgɛw",
+      "subtitle": "Ni Ala tɛ mɔgɔ faga, kuntigi fana tɛ se ka mɔgɔ faga.",
+      "summary": "Fa dɔ y'a dencɛ tɔgɔ di min tɛ se ka fanga bali: \"Ni Ala ma mɔgɔ faga, a te se k'o tigi faga\". A dimina, a y'a ka sanufeeren di a ma. ani a b'a kɔnɔna ko a ka dimi kana ban.",
+      "moral": "Mɔgɔ si tɛ se ka mɔgɔ wɛrɛ ta kow latigɛ a yɛrɛ ma. Tiɲɛ ni tilenninya be se ka fanga sɔrɔ mɔgɔbabaw kuncɛbaya kɔrɔ."
+    },
+    "fulfulde": {
+      "title": "Ko'e hooreejo e Catfish",
+      "subtitle": "To Allah ɗon halki, mawɗo boo walaa baawɗe halki",
+      "summary": "Baaba hokki ɓiɗɗo maako innde nde ɗon haɓɓa laamu: \"To Allah-taaki-muttaako-jo ardiiɗo-maawataa-muttaago\". Ngam ɗum ɓeydi, hooreejo on hokki mo kuugal maako... e ɗon hoola mo o majjina ɗum.",
+      "moral": "Walaa mo ɗon laamugo darnde goɗɗo: goonga e gooŋgaaku ɗon ma'ana dow ko ɓuri baawɗe."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "palace",
+            "x": 62,
+            "y": 34,
+            "s": 0.8
+          },
+          {
+            "k": "king-talk",
+            "x": 34,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child",
+            "x": 46,
+            "c": "#C9822B"
+          },
+          {
+            "k": "man",
+            "x": 16,
+            "c": "#00894A"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Dans un village lyéla, un homme donna à son fils un nom étonnant : « Si-Dieu-ne-tue-pas-le-chef-ne-peut-tuer ». Quand le chef l'apprit, il se sentit défié. Il fit venir l'enfant pour en faire son serviteur, bien décidé à lui prouver le contraire. Mais il cacha sa colère et le combla d'attentions.",
+        "en": "In a Lyela village, a man gave his son an astonishing name: “If-God-does-not-kill-the-chief-cannot-kill”. When the chief heard of it, he felt challenged. He summoned the boy to be his servant, determined to prove the name wrong. But he hid his anger and showered the boy with kindness.",
+        "moore": "Tẽnga a ye pʋgẽ, rao n pʋd a bi-riblã yʋʋr sẽn yaa kãseng tɩ b yeel t'a \"Wẽnnaam sã n pa kʋd nin-kãsemdã, a ka tõe n kʋ ye\". A sẽn wʋm woto wã, a sũur sãama wʋsgo. A bool-a lame t'a yɩ a tʋmtʋmd n wilg tɩ yẽ yʋʋr pa sõma ye. La a solga a sũ-yikrã n ning bi-riblã sõmblem.",
+        "dioula": "Lyela dugu la, cɛɛ dɔ y'a dencɛ tɔgɔ ɲuman fɔ a ye ko: \"Ni Ala tɛ mɔgɔ faga, kuntigi tɛ se k'o tigi faga\". O koo mɛnnin kɔ, a y'a miiri ko u bena ale bali. A y'a ɲini a fɛ ko deen ka kɛ a ka baaraden ye. Nka, a y'a ka dimi dogo ani k'a dusu diya.",
+        "fulfulde": "Nder wuro Lyela, goɗɗo hokki ɓiɗɗo maako innde nanondirɗum: \"To Allah-taaki-muttaako-jo ardiiɗo-maawataa-muttaago\". Nde ardiiɗo'en nani haala maajum, o nana ko ɗum ɓeydi. O noddi suka on ngam o wartira mo maccuɗo, omo yiɗi holla innde maako naa' goonga. Ammaa o ɓoydi masin maako, o hokki suka on belɗum."
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "river",
+        "items": [
+          {
+            "k": "child-up",
+            "x": 34,
+            "y": 4,
+            "c": "#C9822B"
+          },
+          {
+            "k": "child",
+            "x": 48,
+            "y": 4,
+            "c": "#00894A"
+          },
+          {
+            "k": "gold",
+            "x": 60,
+            "y": -20,
+            "s": 0.4
+          },
+          {
+            "k": "catfish",
+            "x": 72,
+            "y": -26
+          },
+          {
+            "k": "palm",
+            "x": 90,
+            "y": 40
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un jour, le chef lui confia un anneau en or massif. L'enfant le portait au doigt partout, même pour se baigner. Un après-midi, au marigot, l'anneau glissa et disparut dans l'eau : un silure l'avait avalé. Ses camarades coururent prévenir le chef, qui sourit : « Enfin ! »",
+        "en": "One day the chief entrusted him with a ring of solid gold. The boy wore it on his finger everywhere, even when bathing. One afternoon at the stream, the ring slipped off and vanished into the water: a catfish had swallowed it. His friends ran to tell the chief, who smiled: “At last!”",
+        "moore": "Daar a ye, naabã kõo yẽ sãnem sõor sẽn yaa kãsenga. Bi-riblã ra gãda a nugẽ wã zĩig fãa, baa b sẽn da wa n kogendẽ. Daar a ye wĩntoogã, koomã sẽn be ko-kãsengã zugẽ wã, sõorã yii n menem koomẽ. Ko-yũud n dɩ-a lame. A zo-rãmbã zoe n tɩ togs a naabã, t'a wãmse: \"Kõndẽ la!\"",
+        "dioula": "Loon dɔ, a ye sanulaman di a ma. Deen tun b'a bolokunnaden don yɔrɔ bɛɛ, hali n'a be koli kɛra. Loon dɔ wulafɛ, baji daa la, u ye sinsin ka bɔ a kɔnɔ. Jigɛgɛba dɔ y'a min. A teriw bolila ka taga a fɔ kuntigi ye, ale y'a daminɛ k'a yɛrɛ yɛlɛ ko: \"A laban na!\"",
+        "fulfulde": "Gooto nyalnde, mawɗo'en hokki mo ɓuɓɓere nde goodude daande. Suka on ɗon ɓorgo ɗum dow juuɗe maako haa nokkuuje fuu, koo to o loototo. Go'o nder nyalawma dow ndiyam, ɓolde ɗon maayi haa ndiyam: ko callal waɗi. Duuɓe maako ɗon ndilli wi'ugo mawɗo, mo ɓesdi: \"Aɓɓa!"
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 20,
+            "y": 26
+          },
+          {
+            "k": "woman-pound",
+            "x": 46,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child-sit",
+            "x": 66,
+            "c": "#C9822B"
+          },
+          {
+            "k": "jar",
+            "x": 80
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Dans trois jours, c'est la fête, dit le chef. Si tu ne me rends pas mon anneau, je te ferai tuer, quel que soit ton nom ! » La veille du jour fixé, il permit à l'enfant de manger un dernier repas. En pleurant, sa mère écrasa le mil pour préparer le tô, puis courut au marché chercher du poisson pour la sauce.",
+        "en": "“In three days there will be a feast,” said the chief. “If you don't give me back my ring, I'll have you killed, whatever your name!” On the eve of the appointed day, he allowed the boy one last meal. Weeping, his mother ground the millet to make tô, then hurried to the market to find fish for the sauce.",
+        "moore": "A yeelame: \"Tõnd sã n wa ket rasem a tãab, b na n maana kibsã\". Yãmb sã n pa lebs maam m sõorã, mam na n kɩtame tɩ b kʋ yãmb ne y yʋʋr fãa! A ma wã yãbame n segl ko-kãnga, n na n maan tô. La a zoeeme n kẽng sokẽ tɩ b bao zĩm sẽn na yɩl n dɩt soogã.",
+        "dioula": "\"Loon saba, ɲanagwɛ dɔ bɛna kɛ. \" Kuntigi ko: \" Aw ye na ne fɛ yan\". Ni i ma ne ka sinsan di n' ma, n bena i faga. I tɔgɔ tɛ min na! O loon yɛrɛ la, a ye dumuni kɛ laban. A bamuso kasira ka kasi. O kɔ, a sinna lɔgɔfiyɛ la walisa ka jigɛ ɲini o suman na.",
+        "fulfulde": "\"Ɗu'um balɗe tati ɗum waɗata juulde\", sey mawɗo wi'i. To on hokki yam kolte am, mi waɗan on maayi, koo nde nodduɗon! Ha nyalnde nden, o hokki suka on nyaamuki go'o. E o ɗon ngiiwi, maama maako waɗi leɗɗe ngam waɗugo tô, nden o yahi to kasu ngam ɗaɓɓa liɗɗi ngam nyaamdu."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que pourrait-il y avoir dans le poisson acheté au marché ?",
+          "en": "What might be inside the fish bought at the market?",
+          "moore": "Bõe n tõe n zĩnd zĩm-gãong ning b sẽn da koos wã pʋgẽ?",
+          "dioula": "I ye jigɛ minw san lɔgɔfiyɛ la, mun lo be yen?",
+          "fulfulde": "Ko woni nder liɗɗi ɗi ɓe coodi to kasu?"
+        },
+        "options": [
+          {
+            "fr": "L'anneau du chef",
+            "en": "The chief's ring",
+            "moore": "A Zĩ-bõogã zoobgẽ",
+            "dioula": "Kuntigi ka bololanigɛ",
+            "fulfulde": "Koolol hooreejo"
+          },
+          {
+            "fr": "Rien du tout",
+            "en": "Nothing at all",
+            "moore": "Pa bũmb ye.",
+            "dioula": "Fɛɛn si tɛ yen fewu.",
+            "fulfulde": "Walaa ko'e maɓɓe fuu."
+          },
+          {
+            "fr": "Une perle",
+            "en": "A pearl",
+            "moore": "Yaa pɛlga.",
+            "dioula": "Lolo dɔ ye",
+            "fulfulde": "Lamargal"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Au marché, il ne restait qu'un seul poisson… un silure.",
+          "en": "At the market there was only one fish left… a catfish.",
+          "moore": "Zĩ-gũudã pʋgẽ, zĩm a ye bal n da ketẽ. a ye.",
+          "dioula": "Jigɛ kelen dɔrɔn le tora lɔgɔfiyɛ la. ka kɛ jɛgɛ ye.",
+          "fulfulde": "Haa kasu ɗon woodi kalluɗo go'oto tan... ko'e leɗɗe."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "palace",
+            "x": 70,
+            "y": 34,
+            "s": 0.7
+          },
+          {
+            "k": "child-sit",
+            "x": 40,
+            "c": "#C9822B"
+          },
+          {
+            "k": "calabash",
+            "x": 50
+          },
+          {
+            "k": "gold",
+            "x": 50,
+            "y": 20,
+            "s": 0.4,
+            "a": "a-glow"
+          },
+          {
+            "k": "drum",
+            "x": 20
+          },
+          {
+            "k": "man-up",
+            "x": 86,
+            "c": "#00894A"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Au marché, il ne restait qu'un seul poisson : un silure. La mère l'acheta et prépara la sauce. Devant tout le village rassemblé, les griots jouaient, et l'enfant prit sa dernière bouchée. En cassant le poisson, il sentit quelque chose de dur… C'était l'anneau d'or du chef !",
+        "en": "At the market there was only one fish left: a catfish. The mother bought it and made the sauce. Before the whole assembled village, the griots played, and the boy took his last mouthful. As he broke the fish apart, he felt something hard… It was the chief's golden ring!",
+        "moore": "Zĩ-kãnga bal n da ket sokẽ wã: zĩm-kẽeng. Ma wã ra koos-a lame n maan sãsã. Tẽngã neb fãa sẽn da tigimdẽ wã taoore, b ra wẽnda yɩɩl n kɩt tɩ bi-riblã rɩ a noorã. A sẽn wa n sãam zĩmã, a wʋma bũmb sẽn yaa toog ne-a. Yaa naab sãnem sõorã!",
+        "dioula": "Jigɛ kelen dɔrɔn lo tun be lɔgɔfiyɛ la: jigɛfeeren. A bamuso y'a san ani a ye sumansi dilan. Mɔgɔw bɛɛ tun be lajɛnna dugu kɔnɔ. O kɔ, u ye tulogwerenw dɔ kɛ ani den y'a daa di a ma. Tuma min na a ye jigɛw faran, a y'a faamu ko fɛɛn dɔ tun be yen. O tun ye kuntigi ka sanufeeren ye!",
+        "fulfulde": "Nder fannu ɗon woodi ko'e reedu tan: reedu. Baaba maako soodi ɗum, o waɗi salsa. yeeso yimɓe fuu, ɓe ngaɗi ko'e maɓɓe, nden suka on maɓɓiti habaru maako. Nde o taƴi liɗɗi ɗi, o nani huunde masin... Ɗum woni ɓoyre jaɓnde hooreejo!"
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "palace",
+            "x": 56,
+            "y": 34,
+            "s": 0.8
+          },
+          {
+            "k": "king",
+            "x": 40,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child-up",
+            "x": 52,
+            "c": "#C9822B"
+          },
+          {
+            "k": "woman-up",
+            "x": 20
+          },
+          {
+            "k": "man-up",
+            "x": 80,
+            "c": "#00894A"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Devant le chef, l'enfant posa l'anneau dans sa main tendue. Le chef le regarda longuement, puis le montra à tous : « C'est bien mon anneau. Ton père a dit vrai : si Dieu ne tue pas, le chef ne peut pas tuer. Ton nom est bon. » Tout le village applaudit, et le chef associa le jeune garçon à la direction du village.",
+        "en": "Before the chief, the boy placed the ring in his outstretched hand. The chief looked at it for a long time, then showed it to everyone: “This is indeed my ring. Your father spoke the truth: if God does not kill, the chief cannot kill. Your name is good.” The whole village applauded, and the chief made the young boy one of the village leaders.",
+        "moore": "A sẽn wa n na n kõ a so-pakã, biigã gãda a nugẽ. A gãda a neng n ges-a lame, la b wilg-a neba fãa: \"Yaa sɩd mam nugẽ. Yãmb ba wã goma sɩda. Wẽnnaam sã n ka kʋ, naabã pa tõe n kʋ ye. Yãmb yʋʋr yaa sõma. Tẽngã fãa pẽga, la naabã kɩtame tɩ bi-bɩɩgã lebg tẽn-kãng taoor dãmb a ye.",
+        "dioula": "A y'o kɛ tuma min na a ye masacɛ ka soo kɔnɔ. A y'a filɛ ka mɛn, o kɔ a y'a yira bɛɛ la ko: \"Nin ye ne ka bolokunnaden yɛrɛ lo ye. Aw facɛ ka kuma ye tiɲɛ ye. Ni Ala ma mɔgɔ faga, kuntigi tɛ se k'a faga fana. I tɔgɔ ka ɲi. Dugu mɔgɔw bɛɛ ye teriya kɛ, ani kuntigi y'o kanbeleba sigi dugu ɲamɔgɔ dɔ nɔɔ na.",
+        "fulfulde": "Ɓiɗɗo on waɗi limce nder juuɗe maako yeeso mawɗo. Mawɗo ɗon ndaara ɗum wakkati ɗuɗɗum, nden o holliɗum yimɓe fuu: Ɗum woni ɓuɓɓugo am. Baabiraawo mon wi'i goonga: to Allah maayataa, mawɗo maako waawaa warugo. Innde maaɗa booɗɗum. Yimɓe nder gariiri fuu ɓe ngolla, nden mawɗo gariiri waɗi suka on go'oto ardiiɓe gariiri ndin."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qui avale l'anneau ?",
+        "en": "Who swallows the ring?",
+        "moore": "Ãnd n na n dɩka sõorã?",
+        "dioula": "Jɔn lo be na n'o nɛgɛ ye?",
+        "fulfulde": "Moy nyaami ɓoyre?"
+      },
+      "options": [
+        {
+          "fr": "Un silure",
+          "en": "A catfish",
+          "moore": "Kẽer sẽn yaa zĩm-bilã",
+          "dioula": "Kalaw",
+          "fulfulde": "Ko'e leƴƴi"
+        },
+        {
+          "fr": "Un crocodile",
+          "en": "A crocodile",
+          "moore": "Ko-ko-kẽengã",
+          "dioula": "Dɔgɔtɔrɔ dɔ ye ngɔrɔnan ye.",
+          "fulfulde": "Ko crocodile"
+        },
+        {
+          "fr": "Une poule",
+          "en": "A hen",
+          "moore": "Dĩmbã",
+          "dioula": "Dɔnki",
+          "fulfulde": "Koore"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que prépare la mère pour le dernier repas ?",
+        "en": "What does the mother cook for the last meal?",
+        "moore": "Bõe la ma wã na n segl rɩɩb a sẽn pa rɩtã yĩnga?",
+        "dioula": "A bamuso be mun lo tobi a ka dumuni laban na?",
+        "fulfulde": "Ko woni nyaamdu nde maama'en ɗon cufa ngam nyamndu mum?"
+      },
+      "options": [
+        {
+          "fr": "Du tô avec une sauce au poisson",
+          "en": "Tô with fish sauce",
+          "moore": "Tô ne zĩm sobg",
+          "dioula": "To ni jɛgɛ sumanin ye",
+          "fulfulde": "To e salsa kalluɗum"
+        },
+        {
+          "fr": "Du riz",
+          "en": "Rice",
+          "moore": "Rɩs-kãnga",
+          "dioula": "Risi",
+          "fulfulde": "Rice"
+        },
+        {
+          "fr": "Des galettes",
+          "en": "Cakes",
+          "moore": "Dĩisã",
+          "dioula": "Dɔnkiliw",
+          "fulfulde": "Cakiji"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que fait le chef à la fin ?",
+        "en": "What does the chief do at the end?",
+        "moore": "Bõe la sodaas kãsem-dãmbã maand baasgẽ?",
+        "dioula": "Kuntigi be mun lo kɛ laban na?",
+        "fulfulde": "Ko woni ko ardiiɗo waɗata to cappanɗe?"
+      },
+      "options": [
+        {
+          "fr": "Il honore l'enfant",
+          "en": "He honours the boy",
+          "moore": "A waoogda bi-riblã.",
+          "dioula": "A be kanbele bonya",
+          "fulfulde": "O teddini suka on"
+        },
+        {
+          "fr": "Il le chasse",
+          "en": "He banishes him",
+          "moore": "A kɩtame t'a lebg burkĩna.",
+          "dioula": "A b'a gwɛn ka bɔ jamana na.",
+          "fulfulde": "O ɗon wurtina mo."
+        },
+        {
+          "fr": "Il garde sa colère",
+          "en": "He stays angry",
+          "moore": "A sũur pa yikd ye.",
+          "dioula": "A diminin lo kosɔbɛ.",
+          "fulfulde": "O ɗon ɓeyda masin"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Lyela",
+      "lang": "fr",
+      "def": {
+        "fr": "Peuple gourounsi de la région de Réo (Centre-Ouest) ; leur langue est le lyélé.",
+        "en": "A Gurunsi people of the Réo area (Centre-West); their language is Lyele.",
+        "moore": "Gurunsi neb sẽn be Réo (Zĩ-Wẽngr zĩiga); b goama yaa Lyele.",
+        "dioula": "Gurunsi minw be Réo mara la (Centre-Ouest); u ka kaan ye Lyele ye.",
+        "fulfulde": "Yimɓe Gurunsi nder nokkuure Réo (Centre-West); ɗemngal maɓɓe woni Lyele."
+      }
+    },
+    {
+      "term": "griot",
+      "lang": "fr",
+      "def": {
+        "fr": "Musicien, chanteur et gardien de la mémoire, qui anime les fêtes et raconte l'histoire des familles.",
+        "en": "A musician, singer and keeper of memory who performs at celebrations and recounts family histories.",
+        "moore": "A yɩɩla, a yɩɩl-gʋlsda la a sẽn maand sũ-noog tɩ b tẽegd bũmb nins fãa b sẽn maanã.",
+        "dioula": "Dɔnkililabaga, dɔnkirilabaga ani hakilijagabɔbaga min be to ka dɔnkili la ɲanagwɛw na ani k'a somɔgɔw ka koo lakali.",
+        "fulfulde": "Yimɓe muusiki, mawɗo e mo ɗon seerna dow yiideeji boo ɗon wi'a taarihaaji saare."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « Si Dieu ne le permet pas, le chef ne peut pas tuer », conte en langue lyélé donné par Hubert Bazié à Réo en 1975, traduit par Jean Bassolé, publié sur abcBurkina.net. Réécriture libre.",
+    "en": "Based on “Si Dieu ne le permet pas, le chef ne peut pas tuer”, a tale in the Lyele language told by Hubert Bazié in Réo in 1975, translated by Jean Bassolé, published on abcBurkina.net. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "slug": "la-perdrix-de-l-hyene",
+  "type": "conte",
+  "region": "cascades",
+  "place": "Soubakaniédougou",
+  "coords": [
+    10.85,
+    -4.95
+  ],
+  "people": "Gouin",
+  "language": "cerma",
+  "duration": 4,
+  "age": 6,
+  "featured": false,
+  "cover": 0,
+  "tags": [
+    "prudence",
+    "hyène",
+    "ruse",
+    "vieillesse"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "La perdrix de l'hyène",
+      "subtitle": "Méfie-toi des services qu'on te demande",
+      "summary": "L'hyène Bouki confie une simple perdrix à une vieille femme. Mais le chien de la vieille la mange… et l'hyène commence alors à réclamer, encore et encore, toujours plus.",
+      "moral": "Avant de rendre service à un rusé, réfléchis ; et ne laisse jamais une petite dette grandir sans fin."
+    },
+    "en": {
+      "title": "The Hyena's Partridge",
+      "subtitle": "Beware of the favours you are asked",
+      "summary": "Bouki the hyena leaves a simple partridge with an old woman. But the old woman's dog eats it… and the hyena starts demanding, again and again, more and more.",
+      "moral": "Think before doing a favour for a trickster, and never let a small debt keep growing without end."
+    },
+    "moore": {
+      "title": "A Zĩ-kãnga sẽn yaa wa a Zeova wã",
+      "subtitle": "Gũus-y y mens ne bark nins b sẽn na n kõ yãmbã.",
+      "summary": "A Bouki sẽn yaa bĩngã basda pag a yembr n kõ-a. La pagã zak rɩt-a lame. la a paasa wã sɩngda n baood tɩ b maan bũmb wʋsg n paase.",
+      "moral": "Tags n deng n maan ned sẽn maand zãmb neer, la da bas tɩ zu-loees bilf bɩ a wa paasdẽ."
+    },
+    "dioula": {
+      "title": "O ye \"Hyena ka furaburu\" lo ye.",
+      "subtitle": "Aw ye aw yɛrɛ kɔrɔsi koɲuman minw fɔra aw ye,",
+      "summary": "Bouki, o muso kɔrɔba ye kɔnɔkisɛ dɔ to yen. Nka muso kɔrɔmuso ka wulu y'a domu. ani a be ɲini ka dɔ fara a kan.",
+      "moral": "I ka miiri koɲuman sanni i k'i yɛrɛ di mɔgɔ dɔ ma min be nanbara kɛ. Kana sɔn juru fitininw ka caya fɔɔ abada."
+    },
+    "fulfulde": {
+      "title": "Partridge's Hyena's Partridge",
+      "subtitle": "Onon, ndaara ko ɓe mbi'i on mbaɗata.",
+      "summary": "Bouki hyena ɗon acca goɗɗum e debbo mawɗo. Ammaa doggo debbo mawɗo ɗon nyaama ɗum... nden hyena fuɗɗii ɗaɓɓugo, ko'e e ko'e, ɓeydi ɓeydi.",
+      "moral": "Fuu, ngam a waɗan ko wooɗi to goɗɗo mo ɗon ceede, taa' laatina deedaare ɓeydaaki haa abada."
+    }
+  },
+  "scenes": [
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 20,
+            "y": 26
+          },
+          {
+            "k": "old-woman",
+            "x": 40
+          },
+          {
+            "k": "hyena",
+            "x": 64,
+            "flip": true,
+            "s": 1.2
+          },
+          {
+            "k": "partridge",
+            "x": 52
+          },
+          {
+            "k": "cow",
+            "x": 86,
+            "s": 0.7
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il y a longtemps, une vieille femme qui possédait un grand troupeau vivait près du village de Bouki, l'hyène. Un jour, Bouki lui dit d'une voix aimable : « Bonne vieille, garde-moi cette perdrix, je vais au village voisin et je reviens bientôt. » Sans réfléchir, la vieille accepta.",
+        "en": "Long ago, an old woman who owned a large herd lived near the village of Bouki the hyena. One day Bouki said to her in a friendly voice: “Good old mother, keep this partridge for me, I'm going to the next village and I'll be back soon.” Without thinking, the old woman agreed.",
+        "moore": "Sẽn deng pĩnd wẽndẽ, pag a ye sẽn da tar piis wʋsg n be Bouki tẽn-tẽngã sɛɛgẽ wã ra yaa kãsenga. Daar a ye, Bouki yeela-a ne sõmbo: \"Maam sẽn yaa kãsenga, tall-y gãagã n kõ maam. Mam na n kẽng tẽn-kʋnga sẽn pʋgdã la m na n lebg n wa tao-tao\". La pagã sakame tɩ b ra tags ye.",
+        "dioula": "Wagatijan tɛmɛnin na, muso kɔrɔ dɔ tun be yen min ka sagaw tun ka ca. A tun siginin be Bouki dugu gɛrɛfɛ. Loon dɔ, Bouki y'a fɔ a ye ni kaanɲuman ye ko: \"N bamuso ɲuman, i ka banbaari nin mara ne fɛ. N bena taga dugudennin wɛrɛ la ani n bena segi joona\". Muso kɔrɔcɛ sɔnna o ma.",
+        "fulfulde": "Wakkati ɗuɗɗi, debbo mawɗo jogii bandol ɗuuɗal jooɗii to gariiri Bouki hyenya. Gooto nyalnde Bouki wi'i mo bee sawtu: Maammo mawɗo, hokka yam peeridge ndu, mi yahda to gariiri ɓaawo nden mi waray ɗon. Baaki tammi, debbo mawɗo on jaɓii."
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hut",
+            "x": 20,
+            "y": 26
+          },
+          {
+            "k": "dog",
+            "x": 48,
+            "a": "a-peck"
+          },
+          {
+            "k": "old-woman",
+            "x": 70,
+            "flip": true
+          },
+          {
+            "k": "hyena",
+            "x": 88,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Pendant son absence, le chien de la vieille trouva la perdrix et la mangea. Le soir, l'hyène revint : « Je viens chercher ma perdrix. » « Mon chien l'a mangée », avoua la vieille. « Alors je prends ton chien à la place ! » Et Bouki l'emporta.",
+        "en": "While she was away, the old woman's dog found the partridge and ate it. In the evening the hyena came back: “I've come for my partridge.” “My dog ate it,” the old woman admitted. “Then I'll take your dog instead!” And Bouki carried it off.",
+        "moore": "A sẽn da ket n beẽ wã, pagã zak yãee gãagã la a rɩ-a. Zĩ-sobendã, a yii n waame: \"Mam waa n na n dɩ m gãagã\". Pagã sakame tɩ m zak wã rɩ-a lame. La a Bouki zãaga-a lame.",
+        "dioula": "Tuma min na a tun tɛ yen, muso kɔrɔcɛ ka wulu ye o kɔnɔ ta k'a ɲimi. O kɔ, a y'a fɔ ko: \"Ne nana n ka patiriji ta. N' ka wulu ye o domu\". Muso kɔrɔman y'o fɔ. O kɔ, n bena i ka wulu ta.",
+        "fulfulde": "Nde o ɗon, doggo debbo mawɗo on tawi partridge nden nyaami mo. E jemma hyena wartii: Mi wari ngam partridge am.Nduum nyaami ɗum, debbo mawɗo on wi'i. Nden mi ho'an dogol maaɗa haa o yahu!"
+      }
+    },
+    {
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "old-woman",
+            "x": 36
+          },
+          {
+            "k": "hyena",
+            "x": 58,
+            "flip": true,
+            "s": 1.3
+          },
+          {
+            "k": "cow",
+            "x": 80,
+            "s": 0.8
+          },
+          {
+            "k": "cow",
+            "x": 92,
+            "s": 0.7
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le lendemain, Bouki revint : « Ma perdrix ! » « Mais je t'ai donné mon chien ! » L'hyène montra ses crocs, et la vieille, effrayée, lui donna un bœuf. Le jour suivant, Bouki revint encore, puis encore, et à chaque fois la vieille cédait un bœuf de plus. Le troupeau fondait comme beurre de karité au soleil.",
+        "en": "The next day Bouki came back: “My partridge!” “But I gave you my dog!” The hyena bared her fangs, and the frightened old woman gave her an ox. The following day Bouki came back again, and again, and each time the old woman gave up another ox. The herd melted away like shea butter in the sun.",
+        "moore": "A Bouki waame n yeel-a: \"Mam sẽn da tar bi-beesã, mam kõo yãmb m zakẽ\". La a reega b zoobã tɩ pagã kõ-a la pe-kɩɩm. Vẽkembeoogo, a Bouki leb n waame. La wakat ning fãa, pagã ra kõda bi-pugl a to. B ra yaa wa b sẽn yãgd wĩntoogã.",
+        "dioula": "O dugusagwɛ, Bouki segira ka na: \"Ne ka patiriji!\" \"Nga ne ye n'a di aw ma! Ne y'a di a ma\". O dugusagwɛ, Bouki segira ka na tugu. A tun be to k'a fɔ ko a ye misi wɛrɛ di. O y'a sɔrɔ u tun be to ka taga.",
+        "fulfulde": "Nde ndeen boo, Bouki wari: Partrigge am!Amma mi hokki ma nyawɗo am!Hyenne on udditii ɓesngu maako, nden debbo mawɗo mo'o ɗon hulani o hokki mo baali. Nyalnde nde Bouki wari, e nder wakkati boo, nden ndeye debbo mawɗo hokki go'o. Yimɓe ɓe ɗon ɓilla bana leɗɗe nder naange."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que devrait faire la vieille femme ?",
+          "en": "What should the old woman do?",
+          "moore": "Bõe la pagã segd n maane?",
+          "dioula": "Muso kɔrɔman tun ka kan ka mun lo kɛ do?",
+          "fulfulde": "Ko debbo mawɗo'en waɗi?"
+        },
+        "options": [
+          {
+            "fr": "Continuer à céder",
+            "en": "Keep giving in",
+            "moore": "D kell n sakda d sẽn tõe fãa wã.",
+            "dioula": "I kana a to i ka fanga ka nagasi",
+            "fulfulde": "Wondira hokkugo"
+          },
+          {
+            "fr": "Demander l'aide de plus fort que l'hyène",
+            "en": "Ask for help from someone stronger than the hyena",
+            "moore": "Kẽng-y ned sẽn tar pãng n yɩɩd a hyena wã sõngre.",
+            "dioula": "I ka dɛmɛ ɲini mɔgɔ dɔ fɛ min barika ka bon ni yenin ye.",
+            "fulfulde": "Roɓu goɗɗo mo ɓurɗo hiina wallude"
+          }
+        ],
+        "answer": 1,
+        "reveal": {
+          "fr": "Il était temps de trouver de l'aide…",
+          "en": "It was time to find help…",
+          "moore": "Wakat taame tɩ d bao sõngre.",
+          "dioula": "A tun bɛnnin lo an ka dɛmɛ ɲini.",
+          "fulfulde": "Ɗum wakkati haa ɓe ɗaɓɓita wallude..."
+        }
+      }
+    },
+    {
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 220
+          },
+          {
+            "k": "hyena",
+            "x": 70,
+            "a": "a-gallop",
+            "s": 1
+          },
+          {
+            "k": "lion",
+            "x": 34,
+            "s": 1.1
+          },
+          {
+            "k": "old-woman",
+            "x": 14
+          }
+        ]
+      },
+      "text": {
+        "fr": "Ruinée, la vieille alla raconter son malheur au lion, roi de la brousse. Le lendemain, quand Bouki se présenta pour réclamer sa perdrix, c'est le lion qui l'attendait. « Tu veux ta perdrix ? Viens la chercher ! » L'hyène s'enfuit si vite qu'on ne la revit plus jamais dans le village.",
+        "en": "Ruined, the old woman went to tell her troubles to the lion, king of the bush. The next day, when Bouki came to claim her partridge, it was the lion who was waiting for her. “You want your partridge? Come and get it!” The hyena ran away so fast that she was never seen in the village again.",
+        "moore": "A sẽn wa n sãam a sũurã, pag-kãng kẽngame n tɩ togs gɩgemdã. Vẽkembeoogo, a Bouki sẽn wa n na n tɩ kos a gãagã, gɩgemdã ra gũuda-a lame. Yãmb dat n dɩka y gãagã bɩ? D wa n deeg-a! B zoeeme tao-tao tɩ b pa le yãend-a tẽn-gãongã ye.",
+        "dioula": "Muso kɔrɔman tun be siranna ani a tagara o fɔ jara ye. O dugusagwɛ, Bouki nana a ka patiriji ɲini tuma min na, jara tun b'a kɔnɔna. I b'a fɛ ka i ka patiriji ta wa? Na a ta! O kɔ, u y'a to o muso bolila joona fɔɔ u ma deli k'a ye dugu kɔnɔ tugun.",
+        "fulfulde": "Debbo mawɗo on ɗon maaya, o yahi wi'ugo libaaji maako, laamiiɗo leɗɗe. Nyalnde nde Bouki wari ngam o jaɓɓa partridge maako, ɗum le'o ɗon ɗaɓɓita mo. Oɗon yiɗi ɓanndu mum? Wota ɗaɓɓa ɗum! Hyenna ɗon dilli bee saffugo haa ɓe meeɗa yi'ugo mo nder gariiri."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Comment s'appelle l'hyène dans ce conte ?",
+        "en": "What is the hyena called in this tale?",
+        "moore": "Bõe la b boond hyena wã kibar kãngã pʋgẽ?",
+        "dioula": "O kɔrɔ ko di?",
+        "fulfulde": "Hol ko noddirta hyena nder haala ngol?"
+      },
+      "options": [
+        {
+          "fr": "Bouki",
+          "en": "Bouki",
+          "moore": "A Bouki",
+          "dioula": "Bouki ka koo",
+          "fulfulde": "Bouki"
+        },
+        {
+          "fr": "Soamba",
+          "en": "Soamba",
+          "moore": "Soamba",
+          "dioula": "Soamba ka koo",
+          "fulfulde": "Soamba"
+        },
+        {
+          "fr": "Diandia",
+          "en": "Diandia",
+          "moore": "Dĩndɩya",
+          "dioula": "Diandia ka koo",
+          "fulfulde": "Diandia"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Qui mange la perdrix ?",
+        "en": "Who eats the partridge?",
+        "moore": "Ãnd n dɩt a ko-kãnga?",
+        "dioula": "Jɔn lo be kɔnɔ ta?",
+        "fulfulde": "Mo nyaama ɓooyma?"
+      },
+      "options": [
+        {
+          "fr": "Le chien",
+          "en": "The dog",
+          "moore": "A zakã.",
+          "dioula": "O wulu ye min ye.",
+          "fulfulde": "Dogol ngol"
+        },
+        {
+          "fr": "Le chat",
+          "en": "The cat",
+          "moore": "Kẽerã",
+          "dioula": "O ye furumuso dɔ lo ye.",
+          "fulfulde": "Cuuɗo"
+        },
+        {
+          "fr": "La vieille",
+          "en": "The old woman",
+          "moore": "Pagã sẽn kʋʋl-bã",
+          "dioula": "Muso kɔrɔman nin tun lo.",
+          "fulfulde": "Debbo mawɗo on"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Qui chasse l'hyène à la fin ?",
+        "en": "Who chases the hyena away at the end?",
+        "moore": "Ãnda n na n digd a hyena wã?",
+        "dioula": "Jɔn lo be to ka hyenɛ gwɛn?",
+        "fulfulde": "Moy ɗon wurtina hyenya'en haa timmoode?"
+      },
+      "options": [
+        {
+          "fr": "Le lion",
+          "en": "The lion",
+          "moore": "Yaa gɩgemdã.",
+          "dioula": "Jaraw ka kan k'a ye.",
+          "fulfulde": "Lamu ɗon"
+        },
+        {
+          "fr": "Le lièvre",
+          "en": "The hare",
+          "moore": "Laagã",
+          "dioula": "Dɔnkɔnɔ nin",
+          "fulfulde": "Lamargal"
+        },
+        {
+          "fr": "Le chef",
+          "en": "The chief",
+          "moore": "A sẽn yaa naabã",
+          "dioula": "Kuntigiba",
+          "fulfulde": "Mawɗo"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Bouki",
+      "lang": "fr",
+      "def": {
+        "fr": "Nom donné à l'hyène dans de nombreux contes d'Afrique de l'Ouest ; elle y est souvent gloutonne et peu loyale.",
+        "en": "The name given to the hyena in many West African tales; she is usually greedy and disloyal.",
+        "moore": "A yaa yʋ-kãng b sẽn boond tɩ hiɛnã Afirik Wɛtg tẽnsẽ wã. A yaa wa a zãmbd la a pa sakd nebã ye.",
+        "dioula": "O tɔgɔ be sɔrɔ Afiriki tileben fan fɛ maana caaman kɔnɔ. A ka teli ka kɛ wasabali ye ani a tɛ kantigiya kɛ Jehova ye.",
+        "fulfulde": "Innde nde hinaa e nder kaalaaji Afrik hirnaange ɗuuɗɗi; o ɗon mari ɓernde booɗol."
+      }
+    },
+    {
+      "term": "perdrix",
+      "lang": "fr",
+      "def": {
+        "fr": "Oiseau de la savane qui vit au sol, proche de la pintade.",
+        "en": "A ground-dwelling savannah bird, related to the guinea fowl.",
+        "moore": "Gʋvẽng sẽn be tẽng zug n vɩ, a yaa gʋvẽnga.",
+        "dioula": "A be dugukolo kan, a ni guinée ka ɲɔgɔn ye.",
+        "fulfulde": "Luttugo nder leydi, je ɗon jooɗoto e lesdi, je ɗon haani bee guinea bird."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après « La perdrix sèche de l'hyène », conte gouin raconté par Mme Justine Fayama, publié sur abcBurkina.net. La fin est adaptée pour le jeune public. Réécriture libre.",
+    "en": "Based on “La perdrix sèche de l'hyène”, a Gouin tale told by Mrs Justine Fayama, published on abcBurkina.net. The ending is adapted for young readers. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}
