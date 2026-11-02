@@ -94,7 +94,7 @@
   </div>
 </header>
 
-<p-drawer [visible]="menu()" (visibleChange)="menu.set($event)" position="right" [style]="{ width: 'min(86vw, 340px)' }">
+<p-drawer [visible]="menu()" (visibleChange)="menu.set($event)" position="right" appendTo="body" [modal]="true" [style]="{ width: 'min(86vw, 340px)' }">
   <ng-template #header>
     <app-logo [size]="38" />
   </ng-template>
