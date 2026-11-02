@@ -1,5 +1,7 @@
+import { PagerComponent, paginate } from '../../shared/pager/pager.component';
+import { SkeletonComponent } from '../../shared/skeleton/skeleton.component';
 import { DatePipe } from '@angular/common';
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, effect, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../core/auth.service';
 import { DataService } from '../../core/data.service';
@@ -10,7 +12,7 @@ import { taleText } from '../../shared/tale-card/tale-card.component';
 /** Les femmes et les hommes qui font vivre KIBARE : contributeurs dont une contribution a été acceptée. */
 @Component({
   selector: 'app-contributors',
-  imports: [RouterLink, DatePipe, TranslatePipe],
+  imports: [RouterLink, DatePipe, TranslatePipe, PagerComponent, SkeletonComponent],
   template: `
     <section class="head bogolan">
       <div class="container">
@@ -28,7 +30,7 @@ import { taleText } from '../../shared/tale-card/tale-card.component';
 
     <section class="container body">
       @if (loading()) {
-        <p class="muted">…</p>
+        <app-skeleton kind="cards" [count]="8" />
       } @else if (!list().length) {
         <div class="empty card">
           <i class="fa-solid fa-people-group"></i>
@@ -38,7 +40,7 @@ import { taleText } from '../../shared/tale-card/tale-card.component';
         </div>
       } @else {
         <div class="grid">
-          @for (c of list(); track c.id; let i = $index) {
+          @for (c of pageRows(); track c.id; let i = $index) {
             <article class="person card">
               <div class="p-top">
                 <span class="avatar" [attr.data-i]="i % 4">{{ initials(c.name) }}</span>
@@ -69,6 +71,7 @@ import { taleText } from '../../shared/tale-card/tale-card.component';
             </article>
           }
         </div>
+        <app-pager [total]="list().length" [size]="12" [(page)]="page" />
       }
       <div class="cta card">
         <div>
@@ -87,7 +90,7 @@ import { taleText } from '../../shared/tale-card/tale-card.component';
     .stats span { font-size: 0.85rem; color: #e9d5bd; }
     .body { padding-block: 40px 64px; }
     .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
-    .person { padding: 22px; display: flex; flex-direction: column; gap: 12px; border-top: 4px solid var(--y-ochre); }
+    .person { padding: 22px; display: flex; flex-direction: column; gap: 12px; }
     .p-top { display: flex; gap: 14px; align-items: center; }
     .p-top h2 { font-size: 1.15rem; margin: 0; }
     .avatar { flex: none; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; color: #fff; background: var(--y-red); }
@@ -115,6 +118,9 @@ export class ContributorsPage {
   private i18n = inject(I18nService);
   readonly list = signal<Contributor[]>([]);
   readonly loading = signal(true);
+  readonly page = signal(1);
+  readonly pageRows = computed(() => paginate(this.list(), this.page(), 12));
+
   readonly total = computed(() => this.list().reduce((a, c) => a + c.approved, 0));
   readonly regions = computed(() => new Set(this.list().map((c) => c.region).filter(Boolean)).size);
 

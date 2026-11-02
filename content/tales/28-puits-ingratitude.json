@@ -1,7 +1,7 @@
 {
   "slug": "l-homme-du-puits",
   "type": "conte",
-  "region": "nord",
+  "region": "yaadga",
   "place": "Ouahigouya",
   "coords": [
     13.58,
@@ -36,10 +36,10 @@
       "title": "Ned ning sẽn be bobgo wã ne rũms nins sẽn da pʋʋsd barkã",
       "subtitle": "Rɩtbã pa yĩmdẽ ye",
       "summary": "La kom sã n wa be, ned sẽn da loogd zĩigã fãaga gɩgemde, bõoneg la kibr. la rao sẽn yi roog kʋdemdã pʋgẽ. Ra yiis rao wã ye! Rɩtbã keoogda-a lame. A pa kelgd-m ye.",
-      "moral": "D sẽn pʋʋsd Wẽnnaam barka, pa rẽnd tɩ d get nebã b neng ye. Yaa ne tʋʋm-wẽnsã la d segd n kao ned kam fãa bʋʋdo."
+      "moral": "D sã n nong n pʋʋsd-a barka, d pa segd n bao n bãng a sẽn maand to-to wã ye."
     },
     "dioula": {
-      "title": "Adamaden min tun be kɔlɔn kɔnɔ ani baganw minw tun be Jehova waleɲuman lɔn",
+      "title": "Adamaden min tun be kɔlɔn kɔnɔ ani baganw",
       "subtitle": "Baganw tɛ ɲinɛ u kɔ",
       "summary": "Kɔngɔ wagati la, mɔgɔ dɔ be tɛmɛtɔ ye jara, bɔn, sa... ani cɛ dɔ min bɔra kɔlɔn kɔrɔ dɔ kɔnɔ. Kana cɛɛ sama ka bɔ yen! Baganw b'a lasɔmi. A tɛ mɛnni kɛ.",
       "moral": "An ka kan k'an mɔgɔ bɛɛ kiti a ka kɛwaliw kosɔn."
@@ -48,11 +48,12 @@
       "title": "Yimɓe nder ndiyam e dabbaaji booɗotooɗi",
       "subtitle": "Leɗɗe naa' manndataa",
       "summary": "Nder warugo naange, goɗɗo mo ɗon yahda to laawol o hisni le'o, monkey, koofol... e goɗɗo ƴuuruɗo nder mayre mawɗe.  Taa ƴeew neɗɗo! Leewuji ɗon hokkata mo habaru. O nanaayi.",
-      "moral": "Allah hokkata en mangu ngam o holliiɓe ko'e maɓɓe. Ngam non, eɗen ngaɗa kiita dow kuuɗe maako."
+      "moral": "On njaɓataa ko'e maɓɓe ngam ɓe ngaɗata ko'e mooɗon."
     }
   },
   "scenes": [
     {
+      "id": "l-homme-du-puits-p1",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -82,6 +83,16 @@
             "x": 10,
             "y": 26,
             "c": "bare"
+          },
+          {
+            "k": "lion",
+            "x": 66,
+            "s": 0.8,
+            "flip": true
+          },
+          {
+            "k": "snake",
+            "x": 20
           }
         ]
       },
@@ -94,6 +105,7 @@
       }
     },
     {
+      "id": "l-homme-du-puits-p2",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -137,6 +149,7 @@
       }
     },
     {
+      "id": "l-homme-du-puits-p3",
       "art": {
         "sky": "day",
         "ground": "forest",
@@ -166,6 +179,11 @@
           {
             "k": "calabash",
             "x": 44
+          },
+          {
+            "k": "king",
+            "x": 88,
+            "flip": true
           }
         ]
       },
@@ -173,14 +191,14 @@
         "fr": "Quelques jours plus tard, la faim tenaillait toujours notre homme. Le singe lui jeta des fruits du haut des arbres. Le lion lui apporta de la viande. Les animaux, reconnaissants, l'aidaient chaque jour. Mais l'homme sauvé, lui, était devenu le serviteur du chef, et il était jaloux de son bienfaiteur.",
         "en": "A few days later, the man was still starving. The monkey threw him fruit from the treetops. The lion brought him meat. Grateful, the animals helped him every day. But the man he had saved had become the chief's servant, and he was jealous of his rescuer.",
         "moore": "Daar a wãn poore, kom da ket n yõkda raoã. Bãagrã lob-a-la biis tɩɩs zutẽ. Yaa gɩgemd n wa ne a namsa. A sẽn da mi n pʋʋsd a Zeova barka, rũmsã sõng-a lame daar fãa. La rao ning a sẽn fãagã lebga naabã tʋmtʋmd n maan sũ-kiir ne yẽ.",
-        "dioula": "Loon damanin o kɔ, kɔngɔ tun b'a la. O tuma na, a ye yiriw kunfɛyiriw fili ka kisɛ kɛ. Jara y'a di a ma sogo. A tun be Jehova waleɲuman lɔn sabu a tun b'a fɛ u k'ale dɛmɛ loon o loon. Nka, a tun ye cɛɛ min kisi, ale kɛra kuntigi ka baaraden ye. A ɲangoya tun b'a la k'o tigi lo bɔsi.",
+        "dioula": "Loon damanin o kɔ, kɔngɔ tun b'a la. O tuma na, a ye yiriw kunfɛyiriw fili ka kisɛ kɛ. Jara y'a di a ma sogo. A y'a waleɲuman lɔn sabu u tun b'a dɛmɛ loon o loon. Nka, a tun ye cɛɛ min kisi, ale kɛra kuntigi ka baaraden ye. A ɲangoya tun b'a la k'o tigi lo bɔsi.",
         "fulfulde": "Balɗe goɗɗe ɓaawo maajum, gorko on ɗon maaya. Maaki'en ɗon wurtina mo nyaamdu diga dow leɗɗe. Lewru hokki mo leggal. O yetti, dabbaaji mballi mo nder nyalnde fuu. Ammaa neɗɗo mo o hisni waɗi maccuɗo mawɗo, nden o ɗon yiɗde kisndam maako."
       },
       "choice": {
         "q": {
           "fr": "Qui va se montrer ingrat ?",
           "en": "Who will prove ungrateful?",
-          "moore": "Ãnda n na n yɩ neb sẽn ka mi Wẽnnaam barka?",
+          "moore": "Ãnd n na n wilg t'a pa nand-a ye?",
           "dioula": "Jɔn lo bena kɛ mɔgɔ tɛrɛɲuman ye?",
           "fulfulde": "Moy torraay?"
         },
@@ -218,6 +236,7 @@
       }
     },
     {
+      "id": "l-homme-du-puits-p4",
       "art": {
         "sky": "dusk",
         "ground": "village",
@@ -242,6 +261,11 @@
             "k": "man",
             "x": 18,
             "c": "#F4EFE6"
+          },
+          {
+            "k": "snake",
+            "x": 88,
+            "flip": true
           }
         ]
       },
@@ -254,6 +278,7 @@
       }
     },
     {
+      "id": "l-homme-du-puits-p5",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -282,7 +307,7 @@
           {
             "k": "child-up",
             "x": 56,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "snake",
@@ -294,7 +319,7 @@
         "fr": "Aucun guérisseur ne parvint à sauver l'enfant du chef. Alors le prisonnier proposa son remède, et le garçon guérit. Il raconta toute son histoire, et le chef comprit la vérité. Le menteur fut chassé du village, et le bon promeneur fut honoré. Les anciens disent depuis : « Les bêtes savent ce qu'est la reconnaissance ; les hommes doivent l'apprendre. »",
         "en": "No healer could save the chief's child. Then the prisoner offered his remedy, and the boy recovered. He told his whole story, and the chief understood the truth. The liar was driven from the village, and the good man was honoured. Since then the elders say: “Animals know what gratitude is; people must learn it.”",
         "moore": "Ned sẽn na n sãoogd bãadã pa tõe n fãag a naab biigã ye. Rẽ poore, bi-bɛɛgã kõ-a lame tɩ b maag a yĩng n sãoog biigã. A goma a kibarã fãa, la sodaas kãsem soab wʋmame tɩ yaa sɩda. B digda zãmb soabã n yiis tẽn-kãng pʋgẽ, la b waoogd nin-sõngã. Rẽ tɛka, kãsem dãmbã yeelame tɩ: \"Rĩimã mii bark pʋʋsgo; nebã segd n zãmsame\".",
-        "dioula": "Fangabaga si tɛ se ka kuntigi dencɛ kisi. O kɔ, kasoden y'a ka bana furakɛ ani a kɛnɛyara. A y'a ka koo bɛɛ lakali ani kuntigi ye tiɲɛn faamu. U ye ngalontigɛla gwɛn ka bɔ dugu kɔnɔ, ani u y'a bonya. Kabi o tuma, diinan mɔgɔkɔrɔw b'a fɔ ko: \"Sogow be barika la Ala ye. Mɔgɔw ka ɲi k'o faamu\".",
+        "dioula": "Fangabaga si tɛ se ka kuntigi dencɛ kisi. O kɔ, kasoden y'a ka bana furakɛ ani a kɛnɛyara. A y'a ka koo bɛɛ lakali ani kuntigi ye tiɲɛn faamu. U ye ngalontigɛla gwɛn ka bɔ dugu kɔnɔ, ani u y'a bonya. Kabi o tuma, diinan mɔgɔkɔrɔw b'a fɔ ko: \"Gwɛlɛyaw b'a lɔn fɛɛn min ye waleɲumanlɔn ye.",
         "fulfulde": "Walaa mo ɗon wallina ɓiy mawɗo. Nden maccuɗo on hokki mo yamiroore maako, nden suka on ummi. O wi'i haala maako fuu, nden ardiiɗo on faama goonga. Goonga ɗon ɓe riiwi nder gariiri, nden boo neɗɗo mo boɗɗum ɗon teddina. Gila nden wakkati, mawɓe ɗon mbi'a: Diinaje anndi ko hokkugo ngam marude; yimɓe doole ɓe njanngino ɗum."
       }
     }

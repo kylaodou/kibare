@@ -1,0 +1,346 @@
+{
+  "slug": "ouahigouya-venez-vous-prosterner",
+  "type": "recit",
+  "region": "yaadga",
+  "place": "Ouahigouya",
+  "coords": [
+    13.58,
+    -2.42
+  ],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 5,
+  "age": 8,
+  "featured": false,
+  "cover": 3,
+  "tags": [
+    "royaume",
+    "Yatenga",
+    "histoire",
+    "fondation"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Ouahigouya, « venez vous prosterner »",
+      "subtitle": "Naaba Kango, le roi-lion du Yatenga",
+      "summary": "Après des années d'exil, Naaba Kango reprend le trône du Yatenga et fonde une nouvelle capitale. Son appel aux chefs des alentours donne son nom à la ville.",
+      "moral": "Un pouvoir solide se construit en rassemblant, pas seulement en commandant."
+    },
+    "en": {
+      "title": "Ouahigouya, \"Come and Bow Down\"",
+      "subtitle": "Naaba Kango, the lion-king of Yatenga",
+      "summary": "After years in exile, Naaba Kango regains the throne of Yatenga and founds a new capital. His call to the surrounding chiefs gives the town its name.",
+      "moral": "Lasting power is built by bringing people together, not only by giving orders."
+    },
+    "moore": {
+      "title": "Ouahigouya, \"Wa n wõgemd f taoore\"",
+      "subtitle": "Naaba Kango, Yatenga rĩmã sẽn yaa gɩgemd soaba",
+      "summary": "A Naaba Kango sẽn wa n be yembrã yʋʋm wʋsg poore, a paama Yatenga naamã la a sigla tẽn-paalgã. A sẽn bool a nin-buiidã tɩ b wa moonẽ wã kɩtame t'a yʋʋr boond tẽngã.",
+      "moral": "Sẽn na yɩl n tõog nebã, pa sor-wilgr bal ye."
+    },
+    "dioula": {
+      "title": "Ouahigouya, \"Na ka biri duguma\"",
+      "subtitle": "Naaba Kango, Yatenga ka jara masacɛ",
+      "summary": "Saan caaman kɔnɔ, a tun be jɔnya la. O kɔ, Naaba Kango ye Yatenga ka masaya sɔrɔ tugun ani a ye duguba kura sigi yen. A ye dugu tɔgɔ la u ka kuntigiw kan.",
+      "moral": "Fanga min be to kudayi, o tɛ bɔ mɔgɔ ka cikanw dɔrɔn na."
+    },
+    "fulfulde": {
+      "title": "Ouahigouya, \"Wota to ɓe cujidana\"",
+      "subtitle": "Naaba Kango, laamiiɗo le'o nder Yatenga",
+      "summary": "Caggal duuɓi e nder leydi, Naaba Kango heɓii laamu Yatenga o waɗi laamorgo keso. Ko o noddi ardiiɓe ɓalli ɗon ɗo'o waɗi wuro ndu innde maako.",
+      "moral": "Wato laamu ɓeydi ɗon haɓa ngam hawtuki yimɓe, naa ngam hokki umrooje tan."
+    }
+  },
+  "scenes": [
+    {
+      "id": "ouahigouya-venez-vous-prosterner-p1",
+      "art": {
+        "sky": "dusk",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "rider",
+            "x": 30
+          },
+          {
+            "k": "horse",
+            "x": 46,
+            "s": 0.9
+          },
+          {
+            "k": "baobab",
+            "x": 80,
+            "y": 26,
+            "s": 0.9
+          },
+          {
+            "k": "bird-small",
+            "x": 60,
+            "y": 50
+          }
+        ]
+      },
+      "text": {
+        "fr": "Au XVIIIᵉ siècle, le royaume mossi du Yatenga était déchiré. Le jeune prince Kango, dont le nom signifie « lion », avait dû fuir son pays et vivre longtemps en exil, loin des siens.",
+        "en": "In the 18th century, the Mossi kingdom of Yatenga was torn apart. The young prince Kango, whose name means \"lion\", had been forced to flee and live in exile for a long time, far from his people.",
+        "moore": "Yʋʋm kobs 18 soabã pʋgẽ, a Yatenga soolmã sẽn boond tɩ Mossi soolmã paama sɛb wʋsgo. A Kango sẽn yaa kom-bɩɩga, a yʋʋr sẽn dat n yeel tɩ \"tĩng\" wã kɩtame t'a zoe n kẽng yembdo.",
+        "dioula": "Saan kɛmɛkulu 18nan na, Mozi ka Masaya tun be Yatenga dugu la. A tun ka ɲi ka boli ka taga sigi jɔnya la kabi wagatijan.",
+        "fulfulde": "Nder karnijum 18, laamu Mossi nder Yatenga ɗon jeyaa. Goomu mo Kango, bi'eteeɗo \"Liyon\", ɗon marra haa o wurtina nder lesdi maako."
+      }
+    },
+    {
+      "id": "ouahigouya-venez-vous-prosterner-p2",
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 80,
+            "y": 300
+          },
+          {
+            "k": "rider",
+            "x": 24
+          },
+          {
+            "k": "horse-run",
+            "x": 40,
+            "s": 0.9
+          },
+          {
+            "k": "man-up",
+            "x": 62,
+            "c": "#7C3109"
+          },
+          {
+            "k": "man-up",
+            "x": 74,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "drum",
+            "x": 88
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un jour, Kango revint avec des guerriers fidèles. Il reprit le trône et devint Naaba Kango. Mais régner sur un royaume divisé était plus difficile que gagner une bataille.",
+        "en": "One day Kango returned with loyal warriors. He regained the throne and became Naaba Kango. But ruling a divided kingdom was harder than winning a battle.",
+        "moore": "Daar a ye, Kango waa ne sodaas sẽn tũud-a sɩda. A lebg n lebga Naaba Kango. La yaa toog ne rĩm-dãmb sẽn da pa be taab sʋka tɩ yɩɩd zabr n tõog ye.",
+        "dioula": "Loon dɔ, Kango kɔsegira ni kɛlɛden kantigiw ye. A ye masaya sɔrɔ tugun ani a kɛra Naaba Kango ye. Nka, ka masaya tilantilan dɔ mara, o tun man nɔgɔ.",
+        "fulfulde": "Gooto nyalnde Kango wartii e konuɓe mo ɓe ɗon njaɓɓa. O heɓii laamu e o laati Naaba Kango. Ammaa laamuuji ɗi ɓe ngartiri ɗon ɓurugo jaalorgal nder konu."
+      },
+      "choice": {
+        "q": {
+          "fr": "Comment unir le royaume ?",
+          "en": "How can the kingdom be united?",
+          "moore": "Wãn to la Rĩungã tõe n zĩnd ne taaba?",
+          "dioula": "U be se ka kɛ kelen ye cogo di?",
+          "fulfulde": "Noye laamiiɗo waawata daranaade?"
+        },
+        "options": [
+          {
+            "fr": "Appeler tous les chefs auprès de lui",
+            "en": "Call all the chiefs to him",
+            "moore": "bool kãsem-dãmbã fãa n wa yã.",
+            "dioula": "Aw ye kuntigiw bɛɛ wele a fɛ.",
+            "fulfulde": "Wondira hooreeɓe fuu haa maako."
+          },
+          {
+            "fr": "Rester seul dans son palais",
+            "en": "Stay alone in his palace",
+            "moore": "D pa segd n wa zĩnd a roogẽ ye.",
+            "dioula": "I kelen to a ka masaso kɔnɔ.",
+            "fulfulde": "Taa njogii nder suudu maako."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Naaba Kango choisit un lieu nouveau pour y réunir tout le Yatenga…",
+          "en": "Naaba Kango chose a new place to gather all of Yatenga…",
+          "moore": "Naaba Kango yãka zĩig a to n na n tigim Yatenga nebã fãa.",
+          "dioula": "Naaba Kango ye yɔrɔ kura dɔ sugandi Yatenga ka jama bɛɛ lajɛnko kama.",
+          "fulfulde": "Naaba Kango suɓi nokkuure kesum ngam mooɓtaade Yatenga fuu..."
+        }
+      }
+    },
+    {
+      "id": "ouahigouya-venez-vous-prosterner-p3",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "palace",
+            "x": 54,
+            "y": 34,
+            "s": 0.9
+          },
+          {
+            "k": "king-talk",
+            "x": 34,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "man",
+            "x": 70,
+            "c": "#7C3109"
+          },
+          {
+            "k": "man",
+            "x": 80
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il fit bâtir sa cour en un lieu nouveau et lança à tous les chefs coutumiers : « Ouahigouya ! » — « Venez vous prosterner ! », « venez faire allégeance ». Les chefs vinrent un à un saluer le roi.",
+        "en": "He had his court built in a new place and called out to all the customary chiefs: \"Ouahigouya!\" — \"Come and bow down!\", \"come and pledge allegiance\". One by one the chiefs came to greet the king.",
+        "moore": "A kɩtame tɩ b me a roogã zĩig paalga, la a yeel tẽnga nin-buiidã: \"Ouahigouya!\"  \"Wa n wõgemd f taoore!\", \"wa n pʋlem y kɩs sɩd\". A Zeova sẽn yeel-a t'a na n wa tɩ b maan bũmb ningã, a kɩtame tɩ rĩm-dãmbã fãa paam barka.",
+        "dioula": "A y'a ka luu lɔ yɔrɔ kura dɔ la ani a ye weleweledalaw bɛɛ wele ko: \"Ouahigouya!\"  \"Aw ye na aw kunbiri gwan!\", \"aw ye na kali kantigiya la\". O kɔ, kuntigiw kelen kelen bɛɛ nana masacɛ fo.",
+        "fulfulde": "O waɗi suudu maako nyiɓɓa nder nokkuure kesum, o noddi ardiiɓe mum'en fuu: \"Ouahigouya!\"  \"Wota to ɓe cujidana\", \"wota to ɓe ɗon njaara\". Gooto go'o mawɓe ngari ngam ɓe njaɓɓa laamiiɗo."
+      }
+    },
+    {
+      "id": "ouahigouya-venez-vous-prosterner-p4",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 260
+          },
+          {
+            "k": "palace",
+            "x": 30,
+            "y": 34,
+            "s": 0.7
+          },
+          {
+            "k": "mosque",
+            "x": 62,
+            "y": 34,
+            "s": 0.7
+          },
+          {
+            "k": "woman",
+            "x": 78
+          },
+          {
+            "k": "child",
+            "x": 86
+          },
+          {
+            "k": "hut",
+            "x": 46,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "C'est ainsi que naquit Ouahigouya, vers 1780. Elle est devenue la grande ville du nord du pays. Le roi du Yatenga y siège toujours, et l'on y raconte encore l'histoire du roi-lion.",
+        "en": "That is how Ouahigouya was born, around 1780. It has become the great city of the country's north. The king of Yatenga still sits there, and the story of the lion-king is still told.",
+        "moore": "Woto la a Ouahigouya rog yʋʋmd 1780 wã. Yaa tẽn-kãseng ning sẽn be tẽngã rɩtgẽ wã. Yaa Yatenga rĩmã n ket n zĩ be, la b ket n togsdd gɩgem-rãmbã kibarã.",
+        "dioula": "O cogo la, Ouahigouya wolola saan 1780 fan fɛ. O kɛra jamana saheli fan fɛ duguba ye. Yatenga masacɛ bele siginin be yen. O kɔ, jara ka masa kofɔra.",
+        "fulfulde": "Ɗon non Ouahigouya jibini, nder hitaande 1780. Ɗum laati gariiri mawndu nder lesdi man. Laamiiɗo Yatenga ɗon jooɗi ton, e haala laamiiɗo le'o ɗon haalaa."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Que signifie le nom Kango ?",
+        "en": "What does the name Kango mean?",
+        "moore": "Bõe la b boond tɩ Kango?",
+        "dioula": "Kango tɔgɔ kɔrɔ ye mun ye?",
+        "fulfulde": "Ko inde Kango firti?"
+      },
+      "options": [
+        {
+          "fr": "Lion",
+          "en": "Lion",
+          "moore": "Dĩmbã",
+          "dioula": "Jaraw",
+          "fulfulde": "Lewru"
+        },
+        {
+          "fr": "Étoile",
+          "en": "Star",
+          "moore": "ãdga",
+          "dioula": "Lolow",
+          "fulfulde": "Koode nden"
+        },
+        {
+          "fr": "Rivière",
+          "en": "River",
+          "moore": "Ko-kãnga",
+          "dioula": "Jiiba",
+          "fulfulde": "Fuuɗol"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que veut dire Ouahigouya ?",
+        "en": "What does Ouahigouya mean?",
+        "moore": "Bõe la Ouahigouya rat n yeel?",
+        "dioula": "Ouahigouya kɔrɔ ko di?",
+        "fulfulde": "Ko Ouahigouya yiɗi wi'ugo?"
+      },
+      "options": [
+        {
+          "fr": "Venez vous prosterner",
+          "en": "Come and bow down",
+          "moore": "Wa n wõgemd f taoore.",
+          "dioula": "Na i kunbiri gwan",
+          "fulfulde": "Wota, mawnina hoore ma"
+        },
+        {
+          "fr": "La ville du marché",
+          "en": "The market town",
+          "moore": "Tẽnga sẽn yaa arzɛkã pʋgẽ",
+          "dioula": "Dugu min be feere, o dugu lo ye",
+          "fulfulde": "Duule marndal"
+        },
+        {
+          "fr": "Le grand arbre",
+          "en": "The great tree",
+          "moore": "Gʋlsgã sẽn yaa kãsengã",
+          "dioula": "Yiriba nin",
+          "fulfulde": "Ɗuum leggal mawngal"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "allégeance",
+      "lang": "fr",
+      "def": {
+        "fr": "Promesse de fidélité et d'obéissance faite à un chef.",
+        "en": "A promise of loyalty and obedience made to a ruler.",
+        "moore": "Yaa pʋlemd sẽn wilgd tɩ ned na n yɩɩ sɩd ne a zu-soaba.",
+        "dioula": "A tun y'a daa di ko a bena kantigiya kɛ gofɛrɛnɛman dɔ ye ani k'o tigi bato.",
+        "fulfulde": "Ko haɓɓugo gooduɗo laamu ngam o ɗowtana mo."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Tradition rapportée par Naaba Kiiba, roi du Yatenga (Burkina24, « Ici au Faso »), Sidwaya et l'article Wikipédia « Naaba Kango ». Fondation vers 1780 selon les sources. Mise en récit libre.",
+    "en": "Tradition reported by Naaba Kiiba, king of Yatenga (Burkina24, \"Ici au Faso\"), Sidwaya and the Wikipedia article \"Naaba Kango\". Founded around 1780 according to the sources. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

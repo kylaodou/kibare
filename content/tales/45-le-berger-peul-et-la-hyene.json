@@ -1,0 +1,322 @@
+{
+  "slug": "le-berger-peul-et-la-hyene",
+  "type": "conte",
+  "region": "soum",
+  "place": "Djibo",
+  "coords": [
+    14.1,
+    -1.63
+  ],
+  "people": "Peuls",
+  "language": "fulfulde",
+  "duration": 4,
+  "age": 5,
+  "featured": false,
+  "cover": 2,
+  "tags": [
+    "animaux",
+    "ruse",
+    "troupeau",
+    "vigilance"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le berger peul et la hyène",
+      "subtitle": "La flûte de la nuit",
+      "summary": "Chaque nuit, une hyène rôde autour du troupeau du jeune Hamadou. Trop petit pour se battre, il trouve une autre façon de protéger ses vaches.",
+      "moral": "L'intelligence et la vigilance protègent mieux que la force."
+    },
+    "en": {
+      "title": "The Fulani Herder and the Hyena",
+      "subtitle": "The night flute",
+      "summary": "Every night a hyena prowls around young Hamadou's herd. Too small to fight, he finds another way to protect his cows.",
+      "moral": "Intelligence and vigilance protect better than strength."
+    },
+    "moore": {
+      "title": "Fulani pe-kɩɩm ne a hyena wã",
+      "subtitle": "Zĩ-zõnd sẽn yaa yʋngo",
+      "summary": "Zĩ-bees n gũuda Hamadou ra-kãnga. A yaa yãaga n na n zab ne a kamba, la a baooda sor a to sẽn tõe n kogl a rũngã.",
+      "moral": "Sẽn tar-b yam la gũusgu kogend-d lame n yɩɩd pãng."
+    },
+    "dioula": {
+      "title": "Fulani sagadɛndɛbaga ni ɲamaɲamanw",
+      "subtitle": "Sufɛ fɔli",
+      "summary": "Suu o suu, hyenɛ dɔ be yaala Hamadu ka sagakulu gɛrɛfɛ. A tun ka dɔgɔ kojugu walisa a kana kɛlɛ kɛ. O kama, a ye sira wɛrɛ ɲini k'a ka misiw tanga.",
+      "moral": "Hakilitigiya ni kɔlɔsili be mɔgɔ latanga ka tɛmɛ fanga kan."
+    },
+    "fulfulde": {
+      "title": "Fulani'en Foojo e Hyena",
+      "subtitle": "Fuujo jemmaaru",
+      "summary": "Nyalnde fuu, hayna ɗon ɓooyli haa e nder baali Hamadou. O ɓurdi haɓugo, o heɓii laawol feere ngam hisna dawaaji maako.",
+      "moral": "Hakkillo e hakkillo ɗon ɗowtana ɓurugo semmbe."
+    }
+  },
+  "scenes": [
+    {
+      "id": "le-berger-peul-et-la-hyene-p1",
+      "art": {
+        "sky": "dusk",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "shepherd",
+            "x": 30
+          },
+          {
+            "k": "cow",
+            "x": 52
+          },
+          {
+            "k": "cow",
+            "x": 66,
+            "s": 0.9
+          },
+          {
+            "k": "acacia",
+            "x": 86,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Au Djelgodji, autour de Djibo, le petit Hamadou gardait seul les vaches de son père pendant la saison sèche. Le soir, il les rassemblait près d'un grand acacia.",
+        "en": "In Djelgodji, around Djibo, little Hamadou looked after his father's cows alone during the dry season. In the evening he gathered them near a great acacia.",
+        "moore": "Djelgodji, sẽn be Djibo soolmẽ wã, a Hamadou ra geta a ba wã na-kɩɩmb yell ne yẽ bal. A tigma bãmb yʋngo, a sẽn be akasi tɩɩgẽ.",
+        "dioula": "Djelgodji dugu gɛrɛfɛ, Jamadu tun be to ka a facɛ ka misiw kɔrɔsi. O kɔ, wulada fɛ, a ka o lajɛn akasiyiriw dɔ kɔrɔ.",
+        "fulfulde": "Nder Djelgodji, nder djibo, Hamadou ɓiijo ɗon cembiɗina baali baaba maako bee hoore muuɗum wakkati sahaa hujja. Nde nyalnde waɗi, o mooɓti ɓe to woore mawnde."
+      }
+    },
+    {
+      "id": "le-berger-peul-et-la-hyene-p2",
+      "art": {
+        "sky": "night",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "hyena",
+            "x": 70
+          },
+          {
+            "k": "cow",
+            "x": 46
+          },
+          {
+            "k": "shepherd",
+            "x": 24
+          }
+        ]
+      },
+      "text": {
+        "fr": "Une nuit, des yeux brillèrent dans l'obscurité : la hyène ! Elle tournait autour du troupeau, cherchant le veau le plus faible. Hamadou n'avait qu'un bâton et une petite flûte.",
+        "en": "One night, eyes gleamed in the dark: the hyena! It circled the herd, looking for the weakest calf. Hamadou had only a stick and a small flute.",
+        "moore": "Daar a ye yʋngo, b ra yãgdame tɩ yaa zũndã. A ra gũuda bi-pugl nins sẽn yaa pãn-komsem dãmbã. A Hamadou ra tara tãmb la fʋnd bilf bal.",
+        "dioula": "Loon dɔ sufɛ, u tun be filɛli kɛra dibi la. U ye ngwanɛ ye! A tun be to ka sagakuru lamini, a tun b'a fɛ k'o misiden barikamanw ye. Hamadou tun be ni bere ani flɛnfitini dɔrɔn lo ye.",
+        "fulfulde": "Nder jemma go'o, gite maɓɓiti nder nyiwre: hyena! O ɗon yaha nder ɓandu, o ɗaɓɓitoo toɓere ɓurɗe laaɓa. Hamadou woodi go'o e feeroore."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que peut faire Hamadou ?",
+          "en": "What can Hamadou do?",
+          "moore": "Bõe la a Hamadou tõe n maan?",
+          "dioula": "Hamadu be se ka mun lo kɛ?",
+          "fulfulde": "Ko Hamadou waawi waɗugo?"
+        },
+        "options": [
+          {
+            "fr": "Utiliser sa flûte",
+            "en": "Use his flute",
+            "moore": "Zãms-y a fluutã.",
+            "dioula": "A ka flɛnkan fɔ.",
+            "fulfulde": "Hokka ko o huutoroo"
+          },
+          {
+            "fr": "Se battre avec la hyène",
+            "en": "Fight the hyena",
+            "moore": "Kẽng-y ne y zoobã.",
+            "dioula": "I ka kan k'i yɛrɛ tanga o ma.",
+            "fulfulde": "haɓana bee hyena"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Hamadou eut une idée…",
+          "en": "Hamadou had an idea…",
+          "moore": "A Hamadou ra tara yam a ye.",
+          "dioula": "Hamadou ye miiriya dɔ sɔrɔ...",
+          "fulfulde": "Hamadou woodi miijo..."
+        }
+      }
+    },
+    {
+      "id": "le-berger-peul-et-la-hyene-p3",
+      "art": {
+        "sky": "night",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "shepherd",
+            "x": 40
+          },
+          {
+            "k": "fire",
+            "x": 56
+          },
+          {
+            "k": "cow",
+            "x": 70
+          },
+          {
+            "k": "hyena",
+            "x": 90,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il alluma un feu et joua de la flûte toute la nuit, en changeant de place sans cesse. La hyène crut qu'une foule de bergers veillaient autour du troupeau. Elle n'osa pas approcher.",
+        "en": "He lit a fire and played the flute all night, constantly changing places. The hyena thought a crowd of herders was watching over the herd. It didn't dare come near.",
+        "moore": "A yõoga bugum la a ra wẽnda fluut yʋngã fãa, n da pa tol n basdẽ ye. A ra tagsdame tɩ b geta a nin-buiidã. A pa tõog n kolg ye.",
+        "dioula": "A tun be tasuma mana ani ka flɛnsipi fɔ suu bɛɛ. O kɔ, a y'a miiri ko sagadɛndɛbaga caaman be u janto u la. A ma sɔn ka gwɛrɛ.",
+        "fulfulde": "O ɗon yi'a yiite e o ɗon fahin bee fiila, haa o ɗon tuuba nokkuuje. Hyenna on ɗon miijo yimɓe ɗuuɗɓe ɓe laato'en ɗon ndaara kuuje. O ɓeydi ɓaduki."
+      }
+    },
+    {
+      "id": "le-berger-peul-et-la-hyene-p4",
+      "art": {
+        "sky": "dawn",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 240
+          },
+          {
+            "k": "shepherd",
+            "x": 30
+          },
+          {
+            "k": "cow",
+            "x": 52
+          },
+          {
+            "k": "cow",
+            "x": 64,
+            "s": 0.9
+          },
+          {
+            "k": "elder",
+            "x": 82
+          }
+        ]
+      },
+      "text": {
+        "fr": "Au matin, toutes les vaches étaient là. Son père le félicita : « Tu n'as pas la force d'un homme, mais tu en as la sagesse. » Depuis, au Djelgodji, les jeunes bergers apprennent la flûte en même temps que le troupeau.",
+        "en": "In the morning all the cows were there. His father congratulated him: \"You don't have a man's strength, but you have his wisdom.\" Since then, in Djelgodji, young herders learn the flute along with the herd.",
+        "moore": "Vẽng sã n wa vẽege, na-kɩɩmbã fãa ra bee be. A ba wã pẽga a biigã woto: \"Fo ka tar pãng wa ninsaal ye, la f tara yam\". Rẽ tɛka, Djelgodji tẽngã pʋgẽ, kom-bɩɩs zãmsda piisã ne b rũngã.",
+        "dioula": "Sɔgɔma joona, misiw bɛɛ tun be yen. A facɛ y'a fo ko: \"I tɛ ni adamaden ka fanga ye, nka a ka hakilitigiya b'i fɛ\". Kabi o tuma na, Djelgodji dugu la, sagadɛndɛbaga kanbelew ni sunguruw be fɔli degi u ka sagaw n'u ka baw fɛ.",
+        "fulfulde": "Nde subaka, sappooji fuu ɗon. Baaba maako boo hokki mo barkadi, \"A walaa semmbe neɗɗo, ammaa a woodi hikma maako\". Daga ɗon wakkati maajum, nder Djelgodji, leɗɗe ladde janngina bee kuuje."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Comment Hamadou a-t-il éloigné la hyène ?",
+        "en": "How did Hamadou keep the hyena away?",
+        "moore": "Wãn to la a Hamadou maan n zãag ne hyena wã?",
+        "dioula": "Hamadou ye o kɔnɔkisɛ bɔ a la cogo di?",
+        "fulfulde": "No Hamadou waɗi ngam hokki hyena'en yaasi?"
+      },
+      "options": [
+        {
+          "fr": "Avec du feu et sa flûte",
+          "en": "With fire and his flute",
+          "moore": "Ne bugum la a piisã",
+          "dioula": "A ka tasuma ni a ka fiyɛkan fɛ.",
+          "fulfulde": "E yiite e fiilo maako"
+        },
+        {
+          "fr": "Avec un fusil",
+          "en": "With a gun",
+          "moore": "Ne zab-teedã.",
+          "dioula": "Ni marifa ye a bolo",
+          "fulfulde": "E nafoore"
+        },
+        {
+          "fr": "En criant",
+          "en": "By shouting",
+          "moore": "Ne koglg sẽn yaa sõma wã",
+          "dioula": "N'an be pɛrɛnna",
+          "fulfulde": "Ngam ɓe ɗon mbi'a"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que gardait Hamadou ?",
+        "en": "What was Hamadou looking after?",
+        "moore": "Bõe la a Hamadou ra gũuda?",
+        "dioula": "Hamadu tun be mun lo kɔrɔsi?",
+        "fulfulde": "Ko Hamadou ɗon ɗaɓɓita?"
+      },
+      "options": [
+        {
+          "fr": "Les vaches de son père",
+          "en": "His father's cows",
+          "moore": "A ba wã na-kɩɩmbã.",
+          "dioula": "A facɛ ka misiw.",
+          "fulfulde": "Koomoy baaba maako"
+        },
+        {
+          "fr": "Des chèvres",
+          "en": "Goats",
+          "moore": "Ko-kẽengã",
+          "dioula": "Gɛwɔnw",
+          "fulfulde": "Lammaji"
+        },
+        {
+          "fr": "Un champ",
+          "en": "A field",
+          "moore": "Zĩis sẽn be zĩig pʋgẽ",
+          "dioula": "Yɔrɔ dɔ la",
+          "fulfulde": "Firo nder fannu"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Djelgodji",
+      "lang": "fr",
+      "def": {
+        "fr": "Pays peul autour de Djibo ; c'est aussi le nom de la province depuis 2025.",
+        "en": "Fulani country around Djibo; since 2025 it is also the name of the province.",
+        "moore": "Yaa Fulayi tẽnga sẽn be Djibo; yʋʋmd 2025 tɛka, yaa tẽn-kãng yʋʋr me.",
+        "dioula": "Fulani jamana Djibo lamini na; kabi saan 2025 la, o ye mara tɔgɔ fana ye.",
+        "fulfulde": "Fulani leydi ha Djibo; gila 2025 ɗum woni innde laamorgo."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte pastoral peul (le jeune berger et la hyène), raconté sous de nombreuses formes au Sahel. Version écrite pour KIBARE, située au Djelgodji.",
+    "en": "A Fulani pastoral tale (the young herder and the hyena), told in many forms across the Sahel. Version written for KIBARE, set in Djelgodji."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

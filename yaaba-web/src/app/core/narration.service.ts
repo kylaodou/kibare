@@ -39,7 +39,8 @@ export class NarrationService {
   }
 
   static sentences(text: string): string[] {
-    return (text.match(/[^.!?…»]+[.!?…»]+["»”]?\s*|[^.!?…»]+$/g) ?? [text]).map((s) => s.trim()).filter(Boolean);
+    // le guillemet fermant, même précédé d'une espace (« … ! »), reste attaché à sa phrase
+    return (text.match(/[^.!?…]+[.!?…]+(?:\s*["»”])*\s*|[^.!?…]+$/g) ?? [text]).map((s) => s.trim()).filter(Boolean);
   }
 
   speak(sentences: string[], lang: string, from = 0, onDone?: () => void) {

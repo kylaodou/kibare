@@ -1,7 +1,7 @@
 {
   "slug": "pourquoi-le-ciel-est-haut",
   "type": "conte",
-  "region": "plateau-central",
+  "region": "oubri",
   "place": "Ziniaré",
   "coords": [
     12.58,
@@ -35,7 +35,7 @@
     "moore": {
       "title": "Bõe yĩng tɩ saasẽ yɩ zãadg woto?",
       "subtitle": "Sɩngrã kibar",
-      "summary": "Pipi, yĩngr da yaa wa sẽn pa ta zĩigã tɩ fo tõe n sɩɩs-a ne f nugẽ. La pʋg-paalbã sẽn da namsd a Zezi daar fãa wã poore, b ra pa le tar sũ-mare ye.",
+      "summary": "Pipi, yĩngr da yaa wa sẽn pa ta zĩigã tɩ fo tõe n sɩɩs-a ne f nugẽ. La pʋg-paalbã sẽn da namsd-a wã poore, a pa le tar sũ-noog ye.",
       "moral": "D sã n pa tar sũ-mar la d sẽn pa maand gũusgu, d tõe n basa paoongã."
     },
     "dioula": {
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "pourquoi-le-ciel-est-haut-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -108,6 +109,7 @@
       }
     },
     {
+      "id": "pourquoi-le-ciel-est-haut-p2",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -151,6 +153,7 @@
       }
     },
     {
+      "id": "pourquoi-le-ciel-est-haut-p3",
       "art": {
         "sky": "dusk",
         "ground": "village",
@@ -227,6 +230,7 @@
       }
     },
     {
+      "id": "pourquoi-le-ciel-est-haut-p4",
       "art": {
         "sky": "night",
         "ground": "savanna",
@@ -265,6 +269,7 @@
       }
     },
     {
+      "id": "pourquoi-le-ciel-est-haut-p5",
       "art": {
         "sky": "night",
         "ground": "village",
@@ -297,7 +302,7 @@
             "k": "child-sit",
             "x": 64,
             "flip": true,
-            "c": "#00894A"
+            "c": "#C9822B"
           }
         ]
       },

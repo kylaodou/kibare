@@ -153,8 +153,15 @@
 
 .grid {
   display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+}
+
+/* 10 contes par page : 2 rangées de 5 sur grand écran */
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .empty {

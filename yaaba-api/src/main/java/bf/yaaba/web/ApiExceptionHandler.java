@@ -49,6 +49,11 @@ public class ApiExceptionHandler {
         return error(HttpStatus.BAD_REQUEST, msg);
     }
 
+    @ExceptionHandler(bf.yaaba.service.MailService.MailDeliveryException.class)
+    public ResponseEntity<ErrorView> mail(bf.yaaba.service.MailService.MailDeliveryException e) {
+        return error(HttpStatus.SERVICE_UNAVAILABLE, e.getMessage());
+    }
+
     @ExceptionHandler(MaxUploadSizeExceededException.class)
     ResponseEntity<ErrorView> tooLarge() {
         return error(HttpStatus.PAYLOAD_TOO_LARGE, "Fichier trop volumineux (30 Mo maximum)");

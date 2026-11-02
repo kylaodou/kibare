@@ -18,20 +18,6 @@
           {{ 'home.cta.listen' | t }}
         </a>
       </div>
-      <dl class="stats">
-        <div>
-          <dt>{{ data.tales().length }}</dt>
-          <dd>{{ 'home.stats.tales' | t }}</dd>
-        </div>
-        <div>
-          <dt>{{ data.regions().length }}</dt>
-          <dd>{{ 'home.stats.regions' | t }}</dd>
-        </div>
-        <div>
-          <dt>{{ languageCount() }}</dt>
-          <dd>{{ 'home.stats.languages' | t }}</dd>
-        </div>
-      </dl>
     </div>
 
     <div class="hero-art reveal" style="animation-delay: 120ms">
@@ -95,7 +81,7 @@
     </div>
     <ol class="steps">
       @for (s of steps; track s.title; let i = $index) {
-        <li class="step">
+        <li class="card step">
           <span class="step-ico {{ s.color }}"><i class="fa-solid {{ s.icon }}"></i></span>
           <span class="step-n">0{{ i + 1 }}</span>
           <h3>{{ s.title | t }}</h3>
@@ -119,11 +105,15 @@
         <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>
-    <div class="tales-grid">
-      @for (t of featured(); track t.slug) {
-        <app-tale-card [tale]="t" />
-      }
-    </div>
+    @if (data.ready()) {
+      <div class="tales-grid">
+        @for (t of featured(); track t.slug) {
+          <app-tale-card [tale]="t" />
+        }
+      </div>
+    } @else {
+      <app-skeleton kind="cards" [count]="10" />
+    }
   </div>
 </section>
 
@@ -139,13 +129,26 @@
         <li><i class="fa-solid fa-layer-group"></i> {{ 'home.map.f2' | t }}</li>
         <li><i class="fa-solid fa-filter"></i> {{ 'home.map.f3' | t }}</li>
       </ul>
-      <a routerLink="/carte" class="btn btn-green">
+      <a routerLink="/carte" [queryParams]="{ mode: mapView() }" class="btn">
         <i class="fa-solid fa-earth-africa"></i>
         {{ 'home.map.cta' | t }}
       </a>
     </div>
+    <!-- la vraie carte de la plateforme, en 2D ou en 3D -->
     <div class="map-box">
-      <app-mini-map [dots]="dots()" [interactive]="true" [showLabels]="true" (regionClick)="regionClick($event)" />
+      <div class="map-seg" role="group" [attr.aria-label]="'map.mode' | t">
+        <button type="button" [class.on]="mapView() === '2d'" (click)="mapView.set('2d')"><i class="fa-solid fa-map"></i> 2D</button>
+        <button type="button" [class.on]="mapView() === '3d'" (click)="mapView.set('3d')"><i class="fa-solid fa-cube"></i> 3D</button>
+      </div>
+      @if (mapView() === '2d') {
+        <app-map2d [tales]="data.tales()" (regionSelect)="regionClick($event)" (taleSelect)="openTale($event)" />
+      } @else {
+        @defer (on viewport) {
+          <app-map3d [tales]="data.tales()" (regionSelect)="regionClick($event)" (taleSelect)="openTale($event)" />
+        } @placeholder {
+          <div class="skeleton map-skel"></div>
+        }
+      }
       <span class="map-hint"><i class="fa-solid fa-hand-pointer"></i> {{ 'home.map.hint' | t }}</span>
     </div>
   </div>
@@ -169,6 +172,24 @@
       }
     </div>
   </div>
+</section>
+
+<!-- ============ CHIFFRES (comptent à l'arrivée à l'écran) ============ -->
+<section class="section numbers" #numbers>
+  <dl class="container stats">
+    <div>
+      <dt>{{ shown().tales }}</dt>
+      <dd>{{ 'home.stats.tales' | t }}</dd>
+    </div>
+    <div>
+      <dt>{{ shown().regions }}</dt>
+      <dd>{{ 'home.stats.regions' | t }}</dd>
+    </div>
+    <div>
+      <dt>{{ shown().languages }}</dt>
+      <dd>{{ 'home.stats.languages' | t }}</dd>
+    </div>
+  </dl>
 </section>
 
 <!-- ============ CONTRIBUER ============ -->

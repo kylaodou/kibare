@@ -1,0 +1,354 @@
+{
+  "slug": "sya-la-vendeuse-de-dolo",
+  "type": "legende",
+  "region": "guiriko",
+  "place": "Bobo-Dioulasso",
+  "coords": [
+    11.18,
+    -4.3
+  ],
+  "people": "Bobo",
+  "language": "dioula",
+  "duration": 5,
+  "age": 7,
+  "featured": true,
+  "cover": 2,
+  "tags": [
+    "fondation",
+    "générosité",
+    "ville",
+    "hospitalité"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Sya, la vendeuse de dolo",
+      "subtitle": "Aux origines de Bobo-Dioulasso",
+      "summary": "Au bord du Houet, une jeune femme accueille tous les voyageurs avec la même bonté. Son nom deviendra celui de la ville : Sya, « la paix ».",
+      "moral": "Là où l'on accueille l'étranger avec bonté, la paix finit par s'installer."
+    },
+    "en": {
+      "title": "Sya, the Dolo Seller",
+      "subtitle": "The origins of Bobo-Dioulasso",
+      "summary": "On the banks of the Houet, a young woman welcomes every traveller with the same kindness. Her name will become the town's: Sya, \"peace\".",
+      "moral": "Where strangers are welcomed with kindness, peace eventually settles."
+    },
+    "moore": {
+      "title": "Sya, Dolo raaba.",
+      "subtitle": "Bobo-Dioulasso sẽn yi zĩig ningã",
+      "summary": "A Houet kʋɩlgã sɛɛgẽ, bi-pugl n wa reegd ned ning fãa sẽn wat be wã ne nonglem. A yʋʋr na n lebga tẽn-kãng yʋʋr: Sya, sẽn dat n yeel tɩ laafɩ.",
+      "moral": "Neb sã n deegd neb nins b sẽn pa mi wã ne nonglem, laafɩ na n zĩnda be."
+    },
+    "dioula": {
+      "title": "Sya, Dolo feerebaga.",
+      "subtitle": "Bobo-Dioulasso ka koo daminɛcogo",
+      "summary": "Houet baji daa la, sunguru dɔ be lonanw bɛɛ ladon ni ɲumanya ye. A tɔgɔ bena kɛ dugu ta ye: Sya, o kɔrɔ ko \"hɛɛrɛ\".",
+      "moral": "Ni lonanw sɔnna ka na, hɛɛrɛ be kɛ yen."
+    },
+    "fulfulde": {
+      "title": "Sya, jaaynde Dolo",
+      "subtitle": "Fedde Bobo-Dioulasso",
+      "summary": "Nder maayo Houet, debbo mo o ɗon jaɓo yimɓe fuu e belɗum weltaare. Innde maako laato innde gariiri: Sya, \"laamu\".",
+      "moral": "To yimɓe ɓe njiɗɗaa njaɓɓoto e belɗum, jam ɓaawo ɗon timmi."
+    }
+  },
+  "scenes": [
+    {
+      "id": "sya-la-vendeuse-de-dolo-p1",
+      "art": {
+        "sky": "day",
+        "ground": "river",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "woman",
+            "x": 36,
+            "c": "#E69135"
+          },
+          {
+            "k": "jar",
+            "x": 46
+          },
+          {
+            "k": "calabash",
+            "x": 52
+          },
+          {
+            "k": "palm",
+            "x": 14,
+            "y": 30
+          },
+          {
+            "k": "hut",
+            "x": 74,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il y a très longtemps, entre les rivières Houet et Sanyon, une jeune femme nommée Sya vendait du dolo, la bière de mil. Sa case était au bord du chemin, et tout voyageur pouvait s'y reposer.",
+        "en": "A very long time ago, between the Houet and Sanyon rivers, a young woman named Sya sold dolo, millet beer. Her hut stood by the path, and every traveller could rest there.",
+        "moore": "Yʋʋm wʋsg sẽn looge, Houet ne Sanyon kʋɩlgã sʋka, bi-bɩɩg a ye yʋʋr sẽn boond t'a Sya ra koosda dolo, miir piis. A gãagã ra bee sorã noore, tɩ ned ning fãa sẽn da wat be wã tõe n vʋʋse.",
+        "dioula": "Wagatijan tɛmɛnin na, Houet ani Sanyon baji cɛmancɛ la, sunguru dɔ tɔgɔ ko Sya. A tun be dolo feere. A ka boon tun be sira gɛrɛfɛ ani a tun be se k'a to mɔgɔ si tɛ lafiɲɛ.",
+        "fulfulde": "Haa wakkati sa'i, hakkunde maayo Houet e Sanyon, debbo mo biyeteeɗo Sya jaayndi dolo, beer millet. Wuro maako ɗon dari dow laawol, nden koomoy marɗo nder gariiri fuu waawi hoccugo ton."
+      }
+    },
+    {
+      "id": "sya-la-vendeuse-de-dolo-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "village",
+        "items": [
+          {
+            "k": "man",
+            "x": 26,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "woman-talk",
+            "x": 44,
+            "c": "#E69135"
+          },
+          {
+            "k": "calabash",
+            "x": 52
+          },
+          {
+            "k": "man-talk",
+            "x": 64,
+            "flip": true
+          },
+          {
+            "k": "hut",
+            "x": 82,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Chasseurs, marchands, bergers : Sya les accueillait tous, riches ou pauvres. Un soir, un voyageur sans un sou lui demanda à boire. Les autres se moquèrent de lui.",
+        "en": "Hunters, traders, herders: Sya welcomed them all, rich or poor. One evening a penniless traveller asked her for a drink. The others laughed at him.",
+        "moore": "B sẽn da wa n baood b mensã, yaa ra-bãmba la kom-bɩɩsã. Daar a ye yʋngo, ra-kãng sẽn da yaa n kẽnd zĩigã ned n pa tar ligdi n kos-a rãam. Neb a taabã ra yãgd-a lame.",
+        "dioula": "Minw tun be ɲini ka taga jagokɛlaw fɛ, jagolaw ani sagadɛndɛbagaw fɛ: Sya ye u bɛɛ ladon, nafolotigiw wo, fantanw wo. Loon dɔ wulafɛ, cɛɛ dɔ ye n' weele ka na minni kɛ. Mɔgɔ tɔw yɛlɛla a ma.",
+        "fulfulde": "Mawɓe, mawɓe, nyaamooɓe: Sya jaɓii ɓe fuu, marɗo koo talaka. Gooto jemma goɗɗo mo yahuɗo nder gariiri wi'i o yiɗi ndiyam. Yimɓe woɓɓe ɓe kawti mo."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va faire Sya ?",
+          "en": "What will Sya do?",
+          "moore": "Bõe la Sya na n maane?",
+          "dioula": "Sya bena mun lo kɛ?",
+          "fulfulde": "Ko Sya waɗata?"
+        },
+        "options": [
+          {
+            "fr": "Lui offrir à boire",
+            "en": "Offer him a drink",
+            "moore": "Kẽng-y n kõ-a rãam a yembre.",
+            "dioula": "Aw k'a di a ma ko a ka dɔrɔ min.",
+            "fulfulde": "Hokka mo ndiyam njarum."
+          },
+          {
+            "fr": "Le renvoyer",
+            "en": "Send him away",
+            "moore": "Tall-y-a n kẽng.",
+            "dioula": "A ka taga.",
+            "fulfulde": "Wurtina mo yaasi."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Sya lui tendit la calebasse en souriant : « Ici, chacun est le bienvenu. »",
+          "en": "Sya handed him the calabash with a smile: \"Here, everyone is welcome.\"",
+          "moore": "A Sya kõ-a-la a sẽn da yã wã ne sũ-noogo: \"Bãmb fãa bee ka\".",
+          "dioula": "Sya y'a ka sinsin di a ma ni yɛlɛmisɛn ye. A ko: \"Aw bɛɛ be se\".",
+          "fulfulde": "Sya hokki mo kalbash bee ɓemɗam: \"Hande, yimɓe fuu ɗon njaɓɓa\"."
+        }
+      }
+    },
+    {
+      "id": "sya-la-vendeuse-de-dolo-p3",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 260
+          },
+          {
+            "k": "hut",
+            "x": 20,
+            "y": 26
+          },
+          {
+            "k": "hut",
+            "x": 36,
+            "y": 30,
+            "s": 0.8
+          },
+          {
+            "k": "granary",
+            "x": 52,
+            "y": 26,
+            "s": 0.8
+          },
+          {
+            "k": "mosque",
+            "x": 74,
+            "y": 34,
+            "s": 0.7
+          },
+          {
+            "k": "man",
+            "x": 88
+          }
+        ]
+      },
+      "text": {
+        "fr": "La réputation de Sya traversa la savane. Des familles vinrent s'installer près d'elle, puis d'autres encore. Le campement devint un village, puis une ville : on l'appela Sya, ce qui signifierait « la paix, le bonheur ».",
+        "en": "Sya's reputation crossed the savannah. Families came to settle near her, then more and more. The camp became a village, then a town: it was called Sya, which is said to mean \"peace, happiness\".",
+        "moore": "A Sya yʋʋr kẽnga Sawanã. A zakã rãmb ra kolga a nengẽ, la b paasdame. B ra boond-a lame t'a Sya, sẽn dat n yeel tɩ \" laafɩ la sũ-noog\".",
+        "dioula": "Sya tɔgɔ bɔra fɔɔ ka taga se jamana yɔrɔ bɛɛ la. A ka denbaya caaman nana sigi a gɛrɛfɛ ani u tora ka caya. O yɔrɔ tun kɛra dugu dɔ ye, o kɔ, a tɔgɔ ko Sya. A kɔrɔ ko \"hɛɛrɛ, hɛɛrɛ\".",
+        "fulfulde": "Suudu Sya ɗon ɓeyda haa nder safanne. Yimɓe ngari ɓe njooɗoto e maako, nden boo ɓeydi ɗuuɗaaki. Lamuwol laati gariiri, nden boo gariiri: ɗum nodditii Sya, ko wi'i \"siryaaki, belɗum\"."
+      }
+    },
+    {
+      "id": "sya-la-vendeuse-de-dolo-p4",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "mosque",
+            "x": 50,
+            "y": 34,
+            "s": 0.9
+          },
+          {
+            "k": "woman-up",
+            "x": 24
+          },
+          {
+            "k": "child-up",
+            "x": 34
+          },
+          {
+            "k": "drum",
+            "x": 70
+          },
+          {
+            "k": "man-up",
+            "x": 80
+          }
+        ]
+      },
+      "text": {
+        "fr": "Des siècles plus tard, Sya devint Bobo-Dioulasso, « la maison des Bobo et des Dioula ». Le vieux quartier de Dioulassoba garde le souvenir de ses débuts, et la ville reste connue pour son accueil chaleureux.",
+        "en": "Centuries later, Sya became Bobo-Dioulasso, \"the home of the Bobo and the Dioula\". The old Dioulassoba quarter keeps the memory of its beginnings, and the town is still known for its warm welcome.",
+        "moore": "Yʋʋm kobs sẽn looge, Sya lebga Bobo-Dioulasso, \"Bobo ne Dioula roogo\". Tẽnga sẽn da yaa pĩnd n be Dioulassoba wã ket n tẽegda a sɩngrã yelle, la b ket n nong-a lame.",
+        "dioula": "Saan kɛmɛkulu caaman o kɔ, Sya kɛra Bobo-Dioulasso ye. O kɔrɔ ko \"Bobo ni Dioula ka soo\". Dioulassoba dugu kɔrɔman be mɔgɔw hakili jigi a daminɛ na. Dugu bele lɔnin lo o yɔrɔ la sabu u b'u ladon koɲuman.",
+        "fulfulde": "Cedde duuɓi ɓaawo, Sya laati Bobo-Dioulasso, \"duniya Bobo e Dioula\". Duule Dioulassoba mawɗo ɗon haalde ko fuɗɗii, nden gariiri boo anndiraa ngam weltaare maako."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Que vendait Sya ?",
+        "en": "What did Sya sell?",
+        "moore": "Bõe la Sya koos?",
+        "dioula": "Sya ye mun lo feere?",
+        "fulfulde": "Ko Sya jaayndi?"
+      },
+      "options": [
+        {
+          "fr": "Du dolo",
+          "en": "Dolo",
+          "moore": "Dolo wã",
+          "dioula": "Dolo ka koo",
+          "fulfulde": "Dolo"
+        },
+        {
+          "fr": "Du miel",
+          "en": "Honey",
+          "moore": "M zo-nongre.",
+          "dioula": "N ka denbaya kɔnɔ,",
+          "fulfulde": "Maami, miɗo yiɗi maami."
+        },
+        {
+          "fr": "Des pagnes",
+          "en": "Cloth",
+          "moore": "Dũnd sẽn yaa ne gãnemã",
+          "dioula": "Faniw",
+          "fulfulde": "Ɗuum ɗemngal"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que signifierait le nom Sya ?",
+        "en": "What is Sya said to mean?",
+        "moore": "Yaa bõe la b yeel tɩ Sya rat n yeelame?",
+        "dioula": "O kɔrɔ ko di?",
+        "fulfulde": "Ko woni ko Sya wi'i ina yiɗi?"
+      },
+      "options": [
+        {
+          "fr": "La paix, le bonheur",
+          "en": "Peace, happiness",
+          "moore": "La laafɩ, sũ-noog me beeme.",
+          "dioula": "Hɛɛrɛ, ninsɔndiya",
+          "fulfulde": "Jam, belɗum"
+        },
+        {
+          "fr": "La rivière",
+          "en": "The river",
+          "moore": "Ko-kãsengã",
+          "dioula": "O kɔ fɛ,",
+          "fulfulde": "Lodool ngol"
+        },
+        {
+          "fr": "La forêt",
+          "en": "The forest",
+          "moore": "Yaa weoogẽ wã.",
+          "dioula": "Yiri kɔnɔ",
+          "fulfulde": "Dentuɗo"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "dolo",
+      "lang": "fr",
+      "def": {
+        "fr": "Bière traditionnelle de mil ou de sorgho, préparée surtout par les femmes.",
+        "en": "Traditional millet or sorghum beer, mostly brewed by women.",
+        "moore": "Bõn-buudã yaa b sẽn naan ne pagbã.",
+        "dioula": "O ye u ka deliliw ye. U tun be to k'u yɛrɛ di musow ma.",
+        "fulfulde": "Beerol miylowol malla sorghum, ɓurna fu rewɓe ɓe ɗon nyaama."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Une des traditions sur l'origine de Sya, noyau de Bobo-Dioulasso (dossier UNESCO de la liste indicative, techno-science.net). D'autres versions existent (Kibidoué, Tiguisso). Mise en récit libre.",
+    "en": "One of the traditions about the origin of Sya, the core of Bobo-Dioulasso (UNESCO tentative list file, techno-science.net). Other versions exist (Kibidoué, Tiguisso). Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

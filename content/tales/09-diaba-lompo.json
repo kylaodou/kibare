@@ -1,7 +1,7 @@
 {
   "slug": "diaba-lompo",
   "type": "legende",
-  "region": "est",
+  "region": "goulmou",
   "place": "Pama",
   "coords": [
     11.25,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "diaba-lompo-p1",
       "art": {
         "sky": "dusk",
         "ground": "forest",
@@ -77,7 +78,7 @@
             "k": "man-talk",
             "x": 58,
             "flip": true,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "hut",
@@ -97,6 +98,7 @@
       }
     },
     {
+      "id": "diaba-lompo-p2",
       "art": {
         "sky": "night",
         "ground": "rocks",
@@ -138,6 +140,7 @@
       }
     },
     {
+      "id": "diaba-lompo-p3",
       "art": {
         "sky": "dawn",
         "ground": "rocks",
@@ -168,7 +171,7 @@
           {
             "k": "man-up",
             "x": 72,
-            "c": "#00894A"
+            "c": "#C9822B"
           }
         ]
       },
@@ -221,6 +224,7 @@
       }
     },
     {
+      "id": "diaba-lompo-p4",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -261,6 +265,7 @@
       }
     },
     {
+      "id": "diaba-lompo-p5",
       "art": {
         "sky": "night",
         "ground": "rocks",
@@ -294,6 +299,10 @@
             "x": 68,
             "flip": true,
             "c": "#D62828"
+          },
+          {
+            "k": "king",
+            "x": 12
           }
         ]
       },

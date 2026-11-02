@@ -1,0 +1,326 @@
+{
+  "slug": "le-lait-de-l-etranger",
+  "type": "conte",
+  "region": "liptako",
+  "place": "Oursi",
+  "coords": [
+    14.67,
+    -0.45
+  ],
+  "people": "Peuls",
+  "language": "fulfulde",
+  "duration": 4,
+  "age": 6,
+  "featured": false,
+  "cover": 2,
+  "tags": [
+    "hospitalité",
+    "partage",
+    "mare",
+    "génies"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le lait de l'étranger",
+      "subtitle": "La mare d'Oursi",
+      "summary": "Au bord de la mare d'Oursi, une femme peule partage son dernier lait avec un voyageur poussiéreux. Le lendemain, ses calebasses ne se vident plus.",
+      "moral": "Ce que l'on donne de bon cœur nous revient multiplié."
+    },
+    "en": {
+      "title": "The Stranger's Milk",
+      "subtitle": "The pond of Oursi",
+      "summary": "At the edge of the Oursi pond, a Fulani woman shares her last milk with a dusty traveller. The next day, her calabashes never run empty.",
+      "moral": "What is given with a good heart comes back multiplied."
+    },
+    "moore": {
+      "title": "Ned ning sẽn pa mi a Zeova wã piisã",
+      "subtitle": "Oursi koom koglgã",
+      "summary": "A Oursie koom koglg noorẽ, a Fulani pag n da rɩt a nu-peelmã ne sãamb sẽn tar bugum. Vẽkembeoogo, a pa tol n paam tɩ b gãneg-a ye.",
+      "moral": "Sẽn kõt-a ne sũ-noogo, a lebgda wʋsgo."
+    },
+    "dioula": {
+      "title": "Mɔgɔ wɛrɛ ka nɔnɔ",
+      "subtitle": "Oursi kɔlɔn",
+      "summary": "O kɔ, u ye dɔ di a ma. A y'a fɔ ko: \"Ne be n' ka denbaya kanu kosɔbɛ\". O dugusagwɛ, a ka nɛgɛsow tun tɛ funu abada.",
+      "moral": "Mɔgɔ min be sɔn ka fɛɛn dɔ di a ma ni dusuɲuman ye, o tigi bena segi k'o kɛ siɲɛ caaman."
+    },
+    "fulfulde": {
+      "title": "Luki Baabiraawo",
+      "subtitle": "Pool Oursi",
+      "summary": "Nder ɓandu poolgu Oursi, debbo Fulani ɗon feeroya bee mootoowo mo dammbi. Nyalnde fu, ko'e maako ɗon maaya.",
+      "moral": "Ko hokkata e ɓernde goɗɗe, ɗum ceedata booɗɗum."
+    }
+  },
+  "scenes": [
+    {
+      "id": "le-lait-de-l-etranger-p1",
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 320,
+            "s": 1.3
+          },
+          {
+            "k": "woman",
+            "x": 34,
+            "c": "#E69135"
+          },
+          {
+            "k": "calabash",
+            "x": 44
+          },
+          {
+            "k": "cow",
+            "x": 66,
+            "s": 0.8
+          },
+          {
+            "k": "acacia",
+            "x": 88,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "C'était la fin de la saison sèche. Autour de la mare d'Oursi, l'herbe était rare et les vaches donnaient peu de lait. Fatimata n'avait plus qu'une calebasse pour nourrir ses enfants.",
+        "en": "It was the end of the dry season. Around the Oursi pond, grass was scarce and the cows gave little milk. Fatimata had only one calabash left to feed her children.",
+        "moore": "Wakat kãng la saagã saaga. A Oursie koom koglgã sɛɛgẽ, tɩɩs ra yaa toogo, la rũngã pa kõt piis wʋsg ye. A Fatimata ra tara ka-baas a ye bal n na n dɩt a kambã.",
+        "dioula": "Saan tun banna. O yɔrɔ la, bin tun man ca ani misiw ma nɔnɔ sɔrɔ. Fatimata tun tɛ se ka dumuni di a deenw ma tugun.",
+        "fulfulde": "Ɗum waɗi nde sahaa naa'o timmi. Ha nder laana Ursi, leɗɗe ɗon ɓeyda bee leyɗe ngam nyaamugo ndiyam. Fatimata ɗon mari go'oto tan ngam nyaamugo ɓiɓɓe maako."
+      }
+    },
+    {
+      "id": "le-lait-de-l-etranger-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "old-woman",
+            "x": 64
+          },
+          {
+            "k": "woman",
+            "x": 34,
+            "c": "#E69135"
+          },
+          {
+            "k": "calabash",
+            "x": 44
+          },
+          {
+            "k": "child",
+            "x": 22
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un soir, un vieil homme couvert de poussière s'arrêta devant sa tente : « J'ai soif, ma fille. » Fatimata regarda la calebasse, puis ses enfants.",
+        "en": "One evening a dusty old man stopped in front of her tent: \"I'm thirsty, my daughter.\" Fatimata looked at the calabash, then at her children.",
+        "moore": "Daar a ye wĩntoogã, rao-kẽem sẽn da tar bugum n be a doogẽ wã yeelame: \"M bi-pugl, m komã yũuda\". A Fatimata gesa bĩnggã la a yaool n ges a kambã.",
+        "dioula": "Loon dɔ wulafɛ, cɛkɔrɔba dɔ lɔra a ka fanibugu daa la k'a fɔ ko: \"N minnɔgɔ be n' na. N denmuso\". Fatimata y'a filɛ o kɔ, a ye sinsin kɛ ani a y'a deenw filɛ.",
+        "fulfulde": "Gooto jemma mawɗo mo ɗon mari duule o dari yeeso suudu maako, o wi'i: \"Mi marɓe nyiwri\". Fatimata ndaari kalbaas, nden kam ɓaawo maajum o ɗaarii ɓiɓɓe maako."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que doit faire Fatimata ?",
+          "en": "What should Fatimata do?",
+          "moore": "Bõe la a Fatimata segd n maane?",
+          "dioula": "Fatimata ka kan ka mun lo kɛ do?",
+          "fulfulde": "Ko Fatimata waɗi?"
+        },
+        "options": [
+          {
+            "fr": "Partager son lait",
+            "en": "Share her milk",
+            "moore": "Ges-y a piisã.",
+            "dioula": "A ka nɔnɔ di a ma.",
+            "fulfulde": "Wondira bee nyaamdu maako"
+          },
+          {
+            "fr": "Le garder pour ses enfants",
+            "en": "Keep it for her children",
+            "moore": "B tall-a n kõ a kambã.",
+            "dioula": "A to a ka denw ye o mara.",
+            "fulfulde": "Hokka ɗum ngam ɓiɓɓe maako."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Elle lui tendit la calebasse : « L'étranger est un envoyé de Dieu. »",
+          "en": "She handed him the calabash: \"A stranger is sent by God.\"",
+          "moore": "A kõ-a-la kalbasã n yeele: \"Wẽnnaam tʋma sãamb\".",
+          "dioula": "A y'a fɔ a ye ko: \"Ala le ye lonan ci\".",
+          "fulfulde": "O hokki mo kalbaas: \"Allah neli goɗɗo\"."
+        }
+      }
+    },
+    {
+      "id": "le-lait-de-l-etranger-p3",
+      "art": {
+        "sky": "night",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "old-woman",
+            "x": 50
+          },
+          {
+            "k": "catfish",
+            "x": 62,
+            "y": 6
+          },
+          {
+            "k": "star",
+            "x": 30,
+            "y": 280
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le vieil homme but quelques gorgées et rendit la calebasse… encore pleine. Puis il marcha vers la mare et disparut dans l'eau sombre. Fatimata comprit : c'était un génie de la mare.",
+        "en": "The old man drank a few sips and gave back the calabash… still full. Then he walked to the pond and vanished into the dark water. Fatimata understood: he was a spirit of the pond.",
+        "moore": "A kẽnga koomã n kõ-a ko-kẽem. A ket n tara sẽk wʋsgo. Rẽ poore, a kẽnga koom koglgã n menem koomã sẽn yaa lik pʋgẽ. A Fatimata ra miime t'a yaa zĩm sẽn be koom koglgã pʋgẽ wã.",
+        "dioula": "Cɛkɔrɔba ye dɔrɔ min ka sɔrɔ k'a ka sinji di a ma. O tɛ se ka dafa. O kɔ, a tagara baji daa la ani ka tunu jii jukɔrɔ. Fatimata y'a faamu ko ale tun ye jii bɔyɔrɔ ka mɔgɔ dɔ ye.",
+        "fulfulde": "Baaba on njari limce ɗiɗi e hokki mo kalbas... haa jooni heewi. Nden o yahi to poolgu nden o wurtini nder ndiyam duumuru. Fatimata faama: o laati ruuhu nder poolgu."
+      }
+    },
+    {
+      "id": "le-lait-de-l-etranger-p4",
+      "art": {
+        "sky": "day",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "woman-up",
+            "x": 36,
+            "c": "#E69135"
+          },
+          {
+            "k": "calabash",
+            "x": 46
+          },
+          {
+            "k": "child-up",
+            "x": 56
+          },
+          {
+            "k": "cow",
+            "x": 74
+          }
+        ]
+      },
+      "text": {
+        "fr": "Jusqu'aux pluies, les calebasses de Fatimata ne se vidèrent jamais. Elle partagea son lait avec tout le campement. On dit encore à Oursi : « Le lait offert ne tarit pas. »",
+        "en": "Until the rains came, Fatimata's calabashes never ran empty. She shared her milk with the whole camp. In Oursi people still say: \"Milk given away never runs dry.\"",
+        "moore": "Hal tɩ sa-kãnga wa, a Fatimata ra pa tol n zãad ne koomã ye. A rɩka a piis ne logtorã fãa. A Ours nebã ket n yetame tɩ \"sõ-gãong sẽn kõt ned pa kʋɩt ye\".",
+        "dioula": "Fɔɔ sanji ka ben, Fatimata tun tɛ se k'a ka nɛgɛsow bɛɛ kɛ faso ye. A y'a ka nɔnɔ di jama bɛɛ ma. O kɔ, u y'a fɔ ko: \"Ni mɔgɔ ye nɔnɔ di a ma, o tɛ ja abada\".",
+        "fulfulde": "Haa nde ndiyam wara, ko'e Fatimata ɗon maaki. O hokki nyaamdu maako bee suudu fuu. Yimɓe Orsi ɗon mbi'a haa jooni: \"Ndamma nde ɓe hokki ɗum, naa' ngam yaawugo\"."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qui était le vieil homme ?",
+        "en": "Who was the old man?",
+        "moore": "Ãnd n da yaa nin-kẽemã?",
+        "dioula": "Cɛkɔrɔba nin tun ye jɔn lo ye?",
+        "fulfulde": "Moye mawɗo on?"
+      },
+      "options": [
+        {
+          "fr": "Un génie de la mare",
+          "en": "A spirit of the pond",
+          "moore": "Yaa koom koglgã sɩɩgẽ.",
+          "dioula": "O ye jii bɔyɔrɔ ye.",
+          "fulfulde": "Ruuhu poolgu"
+        },
+        {
+          "fr": "Un marchand",
+          "en": "A trader",
+          "moore": "Raag soab",
+          "dioula": "Jagokɛla dɔ",
+          "fulfulde": "Jaɓɓorgo Ganndal"
+        },
+        {
+          "fr": "Le chef",
+          "en": "The chief",
+          "moore": "A sẽn yaa naabã",
+          "dioula": "Kuntigiba",
+          "fulfulde": "Mawɗo"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Qu'est-il arrivé aux calebasses ?",
+        "en": "What happened to the calabashes?",
+        "moore": "Bõe n paam-b?",
+        "dioula": "Mun lo kɛra kalabasikaw la?",
+        "fulfulde": "Ko waɗi to calbaas?"
+      },
+      "options": [
+        {
+          "fr": "Elles ne se vidaient plus",
+          "en": "They never ran empty",
+          "moore": "B pa zoe n bas ye.",
+          "dioula": "U ma deli ka boli k'u to yen.",
+          "fulfulde": "Ɓe ɗon mbaɗaay meere"
+        },
+        {
+          "fr": "Elles se sont cassées",
+          "en": "They broke",
+          "moore": "B kaoome.",
+          "dioula": "U tun be cɛnna.",
+          "fulfulde": "Ɓe ɓillaa."
+        },
+        {
+          "fr": "Elles ont disparu",
+          "en": "They disappeared",
+          "moore": "B menemame.",
+          "dioula": "U tununa.",
+          "fulfulde": "Ɓe mballi."
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "mare d'Oursi",
+      "lang": "fr",
+      "def": {
+        "fr": "Grande mare du Sahel burkinabè, zone humide protégée (Ramsar), vitale pour les éleveurs.",
+        "en": "A large pond in the Burkinabè Sahel, a protected wetland (Ramsar), vital for herders.",
+        "moore": "Burkĩna Sahel tẽn-tẽng sẽn yaa koom koglg (Ramsar), tɩ bãadbã segd n baoo b mens wʋsgo.",
+        "dioula": "O yɔrɔ la, u ye jii bɔyɔrɔ dɔ kɛ min be weele ko \"Ramsar\", o yɔrɔ tun ka ɲi begɛnw lamɔbagaw fɛ.",
+        "fulfulde": "Lamarji mawɗi nder Burkinabè Sahel, nokkuure ɗo laami (Ramsar), nafata ngam le'i."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte d'hospitalité récompensée, répandu chez les Peuls du Sahel. Version écrite pour KIBARE, située à la mare d'Oursi (Oudalan), zone humide Ramsar.",
+    "en": "A tale of rewarded hospitality, widespread among the Fulani of the Sahel. Version written for KIBARE, set at the Oursi pond (Oudalan), a Ramsar wetland."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

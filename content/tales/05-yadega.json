@@ -1,7 +1,7 @@
 {
   "slug": "yadega-et-pabre",
   "type": "recit",
-  "region": "nord",
+  "region": "yaadga",
   "place": "Gourcy",
   "coords": [
     13.21,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "yadega-et-pabre-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -76,7 +77,7 @@
           {
             "k": "man",
             "x": 92,
-            "c": "#00894A"
+            "c": "#C9822B"
           }
         ]
       },
@@ -89,6 +90,7 @@
       }
     },
     {
+      "id": "yadega-et-pabre-p2",
       "art": {
         "sky": "dusk",
         "ground": "savanna",
@@ -124,6 +126,7 @@
       }
     },
     {
+      "id": "yadega-et-pabre-p3",
       "art": {
         "sky": "night",
         "ground": "village",
@@ -147,6 +150,11 @@
           {
             "k": "calabash",
             "x": 36
+          },
+          {
+            "k": "king",
+            "x": 88,
+            "flip": true
           }
         ]
       },
@@ -199,6 +207,7 @@
       }
     },
     {
+      "id": "yadega-et-pabre-p4",
       "art": {
         "sky": "dawn",
         "ground": "savanna",
@@ -237,6 +246,7 @@
       }
     },
     {
+      "id": "yadega-et-pabre-p5",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -276,7 +286,7 @@
           {
             "k": "man-up",
             "x": 62,
-            "c": "#00894A"
+            "c": "#C9822B"
           }
         ]
       },
@@ -289,6 +299,7 @@
       }
     },
     {
+      "id": "yadega-et-pabre-p6",
       "art": {
         "sky": "night",
         "ground": "village",

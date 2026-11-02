@@ -1,7 +1,7 @@
 {
   "slug": "la-naissance-du-lac-bam",
   "type": "legende",
-  "region": "centre-nord",
+  "region": "kuilse",
   "place": "Lac Bam (Kongoussi)",
   "coords": [
     13.4,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "la-naissance-du-lac-bam-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -96,6 +97,7 @@
       }
     },
     {
+      "id": "la-naissance-du-lac-bam-p2",
       "art": {
         "sky": "dusk",
         "ground": "village",
@@ -119,7 +121,7 @@
             "k": "woman-talk",
             "x": 62,
             "flip": true,
-            "c": "#00894A"
+            "c": "#C9822B"
           }
         ]
       },
@@ -165,6 +167,7 @@
       }
     },
     {
+      "id": "la-naissance-du-lac-bam-p3",
       "art": {
         "sky": "night",
         "ground": "river",
@@ -210,6 +213,7 @@
       }
     },
     {
+      "id": "la-naissance-du-lac-bam-p4",
       "art": {
         "sky": "dawn",
         "ground": "village",
@@ -252,6 +256,7 @@
       }
     },
     {
+      "id": "la-naissance-du-lac-bam-p5",
       "art": {
         "sky": "day",
         "ground": "lake",
@@ -275,7 +280,7 @@
             "k": "man",
             "x": 22,
             "y": 4,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "field",

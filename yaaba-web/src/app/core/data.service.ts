@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { catchError, firstValueFrom, map, of, timeout } from 'rxjs';
 import { environment } from '../../environments/environment';
-import { AudioTrack, CommentItem, Contribution, ContributionPayload, Contributor, Language, PlatformStats, Region, Tale } from './models';
+import { AudioTrack, City, CommentItem, Contribution, ContributionPayload, Contributor, Language, MapLevel, PageResult, PlatformStats, Region, Tale, TaleOption } from './models';
 
 /**
  * Point d'accès unique aux données.
@@ -21,6 +21,10 @@ export class DataService {
   readonly geo = signal<GeoJSON.FeatureCollection | null>(null);
   /** Cours d'eau (Natural Earth, domaine public), découpés aux frontières du pays. */
   readonly rivers = signal<GeoJSON.FeatureCollection | null>(null);
+  /** Niveaux de détail de la carte (chargés à la demande) : provinces, communes, villes. */
+  readonly provinces = signal<GeoJSON.FeatureCollection | null>(null);
+  readonly communes = signal<GeoJSON.FeatureCollection | null>(null);
+  readonly cities = signal<City[] | null>(null);
   readonly online = signal(false);
   readonly ready = signal(false);
 
@@ -67,6 +71,16 @@ export class DataService {
     if (!fromApi?.length) return;
     this.online.set(true);
     this.tales.set(fromApi);
+  }
+
+  /** Charge une seule fois les données d'un niveau de la carte. */
+  loadLevel(level: MapLevel) {
+    if (level === 'province' && !this.provinces())
+      this.http.get<GeoJSON.FeatureCollection>('data/provinces.geojson').subscribe({ next: (d) => this.provinces.set(d), error: () => {} });
+    if (level === 'commune' && !this.communes())
+      this.http.get<GeoJSON.FeatureCollection>('data/communes.geojson').subscribe({ next: (d) => this.communes.set(d), error: () => {} });
+    if (level === 'city' && !this.cities())
+      this.http.get<City[]>('data/cities.json').subscribe({ next: (d) => this.cities.set(d), error: () => {} });
   }
 
   tale(slug: string) {
@@ -132,13 +146,22 @@ export class DataService {
     return this.http.get<PlatformStats>(`${this.api}/stats`).pipe(catchError(() => of(null)));
   }
 
-  contribute(payload: ContributionPayload, audio?: Blob, segments: Blob[] = []) {
+  /** Sélecteur de contes : recherche côté serveur, page par page. */
+  taleOptions(q: string, page = 0, size = 20) {
+    return this.http.get<PageResult<TaleOption>>(`${this.api}/tales/options`, { params: { q: q.trim(), page, size } });
+  }
+
+  /** Voix : chaque enregistrement est accompagné de l'identifiant de son paragraphe (sceneIds, même ordre). */
+  contribute(payload: ContributionPayload, audio?: Blob, segments: { blob: Blob; sceneId: string }[] = []) {
     const ext = (b: Blob) => (b.type.includes('ogg') ? 'ogg' : b.type.includes('mpeg') ? 'mp3' : 'webm');
     const form = new FormData();
     form.append('data', new Blob([JSON.stringify(payload)], { type: 'application/json' }));
     if (audio) form.append('audio', audio, `voix.${ext(audio)}`);
     // un fichier par paragraphe, dans l'ordre du conte
-    segments.forEach((b, i) => form.append('segments', b, `paragraphe-${i + 1}.${ext(b)}`));
+    segments.forEach((s, i) => {
+      form.append('segments', s.blob, `paragraphe-${i + 1}.${ext(s.blob)}`);
+      form.append('sceneIds', s.sceneId);
+    });
     return this.http.post<Contribution>(`${this.api}/contributions`, form);
   }
 }

@@ -1,7 +1,7 @@
 {
   "slug": "les-pics-de-sindou",
   "type": "legende",
-  "region": "cascades",
+  "region": "tannounyan",
   "place": "Pics de Sindou",
   "coords": [
     10.67,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "les-pics-de-sindou-p1",
       "art": {
         "sky": "dusk",
         "ground": "savanna",
@@ -95,6 +96,7 @@
       }
     },
     {
+      "id": "les-pics-de-sindou-p2",
       "art": {
         "sky": "night",
         "ground": "rocks",
@@ -128,7 +130,7 @@
       "text": {
         "fr": "Une nuit, près de son feu, le chasseur fit des offrandes et pria longuement. Au petit matin, un grand serpent apparut devant lui. Ses écailles brillaient étrangement, et il ne montrait aucune agressivité. Le chasseur comprit : c'était un génie qui avait pris la forme d'un serpent.",
         "en": "One night, beside his fire, the hunter made offerings and prayed for a long time. At dawn, a great serpent appeared before him. Its scales shone strangely, and it showed no aggression. The hunter understood: it was a spirit that had taken the form of a serpent.",
-        "moore": "Daar a ye yʋngo, zĩ-yũudlã sẽn da be a bugum sɛɛgẽ, a maana maoong la a pʋʋsa wʋsg. Zĩigã sẽn vẽege, bõn-vɩɩg kãseng n zĩnd a Zezi taoore. A sãnemã ra yãgdame, la a ra pa tar pãng ye. Sẽn yãbd-a wã bãngame tɩ yaa sɩɩg sẽn maan wa weoogã.",
+        "moore": "Daar a ye yʋngo, zĩ-yũudlã sẽn da be a bugum sɛɛgẽ, a maana maoong la a pʋʋsa wʋsg. Zĩigã sẽn vẽege, bõn-vɩɩg kãseng n zĩnd a taoore. A sãnemã ra yãgdame, la a ra pa tar pãng ye. Sẽn yãbd-a wã bãngame tɩ yaa sɩɩg sẽn maan wa weoogã.",
         "dioula": "Loon dɔ sufɛ, jagokɛla ye saraka bɔ a ka tasuma gɛrɛfɛ ani a ye wagatijan kɛ delili la. Dugu gwɛra tuma min na, sa belebeleba dɔ y'a yɛrɛ yira a la. A ka sumanikɛminan tun be manamana cogo kabakoman na ani a tun tɛ se ka mɔgɔ fari faga. A y'a faamu ko jinɛ dɔ lo tun ye saa ye.",
         "fulfulde": "Nder jemma go'oto, ɓaawo yiite maako, mawɗo du'aaji waɗi dokke boo o waɗa do'aare wakkati ɗuuɗugo. Nde nyalawma fu, haykaliiru mawɗo wari yeeso maako. Ɗu'um ɗon cembiɗina masin, nden o ɗon holla ɓeydaaki. Mawɗo yi'aama: ɗum ruuhu huutoraaki ɓandu weelo."
       },
@@ -174,6 +176,7 @@
       }
     },
     {
+      "id": "les-pics-de-sindou-p3",
       "art": {
         "sky": "dawn",
         "ground": "rocks",
@@ -209,6 +212,7 @@
       }
     },
     {
+      "id": "les-pics-de-sindou-p4",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -249,6 +253,7 @@
       }
     },
     {
+      "id": "les-pics-de-sindou-p5",
       "art": {
         "sky": "day",
         "ground": "rocks",
@@ -294,7 +299,7 @@
         "en": "What form does the spirit take?",
         "moore": "Wãn to la vʋʋsem sõngã maandẽ?",
         "dioula": "Hakili senu be kɛ cogo di?",
-        "fulfulde": "Holi Ruuhu Allah ɗon waɗa?"
+        "fulfulde": "Ko honɗun ruuhu waɗi?"
       },
       "options": [
         {

@@ -31,9 +31,13 @@ export interface Choice {
 }
 
 export interface Scene {
+  /** identifiant stable du paragraphe : les voix s'y rattachent */
+  id?: string;
   art: Art;
   text: Txt;
   choice?: Choice;
+  /** vidéo d'illustration facultative (10 Mo maximum) */
+  video?: string;
 }
 
 export interface QuizItem {
@@ -60,6 +64,8 @@ export interface AudioTrack {
   lang: string;
   url: string;
   narrator: string;
+  /** paragraphe auquel la voix est rattachée (absent : voix du conte entier) */
+  sceneId?: string;
   durationSec?: number;
   /** un fichier par paragraphe quand le conteur a enregistré séquence par séquence */
   segments?: string[];
@@ -74,7 +80,7 @@ export interface Tale {
   people: string;
   language: string;
   duration: number;
-  age: number;
+  age?: number;
   featured?: boolean;
   cover?: number;
   tags: string[];
@@ -140,11 +146,36 @@ export interface Contribution extends ContributionPayload {
   reviewNote?: string;
   audioUrl?: string;
   segments?: string[];
+  /** enregistrements avec le numéro et le texte du paragraphe correspondant */
+  recordings?: Recording[];
   userId?: number;
   authorName: string;
   authorEmail?: string;
   createdAt: string;
   reviewedAt?: string;
+}
+
+export interface Recording {
+  url: string;
+  sceneId?: string;
+  paragraph?: number;
+  text?: string;
+  matchedBy: 'scene' | 'order' | 'none';
+}
+
+/** Page renvoyée par les listes paginées côté serveur. */
+export interface PageResult<T> {
+  items: T[];
+  total: number;
+  page: number;
+  size: number;
+  counts?: Record<string, number>;
+}
+
+export interface TaleOption {
+  slug: string;
+  title: string;
+  region: string;
 }
 
 export interface CommentItem {
@@ -180,4 +211,15 @@ export interface PlatformStats {
   views: number;
   users: number;
   comments: number;
+}
+
+/** Niveau d'affichage de la carte. */
+export type MapLevel = 'region' | 'province' | 'commune' | 'city';
+
+/** Chef-lieu de région ou de province. */
+export interface City {
+  name: string;
+  region: string;
+  rank: 'region' | 'province';
+  coords: [number, number];
 }

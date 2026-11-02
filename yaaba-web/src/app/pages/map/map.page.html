@@ -6,6 +6,7 @@
         [tales]="filtered()"
         [selectedRegion]="selectedRegion()"
         [selectedTale]="selectedTale()"
+        [level]="level()"
         (regionSelect)="selectRegion($event)"
         (taleSelect)="selectTale($event)"
       />
@@ -15,6 +16,7 @@
           [tales]="filtered()"
           [selectedRegion]="selectedRegion()"
           [selectedTale]="selectedTale()"
+          [level]="level()"
           (regionSelect)="selectRegion($event)"
           (taleSelect)="selectTale($event)"
         />
@@ -35,6 +37,15 @@
         <button type="button" [class.on]="view() === '3d'" (click)="setMode('3d')" [attr.aria-pressed]="view() === '3d'">
           <i class="fa-solid fa-cube"></i> 3D
         </button>
+      </div>
+
+      <!-- niveau de détail : régions (par défaut), provinces, communes, villes -->
+      <div class="seg levels" role="group" [attr.aria-label]="'map.level' | t">
+        @for (l of levels; track l.code) {
+          <button type="button" [class.on]="level() === l.code" (click)="setLevel(l.code)" [attr.aria-pressed]="level() === l.code">
+            <i class="fa-solid {{ l.icon }}"></i> <span>{{ 'map.level.' + l.code | t }}</span>
+          </button>
+        }
       </div>
 
       <div class="search" id="map-search">
@@ -123,7 +134,7 @@
         <ul class="facts">
           <li><i class="fa-solid fa-location-dot"></i> {{ t.place }}</li>
           <li><i class="fa-solid fa-people-group"></i> {{ t.people }}</li>
-          <li><i class="fa-regular fa-clock"></i> {{ t.duration }} min · {{ 'tale.age' | t: { age: t.age } }}</li>
+          <li><i class="fa-regular fa-clock"></i> {{ t.duration }} min</li>
         </ul>
         <a class="btn btn-block" [routerLink]="['/contes', t.slug]">
           <i class="fa-solid fa-play"></i> {{ 'map.listen' | t }}
@@ -152,7 +163,7 @@
         <ul class="tale-list">
           @for (t of regionTales(); track t.slug) {
             <li>
-              <button type="button" (click)="selectTale(t.slug)">
+              <button type="button" class="card" (click)="selectTale(t.slug)">
                 <span class="thumb"><app-scene-art [art]="t.scenes[t.cover ?? 0].art" [animate]="false" /></span>
                 <span class="tl-text">
                   <strong>{{ text(t).title }}</strong>
@@ -179,7 +190,7 @@
         <ul class="region-list">
           @for (r of regionList(); track r.code) {
             <li>
-              <button type="button" (click)="selectRegion(r.code)" [class.visited]="progress.state().regionsVisited.includes(r.code)">
+              <button type="button" class="card" (click)="selectRegion(r.code)" [class.visited]="progress.state().regionsVisited.includes(r.code)">
                 <span class="rl-name">{{ r.name }}</span>
                 <span class="rl-count">{{ r.count }}</span>
               </button>

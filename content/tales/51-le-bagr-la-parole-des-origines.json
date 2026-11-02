@@ -1,0 +1,327 @@
+{
+  "slug": "le-bagr-la-parole-des-origines",
+  "type": "legende",
+  "region": "djoro",
+  "place": "Dano",
+  "coords": [
+    11.15,
+    -3.06
+  ],
+  "people": "Dagara",
+  "language": "dagara",
+  "duration": 5,
+  "age": 9,
+  "featured": true,
+  "cover": 3,
+  "tags": [
+    "origines",
+    "initiation",
+    "parole",
+    "savoir"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le Bagr, la parole des origines",
+      "subtitle": "Le plus long récit des Dagara",
+      "summary": "Chez les Dagara, un récit sacré, le Bagr, raconte comment les hommes ont reçu le savoir. On le récite pendant des heures, sans s'arrêter, lors de l'initiation.",
+      "moral": "Le savoir des ancêtres se transmet par la parole, la patience et le respect."
+    },
+    "en": {
+      "title": "The Bagr, Word of the Origins",
+      "subtitle": "The Dagara's longest story",
+      "summary": "Among the Dagara, a sacred story, the Bagr, tells how people received knowledge. It is recited for hours, without stopping, during initiation.",
+      "moral": "The ancestors' knowledge is passed on through speech, patience and respect."
+    },
+    "moore": {
+      "title": "B sẽn yeel tɩ \"Bagr\" wã yaa gom-biis nins b sẽn da gʋlsã võor n paase",
+      "subtitle": "Dagara kibarã yɩɩll n yɩɩda.",
+      "summary": "Dagara nebã sʋka, kibar sẽn yaa sõma n be wã, a Bagr pʋgẽ, b goma bãngrã sẽn paam-b to-to. B sã n wa sɩng Biiblã zãmsgã, b gomda-a wakat fãa.",
+      "moral": "B sã n gomd ne sũ-mar la b waoogd nebã, b na n paama bãngre."
+    },
+    "dioula": {
+      "title": "Bibulu ka maanaw",
+      "subtitle": "Dagara ka maanajanw bɛɛ la fɔlɔ ye",
+      "summary": "Dagara ka maana senuman dɔ be fɔ mɔgɔw koo la. O ye Bagr lo ye. A b'a ɲɛfɔ mɔgɔ caaman ye lɔnniya sɔrɔ cogo min na. O kalan be kɛ lɛri caaman kɔnɔ, a tɛ lɔ.",
+      "moral": "An ka mɔgɔkɔrɔbaw be se k'u lɔn u ka kuma fɛ, u be muɲu ani u b'an bonya."
+    },
+    "fulfulde": {
+      "title": "Bagr, Wolde Ɓooyɗe",
+      "subtitle": "Ko dow Dagara woni haala ɓurɗo fuu",
+      "summary": "Nder Dagara, haala masin, Bagr, hollata no yimɓe keɓiri anndal. Ɗum ɗon hawrana diga saa'iji, naa ɗon jooɗorugo nder wakkati fuɗɗam.",
+      "moral": "Annduɓe maama'en ɗon ɓeydoo nder bolle, hakkiilo e mangu."
+    }
+  },
+  "scenes": [
+    {
+      "id": "le-bagr-la-parole-des-origines-p1",
+      "art": {
+        "sky": "night",
+        "ground": "village",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "fire",
+            "x": 46
+          },
+          {
+            "k": "elder-sit",
+            "x": 30
+          },
+          {
+            "k": "child-sit",
+            "x": 60
+          },
+          {
+            "k": "child-sit",
+            "x": 70,
+            "c": "#C9822B"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Dans les villages dagara autour de Dano, il existe un récit si long qu'un seul homme peut le dire pendant trois heures sans s'interrompre. On l'appelle le Bagr. Il n'est pas raconté pour amuser, mais pour enseigner.",
+        "en": "In the Dagara villages around Dano, there is a story so long that a single man can recite it for three hours without stopping. It is called the Bagr. It is not told to entertain, but to teach.",
+        "moore": "Dãno soolmẽ wã, Dagara tẽn-kãens pʋsẽ, kibar n yaa kɩbay sẽn kaoos wʋsg hal tɩ ned a yembr tõe n gom-a al daar a tãab n pa bas ye. B boond-a lame tɩ Bagr. B pa yeel-a tɩ b maan sũ-noog ye, la yaa t'a zãms nebã.",
+        "dioula": "Dagara dugu la, Danɔ gɛrɛfɛ, koo dɔ be mɛn fɔɔ mɔgɔ kelen dɔrɔn lo be se k'o fɔ lɛri saba kɔnɔ. O yɔrɔ be weele ko Bagr. O tɛ fɔ walisa ka mɔgɔw wasa, nka a fɔra ko u k'u kalan.",
+        "fulfulde": "Nder gure Dagara ha Dano, woodi haala nde haaji diga neɗɗo gooto waawi wi'ugo ɗum saa'i tati. Ɗum noddiraa Bagr. Ɗum wi'etee ngam huwugo, ammaa ngam ekkitingo."
+      }
+    },
+    {
+      "id": "le-bagr-la-parole-des-origines-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "man",
+            "x": 30,
+            "c": "#7C3109"
+          },
+          {
+            "k": "dwarf",
+            "x": 56
+          },
+          {
+            "k": "forest-edge",
+            "x": 78
+          },
+          {
+            "k": "karite",
+            "x": 14,
+            "y": 24
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le Bagr raconte qu'au commencement, les hommes souffraient de maladies et de malheurs sans les comprendre. Deux d'entre eux partirent dans la brousse, là où vivent les êtres invisibles, pour chercher le savoir.",
+        "en": "The Bagr tells that in the beginning, people suffered illnesses and misfortunes without understanding them. Two of them went into the bush, where the invisible beings live, to seek knowledge.",
+        "moore": "B sẽn gʋls sebrã pʋgẽ wã, b yeelame tɩ sɩngrẽ wã nebã ra namsdame n pa wʋmd b yelle. Bãmb a yiib kẽnga weoogẽ, sẽn be bõn-naands nins sẽn pa neã pʋgẽ n na n bao bãngr.",
+        "dioula": "Wagati damanin o kɔ, mɔgɔw ye banaw ni bɔnɛ caaman sɔrɔ. U tun t'o faamu. U fila tagara yiritu kɔnɔ walisa ka lɔnniya ɲini.",
+        "fulfulde": "The Bagr ɗon wi'a nder fuɗɗoode, yimɓe ɗon nyaama nyauji e kaayeefiiji ɓe andaa ɗi. Ɗi ɗiɗo nder maɓɓe ɓe njahi to go'o, to yimɓe naa' gite njooɗi ngam ɗaɓɓita anndal."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que vont-ils chercher dans la brousse ?",
+          "en": "What will they seek in the bush?",
+          "moore": "Bõe la b na n bao ne bugumã?",
+          "dioula": "U bena mun lo ɲini yiritu kɔnɔ?",
+          "fulfulde": "Ko ɓe ɗaɓɓay nder leɗɗe?"
+        },
+        "options": [
+          {
+            "fr": "Le savoir pour guérir et vivre",
+            "en": "Knowledge to heal and live",
+            "moore": "Ned sã n paam bãngr sẽn na yɩl n maag a meng la a vɩɩmd sõma,",
+            "dioula": "Lɔnniya min be se k'i kɛnɛya ani ka ɲɛnamaya kɛ",
+            "fulfulde": "anndal ngam nyaamugo e wonde"
+          },
+          {
+            "fr": "De l'or",
+            "en": "Gold",
+            "moore": "Zĩisã",
+            "dioula": "Sankaba",
+            "fulfulde": "Ɓannduɗe"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Ils marchèrent longtemps, guidés par les esprits…",
+          "en": "They walked for a long time, guided by the spirits…",
+          "moore": "B kẽnga wakat sẽn zãra, tɩ zĩn-dãmbã wilgd b sore.",
+          "dioula": "U ye tagama wagatijan kɛ, ka kɛɲɛ ni Ala ka hakili senu sago ye.",
+          "fulfulde": "Ɓe ɗon yaha wakkati ɗuɗɗum, ɓe ɗon hoola dow ruuhuuji..."
+        }
+      }
+    },
+    {
+      "id": "le-bagr-la-parole-des-origines-p3",
+      "art": {
+        "sky": "night",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "dwarf",
+            "x": 40
+          },
+          {
+            "k": "man-talk",
+            "x": 60,
+            "c": "#7C3109"
+          },
+          {
+            "k": "calabash",
+            "x": 50
+          },
+          {
+            "k": "leaf-mask",
+            "x": 82
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les êtres de la brousse leur enseignèrent les plantes qui soignent, les sacrifices qui apaisent et les règles qui permettent de vivre ensemble. Mais ce savoir était précieux : il ne devait être confié qu'à ceux qui sauraient le respecter.",
+        "en": "The beings of the bush taught them the plants that heal, the offerings that appease and the rules that allow people to live together. But this knowledge was precious: it was to be entrusted only to those who would respect it.",
+        "moore": "B sẽn da be weoogẽ wã zãms-b tɩ tɩɩsã sãoogd b mense, n kõt kũun nins sẽn noom nebã la noy ning sẽn kɩtdẽ tɩ ned tõe n zĩnd ne a taabã. La bãngr-kãngã ra tara yõod wʋsgo: b ra segd n kɩsa a Zeova wã sẽn na yɩl tɩ neb nins fãa waoogd-a wã bãng-a.",
+        "dioula": "Yiri minw be kɛnɛya, saraka minw ka di u ye ani sariya minw b'a to mɔgɔw be sigi ɲɔgɔn fɛ. Nka, o lɔnniya tun ka ɲi k'a to mɔgɔ minw b'a bonya, olu dɔrɔn lo y'o faamu.",
+        "fulfulde": "Yimɓe nder duunde ɗon ekkitina ɓe leɗɗe ɗe nyaamoto, kirsaaji ɗi ɓesda e dooka ngam yimɓe njooɗondira. Ammaa anndal ngal boɗɗum: ɗum haani hokkugo tan yimɓe ɓe mawninaɗum."
+      }
+    },
+    {
+      "id": "le-bagr-la-parole-des-origines-p4",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "elder",
+            "x": 30
+          },
+          {
+            "k": "man-up",
+            "x": 50,
+            "c": "#7C3109"
+          },
+          {
+            "k": "child-up",
+            "x": 62
+          },
+          {
+            "k": "drum",
+            "x": 78
+          }
+        ]
+      },
+      "text": {
+        "fr": "C'est pourquoi, chaque année, les initiés du Bagr se retirent pour écouter le récit en entier, en blanc puis en noir. Les chercheurs le considèrent comme l'un des plus longs récits oraux d'Afrique. Ici, nous n'en montrons qu'un tout petit reflet.",
+        "en": "That is why, every year, the Bagr initiates withdraw to hear the whole story, in its white and then its black form. Scholars regard it as one of Africa's longest oral narratives. Here we show only a tiny reflection of it.",
+        "moore": "Yaa rẽ yĩng la yʋʋmd fãa, Bagr sẽn sɩngd n yitẽ wã na n kelga kibarã fãa. A yɩll ne pemsem, la a wa lebg ne wĩndg. Zãmsdbã getame tɩ yaa Afirik nebã sẽn gomd bũmb ning n yɩɩd pĩndã. D sẽn yã wã wilgda rẽ bal bilf-bilfu.",
+        "dioula": "O kama, saan o saan, Bagr be bɔ ka taga kibaro diiman bɛɛ lamɛn. A gwɛman lo ani a finfin lo fana. Lɔnnikɛlaw b'a jati ko a ye Bibulu ka maanaw bɛɛ la fɔlɔ ye. An b'o yira dɔɔni dɔrɔn.",
+        "fulfulde": "Ngam maajum, hitaande kala, Bagr fuɗɗii ƴeewugo ngam nanki haala fuu, nder laabi maako ɓaleere nden boo nder laabi muuɗum. Janngooɓe mbi'i ɗum go'o nder ko ɓuri heewde e nder Afrik. Ɗo'o en hollata tan ko feewde."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Combien de temps peut durer la récitation du Bagr ?",
+        "en": "How long can the recitation of the Bagr last?",
+        "moore": "B sẽn na n gom Bagrã tõe n kaoosame tɩ ta wakat bʋgo?",
+        "dioula": "O kalan be se ka mɛn tuma juman?",
+        "fulfulde": "No wakkatiye booɗugo Bagr ɗon haa?"
+      },
+      "options": [
+        {
+          "fr": "Environ trois heures",
+          "en": "About three hours",
+          "moore": "Sẽn na yɩl n paam sẽk daar a tãab pʋgẽ.",
+          "dioula": "Lɔgɔkun saba ɲɔgɔn kɔnɔ.",
+          "fulfulde": "Ko e waktuuji tati"
+        },
+        {
+          "fr": "Cinq minutes",
+          "en": "Five minutes",
+          "moore": "Sõng-y minit a nu.",
+          "dioula": "Dɔɔni o kɔ, a ye min kɛ.",
+          "fulfulde": "Ɗuurɗe jowi"
+        },
+        {
+          "fr": "Une semaine",
+          "en": "A week",
+          "moore": "Yaa semen a ye.",
+          "dioula": "Lɔgɔkun kelen kɔnɔ",
+          "fulfulde": "Fedde go'o"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "À quoi sert le Bagr ?",
+        "en": "What is the Bagr for?",
+        "moore": "Bõe yĩng tɩ Bagrã yaa sõma?",
+        "dioula": "O Bagr ye mun lo ye?",
+        "fulfulde": "Ngam ɗume Bagr woni?"
+      },
+      "options": [
+        {
+          "fr": "À transmettre le savoir",
+          "en": "To pass on knowledge",
+          "moore": "Sẽn na yɩl n bãng bũmb ninsã",
+          "dioula": "Ka lɔnniya di mɔgɔ ma",
+          "fulfulde": "Ngam hokkude anndal"
+        },
+        {
+          "fr": "À faire rire",
+          "en": "To make people laugh",
+          "moore": "Sẽn na yɩl n kɩt tɩ nebã yãgs-yã",
+          "dioula": "Ka mɔgɔ bila yɛlɛko la",
+          "fulfulde": "Ngam waɗugo yimɓe ɓe ngaɗi nyiwre"
+        },
+        {
+          "fr": "À vendre au marché",
+          "en": "To sell at market",
+          "moore": "B sẽn na n koosd-a wã yaa:",
+          "dioula": "Ka feere lɔgɔfiyɛ la",
+          "fulfulde": "To jaaynde to soklaare"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "initiation",
+      "lang": "fr",
+      "def": {
+        "fr": "Ensemble de rites par lesquels on reçoit un savoir et l'on entre dans un nouveau groupe.",
+        "en": "A set of rites through which one receives knowledge and enters a new group.",
+        "moore": "Yaa tʋʋm-noy sẽn kɩtd tɩ ned paamd bãngr la a kẽed sull paalga pʋgẽ.",
+        "dioula": "O ye koo dɔw kɛ walisa ka mɔgɔw kalan ani k'u don jɛnkulu kura dɔ kɔnɔ.",
+        "fulfulde": "Ɗuum ko jokkondiral ngal neɗɗo heɓata anndal e hawtaade nder goomu keso."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après les travaux d'Alexis B. Tengan sur le Bagr dagara (« The Art of Mythical Composition and Narration », « Mythical Narratives in Ritual », Peter Lang), dont le Bagr noir est décrit comme l'un des plus longs récits oraux d'Afrique. Évocation très simplifiée, sans révéler le contenu initiatique.",
+    "en": "Based on Alexis B. Tengan's work on the Dagara Bagr (\"The Art of Mythical Composition and Narration\", \"Mythical Narratives in Ritual\", Peter Lang), whose Black Bagr is described as one of Africa's longest oral narratives. A very simplified evocation that does not reveal initiatory content."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

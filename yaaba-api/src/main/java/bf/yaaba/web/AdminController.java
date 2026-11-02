@@ -9,6 +9,8 @@ import bf.yaaba.web.Dto.AudioView;
 import bf.yaaba.web.Dto.CommentView;
 import bf.yaaba.web.Dto.ContributionView;
 import bf.yaaba.web.Dto.DashboardView;
+import bf.yaaba.web.Dto.MediaView;
+import bf.yaaba.web.Dto.PageView;
 import bf.yaaba.web.Dto.ReviewRequest;
 import bf.yaaba.web.Dto.StatsView;
 import bf.yaaba.web.Dto.UserView;
@@ -66,8 +68,11 @@ public class AdminController {
     /* ---------------------------------------------------- contributions */
 
     @GetMapping("/contributions")
-    public List<ContributionView> list() {
-        return contributions.list();
+    @Operation(summary = "Contributions paginées : statut (PENDING, APPROVED, REJECTED, ALL), recherche, tri « champ,asc|desc »")
+    public PageView<ContributionView> list(@RequestParam(defaultValue = "ALL") String status, @RequestParam(defaultValue = "") String q,
+                                           @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size,
+                                           @RequestParam(required = false) String sort) {
+        return contributions.page(status, q, page, size, sort);
     }
 
     @PostMapping("/contributions/{id}/approve")
@@ -90,8 +95,11 @@ public class AdminController {
     /* ------------------------------------------------------------ contes */
 
     @GetMapping("/tales")
-    public List<Map<String, Object>> tales() {
-        return tales.adminList();
+    @Operation(summary = "Contes paginés (recherche, origine, tri ; du plus récent au plus ancien par défaut)")
+    public PageView<Map<String, Object>> tales(@RequestParam(defaultValue = "") String q, @RequestParam(defaultValue = "") String origin,
+                                               @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size,
+                                               @RequestParam(required = false) String sort) {
+        return tales.adminPage(q, origin, page, size, sort);
     }
 
     @GetMapping("/tales/{slug}")
@@ -124,9 +132,17 @@ public class AdminController {
 
     @PostMapping(value = "/tales/{slug}/audio", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
+    @Operation(summary = "Ajouter une voix à un paragraphe (sceneId) du conte")
     public AudioView addAudio(@PathVariable String slug, @RequestParam String lang, @RequestParam String narrator,
-                              @RequestPart("audio") MultipartFile audio) {
-        return tales.addAudio(slug, lang, narrator.strip(), audio);
+                              @RequestParam(required = false) String sceneId, @RequestPart("audio") MultipartFile audio) {
+        return tales.addAudio(slug, sceneId, lang, narrator, audio);
+    }
+
+    @PostMapping(value = "/media/video", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @ResponseStatus(HttpStatus.CREATED)
+    @Operation(summary = "Téléverser la vidéo d'un paragraphe (mp4, webm, ogv ; 10 Mo maximum)")
+    public MediaView uploadVideo(@RequestPart("video") MultipartFile video) {
+        return tales.uploadVideo(video);
     }
 
     @DeleteMapping("/audio/{id}")
@@ -138,8 +154,10 @@ public class AdminController {
     /* ------------------------------------------------------ commentaires */
 
     @GetMapping("/comments")
-    public List<CommentView> comments() {
-        return comments.all();
+    public PageView<CommentView> comments(@RequestParam(defaultValue = "ALL") String status, @RequestParam(defaultValue = "") String q,
+                                          @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size,
+                                          @RequestParam(required = false) String sort) {
+        return comments.page(status, q, page, size, sort);
     }
 
     @PatchMapping("/comments/{id}")
@@ -150,8 +168,9 @@ public class AdminController {
     /* ------------------------------------------------------ utilisateurs */
 
     @GetMapping("/users")
-    public List<Map<String, Object>> users() {
-        return dashboard.users();
+    public PageView<Map<String, Object>> users(@RequestParam(defaultValue = "") String q, @RequestParam(defaultValue = "0") int page,
+                                               @RequestParam(defaultValue = "10") int size, @RequestParam(required = false) String sort) {
+        return dashboard.usersPage(q, page, size, sort);
     }
 
     @PatchMapping("/users/{id}")

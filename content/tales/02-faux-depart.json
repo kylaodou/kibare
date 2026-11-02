@@ -1,7 +1,7 @@
 {
   "slug": "faux-depart",
   "type": "recit",
-  "region": "centre",
+  "region": "kadiogo",
   "place": "Ouagadougou",
   "coords": [
     12.37,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "faux-depart-p1",
       "art": {
         "sky": "dawn",
         "ground": "village",
@@ -70,7 +71,7 @@
           {
             "k": "man",
             "x": 18,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "man",
@@ -97,6 +98,7 @@
       }
     },
     {
+      "id": "faux-depart-p2",
       "art": {
         "sky": "dawn",
         "ground": "village",
@@ -133,6 +135,7 @@
       }
     },
     {
+      "id": "faux-depart-p3",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -156,7 +159,7 @@
           {
             "k": "man-talk",
             "x": 36,
-            "c": "#00894A",
+            "c": "#C9822B",
             "flip": true
           },
           {
@@ -215,6 +218,7 @@
       }
     },
     {
+      "id": "faux-depart-p4",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -243,7 +247,7 @@
           {
             "k": "man",
             "x": 78,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "drum",
@@ -260,6 +264,7 @@
       }
     },
     {
+      "id": "faux-depart-p5",
       "art": {
         "sky": "dawn",
         "ground": "village",
@@ -296,7 +301,7 @@
           {
             "k": "man",
             "x": 70,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "woman",
@@ -306,7 +311,7 @@
           {
             "k": "child",
             "x": 86,
-            "c": "#00894A"
+            "c": "#C9822B"
           }
         ]
       },
@@ -325,7 +330,7 @@
         "fr": "Quel jour a lieu la cérémonie du faux départ ?",
         "en": "On which day does the false departure ceremony take place?",
         "moore": "Yʋʋmd bʋ-bʋs la b maand zãmbã?",
-        "dioula": "Mɔgɔ minw be bɔ Babilonɛ, olu ka ɲi k'u yɛrɛkun di Jehova ma loon juman?",
+        "dioula": "Mɔgɔ minw tun b'a fɛ ka bɔ Babilonɛ, u tun b'o kɛ loon juman lo la?",
         "fulfulde": "Nder nyalaande nde juulde fowteteende nden waɗata?"
       },
       "options": [

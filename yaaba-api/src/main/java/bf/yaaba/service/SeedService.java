@@ -28,8 +28,13 @@ public class SeedService implements ApplicationRunner {
     private final TaleRepository tales;
     private final ReferenceRepository references;
     private final ObjectMapper mapper;
+    private final TaleService taleService;
+    private final bf.yaaba.repo.Repositories.UserRepository userRepository;
 
-    public SeedService(TaleRepository tales, ReferenceRepository references, ObjectMapper mapper) {
+    public SeedService(TaleRepository tales, ReferenceRepository references, ObjectMapper mapper, TaleService taleService,
+                       bf.yaaba.repo.Repositories.UserRepository userRepository) {
+        this.userRepository = userRepository;
+        this.taleService = taleService;
         this.tales = tales;
         this.references = references;
         this.mapper = mapper;
@@ -48,6 +53,7 @@ public class SeedService implements ApplicationRunner {
             t.setPlace(node.path("place").asText());
             t.setPeople(node.path("people").asText());
             t.setLanguage(node.path("language").asText());
+            t.setTitle(node.path("i18n").path("fr").path("title").asText(slug));
             t.setLatitude(node.path("coords").path(0).asDouble());
             t.setLongitude(node.path("coords").path(1).asDouble());
             t.setDuration(node.path("duration").asInt());
@@ -57,6 +63,14 @@ public class SeedService implements ApplicationRunner {
             t.setContent(mapper.writeValueAsString(node));
             tales.save(t);
         }
+        tales.flush();
+        // comptes Google créés avant le 2 nov. 2026 : signalés sans mot de passe (lien « choisir mon mot de passe » proposé)
+        int google = userRepository.markGoogleWithoutPassword(java.time.Instant.parse("2026-11-01T00:00:00Z"));
+        if (google > 0) log.info("{} compte(s) Google sans mot de passe signalé(s)", google);
+        int expanded = taleService.expandLegacyTracks();
+        if (expanded > 0) log.info("{} voix communautaires rattachées à leurs paragraphes", expanded);
+        // contes créés dans l'éditeur avant l'ajout de la colonne titre
+        for (Tale t : tales.findAll()) if (t.getTitle() == null || t.getTitle().isBlank()) taleService.refreshTitle(t);
         seedReferences("seed/regions.json", Reference.Kind.REGION);
         seedReferences("seed/languages.json", Reference.Kind.LANGUAGE);
         log.info("Contenu chargé : {} contes, {} régions, {} langues", tales.count(),
@@ -65,9 +79,16 @@ public class SeedService implements ApplicationRunner {
 
     private void seedReferences(String path, Reference.Kind kind) throws IOException {
         int position = 0;
+        java.util.Set<String> codes = new java.util.HashSet<>();
         for (JsonNode node : read(path)) {
-            references.save(new Reference(kind, node.get("code").asText(), position++, mapper.writeValueAsString(node)));
+            String code = node.get("code").asText();
+            codes.add(code);
+            references.save(new Reference(kind, code, position++, mapper.writeValueAsString(node)));
         }
+        // les entrées disparues du contenu (ex. les 13 anciennes régions) sont retirées
+        references.findByKindOrderByPositionAsc(kind).stream()
+                .filter(r -> !codes.contains(r.getCode()))
+                .forEach(references::delete);
     }
 
     private JsonNode read(String path) throws IOException {

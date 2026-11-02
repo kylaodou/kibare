@@ -1,0 +1,328 @@
+{
+  "slug": "les-bissa-et-les-arachides",
+  "type": "conte",
+  "region": "nakambe",
+  "place": "Garango",
+  "coords": [
+    11.8,
+    -0.55
+  ],
+  "people": "Bissa",
+  "language": "bissa",
+  "duration": 4,
+  "age": 6,
+  "featured": false,
+  "cover": 2,
+  "tags": [
+    "parenté à plaisanterie",
+    "arachide",
+    "paix",
+    "humour"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Les Bissa et les arachides",
+      "subtitle": "Une parenté pour rire",
+      "summary": "Entre Bissa et Gourounsi, on se taquine sans jamais se fâcher : ce sont des « parents à plaisanterie ». Tout commence, dit-on, par une affaire d'arachides.",
+      "moral": "Rire ensemble plutôt que se battre : c'est ainsi que les peuples se gardent en paix."
+    },
+    "en": {
+      "title": "The Bissa and the Groundnuts",
+      "subtitle": "A kinship for laughing",
+      "summary": "Between the Bissa and the Gurunsi, people tease each other without ever taking offence: they are \"joking relatives\". It all began, they say, with a matter of groundnuts.",
+      "moral": "Laughing together rather than fighting: that is how peoples keep the peace."
+    },
+    "moore": {
+      "title": "Bissa wã ne b sẽn boond tɩ no-rɩsã",
+      "subtitle": "D sẽn yaa saam-biis nins sẽn na n yãgd nebã wã",
+      "summary": "Bissa ne Gurunsi sʋka, nebã sã n wa namsd taaba, b pa maand-b wẽng ye. B yetame tɩ b sɩngame ne bũmb sẽn yaa wa n sãam tẽngã.",
+      "moral": "Neb nins sẽn yãgd taab n da zabd ne taaba, yaa woto la b maand laafɩ."
+    },
+    "dioula": {
+      "title": "Bissa ani ɲɔkisɛw",
+      "subtitle": "Mɔgɔ minw be yɛlɛ ɲɔgɔn fɛ, olu ka ɲi ka kɛ mɔgɔ dɔw ye.",
+      "summary": "Bissaw ni Gurunsiw cɛ, mɔgɔw be ɲɔgɔn lɔgɔbɔ u ma: \"U ye dusukasiko kɛbagaw lo ye\". U b'a fɔ ko koo bɛɛ daminɛna ni sɛnɛfɛn dɔw ye.",
+      "moral": "Mɔgɔw bɛ yɛlɛ ɲɔgɔn fɛ, ka to ka ɲɔgɔn lajɛn, o tɛ kɛrɛ kɛ. O le ye hɛra sabati mɔgɔw cɛ ra."
+    },
+    "fulfulde": {
+      "title": "Bissa e geese",
+      "subtitle": "Duuɗal ngam ɓe njetta",
+      "summary": "Hakkunde Bissa e Gurunsi, yimɓe ɗon ɓocca bee maɓɓe ɓe ngalaa ko haani: \"ko'e maɓɓe ɓe laatii ardiiɓe\". Ɓe mbiyi fuu fuɗɗii e haala njamndi.",
+      "moral": "Yimɓe ɗon njanngina jam, ɓe ɗon nyi'a bee maɓɓe."
+    }
+  },
+  "scenes": [
+    {
+      "id": "les-bissa-et-les-arachides-p1",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "woman-pound",
+            "x": 34,
+            "c": "#E69135"
+          },
+          {
+            "k": "sack",
+            "x": 54
+          },
+          {
+            "k": "field",
+            "x": 76,
+            "y": 20,
+            "s": 0.6
+          },
+          {
+            "k": "hut",
+            "x": 14,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les Bissa de Garango sont de grands cultivateurs d'arachides. On dit qu'ils en mangent matin, midi et soir, grillées, en pâte ou en sauce. Leurs voisins gourounsi s'en amusaient beaucoup.",
+        "en": "The Bissa of Garango are great groundnut farmers. People say they eat them morning, noon and night, roasted, as paste or in sauce. Their Gurunsi neighbours found this very amusing.",
+        "moore": "Bissa sẽn be Garango wã yaa gãndb sẽn maand n dɩt no-rɩsdã. Nebã yetame tɩ b rɩta-b rũnna, wĩntoog la yʋngo. B dɩt-b lame, b kõ-b-la peend bɩ sobg pʋgẽ. B naab a taabã sẽn yaa Gurunsi wã ra tagsdame tɩ rẽ noom-b lame.",
+        "dioula": "Garango ka Bissaw ye sɛnɛkɛlaw ye minw be dugukolo ɲagaminin kɛ. Mɔgɔw b'a fɔ ko u be dumuni kɛ sɔgɔma, tilefɛ ani suu fɛ. U ye o dumu k'o tobi, ka to ka nɔɔni wala ka don a la. U sigiɲɔgɔnw tun b'o koo ɲɔgɔn kɛ.",
+        "fulfulde": "Bissa'en Garango ɗonno ɓe mbaadi marɓe njanngu. Yimɓe mbi'i ɓe nyaama ɗe subaka, noon e jemma, ɓanngina, bana paste malla nder salsa. Gooti maɓɓe Gurunsi tawi ɗum haani."
+      }
+    },
+    {
+      "id": "les-bissa-et-les-arachides-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "village",
+        "items": [
+          {
+            "k": "man-point",
+            "x": 30,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "man-talk",
+            "x": 56,
+            "c": "#7C3109",
+            "flip": true
+          },
+          {
+            "k": "sack",
+            "x": 44
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un jour, un Gourounsi lança à un Bissa : « Toi, tu as plus d'arachides dans le ventre que de cervelle ! » Le Bissa répliqua aussitôt : « Et toi, tu n'as même pas d'arachides pour nourrir la tienne ! » La foule retint son souffle.",
+        "en": "One day a Gurunsi called out to a Bissa: \"You've got more groundnuts in your belly than brains in your head!\" The Bissa shot back: \"And you don't even have groundnuts to feed yours!\" The crowd held its breath.",
+        "moore": "Daar a ye, Gurunsi n yeel Bissa: \"Yãmb pʋgẽ wã yaa bĩng wʋsg n yɩɩd y zugã!\" A Bissa leokame tɩ: \"Yẽ me ka tar bĩng n na n dɩ yãmbã ye\". Neb kʋʋngã ra pa tol n basd b sɩɩgã.",
+        "dioula": "Loon dɔ, Gurunsi dɔ y'a fɔ Bissa ye ko: \"I kɔnɔna ɲamaɲama ka ca n'i hakili ta ye!\" A y'u jaabi ko: \"Aw yɛrɛ tɛ se k'aw ka ɲamaɲamaw dumu\". Jama tora ka fiɲɛ bɔ.",
+        "fulfulde": "Gooto nyalnde go'o Gurunsi noddi Bissa: \"O woodi ɓurɗe njaru nder reedu ma, sey ɓure ɓurna nder hoore ma!\" Bissa wi'i: \"E on walaa kadi njaru ngam nyaamugo mooɗon!\" Yimɓe ɗon mbaɗi numma."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va-t-il se passer ?",
+          "en": "What will happen?",
+          "moore": "Bõe n na n maane?",
+          "dioula": "Mun lo bena kɛ?",
+          "fulfulde": "Ko ɗume waɗata?"
+        },
+        "options": [
+          {
+            "fr": "Ils vont éclater de rire",
+            "en": "They'll burst out laughing",
+            "moore": "B na n yãaga b mense.",
+            "dioula": "U bena yɛlɛko ka bɔ yen.",
+            "fulfulde": "Ɓe ɗon maɓɓito bee nyi'e"
+          },
+          {
+            "fr": "Ils vont se battre",
+            "en": "They'll fight",
+            "moore": "B na n zabame.",
+            "dioula": "U bena kɛlɛ kɛ.",
+            "fulfulde": "Ɓe haɓan."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Les deux hommes se regardèrent… et éclatèrent de rire.",
+          "en": "The two men looked at each other… and burst out laughing.",
+          "moore": "B ra geta taab neere. La b yãaga taab n na n sega.",
+          "dioula": "Cɛɛ fila nunu y'u ɲɛɛ sin ɲɔgɔn ma. O kɔ, u yɛlɛla.",
+          "fulfulde": "Yimɓe ɗiɗo ɓe ndaari hakkunde maɓɓe... nden ɓe njetti."
+        }
+      }
+    },
+    {
+      "id": "les-bissa-et-les-arachides-p3",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 260
+          },
+          {
+            "k": "man-up",
+            "x": 30,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "man-up",
+            "x": 46,
+            "c": "#7C3109"
+          },
+          {
+            "k": "calabash",
+            "x": 60
+          },
+          {
+            "k": "elder",
+            "x": 76
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les anciens en firent une règle : entre Bissa et Gourounsi, on a le droit de se taquiner, mais on n'a pas le droit de se fâcher, ni de se faire du mal. Si l'un est en difficulté, l'autre doit l'aider.",
+        "en": "The elders made it a rule: between Bissa and Gurunsi, teasing is allowed, but getting angry or harming each other is not. If one is in trouble, the other must help.",
+        "moore": "Kãsem dãmbã yãka noy tɩ b yeel Bissa ne Gurunsi sʋka, b sak n da basd-b tɩ b wa maan wẽnga. La pa rẽ bɩ b kisg taab ye. Ned sã n wa tar zu-loees, a to segd n sõnga yẽnda.",
+        "dioula": "Diinan mɔgɔkɔrɔw y'a latigɛ ko Bissa ni Gurunsi ka ɲɔgɔn lɔgɔbɔ. Nka, u tɛ se k'u dimi wala k'u mɔgɔɲɔgɔn tɔɔrɔ. Ni dɔ be gwɛlɛya la, a ka ɲi k'a tɔɲɔgɔn dɛmɛ.",
+        "fulfulde": "Mawɓe ɓe waɗi ɗum kaala: hakkunde Bissa e Gurunsi, haɓɓugo ko'e maɓɓe yaawata, amma ɓeydaade masin koo woonduki bee goɗɗum. To go'oto ɗon nder caɗeele, goɗɗo boo sey wallu."
+      }
+    },
+    {
+      "id": "les-bissa-et-les-arachides-p4",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "child-up",
+            "x": 30
+          },
+          {
+            "k": "child",
+            "x": 42,
+            "c": "#C9822B"
+          },
+          {
+            "k": "sack",
+            "x": 56
+          },
+          {
+            "k": "woman",
+            "x": 72
+          }
+        ]
+      },
+      "text": {
+        "fr": "Aujourd'hui encore, quand un Bissa rencontre un Gourounsi, les plaisanteries sur les arachides fusent. C'est la parenté à plaisanterie, une tradition burkinabè qui aide à désamorcer les conflits par le rire.",
+        "en": "To this day, when a Bissa meets a Gurunsi, groundnut jokes fly. This is the joking kinship, a Burkinabè tradition that helps defuse conflicts through laughter.",
+        "moore": "Hal tɩ ta rũndã, b sã n wa yãend a Bissa ne a Gurunsi, b pa le maand zak ye. Yaa woto la b sẽn gomd ne taab n wẽed burkĩna wã, tɩ kɩtd tɩ nebã pa le zabd ne taaba.",
+        "dioula": "Hali bi, ni Bissa ye Gurunsi kunbɛn, o be kɛ sababu ye u b'u lɔgɔbɔ. O ye lɔgɔbɔli ye, Burkina Faso ka landa dɔ lo min be se k'an dɛmɛ an kana bɛnbaliya bila ɲɔgɔn na yɛlɛko sababu fɛ.",
+        "fulfulde": "Haa hande, to Bissa tokkii Gurunsi, jokes dow njamndi ɗon maɓɓata. Ɗuum woni joking kinship, aadaaji Burkinabè je walli ngam hallude hawtaade bee seɗɗa."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "De quoi se moquent les Gourounsi ?",
+        "en": "What do the Gurunsi tease about?",
+        "moore": "Bõe yell la Gurunsi rãmbã gomd?",
+        "dioula": "Mun lo kama u be kuma?",
+        "fulfulde": "Ko honɗun Gurunsi'en ɗon haɗi?"
+      },
+      "options": [
+        {
+          "fr": "Des arachides des Bissa",
+          "en": "The Bissa's groundnuts",
+          "moore": "Bissa wã sẽn da wa n dɩt-b la b rɩta.",
+          "dioula": "Bissa ka sɛnɛkɛminanw",
+          "fulfulde": "Bissa'en njamndi"
+        },
+        {
+          "fr": "De leurs chevaux",
+          "en": "Their horses",
+          "moore": "B wed-rãmbã",
+          "dioula": "U ka soow",
+          "fulfulde": "Ko'e maɓɓe"
+        },
+        {
+          "fr": "De leurs maisons",
+          "en": "Their houses",
+          "moore": "B zagsã pʋsẽ",
+          "dioula": "U ka soow la.",
+          "fulfulde": "Duuɗe maɓɓe"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Quelle est la règle de la parenté à plaisanterie ?",
+        "en": "What is the rule of joking kinship?",
+        "moore": "Bõe n wilgd tɩ yaa zak-rãmb la b sẽn gomd to-to wã?",
+        "dioula": "Mun lo be kɛ teriya koo la?",
+        "fulfulde": "Ko honɗun woni sariyaaji jokkugol?"
+      },
+      "options": [
+        {
+          "fr": "Se taquiner sans se fâcher",
+          "en": "Tease without getting angry",
+          "moore": "Ned sã n wa maan-a wẽnga, a pa basd t'a sũur sãam ye",
+          "dioula": "N'i diminin tɛ, i ka mɔgɔ dɔ nɛni",
+          "fulfulde": "Hokkaay ɓe ɓernde"
+        },
+        {
+          "fr": "Ne jamais se parler",
+          "en": "Never speak to each other",
+          "moore": "Da gom taab ye.",
+          "dioula": "Aw kana kuma ɲɔgɔn fɛ abada.",
+          "fulfulde": "Taa haalan bee goɗɗo"
+        },
+        {
+          "fr": "Se battre",
+          "en": "Fight",
+          "moore": "Kʋg-y y meng ne taaba",
+          "dioula": "Kɛlɛ kɛ",
+          "fulfulde": "Fuude e haɓugo"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "parenté à plaisanterie",
+      "lang": "fr",
+      "def": {
+        "fr": "Alliance entre peuples ou familles qui ont le droit de se moquer les uns des autres, à condition de ne jamais se fâcher.",
+        "en": "An alliance between peoples or families who may mock each other, on condition they never take offence.",
+        "moore": "Yaa neb sẽn na n maan taab yaalgo, b sã n pa sãamd b sũuri.",
+        "dioula": "Siya dɔw ni denbaya dɔ ka jɛnkulu lo. U be se k'u yɛrɛ lɔgɔbɔ ɲɔgɔn na, n'u m'a to mɔgɔ si k'u hakɛ ta.",
+        "fulfulde": "Ko'e yimɓe koo toɓɓe ɓe ɗon njogii, haa ɓe mbaawaay ɓaŋgude."
+      }
+    }
+  ],
+  "source": {
+    "fr": "La parenté à plaisanterie entre Bissa et Gourounsi, liée aux arachides, est rapportée notamment par Afrik.com. Mise en récit libre et simplifiée.",
+    "en": "The joking kinship between Bissa and Gurunsi, linked to groundnuts, is reported notably by Afrik.com. Free, simplified retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

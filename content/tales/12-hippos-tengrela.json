@@ -1,7 +1,7 @@
 {
   "slug": "les-hippopotames-de-tengrela",
   "type": "legende",
-  "region": "cascades",
+  "region": "tannounyan",
   "place": "Lac de Tengréla (Banfora)",
   "coords": [
     10.66,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "les-hippopotames-de-tengrela-p1",
       "art": {
         "sky": "dawn",
         "ground": "lake",
@@ -101,6 +102,7 @@
       }
     },
     {
+      "id": "les-hippopotames-de-tengrela-p2",
       "art": {
         "sky": "dusk",
         "ground": "lake",
@@ -188,6 +190,7 @@
       }
     },
     {
+      "id": "les-hippopotames-de-tengrela-p3",
       "art": {
         "sky": "dusk",
         "ground": "lake",
@@ -226,6 +229,7 @@
       }
     },
     {
+      "id": "les-hippopotames-de-tengrela-p4",
       "art": {
         "sky": "day",
         "ground": "lake",
@@ -245,7 +249,7 @@
             "k": "man-up",
             "x": 40,
             "y": 4,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "hippo",
@@ -268,6 +272,7 @@
       }
     },
     {
+      "id": "les-hippopotames-de-tengrela-p5",
       "art": {
         "sky": "day",
         "ground": "lake",

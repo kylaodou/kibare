@@ -31,7 +31,7 @@ export const SKIES: Record<Sky, Palette> = {
 /* Couleurs fixes des objets (la teinte de nuit/crépuscule est appliquée par-dessus). */
 export const C = {
   red: '#D62828',
-  green: '#00894A',
+  green: '#C9822B',
   yellow: '#FCD116',
   indigo: '#2F3E6B',
   white: '#F4EFE6',
@@ -1018,6 +1018,55 @@ function sack(): string {
   ].join('');
 }
 
+function bat(): string {
+  const c = '#4A3B36';
+  return [
+    path('M0,-30 Q-14,-44 -34,-40 Q-28,-34 -30,-28 Q-22,-32 -18,-26 Q-12,-30 0,-22Z', c),
+    path('M0,-30 Q14,-44 34,-40 Q28,-34 30,-28 Q22,-32 18,-26 Q12,-30 0,-22Z', c),
+    circle(0, -28, 6, c),
+    path('M-4,-33 L-6,-40 L-1,-34Z M4,-33 L6,-40 L1,-34Z', c),
+    circle(-2, -29, 1, '#F4E6A8') + circle(2, -29, 1, '#F4E6A8'),
+  ].join('');
+}
+
+function camel(): string {
+  const c = '#C9A06A';
+  const d = '#A9824F';
+  return [
+    stroke('M-22,-34 L-24,0 M-12,-34 L-12,0 M14,-34 L14,0 M24,-34 L26,0', d, 5),
+    path('M-30,-38 Q-30,-56 -14,-58 Q-6,-76 4,-58 Q14,-56 26,-44 Q30,-36 22,-30 L-24,-30 Q-32,-32 -30,-38Z', c),
+    path('M24,-44 Q36,-58 38,-80 Q40,-88 48,-86 Q56,-84 54,-76 L46,-74 Q44,-56 32,-38Z', c),
+    circle(49, -82, 1.3, C.ink),
+    path('M-6,-60 Q4,-66 12,-58 L8,-50 L-4,-52Z', C.red),
+    path('M-2,-56 L10,-56', C.yellow),
+  ].join('');
+}
+
+function antelope(): string {
+  const c = '#B87A45';
+  const w = '#F4EFE6';
+  return [
+    stroke('M-16,-30 L-18,0 M-8,-30 L-8,0 M10,-30 L11,0 M18,-30 L20,0', c, 3),
+    path('M-24,-34 Q-22,-46 -6,-46 L16,-46 Q26,-44 26,-34 Q24,-26 14,-26 L-16,-26 Q-26,-26 -24,-34Z', c),
+    path('M-14,-30 Q0,-24 14,-30 L14,-26 L-14,-26Z', w),
+    path('M20,-44 Q28,-58 34,-60 Q40,-58 38,-50 Q34,-44 26,-38Z', c),
+    stroke('M32,-60 Q30,-76 22,-86 M36,-60 Q38,-76 32,-88', '#3B2A1E', 2.2),
+    circle(34, -54, 1.3, C.ink),
+    path('M-24,-36 L-30,-30 L-26,-28Z', c),
+  ].join('');
+}
+
+function lizard(): string {
+  const body = '#8A6E5A';
+  return [
+    stroke('M-30,-4 Q-20,-10 -8,-6', body, 4),
+    path('M-10,-4 Q-6,-12 6,-12 Q16,-12 18,-6 Q16,-2 6,-2 Q-6,-2 -10,-4Z', body),
+    path('M16,-10 Q26,-16 30,-10 Q28,-4 18,-4Z', '#E69135'),
+    circle(25, -10, 1.2, C.ink),
+    stroke('M-4,-4 L-8,2 M8,-4 L10,2 M-2,-10 L-6,-16 M10,-11 L12,-17', body, 2),
+  ].join('');
+}
+
 function partridge(): string {
   return [
     path('M-14,-8 Q-16,-22 0,-24 Q14,-24 16,-14 Q14,-4 0,-4 Q-12,-4 -14,-8Z', '#8D7357'),
@@ -1158,6 +1207,10 @@ export const ITEMS: Record<string, ItemDef> = {
   'old-woman': { draw: (_p, it) => oldWoman(it), anim: 'a-breathe' },
   partridge: { draw: partridge, anim: 'a-peck' },
   tortoise: { draw: tortoise, anim: 'a-breathe' },
+  bat: { draw: bat, anim: 'a-fly' },
+  camel: { draw: camel, anim: 'a-breathe' },
+  antelope: { draw: antelope, anim: 'a-hop' },
+  lizard: { draw: lizard, anim: 'a-peck' },
   'guinea-fowl': { draw: guineaFowl, anim: 'a-peck' },
   owl: { draw: owl, anim: 'a-breathe' },
   mouse: { draw: mouse, anim: 'a-hop' },

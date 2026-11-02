@@ -43,6 +43,22 @@ public class User {
     @Column(length = 400)
     private String bio;
 
+    /** null = compte créé avant la vérification des e-mails (considéré comme vérifié) */
+    private Boolean emailVerified;
+
+    /** identifiant Google (« sub ») quand le compte est lié à Google */
+    @Column(length = 64, unique = true)
+    private String googleId;
+
+    public String getGoogleId() { return googleId; }
+    public void setGoogleId(String googleId) { this.googleId = googleId; }
+
+    /** empreinte du jeton de vérification envoyé par e-mail (jamais le jeton lui-même) */
+    @Column(length = 64)
+    private String verifyTokenHash;
+
+    private Instant verifyExpiresAt;
+
     private boolean active = true;
     private Instant createdAt = Instant.now();
     private Instant lastLoginAt;
@@ -67,4 +83,17 @@ public class User {
     public Instant getCreatedAt() { return createdAt; }
     public Instant getLastLoginAt() { return lastLoginAt; }
     public void setLastLoginAt(Instant lastLoginAt) { this.lastLoginAt = lastLoginAt; }
+
+    public boolean isEmailVerified() { return emailVerified == null || emailVerified; }
+
+    /** false : compte créé avec Google, aucun mot de passe choisi (null = ancien compte, mot de passe défini) */
+    private Boolean passwordSet;
+
+    public boolean hasPassword() { return passwordSet == null || passwordSet; }
+    public void setPasswordSet(Boolean passwordSet) { this.passwordSet = passwordSet; }
+    public void setEmailVerified(Boolean emailVerified) { this.emailVerified = emailVerified; }
+    public String getVerifyTokenHash() { return verifyTokenHash; }
+    public void setVerifyTokenHash(String verifyTokenHash) { this.verifyTokenHash = verifyTokenHash; }
+    public Instant getVerifyExpiresAt() { return verifyExpiresAt; }
+    public void setVerifyExpiresAt(Instant verifyExpiresAt) { this.verifyExpiresAt = verifyExpiresAt; }
 }

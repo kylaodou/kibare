@@ -1,0 +1,326 @@
+{
+  "slug": "le-margouillat-qui-ne-savait-pas-dire-non",
+  "type": "conte",
+  "region": "guiriko",
+  "place": "Houndé",
+  "coords": [
+    11.5,
+    -3.52
+  ],
+  "people": "Bwaba",
+  "language": "dioula",
+  "duration": 3,
+  "age": 4,
+  "featured": false,
+  "cover": 1,
+  "tags": [
+    "animaux",
+    "pourquoi",
+    "franchise",
+    "humour"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le margouillat qui ne savait pas dire non",
+      "subtitle": "Pourquoi il hoche la tête",
+      "summary": "Le margouillat voulait plaire à tout le monde et répondait « oui » à chacun. Jusqu'au jour où ses promesses se sont retournées contre lui.",
+      "moral": "Savoir dire non avec respect vaut mieux que promettre ce qu'on ne peut pas tenir."
+    },
+    "en": {
+      "title": "The Lizard Who Couldn't Say No",
+      "subtitle": "Why it nods its head",
+      "summary": "The lizard wanted to please everyone and said \"yes\" to everybody. Until the day his promises turned against him.",
+      "moral": "Knowing how to say no respectfully is better than promising what you cannot deliver."
+    },
+    "moore": {
+      "title": "B sẽn pa tõe n yeel tɩ da-ye wã",
+      "subtitle": "Bõe yĩng t'a ningd a zug n kotẽ?",
+      "summary": "A ra ratame n maan sẽn noom nebã fãa, la a yeel-b lame tɩ yaa sɩda. Hal tɩ ta daar ning bãmb sẽn da kãab-bã wa n lebg wẽnga.",
+      "moral": "Y sã n bãng n yeel tɩ da-ye ne waoogre, yaa sõma n yɩɩd y sẽn na n pʋlem bũmb ning yãmb pa tõe n maan ye."
+    },
+    "dioula": {
+      "title": "Lɔnnikɛla min tun tɛ se k'a fɔ ko ayi",
+      "subtitle": "Mun na a be sinɔgɔ?",
+      "summary": "A tun b'a fɛ ka mɔgɔ bɛɛ diya ani a y'a fɔ u bɛɛ ye ko ɔnhɔn. fɔ lon min na a ka layiduw yɛlɛmana k'a sɔrɔ a tun ma sɔn.",
+      "moral": "N'i b'a lɔn i be se k'i daa di koo dɔ la min tɛ se ka dafa, o ka fisa n'i ye banba."
+    },
+    "fulfulde": {
+      "title": "Laruɗo mo Waawataa Wondugo Naa'o",
+      "subtitle": "Ngam ɗume o ɗon ɓuwa hoore maako?",
+      "summary": "Laruwol ngol yiɗi ɓernde yimɓe fuu e wi'i \"eego\" to ɓe fuu. Haray nyalnde alkawal maako wurtini mo.",
+      "moral": "Hono anndugo no mbi'aay naa nder daraja ɓuri habaruɗum ko mbaawataa waɗuki."
+    }
+  },
+  "scenes": [
+    {
+      "id": "le-margouillat-qui-ne-savait-pas-dire-non-p1",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "lizard",
+            "x": 46,
+            "y": 10,
+            "s": 1.6
+          },
+          {
+            "k": "hut",
+            "x": 20,
+            "y": 26
+          },
+          {
+            "k": "granary",
+            "x": 74,
+            "y": 24,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "Autrefois, le margouillat était l'ami de tous. Quand quelqu'un lui demandait un service, il répondait toujours : « Oui, oui, bien sûr ! » Il avait peur de fâcher les autres.",
+        "en": "Long ago, the lizard was everyone's friend. Whenever someone asked him a favour, he always answered: \"Yes, yes, of course!\" He was afraid of upsetting anyone.",
+        "moore": "Sẽn deng pĩnd wẽndẽ, ra-rɩtã ra yaa ned kam fãa zoa. Ned sã n da kos-a t'a maan bũmb a to yĩnga, a ra leokda woto: \"Wẽnnaam yaa sɩda!\"",
+        "dioula": "A saan tɛmɛninw na, nugunin tun ye mɔgɔ bɛɛ teri ye. Ni mɔgɔ dɔ tun b'a fɛ k'ale dɛmɛ, a tun b'o lo fɔ tuma bɛɛ. A tun be siran ko n'a sɔrɔ o bena mɔgɔ wɛrɛ dusu tiɲɛ.",
+        "fulfulde": "Wakkati ɗuɗɗi, ɓaleere nden woni boowo yimɓe fuu. To goɗɗo ƴami mo ngam waɗugo ko yiɗi, o wi'i: \"Ee, ee, e woodi!\" O hulni yamɗitingo."
+      }
+    },
+    {
+      "id": "le-margouillat-qui-ne-savait-pas-dire-non-p2",
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "lizard",
+            "x": 40,
+            "y": 6,
+            "s": 1.4
+          },
+          {
+            "k": "hare",
+            "x": 22
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 60,
+            "s": 1.2
+          },
+          {
+            "k": "tortoise",
+            "x": 78
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le lièvre lui demanda de garder ses arachides, la pintade de surveiller ses œufs, la tortue de l'aider à cultiver son champ. Le même jour, à la même heure ! Le margouillat dit oui à tous.",
+        "en": "The hare asked him to look after his groundnuts, the guinea fowl to watch her eggs, the tortoise to help farm his field. The same day, at the same time! The lizard said yes to all of them.",
+        "moore": "A Zĩigã kosa a Poll t'a ges a no-rãmba yelle, la a Gʋniid piisẽ n get a yumse. La a Tɛrtiizã ra kotame tɩ b sõng-a t'a bɩɩs pʋʋgẽ wã. Yaa daar a yembre, wakat a ye! A Zezi ra yeela b fãa tɩ yaa sɩda.",
+        "dioula": "A tun b'a fɛ a ka sɛnɛ kɛ. O kɔ, a y'a fɔ a ye ko a k'a janto a ka suman na. O loon kelen na, o wagati yɛrɛ la! Lɔnnikɛla y'a fɔ u bɛɛ ye ko ɔnhɔn.",
+        "fulfulde": "Laru wi'i mo ngam o hoo'a bee njamu maako, ɓanndu guinea ngam o hoolo beɗi mum, tortugo ngam o walli nder gese maako. Nder nyalnde go'o, nder wakkati go'o! Laruɗo on wi'i ɓe fuu eego."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va-t-il se passer ?",
+          "en": "What will happen?",
+          "moore": "Bõe n na n maane?",
+          "dioula": "Mun lo bena kɛ?",
+          "fulfulde": "Ko ɗume waɗata?"
+        },
+        "options": [
+          {
+            "fr": "Il ne pourra tenir aucune promesse",
+            "en": "He won't keep any promise",
+            "moore": "A pa na n pids a pʋlemsã ye.",
+            "dioula": "A tɛ layidu si dafa.",
+            "fulfulde": "O waɗaay alkawal ngal."
+          },
+          {
+            "fr": "Tout ira bien",
+            "en": "All will be well",
+            "moore": "Bũmb fãa na n yɩɩ sõma.",
+            "dioula": "O bɛɛ bena kɛ a cogo la.",
+            "fulfulde": "Koo ɗume laatanay."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Il courut partout… et n'arriva nulle part à temps.",
+          "en": "He ran everywhere… and got nowhere in time.",
+          "moore": "A zoeega zĩig fãa... La b pa ta zĩig ye.",
+          "dioula": "A tun be boli yɔrɔ bɛɛ... O kɔ, a ma taga yɔrɔ si.",
+          "fulfulde": "O ɗon hoola dow fuu... nden ɓe njahi toonde wakkati."
+        }
+      }
+    },
+    {
+      "id": "le-margouillat-qui-ne-savait-pas-dire-non-p3",
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "lizard",
+            "x": 50,
+            "y": 6,
+            "s": 1.4
+          },
+          {
+            "k": "hare",
+            "x": 28,
+            "flip": true
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 70,
+            "s": 1.2,
+            "flip": true
+          },
+          {
+            "k": "tortoise",
+            "x": 84,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les singes mangèrent les arachides, le serpent goba les œufs, et le champ de la tortue resta en friche. Tous vinrent se plaindre. Le margouillat, honteux, ne savait plus que dire.",
+        "en": "The monkeys ate the groundnuts, the snake swallowed the eggs, and the tortoise's field lay fallow. Everyone came to complain. The ashamed lizard no longer knew what to say.",
+        "moore": "B rɩka b sãnemã, la we-raoogã dɩka a nin-bãmba. La yaa wa ne zĩm sẽn pa tar koom n kõ wã. B fãa wa n yẽgemda. A sẽn yãgd-a wã ra pa le mi a sẽn na n yeel bũmb ning ye.",
+        "dioula": "O kɔ, u ye bɔnw dumu. Sogo y'u ka faan nunu kunu. Mɔgɔw bɛɛ nana n'u ka ŋunuŋununa. O y'a sɔrɔ a tun tɛ se ka min fɔ.",
+        "fulfulde": "Wurooji nyaami njaru, kooka nyaami ɓuleeji, nden tooruji boo ɗon maaki. Yimɓe fuu ngari ngam ɓe nganndi. Laruɗo ɓerɗe maako ɗon nana ko o wi'a."
+      }
+    },
+    {
+      "id": "le-margouillat-qui-ne-savait-pas-dire-non-p4",
+      "art": {
+        "sky": "day",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "lizard",
+            "x": 46,
+            "y": 30,
+            "s": 1.6
+          },
+          {
+            "k": "rock",
+            "x": 46
+          },
+          {
+            "k": "bush",
+            "x": 80,
+            "y": 10
+          }
+        ]
+      },
+      "text": {
+        "fr": "Depuis ce jour, quand on lui parle, le margouillat hoche la tête de haut en bas, encore et encore, comme s'il disait oui… mais il ne promet plus rien. Il réfléchit, au soleil, sur son rocher.",
+        "en": "Since that day, when someone speaks to him, the lizard nods his head up and down, again and again, as if saying yes… but he no longer promises anything. He thinks it over, in the sun, on his rock.",
+        "moore": "Sẽn sɩng ne daar kãng, ned sã n gomd ne-a wã, a gãda a zug n zẽkd n lebgd tẽngre. A ra yetame tɩ yaa sɩda. La a pa le pʋlemd bũmb ye. A tagsdame tɩ yaa wĩntoog la a pĩig zugu.",
+        "dioula": "Kabi o loon na, ni mɔgɔ dɔ kumana a fɛ, safinɛ b'a kuun sin sanfɛ ani duguma. Tuma caaman na, i n'a fɔ a be sɔn. Nka a tɛ foyi fɔ tugun. A be miiri o la, tile kɔnɔ ani a ka fara kan.",
+        "fulfulde": "Gila nden nyalnde, to goɗɗo wolwani mo, ɓoymaaru ɗon kolli hoore maako dow e dow, haa e nder wakkati fuu, bana o wi'a \"eego\"... Ammaa o ɗon mooftaay koo ɗume. O ɗon miijo ɗum, nder naange, dow kaaƴe maako."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Pourquoi le margouillat disait-il toujours oui ?",
+        "en": "Why did the lizard always say yes?",
+        "moore": "Bõe yĩng tɩ yaagã ra sak n leokdame?",
+        "dioula": "Mun na o y'a fɔ ko ɔnhɔn?",
+        "fulfulde": "Ngam ɗume labborol ɗon wi'a haaɗde?"
+      },
+      "options": [
+        {
+          "fr": "Il avait peur de fâcher les autres",
+          "en": "He was afraid of upsetting others",
+          "moore": "A ra zoe n maandda nebã sũ-sãangã.",
+          "dioula": "A tun be siran ka mɔgɔ wɛrɛw dusu tiɲɛ.",
+          "fulfulde": "O hulni ngam o ɓeyda yimɓe"
+        },
+        {
+          "fr": "Il était très fort",
+          "en": "He was very strong",
+          "moore": "A ra tara pãng wʋsgo.",
+          "dioula": "A tun ka gwɛlɛ kosɔbɛ.",
+          "fulfulde": "O ɗon sembe masin."
+        },
+        {
+          "fr": "Il était riche",
+          "en": "He was rich",
+          "moore": "A ra tara arzɛk wʋsgo.",
+          "dioula": "A tun ye nafolotigi ye.",
+          "fulfulde": "O mari jawdi."
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que fait le margouillat aujourd'hui ?",
+        "en": "What does the lizard do today?",
+        "moore": "Bõe la gãndgã maanda rũndã-rũndã?",
+        "dioula": "Lɔnnikɛla be mun lo kɛra bi?",
+        "fulfulde": "Ko honɗun laarɗo waɗata?"
+      },
+      "options": [
+        {
+          "fr": "Il hoche la tête",
+          "en": "He nods his head",
+          "moore": "A wẽe a zug n kõ-a.",
+          "dioula": "A y'a kuun sinsin",
+          "fulfulde": "O ɗon ɓuwa hoore maako"
+        },
+        {
+          "fr": "Il chante",
+          "en": "He sings",
+          "moore": "A yɩɩla.",
+          "dioula": "A be dɔnkili lara.",
+          "fulfulde": "O ɗon werna."
+        },
+        {
+          "fr": "Il court vite",
+          "en": "He runs fast",
+          "moore": "A zoeeda tao-tao.",
+          "dioula": "A be boli joona.",
+          "fulfulde": "O ɗon hoola bee saffugo."
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "margouillat",
+      "lang": "fr",
+      "def": {
+        "fr": "Lézard des savanes au corps gris et à la tête orange, qui hoche souvent la tête.",
+        "en": "A savannah lizard with a grey body and an orange head, which often nods.",
+        "moore": "A yaa saavãn-rɩt sẽn tar yĩns sẽn ya pemse, la a zug yaa wala lamend.",
+        "dioula": "A fari wulennin lo ani a kuun ye naranjɛ ye. Tuma caaman na, a be sinɔgɔ.",
+        "fulfulde": "Lamargal savannah e ɓandu cukalel e hoore orange, je ɗon nyaama."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte étiologique populaire en Afrique de l'Ouest (le margouillat qui hoche la tête), raconté sous de nombreuses formes, notamment en pays bwaba et dioula. Version écrite pour KIBARE.",
+    "en": "A popular West African \"why\" tale (the nodding lizard), told in many forms, including in Bwaba and Dioula country. Version written for KIBARE."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

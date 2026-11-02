@@ -1,11 +1,15 @@
 <section class="auth">
-  <div class="visual bogolan">
-    <app-scene-art [art]="art" [enter]="true" />
-    <div class="quote">
-      <p>{{ 'auth.quote' | t }}</p>
-      <span>{{ 'auth.quoteSrc' | t }}</span>
-    </div>
-  </div>
+  <!-- fond : motifs africains (image fournie) sous un voile gris translucide ; logo en haut à gauche -->
+  <div class="visual">
+  <a routerLink="/" class="logo-link">
+    <img
+      src="brand/kibare-logo.png"
+      alt="KIBARE"
+      width="auto"
+      height="223"
+    >
+  </a>
+</div>
 
   <div class="panel">
     <div class="tabs" role="tablist">
@@ -36,6 +40,9 @@
             <i class="fa-regular" [class.fa-eye]="!showPass()" [class.fa-eye-slash]="showPass()"></i>
           </button>
         </span>
+        @if (mode() === 'login') {
+          <a routerLink="/mot-de-passe-oublie" [queryParams]="email() ? { email: email() } : {}" class="forgot">Mot de passe oublié ?</a>
+        }
         @if (mode() === 'register') {
           <span class="strength" [attr.data-level]="strength()"><span></span><span></span><span></span><span></span></span>
           <small>{{ 'auth.passHint' | t }}</small>
@@ -57,9 +64,6 @@
       @if (error()) {
         <p class="error" role="alert"><i class="fa-solid fa-circle-exclamation"></i> {{ error() }}</p>
       }
-      @if (!data.online()) {
-        <p class="error soft"><i class="fa-solid fa-plug-circle-xmark"></i> {{ 'auth.offline' | t }}</p>
-      }
 
       <button type="submit" class="btn submit" [disabled]="!valid() || busy()">
         @if (busy()) {
@@ -69,6 +73,8 @@
       </button>
     </form>
 
+    <app-google-button [mode]="mode()" (credential)="google($event)" />
+
     <p class="switch">
       @if (mode() === 'login') {
         {{ 'auth.noAccount' | t }} <button type="button" (click)="switch('register')">{{ 'auth.register' | t }}</button>
@@ -76,11 +82,5 @@
         {{ 'auth.hasAccount' | t }} <button type="button" (click)="switch('login')">{{ 'auth.login' | t }}</button>
       }
     </p>
-    <ul class="perks">
-      <li><i class="fa-solid fa-microphone-lines"></i> {{ 'auth.perk1' | t }}</li>
-      <li><i class="fa-solid fa-feather-pointed"></i> {{ 'auth.perk2' | t }}</li>
-      <li><i class="fa-regular fa-comments"></i> {{ 'auth.perk3' | t }}</li>
-    </ul>
-    <a routerLink="/" class="back"><i class="fa-solid fa-arrow-left"></i> {{ 'nav.home' | t }}</a>
   </div>
 </section>

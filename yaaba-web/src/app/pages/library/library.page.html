@@ -33,9 +33,6 @@
   <div class="filters">
     <p-select [options]="regionOptions()" [ngModel]="regionSel() ?? region() ?? null" (ngModelChange)="regionSel.set($event)" [placeholder]="'lib.region' | t" [showClear]="true" [filter]="true" styleClass="f-select" />
     <p-select [options]="langOptions()" [ngModel]="lang()" (ngModelChange)="lang.set($event)" [placeholder]="'lib.language' | t" [showClear]="true" styleClass="f-select" />
-    <button type="button" class="toggle" [class.on]="kids()" (click)="kids.set(!kids())" [attr.aria-pressed]="kids()">
-      <i class="fa-solid fa-child-reaching"></i> {{ 'lib.kids' | t }}
-    </button>
     <button type="button" class="toggle" [class.on]="favs()" (click)="favs.set(!favs())" [attr.aria-pressed]="favs()">
       <i class="fa-heart" [class.fa-solid]="favs()" [class.fa-regular]="!favs()"></i> {{ 'lib.favs' | t }}
     </button>
@@ -54,12 +51,15 @@
     }
   </div>
 
-  @if (results().length) {
+  @if (!data.ready()) {
+    <app-skeleton kind="cards" [count]="8" />
+  } @else if (results().length) {
     <div class="grid">
-      @for (t of results(); track t.slug; let i = $index) {
+      @for (t of pageItems(); track t.slug; let i = $index) {
         <app-tale-card [tale]="t" class="reveal" [style.animation-delay.ms]="Math.min(i, 8) * 50" />
       }
     </div>
+    <app-pager [total]="results().length" [size]="pageSize" [(page)]="page" (pageChange)="scrollTop()" />
   } @else {
     <div class="empty">
       <span class="e-ico"><i class="fa-solid fa-feather-pointed"></i></span>

@@ -1,7 +1,7 @@
 {
   "slug": "la-calebasse-qui-avalait-tout",
   "type": "conte",
-  "region": "cascades",
+  "region": "tannounyan",
   "place": "Banfora",
   "coords": [
     10.64,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "la-calebasse-qui-avalait-tout-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -90,6 +91,7 @@
       }
     },
     {
+      "id": "la-calebasse-qui-avalait-tout-p2",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -126,6 +128,7 @@
       }
     },
     {
+      "id": "la-calebasse-qui-avalait-tout-p3",
       "art": {
         "sky": "dawn",
         "ground": "village",
@@ -203,6 +206,7 @@
       }
     },
     {
+      "id": "la-calebasse-qui-avalait-tout-p4",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -234,6 +238,7 @@
       }
     },
     {
+      "id": "la-calebasse-qui-avalait-tout-p5",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -251,7 +256,7 @@
           {
             "k": "man-up",
             "x": 28,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "woman-up",
@@ -390,8 +395,8 @@
       "def": {
         "fr": "Mot de remerciement et d'approbation employé dans le conte.",
         "en": "A word of thanks and approval used in the tale.",
-        "moore": "B sẽn da yeel tɩ b pʋʋsda Wẽnnaam barka, la b sak n deeg-a wã.",
-        "dioula": "O ye barika la Ala ye ani a sɔnna o ma.",
+        "moore": "Yaa koe-moonegã pʋgẽ, a sẽn pʋʋs a Zeova barka la a wilg t'a sũur nooma ne-a.",
+        "dioula": "O ye waleɲumanlɔn ani tandoli kumaw ye.",
         "fulfulde": "Wolde ngam faamugo e jaɓugo nder haala."
       }
     },

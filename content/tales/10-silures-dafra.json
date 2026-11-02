@@ -1,7 +1,7 @@
 {
   "slug": "les-silures-sacres-de-dafra",
   "type": "legende",
-  "region": "hauts-bassins",
+  "region": "guiriko",
   "place": "Dafra (Bobo-Dioulasso)",
   "coords": [
     11.13,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "les-silures-sacres-de-dafra-p1",
       "art": {
         "sky": "day",
         "ground": "rocks",
@@ -76,7 +77,7 @@
           {
             "k": "man",
             "x": 40,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "chicken",
@@ -93,6 +94,7 @@
       }
     },
     {
+      "id": "les-silures-sacres-de-dafra-p2",
       "art": {
         "sky": "day",
         "ground": "lake",
@@ -137,6 +139,7 @@
       }
     },
     {
+      "id": "les-silures-sacres-de-dafra-p3",
       "art": {
         "sky": "day",
         "ground": "lake",
@@ -176,7 +179,7 @@
         "fr": "Selon la tradition, celui qui vient à Dafra avec un vœu apporte une offrande, souvent un poulet, sous la conduite des gardiens du lieu. Si les silures acceptent l'offrande, on dit que le vœu sera entendu.",
         "en": "According to tradition, anyone who comes to Dafra with a wish brings an offering, often a chicken, guided by the keepers of the site. If the catfish accept the offering, it is said the wish will be heard.",
         "moore": "B yetame tɩ ned sã n wa Dafra ne a datem, a na n talla kũun sẽn yaa pipi piisẽ. B sã n sak tɩ b kõ-a, b yetame t'a na n paama a kosgã.",
-        "dioula": "Mɔgɔw ka laɲinita ye ko mɔgɔ o mɔgɔ be na Dafra dugu kɔnɔ, a k'o tigi di. O mɔgɔw b'a fɛ ka saraka bɔ Ala ye. Tuma caaman na, u be taga ni soso dɔ ye. N'o jɛgɛ sɔnna, a fɔra ko Ala bena sɔn o ma.",
+        "dioula": "Mɔgɔw b'a fɔ ko ni mɔgɔ o mɔgɔ nana Dafra dugu la n'a b'a fɛ ka fɛɛn dɔ di, o tigi be na ni saraka ye. N'o jɛgɛ sɔnna a ka saraka ma, u b'a fɔ ko a bena sɔn o ma.",
         "fulfulde": "E nder aada, koo moye wari to Dafra bee ko yiɗi o wurtina sadaka, haa ɗuuɗal e kokko, ngam ɓe ɗon jaɓɓa. To kalluɗo jaɓii kirsaaji, ɗum wi'i ko yiɗi."
       },
       "choice": {
@@ -221,6 +224,7 @@
       }
     },
     {
+      "id": "les-silures-sacres-de-dafra-p4",
       "art": {
         "sky": "dusk",
         "ground": "lake",
@@ -257,6 +261,7 @@
       }
     },
     {
+      "id": "les-silures-sacres-de-dafra-p5",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -275,7 +280,7 @@
           {
             "k": "woman",
             "x": 18,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "man",
@@ -293,7 +298,7 @@
         "en": "For generations, the people of Bobo-Dioulasso, the old city of Sya, have protected the pool in this way. This sacred place reminds us that nature and ancient beliefs together form a people's heritage.",
         "moore": "Yʋʋm wʋsg pʋgẽ, Bobo-Dioulasso nebã sẽn be Sya tẽn-kʋdgã pʋsẽ wã kogla koom koglgã woto. Tẽngã sẽn yaa sõngo tẽegda tõnd tɩ b naanegã ne pĩnd wẽndẽ tẽnsã fãa naag taab n kɩtdame tɩ nebã paam vɩɩm sẽn kõn sa.",
         "dioula": "Bobo-Dioulasso dugumɔgɔw ye jii mara o cogo la kabi wagatijan. O yɔrɔ senuman b'a yira ko danfɛnw ni batofɛn kɔrɔw ye mɔgɔw ka cɛɛn dɔ lo ye.",
-        "fulfulde": "Nder duuɓi, yimɓe Bobo-Dioulasso, gariiri mawɗi Sya, ɗon ɗowtana poolgu nder laawol ngol. nokkuure nde'e nder Allah ɗon hajjina en dow tagdi e no goonɗinki jamanuɗi hawti bee yimɓe."
+        "fulfulde": "Nder duuɓi, yimɓe Bobo-Dioulasso, gariiri mawɗi Sya, ɗon ɗowtana poolgu nder laawol ngol. nokkuure nde'e cembiɗini'en dow tagdi e goonɗinki diga arande hawti bee tagdi ummaatoore."
       }
     }
   ],

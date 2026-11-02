@@ -1,3 +1,4 @@
+import { HeartBurstComponent } from '../heart-burst/heart-burst.component';
 import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DataService } from '../../core/data.service';
@@ -18,9 +19,9 @@ export function taleText(tale: Tale, lang: string): TaleText {
 
 @Component({
   selector: 'app-tale-card',
-  imports: [RouterLink, SceneArtComponent, TranslatePipe],
+  imports: [RouterLink, SceneArtComponent, TranslatePipe, HeartBurstComponent],
   template: `
-    <article class="card-tale" [class.compact]="compact()" (pointerenter)="hover.set(true)" (pointerleave)="hover.set(false)">
+    <article class="card card-tale" [class.compact]="compact()" (pointerenter)="hover.set(true)" (pointerleave)="hover.set(false)">
       <a [routerLink]="['/contes', tale().slug]" class="cover" [attr.aria-label]="text().title" tabindex="-1">
         <app-scene-art [art]="cover()" [animate]="hover()" />
         <span class="type chip">
@@ -47,16 +48,25 @@ export function taleText(tale: Tale, lang: string): TaleText {
         }
         <div class="foot">
           <span class="people">{{ tale().people }}</span>
-          <button
-            type="button"
-            class="fav"
-            [class.on]="favorite()"
-            (click)="progressSvc.toggleFavorite(tale().slug)"
-            [attr.aria-pressed]="favorite()"
-            [attr.aria-label]="(favorite() ? 'card.unfav' : 'card.fav') | t"
-          >
-            <i class="fa-heart" [class.fa-solid]="favorite()" [class.fa-regular]="!favorite()"></i>
-          </button>
+          <span class="acts">
+            <button type="button" class="fav share" (click)="share()" [attr.aria-label]="'tale.share' | t" [title]="'tale.share' | t">
+              <i class="fa-solid" [class.fa-share-nodes]="!copied()" [class.fa-check]="copied()"></i>
+            </button>
+            <button
+              type="button"
+              class="fav"
+              [class.on]="favorite()"
+              [class.spin]="burst() > 0 && favorite()"
+              (click)="like()"
+              [attr.aria-pressed]="favorite()"
+              [attr.aria-label]="(favorite() ? 'card.unfav' : 'card.fav') | t"
+            >
+              @for (k of [burst()]; track k) {
+                <i class="fa-heart" [class.fa-solid]="favorite()" [class.fa-regular]="!favorite()"></i>
+              }
+              <app-heart-burst [trigger]="burst()" />
+            </button>
+          </span>
         </div>
       </div>
     </article>
@@ -68,6 +78,31 @@ export class TaleCardComponent {
   private i18n = inject(I18nService);
   private data = inject(DataService);
   readonly progressSvc = inject(ProgressService);
+  /** déclenche l'éclat de cœurs à chaque « j'aime » */
+  readonly burst = signal(0);
+  readonly copied = signal(false);
+
+  like() {
+    const slug = this.tale().slug;
+    const liked = !this.progressSvc.favorites().has(slug);
+    this.progressSvc.toggleFavorite(slug);
+    if (liked) this.burst.update((n) => n + 1);
+  }
+
+  /** Partage natif quand il existe, sinon copie du lien. */
+  async share() {
+    const url = `${location.origin}/contes/${this.tale().slug}`;
+    const title = this.text().title;
+    try {
+      if (navigator.share) {
+        await navigator.share({ title, text: this.text().summary, url });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      this.copied.set(true);
+      setTimeout(() => this.copied.set(false), 1600);
+    } catch {}
+  }
 
   readonly tale = input.required<Tale>();
   readonly compact = input(false);

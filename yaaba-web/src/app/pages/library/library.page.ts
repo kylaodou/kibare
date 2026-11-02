@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, signal } from '@angular/core';
+import { Component, computed, effect, inject, input, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { SelectModule } from 'primeng/select';
@@ -6,13 +6,15 @@ import { DataService } from '../../core/data.service';
 import { I18nService, TranslatePipe } from '../../core/i18n.service';
 import { TaleType } from '../../core/models';
 import { ProgressService } from '../../core/progress.service';
+import { PagerComponent, paginate } from '../../shared/pager/pager.component';
+import { SkeletonComponent } from '../../shared/skeleton/skeleton.component';
 import { TYPE_ICON, TaleCardComponent, taleText } from '../../shared/tale-card/tale-card.component';
 
 type Sort = 'featured' | 'title' | 'short' | 'popular';
 
 @Component({
   selector: 'app-library',
-  imports: [FormsModule, RouterLink, SelectModule, TaleCardComponent, TranslatePipe],
+  imports: [FormsModule, RouterLink, SelectModule, TaleCardComponent, TranslatePipe, PagerComponent, SkeletonComponent],
   templateUrl: './library.page.html',
   styleUrl: './library.page.scss',
 })
@@ -31,7 +33,6 @@ export class LibraryPage {
   readonly type = signal<TaleType | 'all'>('all');
   readonly regionSel = signal<string | null>(null);
   readonly lang = signal<string | null>(null);
-  readonly kids = signal(false);
   readonly favs = signal(false);
   readonly sort = signal<Sort>('featured');
 
@@ -53,7 +54,6 @@ export class LibraryPage {
       if (this.type() !== 'all' && t.type !== this.type()) return false;
       if (reg && t.region !== reg) return false;
       if (this.lang() && t.language !== this.lang()) return false;
-      if (this.kids() && t.age > 6) return false;
       if (this.favs() && !this.progress.favorites().has(t.slug)) return false;
       if (!q) return true;
       const tt = taleText(t, lang);
@@ -69,16 +69,28 @@ export class LibraryPage {
     return list;
   });
 
+  /** pagination : 10 histoires par page, retour à la page 1 à chaque nouveau filtre */
+  readonly pageSize = 10;
+  readonly page = signal(1);
+  readonly pageItems = computed(() => paginate(this.results(), this.page(), this.pageSize));
+  private resetPage = effect(() => {
+    this.results();
+    this.page.set(1);
+  });
+
   readonly activeFilters = computed(
-    () => +(this.type() !== 'all') + +!!this.regionSel() + +!!this.lang() + +this.kids() + +this.favs() + +!!this.q(),
+    () => +(this.type() !== 'all') + +!!this.regionSel() + +!!this.lang() + +this.favs() + +!!this.q(),
   );
+
+  scrollTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   reset() {
     this.q.set('');
     this.type.set('all');
     this.regionSel.set(null);
     this.lang.set(null);
-    this.kids.set(false);
     this.favs.set(false);
     if (this.region()) void this.router.navigate([], { queryParams: {} });
   }

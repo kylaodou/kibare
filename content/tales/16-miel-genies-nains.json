@@ -1,7 +1,7 @@
 {
   "slug": "le-miel-et-les-genies-nains",
   "type": "conte",
-  "region": "est",
+  "region": "goulmou",
   "place": "Fada N'Gourma",
   "coords": [
     12.06,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "le-miel-et-les-genies-nains-p1",
       "art": {
         "sky": "day",
         "ground": "forest",
@@ -65,7 +66,7 @@
           {
             "k": "woman-pound",
             "x": 52,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "calabash",
@@ -75,6 +76,10 @@
             "k": "karite",
             "x": 86,
             "y": 26
+          },
+          {
+            "k": "hunter",
+            "x": 12
           }
         ]
       },
@@ -87,6 +92,7 @@
       }
     },
     {
+      "id": "le-miel-et-les-genies-nains-p2",
       "art": {
         "sky": "dusk",
         "ground": "forest",
@@ -99,7 +105,7 @@
           {
             "k": "woman-talk",
             "x": 34,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "dwarf",
@@ -134,6 +140,7 @@
       }
     },
     {
+      "id": "le-miel-et-les-genies-nains-p3",
       "art": {
         "sky": "dusk",
         "ground": "forest",
@@ -213,6 +220,7 @@
       }
     },
     {
+      "id": "le-miel-et-les-genies-nains-p4",
       "art": {
         "sky": "dusk",
         "ground": "forest",
@@ -258,6 +266,7 @@
       }
     },
     {
+      "id": "le-miel-et-les-genies-nains-p5",
       "art": {
         "sky": "night",
         "ground": "forest",

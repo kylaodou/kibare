@@ -1,0 +1,328 @@
+{
+  "slug": "la-part-du-lion",
+  "type": "conte",
+  "region": "bankui",
+  "place": "Boromo",
+  "coords": [
+    11.75,
+    -2.93
+  ],
+  "people": "Marka",
+  "language": "dioula",
+  "duration": 4,
+  "age": 6,
+  "featured": false,
+  "cover": 1,
+  "tags": [
+    "animaux",
+    "partage",
+    "ruse",
+    "justice"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "La part du lion",
+      "subtitle": "Le partage de la chasse",
+      "summary": "Le lion, la hyène et le chacal chassent ensemble dans la forêt des Deux Balés. Au moment du partage, le chacal trouve la seule réponse qui le garde en vie.",
+      "moral": "Apprends de l'erreur des autres avant d'avoir à payer la tienne."
+    },
+    "en": {
+      "title": "The Lion's Share",
+      "subtitle": "Dividing the hunt",
+      "summary": "The lion, the hyena and the jackal hunt together in the Deux Balés forest. When the time comes to share, the jackal finds the only answer that keeps him alive.",
+      "moral": "Learn from other people's mistakes before you have to pay for your own."
+    },
+    "moore": {
+      "title": "Yaa gɩgemdã pʋɩɩr la a paam-yã",
+      "subtitle": "B pʋɩ-b n na n yãgẽ",
+      "summary": "Yaa gɩgemd, la a ye ne a ye n yãagd taab Deux Balés weoogẽ. A sã n wa paam tɩ b pʋɩ-a, a yãta sokr ning sẽn na yɩl t'a kell n vɩɩmd.",
+      "moral": "Y sã n wa maan yel-wẽnã, bɩ y zãms nebã bũmb ning sẽn kɩt tɩ b maand to-to."
+    },
+    "dioula": {
+      "title": "Jaraw ka sara",
+      "subtitle": "Ka jagokɛ tilancɛ kɛ",
+      "summary": "Lɔn, hyenɛ ani julakan be ɲini ɲɔgɔn fɛ Deux Balés yiritu kɔnɔ. Ni wagati sera ka mɔgɔw kalan, o tuma na, a be se k'a dɛmɛ.",
+      "moral": "I ka kalan sɔrɔ tɔɔw ka filiw la sanni i k'i yɛrɛ ta juru sara."
+    },
+    "fulfulde": {
+      "title": "Luki Li'o",
+      "subtitle": "Wonduki duɗal",
+      "summary": "Lew, hyena e jackal ɗon hawta bee maɓɓe nder duungel Deux Balés. To wakkati ɓooyre warti, jawgal heɓii jaabhe tan ɗon waɗa mo yonki.",
+      "moral": "On njanngina diga hakkeeji yimɓe feere ngam on maɓɓa ceede."
+    }
+  },
+  "scenes": [
+    {
+      "id": "la-part-du-lion-p1",
+      "art": {
+        "sky": "dawn",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 240
+          },
+          {
+            "k": "lion",
+            "x": 34,
+            "s": 0.9
+          },
+          {
+            "k": "hyena",
+            "x": 56
+          },
+          {
+            "k": "dog",
+            "x": 74,
+            "c": "#C9822B"
+          },
+          {
+            "k": "karite",
+            "x": 90,
+            "y": 24
+          }
+        ]
+      },
+      "text": {
+        "fr": "Dans la grande forêt des Deux Balés, près de Boromo, le lion proposa à la hyène et au chacal de chasser ensemble. « À trois, nous attraperons de grosses proies ! » Les deux autres acceptèrent, flattés.",
+        "en": "In the great Deux Balés forest near Boromo, the lion suggested to the hyena and the jackal that they hunt together. \"The three of us will catch big prey!\" The other two agreed, flattered.",
+        "moore": "La b sẽn be Deux Balés gãongã pʋgẽ, Buromo sɛɛgã poorẽ wã, gɩgemdã yeela a hyena ne a chaakalã tɩ b na n yãagame. \"Tõnd a tãabã na n yõka rũms wʋsgo!\" Neb a yiibã fãa sakame, la b sũur yɩɩ noog ne-a.",
+        "dioula": "O kɔ, a y'a fɔ o ye ko: \"Aw ka taga kongo kɔnɔ\". U fila bɛɛ sɔnna ani u tun be ɲɔgɔn fɛ.",
+        "fulfulde": "Nder leɗɗe Deux Balés mawɗe ɓadi Boromo, lewru hokki hyena e jackal aroore ngam ɓe mbaɗata bee maɓɓe. \"Min tati min njaɓan ko ɓeydi!\" Yimɓe ɗiɗo goonɗinɓe, ɓe njettini."
+      }
+    },
+    {
+      "id": "la-part-du-lion-p2",
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "lion",
+            "x": 40,
+            "s": 0.9
+          },
+          {
+            "k": "wild-cow",
+            "x": 60
+          },
+          {
+            "k": "hyena",
+            "x": 24
+          },
+          {
+            "k": "dog",
+            "x": 78,
+            "c": "#C9822B"
+          }
+        ]
+      },
+      "text": {
+        "fr": "La chasse fut bonne : un buffle, une antilope et un lièvre. Le lion dit à la hyène : « Partage, toi. » La hyène, gourmande, répondit : « Le buffle pour toi, l'antilope pour moi, le lièvre pour le chacal. »",
+        "en": "The hunt went well: a buffalo, an antelope and a hare. The lion said to the hyena: \"You share it out.\" The greedy hyena answered: \"The buffalo for you, the antelope for me, the hare for the jackal.\"",
+        "moore": "B yãaga ne b sũy fãa. B ra yaa bufɛl, antilop la tãb-biisi. Zĩigã yeela a ye: \"Bɩ y pʋɩɩ\". A sẽn yaa tʋlsem soaba leokame tɩ: \"Yãmb na n paama bufõ, mam na n paama bõn-buusgã, la m na n paama sãnemdã\".",
+        "dioula": "O y'a sɔrɔ u tun ye misiw faga. O kɔ, a y'a fɔ o ye ko: \"I ka wari tilan ɲɔgɔn cɛ\".",
+        "fulfulde": "Hande nden waɗi e wooɗi: buffalo, antelope e hare. Lewru wi'i hyena: \"An a hokkata ɗum\". Hyena boowiyanke jaabi: \"Bufal to maaɗa, antelop to am, haako to jaakal\"."
+      },
+      "choice": {
+        "q": {
+          "fr": "Le lion sera-t-il content ?",
+          "en": "Will the lion be pleased?",
+          "moore": "Yaa gɩgemdã n na n noog a sũur bɩ?",
+          "dioula": "Yala jara bena ninsɔndiya wa?",
+          "fulfulde": "Layiwjo boo o ɓeydaay?"
+        },
+        "options": [
+          {
+            "fr": "Non, il veut tout",
+            "en": "No, he wants everything",
+            "moore": "A pa rat tɩ b maan bũmb ye.",
+            "dioula": "Ayi, a b'a fɛ fɛɛn bɛɛ ka kɛ.",
+            "fulfulde": "Naa, o yiɗi koo ɗume."
+          },
+          {
+            "fr": "Oui, c'est juste",
+            "en": "Yes, it's fair",
+            "moore": "Yaa sɩda, yaa tɩrga.",
+            "dioula": "Ɔnhɔn, o bɛnnin lo.",
+            "fulfulde": "Ee, ɗum goonga."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Le lion rugit et chassa la hyène d'un coup de patte.",
+          "en": "The lion roared and drove the hyena off with a swipe of his paw.",
+          "moore": "Yaa gɩgemd n tãag ne a gãndã.",
+          "dioula": "O kɔ, jara y'a kaan kɔrɔta k'a ka kanbelen nin gwɛn.",
+          "fulfulde": "Lewru boo o wurtini hyena bee ɓanndu maako."
+        }
+      }
+    },
+    {
+      "id": "la-part-du-lion-p3",
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "lion",
+            "x": 46,
+            "s": 1
+          },
+          {
+            "k": "dog",
+            "x": 26,
+            "c": "#C9822B"
+          },
+          {
+            "k": "antelope",
+            "x": 70
+          },
+          {
+            "k": "hare",
+            "x": 84
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le lion se tourna vers le chacal : « À toi de partager. » Le chacal salua bien bas : « Le buffle pour ton déjeuner, l'antilope pour ton dîner, le lièvre pour ton goûter. Tout est à toi, grand roi. »",
+        "en": "The lion turned to the jackal: \"Your turn to share.\" The jackal bowed low: \"The buffalo for your lunch, the antelope for your dinner, the hare for your snack. Everything is yours, great king.\"",
+        "moore": "Kẽer wẽnemdame n yeel-a yaa: \"Yãmb sẽn na n pʋɩta, yãmb bal n pʋɩɩ\". Kẽerã wõgemda a nugẽ n yeele: \"Bõoneg wã y rɩɩb zĩigẽ, la bĩnggã y rɩɩb roogẽ, la bẽesgo y rɩtẽ. Bũmb fãa yaa yãmb dẽnda, rĩm-kãsengã\".",
+        "dioula": "O kɔ, jara y'a fɔ a ye ko: \"I ka kan k'i niyɔrɔ di\". A y'a kaan biri duguma k'a fɔ ko: \"Bɔrɔnan b'i fɛ dumuni kɛ, antilopɛ b'i ɲiminɛ, wuluw be i fɛ dumuni kɛ. Fɛɛn bɛɛ ye i ta ye, masacɛba\".",
+        "fulfulde": "Lewru ɗon wi'a haa sakkal: \"Ndaa, aɗa haani hokkugo\". Sakkal ngal ɓoggi dow: \"Bufal ngam nyaamdu maaɗa, antelop ngam nyamndu ma, rewo ngam njaru ma. Koo ɗume ko maaɗa, laamiiɗo mawɗo\"."
+      }
+    },
+    {
+      "id": "la-part-du-lion-p4",
+      "art": {
+        "sky": "day",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "lion",
+            "x": 60,
+            "s": 0.9
+          },
+          {
+            "k": "dog",
+            "x": 30,
+            "c": "#C9822B"
+          },
+          {
+            "k": "hyena",
+            "x": 14,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Qui t'a appris à si bien partager ? » demanda le lion, satisfait. « La hyène », répondit le chacal. Et depuis, quand quelqu'un prend tout pour lui, on dit au pays marka qu'il a pris « la part du lion ».",
+        "en": "\"Who taught you to share so well?\" asked the satisfied lion. \"The hyena,\" replied the jackal. And since then, when someone takes everything for himself, people in Marka country say he took \"the lion's share\".",
+        "moore": "\"N-a soab zãmsda yãmb tɩ y pʋɩ neere?\" t'a gɩgemdã sokame. \"Tõnd sẽn yaa wa a ye wã\", ra-rɩt n leokame. Sẽn sɩng ne rẽ, ned sã n dɩk bũmb fãa a meng yĩnga, Mark tẽnga neb yetame t'a rɩka \"sarã pʋɩɩr\".",
+        "dioula": "O kɔ, jara ye Yezu ɲininga ko: \"Jɔn y'i kalan ka nili kɛ?\" O kɔ, a y'a fɔ ko: \"A ye jinamɔgɔ dɔ le ye\". Kabi o tuma, mɔgɔ dɔ mana fɛɛn bɛɛ ta a yɛrɛ ye, Marka jamana mɔgɔw b'a fɔ ko ale lo y'o \"jaraw ka niyɔrɔ\" sɔrɔ.",
+        "fulfulde": "\"Moy ekkitini on hokkugo bana non?\" ƴami le'i ɗon mari belɗum. \"Hyenya\", jaabbi jackal. Bana non, to goɗɗo jaɓii ko'e mum fuu, yimɓe nder lesdi Marka mbiyi o jeyaa \"kaɓɓol leƴƴi\"."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qui a appris au chacal à partager ?",
+        "en": "Who taught the jackal to share?",
+        "moore": "Ãnd n zãms a zakallã t'a pʋɩ?",
+        "dioula": "Jɔn lo y'a yira a la ko a ka ɲi ka mɔgɔw tilan?",
+        "fulfulde": "Mo ekkitini jawgal ngal hokkude?"
+      },
+      "options": [
+        {
+          "fr": "La hyène",
+          "en": "The hyena",
+          "moore": "A hyena wã",
+          "dioula": "O ye tulogwerenw ye.",
+          "fulfulde": "Hyenna"
+        },
+        {
+          "fr": "Le lion",
+          "en": "The lion",
+          "moore": "Yaa gɩgemdã.",
+          "dioula": "Jaraw ka kan k'a ye.",
+          "fulfulde": "Lamu ɗon"
+        },
+        {
+          "fr": "Le lièvre",
+          "en": "The hare",
+          "moore": "Laagã",
+          "dioula": "Dɔnkɔnɔ nin",
+          "fulfulde": "Lamargal"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Où se passe ce conte ?",
+        "en": "Where does this tale take place?",
+        "moore": "La ãnd dãmb n be yel-kãngã pʋgẽ?",
+        "dioula": "O koo be kɛ yɔrɔ juman?",
+        "fulfulde": "Toye haala ngol waɗi?"
+      },
+      "options": [
+        {
+          "fr": "Dans la forêt des Deux Balés",
+          "en": "In the Deux Balés forest",
+          "moore": "Deux Balés log-tẽngẽ wã pʋgẽ",
+          "dioula": "Deux Balés kungo kɔnɔ",
+          "fulfulde": "Nder duungel Deux Balés"
+        },
+        {
+          "fr": "Au bord de la mer",
+          "en": "By the sea",
+          "moore": "Ko-kãsengã pʋga",
+          "dioula": "Kɔgɔji kan,",
+          "fulfulde": "Nder maayo"
+        },
+        {
+          "fr": "Dans une ville",
+          "en": "In a town",
+          "moore": "Tẽnga pʋgẽ.",
+          "dioula": "Dugu dɔ kɔnɔ.",
+          "fulfulde": "Nder gariiri"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Deux Balés",
+      "lang": "fr",
+      "def": {
+        "fr": "Forêt classée près de Boromo, connue pour ses éléphants.",
+        "en": "A protected forest near Boromo, known for its elephants.",
+        "moore": "Yaa logd sẽn kogend a Buromo, tɩ b mi-a ne a nao wã.",
+        "dioula": "Yiri min be yɔrɔ barikamanw na, o yɔrɔ gɛrɛfɛ.",
+        "fulfulde": "Goomu gooduɗo nder ɓadiiji Boromo, anndiraa ngam njamndi maako."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Fable de la « part du lion », connue dans les traditions africaines et ésopiques, racontée sous de nombreuses formes en Afrique de l'Ouest. Version écrite pour KIBARE, située en pays marka.",
+    "en": "The \"lion's share\" fable, known in African and Aesopic traditions and told in many forms across West Africa. Version written for KIBARE, set in Marka country."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

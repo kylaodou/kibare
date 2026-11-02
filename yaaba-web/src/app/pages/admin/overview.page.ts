@@ -1,5 +1,6 @@
+import { SkeletonComponent } from '../../shared/skeleton/skeleton.component';
 import { DatePipe } from '@angular/common';
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, effect, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DataService } from '../../core/data.service';
 import { I18nService, TranslatePipe } from '../../core/i18n.service';
@@ -11,7 +12,7 @@ type Metric = 'VIEW' | 'CONTRIBUTION' | 'COMMENT' | 'SIGNUP';
 
 @Component({
   selector: 'app-admin-overview',
-  imports: [RouterLink, DatePipe, LineChartComponent, BarListComponent, TranslatePipe],
+  imports: [RouterLink, DatePipe, LineChartComponent, BarListComponent, TranslatePipe, SkeletonComponent],
   template: `
     <header class="ph">
       <div>
@@ -131,7 +132,7 @@ type Metric = 'VIEW' | 'CONTRIBUTION' | 'COMMENT' | 'SIGNUP';
     } @else if (error()) {
       <div class="card block err"><i class="fa-solid fa-plug-circle-xmark"></i> {{ error() }}</div>
     } @else {
-      <div class="skeleton"></div>
+      <app-skeleton kind="tiles" [count]="6" />
     }
   `,
   styleUrl: './admin-shared.scss',

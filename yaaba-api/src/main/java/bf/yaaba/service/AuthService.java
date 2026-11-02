@@ -12,6 +12,7 @@ import bf.yaaba.web.Dto.RegisterRequest;
 import bf.yaaba.web.Dto.UserView;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
 import java.util.Locale;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,15 +44,19 @@ public class AuthService implements ApplicationRunner {
     private final YaabaProperties props;
     private final NotificationService notifications;
     private final ActivityService activity;
+    private final MailService mail;
+    private final Secrets secrets;
 
     public AuthService(UserRepository users, PasswordEncoder encoder, JwtEncoder jwt, YaabaProperties props,
-                       NotificationService notifications, ActivityService activity) {
+                       NotificationService notifications, ActivityService activity, MailService mail, Secrets secrets) {
         this.users = users;
         this.encoder = encoder;
         this.jwt = jwt;
         this.props = props;
         this.notifications = notifications;
         this.activity = activity;
+        this.mail = mail;
+        this.secrets = secrets;
     }
 
     @Override
@@ -68,8 +73,16 @@ public class AuthService implements ApplicationRunner {
         log.info("Compte administrateur créé : {}", email);
     }
 
+    /** Règle commune (inscription, réinitialisation) : 8 caractères au moins, dont une lettre et un chiffre. */
+    public static void checkPassword(String password) {
+        if (password == null || password.length() < 8 || password.length() > 100
+                || !password.chars().anyMatch(Character::isLetter) || !password.chars().anyMatch(Character::isDigit))
+            throw new IllegalArgumentException("Le mot de passe doit contenir au moins 8 caractères, dont une lettre et un chiffre");
+    }
+
     @Transactional
     public AuthView register(RegisterRequest req) {
+        checkPassword(req.password());
         String email = req.email().strip().toLowerCase(Locale.ROOT);
         if (users.existsByEmailIgnoreCase(email)) throw new ConflictException("Un compte existe déjà avec cet e-mail");
         User u = new User();
@@ -79,20 +92,80 @@ public class AuthService implements ApplicationRunner {
         u.setRegion(req.region());
         u.setLanguage(req.language());
         u.setLastLoginAt(Instant.now());
+        u.setEmailVerified(false);
         users.save(u);
         activity.log(ActivityEvent.Kind.SIGNUP, null, null);
-        notifications.toAdmins(Notification.Type.NEW_USER, u.getName() + " vient de rejoindre Yaaba", "/admin/utilisateurs");
-        return new AuthView(token(u), UserView.of(u));
+        notifications.toAdmins(Notification.Type.NEW_USER, u.getName() + " vient de rejoindre KIBARE", "/admin/utilisateurs");
+        boolean sent = sendVerification(u);
+        return new AuthView(token(u), UserView.of(u), sent);
+    }
+
+    /**
+     * Envoie (ou renvoie) le lien de vérification de l'adresse e-mail, valable 24 h.
+     * Seule l'empreinte du jeton est enregistrée. Renvoie false si l'e-mail n'a pas pu partir.
+     */
+    @Transactional
+    public boolean sendVerification(User u) {
+        String token = secrets.randomToken();
+        u.setVerifyTokenHash(secrets.hash(token));
+        u.setVerifyExpiresAt(Instant.now().plus(24, ChronoUnit.HOURS));
+        users.save(u);
+        try {
+            mail.send(u.getEmail(), "Confirmez votre adresse e-mail — KIBARE", "Bienvenue sur KIBARE, " + u.getName() + " !",
+                    List.of("Merci de rejoindre les gardiens des histoires du Burkina Faso.",
+                            "Pour confirmer votre adresse e-mail et pouvoir proposer des contes ou prêter votre voix, cliquez sur le bouton ci-dessous. Ce lien est valable 24 heures."),
+                    null, new String[] {"Confirmer mon adresse", mail.appUrl() + "/verifier-email?jeton=" + token});
+            return true;
+        } catch (MailService.MailDeliveryException e) {
+            return false;
+        }
+    }
+
+    /** Renvoi du lien depuis l'espace personnel. */
+    @Transactional
+    public void resendVerification() {
+        User u = current();
+        if (u.isEmailVerified()) throw new ConflictException("Votre adresse e-mail est déjà confirmée");
+        if (!sendVerification(u)) throw new MailService.MailDeliveryException("L'e-mail n'a pas pu être envoyé. Réessayez plus tard.", null);
+    }
+
+    /** Lien cliqué dans l'e-mail : l'adresse est confirmée si le jeton est valide et non expiré. */
+    @Transactional
+    public UserView verifyEmail(String token) {
+        User u = users.findByVerifyTokenHash(secrets.hash(token))
+                .filter(x -> x.getVerifyExpiresAt() != null && x.getVerifyExpiresAt().isAfter(Instant.now()))
+                .orElseThrow(() -> new IllegalArgumentException("Ce lien de confirmation est invalide ou a expiré"));
+        u.setEmailVerified(true);
+        u.setVerifyTokenHash(null);
+        u.setVerifyExpiresAt(null);
+        return UserView.of(u);
     }
 
     @Transactional
     public AuthView login(LoginRequest req) {
-        User u = users.findByEmailIgnoreCase(req.email().strip())
+        User found = users.findByEmailIgnoreCase(req.email().strip()).orElse(null);
+        // compte créé avec Google sans mot de passe : on l'indique clairement
+        if (found != null && !found.hasPassword())
+            throw new UnauthorizedException("Ce compte a été créé avec Google : utilisez « Continuer avec Google », "
+                    + "ou choisissez un mot de passe avec « Mot de passe oublié ? ».");
+        User u = java.util.Optional.ofNullable(found)
                 .filter(x -> encoder.matches(req.password(), x.getPasswordHash()))
                 .orElseThrow(() -> new UnauthorizedException("E-mail ou mot de passe incorrect"));
         if (!u.isActive()) throw new UnauthorizedException("Ce compte a été désactivé");
         u.setLastLoginAt(Instant.now());
-        return new AuthView(token(u), UserView.of(u));
+        return new AuthView(token(u), UserView.of(u), null);
+    }
+
+    /** Définir (compte Google) ou changer (avec l'actuel) son mot de passe. */
+    @Transactional
+    public UserView changePassword(String currentPassword, String newPassword) {
+        User u = current();
+        if (u.hasPassword() && (currentPassword == null || !encoder.matches(currentPassword, u.getPasswordHash())))
+            throw new IllegalArgumentException("Le mot de passe actuel est incorrect");
+        checkPassword(newPassword);
+        u.setPasswordHash(encoder.encode(newPassword));
+        u.setPasswordSet(true);
+        return UserView.of(u);
     }
 
     @Transactional
@@ -124,7 +197,8 @@ public class AuthService implements ApplicationRunner {
         return a != null && a.getAuthorities().stream().anyMatch(g -> g.getAuthority().equals("ROLE_ADMIN"));
     }
 
-    private String token(User u) {
+    /** Jeton de session KIBARE (aussi utilisé par la connexion Google). */
+    String token(User u) {
         Instant now = Instant.now();
         JwtClaimsSet claims = JwtClaimsSet.builder()
                 .issuer("yaaba")

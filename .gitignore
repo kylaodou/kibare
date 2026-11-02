@@ -8,3 +8,11 @@ yaaba-api/uploads/
 *.log
 tools/.cache/
 tools/.venv/
+
+# secrets locaux (SMTP, OAuth)
+yaaba-api/config/
+
+# livres sous droits (sources de travail, jamais publiés)
+/*.pdf
+__pycache__/
+tools/lot-*.txt

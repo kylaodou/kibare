@@ -1,7 +1,7 @@
 {
   "slug": "crocodiles-sabou",
   "type": "legende",
-  "region": "centre-ouest",
+  "region": "nando",
   "place": "Sabou",
   "coords": [
     12.07,
@@ -36,13 +36,13 @@
       "title": "Sabou bu-zẽmbã sẽn yaa sõma wã",
       "subtitle": "B sẽn maan zood ne zĩm-biis la bõn-buudã sʋka",
       "summary": "Sẽn yaa-a beẽ wã, sã n wa paam tɩ b pa le tar koom ye. Bõn-buud n waame. la b pa zabd-a ye, a tallda-a lame n kẽng koomẽ. Woto la taab sẽn zĩnd Sabou nebã ne bu-zẽmbã sʋka.",
-      "moral": "D sã n pʋʋsd Wẽnnaam barka, d na n paama zood sẽn kaoosd yʋʋm wʋsgo. Tõnd kogend neb nins sẽn fãag tõndã."
+      "moral": "D sã n tall mi-beoog ne d tẽed-n-taasã, d na n paama sũ-noogo."
     },
     "dioula": {
       "title": "Sabou ka kongosogow",
       "subtitle": "Jagokɛla ni kongosogo ka bɛnbaliyako",
       "summary": "K'a to yiritunin kɔnɔ, sanjiba wagati la, kɔgɔnin dɔ be ɲini ka sa minnɔgɔ fɛ. Dɔgɔtɔrɔ dɔ y'a ye ko: \"Duguba dɔ bɔra\". ani k'a bila jii la. O cogo la, Sabou dugumɔgɔw ni kongosogow ka teriya daminɛna.",
-      "moral": "N'an be Jehova waleɲuman lɔn, o b'a to an be jɛnɲɔgɔnya ɲuman kɛ ni mɔgɔ wɛrɛw ye. An be minw tanga, an b'olu latanga."
+      "moral": "Mɔgɔ minw y'an kisi, an b'olu latanga."
     },
     "fulfulde": {
       "title": "Ko'e Cukalelji Cukalelɓe nder Sabou",
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "crocodiles-sabou-p1",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -93,6 +94,7 @@
       }
     },
     {
+      "id": "crocodiles-sabou-p2",
       "art": {
         "sky": "dusk",
         "ground": "savanna",
@@ -121,6 +123,10 @@
             "k": "birds",
             "x": 30,
             "y": 240
+          },
+          {
+            "k": "hunter",
+            "x": 12
           }
         ]
       },
@@ -133,6 +139,7 @@
       }
     },
     {
+      "id": "crocodiles-sabou-p3",
       "art": {
         "sky": "dusk",
         "ground": "savanna",
@@ -208,6 +215,7 @@
       }
     },
     {
+      "id": "crocodiles-sabou-p4",
       "art": {
         "sky": "dawn",
         "ground": "lake",
@@ -249,12 +257,13 @@
       "text": {
         "fr": "Le crocodile le conduisit jusqu'à une mare d'eau fraîche, cachée derrière les rôniers. Le chasseur but longuement, se reposa à l'ombre et retrouva ses forces. Il avait été sauvé.",
         "en": "The crocodile led him to a pool of cool water hidden behind the palm trees. The hunter drank deeply, rested in the shade and regained his strength. He had been saved.",
-        "moore": "A Zezi sẽn wa n be wã, a ra pa yãend-a ye. A ra yũuda rãam wʋsgo, n vʋʋs zĩ-gũumẽ la a paam pãng me. A ra zoe n paama fãagre.",
+        "moore": "Kẽerã tall-a lame n kẽng ko-kãseng sẽn be koom sẽn yaa noogo, tɩ b solg-a ne palmsã. A ra yũuda rãam wʋsgo, n vʋʋs zĩ-gũumẽ la a paam pãng me. A ra zoe n paama fãagre.",
         "dioula": "O kɔ, a tagara n'a ye jii la. A ye dɔrɔ min ka suma, a tora k'a fari faga. A tun kisira.",
         "fulfulde": "Crocodile'en hoodi mo to poolde ndiyam ɓernde ɓoymaago dow leɗɗe palmi. Mawɗo yi'aare boowi, o hawti nder nyiwre nden o heɓii semmbe. O hisni."
       }
     },
     {
+      "id": "crocodiles-sabou-p5",
       "art": {
         "sky": "day",
         "ground": "lake",
@@ -303,6 +312,7 @@
       }
     },
     {
+      "id": "crocodiles-sabou-p6",
       "art": {
         "sky": "day",
         "ground": "lake",

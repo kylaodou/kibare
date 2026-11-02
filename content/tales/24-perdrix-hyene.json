@@ -1,7 +1,7 @@
 {
   "slug": "la-perdrix-de-l-hyene",
   "type": "conte",
-  "region": "cascades",
+  "region": "tannounyan",
   "place": "Soubakaniédougou",
   "coords": [
     10.85,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "la-perdrix-de-l-hyene-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -92,6 +93,7 @@
       }
     },
     {
+      "id": "la-perdrix-de-l-hyene-p2",
       "art": {
         "sky": "dusk",
         "ground": "village",
@@ -115,6 +117,11 @@
             "k": "hyena",
             "x": 88,
             "flip": true
+          },
+          {
+            "k": "partridge",
+            "x": 34,
+            "s": 1.1
           }
         ]
       },
@@ -127,6 +134,7 @@
       }
     },
     {
+      "id": "la-perdrix-de-l-hyene-p3",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -195,6 +203,7 @@
       }
     },
     {
+      "id": "la-perdrix-de-l-hyene-p4",
       "art": {
         "sky": "dusk",
         "ground": "savanna",
@@ -339,7 +348,7 @@
         "fr": "Nom donné à l'hyène dans de nombreux contes d'Afrique de l'Ouest ; elle y est souvent gloutonne et peu loyale.",
         "en": "The name given to the hyena in many West African tales; she is usually greedy and disloyal.",
         "moore": "A yaa yʋ-kãng b sẽn boond tɩ hiɛnã Afirik Wɛtg tẽnsẽ wã. A yaa wa a zãmbd la a pa sakd nebã ye.",
-        "dioula": "O tɔgɔ be sɔrɔ Afiriki tileben fan fɛ maana caaman kɔnɔ. A ka teli ka kɛ wasabali ye ani a tɛ kantigiya kɛ Jehova ye.",
+        "dioula": "O ye tɔgɔ ye min be sɔrɔ Afiriki tileben fan fɛ maana caaman kɔnɔ. A ka teli ka kɛ wasabali ye ani a tɛ kantigiya kɛ.",
         "fulfulde": "Innde nde hinaa e nder kaalaaji Afrik hirnaange ɗuuɗɗi; o ɗon mari ɓernde booɗol."
       }
     },

@@ -1,16 +1,24 @@
 {
   "slug": "l-origine-des-yeux-du-hibou",
   "type": "conte",
-  "region": "centre-sud",
+  "region": "nazinon",
   "place": "Manga",
-  "coords": [11.66, -1.07],
+  "coords": [
+    11.66,
+    -1.07
+  ],
   "people": "Mossi",
   "language": "moore",
   "duration": 3,
   "age": 4,
   "featured": false,
   "cover": 2,
-  "tags": ["origines", "honnêteté", "partage", "oiseaux"],
+  "tags": [
+    "origines",
+    "honnêteté",
+    "partage",
+    "oiseaux"
+  ],
   "i18n": {
     "fr": {
       "title": "L'origine des yeux du hibou",
@@ -23,104 +31,281 @@
       "subtitle": "The bag of a thousand eyes",
       "summary": "Given the task of handing out eyes to all the birds, the owl keeps the two biggest for himself. It does him no good: ever since, he only comes out at night.",
       "moral": "What we are entrusted to share must be shared honestly."
+    },
+    "moore": {
+      "title": "Wãn to la bõn-buudã paam a ninã?",
+      "subtitle": "A sãk sẽn tar nin tus a ye wã,",
+      "summary": "A sẽn na n kõ a zo-rãmbã fãa ninã, a gãda zo-rãmba. A pa maand a sẽn dat ye. Sẽn sɩng ne rẽ, a yiima yʋngo bala.",
+      "moral": "D sã n wa paam bũmb ning d sẽn segd n moonã, yaa tɩlɛ tɩ d maan pʋ-peelem."
+    },
+    "dioula": {
+      "title": "Kɔnɔmisɛn ye ɲɛw sɔrɔ cogo di?",
+      "subtitle": "Mɔgɔ waa kelen ɲadenw ka bɔrɔ kɔnɔ.",
+      "summary": "O kɔ, a be kɔnɔ fila minw belebeleba ye, u b'u to ale yɛrɛ fɛ. O tɛ foyi ɲa a ye. Kabi o tuma, a be bɔ suu dɔrɔn lo la.",
+      "moral": "An ka baara ye min kalifara an ma, an k'o kɛ ni kɔnɔgwɛ ye."
+    },
+    "fulfulde": {
+      "title": "No Saawre Waɗi Yiideeji muuɗum",
+      "subtitle": "Ko e geɗe ujuneeji",
+      "summary": "Ngam kuuɗe maako ɗe ɓeydana nyawɓe fuu, o ɗon hokki ɗiɗo ɓurɗi mawnugo ngam hoore mum. Ɗum nafataa mo: diga saa'i maajum, o wurta tan jemma.",
+      "moral": "Ko ɗum hokkata'en, sey ɓe mbaɗata nder goonga."
     }
   },
   "scenes": [
     {
+      "id": "l-origine-des-yeux-du-hibou-p1",
       "art": {
         "sky": "day",
         "ground": "forest",
         "items": [
-          { "k": "rays", "x": 50, "y": 180 },
-          { "k": "owl", "x": 46, "s": 2.4 },
-          { "k": "sack", "x": 60, "s": 1.8 },
-          { "k": "karite", "x": 14, "y": 24 }
+          {
+            "k": "rays",
+            "x": 50,
+            "y": 180
+          },
+          {
+            "k": "owl",
+            "x": 46,
+            "s": 2.4
+          },
+          {
+            "k": "sack",
+            "x": 60,
+            "s": 1.8
+          },
+          {
+            "k": "karite",
+            "x": 14,
+            "y": 24
+          }
         ]
       },
       "text": {
         "fr": "Au commencement, les oiseaux n'avaient pas encore d'yeux. Un jour, le Créateur appela le hibou et lui tendit un grand sac. « Dedans, il y a des yeux de toutes les tailles. Distribue-les aux oiseaux de la brousse, à chacun selon sa taille : les gros yeux aux gros oiseaux, les petits aux petits. »",
-        "en": "In the beginning, birds did not yet have eyes. One day the Creator called the owl and handed him a large bag. “Inside are eyes of every size. Hand them out to the birds of the bush, each according to its size: big eyes for big birds, small ones for small birds.”"
+        "en": "In the beginning, birds did not yet have eyes. One day the Creator called the owl and handed him a large bag. “Inside are eyes of every size. Hand them out to the birds of the bush, each according to its size: big eyes for big birds, small ones for small birds.”",
+        "moore": "Pipi wã, bõn-vũndbã ra pa tar nin ye. Daar a ye, Naandã boola soog n kõ-a sakr sẽn yaa kãsenga. Bãagrã pʋgẽ, b tara nin sẽn yaa to-to. B pʋɩ-b-la piis nins sẽn be weoogẽ wã, tɩ b fãa zems ne a pãng: biisi n yaa nin-kãsemse, la biisi n ya nen-kẽemse.",
+        "dioula": "Fɔlɔfɔlɔ, ɲɛ tun tɛ kɔnɔw fɛ fɔlɔ. Loon dɔ, Danbaga ye sagasi weele ka taga bɔ a ye. Fɛɛn bɛɛ ɲɛ be yen. Aw k'u di kɔnɔw ma, u kelen kelen bɛɛ ka kan n'a ye: ɲɛgɛnbabaw be kɔnɔbaw fɛ.",
+        "fulfulde": "Ha fuɗɗoode, colli ɗon ngalaa gite. Gooto nder nyalnde, Mawɗo noddi o hokki mo ceede mawnde. Dha nder ɗon woodi gite ɗuuɗɗe. Hokka ɓe haa colli nder duunde, kala e ko haani: gite mawɗe ngam colli mawɗi, ɗe ɓiiji ngam colli kesi."
       }
     },
     {
+      "id": "l-origine-des-yeux-du-hibou-p2",
       "art": {
         "sky": "day",
         "ground": "savanna",
         "items": [
-          { "k": "owl", "x": 50, "s": 1.5 },
-          { "k": "sack", "x": 60, "s": 1.1 },
-          { "k": "guinea-fowl", "x": 24, "s": 1.2 },
-          { "k": "partridge", "x": 34 },
-          { "k": "bird-small", "x": 74, "y": 30 },
-          { "k": "chicken", "x": 86 }
+          {
+            "k": "owl",
+            "x": 50,
+            "s": 1.5
+          },
+          {
+            "k": "sack",
+            "x": 60,
+            "s": 1.1
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 24,
+            "s": 1.2
+          },
+          {
+            "k": "partridge",
+            "x": 34
+          },
+          {
+            "k": "bird-small",
+            "x": 74,
+            "y": 30
+          },
+          {
+            "k": "chicken",
+            "x": 86
+          }
         ]
       },
       "text": {
         "fr": "Le hibou rassembla tous les oiseaux et commença la distribution. Mais au fond du sac, il découvrit deux yeux immenses et brillants. « Ceux-là sont bien trop beaux pour les autres », pensa-t-il. Et il les cacha sous son aile.",
-        "en": "The owl gathered all the birds and began handing out the eyes. But at the bottom of the bag he found two huge, shining eyes. “These are far too beautiful for the others,” he thought. And he hid them under his wing."
+        "en": "The owl gathered all the birds and began handing out the eyes. But at the bottom of the bag he found two huge, shining eyes. “These are far too beautiful for the others,” he thought. And he hid them under his wing.",
+        "moore": "A wʋka bõn-buudã fãa n sɩng n pʋɩ b ninã. La a yãee nin-kãsems a yiib sẽn tar vẽenem. A ra tagsdame tɩ b yaa bõn-kãens sẽn ya sõma wʋsg n yɩɩd neb a taabã. La a solga bãmb b rĩmã tẽngre.",
+        "dioula": "O kɔ, a ye kɔnɔw bɛɛ lajɛn k'a ka ɲɛkisɛw bɔ ɲɔgɔn na. Nka, a ye ɲɛkisɛw fila ye. A ko: \"O ye koo ɲuman ye ka tɛmɛ mɔgɔ tɔw kan. A y'u dogo a gaman kɔrɔ.",
+        "fulfulde": "Ooldiyankooɓe ɓeen fuu, o fuɗɗi hokkude gite maɓɓe. Ammaa nder ɓaawo saaka o tawi gite ɗiɗi mawɗe, ɗe ɗon nyaama.  Ɗi ɗon ɓurɗi mawnugo ngam goɗɗe, o tammi. O ɓoydi ɗi nder leggal maako."
       },
       "choice": {
-        "q": { "fr": "Qu'aurait dû faire le hibou ?", "en": "What should the owl have done?" },
+        "q": {
+          "fr": "Qu'aurait dû faire le hibou ?",
+          "en": "What should the owl have done?",
+          "moore": "Bõe la b ra segd n maan ne bõn-buudã?",
+          "dioula": "O y'a sɔrɔ a tun ka ɲi ka mun lo kɛ?",
+          "fulfulde": "Ko honɗun o waɗata?"
+        },
         "options": [
-          { "fr": "Donner les gros yeux à un gros oiseau", "en": "Give the big eyes to a big bird" },
-          { "fr": "Les garder pour lui", "en": "Keep them for himself" }
+          {
+            "fr": "Donner les gros yeux à un gros oiseau",
+            "en": "Give the big eyes to a big bird",
+            "moore": "Maan-y y ninã gãnd ne bõn-bil sẽn yaa kãsenga.",
+            "dioula": "I ka ɲɛda di kɔnɔba ma",
+            "fulfulde": "Hokka gite mawɗe haa colli mawnde"
+          },
+          {
+            "fr": "Les garder pour lui",
+            "en": "Keep them for himself",
+            "moore": "B tall-b lame n kõ a meng.",
+            "dioula": "A k'u mara a yɛrɛ ye.",
+            "fulfulde": "Hokka ɓe ngam maako."
+          }
         ],
         "answer": 0,
         "reveal": {
           "fr": "Mais le hibou attendit son tour, avec son secret sous l'aile…",
-          "en": "But the owl waited for his turn, with his secret under his wing…"
+          "en": "But the owl waited for his turn, with his secret under his wing…",
+          "moore": "La bu-zẽngã ra gũuda a waoogr n na n paam b yel-solemdã.",
+          "dioula": "Nka, o y'a sɔrɔ a tun b'a ka koo dogo a kaman kɔrɔ.",
+          "fulfulde": "Ammaa o ɗon hoola laawol maako, bee sirru maako nder yaasi muuɗum..."
         }
       }
     },
     {
+      "id": "l-origine-des-yeux-du-hibou-p3",
       "art": {
         "sky": "day",
         "ground": "savanna",
         "items": [
-          { "k": "owl", "x": 50, "s": 1.9 },
-          { "k": "guinea-fowl", "x": 22, "s": 1.2, "a": "a-hop" },
-          { "k": "partridge", "x": 32, "a": "a-hop" },
-          { "k": "chicken", "x": 74, "flip": true, "a": "a-hop" },
-          { "k": "bird-small", "x": 84, "y": 40 }
+          {
+            "k": "owl",
+            "x": 50,
+            "s": 1.9
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 22,
+            "s": 1.2,
+            "a": "a-hop"
+          },
+          {
+            "k": "partridge",
+            "x": 32,
+            "a": "a-hop"
+          },
+          {
+            "k": "chicken",
+            "x": 74,
+            "flip": true,
+            "a": "a-hop"
+          },
+          {
+            "k": "bird-small",
+            "x": 84,
+            "y": 40
+          }
         ]
       },
       "text": {
         "fr": "Quand tous les oiseaux eurent leurs yeux, le hibou sortit enfin les siens et les plaça sur son visage. Ils étaient si grands que sa tête changea complètement : on aurait dit un masque ! Les oiseaux éclatèrent de rire. « Ouh, qu'il est laid, le hibou ! »",
-        "en": "When all the birds had their eyes, the owl finally took out his own and placed them on his face. They were so big that his whole head changed: he looked like a mask! The birds burst out laughing. “Ooh, how ugly the owl is!”"
+        "en": "When all the birds had their eyes, the owl finally took out his own and placed them on his face. They were so big that his whole head changed: he looked like a mask! The birds burst out laughing. “Ooh, how ugly the owl is!”",
+        "moore": "A sẽn wa n paam a zoobã fãa nin-kãnga, a yiisa a meng ne a nengẽ. B ra yaa kãsenga hal tɩ a zug fãa toeemame: b wẽnda maasg n kõ-a. Sʋtãana wã ra yãgdame. A yaa gãn-kɩɩga!",
+        "dioula": "Tuma min na kɔnɔw bɛɛ tun ye u ɲadenw ye, a laban, sinɛ y'a yɛrɛ ta ka o la a ɲada kan. U tun ka bon fɔɔ a kuun bɛɛ yɛlɛmana. A bɔnin be fani dɔ fɛ! Dɔnkiliw tun be yɛlɛla. Ooh, o ye ɲanifɛnjugu yɛrɛ lo ye!",
+        "fulfulde": "Nde colli fuu mari gite maɓɓe, ɓeynguurol waɗi gite maako boo o hokki ɗe dow yeeso maako. Ɓe mawnini masin haa hoore maako fuu wayliti: o nandi bee ɓernde huwto! Lindiyankooɓe ɗon mbaroya. Ooh, how ugly the owl is! "
       }
     },
     {
+      "id": "l-origine-des-yeux-du-hibou-p4",
       "art": {
         "sky": "night",
         "ground": "forest",
         "items": [
-          { "k": "moon", "x": 78, "y": 300 },
-          { "k": "karite", "x": 40, "y": 20, "s": 1.2 },
-          { "k": "owl", "x": 42, "y": 120, "s": 1.3 }
+          {
+            "k": "moon",
+            "x": 78,
+            "y": 300
+          },
+          {
+            "k": "karite",
+            "x": 40,
+            "y": 20,
+            "s": 1.2
+          },
+          {
+            "k": "owl",
+            "x": 42,
+            "y": 120,
+            "s": 1.3
+          }
         ]
       },
       "text": {
         "fr": "Honteux, le hibou s'envola se cacher au plus profond de la forêt. Il n'osa plus se montrer de jour et ne sortit plus que la nuit, quand tout le monde dort. Voilà pourquoi, aujourd'hui encore, le hibou a de si grands yeux et ne vit que la nuit.",
-        "en": "Ashamed, the owl flew off to hide in the depths of the forest. He no longer dared show himself by day and only came out at night, when everyone is asleep. That is why, to this day, the owl has such big eyes and lives only at night."
+        "en": "Ashamed, the owl flew off to hide in the depths of the forest. He no longer dared show himself by day and only came out at night, when everyone is asleep. That is why, to this day, the owl has such big eyes and lives only at night.",
+        "moore": "A yãndame, la a zoe n kẽnga weoogẽ. A ra pa le rat n puk a meng wĩndgẽ ye, la a ra yiima yʋngo bala, tɩ ned fãa ra gõeeme. Yaa rẽ yĩng la rũnna wã, b geta a ninã wa gãnd n vɩ yʋngo bala.",
+        "dioula": "A y'a yɛrɛ dogo yiritu kɔnɔ. A tun tɛ se k'a yɛrɛ yira tilefɛ tugun. A tun be bɔ su fɛ dɔrɔn, tuma min na mɔgɔw bɛɛ lanin lo sunɔgɔ la. O kama, hali bi, ɲɔgɔmɛ ɲɛkisɛw ka bon ani a be to ka ɲɛnamaya kɛ suu dɔrɔn lo la.",
+        "fulfulde": "Ngam ɓe njamndi, ɓoymaaru ɗon ƴuura ngam jippaago nder leɗɗe. O ɓeydi yi'ugo hoore maako nder nyalawma, ammaa o wurti tan jemma nde yimɓe fuu ɗaanii. Ngam maajum, haa hannde, o woodi gite mawɗe bana non e o ɗon jooɗoto tan jemma."
       }
     }
   ],
   "quiz": [
     {
-      "q": { "fr": "Que devait faire le hibou avec le sac ?", "en": "What was the owl supposed to do with the bag?" },
+      "q": {
+        "fr": "Que devait faire le hibou avec le sac ?",
+        "en": "What was the owl supposed to do with the bag?",
+        "moore": "Bõe la b ra segd n maan ne bagã?",
+        "dioula": "O kɔ, a y'a fɔ ko: \"I ka taga n'i ye\".",
+        "fulfulde": "Ko honɗun o waɗata e ko'e mum?"
+      },
       "options": [
-        { "fr": "Distribuer les yeux à tous les oiseaux", "en": "Hand out the eyes to all the birds" },
-        { "fr": "Le cacher dans la forêt", "en": "Hide it in the forest" },
-        { "fr": "Le vendre au marché", "en": "Sell it at the market" }
+        {
+          "fr": "Distribuer les yeux à tous les oiseaux",
+          "en": "Hand out the eyes to all the birds",
+          "moore": "Ges-y bõn-yãgdbã fãa.",
+          "dioula": "I ɲaa bɔ kɔnɔw bɛɛ kan.",
+          "fulfulde": "Hokka gite mon fuu haa colli"
+        },
+        {
+          "fr": "Le cacher dans la forêt",
+          "en": "Hide it in the forest",
+          "moore": "Bĩng-y-yã-a weoogẽ wã pʋgẽ.",
+          "dioula": "I k'a dogo yiritu kɔnɔ.",
+          "fulfulde": "Hidhini ɗum nder lekki"
+        },
+        {
+          "fr": "Le vendre au marché",
+          "en": "Sell it at the market",
+          "moore": "B koos-a lame wã.",
+          "dioula": "A feere lɔgɔfiyɛ la.",
+          "fulfulde": "Jaɓɓorgo Fuuta e nder fannu"
+        }
       ],
       "answer": 0
     },
     {
-      "q": { "fr": "Pourquoi le hibou ne sort-il que la nuit ?", "en": "Why does the owl only come out at night?" },
+      "q": {
+        "fr": "Pourquoi le hibou ne sort-il que la nuit ?",
+        "en": "Why does the owl only come out at night?",
+        "moore": "Bõe yĩng tɩ yʋngo bala la b yiisd bugumã?",
+        "dioula": "Mun na sagaden be bɔ suu dɔrɔn lo la?",
+        "fulfulde": "Ngam ɗume ɓooyma ɗon wurta tan jemma?"
+      },
       "options": [
-        { "fr": "Il a honte depuis que les oiseaux se sont moqués de lui", "en": "He has been ashamed since the birds laughed at him" },
-        { "fr": "Il a peur du soleil", "en": "He is afraid of the sun" },
-        { "fr": "Il dort toute la journée par paresse", "en": "He sleeps all day out of laziness" }
+        {
+          "fr": "Il a honte depuis que les oiseaux se sont moqués de lui",
+          "en": "He has been ashamed since the birds laughed at him",
+          "moore": "A yãndame, hal tɩ bõn-buudã yãgd-a.",
+          "dioula": "A tun be maloya kabini kɔnɔw y'a lɔgɔbɔ.",
+          "fulfulde": "O ɗon nana ko'e maako diga nde colli boo ɓe mballa mo."
+        },
+        {
+          "fr": "Il a peur du soleil",
+          "en": "He is afraid of the sun",
+          "moore": "A zoeese wĩndgã.",
+          "dioula": "A be siran tile ɲɛ.",
+          "fulfulde": "O hulnii naange."
+        },
+        {
+          "fr": "Il dort toute la journée par paresse",
+          "en": "He sleeps all day out of laziness",
+          "moore": "A ra nong n gãda a zug wakat fãa.",
+          "dioula": "A be sinɔgɔ loon o loon n'a tɛ baara kɛ koɲuman",
+          "fulfulde": "O ɗaani nyalawma fuu ngam o ɗon mbaɗa ɓeydaaku"
+        }
       ],
       "answer": 0
     }
@@ -131,12 +316,20 @@
       "lang": "fr",
       "def": {
         "fr": "Oiseau de nuit aux grands yeux ronds. Dans les contes du Burkina, il est souvent lié au mystère et à la nuit.",
-        "en": "A night bird with big round eyes. In Burkinabè tales it is often linked to mystery and the night."
+        "en": "A night bird with big round eyes. In Burkinabè tales it is often linked to mystery and the night.",
+        "moore": "Dɩlla sẽn tar yʋngo, a nin-kãsemse. Burkina-rãmbã kibarã pʋgẽ, b wae n gomd yel-solemdã la yʋngo yelle.",
+        "dioula": "A ye suu kɔnɔ dɔ ye ani a ɲadenw bɛɛ tun ka ɲi. Burkina Faso la, a ka ca ni suu ye.",
+        "fulfulde": "Lindi night bee gite mawɗe je ɗon nyaamo. Nder faalaaji Burkinabè ɗum ɗon hawta bee sirri e jemma."
       }
     }
   ],
   "source": {
     "fr": "D'après « L'origine des yeux du hibou » (conte n° 2), Recueil de contes pour les structures d'éducation préscolaire au Burkina Faso, MENAPLN avec l'appui de l'UNICEF, 2022. Réécriture libre.",
     "en": "Based on “L'origine des yeux du hibou” (tale no. 2), Recueil de contes pour les structures d'éducation préscolaire au Burkina Faso, MENAPLN with support from UNICEF, 2022. Free retelling."
-  }
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
 }

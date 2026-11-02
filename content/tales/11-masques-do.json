@@ -1,7 +1,7 @@
 {
   "slug": "do-et-les-masques-de-feuilles",
   "type": "legende",
-  "region": "boucle-du-mouhoun",
+  "region": "bankui",
   "place": "Dédougou",
   "coords": [
     12.46,
@@ -40,7 +40,7 @@
     },
     "dioula": {
       "title": "Do ni furaburuw",
-      "subtitle": "Bwaba ka kibaroya kura ye ko: \"Ala bena mɔgɔ wɛrɛw dɛmɛ\".",
+      "subtitle": "Bwaba ka kibaro diiman ye kokura ye",
       "summary": "Sanji tɛ na tugun ani dugukolo bɛɛ banna. Diinan mɔgɔkɔrɔw be taga kungo kɔnɔ ka ladiliw ɲini Do fɛ. O ye ɲɛnamaya kɛcogo kura lo ye. A ka jaabili bena kɛ sababu ye mɔgɔ caaman be se ka fani don.",
       "moral": "Ɲɛnamaya be yɛlɛma tuma bɛɛ: an ka ɲi k'a ɲini ka wagati bɛɛ ladon."
     },
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "do-et-les-masques-de-feuilles-p1",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -78,6 +79,11 @@
             "k": "man",
             "x": 86,
             "c": "#2F3E6B"
+          },
+          {
+            "k": "goat",
+            "x": 38,
+            "s": 0.9
           }
         ]
       },
@@ -90,6 +96,7 @@
       }
     },
     {
+      "id": "do-et-les-masques-de-feuilles-p2",
       "art": {
         "sky": "dusk",
         "ground": "forest",
@@ -129,6 +136,7 @@
       }
     },
     {
+      "id": "do-et-les-masques-de-feuilles-p3",
       "art": {
         "sky": "dusk",
         "ground": "forest",
@@ -198,6 +206,7 @@
       }
     },
     {
+      "id": "do-et-les-masques-de-feuilles-p4",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -229,7 +238,7 @@
           {
             "k": "man-up",
             "x": 82,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "woman-up",
@@ -246,6 +255,7 @@
       }
     },
     {
+      "id": "do-et-les-masques-de-feuilles-p5",
       "art": {
         "sky": "day",
         "ground": "village",

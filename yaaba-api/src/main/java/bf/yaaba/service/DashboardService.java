@@ -11,6 +11,9 @@ import bf.yaaba.repo.Repositories.UserRepository;
 import bf.yaaba.web.Dto.ContributionView;
 import bf.yaaba.web.Dto.DashboardView;
 import bf.yaaba.web.Dto.UserView;
+import bf.yaaba.web.Dto.PageView;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
@@ -88,7 +91,19 @@ public class DashboardService {
 
     @Transactional(readOnly = true)
     public List<Map<String, Object>> users() {
-        return users.findAllByOrderByCreatedAtDesc().stream().map(u -> {
+        return users.findAllByOrderByCreatedAtDesc().stream().map(this::userRow).toList();
+    }
+
+    @Transactional(readOnly = true)
+    public PageView<Map<String, Object>> usersPage(String q, int page, int size, String sortSpec) {
+        Sort sort = TaleService.sort(sortSpec, Map.of("createdAt", "createdAt", "name", "name", "email", "email", "role", "role",
+                "lastLoginAt", "lastLoginAt"), Sort.by(Sort.Order.desc("createdAt")));
+        Page<User> p = users.search(TaleService.like(q), TaleService.pageable(page, size, sort));
+        return new PageView<>(p.getContent().stream().map(this::userRow).toList(), p.getTotalElements(), p.getNumber(), p.getSize(), null);
+    }
+
+    private Map<String, Object> userRow(User u) {
+        {
             Map<String, Object> m = new LinkedHashMap<>();
             m.put("user", UserView.of(u));
             m.put("contributions", contributions.findByUserIdOrderByCreatedAtDesc(u.getId()).size());
@@ -97,7 +112,7 @@ public class DashboardService {
             m.put("comments", comments.countByUserId(u.getId()));
             m.put("lastLoginAt", u.getLastLoginAt());
             return m;
-        }).toList();
+        }
     }
 
     @Transactional

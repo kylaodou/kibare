@@ -1,0 +1,334 @@
+{
+  "slug": "la-tortue-au-festin-des-oiseaux",
+  "type": "conte",
+  "region": "nazinon",
+  "place": "Pô",
+  "coords": [
+    11.17,
+    -1.15
+  ],
+  "people": "Kassena",
+  "language": "kasem",
+  "duration": 5,
+  "age": 5,
+  "featured": false,
+  "cover": 1,
+  "tags": [
+    "animaux",
+    "pourquoi",
+    "gourmandise",
+    "ciel"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "La tortue au festin des oiseaux",
+      "subtitle": "Pourquoi sa carapace est en morceaux",
+      "summary": "Les oiseaux sont invités à un festin dans le ciel. La tortue, rusée et gourmande, se fait prêter des plumes… et un nouveau nom.",
+      "moral": "Celui qui trompe ses amis pour tout avoir finit par tomber de haut."
+    },
+    "en": {
+      "title": "The Tortoise at the Birds' Feast",
+      "subtitle": "Why her shell is in pieces",
+      "summary": "The birds are invited to a feast in the sky. The tortoise, cunning and greedy, borrows feathers… and a new name.",
+      "moral": "Whoever tricks friends to get everything ends up falling from a great height."
+    },
+    "moore": {
+      "title": "Dʋgdã sẽn maand piis wã kibsẽ",
+      "subtitle": "Bõe yĩng tɩ b gãneg a koglgã?",
+      "summary": "B bool-b lame tɩ b wa maan kibs yĩngri. Tʋ-kẽengã, sẽn yaa nin-tɩrs la tʋlsem soaba, zãada fuug n kõ a taaba. la yʋʋr paalga.",
+      "moral": "Ned ning fãa sẽn na n belg a zo-rãmbã tɩ b paam bũmb nins fãa wã, sã n wa lʋɩt zĩig ningã, yaa sõma."
+    },
+    "dioula": {
+      "title": "Tɔrisenw ka ɲanagwɛ la",
+      "subtitle": "Mun na a ka nɛgɛtigɛbana cɛnna?",
+      "summary": "U be kɔnɔw weele dumuni na sankolo la. Kurukuru nin ye naloman ni wasabali ye. A be feerenw juru sara... ani tɔgɔ kura.",
+      "moral": "Mɔgɔ min be a teriw nɛgɛ walisa k'a ka fɛɛn bɛɛ sɔrɔ, o tigi benna duguma."
+    },
+    "fulfulde": {
+      "title": "Tortugo nder Nyoldi Lindiya'en",
+      "subtitle": "Ngam ɗume ɓandu maako ɗon jeyaa",
+      "summary": "Yimɓe nder asama ɗon nodda ɓe to nyaamdu. Tortugo, mo cembiɗɗo e mo nyaamdu, o ƴetti fe'e... e innde keso.",
+      "moral": "Mo ɓoyɗo yimɓe ngam heɓugo koo ɗume, o ɗon maaki daga dow haaje."
+    }
+  },
+  "scenes": [
+    {
+      "id": "la-tortue-au-festin-des-oiseaux-p1",
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "tortoise",
+            "x": 34,
+            "s": 1.4
+          },
+          {
+            "k": "bird-small",
+            "x": 54,
+            "y": 40
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 66,
+            "s": 1.1
+          },
+          {
+            "k": "partridge",
+            "x": 80
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un jour, le ciel invita tous les oiseaux à un grand festin. La tortue, qui ne savait pas voler, supplia : « Prêtez-moi chacun une plume, et j'irai avec vous. » Les oiseaux, généreux, acceptèrent.",
+        "en": "One day the sky invited all the birds to a great feast. The tortoise, who couldn't fly, begged: \"Each of you lend me a feather, and I'll come with you.\" The generous birds agreed.",
+        "moore": "Daar a ye, yĩngr boola bõn-buudã fãa tɩ b wa rɩdg kãseng pʋgẽ. Kẽerã sẽn da pa tõe n yɩg yĩngri wã bõosa: \"Bɩ y ned kam fãa kõ maam fuug a yembre, tɩ m tũ yãmba\".",
+        "dioula": "Loon dɔ, sankolo kɔnɔw bɛɛ nana dumuniba kɛ. O kɔ, a y'a fɔ u ye ko: \"Aw kelen kelen bɛɛ ka feeren dɔ di ne ma. Ne bena taga n'aw ye\".",
+        "fulfulde": "Gooto nyalnde, asama noddi colli fuu haa nyaamdu mawnde. Tortugo, mo andaa fuɗugo, tori: \"Fuu e mooɗon hokkami yam fe'ere, mi wari bee mooɗon\". Lindiji booɗɗe ɗon njaɓɓa."
+      }
+    },
+    {
+      "id": "la-tortue-au-festin-des-oiseaux-p2",
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "tortoise",
+            "x": 46,
+            "y": 150,
+            "s": 1.4
+          },
+          {
+            "k": "bird-small",
+            "x": 30,
+            "y": 160
+          },
+          {
+            "k": "bird-small",
+            "x": 66,
+            "y": 170
+          },
+          {
+            "k": "cloud",
+            "x": 50,
+            "y": 270
+          }
+        ]
+      },
+      "text": {
+        "fr": "Pendant le vol, la tortue dit : « Au festin, chacun prend un nouveau nom. Moi, je m'appellerai Vous-Tous. » Arrivés au ciel, l'hôte annonça : « Ce repas est pour vous tous ! »",
+        "en": "During the flight the tortoise said: \"At the feast, everyone takes a new name. I'll be called All-of-You.\" When they reached the sky, the host announced: \"This meal is for all of you!\"",
+        "moore": "A sẽn da wa n dabd wã, a yeela woto: \"Bũmbã sasa, ned fãa pʋdda a yʋʋr a to. B sẽn wa n ta saasẽ wã, b yeelame tɩ: \"Bũmb kãngã yaa yãmb fãa yĩnga\".",
+        "dioula": "Tuma min na u tun be tagara, kurukuru y'a fɔ ko: \"Fɛndɛɛrɛ la, mɔgɔ bɛɛ b'u tɔgɔ kura ta. U sera sankolo la tuma min na, u kuntigi y'a fɔ ko: \"Aw bɛɛ ka dumuni filɛ nin ye!\"",
+        "fulfulde": "Nder nduuli, tortugo wi'i: \"To juulde fuu o hokkata innde keso. Mi noddiray \"Ko'e mooɗon fuu\". Nde ɓe njotti dow, mawɗo suudu wi'i: \"Koo nyaamdu ndu woni ngam on fuu!\""
+      },
+      "choice": {
+        "q": {
+          "fr": "Qui va manger le repas ?",
+          "en": "Who will eat the meal?",
+          "moore": "Ãnd n na n dɩ rɩɩbã?",
+          "dioula": "Jɔn lo bena dumuni kɛ?",
+          "fulfulde": "Moy nyaaman nyamndu?"
+        },
+        "options": [
+          {
+            "fr": "La tortue, grâce à sa ruse",
+            "en": "The tortoise, thanks to her trick",
+            "moore": "B sẽn maan a yamã yĩnga, yaa ne-a.",
+            "dioula": "O ye tulogweren dɔ lo dɛmɛ.",
+            "fulfulde": "Tortugo, ngam daliila kuugal maako"
+          },
+          {
+            "fr": "Tous les oiseaux",
+            "en": "All the birds",
+            "moore": "Dĩis fãa",
+            "dioula": "Dɔnfɛn minw bɛɛ be yen,",
+            "fulfulde": "Yimɓe fuu ɓe ɗon njaɓɓa."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "« C'est moi, Vous-Tous ! » dit la tortue, et elle mangea presque tout.",
+          "en": "\"That's me, All-of-You!\" said the tortoise, and she ate almost everything.",
+          "moore": "\"Yaa maam, yãmb fãa!\" T'a ye wãb-la ne a rɩt bũmb nins fãa.",
+          "dioula": "O kɔ, a ye fɛɛn bɛɛ dumu. A ko: \"Ne lo!",
+          "fulfulde": "\"Ɗum woni am, All-of-On!\" wi'i tortugo, o nyaami fere fuu."
+        }
+      }
+    },
+    {
+      "id": "la-tortue-au-festin-des-oiseaux-p3",
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "tortoise",
+            "x": 46,
+            "y": 150,
+            "s": 1.4
+          },
+          {
+            "k": "bird-small",
+            "x": 30,
+            "y": 180
+          },
+          {
+            "k": "bird-small",
+            "x": 70,
+            "y": 190
+          },
+          {
+            "k": "cloud",
+            "x": 40,
+            "y": 270,
+            "c": "storm"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Furieux, les oiseaux reprirent chacun leur plume. La tortue, sans ailes, demanda au perroquet de dire à sa femme d'étaler des pagnes moelleux devant la case. Mais le perroquet, vexé, dit l'inverse : « Sortez les pierres et les houes ! »",
+        "en": "Furious, the birds each took back their feather. The featherless tortoise asked the parrot to tell her wife to spread soft cloths in front of the hut. But the offended parrot said the opposite: \"Bring out the stones and hoes!\"",
+        "moore": "A Zeova sẽn yeel-b woto wã kɩtame tɩ b sũur sãam wʋsgo. B sẽn da pa tar tãb-biisã, b kosa seb-kãnga t'a yeel a pagã tɩ yẽ wãg fut sẽn yaa sũ-mẽng ne gãagã taoore. La a sẽn wa n sãamd-a wã yeelame: \"Bɩ y yiis kugã la b gãagã!\"",
+        "dioula": "O kɔnɔw dimininba y'u ka fugulanw ta. O kɔ, a y'a fɔ a muso ye ko a ka fani sanuman dɔw lala boon ɲɛfɛ. Nka, a y'a fɔ ko: \"Aw ka kabakuruw ni jɛnɛkɛlaw bɔ!\"",
+        "fulfulde": "Ɗe ɓeydi masin, koomoy maɓɓe o hoo'i feere maako. Tortugal ngal walaa feere wi'i parrot ngam o wi'a debbo maako yaajugo doosɗe laaɓuɗe yeeso suudu. Ammaa parrotol ɗon huutore wi'i: \"Njaɓu kaaƴe e ɓooyɗe!\""
+      }
+    },
+    {
+      "id": "la-tortue-au-festin-des-oiseaux-p4",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "tortoise",
+            "x": 46,
+            "s": 1.4
+          },
+          {
+            "k": "rock",
+            "x": 60
+          },
+          {
+            "k": "painted-house",
+            "x": 80,
+            "y": 30,
+            "s": 0.7
+          },
+          {
+            "k": "woman",
+            "x": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "La tortue sauta et s'écrasa sur les pierres : sa carapace se brisa en mille morceaux. Sa femme les recolla patiemment. Voilà pourquoi, au pays kassena comme partout, la carapace de la tortue est faite de petits morceaux.",
+        "en": "The tortoise jumped and crashed onto the stones: her shell shattered into a thousand pieces. Her wife patiently glued them back together. That is why, in Kassena country as everywhere, the tortoise's shell is made of little pieces.",
+        "moore": "A sãn-tĩiga zãmbame n lʋɩ kugã zugu, a koglg wã wẽe wa bõn-naands. A pagã sak n gãda b toore. Yaa rẽ yĩng la Kassena tẽngẽ wã, wala zĩig fãa, sã n yaa ne bõn-bil sẽn pa tar pãng wʋsgo, b maand-a lame.",
+        "dioula": "O kɔ, a ye bɔn ka ben kabakuruw kan. A ka nɛgɛtigɛbana faranna fɔɔ ka kɛ lɔgɔkun kelen ye. A muso muɲuna k'u tugu ɲɔgɔn na. O kama, kasena jamana na i n'a fɔ yɔrɔ bɛɛ la, kurukuruw ka fari fanin be lɔgɔfitini dɔrɔn lo la.",
+        "fulfulde": "Tortugo ɗon jippa e maɓɓugo dow kaaƴe: ɓandu maako ɗon taƴi nder ujine. Debbo maako ɗon nyaama ɓe bee hakkiilo. Ngam maajum, nder lesdi Kassena bana haa fuɗɗam, ɓaleeji tortugo ɗon waɗana diga kuuje ɗe ɗuuɗɗe."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quel nom la tortue a-t-elle choisi ?",
+        "en": "What name did the tortoise choose?",
+        "moore": "Tʋ-kʋdgã yãka yʋʋr bʋg n kõ-a?",
+        "dioula": "O kɔ, a ye tɔgɔ juman lo sugandi?",
+        "fulfulde": "Ko inde nde tortugo boo suɓii?"
+      },
+      "options": [
+        {
+          "fr": "Vous-Tous",
+          "en": "All-of-You",
+          "moore": "Yaa yãmb fãa.",
+          "dioula": "I ka koo bɛɛ la.",
+          "fulfulde": "Ko'e mon fuu"
+        },
+        {
+          "fr": "Reine",
+          "en": "Queen",
+          "moore": "Yaa rĩm-poakã.",
+          "dioula": "Masamuso",
+          "fulfulde": "Laamiiɗo"
+        },
+        {
+          "fr": "Plume",
+          "en": "Feather",
+          "moore": "Dɩt sẽn yaa bĩngd",
+          "dioula": "Furuw",
+          "fulfulde": "Fuuɗal"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Pourquoi la carapace est-elle en morceaux ?",
+        "en": "Why is the shell in pieces?",
+        "moore": "Bõe yĩng tɩ b gãneg-a?",
+        "dioula": "Mun na o kɔnɔkɛra faranfara?",
+        "fulfulde": "Ngam ɗume ko'e mum ɗon ɓilla?"
+      },
+      "options": [
+        {
+          "fr": "La tortue est tombée du ciel",
+          "en": "The tortoise fell from the sky",
+          "moore": "Tʋ-kãnga lʋɩɩ yĩngr zugu.",
+          "dioula": "Kurukuru benna ka bɔ sankolo la.",
+          "fulfulde": "Tortugo ɗon jippi diga asama"
+        },
+        {
+          "fr": "Un éléphant l'a écrasée",
+          "en": "An elephant crushed it",
+          "moore": "Wʋs n pãb-a lame.",
+          "dioula": "Sanɛ dɔ y'a ɲɔɲɔ.",
+          "fulfulde": "Won ko elefan go'o haɓɓii ɗum"
+        },
+        {
+          "fr": "Elle est née ainsi",
+          "en": "She was born that way",
+          "moore": "A rogame tɩ yɩ woto.",
+          "dioula": "A wolola ten.",
+          "fulfulde": "O jibinaa bana non"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "carapace",
+      "lang": "fr",
+      "def": {
+        "fr": "Coquille dure qui protège le corps de la tortue.",
+        "en": "The hard shell that protects the tortoise's body.",
+        "moore": "Yaa gãnd sẽn kogend-a wã yĩnga.",
+        "dioula": "O ye fari barikaman ye min be se ka kurukuru nin farikolo tanga.",
+        "fulfulde": "Ɓanndu ɓernde ɗon ɗowan ɓandu tortugo."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte du « festin dans le ciel », l'un des plus répandus d'Afrique de l'Ouest (Igbo, Yoruba, Mossi, Kassena…). Version écrite pour KIBARE, située en pays kassena, autour de Pô.",
+    "en": "The \"feast in the sky\" tale, one of the most widespread in West Africa (Igbo, Yoruba, Mossi, Kassena…). Version written for KIBARE, set in Kassena country around Pô."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

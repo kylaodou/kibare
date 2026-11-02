@@ -1,0 +1,333 @@
+{
+  "slug": "les-dix-sept-vaches-du-vieux-peul",
+  "type": "conte",
+  "region": "liptako",
+  "place": "Dori",
+  "coords": [
+    14.03,
+    -0.03
+  ],
+  "people": "Peuls",
+  "language": "fulfulde",
+  "duration": 4,
+  "age": 9,
+  "featured": true,
+  "cover": 3,
+  "tags": [
+    "sagesse",
+    "héritage",
+    "partage",
+    "calcul"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Les dix-sept vaches du vieux Peul",
+      "subtitle": "L'héritage impossible",
+      "summary": "Un vieux Peul de Dori laisse dix-sept vaches à partager entre ses trois fils selon des parts impossibles. Seul un sage, avec une vache de plus, trouve la solution.",
+      "moral": "Un petit geste de générosité peut résoudre ce que la dispute rend impossible."
+    },
+    "en": {
+      "title": "The Old Fulani Man's Seventeen Cows",
+      "subtitle": "The impossible inheritance",
+      "summary": "An old Fulani man of Dori leaves seventeen cows to be shared among his three sons in impossible portions. Only a sage, with one more cow, finds the answer.",
+      "moral": "A small act of generosity can solve what quarrelling makes impossible."
+    },
+    "moore": {
+      "title": "Fula nin-kʋdgã na n paama rũms piig la a yopoe",
+      "subtitle": "Ned sã n pa tõe n paam pʋɩɩr a to wã,",
+      "summary": "Dori nin-kẽem a ye sẽn yaa Fulani wã basda naand piig la yopoe t'a bi-ribl a tãabã pʋɩt n pa tõe n paam bũmb ning fãa. Yaa ned sẽn tar yam-sõngo, ne fõog a ye bal n na n leoke.",
+      "moral": "Ned sã n nong a taabã, tõe n kɩtame tɩ b pa tõog n maan bũmb nins sẽn kɩtd tɩ wẽnemã yɩ toog ye."
+    },
+    "dioula": {
+      "title": "Fulani cɛkɔrɔba ka misi tan ni wolonfila",
+      "subtitle": "Fɛɛn min tɛ se ka kɛ a dan na, o ye fɛɛn dafabali lo ye.",
+      "summary": "Dori dugu la, Fulani cɛkɔrɔba dɔ ye misi tan ni wolonfila to yen walisa a ka u tilan a dencɛ saba cɛ. Hakilitigi kelen dɔrɔn lo be se k'o jaabili sɔrɔ.",
+      "moral": "N'i ye ɲumanya kɛ mɔgɔ dɔ ye, o be se k'a dɛmɛ ka koo dɔw ɲɛnabɔ minw tɛ se ka kɛ bɛnbaliya sababu ye."
+    },
+    "fulfulde": {
+      "title": "Ko'e sappo e joweeɗiɗo ɗi Fulaniyankeejo on waɗi",
+      "subtitle": "Ɓaamol ngol fotaay",
+      "summary": "Goɗɗo Fulani mawɗo Dori ɗon acca sappo e joweeɗiɗo co'e ngam ɓe mbaɗata ɗi hakkunde ɓiyum tato nder kuuje ɗe waawaa. Gooto mo anndinanɗo, e go'o haaje feere, heɓata jaabuki.",
+      "moral": "Ɗuum goɗɗum nder hokkugo yimɓe ko'e maɓɓe yaawata ɓe mbaawaa waɗugo."
+    }
+  },
+  "scenes": [
+    {
+      "id": "les-dix-sept-vaches-du-vieux-peul-p1",
+      "art": {
+        "sky": "day",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "elder-sit",
+            "x": 30
+          },
+          {
+            "k": "cow",
+            "x": 52
+          },
+          {
+            "k": "cow",
+            "x": 64,
+            "s": 0.9
+          },
+          {
+            "k": "cow",
+            "x": 76,
+            "s": 0.8
+          }
+        ]
+      },
+      "text": {
+        "fr": "Avant de mourir, un vieux berger de Dori réunit ses trois fils : « L'aîné aura la moitié de mes vaches, le deuxième le tiers, et le plus jeune le neuvième. » Il possédait dix-sept vaches.",
+        "en": "Before he died, an old herder of Dori gathered his three sons: \"The eldest will have half of my cows, the second a third, and the youngest a ninth.\" He owned seventeen cows.",
+        "moore": "A sẽn wa n na n ki, a Dori nin-kẽemã tigsa a kom-dibli a tãabã: \"Mam na n dɩka mam naand pʋɩ-sʋkã, la m na n dɩke mam yaoolem soaba\".",
+        "dioula": "Sanni a ka sa, Dori tun ye sagadɛndɛbaga dɔ ye a dencɛ saba lajɛn. A ko: \"Ne ka misi tilancɛ bena kɛ den fɔlɔ ta ye, filanan ta bena kɛ deen sabanan ta ye, dɔgɔman ta fana bena kɛ den kɔnɔntɔnnan ta ye\".",
+        "fulfulde": "Kaŋko o maayi, gooduɗo nyamndu Dori mooɓti ɓiɓɓe maako tati: \"Ɓii mawɗo heɓan feccere baali am, ɗiɗaɓo heɓan fecceeje tato, ɓii suka boo heɓan fecceeje njoweetato\". O mari sappo e joweeɗiɗo."
+      }
+    },
+    {
+      "id": "les-dix-sept-vaches-du-vieux-peul-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "man-point",
+            "x": 30,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "man-talk",
+            "x": 50,
+            "c": "#7C3109"
+          },
+          {
+            "k": "man",
+            "x": 66,
+            "c": "#C9822B"
+          },
+          {
+            "k": "cow",
+            "x": 84
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les fils se disputèrent : la moitié de dix-sept, c'est huit vaches et demie ! Faut-il couper une vache en morceaux ? Le ton monta, et la famille risquait de se déchirer.",
+        "en": "The sons quarrelled: half of seventeen is eight and a half cows! Must a cow be cut into pieces? Voices rose, and the family was in danger of falling apart.",
+        "moore": "Kom-bõonegã sẽn da zabd ne taaba: b ra tara kar a yopoe la pissi, tɩ bãmb sʋka pʋɩta yaa naand dãmb a nii! Yaa tɩlae tɩ b seg koe-rũng n kaoog a to? B sẽn da wa n gomd yellã, b ra pa le tõe n wʋmd koɛɛgã ye.",
+        "dioula": "O dencɛ fila bɛɛ tun be ɲɔgɔn kɛlɛra. U tan ni wolonfila tilancɛ ye misi seegi ni tilan lo ye! Yala a bɛnnin lo ka misi tigɛtigɛ wa? Kumakanw tun be bɔra ani o somɔgɔw tun be farati la.",
+        "fulfulde": "Ɓiɓɓe'en ɗon haɓana: feccere sappo e joweeɗiɗo woni goonɗinki ujine jeeɗije e njoweego! Ngam ɗume ɗum haani ɓe taƴa ley go'o? Ɗuum waɗi yimɓe ɗon mbi'a, nden saare boo ɗon nder haɗuki ɓoggi."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que faut-il faire ?",
+          "en": "What should be done?",
+          "moore": "Bõe la d segd n maan?",
+          "dioula": "An ka ɲi ka mun lo kɛ do?",
+          "fulfulde": "Ko waɗata?"
+        },
+        "options": [
+          {
+            "fr": "Demander conseil à un sage",
+            "en": "Ask a sage for advice",
+            "moore": "Kos-y yam soab tɩ b kõ-y saglsã",
+            "dioula": "I ka ladili ɲini hakilitigi dɔ fɛ.",
+            "fulfulde": "Roɓuɗo mo anndal ngam heɓugo ko o yiɗi"
+          },
+          {
+            "fr": "Couper une vache",
+            "en": "Cut a cow in pieces",
+            "moore": "Yãk-y na n dɩka y yageng ne bũmb a ye.",
+            "dioula": "I ye misi dɔ tigɛtigɛ ka kɛ a senw ye.",
+            "fulfulde": "Wurtina go'o nder kuuje"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Ils allèrent voir le vieux marabout du village…",
+          "en": "They went to see the village's old scholar…",
+          "moore": "B kẽngame n tɩ ges tẽn-kʋdg karen-saambã.",
+          "dioula": "U tagara dugumɔgɔw ka lɔnnikɛla kɔrɔ dɔ filɛ.",
+          "fulfulde": "Ɓe njahi ɓe ndaari jannginoowo gariiri ndin..."
+        }
+      }
+    },
+    {
+      "id": "les-dix-sept-vaches-du-vieux-peul-p3",
+      "art": {
+        "sky": "day",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "elder",
+            "x": 30
+          },
+          {
+            "k": "cow",
+            "x": 46,
+            "c": "white"
+          },
+          {
+            "k": "man",
+            "x": 62,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "man",
+            "x": 74,
+            "c": "#7C3109"
+          },
+          {
+            "k": "man",
+            "x": 86,
+            "c": "#C9822B"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le sage écouta, sourit, et ajouta sa propre vache au troupeau : « Voilà, vous en avez dix-huit. » L'aîné en prit la moitié : neuf. Le deuxième le tiers : six. Le cadet le neuvième : deux. Neuf, six et deux… dix-sept !",
+        "en": "The sage listened, smiled, and added his own cow to the herd: \"There, now you have eighteen.\" The eldest took half: nine. The second a third: six. The youngest a ninth: two. Nine, six and two… seventeen!",
+        "moore": "A kelma a Zeova, n paas a na-kɩɩmã: \"Bãmb sõor yaa piig la a nii\". Sẽn yɩɩd fãa, b rɩka nus sẽn zems nu. A yiib soaba la a tãab soabã: a yoobã. Sẽn yaa-a sullã n ya a naoor soaba: a yiib. A nu, a yoob la a yiib... A yopoe la a nu!",
+        "dioula": "O kɔ, a y'a fɔ u ye ko: \"Aw ka misi nin kɛ tan ni seegi ye sisan\". A kɔrɔman tun be tilan kelen ta. Fɔɔ ka kɛ sabanan ye: wɔɔrɔ. Denmisɛnnin nin ye kɔnɔntɔnnan ye: fila. 9, 6 ani 2... 17! Aw ye mɔgɔ minw weele ka na, aw k'olu minɛ.",
+        "fulfulde": "Moodiyanke'en nanngi, o seeki, o ɓeydi bee sappo maako haa kawtal: \"Ɗum, jooni on woodi sappo e joweetati\". Ɓurɗo maayi feccere: njoweeɗiɗo. Ɗi ɗiɗaɓo e tati: joweego. Ɓiɗɗo ɓurɗo duuɓi 9: ɗiɗo. 96, 6 e 2... sappo e joweeɗiɗo!"
+      }
+    },
+    {
+      "id": "les-dix-sept-vaches-du-vieux-peul-p4",
+      "art": {
+        "sky": "dusk",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "elder",
+            "x": 40
+          },
+          {
+            "k": "cow",
+            "x": 58,
+            "c": "white"
+          },
+          {
+            "k": "acacia",
+            "x": 84,
+            "y": 26
+          },
+          {
+            "k": "man-up",
+            "x": 20,
+            "c": "#7C3109"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il restait une vache : celle du sage, qui la reprit et rentra chez lui. Les trois frères, réconciliés, comprirent que leur père leur avait laissé bien plus qu'un troupeau : une leçon de partage.",
+        "en": "One cow was left: the sage's own, which he took back home. The three brothers, reconciled, understood that their father had left them much more than a herd: a lesson in sharing.",
+        "moore": "La sã n da ket ne koe-kãnga, a ra rɩka saglg soabã. A ba wã sẽn wa n paam laafɩ, b saam-biis a tãabã bãngame tɩ b baaba basame tɩ b pa maan bũmb wʋsg bal ye. B ra zãmsda nebã bũmb wʋsgo.",
+        "dioula": "A ye misi kelen to yen, o tun ye lɔnnikɛla ta ye. O balimacɛ saba y'a faamu ko u facɛ tun ye koo caaman kɛ u la. A tun b'u kalanna fana ka mɔgɔw dɛmɛ u k'u deenw ladon.",
+        "fulfulde": "Gooto go'o ɗon haani: go'o mo anndinoowo, o hooti wuro maako. Ɓe tati, ɓe njottini, ɓe paamaama baaba maɓɓe acciɓe ko ɓuri ɗum fuu: annduki dow fahinugo."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Combien de vaches le sage a-t-il ajoutées ?",
+        "en": "How many cows did the sage add?",
+        "moore": "Sʋtãanaã paasda na-kɩɩm a wãna?",
+        "dioula": "Sagaden ye misi joli fara o kan?",
+        "fulfulde": "Yimɓe ɗuuɗɓe ɓeydani sage?"
+      },
+      "options": [
+        {
+          "fr": "Une",
+          "en": "One",
+          "moore": "A yembr n be.",
+          "dioula": "Mɔgɔ kelen lo.",
+          "fulfulde": "Gooto go'o"
+        },
+        {
+          "fr": "Trois",
+          "en": "Three",
+          "moore": "A tãabã",
+          "dioula": "3",
+          "fulfulde": "3 Ɗuum"
+        },
+        {
+          "fr": "Aucune",
+          "en": "None",
+          "moore": "Ned ka be ye.",
+          "dioula": "O tɛ yen fewu.",
+          "fulfulde": "Walaa goɗɗum"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Combien de vaches a reçu l'aîné ?",
+        "en": "How many cows did the eldest receive?",
+        "moore": "La sã n yaa a sẽn dengã, na-kẽndr ning b sẽn kõ-a wã sõor yɩɩ wãna?",
+        "dioula": "Galen, misi joli lo tun be deen fɔlɔ fɛ?",
+        "fulfulde": "Koyɗe goɗɗe ɗe mawɗo'en hokki?"
+      },
+      "options": [
+        {
+          "fr": "Neuf",
+          "en": "Nine",
+          "moore": "A na n yɩɩ a nu.",
+          "dioula": "Mɔgɔ kɔnɔntɔn.",
+          "fulfulde": "9"
+        },
+        {
+          "fr": "Huit et demie",
+          "en": "Eight and a half",
+          "moore": "A nii la pʋɩ-sʋka.",
+          "dioula": "8 ani tilan",
+          "fulfulde": "8 e go'o"
+        },
+        {
+          "fr": "Six",
+          "en": "Six",
+          "moore": "A yoobã",
+          "dioula": "6",
+          "fulfulde": "Seɗɗa"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "marabout",
+      "lang": "fr",
+      "def": {
+        "fr": "Savant musulman respecté, souvent consulté pour ses conseils.",
+        "en": "A respected Muslim scholar, often consulted for advice.",
+        "moore": "A ra yaa mooslem sẽn da tar waoogre, la b ra wae n sagend-a lame.",
+        "dioula": "A tun ye kalanfa tɔgɔba dɔ ye. Tuma caaman na, a tun be ladiliw ɲini u fɛ.",
+        "fulfulde": "Mo anndinoowo Muslim mo ɓe teddina, o ɗon toro ngam heɓugo tammunde."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Énigme d'héritage (les 17 bêtes) racontée au Sahel, au Maghreb et au Moyen-Orient, souvent avec des chameaux. Version écrite pour KIBARE, située chez les Peuls du Liptako.",
+    "en": "An inheritance riddle (the 17 animals) told across the Sahel, the Maghreb and the Middle East, often with camels. Version written for KIBARE, set among the Fulani of Liptako."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

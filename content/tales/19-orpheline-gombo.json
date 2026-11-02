@@ -1,7 +1,7 @@
 {
   "slug": "l-orpheline-et-le-gombo",
   "type": "conte",
-  "region": "est",
+  "region": "sirba",
   "place": "Bogandé",
   "coords": [
     13.02,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "l-orpheline-et-le-gombo-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -92,6 +93,7 @@
       }
     },
     {
+      "id": "l-orpheline-et-le-gombo-p2",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -133,6 +135,7 @@
       }
     },
     {
+      "id": "l-orpheline-et-le-gombo-p3",
       "art": {
         "sky": "night",
         "ground": "savanna",
@@ -215,6 +218,7 @@
       }
     },
     {
+      "id": "l-orpheline-et-le-gombo-p4",
       "art": {
         "sky": "dawn",
         "ground": "savanna",
@@ -253,6 +257,7 @@
       }
     },
     {
+      "id": "l-orpheline-et-le-gombo-p5",
       "art": {
         "sky": "day",
         "ground": "village",

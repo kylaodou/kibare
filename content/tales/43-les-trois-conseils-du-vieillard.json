@@ -1,0 +1,333 @@
+{
+  "slug": "les-trois-conseils-du-vieillard",
+  "type": "conte",
+  "region": "sourou",
+  "place": "Nouna",
+  "coords": [
+    12.73,
+    -3.86
+  ],
+  "people": "Marka",
+  "language": "dioula",
+  "duration": 5,
+  "age": 8,
+  "featured": false,
+  "cover": 3,
+  "tags": [
+    "sagesse",
+    "conseils",
+    "voyage",
+    "patience"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Les trois conseils du vieillard",
+      "subtitle": "Une sagesse qui vaut de l'or",
+      "summary": "Un jeune homme part chercher fortune. Au lieu d'argent, un vieillard de Nouna lui donne trois conseils. Chacun va lui sauver la vie.",
+      "moral": "La sagesse des anciens vaut plus que tout l'or du monde."
+    },
+    "en": {
+      "title": "The Old Man's Three Pieces of Advice",
+      "subtitle": "Wisdom worth gold",
+      "summary": "A young man sets out to seek his fortune. Instead of money, an old man of Nouna gives him three pieces of advice. Each one will save his life.",
+      "moral": "The wisdom of the elders is worth more than all the gold in the world."
+    },
+    "moore": {
+      "title": "Kãsem-dãmbã saglg a tãab",
+      "subtitle": "Yam sẽn tar yõod n yɩɩd sãnem",
+      "summary": "Bi-bɩɩg n dat a paoongã. La a Nouna nin-kẽem n kõ-a sagls a tãab. Ned kam fãa na n fãaga a vɩɩm.",
+      "moral": "Kãsem dãmbã yam yɩɩda sãnem fãa dũniyã pʋgẽ."
+    },
+    "dioula": {
+      "title": "Cɛkɔrɔba ka ladiliw saba",
+      "subtitle": "Hakilitigiya min ka fisa ni sanu ye",
+      "summary": "Kanbele dɔ y'a latigɛ ka nafolo ɲini. Nka, a ye ladili saba di a ma. U kelen kelen bɛɛ bena u yɛrɛ kisi.",
+      "moral": "Mɔgɔkɔrɔbaw ka hakilitigiya ka fisa ni sanu ye diɲɛ kɔnɔ."
+    },
+    "fulfulde": {
+      "title": "Ko'e tati dow ko'e mawɗo on",
+      "subtitle": "Hakkiilo ɗon nafata goɗɗum",
+      "summary": "Sukaajo mo ɗon ɗaɓɓita jawdi maako. Ammaa to goɗɗo mawɗo nder Nouna hokki mo tammunde tati. Gooto e maɓɓe o hisan yonki muuɗum.",
+      "moral": "Hakkiilo mawɓe ɓuri koɗeeje duniyaaru fuu."
+    }
+  },
+  "scenes": [
+    {
+      "id": "les-trois-conseils-du-vieillard-p1",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "man",
+            "x": 30,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "elder-sit",
+            "x": 56
+          },
+          {
+            "k": "baobab",
+            "x": 82,
+            "y": 26,
+            "s": 0.9
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un jeune homme de Nouna travailla trois ans pour un vieux sage. Quand vint le moment de partir, le vieillard lui dit : « Je peux te payer en or, ou te donner trois conseils. Choisis. » Le jeune homme choisit les conseils.",
+        "en": "A young man from Nouna worked three years for an old sage. When it was time to leave, the old man said: \"I can pay you in gold, or give you three pieces of advice. Choose.\" The young man chose the advice.",
+        "moore": "A Nouna bi-bɩɩg n tʋm yʋʋm a tãab ne yam soab sẽn kʋʋl. A sẽn wa n na n loogã, a yeelame: \"Mam tõe n yao-y lame ne sãnem bɩ m kõ-y sagls a tãabo. Yi-y n yãk yam\". Bi-bɩɩgã yãka yam n na n kõ sagl-kãngã.",
+        "dioula": "Nouna dugu la, kanbele dɔ ye saan saba kɛ hakilitigi dɔ fɛ. Tuma min na a tun ka ɲi ka taga, cɛkɔrɔba y'a fɔ ko: \"Ne be se k'i sara ni sanu ye wala n' bena ladili saba di i ma. A ka ɲi k'o ladili lo ta.",
+        "fulfulde": "Goɗɗo mo Nouna waɗi duuɓi tati ngam goɗɗo mawɗo. Nde wakkati yaaki, mawɗo on wi'i: \"Mi waaway hokkude ma ceede e daɗde, koo mi waawataa hokkugo ma dokkal tati. Taɓɓa\". Suka on suɓi ko o wi'i."
+      }
+    },
+    {
+      "id": "les-trois-conseils-du-vieillard-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "man",
+            "x": 26,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "elder",
+            "x": 50
+          },
+          {
+            "k": "bush",
+            "x": 70,
+            "y": 10
+          },
+          {
+            "k": "acacia",
+            "x": 86,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "« Un : ne quitte jamais le grand chemin pour un raccourci. Deux : ne te mêle pas de ce qui ne te regarde pas. Trois : remets ta colère au lendemain. » Puis il lui donna un pain pour la route.",
+        "en": "\"One: never leave the main road for a shortcut. Two: don't meddle in what isn't your business. Three: put off your anger until the next day.\" Then he gave him a loaf for the road.",
+        "moore": "\"Ned n yeel tɩ da bas sorã ye. A yiib soaba: da kẽes f meng bũmb nins sẽn pa yaa f zu-loeesã pʋgẽ ye. A tãab soaba: bɩ y bas y sũ-yikrã tɩ ta vẽkembeoogo\". Rẽ poore, a kõo a Pɩyɛɛr bur n kõ-a sorã yĩnga.",
+        "dioula": "\"Fɔlɔ: Kana bɔ siraba kan ka tɛmɛ sirada dɔ fɛ. Fɔɔ i kana don koo minw na, o kana kɛ i ɲɛnako fɔlɔ ye. A sabanan, aw kana dimi mara fɔɔ ka taga se sini ma\". O kɔ, a ye buru di cɛɛ ma sira la.",
+        "fulfulde": "\"Gooto: taa wurto laawol mawɗo ngam wayloore. Ɗu: to'o hawta nder ko wonaa kuuɗe ma. Tatoore: to' on ɗon njogii ɓernde mooɗon haa nyalawma\". Nden o hokki mo buroodi ngam laawol."
+      },
+      "choice": {
+        "q": {
+          "fr": "Le jeune homme a-t-il bien choisi ?",
+          "en": "Did the young man choose well?",
+          "moore": "A ra yãka yam sõma bɩ?",
+          "dioula": "Yala kanbele y'a latigɛ ka ɲɛ wa?",
+          "fulfulde": "Goɗɗo on suɓii ko wooɗi naa?"
+        },
+        "options": [
+          {
+            "fr": "Oui, la sagesse est précieuse",
+            "en": "Yes, wisdom is precious",
+            "moore": "N-ye, yamã tara yõod wʋsgo",
+            "dioula": "Tiɲɛn na, hakilitigiya ye fɛɛn nafamanba lo ye",
+            "fulfulde": "Goonga, faamu woni ko nafata"
+          },
+          {
+            "fr": "Non, il aurait dû prendre l'or",
+            "en": "No, he should have taken the gold",
+            "moore": "A ra segd n dɩka sãnemã.",
+            "dioula": "Ayi, a tun ka kan k'o sanu ta.",
+            "fulfulde": "Na, o haani hoolaade jaŋde."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "On le saura en chemin…",
+          "en": "We'll find out on the way…",
+          "moore": "D na n bãnga sorã zugu...",
+          "dioula": "An bena a lɔn sira kan...",
+          "fulfulde": "En tawan ɗum nder laawol..."
+        }
+      }
+    },
+    {
+      "id": "les-trois-conseils-du-vieillard-p3",
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "man",
+            "x": 30,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "man-point",
+            "x": 52,
+            "c": "#7C3109"
+          },
+          {
+            "k": "bush",
+            "x": 70,
+            "y": 10
+          },
+          {
+            "k": "hyena",
+            "x": 84
+          }
+        ]
+      },
+      "text": {
+        "fr": "En route, des voyageurs lui proposèrent un raccourci par la brousse ; il refusa. Le soir, il apprit que des brigands les avaient attaqués. Dans un village, il vit une étrange dispute et passa son chemin sans s'en mêler.",
+        "en": "On the way, travellers suggested a shortcut through the bush; he refused. That evening he learned that bandits had attacked them. In a village he saw a strange quarrel and went on his way without getting involved.",
+        "moore": "B sẽn da wa n be sorã, b ra ratame tɩ b rɩk yo-koɛɛg a ye. La a pa rat ye. A sẽn wa n be wã, a bãngame tɩ b ra yaa tãb-biis n kʋ-ba. Tẽnga a yembr pʋgẽ, a yãee wẽnem sẽn yaa to-to n kẽng tɩ b pa kẽesd b toog ye.",
+        "dioula": "U tagara bɔ a ye. A y'a fɔ u ye ko u ka tɛmɛ yiritu dɔ kɔnɔ, nka a ma sɔn. O suu yɛrɛ la, a y'a mɛn ko benkannikɛlaw ye u minɛ. Dugu dɔ la, a ye kɛlɛba dɔ ye. A ma foyi kɛ o koo la.",
+        "fulfulde": "Nder laawol, yimɓe ɓe ɗon njaha nder lesdi ɓe mbi'i mo o waɗa laawol wootere. Nder jemma maajum o anndini bandidooɓe ɓe. Nder gariiri go'oto o yi'i haɓre feere, nden o yahi laawol maako walaa hawtaaki."
+      }
+    },
+    {
+      "id": "les-trois-conseils-du-vieillard-p4",
+      "art": {
+        "sky": "night",
+        "ground": "village",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "man",
+            "x": 36,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "woman",
+            "x": 56
+          },
+          {
+            "k": "child",
+            "x": 64
+          },
+          {
+            "k": "hut",
+            "x": 80,
+            "y": 26
+          },
+          {
+            "k": "fire",
+            "x": 46
+          }
+        ]
+      },
+      "text": {
+        "fr": "Arrivé chez lui de nuit, il vit un jeune homme dans sa case et faillit éclater de colère. Mais il attendit le matin… et découvrit que c'était son propre fils, né pendant son absence ! En rompant le pain du vieillard, il y trouva l'or de ses trois années de travail.",
+        "en": "Arriving home at night, he saw a young man in his hut and almost exploded with anger. But he waited until morning… and discovered it was his own son, born while he was away! When he broke the old man's loaf, he found inside it the gold for his three years of work.",
+        "moore": "A sẽn wa be a yirẽ yʋngo, a yãenda bi-bɩɩg n gãneg a koglgã pʋgẽ. La a gũsa hal tɩ ta rũnna. la a bãngame tɩ yaa yẽ meng biiga, b sẽn dog-a t'a ka beẽ wã! A sẽn kao a zakã burẽ wã, a yãame tɩ yaa sãnem n da kõ-a yʋʋm a tãab tʋʋmdã.",
+        "dioula": "A sera soo sufɛ, a ye kanbele dɔ ye a ka boon kɔnɔ ani a dimina kosɔbɛ. Nka a ye kɔnɔni kɛ fɔɔ sɔgɔma. A y'a ye ko ale yɛrɛ dencɛ lo. A wolola a ta jamana na! A ye cɛɛ ka buru kari tuma min na, a y'a sɔrɔ sanu tun b'a fɛ k'o wari ɲɔgɔn di a ma saan saba kɔnɔ.",
+        "fulfulde": "Nde o wari wuro jemma, o yi'i goɗɗo suka nder suudu maako, ɓooyii ngam fuɗɗugo. Ammaa o ɗon hoola haa subaka... nden o heɓii ɗum ɓiɗɗo maako, jibinaaɗo nder wakkati mo walaa! Nde o dilli nyaamdu mawɗo on, o tawi nder mayre nde'e ko jaɓɓi duuɓi tati ngam kuugal maako."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quel était le troisième conseil ?",
+        "en": "What was the third piece of advice?",
+        "moore": "Saglg a tãab-n-soabã yaa bõe?",
+        "dioula": "A sabanan ye mun lo ye?",
+        "fulfulde": "Koye woni ko'e jaabawol tataɓal?"
+      },
+      "options": [
+        {
+          "fr": "Remettre sa colère au lendemain",
+          "en": "Put off anger until the next day",
+          "moore": "B sẽn wa n na n maan sũ-yikrã, bɩ b bas tɩ yɩ vẽkembeoogo.",
+          "dioula": "I ka dimi bila a la fɔɔ dugusagwɛ.",
+          "fulfulde": "Wondiraaki ɓernde ma haa yidde nde'e"
+        },
+        {
+          "fr": "Courir vite",
+          "en": "Run fast",
+          "moore": "Kẽng-y tao-tao.",
+          "dioula": "I boli joona.",
+          "fulfulde": "Njaɓu bee saffugo"
+        },
+        {
+          "fr": "Acheter un cheval",
+          "en": "Buy a horse",
+          "moore": "Ra bao-y wedg ye.",
+          "dioula": "I ka soo dɔ san.",
+          "fulfulde": "Handee koode boo."
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que contenait le pain ?",
+        "en": "What was inside the loaf?",
+        "moore": "Bõe n da be burã pʋgẽ?",
+        "dioula": "Mun lo tun be o lɔgɔma kɔnɔ?",
+        "fulfulde": "Ko woni nder kuuje?"
+      },
+      "options": [
+        {
+          "fr": "L'or de son salaire",
+          "en": "The gold of his wages",
+          "moore": "A sãnemã sẽn yaa a yaoodã ligd.",
+          "dioula": "A ka wari tun ye sanu le ye.",
+          "fulfulde": "Jaŋde e nder ceede maako"
+        },
+        {
+          "fr": "Du miel",
+          "en": "Honey",
+          "moore": "M zo-nongre.",
+          "dioula": "N ka denbaya kɔnɔ,",
+          "fulfulde": "Maami, miɗo yiɗi maami."
+        },
+        {
+          "fr": "Une lettre",
+          "en": "A letter",
+          "moore": "Lɛta a ye",
+          "dioula": "Lɛtɛrɛ dɔ",
+          "fulfulde": "Wondirde"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "brigand",
+      "lang": "fr",
+      "def": {
+        "fr": "Voleur qui attaque les voyageurs sur les routes.",
+        "en": "A robber who attacks travellers on the roads.",
+        "moore": "Raob sẽn zabd n maand soayã.",
+        "dioula": "Binkannikɛla min be tɛmɛbagaw kɛlɛ sira kan.",
+        "fulfulde": "Laruɗo mo ɗon haɓɓa yimɓe nder laawol."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte des « trois conseils », répandu de l'Afrique de l'Ouest au Maghreb et à l'Europe, raconté notamment chez les Marka et les Dioula. Version écrite pour KIBARE, située à Nouna.",
+    "en": "The \"three pieces of advice\" tale, found from West Africa to the Maghreb and Europe, told among the Marka and Dioula. Version written for KIBARE, set in Nouna."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

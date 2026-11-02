@@ -12,6 +12,7 @@ export const ADMIN_ROUTES: Routes = [
       { path: 'contes/nouveau', loadComponent: () => import('./tale-editor.page').then((m) => m.TaleEditorPage), title: 'Nouveau conte — KIBARE' },
       { path: 'contes/:slug', loadComponent: () => import('./tale-editor.page').then((m) => m.TaleEditorPage), title: 'Éditer un conte — KIBARE' },
       { path: 'commentaires', loadComponent: () => import('./comments.page').then((m) => m.AdminCommentsPage), title: 'Commentaires — KIBARE' },
+      { path: 'notifications', loadComponent: () => import('./notifications.page').then((m) => m.AdminNotificationsPage), title: 'Notifications — KIBARE' },
       { path: 'utilisateurs', loadComponent: () => import('./users.page').then((m) => m.AdminUsersPage), title: 'Utilisateurs — KIBARE' },
     ],
   },

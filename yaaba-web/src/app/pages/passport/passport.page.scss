@@ -242,3 +242,47 @@
     font-size: 0.88rem;
   }
 }
+
+button.slot {
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* fenêtre du tampon */
+.stamp-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0 8px;
+  color: var(--text-3);
+  text-align: center;
+
+  &.on {
+    color: var(--y-red);
+  }
+  svg {
+    width: 220px;
+    height: 220px;
+    transform: rotate(-8deg);
+    animation: stamp-in 0.5s cubic-bezier(0.3, 1.5, 0.5, 1);
+  }
+}
+
+.sv-cap {
+  margin: 4px 0 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sv-status {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-2);
+}
+
+@keyframes stamp-in {
+  from { transform: rotate(-8deg) scale(1.6); opacity: 0; }
+}

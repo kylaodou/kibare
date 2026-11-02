@@ -1,6 +1,7 @@
 import { HttpClient, HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
 import { catchError, firstValueFrom, throwError } from 'rxjs';
 import { environment } from '../../environments/environment';
 
@@ -12,12 +13,20 @@ export interface User {
   region?: string;
   language?: string;
   bio?: string;
+  /** adresse e-mail confirmée (lien reçu à l'inscription) */
+  emailVerified?: boolean;
+  /** false : compte créé avec Google sans mot de passe */
+  hasPassword?: boolean;
+  /** compte lié à Google */
+  google?: boolean;
   createdAt: string;
 }
 
 interface AuthResponse {
   token: string;
   user: User;
+  /** inscription : l'e-mail de vérification a-t-il été envoyé ? */
+  emailSent?: boolean | null;
 }
 
 const KEY = 'kibare.session';
@@ -27,6 +36,7 @@ const KEY = 'kibare.session';
 export class AuthService {
   private http = inject(HttpClient);
   private router = inject(Router);
+  private toast = inject(MessageService);
   private api = environment.apiUrl;
 
   readonly token = signal<string | null>(null);
@@ -49,8 +59,53 @@ export class AuthService {
     } catch {}
   }
 
+  /** Inscription ; renvoie true si l'e-mail de vérification est parti. */
   async register(data: { name: string; email: string; password: string; region?: string; language?: string }) {
-    this.store(await firstValueFrom(this.http.post<AuthResponse>(`${this.api}/auth/register`, data)));
+    const r = await firstValueFrom(this.http.post<AuthResponse>(`${this.api}/auth/register`, data));
+    this.store(r);
+    return !!r.emailSent;
+  }
+
+  /** Confirme l'adresse à partir du jeton reçu par e-mail. */
+  async verifyEmail(token: string) {
+    const u = await firstValueFrom(this.http.post<User>(`${this.api}/auth/verify-email`, { token }));
+    if (this.user()?.id === u.id) {
+      this.user.set(u);
+      this.persist();
+    }
+    return u;
+  }
+
+  resendVerification() {
+    return firstValueFrom(this.http.post<{ message: string }>(`${this.api}/me/verify-email/resend`, {}));
+  }
+
+  /* mot de passe oublié : demande du code, vérification, nouveau mot de passe */
+  forgotPassword(email: string) {
+    return firstValueFrom(this.http.post<{ message: string }>(`${this.api}/auth/password/forgot`, { email }));
+  }
+
+  verifyResetCode(email: string, code: string) {
+    return firstValueFrom(this.http.post<{ resetToken: string; expiresInSeconds: number }>(`${this.api}/auth/password/verify`, { email, code }));
+  }
+
+  resetPassword(resetToken: string, password: string) {
+    return firstValueFrom(this.http.post<{ message: string }>(`${this.api}/auth/password/reset`, { resetToken, password }));
+  }
+
+  /** Connexion (ou inscription) avec le jeton d'identité Google. */
+  /** Renvoie true/false à l'inscription (e-mail de bienvenue envoyé ou non), null pour une simple connexion. */
+  async loginWithGoogle(credential: string) {
+    const r = await firstValueFrom(this.http.post<AuthResponse>(`${this.api}/auth/google`, { credential }));
+    this.store(r);
+    return r.emailSent ?? null;
+  }
+
+  /** Définir (compte Google) ou changer son mot de passe. */
+  async changePassword(currentPassword: string | null, newPassword: string) {
+    const u = await firstValueFrom(this.http.put<User>(`${this.api}/me/password`, { currentPassword, newPassword }));
+    this.user.set(u);
+    this.persist();
   }
 
   async login(email: string, password: string) {
@@ -72,13 +127,20 @@ export class AuthService {
     this.persist();
   }
 
+  /** Déconnexion volontaire (redirect = true) : retour à l'accueil et message de confirmation. */
   logout(redirect = true) {
+    const was = this.user();
     this.token.set(null);
     this.user.set(null);
     try {
       localStorage.removeItem(KEY);
     } catch {}
-    if (redirect) void this.router.navigate(['/']);
+    if (redirect) {
+      void this.router.navigate(['/']);
+      if (was) this.toast.add({ severity: 'success', summary: 'Vous êtes déconnecté', detail: `À bientôt sur KIBARE, ${was.name} !`, life: 3500 });
+    } else if (was) {
+      this.toast.add({ severity: 'info', summary: 'Session expirée', detail: 'Reconnectez-vous pour continuer.', life: 4500 });
+    }
   }
 
   /** Message d'erreur lisible renvoyé par l'API. */
@@ -120,7 +182,7 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const r = token && toApi ? req.clone({ setHeaders: { Authorization: `Bearer ${token}` } }) : req;
   return next(r).pipe(
     catchError((e: HttpErrorResponse) => {
-      if (e.status === 401 && token && toApi && !req.url.endsWith('/auth/login')) auth.logout(false);
+      if (e.status === 401 && token && toApi && !req.url.includes('/auth/')) auth.logout(false);
       return throwError(() => e);
     }),
   );

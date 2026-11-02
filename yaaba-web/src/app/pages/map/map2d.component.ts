@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, effect, inject, input,
 import * as L from 'leaflet';
 import { DataService } from '../../core/data.service';
 import { I18nService } from '../../core/i18n.service';
-import { Tale } from '../../core/models';
+import { City, MapLevel, Tale } from '../../core/models';
 import { ThemeService } from '../../core/theme.service';
 import { taleText } from '../../shared/tale-card/tale-card.component';
 import { featureRings } from '../../shared/geo';
@@ -29,6 +29,8 @@ export class Map2dComponent implements AfterViewInit, OnDestroy {
   readonly tales = input.required<Tale[]>();
   readonly selectedRegion = input<string | null>(null);
   readonly selectedTale = input<string | null>(null);
+  /** niveau de détail : régions, provinces, communes ou villes */
+  readonly level = input<MapLevel>('region');
   readonly regionSelect = output<string>();
   readonly taleSelect = output<string>();
 
@@ -39,6 +41,7 @@ export class Map2dComponent implements AfterViewInit, OnDestroy {
   private markers = L.layerGroup();
   private markerBySlug = new Map<string, L.Marker>();
   private names = L.layerGroup();
+  private detail = L.layerGroup();
   private water?: L.GeoJSON;
   private shown: Tale[] = [];
   private homeBounds?: L.LatLngBounds;
@@ -78,6 +81,14 @@ export class Map2dComponent implements AfterViewInit, OnDestroy {
           }).addTo(this.map!);
         }
       });
+    });
+
+    // niveau de détail : on redessine quand le niveau ou ses données changent
+    effect(() => {
+      if (!this.ready()) return;
+      const level = this.level();
+      const data = { province: this.data.provinces(), commune: this.data.communes(), city: this.data.cities() };
+      untracked(() => this.buildDetail(level, data));
     });
 
     effect(() => {
@@ -140,6 +151,8 @@ export class Map2dComponent implements AfterViewInit, OnDestroy {
     this.homeBounds = this.regions.getBounds();
     map.setMaxBounds(this.homeBounds.pad(0.6));
     map.fitBounds(this.homeBounds, { padding: [30, 30] });
+    map.createPane('detail').style.zIndex = '450';
+    this.detail.addTo(map);
     map.createPane('names').style.zIndex = '640';
     map.getPane('names')!.style.pointerEvents = 'none';
     this.names.addTo(map);
@@ -196,6 +209,62 @@ export class Map2dComponent implements AfterViewInit, OnDestroy {
     this.shown = tales;
     this.placeMarkers();
     this.buildNames(tales);
+  }
+
+  /** Provinces, communes ou villes par-dessus les régions ; un clic ouvre toujours la région. */
+  private buildDetail(
+    level: MapLevel,
+    d: { province: GeoJSON.FeatureCollection | null; commune: GeoJSON.FeatureCollection | null; city: City[] | null },
+  ) {
+    const map = this.map;
+    if (!map) return;
+    this.detail.clearLayers();
+    // les noms de régions cèdent la place aux noms du niveau choisi
+    if (level === 'region' || level === 'city') this.names.addTo(map);
+    else this.names.remove();
+    const dark = this.theme.dark();
+    const line = dark ? '#e9d5bd' : '#7c3109';
+
+    if ((level === 'province' && d.province) || (level === 'commune' && d.commune)) {
+      const fc = (level === 'province' ? d.province : d.commune)!;
+      L.geoJSON(fc, {
+        pane: 'detail',
+        style: { color: line, weight: level === 'province' ? 1.8 : 1.1, opacity: level === 'province' ? 0.85 : 0.6, fillOpacity: 0 },
+        onEachFeature: (f, layer) => {
+          const p = f.properties ?? {};
+          const sub = level === 'province' ? `chef-lieu : ${p['capital']}` : `province : ${p['province']}`;
+          layer.bindTooltip(`<strong>${p['name']}</strong><br><small>${sub}</small>`, { sticky: true, className: 'region-tip', direction: 'top', offset: [0, -8] });
+          layer.on('click', () => this.regionSelect.emit(p['region']));
+          // nom permanent des provinces, au centre de leur tracé
+          if (level === 'province') {
+            const c = (layer as L.Polygon).getBounds().getCenter();
+            L.marker(c, {
+              pane: 'names',
+              interactive: false,
+              keyboard: false,
+              icon: L.divIcon({ className: 'y-name-wrap', html: `<span class="y-label small">${p['name']}</span>`, iconSize: [0, 0] }),
+            }).addTo(this.detail);
+          }
+        },
+      }).addTo(this.detail);
+    }
+
+    if (level === 'city' && d.city) {
+      for (const c of d.city) {
+        const big = c.rank === 'region';
+        L.circleMarker(c.coords, {
+          pane: 'detail',
+          radius: big ? 7 : 4.5,
+          color: '#ffffff',
+          weight: 2,
+          fillColor: big ? '#7c3109' : '#e69135',
+          fillOpacity: 1,
+        })
+          .bindTooltip(c.name, { permanent: big, direction: 'right', offset: [8, 0], className: big ? 'city-tip big' : 'city-tip' })
+          .on('click', () => this.regionSelect.emit(c.region))
+          .addTo(this.detail);
+      }
+    }
   }
 
   /** Écarte les épingles qui se chevauchent à l'échelle courante (30 px). */

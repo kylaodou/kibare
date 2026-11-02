@@ -1,7 +1,7 @@
 {
   "slug": "la-boulette-magique",
   "type": "conte",
-  "region": "est",
+  "region": "sirba",
   "place": "Piéla",
   "coords": [
     12.7,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "la-boulette-magique-p1",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -99,6 +100,7 @@
       }
     },
     {
+      "id": "la-boulette-magique-p2",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -178,6 +180,7 @@
       }
     },
     {
+      "id": "la-boulette-magique-p3",
       "art": {
         "sky": "dawn",
         "ground": "savanna",
@@ -222,6 +225,7 @@
       }
     },
     {
+      "id": "la-boulette-magique-p4",
       "art": {
         "sky": "dusk",
         "ground": "village",
@@ -265,6 +269,7 @@
       }
     },
     {
+      "id": "la-boulette-magique-p5",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -293,7 +298,7 @@
           {
             "k": "man",
             "x": 86,
-            "c": "#00894A"
+            "c": "#C9822B"
           }
         ]
       },
@@ -306,6 +311,7 @@
       }
     },
     {
+      "id": "la-boulette-magique-p6",
       "art": {
         "sky": "day",
         "ground": "village",

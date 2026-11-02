@@ -4,7 +4,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { CSS2DObject, CSS2DRenderer } from 'three/addons/renderers/CSS2DRenderer.js';
 import { DataService } from '../../core/data.service';
 import { I18nService, TranslatePipe } from '../../core/i18n.service';
-import { Tale } from '../../core/models';
+import { City, MapLevel, Tale } from '../../core/models';
 import { ThemeService } from '../../core/theme.service';
 import { BF_CENTER, featureRings } from '../../shared/geo';
 import { taleText } from '../../shared/tale-card/tale-card.component';
@@ -40,6 +40,14 @@ interface CamTween {
 
 function project(lon: number, lat: number): [number, number] {
   return [(lon - BF_CENTER.lon) * K * S, (lat - BF_CENTER.lat) * S];
+}
+
+/** Centre approximatif d'un anneau (moyenne de ses sommets), en [lon, lat]. */
+function ringCenter(ring: number[][]): [number, number] {
+  if (!ring.length) return [BF_CENTER.lon, BF_CENTER.lat];
+  const lon = ring.reduce((a, p) => a + p[0], 0) / ring.length;
+  const lat = ring.reduce((a, p) => a + p[1], 0) / ring.length;
+  return [lon, lat];
 }
 
 /** Générateur pseudo-aléatoire déterministe : les arbres sont toujours au même endroit. */
@@ -92,6 +100,8 @@ export class Map3dComponent implements AfterViewInit, OnDestroy {
   readonly tales = input.required<Tale[]>();
   readonly selectedRegion = input<string | null>(null);
   readonly selectedTale = input<string | null>(null);
+  /** niveau de détail : régions, provinces, communes ou villes */
+  readonly level = input<MapLevel>('region');
   readonly regionSelect = output<string>();
   readonly taleSelect = output<string>();
 
@@ -124,6 +134,12 @@ export class Map3dComponent implements AfterViewInit, OnDestroy {
       if (!this.ready()) return;
       const dark = this.theme.dark();
       untracked(() => this.applyTheme(dark));
+    });
+    effect(() => {
+      if (!this.ready()) return;
+      const level = this.level();
+      const d = { province: this.data.provinces(), commune: this.data.communes(), city: this.data.cities() };
+      untracked(() => this.buildDetail(level, d));
     });
     effect(() => {
       const rivers = this.data.rivers();
@@ -161,7 +177,8 @@ export class Map3dComponent implements AfterViewInit, OnDestroy {
     el.appendChild(r.domElement);
 
     this.labels = new CSS2DRenderer();
-    Object.assign(this.labels.domElement.style, { position: 'absolute', inset: '0', pointerEvents: 'none' });
+    // couche à part : les étiquettes restent au-dessus des épingles mais sous les fenêtres (visite guidée, menus)
+    Object.assign(this.labels.domElement.style, { position: 'absolute', inset: '0', pointerEvents: 'none', zIndex: '1', isolation: 'isolate' });
     el.appendChild(this.labels.domElement);
 
     this.camera.position.copy(this.homePos);
@@ -324,6 +341,66 @@ export class Map3dComponent implements AfterViewInit, OnDestroy {
   }
 
   private riversDrawn = false;
+  /** objets du niveau de détail (tracés, noms, villes), retirés à chaque changement */
+  private detailObjs: THREE.Object3D[] = [];
+
+  private buildDetail(
+    level: MapLevel,
+    d: { province: GeoJSON.FeatureCollection | null; commune: GeoJSON.FeatureCollection | null; city: City[] | null },
+  ) {
+    for (const o of this.detailObjs) {
+      o.removeFromParent();
+      if (o instanceof THREE.Line) o.geometry.dispose();
+    }
+    this.detailObjs = [];
+    // noms de régions masqués quand on affiche provinces ou communes
+    for (const r of this.regions) r.label.style.display = level === 'province' || level === 'commune' ? 'none' : '';
+    const dark = this.theme.dark();
+
+    const fc = level === 'province' ? d.province : level === 'commune' ? d.commune : null;
+    if (fc) {
+      const mat = new THREE.LineBasicMaterial({ color: dark ? 0xe9d5bd : 0x7c3109, transparent: true, opacity: level === 'province' ? 0.85 : 0.45 });
+      for (const f of fc.features) {
+        const owner = this.regions.find((r) => r.code === f.properties?.['region']);
+        if (!owner) continue;
+        for (const ring of featureRings(f)) {
+          const pts = ring.map(([lon, lat]) => {
+            const [x, y] = project(lon, lat);
+            return new THREE.Vector3(x, 0.04, -y);
+          });
+          const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), mat);
+          owner.top.add(line);
+          this.detailObjs.push(line);
+        }
+        if (level === 'province') {
+          const [lon, lat] = ringCenter(featureRings(f).next().value ?? []);
+          const [x, y] = project(lon, lat);
+          const el = document.createElement('div');
+          el.className = 'y-label small';
+          el.textContent = f.properties?.['name'];
+          const obj = new CSS2DObject(el);
+          obj.position.set(x, 0.5, -y);
+          owner.top.add(obj);
+          this.detailObjs.push(obj);
+        }
+      }
+    }
+
+    if (level === 'city' && d.city) {
+      for (const c of d.city) {
+        const owner = this.regions.find((r) => r.code === c.region);
+        if (!owner) continue;
+        const el = document.createElement('div');
+        el.className = c.rank === 'region' ? 'y-city big' : 'y-city';
+        el.innerHTML = `<i></i><span>${c.name}</span>`;
+        const obj = new CSS2DObject(el);
+        const [x, y] = project(c.coords[1], c.coords[0]);
+        obj.position.set(x, 0.1, -y);
+        owner.top.add(obj);
+        this.detailObjs.push(obj);
+      }
+    }
+  }
 
   /** Cours d'eau : chaque tronçon est rattaché à sa région pour monter avec elle quand on la sélectionne. */
   private buildRivers(rivers: GeoJSON.FeatureCollection) {

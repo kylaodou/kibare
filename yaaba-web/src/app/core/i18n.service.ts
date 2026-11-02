@@ -4,12 +4,9 @@ import { Txt } from './models';
 
 const STORAGE_KEY = 'yaaba.lang';
 
+/** L'interface est en français (plus de sélecteur FR/EN) ; l'anglais reste disponible pour lire les contes. */
 function initialLang(): UiLang {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved === 'fr' || saved === 'en') return saved;
-  } catch {}
-  return navigator.language?.toLowerCase().startsWith('en') ? 'en' : 'fr';
+  return 'fr';
 }
 
 @Injectable({ providedIn: 'root' })

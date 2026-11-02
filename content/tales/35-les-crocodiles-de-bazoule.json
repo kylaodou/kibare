@@ -1,0 +1,337 @@
+{
+  "slug": "les-crocodiles-de-bazoule",
+  "type": "legende",
+  "region": "kadiogo",
+  "place": "Bazoulé",
+  "coords": [
+    12.33,
+    -1.75
+  ],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 4,
+  "age": 6,
+  "featured": false,
+  "cover": 0,
+  "tags": [
+    "crocodiles",
+    "sécheresse",
+    "pacte",
+    "lieu sacré"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Les crocodiles de Bazoulé",
+      "subtitle": "La mare de l'alliance",
+      "summary": "Pendant une terrible sécheresse, des crocodiles conduisent les habitants assoiffés jusqu'à une eau cachée. Depuis, à Bazoulé, l'homme et le crocodile vivent en paix.",
+      "moral": "Celui qui t'a sauvé dans la détresse mérite ton respect pour toujours."
+    },
+    "en": {
+      "title": "The Crocodiles of Bazoulé",
+      "subtitle": "The pond of the alliance",
+      "summary": "During a terrible drought, crocodiles lead the thirsty villagers to hidden water. Ever since, in Bazoulé, people and crocodiles have lived in peace.",
+      "moral": "Whoever saved you in your hour of need deserves your respect for ever."
+    },
+    "moore": {
+      "title": "Bazoulé bu-zẽmbã",
+      "subtitle": "Bãngrã sẽn be koom koglgã pʋgẽ wã",
+      "summary": "Saagr kãseng sẽn zĩnd tẽn-kãnga pʋgẽ, sãn-kẽemã zãadda tẽngã neb nins kom sẽn tarã n tɩgl koom. Rẽ tɛka, Bazoulé nebã ne bõn-buudã vɩɩ laafɩ pʋgẽ.",
+      "moral": "Sẽn fãag-a yãmb y zu-loeesã sasa, yaa ned sẽn tog n waoogd yãmba wakat fãa."
+    },
+    "dioula": {
+      "title": "Bazoulé ka kongosogow",
+      "subtitle": "Ala ka jɛnkulu ka kɔlɔn",
+      "summary": "Saan damanin o kɔ, sanjiba dɔ nana. O wagati la, kongosogow be taga ni kɔlɔn mɔgɔw ye jii dogoyɔrɔ la. Kabi o tuma, mɔgɔw ni kongosogow be hɛɛrɛ la Bazoulé dugu kɔnɔ.",
+      "moral": "Mɔgɔ min y'i kisi i ka tɔɔrɔ wagati la, o tigi ka kan ni bonya ye tuma bɛɛ."
+    },
+    "fulfulde": {
+      "title": "Ko'e Crocodiles of Bazoulé",
+      "subtitle": "Lodo alkawal ngal",
+      "summary": "Nder sahaaji ɓii-ɓaaɗi, crocodiles ɗon waddana yimɓe gariiri ɓe njara to ndiyam. Gila ndeen, nder Bazoulé, yimɓe e crocodili'en ɗon njooɗoto be jam.",
+      "moral": "Mo hisnanii ma nder sahaa habaru maaɗa o hewti mawninki ma haa foroy."
+    }
+  },
+  "scenes": [
+    {
+      "id": "les-crocodiles-de-bazoule-p1",
+      "art": {
+        "sky": "day",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "sun",
+            "x": 80,
+            "y": 320,
+            "s": 1.4
+          },
+          {
+            "k": "baobab",
+            "x": 14,
+            "y": 26,
+            "c": "bare"
+          },
+          {
+            "k": "woman",
+            "x": 40
+          },
+          {
+            "k": "jar",
+            "x": 48
+          },
+          {
+            "k": "child",
+            "x": 56
+          },
+          {
+            "k": "field",
+            "x": 78,
+            "y": 20,
+            "s": 0.6,
+            "c": "dry"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il y a plusieurs siècles, la pluie oublia le village de Bazoulé. Les puits se vidèrent, les champs brûlèrent et les femmes marchaient des heures sans trouver une goutte d'eau.",
+        "en": "Several centuries ago, the rain forgot the village of Bazoulé. The wells ran dry, the fields burned and the women walked for hours without finding a drop of water.",
+        "moore": "Yʋʋm kobs sẽn looge, sa-kãsengã ra yĩmda Bazoulé tẽn-tẽngã. Pʋʋs-n-soabã ra kʋɩɩme, pʋʋsã yõogame, la pagb nins sẽn da kẽnd n kõ sẽk wʋsg tɩ b pa yã koom rãam ye.",
+        "dioula": "Saan kɛmɛkulu damanin tɛmɛninw na, sanjiba y'a to mɔgɔw tun tɛ miiri Bazoulé dugu la. Sumanji tun be ɲini ka bɔn kɔlɔnw kɔnɔ, forow tun be jɛni ani musow ye tagama kɛ lɛri caaman kɔnɔ. U ma jii dɔɔni sɔrɔ.",
+        "fulfulde": "Ko duuɓi cappanɗe goɗɗi, ndiyam ɗon wi'a wuro Bazoulé. Limce njogii, gese ɗon yiite e rewɓe ɓe njooɗi haa wakkati fu ɓe tawi ndiyam."
+      }
+    },
+    {
+      "id": "les-crocodiles-de-bazoule-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "croc",
+            "x": 56,
+            "s": 1.2
+          },
+          {
+            "k": "hunter",
+            "x": 30
+          },
+          {
+            "k": "bush",
+            "x": 74,
+            "y": 10
+          },
+          {
+            "k": "grass",
+            "x": 44
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un soir, des chasseurs épuisés virent des crocodiles sortir de la brousse et s'éloigner lentement, toujours dans la même direction. Ces bêtes ne cherchaient pas à attaquer : elles semblaient montrer un chemin.",
+        "en": "One evening, exhausted hunters saw crocodiles come out of the bush and move slowly away, always in the same direction. The animals did not try to attack: they seemed to be showing a path.",
+        "moore": "Daar a ye yʋngo, sã n wa yaa ne zĩn-dãmb sẽn da zoe n miẽ tɩ b yi weoogẽ wã, b yãenda bõn-naandb sẽn yit zĩig ningã. B pa baood n na n zab-b ye. Yaa wa b sẽn wilgd sorã.",
+        "dioula": "Loon dɔ wulafɛ, jagokɛlaw tun sɛgɛnnin lo kosɔbɛ. U ye kɔlɔnw bɔ ka taga u mabɔ ɲɔgɔn na dɔɔni dɔɔni ani u tun be tagara sira kelen kan tuma bɛɛ. O kongosogow ma se ka kɛlɛ kɛ. U tun b'a yira ko sira dɔ lo be yen.",
+        "fulfulde": "Nder jemma go'oto, mawɓe wuyɓe ɓe njogii yi'i coccorɗi ɗon ƴeewa nder leɗɗe e ɓeydaago bee laaɓɗum, haa ɓe njahi to laawol gootol. Dentuɓe ɓe ngaɗataa ko'e maɓɓe: ɓe holli laawol."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que doivent faire les chasseurs ?",
+          "en": "What should the hunters do?",
+          "moore": "Bõe la b segd n maan?",
+          "dioula": "Minw be ɲini ka don, olu ka ɲi ka mun lo kɛ do?",
+          "fulfulde": "Ko honɗun ɓe mbaawata?"
+        },
+        "options": [
+          {
+            "fr": "Suivre les crocodiles",
+            "en": "Follow the crocodiles",
+            "moore": "D tũ-y y sãnda.",
+            "dioula": "I ka taga ni kongosogow ye.",
+            "fulfulde": "Tawa ko crocodiles"
+          },
+          {
+            "fr": "Les chasser",
+            "en": "Hunt them",
+            "moore": "Kẽng-y bãmbã.",
+            "dioula": "Aw ye u kɔniya.",
+            "fulfulde": "Hande ɓe"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Ils les suivirent à distance, le cœur battant…",
+          "en": "They followed them from a distance, hearts pounding…",
+          "moore": "B ra tũuda bãmb n zãagẽ, b sũyã sẽn da wẽedã.",
+          "dioula": "U tora ka tugu u kɔ yɔrɔjan.",
+          "fulfulde": "Ɓe tokki ɓe daga dow woɗɗere, ɓerɗe maɓɓe ɗon maaki..."
+        }
+      }
+    },
+    {
+      "id": "les-crocodiles-de-bazoule-p3",
+      "art": {
+        "sky": "dawn",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 18,
+            "y": 240
+          },
+          {
+            "k": "croc",
+            "x": 62
+          },
+          {
+            "k": "croc",
+            "x": 40,
+            "s": 0.8
+          },
+          {
+            "k": "hunter",
+            "x": 20
+          },
+          {
+            "k": "palm",
+            "x": 86,
+            "y": 30
+          }
+        ]
+      },
+      "text": {
+        "fr": "À l'aube, les crocodiles plongèrent dans une mare cachée, pleine d'eau fraîche. Les chasseurs coururent prévenir le village : tout le monde put boire, abreuver les bêtes et sauver les semences.",
+        "en": "At dawn, the crocodiles slid into a hidden pond full of fresh water. The hunters ran to tell the village: everyone could drink, water the animals and save the seeds.",
+        "moore": "Zĩigã sẽn wa n vẽege, bõn-buudbã kẽnga koom koglg pʋgẽ. B zoe n tɩ togs tẽn-kãng nebã: ned kam fãa tõe n yũu, n kõ rũmsã koom la a kogl bõn-buudgã.",
+        "dioula": "Dugu gwɛra tuma na, kongosogow tun be don jii la. Jagokɛlaw bolila ka taga a fɔ dugumɔgɔw ye ko mɔgɔ bɛɛ be se k'a min, ka jii di begɛnw ma ani ka sumanw kisi.",
+        "fulfulde": "Nde naange wurtini, crocodiles'en njotti nder ndiyam ɓoyma. Wurooɓe ɓe ɗon ndilli ngam wi'ugo wuro: koo moye waaway njaru, yahugo dabbaaji e hisnugo seedam."
+      }
+    },
+    {
+      "id": "les-crocodiles-de-bazoule-p4",
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "croc",
+            "x": 50,
+            "s": 1.1
+          },
+          {
+            "k": "child",
+            "x": 30
+          },
+          {
+            "k": "chicken",
+            "x": 70
+          },
+          {
+            "k": "elder",
+            "x": 18
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les anciens firent un pacte : on ne tuerait jamais un crocodile de la mare. Aujourd'hui encore, les habitants les nourrissent de poulets et les enfants s'assoient près d'eux sans crainte. Pour Bazoulé, ils sont l'âme des ancêtres.",
+        "en": "The elders made a pact: no one would ever kill a crocodile of the pond. To this day the villagers feed them chickens and children sit near them without fear. For Bazoulé, they are the souls of the ancestors.",
+        "moore": "Kãsem dãmbã maana pʋlem: ned baa a yen ra na n pa le kʋ koom-koglgã bõn-buud ye. Hal tɩ ta rũndã, tẽn-kãng nebã rɩtda b rũmsã la kom-bɩɩsã zĩi ne bãmba n pa yɛɛsd ye. A Bazoulé sẽn yaa a ba wã, b yaa yaab-rãmbã sɩɩs.",
+        "dioula": "Cɛkɔrɔbaw y'a fɔ ko mɔgɔ si tɛna sɔn ka kɔlɔn kɔnɔ kongosogo faga. Hali bi, dugumɔgɔw be u balo ni sosow ye. Denmisɛnw siginin b'u gɛrɛfɛ ani u tɛ siran foyi ɲɛ. Bazoulé fɛ, u ye an bɛmaw ka mɔgɔw lo ye.",
+        "fulfulde": "Mawɓe ɓe waɗi alkawal: walaa mo warata maayijo nder poolgu. Haa hande yimɓe gariiri ɗon nyaama ɓe kokkoji, ɓikkoy boo ɗon njooɗi haa maɓɓe ngam kulol. Ngam Bazoulé, ɓe ngoni ɓerɗe kaakaaji."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qui a conduit les habitants vers l'eau ?",
+        "en": "Who led the villagers to the water?",
+        "moore": "Ãnda n tall tẽn-kãng nebã tɩ b wa koomẽ wã?",
+        "dioula": "Jɔn lo ye dugumɔgɔw ɲɛminɛ ka taga jii la?",
+        "fulfulde": "Moy hoodi yimɓe gariiri to ndiyam?"
+      },
+      "options": [
+        {
+          "fr": "Des crocodiles",
+          "en": "Crocodiles",
+          "moore": "Dũndb sẽn yaa bẽd-n-tɩrsã",
+          "dioula": "Dɔnkiliw",
+          "fulfulde": "Kooreeji"
+        },
+        {
+          "fr": "Un lion",
+          "en": "A lion",
+          "moore": "Yaa gɩgemde.",
+          "dioula": "Jaraw",
+          "fulfulde": "Lewre"
+        },
+        {
+          "fr": "Des oiseaux",
+          "en": "Birds",
+          "moore": "Dĩisã",
+          "dioula": "Dɔnkiliw",
+          "fulfulde": "Lindiije"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que donne-t-on aux crocodiles aujourd'hui ?",
+        "en": "What are the crocodiles given today?",
+        "moore": "Bõe la b kõt bõn-buudbã rũndã-rũndã?",
+        "dioula": "An be mun lo di kongosogow ma bi?",
+        "fulfulde": "Ko honɗun ɓe hokkata coccoruuji?"
+      },
+      "options": [
+        {
+          "fr": "Des poulets",
+          "en": "Chickens",
+          "moore": "Dĩisã",
+          "dioula": "Dɔnkiliw",
+          "fulfulde": "Koore"
+        },
+        {
+          "fr": "Du mil",
+          "en": "Millet",
+          "moore": "A mi mi mi",
+          "dioula": "Fanga ye min ye, o ye",
+          "fulfulde": "Millet"
+        },
+        {
+          "fr": "Du lait",
+          "en": "Milk",
+          "moore": "Dĩibã",
+          "dioula": "Furu",
+          "fulfulde": "Luki"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "totem",
+      "lang": "fr",
+      "def": {
+        "fr": "Animal sacré d'une famille ou d'un village, qu'on ne doit ni tuer ni manger.",
+        "en": "A sacred animal of a family or village, which must be neither killed nor eaten.",
+        "moore": "Rɩt sẽn yaa sõma, b pa segd n kʋ-a ye.",
+        "dioula": "Bagan senuman dɔ ye min ka kan ka faga ani k'a ɲimi.",
+        "fulfulde": "Dabba masin nder saare malla gariiri, ngam walaa ɗum waraa koo nyaama."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Légende de la mare aux crocodiles sacrés de Bazoulé (province du Kadiogo), rapportée par la presse et les guides de voyage (Africa24, Le360, Routard). Les versions et les dates varient. Mise en récit libre.",
+    "en": "Legend of the sacred crocodile pond of Bazoulé (Kadiogo province), reported by the press and travel guides (Africa24, Le360, Routard). Versions and dates vary. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "slug": "le-chien-et-le-singe",
   "type": "conte",
-  "region": "cascades",
+  "region": "tannounyan",
   "place": "Mangodara",
   "coords": [
     9.9,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "le-chien-et-le-singe-p1",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -89,6 +90,7 @@
       }
     },
     {
+      "id": "le-chien-et-le-singe-p2",
       "art": {
         "sky": "day",
         "ground": "river",
@@ -121,6 +123,7 @@
       }
     },
     {
+      "id": "le-chien-et-le-singe-p3",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -196,6 +199,7 @@
       }
     },
     {
+      "id": "le-chien-et-le-singe-p4",
       "art": {
         "sky": "dusk",
         "ground": "river",

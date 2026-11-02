@@ -34,13 +34,13 @@
     "family": "Gur (Oti-Volta)",
     "speakers": "Plus de la moitié de la population",
     "regions": [
-      "centre",
-      "centre-est",
-      "centre-nord",
-      "centre-ouest",
-      "centre-sud",
-      "nord",
-      "plateau-central"
+      "kadiogo",
+      "nakambe",
+      "kuilse",
+      "nando",
+      "nazinon",
+      "yaadga",
+      "oubri"
     ],
     "peoples": [
       "Mossi"
@@ -71,9 +71,10 @@
     "family": "Mandé",
     "speakers": "Langue véhiculaire de l'Ouest",
     "regions": [
-      "hauts-bassins",
-      "cascades",
-      "boucle-du-mouhoun"
+      "guiriko",
+      "tannounyan",
+      "bankui",
+      "sourou"
     ],
     "peoples": [
       "Dioula",
@@ -106,10 +107,13 @@
     "family": "Atlantique",
     "speakers": "Parlée par les Peuls",
     "regions": [
-      "sahel",
-      "nord",
-      "est",
-      "centre-nord"
+      "liptako",
+      "soum",
+      "yaadga",
+      "goulmou",
+      "tapoa",
+      "sirba",
+      "kuilse"
     ],
     "peoples": [
       "Peuls"
@@ -140,7 +144,9 @@
     "family": "Gur",
     "speakers": "Parlée par les Gourmantché",
     "regions": [
-      "est"
+      "goulmou",
+      "tapoa",
+      "sirba"
     ],
     "peoples": [
       "Gourmantché"
@@ -157,7 +163,7 @@
     "family": "Mandé",
     "speakers": "Parlée par les Bissa",
     "regions": [
-      "centre-est"
+      "nakambe"
     ],
     "peoples": [
       "Bissa"
@@ -174,8 +180,9 @@
     "family": "Gur",
     "speakers": "Parlée par les Bwaba",
     "regions": [
-      "boucle-du-mouhoun",
-      "hauts-bassins"
+      "bankui",
+      "sourou",
+      "guiriko"
     ],
     "peoples": [
       "Bwaba"
@@ -192,7 +199,7 @@
     "family": "Gur",
     "speakers": "Parlée par les Kassena",
     "regions": [
-      "centre-sud"
+      "nazinon"
     ],
     "peoples": [
       "Kassena"
@@ -209,7 +216,7 @@
     "family": "Gur",
     "speakers": "Parlée par les Lobi",
     "regions": [
-      "sud-ouest"
+      "djoro"
     ],
     "peoples": [
       "Lobi"
@@ -226,7 +233,7 @@
     "family": "Gur",
     "speakers": "Parlée par les Dagara",
     "regions": [
-      "sud-ouest"
+      "djoro"
     ],
     "peoples": [
       "Dagara"
@@ -243,7 +250,7 @@
     "family": "Gur",
     "speakers": "Parlée par les Gouin",
     "regions": [
-      "cascades"
+      "tannounyan"
     ],
     "peoples": [
       "Gouin"
@@ -260,7 +267,7 @@
     "family": "Gur (gourounsi)",
     "speakers": "Parlée par les Lyela",
     "regions": [
-      "centre-ouest"
+      "nando"
     ],
     "peoples": [
       "Lyela"

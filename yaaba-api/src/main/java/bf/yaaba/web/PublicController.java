@@ -13,6 +13,8 @@ import bf.yaaba.web.Dto.ContributionView;
 import bf.yaaba.web.Dto.ContributorView;
 import bf.yaaba.web.Dto.LikeRequest;
 import bf.yaaba.web.Dto.LikeView;
+import bf.yaaba.web.Dto.PageView;
+import bf.yaaba.web.Dto.TaleOption;
 import bf.yaaba.web.Dto.StatsView;
 import bf.yaaba.web.Dto.ViewRequest;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -60,6 +62,13 @@ public class PublicController {
     @Operation(summary = "Liste des contes publiés (filtrable par région et par type)")
     public List<JsonNode> tales(@RequestParam(required = false) String region, @RequestParam(required = false) String type) {
         return tales.list(region, type);
+    }
+
+    @GetMapping("/tales/options")
+    @Operation(summary = "Sélecteur de contes : recherche par titre ou lieu, chargement page par page")
+    public PageView<TaleOption> taleOptions(@RequestParam(defaultValue = "") String q, @RequestParam(defaultValue = "0") int page,
+                                            @RequestParam(defaultValue = "20") int size) {
+        return tales.options(q, page, size);
     }
 
     @GetMapping("/tales/{slug}")
@@ -130,8 +139,9 @@ public class PublicController {
     @Operation(summary = "Soumettre une contribution (connecté) : récit et/ou enregistrement audio")
     public ContributionView contribute(@Valid @RequestPart("data") ContributionRequest data,
                                        @RequestPart(value = "audio", required = false) MultipartFile audio,
-                                       @RequestPart(value = "segments", required = false) List<MultipartFile> segments) {
-        return contributions.create(data, audio, segments);
+                                       @RequestPart(value = "segments", required = false) List<MultipartFile> segments,
+                                       @RequestParam(value = "sceneIds", required = false) List<String> sceneIds) {
+        return contributions.create(data, audio, segments, sceneIds);
     }
 
     @GetMapping("/media/{file}")

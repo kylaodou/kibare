@@ -1,10 +1,12 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { ConfirmationService } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { DialogModule } from 'primeng/dialog';
 import { DataService } from '../../core/data.service';
 import { I18nService, TranslatePipe } from '../../core/i18n.service';
+import { Region } from '../../core/models';
 import { ProgressService } from '../../core/progress.service';
 import { MiniMapComponent } from '../../shared/mini-map/mini-map.component';
 import { TaleCardComponent } from '../../shared/tale-card/tale-card.component';
@@ -18,7 +20,7 @@ interface Badge {
 
 @Component({
   selector: 'app-passport',
-  imports: [FormsModule, RouterLink, MiniMapComponent, TaleCardComponent, TranslatePipe, ConfirmDialogModule],
+  imports: [FormsModule, MiniMapComponent, TaleCardComponent, TranslatePipe, ConfirmDialogModule, DialogModule],
   providers: [ConfirmationService],
   templateUrl: './passport.page.html',
   styleUrl: './passport.page.scss',
@@ -40,6 +42,9 @@ export class PassportPage {
   readonly regions = computed(() =>
     this.data.regions().map((r) => ({ ...r, stamped: this.progress.stamps().has(r.code) })),
   );
+
+  /** tampon affiché dans la fenêtre */
+  readonly shown = signal<(Region & { stamped: boolean }) | null>(null);
 
   readonly badges = computed<Badge[]>(() => {
     const done = this.completed();

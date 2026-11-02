@@ -1,0 +1,324 @@
+{
+  "slug": "pourquoi-les-pintades-de-kantchari-crient-a-l-aube",
+  "type": "conte",
+  "region": "tapoa",
+  "place": "Kantchari",
+  "coords": [
+    12.48,
+    1.52
+  ],
+  "people": "Gourmantché",
+  "language": "gulmancema",
+  "duration": 3,
+  "age": 4,
+  "featured": false,
+  "cover": 1,
+  "tags": [
+    "animaux",
+    "pourquoi",
+    "matin",
+    "vigilance"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Pourquoi les pintades crient à l'aube",
+      "subtitle": "Les sentinelles de Kantchari",
+      "summary": "Le chacal surprend les animaux endormis. Les pintades décident de veiller pour tous, et depuis, elles réveillent la brousse chaque matin.",
+      "moral": "Celui qui veille pour les autres mérite la confiance de tous."
+    },
+    "en": {
+      "title": "Why Guinea Fowl Cry at Dawn",
+      "subtitle": "The sentinels of Kantchari",
+      "summary": "The jackal takes the sleeping animals by surprise. The guinea fowl decide to keep watch for everyone, and ever since they wake the bush every morning.",
+      "moral": "Whoever keeps watch for others deserves everyone's trust."
+    },
+    "moore": {
+      "title": "Bõe yĩng tɩ b yãbdẽ wã?",
+      "subtitle": "Kantchari gũudbã",
+      "summary": "B sẽn be zĩig ningã, b ra pa mi n tõe n maan bũmb ye. B sẽn wa n yikd bugumã rũnna-rãmba, b gũuda neb fãa.",
+      "moral": "Sẽn get-a neb a taabã yell segd n saka ned fãa."
+    },
+    "dioula": {
+      "title": "Mun na guinéew be kasi sɔgɔma?",
+      "subtitle": "Kantkari ka kɔlɔsilikɛbagaw",
+      "summary": "O kɔ, a ye sogow kabakoya. O kɔ, u be to ka bɛɛ kɔrɔsi. Kabi o tuma na, u be yirituw lakunu sɔgɔma joona.",
+      "moral": "Mɔgɔ min be mɔgɔ wɛrɛw kɔrɔsi, o tigi ka kan ni bɛɛ ka limaniya ye."
+    },
+    "fulfulde": {
+      "title": "Ngam ɗume Guinea Fowl ɗon wuura to subaka",
+      "subtitle": "Wurooɓe Kantchari",
+      "summary": "Jaakal ɗon hawta dabbaaji ɗi ɗaani. Goomu guinea footiino hokki yimɓe fuu hakkillaaji, diga nde ɓe ummi ko'e subaka.",
+      "moral": "Mo ɗon jokka yimɓe feere'en o mari ko ɓe mbaɗata."
+    }
+  },
+  "scenes": [
+    {
+      "id": "pourquoi-les-pintades-de-kantchari-crient-a-l-aube-p1",
+      "art": {
+        "sky": "night",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 30,
+            "s": 1.2
+          },
+          {
+            "k": "hare",
+            "x": 50
+          },
+          {
+            "k": "dog",
+            "x": 74,
+            "c": "#C9822B",
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Autrefois, autour de Kantchari, tous les animaux dormaient jusqu'au grand soleil. Le chacal en profitait : chaque nuit, il volait les œufs et les petits des dormeurs.",
+        "en": "Long ago, around Kantchari, all the animals slept until the sun was high. The jackal took advantage: every night he stole the eggs and young of the sleepers.",
+        "moore": "Sẽn deng pĩnd wẽndẽ, Kantchari soolmẽ wã, rũmsã fãa ra gãeeda hal tɩ wĩntoogã wa n zẽkdẽ. A ra dɩka a meng yõodo, n zãmbd yʋngo fãa sẽn da gãe wã tɩ b rɩt-b la b yi.",
+        "dioula": "Wagatijan tɛmɛnin na, Kantkari gɛrɛfɛ, kongosogow bɛɛ tun be sinɔgɔ fɔɔ ka taga se tile wili ma. O kɔ, a ye u ka tulogwɛlɛnw ta.",
+        "fulfulde": "Wakkati ɓurɗi, nder nokkuure Kantchari, dabbaaji fuu ɗon ɗaana haa naange wurta. Jaakal ngal huutori: ko jemma fuu o ɓooydi to'ji e sukaaɓe nder ɓe ɗaani."
+      }
+    },
+    {
+      "id": "pourquoi-les-pintades-de-kantchari-crient-a-l-aube-p2",
+      "art": {
+        "sky": "dawn",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "guinea-fowl",
+            "x": 34,
+            "s": 1.3
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 46,
+            "s": 1.1
+          },
+          {
+            "k": "partridge",
+            "x": 60
+          },
+          {
+            "k": "tortoise",
+            "x": 76
+          }
+        ]
+      },
+      "text": {
+        "fr": "Les animaux tinrent conseil. Qui voudrait se lever avant tout le monde pour donner l'alerte ? Personne n'osait. Alors la mère pintade dit : « Nous, les pintades, nous veillerons. »",
+        "en": "The animals held a council. Who would get up before everyone to sound the alarm? Nobody dared. Then Mother Guinea Fowl said: \"We guinea fowl will keep watch.\"",
+        "moore": "Rɩtbã ra tigimdame. Ãnd n na n yik n wa kõ-b la a zoe? Ned baa a yen pa saag ye. Rẽ poore, a yeelame: \"Tõnd sẽn yaa gɛɛni wã na n gũuda\".",
+        "dioula": "Baganw tun be lajɛnba dɔ kɛ. Jɔn lo tun bena wuli ka kɔn mɔgɔ bɛɛ ɲɛ walisa k'o fɔ? Mɔgɔ si ma sɔn. O kɔ, u y'a fɔ ko: \"An minw ye guinée kɔnɔw ye, an bena to k'an janto\".",
+        "fulfulde": "Dentuɓe ɗon waɗa kawral. Moy ummoto yeeso yimɓe fuu ngam o wurtina alarm? Walaa gooduɗo mo. Nden Mama Guinea Fowl wi'i: \"Minen fooli guinea en ɗon ndilli\"."
+      },
+      "choice": {
+        "q": {
+          "fr": "Est-ce une bonne idée ?",
+          "en": "Is it a good idea?",
+          "moore": "Rẽ yĩnga yaa yam-sõng bɩ?",
+          "dioula": "Yala o ye miiriya ɲuman ye wa?",
+          "fulfulde": "Ɗum woni miijo goɗɗum?"
+        },
+        "options": [
+          {
+            "fr": "Oui, veiller protège tout le monde",
+            "en": "Yes, keeping watch protects everyone",
+            "moore": "N-ye, gũusgu kogend ned fãa",
+            "dioula": "Tiɲɛn na, n'an be to ka mɔgɔ bɛɛ kɔrɔsi, o b'an tanga",
+            "fulfulde": "Ee, to a ɗon ndokka kuugal ɗowanteeɗo fuu"
+          },
+          {
+            "fr": "Non, c'est trop fatigant",
+            "en": "No, it's too tiring",
+            "moore": "A pa tõe n maan woto ye.",
+            "dioula": "Ayi, o tɛ foyi ye.",
+            "fulfulde": "Na, ɗum ɓeydi foofugo."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "La nuit suivante, les pintades se relayèrent…",
+          "en": "The next night, the guinea fowl took turns…",
+          "moore": "Sẽn pʋgl-a wã, b ra wẽnda ne taab n maand woto.",
+          "dioula": "O kɔ, u ye ɲɔgɔn lajɛn.",
+          "fulfulde": "Nde ndeen jemma, go'o guinea bird feccitii..."
+        }
+      }
+    },
+    {
+      "id": "pourquoi-les-pintades-de-kantchari-crient-a-l-aube-p3",
+      "art": {
+        "sky": "dawn",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 230
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 40,
+            "s": 1.3
+          },
+          {
+            "k": "dog",
+            "x": 70,
+            "c": "#C9822B"
+          },
+          {
+            "k": "bush",
+            "x": 84,
+            "y": 10
+          }
+        ]
+      },
+      "text": {
+        "fr": "Au petit matin, le chacal s'approcha. Aussitôt les pintades crièrent toutes ensemble : « Ka-ka-ka-ka ! » Toute la brousse se réveilla, et le chacal s'enfuit, la queue entre les pattes.",
+        "en": "At daybreak the jackal crept closer. At once the guinea fowl all cried out together: \"Ka-ka-ka-ka!\" The whole bush woke up, and the jackal ran off with his tail between his legs.",
+        "moore": "Zĩ-sobendã sẽn wa n kolgã, b ra gũuda ne a Zeova. La wakat kãng bala, b fãa tãagame n yeel tɩ: \"Ka-ka-ka!\" Tʋʋllã fãa yikame la a gãneg zoe ne a zoob sẽn be a nao sʋka.",
+        "dioula": "Dugu gwɛra tuma min na, o y'a to cɛmancɛ nana se. O yɔrɔnin bɛɛ, u ye ɲɔgɔn wele ko: \"Ka-ka-ka!\" Yiri nin bɛɛ wilila ka bɔ kɛnɛ kan.",
+        "fulfulde": "Ha wakkere nde windi, jawgal ɓeydi ɓaduki. Ɗon e ɗon go'o fuu bee woɓɓe mbi'i: \"Ka-ka-ka!\" Go'o fuu ɓanngini, nden kam jaakal ɗin jippi bee koodi maako hakkunde koyɗe muuɗum."
+      }
+    },
+    {
+      "id": "pourquoi-les-pintades-de-kantchari-crient-a-l-aube-p4",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 30,
+            "s": 1.2
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 42
+          },
+          {
+            "k": "woman",
+            "x": 64
+          },
+          {
+            "k": "hut",
+            "x": 82,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Depuis ce jour, à Kantchari comme ailleurs, les pintades crient dès l'aube. Les hommes les élèvent près des cases, car elles sont les meilleures sentinelles de la cour.",
+        "en": "Since that day, in Kantchari and elsewhere, guinea fowl cry at dawn. People raise them near their huts, for they are the best sentinels of the yard.",
+        "moore": "Sẽn sɩng ne daar kãng, Kantchari la zĩis a taab pʋsẽ, b yãbdda rũmsã sã n wa vẽege. Nebã wubda b rũmsã sẽn be b gãosgo, bala bãmb yaa gũudb nins sẽn tar pãng n yɩɩd zĩ-kãens fãa.",
+        "dioula": "Kabi o loon na, Kantkari ani yɔrɔ wɛrɛw la, guinéew be kasi sɔgɔma joona. Mɔgɔw b'u lamɔ u ka boonw gɛrɛfɛ sabu u ye kɔrɔsibaga ɲumanw ye kɛnɛ kan.",
+        "fulfulde": "Gila nden nyalnde, nder Kantchari e nokkuuje feere, guinea fowru ɗon wuura saa'i. Yimɓe ɗon ɓeyda ɓe haa nokkuuje maɓɓe, ngam ɓe woni laamiiɓe ɓurɓe booɓugo nder suudu."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qui volait les œufs la nuit ?",
+        "en": "Who stole the eggs at night?",
+        "moore": "Ãnd n so yʋng ne sãnemã?",
+        "dioula": "Jɔn lo ye olu son sufɛ?",
+        "fulfulde": "Mo ɓooydi njamndi jemma?"
+      },
+      "options": [
+        {
+          "fr": "Le chacal",
+          "en": "The jackal",
+          "moore": "A Zakalã",
+          "dioula": "O ye waraba ye.",
+          "fulfulde": "Ko o wi'i ko e nder ɓooyi."
+        },
+        {
+          "fr": "Le lièvre",
+          "en": "The hare",
+          "moore": "Laagã",
+          "dioula": "Dɔnkɔnɔ nin",
+          "fulfulde": "Lamargal"
+        },
+        {
+          "fr": "La tortue",
+          "en": "The tortoise",
+          "moore": "Tʋ-kẽengã",
+          "dioula": "O kɔ, a ye torosun dɔ faga.",
+          "fulfulde": "Tortugal ngal"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que font les pintades à l'aube ?",
+        "en": "What do guinea fowl do at dawn?",
+        "moore": "Bõe la guineefugli maand sã n wa vẽegẽ?",
+        "dioula": "Guinée kɔnɔw be mun lo kɛ sɔgɔma?",
+        "fulfulde": "Ko guinea fowdo waɗata to welo?"
+      },
+      "options": [
+        {
+          "fr": "Elles crient pour réveiller",
+          "en": "They cry to wake everyone",
+          "moore": "B yãbda n na n yik ned kam fãa.",
+          "dioula": "U be kasi ka mɔgɔ bɛɛ lakunu.",
+          "fulfulde": "Ɓe ɗon boowi ngam ɓe ummitina yimɓe fuu."
+        },
+        {
+          "fr": "Elles dorment",
+          "en": "They sleep",
+          "moore": "B ra gõeeme.",
+          "dioula": "U be sinɔgɔra.",
+          "fulfulde": "Ɓe ɗon ɗaana."
+        },
+        {
+          "fr": "Elles chantent une chanson",
+          "en": "They sing a song",
+          "moore": "B yɩɩla yɩɩl a ye.",
+          "dioula": "U be dɔnkili la",
+          "fulfulde": "Ɓe ɗon werna yimbe"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "sentinelle",
+      "lang": "fr",
+      "def": {
+        "fr": "Celui ou celle qui monte la garde pour prévenir d'un danger.",
+        "en": "Someone who stands guard to warn of danger.",
+        "moore": "Ned sẽn gũud n na n keoog nebã tɩ b wa paam yellã.",
+        "dioula": "Mɔgɔ min be to k'a yɛrɛ kɔrɔsi walisa ka mɔgɔw lasɔmi farati koo la.",
+        "fulfulde": "Gooto ɗon dari ngam hisnaago dow haɗiiji."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte étiologique écrit pour KIBARE dans l'esprit des contes d'animaux gourmantché ; la pintade est l'oiseau des cours de l'Est du Burkina.",
+    "en": "A \"why\" tale written for KIBARE in the spirit of Gourmantché animal tales; the guinea fowl is the yard bird of eastern Burkina."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

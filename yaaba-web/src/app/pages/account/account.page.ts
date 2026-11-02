@@ -39,6 +39,19 @@ export class AccountPage {
   readonly language = signal<string | null>(this.auth.user()?.language ?? null);
   readonly bio = signal(this.auth.user()?.bio ?? '');
   readonly saving = signal(false);
+  readonly resending = signal(false);
+  /* mot de passe */
+  readonly curPass = signal('');
+  readonly newPass = signal('');
+  readonly newPass2 = signal('');
+  readonly showPass = signal(false);
+  readonly passBusy = signal(false);
+  readonly passError = signal('');
+  readonly passOk = computed(() => {
+    const p = this.newPass();
+    const needCurrent = this.auth.user()?.hasPassword !== false;
+    return p.length >= 8 && /[A-Za-z]/.test(p) && /[0-9]/.test(p) && p === this.newPass2() && (!needCurrent || this.curPass().length > 0);
+  });
 
   readonly counts = computed(() => {
     const l = this.contributions();
@@ -57,6 +70,46 @@ export class AccountPage {
       this.loading.set(false);
     });
     void this.notifs.poll(true);
+    void this.auth.refresh(); // statut de vérification de l'adresse et du mot de passe à jour
+    if (location.hash === '#mot-de-passe') this.tab.set('profile');
+  }
+
+  /** Définit (compte Google) ou change le mot de passe. */
+  async savePassword() {
+    if (!this.passOk() || this.passBusy()) return;
+    const first = this.auth.user()?.hasPassword === false;
+    this.passBusy.set(true);
+    this.passError.set('');
+    try {
+      await this.auth.changePassword(first ? null : this.curPass(), this.newPass());
+      this.curPass.set('');
+      this.newPass.set('');
+      this.newPass2.set('');
+      this.toast.add({
+        severity: 'success',
+        summary: first ? 'Mot de passe enregistré' : 'Mot de passe modifié',
+        detail: first ? 'Vous pouvez maintenant vous connecter aussi avec votre e-mail et ce mot de passe.' : undefined,
+        life: 4500,
+      });
+    } catch (e) {
+      this.passError.set(AuthService.message(e, 'Le mot de passe n’a pas pu être enregistré'));
+    } finally {
+      this.passBusy.set(false);
+    }
+  }
+
+  /** Renvoie le lien de confirmation de l'adresse e-mail. */
+  async resend() {
+    if (this.resending()) return;
+    this.resending.set(true);
+    try {
+      const r = await this.auth.resendVerification();
+      this.toast.add({ severity: 'success', summary: 'E-mail envoyé', detail: r.message, life: 6000 });
+    } catch (e) {
+      this.toast.add({ severity: 'error', summary: 'Envoi impossible', detail: AuthService.message(e, 'Réessayez plus tard.'), life: 6000 });
+    } finally {
+      this.resending.set(false);
+    }
   }
 
   taleTitle(c: Contribution) {

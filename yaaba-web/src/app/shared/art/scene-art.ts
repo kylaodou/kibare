@@ -7,6 +7,7 @@ const ACTORS = new Set([
   'child', 'child-up', 'elder', 'king', 'king-talk', 'hunter', 'shepherd', 'princess', 'old-woman', 'dwarf',
   'rider', 'horse', 'horse-run', 'hare', 'hyena', 'dog', 'cow', 'wild-cow', 'lion', 'elephant', 'ram', 'goat',
   'chicken', 'partridge', 'guinea-fowl', 'tortoise', 'mouse', 'monkey', 'toad', 'hippo', 'crocodile', 'yboumbouni',
+  'camel', 'antelope', 'lizard',
 ]);
 
 /** Mouvements de caméra, un par scène, comme des plans de film. */
@@ -38,15 +39,18 @@ export function renderArt(art: Art, opts: RenderOptions = {}): string {
     let enter = '';
     if (cinema && actor) {
       // entrée en marchant depuis le bord le plus proche
-      enter = `class="${it.x < 50 ? 'walk-l' : 'walk-r'}" style="animation-delay:${300 + i * 260}ms"`;
+      enter = `class="${it.x < 50 ? 'walk-l' : 'walk-r'}" style="animation-delay:${80 + i * 140}ms"`;
     } else if (opts.enter || cinema) {
       enter = `class="enter" style="animation-delay:${120 + i * 70}ms"`;
     }
     const shadow = actor && (it.y ?? 0) <= 20 ? `<ellipse cx="0" cy="1" rx="22" ry="4" fill="#1E1611" opacity="0.14"/>` : '';
     // l'entrée est hors de l'échelle : un personnage retourné marche quand même dans le bon sens
+    // data-i : repère de l'élément, pour que la caméra puisse le cadrer pendant la narration ;
+    // .fx : enveloppe qui réagit quand l'élément est nommé dans la phrase lue
     const svg =
-      `<g transform="translate(${x.toFixed(1)},${y})"><g ${enter}><g transform="scale(${it.flip ? -s : s},${s})">` +
-      `${shadow}<g class="${anim}" style="animation-delay:${(-(i * 0.7) % 3).toFixed(2)}s">${def.draw(p, it)}</g></g></g></g>`;
+      `<g data-i="${i}" data-x="${it.x}" transform="translate(${x.toFixed(1)},${y})"><g ${enter}><g class="fx">` +
+      `<g transform="scale(${it.flip ? -s : s},${s})">` +
+      `${shadow}<g class="${anim}" style="animation-delay:${(-(i * 0.7) % 3).toFixed(2)}s">${def.draw(p, it)}</g></g></g></g></g>`;
     (def.light ? lights : normal).push(svg);
   });
 

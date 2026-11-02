@@ -1,0 +1,329 @@
+{
+  "slug": "le-thil-gardien-de-la-case",
+  "type": "conte",
+  "region": "djoro",
+  "place": "Gaoua",
+  "coords": [
+    10.33,
+    -3.18
+  ],
+  "people": "Lobi",
+  "language": "lobiri",
+  "duration": 4,
+  "age": 7,
+  "featured": false,
+  "cover": 0,
+  "tags": [
+    "esprits",
+    "protection",
+    "respect",
+    "famille"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le thil, gardien de la case",
+      "subtitle": "La statuette oubliée",
+      "summary": "Un jeune Lobi de Gaoua se moque de la petite statuette que son grand-père honore. Quand le malheur frappe la famille, il comprend ce qu'elle représente.",
+      "moral": "Respecter les croyances de ses aînés, c'est respecter ceux qui nous ont protégés."
+    },
+    "en": {
+      "title": "The Thil, Guardian of the Home",
+      "subtitle": "The forgotten statuette",
+      "summary": "A young Lobi from Gaoua mocks the little statuette his grandfather honours. When misfortune strikes the family, he understands what it stands for.",
+      "moral": "Respecting your elders' beliefs means respecting those who protected us."
+    },
+    "moore": {
+      "title": "A Thil, sẽn get zakã yell sõma wã",
+      "subtitle": "B sẽn yĩm-a wã yaa bõn-naandgã.",
+      "summary": "A Lobi sẽn yaa bi-bɩɩg n yit Gaoua wã paoogda a yaab-rãmbã bõn-naandgã. Ned sã n paam zu-loees a zakã pʋgẽ, a wʋmda a sẽn datã võore.",
+      "moral": "D sã n waoogd d kãsem dãmbã, wilgdame tɩ d waoogda neb nins sẽn kogend tõndã."
+    },
+    "dioula": {
+      "title": "Thil, min ye soo kɔrɔsibaga ye",
+      "subtitle": "O jaa ɲinina.",
+      "summary": "Lobi kanbele dɔ be yɛlɛla a bɛmacɛ ka jaa dennin kɔrɔ. Ni bɔnɛ be se ka denbaya sɔrɔ, a b'a faamu o kɔrɔ ye min ye.",
+      "moral": "N'an be bonya la an ka diinan mɔgɔkɔrɔw kan, o kɔrɔ ko minw y'an tanga u ma."
+    },
+    "fulfulde": {
+      "title": "Thil, Gardiiɗo wuro",
+      "subtitle": "Ɗuum laamu nder ɓernde",
+      "summary": "Goɗɗo Lobi daga Gaoua ɗon moƴƴina go'o dow laamol ɓurngal mawɗo maako. To nafoore huutiri saare, o anndi ko ɗum waɗi.",
+      "moral": "Ngam mawnugo goɗɗum ko seniiɓe mooɗon njaɓaani, ɗum firti no mawnirɗon yimɓe ɓe ɗon sirdo'en."
+    }
+  },
+  "scenes": [
+    {
+      "id": "le-thil-gardien-de-la-case-p1",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "painted-house",
+            "x": 60,
+            "y": 30,
+            "s": 0.8
+          },
+          {
+            "k": "elder-sit",
+            "x": 30
+          },
+          {
+            "k": "child",
+            "x": 44
+          },
+          {
+            "k": "plank-mask",
+            "x": 76,
+            "y": 10,
+            "s": 0.6
+          }
+        ]
+      },
+      "text": {
+        "fr": "À Gaoua, Sié vivait dans la grande maison de terre de sa famille. Dans un coin sombre se trouvait une petite statuette de bois. Son grand-père l'appelait le thil, l'esprit protecteur, et lui offrait chaque matin un peu de farine.",
+        "en": "In Gaoua, Sié lived in his family's big earthen house. In a dark corner stood a small wooden statuette. His grandfather called it the thil, the protective spirit, and offered it a little flour every morning.",
+        "moore": "A Sié zĩnda Gaoua, a zakã roogẽ. Zĩig sẽn yaa zĩ-bilã pʋgẽ, b ra tara tɩɩg kibs a ye. A yaab-rãmbã boola a woto tɩ thil, sẽn yaa koglg sɩɩgã. La b kõ-a-la bur bilf rũnna fãa.",
+        "dioula": "Gaoua dugu la, Sié tun be to k'a ka sooba dɔ kɔnɔ. A tun be yiri dɔ la min tun ka ɲi. A bɛmacɛ tun b'a weele ko thil, o kɔrɔ hakili min be mɔgɔw tanga. Sɔgɔmada joona a tun be mugu dɔɔni di a ma.",
+        "fulfulde": "Nder Gaoua, Sié jooɗii nder wuro maako mawɗo nder leydi. Nder go'o ɓernde ɗon darii ɗo laato woore. Maaman maako noddi ɗum thil, ruuhu hujjingo yimɓe, nden o hokkiɗum feyre go'o subaka fuu."
+      }
+    },
+    {
+      "id": "le-thil-gardien-de-la-case-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "village",
+        "items": [
+          {
+            "k": "child",
+            "x": 40
+          },
+          {
+            "k": "elder",
+            "x": 60
+          },
+          {
+            "k": "painted-house",
+            "x": 82,
+            "y": 30,
+            "s": 0.7
+          }
+        ]
+      },
+      "text": {
+        "fr": "Sié riait : « Ce n'est qu'un morceau de bois ! » Un jour, il cacha la statuette au fond du grenier pour faire une farce.",
+        "en": "Sié laughed: \"It's just a piece of wood!\" One day he hid the statuette at the back of the granary as a joke.",
+        "moore": "A Sié yeela woto: \"Yaa tɩɩs bala!\" Daar a ye, a solga bõn-naandgã bĩngẽ wã n yeel t'a yaa yaalgo.",
+        "dioula": "Sié ye yɛlɛko kɛ ko: \"A be yiri dɔrɔn lo fɛ!\" Loon dɔ, a y'o jaa dogo sumansilikɛyɔrɔ kɔfɛ walisa k'a fɔ ko ale tɛ se ka fɛɛn min dumu.",
+        "fulfulde": "Sié ɗon seeki: \"Ɗum woni ko woodol tan!\" Go'o go'o o suuɗini sariyaaku nder ɓaawo suudu ndun ngam mo jokki."
+      },
+      "choice": {
+        "q": {
+          "fr": "Sié a-t-il eu raison ?",
+          "en": "Was Sié right?",
+          "moore": "A Sié ra tara bʋʋm bɩ?",
+          "dioula": "Yala Sié tun ye tiɲɛn fɔ wa?",
+          "fulfulde": "Sié ɗon wi'a goonga?"
+        },
+        "options": [
+          {
+            "fr": "Non, il a manqué de respect",
+            "en": "No, he was disrespectful",
+            "moore": "A pa waoogd-y ye.",
+            "dioula": "Ayi, a tun tɛ bonya la an kan.",
+            "fulfulde": "Naa, o ɗon waɗa ko haani."
+          },
+          {
+            "fr": "Oui, c'était drôle",
+            "en": "Yes, it was funny",
+            "moore": "Aee, yaa noog wʋsgo.",
+            "dioula": "Ɔnhɔn, o tun ka di.",
+            "fulfulde": "Ee, ɗum ɗon mari ɓernde"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Les jours suivants furent étranges…",
+          "en": "The following days were strange…",
+          "moore": "La rasem a yiib sẽn pʋgdã yɩɩ toor-toor.",
+          "dioula": "Loon o loon tun ka di.",
+          "fulfulde": "Balɗe ɓaawo ɗon laati bana wooɗugo..."
+        }
+      }
+    },
+    {
+      "id": "le-thil-gardien-de-la-case-p3",
+      "art": {
+        "sky": "night",
+        "ground": "village",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "snake",
+            "x": 40
+          },
+          {
+            "k": "child",
+            "x": 60
+          },
+          {
+            "k": "rain",
+            "x": 50,
+            "y": 300
+          },
+          {
+            "k": "painted-house",
+            "x": 80,
+            "y": 30,
+            "s": 0.7
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un serpent entra dans la cour, l'orage abîma le toit et la chèvre s'égara. Sié eut peur. Son grand-père lui dit doucement : « Le thil, c'est la mémoire de ceux qui ont veillé sur nous. On ne le cache pas. »",
+        "en": "A snake came into the yard, the storm damaged the roof and the goat wandered off. Sié was frightened. His grandfather told him gently: \"The thil is the memory of those who watched over us. We don't hide it.\"",
+        "moore": "Wʋg n kẽe roogã pʋgẽ, sobgã sãama b roogã la bʋʋgã loogame. A Sié ra yɛɛsdame. A yaab-rãmbã yeela a Davɩɩd ne sũ-bʋgsem: \"Bãmb sẽn da gũud tõndã, b tẽegda tõndo. Tõnd pa solg-a ye\".",
+        "dioula": "Sogo dɔ donna lu kɔnɔ, fɔɲɔba ye boon sanfɛla cɛn ani bakɔrɔnin bolila ka taga. Sié siranna. A bɛmacɛ y'a fɔ a ye ni dususuman ye ko: \"Mɔgɔ minw tun b'an kɔlɔsi, u hakili be to olu la. An t'a dogo\".",
+        "fulfulde": "Woni haa nder suudu, nguleeki ɗon ɓilla dow wuro nden boo go'o ɗon dilli. Sié ɗon hulna. Maaman maako wi'i mo bee hakkiilo: \"Fulol ngol woni ko ɓe ɗon mbaɗana en. En ɓoyataa ɗum\"."
+      }
+    },
+    {
+      "id": "le-thil-gardien-de-la-case-p4",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "child-up",
+            "x": 40
+          },
+          {
+            "k": "elder-sit",
+            "x": 56
+          },
+          {
+            "k": "plank-mask",
+            "x": 72,
+            "y": 10,
+            "s": 0.6
+          },
+          {
+            "k": "goat",
+            "x": 84
+          }
+        ]
+      },
+      "text": {
+        "fr": "Sié remit la statuette à sa place et demanda pardon. Il ne comprit pas tout, mais il apprit à respecter ce que les anciens respectent. Et le soir même, la chèvre revint seule à la maison.",
+        "en": "Sié put the statuette back in its place and asked for forgiveness. He did not understand everything, but he learned to respect what the elders respect. And that very evening, the goat came home on its own.",
+        "moore": "A Sié leb n kɩtame tɩ b maan bõn-naandgã, la a bõos sugr. A pa wʋmd bũmb nins fãa sẽn be Biiblã pʋgẽ wã võor ye, la a zãmsame n waoog kãsem dãmbã. La yʋngo, sobgã waame a yembr n lebg n waa be.",
+        "dioula": "Sié ye jaa nin bila a nɔɔ na ani a y'a deli ko Ala k'ale yafa. A tun tɛ koo bɛɛ faamu, nka a ye diinan mɔgɔkɔrɔw ka bonya la u kan. O suu yɛrɛ la, bakɔrɔnin kelen nana soo.",
+        "fulfulde": "Sié hokki sari'aare nden to nokkuure maako, o tori mo yaafuki. O faami koo ɗume, ammaa o anndini mawnugo ko mawɓe seniiɓe teddina. E nder jemma maajum, go'o wari wuro maako."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qu'est-ce que le thil pour la famille ?",
+        "en": "What is the thil to the family?",
+        "moore": "Bõe n be zakã pʋgẽ?",
+        "dioula": "Mun lo kɛra denbaya la?",
+        "fulfulde": "Ko honɗun woni ko'e wuro?"
+      },
+      "options": [
+        {
+          "fr": "Un esprit protecteur",
+          "en": "A protective spirit",
+          "moore": "D tẽebã sẽn kogend nebã",
+          "dioula": "Hakilitigiya min b'an tanga",
+          "fulfulde": "Ruuhu ɗowanteeɗo"
+        },
+        {
+          "fr": "Un jouet",
+          "en": "A toy",
+          "moore": "Zũ-noodã",
+          "dioula": "Likin dɔ",
+          "fulfulde": "Ko tooyol"
+        },
+        {
+          "fr": "Un outil",
+          "en": "A tool",
+          "moore": "Sõngr sẽn yaa sõma",
+          "dioula": "Fɛɛn min be baara kɛ",
+          "fulfulde": "Kuugal"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Qu'a fait Sié à la fin ?",
+        "en": "What did Sié do at the end?",
+        "moore": "A Sié maana bõe?",
+        "dioula": "Sié ye mun lo kɛ laban na?",
+        "fulfulde": "Ko Sié waɗi to cappanɗe?"
+      },
+      "options": [
+        {
+          "fr": "Il a remis la statuette et demandé pardon",
+          "en": "He put the statuette back and apologised",
+          "moore": "A lebs n kõo bõn-naandgã la a kos sugri.",
+          "dioula": "A ye jaa bila yen ka yafa deli.",
+          "fulfulde": "O hokki sariyaaji ɗi o ɗon waɗugo e mo hoo'i."
+        },
+        {
+          "fr": "Il l'a vendue",
+          "en": "He sold it",
+          "moore": "A koos-a lame.",
+          "dioula": "A y'a feere.",
+          "fulfulde": "O jaayndi ɗum."
+        },
+        {
+          "fr": "Il l'a cassée",
+          "en": "He broke it",
+          "moore": "A sãama-a lame.",
+          "dioula": "A y'a cɛn.",
+          "fulfulde": "O ɓeydi ɗum."
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "thil",
+      "lang": "lobiri",
+      "def": {
+        "fr": "Chez les Lobi, esprit protecteur auquel on rend un culte à la maison (pluriel : thila).",
+        "en": "Among the Lobi, a protective spirit honoured in the home (plural: thila).",
+        "moore": "La a Zeova ra ratame tɩ b maan bũmb nins sẽn yaa sõma wã.",
+        "dioula": "Lobiw cɛma, u tun be mɔgɔ tanga a ka soo kɔnɔ (ka tɛmɛ olu kan: thila).",
+        "fulfulde": "Nder Lobi, ruuhu hujjitoowo nder wuro (ɓolde: thila)."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte écrit pour KIBARE, inspiré de la place des thila, esprits protecteurs et de leurs statuettes dans les maisons lobi de la région de Gaoua (musée de Gaoua, études ethnographiques sur les Lobi).",
+    "en": "A tale written for KIBARE, inspired by the role of the thila, protective spirits and their statuettes, in Lobi homes around Gaoua (Gaoua museum, ethnographic studies of the Lobi)."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

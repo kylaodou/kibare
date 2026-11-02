@@ -1,0 +1,318 @@
+{
+  "slug": "le-chasseur-et-la-biche-de-toma",
+  "type": "conte",
+  "region": "sourou",
+  "place": "Toma",
+  "coords": [
+    12.76,
+    -2.89
+  ],
+  "people": "Samo",
+  "language": "dioula",
+  "duration": 5,
+  "age": 8,
+  "featured": false,
+  "cover": 0,
+  "tags": [
+    "promesse",
+    "secret",
+    "brousse",
+    "famille"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le chasseur et la biche de Toma",
+      "subtitle": "La parole donnée",
+      "summary": "Un chasseur épouse une femme d'une grande beauté, venue de la brousse. Elle ne lui demande qu'une chose : ne jamais révéler qui elle est.",
+      "moral": "Un secret confié est une parole donnée : la trahir, c'est tout perdre."
+    },
+    "en": {
+      "title": "The Hunter and the Doe of Toma",
+      "subtitle": "A word given",
+      "summary": "A hunter marries a woman of great beauty who came from the bush. She asks only one thing: never reveal who she really is.",
+      "moral": "A secret entrusted to you is a word given: betraying it means losing everything."
+    },
+    "moore": {
+      "title": "Toma wã sẽn da baood n na n yãg-a la a sẽn pa bãngd bũmb ninsã",
+      "subtitle": "B sẽn yeel bũmb ningã",
+      "summary": "Ned sẽn baood zĩm-biisi kẽnda pag a ye ne nin-sõngo, n yi weoogẽ wã. A sokda bũmb a ye bala: da togs-y ned ning yẽ sẽn yaa sɩd ye.",
+      "moral": "B sẽn da yeel tɩ ned sã n na n bãng bũmb ning fãa, a pa segd n bas-a ye."
+    },
+    "dioula": {
+      "title": "Toma ka jagokɛla ni a ka mɔgɔ tɔgɔ jugu ye",
+      "subtitle": "Kuma dɔ di",
+      "summary": "Jagokɛla dɔ be muso cɛɲumanba furu min bɔra yiritu la. A b'a fɛ ka min fɔ, o ye ko a kana mɔgɔ si yira.",
+      "moral": "I ka koo dogonin dɔ kalifara i ma. N'i y'a fɔ ko i ye mɔgɔ min faga, o kɔrɔ ko i b'o tigi bɛɛ to yen."
+    },
+    "fulfulde": {
+      "title": "Mawɗo Duuɓal e Goomu Toma",
+      "subtitle": "Wolde hokki",
+      "summary": "Lamarɗo o ware debbo mo mawnde ɓurɗo ƴiwoore nder leɗɗe. O ƴamataa ko go'oto tan: toɗɗitaako hollaade mo o woni.",
+      "moral": "Sirru nder maaɗa ɗum wolde hokki: ɓeydaagoɗum ina maayi koo ɗume."
+    }
+  },
+  "scenes": [
+    {
+      "id": "le-chasseur-et-la-biche-de-toma-p1",
+      "art": {
+        "sky": "dawn",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 240
+          },
+          {
+            "k": "hunter",
+            "x": 30
+          },
+          {
+            "k": "antelope",
+            "x": 62,
+            "s": 1.2
+          },
+          {
+            "k": "acacia",
+            "x": 84,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Près de Toma vivait un jeune chasseur habile. Un matin, au bord d'une mare, il vit une biche si belle qu'il n'osa pas tirer. La biche le regarda longuement, puis disparut dans les hautes herbes.",
+        "en": "Near Toma lived a skilful young hunter. One morning, beside a pond, he saw a doe so beautiful that he dared not shoot. The doe looked at him for a long time, then vanished into the tall grass.",
+        "moore": "A Toma sẽn da be zĩig ningã, a ra yaa bi-bɩɩg n da zĩ ne koglg. Daar a ye, yẽ yãa bõn-buud sẽn yaa nin-sõngo t'a pa rat n kʋɩ ye. A sẽn yã wã, a gesa-a lame hal tɩ kaoos la a looge.",
+        "dioula": "Tuma min na Toma tun be yen, sunguru dɔ tun siginin be yɔrɔjan. Loon dɔ sɔgɔma, a ye tulogweren cɛɲumanba dɔ ye jii daa la. A ma sɔn k'a fari faga. O kɔ, a tun be to ka taga dogo kɛnɛ kan.",
+        "fulfulde": "Haade Toma jooɗoto mawɗo jaaynde mo o mari anndal. Gooto subaka, to woode poolum, o yi'i gooduɗo moƴƴo haa o mbaawaa huutoreede. Dube yi'i mo wakkati ɗuɗɗum, nden o wurtini nder leɗɗe mawɗe."
+      }
+    },
+    {
+      "id": "le-chasseur-et-la-biche-de-toma-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "village",
+        "items": [
+          {
+            "k": "hunter",
+            "x": 30
+          },
+          {
+            "k": "woman-talk",
+            "x": 50,
+            "c": "#E69135"
+          },
+          {
+            "k": "hut",
+            "x": 74,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le soir même, une jeune femme inconnue arriva au village. Elle épousa le chasseur et lui dit : « Je suis la biche que tu as épargnée. Ne le dis jamais à personne, ni dans la joie ni dans la colère. »",
+        "en": "That very evening, an unknown young woman came to the village. She married the hunter and told him: \"I am the doe you spared. Never tell anyone, neither in joy nor in anger.\"",
+        "moore": "Wĩndg kãng bala, bi-pugl a ye sẽn pa mi n wa tẽngã pʋgẽ wã. A kẽe ne zĩm-biiga, n yeel-a woto: \"Mam yaa bõn-buud ning yãmb sẽn da pa yã wã. Da togs ned baa a yen ye, sũ-noog pʋgẽ bɩ sũ-puugrã pʋgẽ ye\".",
+        "dioula": "O suu yɛrɛ la, sunguru dɔ nana dugu kɔnɔ. A ye jagokɛla furu ani a y'a fɔ a ye ko: \"I ye min kisi, ne lo. I kana o fɔ mɔgɔ si ye, i dusu kana diya ani i dimiya fana kana ban\".",
+        "fulfulde": "Nder jemma maajum, debbo mo ɓe anndaa wari to wuro. O waree mannduɗo nden o wi'i mo: \"Mi woni goonɗinɗo on. Taa wi'a goɗɗo, koo nder ɓernde belɗum malla nder haaloo\"."
+      },
+      "choice": {
+        "q": {
+          "fr": "Le chasseur gardera-t-il le secret ?",
+          "en": "Will the hunter keep the secret?",
+          "moore": "Sẽn baood-a wã na n zãaga yel-solemdã bɩ?",
+          "dioula": "Yala jagokɛla bena o gundo latanga wa?",
+          "fulfulde": "Hol ko woni nder sirru?"
+        },
+        "options": [
+          {
+            "fr": "Il doit le garder",
+            "en": "He must keep it",
+            "moore": "A segd n dɩka-a lame.",
+            "dioula": "A ka kan k'a mara.",
+            "fulfulde": "O haani rokkude ɗum."
+          },
+          {
+            "fr": "Il peut le dire à un ami",
+            "en": "He can tell a friend",
+            "moore": "A tõe n yeela a zoa woto.",
+            "dioula": "A be se k'a fɔ a teri dɔ ye ko:",
+            "fulfulde": "O waaway wi'ugo bandiraawo maako"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Pendant des années, il le garda…",
+          "en": "For years, he kept it…",
+          "moore": "Yʋʋm wʋsg la a tall-a...",
+          "dioula": "A ye saan caaman kɛ k'o mara.",
+          "fulfulde": "Haa duuɓi, o hokki ɗum..."
+        }
+      }
+    },
+    {
+      "id": "le-chasseur-et-la-biche-de-toma-p3",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "woman-pound",
+            "x": 40,
+            "c": "#E69135"
+          },
+          {
+            "k": "child-up",
+            "x": 60
+          },
+          {
+            "k": "child",
+            "x": 68
+          },
+          {
+            "k": "granary",
+            "x": 84,
+            "y": 24
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le couple vécut heureux. Leur grenier était toujours plein, et leurs enfants grandirent forts et rieurs. Mais un jour, après une dispute, le chasseur cria devant tout le village : « Tais-toi, tu n'es qu'une bête de la brousse ! »",
+        "en": "The couple lived happily. Their granary was always full, and their children grew up strong and cheerful. But one day, after a quarrel, the hunter shouted in front of the whole village: \"Be quiet, you're nothing but an animal from the bush!\"",
+        "moore": "B ra vɩɩ ne sũ-noogo. B ra tara kood koglg wakat fãa, la b kambã bɩɩme n yaa nin-tũusds sẽn tar sũ-noogo. La daar a ye, b sẽn da zab n wa n kaoose, koglgã fãa taoor-lʋɩtã zẽka koɛɛg n yeele: \"Bɩ y sĩndi. Yãmb yaa rũnda\".",
+        "dioula": "O cɛɛ ni muso tun be ɲɛnamaya kɛ hɛɛrɛ la. U ka sumansi boon tun fanin lo tuma bɛɛ. Nka loon dɔ, kɛlɛ bannin kɔ, jagokɛla y'a kaan kɔrɔta dugu kɔnɔ mɔgɔw bɛɛ ɲɛ na k'a fɔ ko: \"Kana kuma. I ye kongosogo dama lo ye\".",
+        "fulfulde": "Ɓe njooɗoto e belɗum. Ɓiɓɓe maɓɓe boo ɓe ɓeydi mawɓe e belɗi. Ammaa go'o, caggal nde ɓe njogii, mawɗo yiide o wi'i yeeso yimɓe fuu: \"Ndaa, a woni dabbaaji diga nder leɗɗe!\""
+      }
+    },
+    {
+      "id": "le-chasseur-et-la-biche-de-toma-p4",
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "antelope",
+            "x": 60,
+            "s": 1.2,
+            "flip": true
+          },
+          {
+            "k": "hunter",
+            "x": 26
+          },
+          {
+            "k": "bush",
+            "x": 80,
+            "y": 10
+          },
+          {
+            "k": "grass",
+            "x": 44
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le silence tomba. La femme le regarda avec tristesse, s'éloigna vers la brousse et redevint biche. Le chasseur la chercha toute sa vie. À Toma, on dit depuis : « Une parole lâchée ne revient jamais au nid. »",
+        "en": "Silence fell. The woman looked at him sadly, walked away into the bush and became a doe again. The hunter searched for her all his life. In Toma people have said ever since: \"A word let loose never returns to the nest.\"",
+        "moore": "B sĩndame. Pagã gesa a Pɩyɛɛr ne sũ-sãang n kẽnga weoogẽ wã, la b lebg n lebga bõn-buudg. A ra baooda a pagã wakat fãa. Sẽn sɩng ne rẽ, Toma nebã yetame: \"B sẽn basd gom-biis n pa le lebgd b zĩiga ye\".",
+        "dioula": "O kɛra mankanba ye. Muso y'a filɛ ni dususuman ye, a tagara yiritu kɔnɔ ani a kɛra i n'a fɔ dingɛ. A tun b'a fɛ k'o muso ye a sii bɛɛ la. Tuma min na u y'o kɛ, Toma dugu mɔgɔw tun b'a fɔ ko: \"Ni mɔgɔ ye kuma dɔ fɔ ka bɔ a kɔnɔ, o tigi tɛ segi soo kɔnɔ\".",
+        "fulfulde": "Ɗuum ɓeydi. Debbo ɗon ndaara mo bee ɓernde nyaamdu, o yahdi nder leɗɗe boo o warti go'o. Mawɗo yi'aago mo nder yonki maako fuu. Haa Toma yimɓe ɗon mbi'a diga saa'i maajum: \"Wodde mo ɓe acci, walaa ko warata nder leelo\"."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qu'a demandé la femme au chasseur ?",
+        "en": "What did the woman ask the hunter?",
+        "moore": "Bõe la pagã sokd zĩm-biiga?",
+        "dioula": "Muso ye mun lo ɲininga jagokɛla fɛ?",
+        "fulfulde": "Ko debbo on ƴami mawɗo yi'aare?"
+      },
+      "options": [
+        {
+          "fr": "De garder son secret",
+          "en": "To keep her secret",
+          "moore": "Sẽn na yɩl n tall-a ne yel-solemde.",
+          "dioula": "A ka koo dogoli kama.",
+          "fulfulde": "Ngam waɗugo maako sirru"
+        },
+        {
+          "fr": "De lui offrir de l'or",
+          "en": "To give her gold",
+          "moore": "Sẽn na yɩl n kõ-a sãnemã",
+          "dioula": "Ka sanu di a ma",
+          "fulfulde": "Ngam hokki mo daande"
+        },
+        {
+          "fr": "De quitter le village",
+          "en": "To leave the village",
+          "moore": "Sẽn na yɩl n bas tẽn-kãng",
+          "dioula": "Ka taga dugu nin to yen.",
+          "fulfulde": "To wurti gariiri ndin"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Pourquoi la femme est-elle partie ?",
+        "en": "Why did the woman leave?",
+        "moore": "Bõe yĩng t'a pagã yi?",
+        "dioula": "Mun na muso nin bɔra?",
+        "fulfulde": "Ngam ɗume debbo on dilli?"
+      },
+      "options": [
+        {
+          "fr": "Le chasseur a révélé son secret",
+          "en": "The hunter revealed her secret",
+          "moore": "Kẽerã wilga a sẽn na n maan bũmb ningã.",
+          "dioula": "O kɔ, a ye muso dɔ suu don.",
+          "fulfulde": "Mawɗo yi'aago o holli sirru maako"
+        },
+        {
+          "fr": "Elle avait faim",
+          "en": "She was hungry",
+          "moore": "A ra komdame.",
+          "dioula": "Kɔngɔ tun b'a la.",
+          "fulfulde": "O ɗon nyaama."
+        },
+        {
+          "fr": "Il pleuvait",
+          "en": "It was raining",
+          "moore": "Sa-kãsengã dag n yaa kãsenga.",
+          "dioula": "Sanji tun be ben.",
+          "fulfulde": "Wonaa ndiyam ɗon waɗa."
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "biche",
+      "lang": "fr",
+      "def": {
+        "fr": "Femelle du cerf ; dans les contes d'Afrique de l'Ouest, l'antilope peut se changer en femme.",
+        "en": "A female deer; in West African tales, the antelope can turn into a woman.",
+        "moore": "A yaa pʋg-paal; Afirik tẽnsẽ, a tõe n lebga pag.",
+        "dioula": "A be se ka yɛlɛma ka kɛ muso ye. Afiriki tileben fan fɛ, a be se ka kɛ i n'a fɔ antilop.",
+        "fulfulde": "Antilope debbo; nder kaalaaji Afrik hirnaange, antilope waawata waylita to debbo."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte de la « femme-animal » et de l'interdit de révéler son origine, très répandu en Afrique de l'Ouest (Mandé, Samo, Mossi). Version écrite pour KIBARE, située à Toma.",
+    "en": "A tale of the \"animal wife\" and the taboo on revealing her origin, widespread in West Africa (Mandé, Samo, Mossi). Version written for KIBARE, set in Toma."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

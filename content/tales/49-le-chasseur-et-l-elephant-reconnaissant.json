@@ -1,0 +1,317 @@
+{
+  "slug": "le-chasseur-et-l-elephant-reconnaissant",
+  "type": "conte",
+  "region": "tapoa",
+  "place": "Diapaga",
+  "coords": [
+    12.07,
+    1.79
+  ],
+  "people": "Gourmantché",
+  "language": "gulmancema",
+  "duration": 5,
+  "age": 6,
+  "featured": true,
+  "cover": 2,
+  "tags": [
+    "animaux",
+    "gratitude",
+    "parc W",
+    "brousse"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le chasseur et l'éléphant reconnaissant",
+      "subtitle": "Près du parc du W",
+      "summary": "Un chasseur de Diapaga retire une épine du pied d'un éléphant. Des années plus tard, perdu dans la brousse, c'est l'éléphant qui le ramène chez lui.",
+      "moral": "Un bienfait n'est jamais perdu : la brousse se souvient."
+    },
+    "en": {
+      "title": "The Hunter and the Grateful Elephant",
+      "subtitle": "Near the W park",
+      "summary": "A hunter from Diapaga pulls a thorn from an elephant's foot. Years later, lost in the bush, it is the elephant who brings him home.",
+      "moral": "A kindness is never lost: the bush remembers."
+    },
+    "moore": {
+      "title": "Kẽerã ne bõn-buud sẽn maand sũ-noogo",
+      "subtitle": "W parkã sẽn be wã sɛɛgẽ",
+      "summary": "Dũndg sẽn yit Diapaga wã sã n digd bõn-buud a naoẽ, b paasa yẽ. Yʋʋm wʋsg poore, a sẽn da menem weoogẽ wã, lui-raoogã n wa ne-a.",
+      "moral": "Ned sã n nong a taabã, b pa le maand woto ye."
+    },
+    "dioula": {
+      "title": "Jɔnkɛ ani elefan ɲumanlɔnbaga",
+      "subtitle": "W parki gɛrɛfɛ",
+      "summary": "Diapaga ka jagokɛla dɔ ye ŋɔni bɔ ntɔnso sen na. Saan caaman o kɔ, a tun ye fili yiritu kɔnɔ. Elefan lo y'a kɔsegi soo.",
+      "moral": "Mɔgɔɲuman tɛ tunu abada. Yiri be to k'a hakili jigi o la."
+    },
+    "fulfulde": {
+      "title": "Mawɗo Wondi e Elefant Moodi Maɗinki",
+      "subtitle": "Haade park W",
+      "summary": "Lamarɗo diga Diapaga ɗon ƴetti kaɓirgal daga koyɗe njamndi. Ɓaawo duuɓi, o majjini nder leɗɗe, ko e leyɗe ɗe o hoɗata wuro.",
+      "moral": "Yiɗde walaa ko maayi: duumol ɗon siftora."
+    }
+  },
+  "scenes": [
+    {
+      "id": "le-chasseur-et-l-elephant-reconnaissant-p1",
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "elephant",
+            "x": 56,
+            "s": 0.9
+          },
+          {
+            "k": "hunter",
+            "x": 26
+          },
+          {
+            "k": "acacia",
+            "x": 86,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Près de Diapaga, aux portes du grand parc du W, vivait Yemboado, un chasseur gourmantché. Un jour, il entendit un barrissement de douleur : un jeune éléphant boitait, une longue épine plantée dans le pied.",
+        "en": "Near Diapaga, at the edge of the great W park, lived Yemboado, a Gourmantché hunter. One day he heard a trumpet of pain: a young elephant was limping, a long thorn stuck in its foot.",
+        "moore": "A Yemboado sẽn yaa Gourmantché wã ra be Diapaga, la a bee W-rũngã noorẽ. Daar a ye, a wʋma yɩɩn sẽn namsd-a wã. A yãaga ra yaa wa bõn-buud sẽn gãe n na n kẽed ne gõosg n lʋɩ a naoẽ.",
+        "dioula": "Yemboado tun be dugu dɔ gɛrɛfɛ, a ye gourmantchéw faga. Loon dɔ, a ye filen dɔ mankan mɛn. A tun be fiyɛra ni ŋɔnijan dɔ ye a seen na.",
+        "fulfulde": "Haade Diapaga, haa ɓaawo park mawɗo W, Yemboado jooɗori, mo wuurɓe Gourmantché. Go'o nyalnde o nani ɓooyi: gooduɗo njamndi ɗon maaya, bee kaɓirɗum haa koyɗe maako."
+      }
+    },
+    {
+      "id": "le-chasseur-et-l-elephant-reconnaissant-p2",
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "elephant",
+            "x": 54,
+            "s": 0.9
+          },
+          {
+            "k": "hunter",
+            "x": 36
+          },
+          {
+            "k": "spear",
+            "x": 18
+          },
+          {
+            "k": "bush",
+            "x": 80,
+            "y": 10
+          }
+        ]
+      },
+      "text": {
+        "fr": "Ses compagnons voulaient profiter de l'occasion pour le chasser. Yemboado posa sa lance.",
+        "en": "His companions wanted to take the chance to hunt it. Yemboado laid down his spear.",
+        "moore": "A tũud-n-taasã ra ratame n paam n yãg-a. A Yemboado basa a sʋʋgã.",
+        "dioula": "A teriw tun b'a fɛ k'o kɛ. Yemboado y'a ka taman bila duguma.",
+        "fulfulde": "Wonaaɓe maako ɓe yiɗi yiide ngam ɓe mbaɗa ɗum. Yemboado dilli haaki maako."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va faire Yemboado ?",
+          "en": "What will Yemboado do?",
+          "moore": "Bõe la a Yemboado na n maan?",
+          "dioula": "Yemboado bena mun lo kɛ?",
+          "fulfulde": "Ko Yemboado waɗata?"
+        },
+        "options": [
+          {
+            "fr": "Retirer l'épine",
+            "en": "Pull out the thorn",
+            "moore": "Kẽng-y gõosã.",
+            "dioula": "I ka ŋɔni bɔ a la.",
+            "fulfulde": "Wurtina ko'e maɓɓere"
+          },
+          {
+            "fr": "Chasser l'éléphant",
+            "en": "Hunt the elephant",
+            "moore": "Kẽer yãag-a lame.",
+            "dioula": "I ka filenw gbɛn.",
+            "fulfulde": "Handeeje e leyɗe"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Doucement, il retira l'épine. L'éléphant le regarda longtemps, puis s'en alla.",
+          "en": "Gently he pulled out the thorn. The elephant looked at him for a long time, then left.",
+          "moore": "A wʋka gõosã ne sũ-bʋgsem. A yãaga a Zezi hal n kaoos la b loogame.",
+          "dioula": "A y'a ka ŋɔni bɔ a la ni dususuman ye. Sanɛ y'a filɛ ka mɛn, o kɔ a bɔra.",
+          "fulfulde": "O ɓeydi bee hakkiilo. Ndellu ɗon ndaara mo wakkati ɗuɗɗum, nden o dilli."
+        }
+      }
+    },
+    {
+      "id": "le-chasseur-et-l-elephant-reconnaissant-p3",
+      "art": {
+        "sky": "night",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "hunter",
+            "x": 40
+          },
+          {
+            "k": "forest-edge",
+            "x": 70
+          },
+          {
+            "k": "owl",
+            "x": 84,
+            "y": 110
+          }
+        ]
+      },
+      "text": {
+        "fr": "Des années passèrent. Un soir d'orage, Yemboado se perdit au fond de la brousse. La nuit tombait, les hyènes riaient au loin et il ne retrouvait plus aucun sentier.",
+        "en": "Years passed. One stormy evening, Yemboado got lost deep in the bush. Night was falling, hyenas laughed in the distance and he could no longer find any path.",
+        "moore": "Yʋʋm n loogame. Daar a ye, sobg sẽn da yaa wʋsgo, Yemboado menemame n kẽed bugum pʋgẽ. Zĩiga ra yaa wa sẽn kẽ, la a pa le tõe n yã sor ye.",
+        "dioula": "Saan caaman tɛmɛna. Loon dɔ, sanjiba tun be yen. Yemboado tagara ye yɔrɔjan yiritu kɔnɔ. Suu tun be ɲini ka ben, jinɛw tun be yɛlɛla yɔrɔjan. A ma se ka sira sɔrɔ tugun.",
+        "fulfulde": "Haa duuɓi ɗuuɗɗi. Nder jemma go'o, Yemboado majjini nder leɗɗe. Nde jemma ɗon wara, hyena'en ɓe ngetta nder yaasi nden o waawataa heɓugo laawol."
+      }
+    },
+    {
+      "id": "le-chasseur-et-l-elephant-reconnaissant-p4",
+      "art": {
+        "sky": "dawn",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 240
+          },
+          {
+            "k": "elephant",
+            "x": 52,
+            "s": 1
+          },
+          {
+            "k": "hunter",
+            "x": 34
+          },
+          {
+            "k": "hut",
+            "x": 84,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un grand éléphant sortit des arbres et s'arrêta devant lui. Yemboado reconnut la cicatrice sur son pied. L'éléphant marcha devant lui toute la nuit, jusqu'aux premières cases de Diapaga. Depuis, sa famille ne chasse plus jamais l'éléphant.",
+        "en": "A great elephant came out of the trees and stopped in front of him. Yemboado recognised the scar on its foot. The elephant walked ahead of him all night, as far as the first huts of Diapaga. Since then, his family has never hunted elephants again.",
+        "moore": "Wʋs-kãseng n yi tɩɩsã sʋka n wa yals a taoore. A Yemboado bãngame tɩ b sẽn yã a nao wã yaa bãaga. A Zĩ-kãnga ra kẽnda taoor yʋngã fãa n ta Diapaga logodo. Rẽ tɛka, a zakã rãmb pa le yãgd bõn-buud ye.",
+        "dioula": "Sankaba dɔ bɔra yiriw kɔnɔ ka lɔ a ɲafɛ. Yemboado y'a seen ka cicɛ damina. Sankaba ye tɛmɛ a ɲa fɔɔ ka taga se Diapaga dugu kɔnɔ. Kabi o tuma, a ka denbaya ma taga filiw ɲini tugun.",
+        "fulfulde": "Gooduɗo nduu ƴetti diga leɗɗe, jooɗii yeeso maako. Yemboado anndi ɓandu dow koyngal maako. Elefanto on ɗon yaha yeeso maako jemma fuu, haa to cuuɗi ɗiɗaɓoɗi Diapaga. Gila ndeen, saare maako meeɗaay yi'ugo doofal."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qu'avait l'éléphant dans le pied ?",
+        "en": "What was in the elephant's foot?",
+        "moore": "Bõe n da be ne bõn-buudã naoẽ?",
+        "dioula": "Mun lo tun be elefan seen na?",
+        "fulfulde": "Ko woni nder koyɗe nduu?"
+      },
+      "options": [
+        {
+          "fr": "Une épine",
+          "en": "A thorn",
+          "moore": "Kẽngr sẽn yaa gõosã",
+          "dioula": "Dimi dɔ ye",
+          "fulfulde": "Ɗuum ɓanndu"
+        },
+        {
+          "fr": "Une flèche",
+          "en": "An arrow",
+          "moore": "Dɩlla a ye",
+          "dioula": "O ye kalan dɔ ye.",
+          "fulfulde": "Fuule ɗon"
+        },
+        {
+          "fr": "Une pierre",
+          "en": "A stone",
+          "moore": "A kugã",
+          "dioula": "Kabakuru dɔ",
+          "fulfulde": "Ɗuum hayre"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Comment le chasseur a-t-il retrouvé son chemin ?",
+        "en": "How did the hunter find his way?",
+        "moore": "Wãn to la zĩ-yũuddã yã a sorã?",
+        "dioula": "Jɔnkɛ ye sira sɔrɔ cogo di?",
+        "fulfulde": "Noye mannduɗo on heɓii laawol?"
+      },
+      "options": [
+        {
+          "fr": "L'éléphant l'a guidé",
+          "en": "The elephant guided him",
+          "moore": "Tĩndã zãmsa-a lame.",
+          "dioula": "Sanɛ y'a ɲɛminɛ.",
+          "fulfulde": "Elefantu ɗon hoola mo."
+        },
+        {
+          "fr": "Avec une carte",
+          "en": "With a map",
+          "moore": "Ne kartã",
+          "dioula": "Ka karti dɔ ta",
+          "fulfulde": "E mappe"
+        },
+        {
+          "fr": "Grâce au soleil",
+          "en": "Thanks to the sun",
+          "moore": "Yaa wĩntoogã yĩng la d segd n pʋʋs-a.",
+          "dioula": "Tile barika la,",
+          "fulfulde": "Ngam naange"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "parc du W",
+      "lang": "fr",
+      "def": {
+        "fr": "Grand parc naturel partagé avec le Niger et le Bénin, nommé d'après la forme du fleuve Niger ; patrimoine mondial de l'UNESCO.",
+        "en": "A large nature park shared with Niger and Benin, named after the shape of the Niger river; a UNESCO World Heritage site.",
+        "moore": "Yaa zĩig sẽn yaa kãseng n be tẽng ning b sẽn boond tɩ Niger ne Benin wã sʋka, la b pʋd-a t'a yita Niger kʋɩlgã zugu.",
+        "dioula": "Jamanadenw ka maraba dɔ min be ɲɔgɔn fɛ ni Niger ani Bɛnin ye, o tɔgɔ bɔra Nili baji cogo la. O yɔrɔ kɛra UNESCO ka diɲɛ nafolo ye.",
+        "fulfulde": "Goomu nature park mawnde e Niger be Benin, noddetee ko dow laawol maayo Niger; gooduɗo UNESCO nder duniyaaru."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte de l'animal reconnaissant (l'épine retirée), répandu en Afrique comme en Europe. Version écrite pour KIBARE, située en pays gourmantché, près du parc du W.",
+    "en": "A tale of the grateful animal (the thorn removed), widespread in Africa and Europe. Version written for KIBARE, set in Gourmantché country near the W park."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

@@ -8,10 +8,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-l);
   overflow: hidden;
+  /* carte d'histoire : fond blanc uni, sans motif */
+  background: var(--surface);
   transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s;
 
   &:hover {
@@ -155,14 +154,24 @@ p {
   }
   &.on {
     color: var(--y-red);
-    animation: beat 0.4s var(--ease);
+  }
+  /* le cœur tourne sur lui-même en grossissant quand on l'aime */
+  &.spin i {
+    display: inline-block;
+    animation: heart-spin 0.7s cubic-bezier(0.3, 1.4, 0.5, 1);
   }
 }
 
-@keyframes beat {
-  50% {
-    transform: scale(1.25);
-  }
+.acts {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+@keyframes heart-spin {
+  0% { transform: rotate(0) scale(1); }
+  50% { transform: rotate(200deg) scale(1.4); }
+  100% { transform: rotate(360deg) scale(1); }
 }
 
 .compact {

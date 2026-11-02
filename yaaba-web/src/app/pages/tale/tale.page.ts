@@ -12,6 +12,8 @@ import { AudioTrack, GlossaryEntry } from '../../core/models';
 import { NarrationService } from '../../core/narration.service';
 import { ProgressService } from '../../core/progress.service';
 import { SceneArtComponent } from '../../shared/art/scene-art.component';
+import { HeartBurstComponent } from '../../shared/heart-burst/heart-burst.component';
+import { SkeletonComponent } from '../../shared/skeleton/skeleton.component';
 import { CommentsComponent } from '../../shared/comments/comments.component';
 import { TYPE_ICON, TaleCardComponent, taleText } from '../../shared/tale-card/tale-card.component';
 import { QuizComponent } from './quiz.component';
@@ -29,9 +31,45 @@ const READ_LANGS = ['fr', 'en', 'moore', 'dioula', 'fulfulde'];
  * texte intégral à droite, narration audio synchronisée, choix interactifs,
  * puis morale, quiz, glossaire, source, contributeurs et commentaires.
  */
+/** Mots (fr, en) qui désignent chaque élément d'illustration. */
+const PEOPLE = ['homme', 'man', 'chasseur', 'hunter', 'roi', 'king', 'chef', 'chief', 'naaba', 'père', 'father', 'fils', 'son'];
+const FOCUS_WORDS: Record<string, string[]> = {
+  man: PEOPLE, 'man-talk': PEOPLE, 'man-point': PEOPLE, 'man-up': PEOPLE, hunter: ['chasseur', 'hunter'],
+  king: ['roi', 'king', 'chef', 'chief', 'naaba'], 'king-talk': ['roi', 'king', 'chef', 'chief', 'naaba'],
+  woman: ['femme', 'woman', 'mère', 'mother', 'fille', 'daughter', 'reine'], 'woman-talk': ['femme', 'woman', 'mère', 'mother'],
+  'woman-up': ['femme', 'woman', 'mère', 'mother'], 'woman-pound': ['femme', 'woman', 'mère', 'mother'],
+  princess: ['princesse', 'princess'], 'old-woman': ['vieille', 'old woman', 'grand-mère'],
+  child: ['enfant', 'child', 'petit', 'little', 'garçon', 'boy'], 'child-up': ['enfant', 'child', 'petit', 'little', 'garçon', 'boy'],
+  elder: ['vieil', 'vieux', 'ancien', 'elder', 'old man', 'sage'], 'elder-sit': ['vieil', 'vieux', 'ancien', 'elder', 'sage'],
+  shepherd: ['berger', 'herder', 'shepherd'], rider: ['cavalier', 'rider', 'horseman'],
+  lion: ['lion'], hyena: ['hyène', 'hyena'], hare: ['lièvre', 'hare'], elephant: ['éléphant', 'elephant'],
+  croc: ['crocodile'], crocodile: ['crocodile'], tortoise: ['tortue', 'tortoise'], snake: ['serpent', 'snake'],
+  monkey: ['singe', 'monkey'], dog: ['chien', 'dog', 'chacal', 'jackal'], cow: ['vache', 'cow', 'troupeau', 'herd'],
+  goat: ['chèvre', 'goat', 'bouc'], ram: ['bélier', 'ram'], horse: ['cheval', 'horse'], 'horse-run': ['cheval', 'horse'],
+  chicken: ['poule', 'hen', 'poulet', 'chicken', 'coq'], 'guinea-fowl': ['pintade', 'guinea fowl'], partridge: ['perdrix', 'partridge'],
+  owl: ['hibou', 'owl'], bat: ['chauve-souris', 'bat'], toad: ['crapaud', 'toad'], mouse: ['souris', 'mouse'],
+  antelope: ['antilope', 'antelope', 'biche', 'doe'], camel: ['chameau', 'camel'], lizard: ['margouillat', 'lizard'],
+  hippo: ['hippopotame', 'hippo'], catfish: ['poisson', 'fish', 'silure', 'catfish'], 'wild-cow': ['buffle', 'buffalo'],
+  yboumbouni: ['yboumbouni'], bees: ['abeille', 'bee'], beehive: ['miel', 'honey', 'ruche'], wasp: ['guêpe', 'wasp'],
+  baobab: ['baobab'], well: ['puits', 'well'], fire: ['feu', 'fire'], palace: ['palais', 'palace', 'cour'],
+  calabash: ['calebasse', 'calabash'], 'giant-calabash': ['calebasse', 'calabash'], drum: ['tambour', 'drum', 'tam-tam'],
+  jar: ['jarre', 'jar', 'canari'], granary: ['grenier', 'granary'], hut: ['case', 'hut'], moon: ['lune', 'moon'],
+  sun: ['soleil', 'sun'], rain: ['pluie', 'rain', 'orage', 'storm'], peaks: ['pics', 'peaks', 'rocher'],
+};
+
+/** Une voix : un conteur dans une langue, avec ses fichiers par paragraphe (identifiant de scène → URL). */
+interface Voice {
+  key: string;
+  lang: string;
+  narrator: string;
+  byScene: Map<string, string>;
+  /** enregistrement d'un seul tenant (conte entier) */
+  whole?: AudioTrack;
+}
+
 @Component({
   selector: 'app-tale-page',
-  imports: [RouterLink, FormsModule, SceneArtComponent, TaleCardComponent, QuizComponent, CommentsComponent, TranslatePipe, TxPipe, PopoverModule, TooltipModule],
+  imports: [RouterLink, FormsModule, SceneArtComponent, TaleCardComponent, QuizComponent, CommentsComponent, TranslatePipe, TxPipe, PopoverModule, TooltipModule, SkeletonComponent, HeartBurstComponent],
   templateUrl: './tale.page.html',
   styleUrl: './tale.page.scss',
 })
@@ -55,7 +93,12 @@ export class TalePage implements AfterViewInit {
   readonly playing = signal(false);
   readonly answers = signal<Record<number, number>>({});
   readonly tracks = signal<AudioTrack[]>([]);
+  /** voix d'un seul tenant (conte entier) choisie par l'auditeur */
   readonly track = signal<AudioTrack | null>(null);
+  /** choix de voix : « auto » (première voix du paragraphe dans la langue du texte), « text » (narration du texte) ou une voix précise */
+  readonly voiceChoice = signal<string>('auto');
+  /** fichiers illisibles : on ne les retente pas, on passe à la narration du texte */
+  private broken = new Set<string>();
   readonly stamped = signal(false);
   readonly gloss = signal<GlossaryEntry | null>(null);
   readonly finished = signal(false);
@@ -90,10 +133,61 @@ export class TalePage implements AfterViewInit {
     }));
   });
 
+  /**
+   * Voix disponibles, regroupées par conteur et langue. Chaque voix associe un fichier
+   * à l'identifiant réel des paragraphes qu'elle couvre (jamais à leur position).
+   */
+  readonly voices = computed<Voice[]>(() => {
+    const t = this.tale();
+    const out = new Map<string, Voice>();
+    for (const a of this.tracks()) {
+      if (a.sceneId) {
+        const key = `${a.lang}|${a.narrator}`;
+        const v = out.get(key) ?? { key, lang: a.lang, narrator: a.narrator, byScene: new Map<string, string>() };
+        if (!v.byScene.has(a.sceneId)) v.byScene.set(a.sceneId, a.url);
+        out.set(key, v);
+      } else if (a.segments?.length && t) {
+        // ancien format (un fichier par paragraphe, dans l'ordre) : rattaché aux identifiants actuels
+        const key = `seg-${a.id}`;
+        const byScene = new Map<string, string>();
+        a.segments.forEach((u, i) => t.scenes[i]?.id && byScene.set(t.scenes[i].id!, u));
+        out.set(key, { key, lang: a.lang, narrator: a.narrator, byScene });
+      } else {
+        out.set(`whole-${a.id}`, { key: `whole-${a.id}`, lang: a.lang, narrator: a.narrator, byScene: new Map(), whole: a });
+      }
+    }
+    return [...out.values()];
+  });
+
+  /** Voix utilisée pour le paragraphe i selon le choix de l'auditeur (null : narration du texte). */
+  voiceFor(i: number): { url: string; voice: Voice } | null {
+    const sid = this.tale()?.scenes[i]?.id;
+    const choice = this.voiceChoice();
+    if (!sid || choice === 'text') return null;
+    const ok = (v: Voice) => {
+      const url = v.byScene.get(sid);
+      return url && !this.broken.has(url) ? { url, voice: v } : null;
+    };
+    if (choice !== 'auto') {
+      const v = this.voices().find((x) => x.key === choice);
+      return v ? ok(v) : null;
+    }
+    for (const v of this.voices()) if (v.lang === this.textLang() && ok(v)) return ok(v);
+    return null;
+  }
+
+  /** Voix du paragraphe affiché (pour le lecteur). */
+  readonly activeVoice = computed(() => {
+    this.tracks();
+    this.voiceChoice();
+    this.textLang();
+    return this.voiceFor(this.active());
+  });
+
   /** Narration enregistrée par paragraphe (fichiers MP3 générés) disponible dans la langue de lecture ? */
   readonly hasRecorded = computed(() => !!this.tale()?.narration?.includes(this.textLang()));
   readonly canSynth = computed(() => this.narration.canSpeak(this.textLang()));
-  readonly canPlay = computed(() => this.hasRecorded() || this.canSynth() || !!this.track());
+  readonly canPlay = computed(() => this.hasRecorded() || this.canSynth() || !!this.track() || !!this.activeVoice());
 
   readonly paragraphs = computed<Part[][][]>(() => {
     const t = this.tale();
@@ -103,12 +197,24 @@ export class TalePage implements AfterViewInit {
     );
   });
 
-  /** Sous-titre affiché sur l'illustration pendant la narration. */
-  readonly caption = computed(() => {
-    const para = this.paragraphs()[this.active()];
+  /**
+   * Élément de l'illustration nommé dans la phrase en cours de lecture (pour que la caméra le cadre).
+   * On cherche, dans l'ordre de la phrase, le premier mot qui désigne un élément présent dans la scène.
+   */
+  readonly focus = computed<number | null>(() => {
     const si = this.narration.current();
-    if (!para || si < 0 || si >= para.length) return '';
-    return para[si].map((p) => p.text).join('');
+    const para = this.paragraphs()[this.active()];
+    const scene = this.current();
+    if (!this.playing() || si < 0 || !para?.[si] || !scene) return null;
+    const sentence = para[si].map((p) => p.text).join('').toLowerCase();
+    let best: { i: number; at: number } | null = null;
+    scene.art.items.forEach((it, i) => {
+      for (const word of FOCUS_WORDS[it.k] ?? []) {
+        const at = sentence.search(new RegExp(String.raw`(^|[^\p{L}])` + word, 'u'));
+        if (at >= 0 && (!best || at < best.at)) best = { i, at };
+      }
+    });
+    return best ? (best as { i: number }).i : null;
   });
 
   readonly related = computed(() => {
@@ -133,6 +239,8 @@ export class TalePage implements AfterViewInit {
         this.stamped.set(false);
         this.finished.set(false);
         this.track.set(null);
+        this.voiceChoice.set('auto');
+        this.broken.clear();
         this.read.clear();
         this.tracks.set(t?.audio ?? []);
         if (!t) return;
@@ -141,6 +249,10 @@ export class TalePage implements AfterViewInit {
         this.data.view(t.slug, this.textLang());
         void this.data.audio(t.slug).then((tracks) => this.tracks.set(tracks));
         this.ambience.setRegion(t.region);
+        // la narration démarre d'elle-même à l'ouverture du conte
+        setTimeout(() => {
+          if (this.tale() === t && !this.playing() && this.canPlay()) this.playFrom(0, false);
+        }, 900);
       });
     });
 
@@ -215,17 +327,18 @@ export class TalePage implements AfterViewInit {
 
   togglePlay() {
     // une voix d'un seul tenant se lit à part ; une voix enregistrée par paragraphe suit le texte
-    if (this.track() && !this.track()!.segments?.length) return this.toggleTrack();
+    if (this.track()) return this.toggleTrack();
     if (this.playing()) return this.stop();
     this.playFrom(this.active());
   }
 
-  playFrom(i: number) {
+  playFrom(i: number, scroll = true) {
     this.stop();
     const t = this.tale();
     if (!t || i >= t.scenes.length) return;
     this.playing.set(true);
-    this.scrollTo(i);
+    if (scroll) this.scrollTo(i);
+    else this.active.set(i);
     const next = () => {
       if (!this.playing()) return;
       // un choix à faire : on attend la réponse avant de continuer
@@ -237,7 +350,7 @@ export class TalePage implements AfterViewInit {
       if (i + 1 < t.scenes.length) setTimeout(() => this.playing() && this.playFrom(i + 1), 700);
       else this.playing.set(false);
     };
-    const segment = this.track()?.segments?.[i];
+    const segment = this.voiceFor(i)?.url;
     if (segment || this.hasRecorded()) {
       const audio = new Audio(segment ?? `audio/narration/${t.slug}/${this.textLang()}/${i}.mp3`);
       this.audio = audio;
@@ -255,7 +368,19 @@ export class TalePage implements AfterViewInit {
         this.narration.current.set(-1);
         next();
       };
-      audio.onerror = () => (this.canSynth() ? this.speak(i, next) : this.stop());
+      audio.onerror = () => {
+        if (segment) {
+          // voix illisible : signalée une fois, puis narration du texte pour ce paragraphe
+          this.broken.add(segment);
+          this.voiceChoice.update((c) => c);
+          this.tracks.update((l) => [...l]);
+          this.toast.add({ severity: 'warn', summary: 'Enregistrement illisible', detail: 'La narration du texte prend le relais.', life: 3500 });
+          if (this.playing()) this.playFrom(i, false);
+          return;
+        }
+        if (this.canSynth()) this.speak(i, next);
+        else this.stop();
+      };
       void audio.play().catch(() => this.stop());
     } else {
       this.speak(i, next);
@@ -307,8 +432,18 @@ export class TalePage implements AfterViewInit {
     this.track.set(t);
   }
 
-  pickTrack(id: string | number) {
-    this.useTrack(this.tracks().find((x) => x.id === +id) ?? null);
+  /** Choix explicite de l'auditeur : respecté pour tous les paragraphes que la voix couvre. */
+  pickVoice(key: string) {
+    const wasPlaying = this.playing();
+    const v = this.voices().find((x) => x.key === key);
+    this.useTrack(v?.whole ?? null);
+    this.voiceChoice.set(v ? key : key === 'text' ? 'text' : 'auto');
+    if (wasPlaying && !v?.whole) setTimeout(() => this.playFrom(this.active(), false), 100);
+  }
+
+  /** Nombre de paragraphes couverts par une voix. */
+  coverage(v: Voice) {
+    return this.tale()?.scenes.filter((s) => s.id && v.byScene.has(s.id)).length ?? 0;
   }
 
   toggleTrack() {
@@ -322,8 +457,12 @@ export class TalePage implements AfterViewInit {
     if (!this.audio) {
       this.audio = new Audio(t.url);
       this.audio.onended = () => this.playing.set(false);
+      this.audio.onerror = () => {
+        this.playing.set(false);
+        this.toast.add({ severity: 'warn', summary: 'Enregistrement illisible', detail: 'Choisissez une autre voix ou la narration du texte.', life: 4000 });
+      };
     }
-    void this.audio.play();
+    void this.audio.play().catch(() => this.playing.set(false));
     this.playing.set(true);
   }
 
@@ -358,9 +497,20 @@ export class TalePage implements AfterViewInit {
     this.progress.saveQuiz(t.slug, score, t.quiz.length);
   }
 
+  /** éclats de cœurs : un compteur par bouton, incrémenté à chaque « j'aime » */
+  readonly favBurst = signal(0);
+  readonly likeBurst = signal(0);
+
+  toggleFav() {
+    const on = !this.favorite();
+    this.progress.toggleFavorite(this.slug());
+    if (on) this.favBurst.update((n) => n + 1);
+  }
+
   like() {
     const liked = this.progress.toggleLike(this.slug());
     this.data.like(this.slug(), liked);
+    if (liked) this.likeBurst.update((n) => n + 1);
   }
 
   async share() {

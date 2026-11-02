@@ -1,7 +1,7 @@
 {
   "slug": "le-lievre-l-elephant-et-l-hippopotame",
   "type": "conte",
-  "region": "cascades",
+  "region": "tannounyan",
   "place": "Niangoloko",
   "coords": [
     10.28,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "le-lievre-l-elephant-et-l-hippopotame-p1",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -75,6 +76,17 @@
             "k": "acacia",
             "x": 16,
             "y": 26
+          },
+          {
+            "k": "elephant",
+            "x": 88,
+            "s": 0.7,
+            "flip": true
+          },
+          {
+            "k": "hippo",
+            "x": 30,
+            "s": 0.8
           }
         ]
       },
@@ -87,6 +99,7 @@
       }
     },
     {
+      "id": "le-lievre-l-elephant-et-l-hippopotame-p2",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -111,6 +124,11 @@
             "x": 90,
             "y": 30,
             "s": 0.7
+          },
+          {
+            "k": "hippo",
+            "x": 12,
+            "s": 0.8
           }
         ]
       },
@@ -156,6 +174,7 @@
       }
     },
     {
+      "id": "le-lievre-l-elephant-et-l-hippopotame-p3",
       "art": {
         "sky": "day",
         "ground": "river",
@@ -195,6 +214,7 @@
       }
     },
     {
+      "id": "le-lievre-l-elephant-et-l-hippopotame-p4",
       "art": {
         "sky": "dusk",
         "ground": "river",
@@ -220,6 +240,11 @@
             "k": "rope",
             "x": 50,
             "y": 4
+          },
+          {
+            "k": "hare",
+            "x": 88,
+            "flip": true
           }
         ]
       },

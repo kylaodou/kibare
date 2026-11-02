@@ -11,10 +11,13 @@
     </nav>
 
     <div class="actions">
-      <div class="lang" role="group" [attr.aria-label]="'header.lang' | t">
-        <button type="button" [class.on]="i18n.lang() === 'fr'" [attr.aria-pressed]="i18n.lang() === 'fr'" (click)="i18n.set('fr')" lang="fr">FR</button>
-        <button type="button" [class.on]="i18n.lang() === 'en'" [attr.aria-pressed]="i18n.lang() === 'en'" (click)="i18n.set('en')" lang="en">EN</button>
-      </div>
+      <!-- passeport : accessible à tous, connecté ou non (progression gardée dans le navigateur) -->
+      <a class="icon-btn passport" routerLink="/passeport" routerLinkActive="active" [pTooltip]="'nav.passport' | t" tooltipPosition="bottom" [attr.aria-label]="'nav.passport' | t">
+        <i class="fa-solid fa-stamp"></i>
+        @if (progress.stamps().size) {
+          <span class="badge">{{ progress.stamps().size }}</span>
+        }
+      </a>
       <button type="button" class="icon-btn" id="tour-sound" data-music [class.active]="ambience.playing()" (click)="ambience.toggle()"
         [pTooltip]="(ambience.playing() ? 'header.soundOff' : 'header.soundOn') | t" tooltipPosition="bottom"
         [attr.aria-label]="(ambience.playing() ? 'header.soundOff' : 'header.soundOn') | t" [attr.aria-pressed]="ambience.playing()">
@@ -32,7 +35,15 @@
             <span class="badge">{{ notifs.unread() > 9 ? '9+' : notifs.unread() }}</span>
           }
         </button>
-        <p-popover #np styleClass="notif-pop">
+
+        <button type="button" class="avatar" (click)="um.toggle($event)" [attr.aria-label]="u.name">{{ initials(u.name) }}</button>
+      } @else {
+        <a routerLink="/connexion" class="btn btn-ghost btn-sm hide-sm">{{ 'nav.login' | t }}</a>
+        <a routerLink="/inscription" class="btn btn-sm hide-sm"><i class="fa-solid fa-user-plus"></i> S'inscrire</a>
+      }
+
+      <!-- menus hors du @if : PrimeNG Popover échoue s'il est détruit avec le bloc (déconnexion) -->
+      <p-popover #np styleClass="notif-pop">
           <div class="np">
             <div class="np-head">
               <strong>{{ 'notif.title' | t }}</strong>
@@ -58,9 +69,8 @@
             <a class="np-all" routerLink="/compte" fragment="notifications" (click)="np.hide()">{{ 'notif.all' | t }}</a>
           </div>
         </p-popover>
-
-        <button type="button" class="avatar" (click)="um.toggle($event)" [attr.aria-label]="u.name">{{ initials(u.name) }}</button>
-        <p-popover #um>
+      <p-popover #um>
+          @if (auth.user(); as u) {
           <div class="um">
             <div class="um-head">
               <strong>{{ u.name }}</strong>
@@ -72,13 +82,10 @@
             @if (auth.isAdmin()) {
               <a routerLink="/admin" (click)="um.hide()"><i class="fa-solid fa-gauge-high"></i> {{ 'nav.dashboard' | t }}</a>
             }
-            <button type="button" (click)="um.hide(); auth.logout()"><i class="fa-solid fa-right-from-bracket"></i> {{ 'nav.logout' | t }}</button>
+            <button type="button" class="logout" (click)="um.hide(); auth.logout()"><i class="fa-solid fa-right-from-bracket"></i> {{ 'nav.logout' | t }}</button>
           </div>
+          }
         </p-popover>
-      } @else {
-        <a routerLink="/connexion" class="btn btn-ghost btn-sm hide-sm">{{ 'nav.login' | t }}</a>
-        <a routerLink="/contribuer" class="btn btn-sm hide-sm"><i class="fa-solid fa-feather-pointed"></i> {{ 'nav.contribute' | t }}</a>
-      }
 
       <button type="button" class="icon-btn burger" (click)="menu.set(true)" [attr.aria-label]="'header.menu' | t">
         <i class="fa-solid fa-bars"></i>
@@ -106,6 +113,7 @@
       }
     } @else {
       <a routerLink="/connexion" routerLinkActive="active" (click)="menu.set(false)"><i class="fa-solid fa-right-to-bracket"></i> {{ 'nav.login' | t }}</a>
+      <a routerLink="/inscription" routerLinkActive="active" (click)="menu.set(false)"><i class="fa-solid fa-user-plus"></i> S'inscrire</a>
     }
     <button type="button" class="drawer-theme" (click)="theme.toggle()">
       <i class="fa-solid" [class.fa-sun]="theme.dark()" [class.fa-moon]="!theme.dark()"></i>

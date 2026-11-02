@@ -1,0 +1,321 @@
+{
+  "slug": "le-chacal-et-la-calebasse-de-miel",
+  "type": "conte",
+  "region": "goulmou",
+  "place": "Fada N'Gourma",
+  "coords": [
+    12.06,
+    0.36
+  ],
+  "people": "Gourmantché",
+  "language": "gulmancema",
+  "duration": 4,
+  "age": 5,
+  "featured": false,
+  "cover": 1,
+  "tags": [
+    "animaux",
+    "miel",
+    "gourmandise",
+    "ruse"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le chacal et la calebasse de miel",
+      "subtitle": "La gourmandise punie",
+      "summary": "Le chacal vole la calebasse de miel que les abeilles de Fada gardaient pour la saison sèche. Mais le miel colle, et la ruse se retourne contre lui.",
+      "moral": "Ce qui est pris par la ruse finit par coller aux doigts du voleur."
+    },
+    "en": {
+      "title": "The Jackal and the Calabash of Honey",
+      "subtitle": "Greed punished",
+      "summary": "The jackal steals the calabash of honey the bees of Fada were keeping for the dry season. But honey is sticky, and the trick turns against him.",
+      "moral": "What is taken by trickery ends up sticking to the thief's fingers."
+    },
+    "moore": {
+      "title": "Zĩigã ne a Kaalabas sẽn yaa zĩm-gãong",
+      "subtitle": "B sɩbgda zãmbã",
+      "summary": "A Zakalã zãaga zĩm-bil nins Fada sẽn da gũudẽ wã tɩ b na n paam koom koglg wakat ningã. La sã n yaa tɩlɛ, a na n wa wẽnemda yẽ.",
+      "moral": "Sẽn paam-b b nugẽ wã pa le tõe n maan ye."
+    },
+    "dioula": {
+      "title": "Dɔnkiliw ni kalabasikaw",
+      "subtitle": "Ɲamɔgɔya ka kan ka tɔɔrɔ",
+      "summary": "Fada ka ɲɔtiɲɔtɔw tun be min mara sanjiba wagati la, o ye jɛnɛ ye. Nka, u tɛ se ka dɔ fara a kan.",
+      "moral": "Mɔgɔ min be sɔn ka ngalon tigɛ, o tigi tɛ se k'o kɛ."
+    },
+    "fulfulde": {
+      "title": "Ɗuum ko ɓooyi e calbaas",
+      "subtitle": "Yiɗde ko'e maɓɓe ɗon ceede",
+      "summary": "Jaakal ɓooydi kalfinaaji njamndi ɗi bee Fada ɗon keewi ngam sahaa maaki. Ammaa honey ɗon ɓeyda, nden boo kuugal ngal ɗon wurtina mo.",
+      "moral": "Ko ɗum jaɓa ngam huutoreeje ɗon ɓooya haa juuɗe laamiiɗo."
+    }
+  },
+  "scenes": [
+    {
+      "id": "le-chacal-et-la-calebasse-de-miel-p1",
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "beehive",
+            "x": 50,
+            "y": 70
+          },
+          {
+            "k": "bees",
+            "x": 56,
+            "y": 120
+          },
+          {
+            "k": "giant-calabash",
+            "x": 30
+          },
+          {
+            "k": "karite",
+            "x": 50,
+            "y": 24
+          }
+        ]
+      },
+      "text": {
+        "fr": "Fada N'Gourma est le pays du miel. Dans un grand karité, les abeilles avaient rempli une calebasse de miel doré pour les mois sans fleurs. Le chacal, caché dans l'herbe, salivait.",
+        "en": "Fada N'Gourma is the land of honey. In a great shea tree, the bees had filled a calabash with golden honey for the months without flowers. The jackal, hidden in the grass, was drooling.",
+        "moore": "Fada N'Gourma yaa zĩm-poak tẽng. Bãadã ra pida ne sãnem kiis tɩ b rɩg-b n dɩtẽ. A sẽn da solg-a weoogẽ wã ra yaa wa a sãnem.",
+        "dioula": "Fada N'Gourma ye lii jamana ye. O kɔ, u ye kalo caaman kɛ ka lɛɛw to yen. O kɔ, a y'a daminɛ ka to k'a yɛrɛ ɲɔtiɲɔtira.",
+        "fulfulde": "Fada N'Gourma woni lesdi bee leɗɗe. Nder leggal shea mawnde, bee'en keewi kalbas e jawdi jabuɗi nder lebbi ɗe walaa njamɗe. Ɗuum ɓooyɗo nder leɗɗe, ɗon moodi."
+      }
+    },
+    {
+      "id": "le-chacal-et-la-calebasse-de-miel-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "dog",
+            "x": 40,
+            "c": "#C9822B"
+          },
+          {
+            "k": "giant-calabash",
+            "x": 56
+          },
+          {
+            "k": "bees",
+            "x": 70,
+            "y": 140
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le chacal dit aux abeilles : « Le lièvre vient voler votre miel, allez vite le chasser ! » Les abeilles s'envolèrent. Le chacal plongea la tête dans la calebasse.",
+        "en": "The jackal told the bees: \"The hare is coming to steal your honey, go and chase him away!\" The bees flew off. The jackal plunged his head into the calabash.",
+        "moore": "A ra yetame tɩ b na n dɩka a waoogrã. A gãda a zug n kẽe koom-koglgã pʋgẽ.",
+        "dioula": "O kɔ, u y'a fɔ a ye ko: \"Sisan, i ka taga n'i ka lii ye\". U bolila. O kɔ, a y'a kuun don kalabasin kɔnɔ.",
+        "fulfulde": "Wuro wi'i beeji: \"Kooɗol ɗon wara ngam ɓorgo njari mooɗon, njahi on torra mo!\" Beeji ndilli. Jaakal ngal ɓoggi hoore mum nder kalbaas."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va-t-il arriver au chacal ?",
+          "en": "What will happen to the jackal?",
+          "moore": "Bõe n na n paam zakallã?",
+          "dioula": "Mun lo bena kɛ sakal la?",
+          "fulfulde": "Ko waɗata e jawgal ngal?"
+        },
+        "options": [
+          {
+            "fr": "Il va rester coincé",
+            "en": "He'll get stuck",
+            "moore": "A na n gãda a meng pʋgẽ.",
+            "dioula": "A bena to ka sinsin.",
+            "fulfulde": "O ɗon ɗaɓɓa."
+          },
+          {
+            "fr": "Il va s'enfuir sans problème",
+            "en": "He'll escape with no trouble",
+            "moore": "A na n põsa ne zu-loeese.",
+            "dioula": "A bena boli ka bɔ yen ni gwɛlɛya si tɛ.",
+            "fulfulde": "O ɗon hiita bee daliila walaa caɗeele."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Le miel était si épais que la calebasse resta collée à sa tête !",
+          "en": "The honey was so thick that the calabash stuck to his head!",
+          "moore": "A sɩɩgã ra yaa kãsenga hal tɩ b gãneg a zug ne a ko-to wã.",
+          "dioula": "O kɔ, a y'a kuun sin ka don o kɔnɔ.",
+          "fulfulde": "Luki ɗon ɓesda haa kalbaas ngal tokkii hoore maako!"
+        }
+      }
+    },
+    {
+      "id": "le-chacal-et-la-calebasse-de-miel-p3",
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "dog",
+            "x": 46,
+            "c": "#C9822B"
+          },
+          {
+            "k": "giant-calabash",
+            "x": 50,
+            "y": 30,
+            "s": 0.6
+          },
+          {
+            "k": "bees",
+            "x": 66,
+            "y": 120
+          },
+          {
+            "k": "hare",
+            "x": 80
+          }
+        ]
+      },
+      "text": {
+        "fr": "Aveuglé, la tête dans la calebasse, le chacal tourna en rond et se cogna aux arbres. Les abeilles revinrent, furieuses d'avoir été trompées, et le piquèrent de partout.",
+        "en": "Blinded, head stuck in the calabash, the jackal ran in circles and bumped into trees. The bees came back, furious at being tricked, and stung him all over.",
+        "moore": "A sẽn yaa zoangã, a zug n gãe ne koglgẽ wã, a zoeesa zĩ-zãnga la a lʋɩ tɩɩsã sʋka. B sẽn wa n na n belg-a wã, b sũur sãama wʋsgo.",
+        "dioula": "A fiɲɛntɔyara, a kuun tun tora kalabasisi kɔnɔ. O kɔ, a bolila ka taga yiriw gosi. U dimina k'a bugɔ ani u y'a sɔgɔ yɔrɔ bɛɛ.",
+        "fulfulde": "Ɓaandu, hoore maako ɗon ɗaɓɓi nder kalbaas, jackal'en ɗon wurtina nder dungu e hawta bee leɗɗe. Bee'en ngari, ɓe ɗon ɓeyda ngam ɓe cujidani mo, ɓe njokki maako fuu."
+      }
+    },
+    {
+      "id": "le-chacal-et-la-calebasse-de-miel-p4",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "dog",
+            "x": 30,
+            "c": "#C9822B",
+            "flip": true
+          },
+          {
+            "k": "beehive",
+            "x": 64,
+            "y": 70
+          },
+          {
+            "k": "woman",
+            "x": 80
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le chacal s'enfuit, le museau gonflé. Depuis, dit-on à Fada, il rôde la nuit et n'ose plus approcher des ruches. Et les apiculteurs gourmantché répètent : « Le miel se partage, il ne se vole pas. »",
+        "en": "The jackal ran off with a swollen snout. Since then, people in Fada say, he prowls at night and no longer dares go near the hives. And Gourmantché beekeepers repeat: \"Honey is shared, not stolen.\"",
+        "moore": "A Zakalã zoeeme ne a sũ-sãoong sẽn wa n puugame. Sẽn sɩng ne rẽ, Fada neb yetame t'a leb n kẽnda yʋngo la a pa le tõe n kolg bĩisã ye. La gourmand-rãmbã yetame: \"B pa tol n yiba, b pʋɩda sɩɩgã ye\".",
+        "dioula": "O kɔ, a y'a daminɛ ka boli ni kunkolo ye. Kabi o tuma, Fada ka mɔgɔw b'a fɔ ko a be yaala suu kɔnɔ ani a tɛ se ka gwɛrɛ u la tugun. U y'a fɔ fana ko: \"U be lii di ɲɔgɔn ma, u t'o son\".",
+        "fulfulde": "Jaakal ngal dilli bee ɓooyi maɓɓuɗi. Gila ndeen, yimɓe Fada mbiyi o ɗon wonda jemma e mo ɓeydaay yaade to go'o. E goormanteeɓe Gourmantché ɗon wi'a: \"Wooɗeeji ɗi ɓe mbaɗa, naa ɓoyma\"."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quel mensonge a dit le chacal ?",
+        "en": "What lie did the jackal tell?",
+        "moore": "Zĩ-kãnga sẽn yeelã yaa ziri bʋgo?",
+        "dioula": "O cɛ ye ngalon juman lo fɔ?",
+        "fulfulde": "Ko haaloowo nde cakkal wi'i?"
+      },
+      "options": [
+        {
+          "fr": "Que le lièvre venait voler le miel",
+          "en": "That the hare was coming to steal the honey",
+          "moore": "La b yeelame tɩ raabã na n sooga zĩm-gãongã.",
+          "dioula": "Ko musoman tun be nana ka lii son.",
+          "fulfulde": "Nde laana warii ɓoyma ko honey"
+        },
+        {
+          "fr": "Qu'il pleuvait",
+          "en": "That it was raining",
+          "moore": "La saagã dag n yaa wʋsgo.",
+          "dioula": "A ko sanji be benna.",
+          "fulfulde": "Nde ndiyam ɗon waɗa."
+        },
+        {
+          "fr": "Qu'il était malade",
+          "en": "That he was ill",
+          "moore": "A ra yaa bãad bɩ?",
+          "dioula": "A tun man kɛnɛ.",
+          "fulfulde": "Nde o nyawdi"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Pour quoi Fada N'Gourma est-elle connue ?",
+        "en": "What is Fada N'Gourma known for?",
+        "moore": "Bõe yĩng tɩ b boond a Fada N'Gourma?",
+        "dioula": "Fada N'Gourma be dɔnniya juman lo kosɔn?",
+        "fulfulde": "Ko ɗume Fada N'Gourma anndiraa?"
+      },
+      "options": [
+        {
+          "fr": "Son miel",
+          "en": "Its honey",
+          "moore": "A yaa waoong soaba.",
+          "dioula": "A ka di.",
+          "fulfulde": "Ko honɗun woni"
+        },
+        {
+          "fr": "Ses montagnes",
+          "en": "Its mountains",
+          "moore": "A tãensã",
+          "dioula": "A ka kuluw",
+          "fulfulde": "Kooseeje maako"
+        },
+        {
+          "fr": "La mer",
+          "en": "The sea",
+          "moore": "Ko-kãsengã",
+          "dioula": "Kɔgɔji kan",
+          "fulfulde": "Lamardi maayo"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "apiculteur",
+      "lang": "fr",
+      "def": {
+        "fr": "Personne qui élève des abeilles pour récolter le miel.",
+        "en": "A person who keeps bees to collect honey.",
+        "moore": "Ned sẽn tar zĩm-biis n na n tigs li.",
+        "dioula": "Mɔgɔ min be sumanw mara ka lii lajɛn.",
+        "fulfulde": "Yimɓe jogiiɗo beeje ngam mooɓtaade leɗɗe."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte d'animaux écrit pour KIBARE dans la tradition des contes de ruse gourmantché ; le miel de Fada N'Gourma est une production réputée de l'Est du Burkina.",
+    "en": "An animal tale written for KIBARE in the tradition of Gourmantché trickster tales; Fada N'Gourma honey is a renowned product of eastern Burkina."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

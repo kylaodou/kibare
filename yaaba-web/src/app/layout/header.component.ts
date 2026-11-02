@@ -8,6 +8,7 @@ import { AmbienceService } from '../core/ambience.service';
 import { AuthService } from '../core/auth.service';
 import { I18nService, TranslatePipe } from '../core/i18n.service';
 import { AppNotification, NOTIF_ICON, NotificationsService } from '../core/notifications.service';
+import { ProgressService } from '../core/progress.service';
 import { ThemeService } from '../core/theme.service';
 import { LogoComponent } from '../shared/logo/logo.component';
 
@@ -32,6 +33,7 @@ export class HeaderComponent {
   readonly ambience = inject(AmbienceService);
   readonly auth = inject(AuthService);
   readonly notifs = inject(NotificationsService);
+  readonly progress = inject(ProgressService);
   private router = inject(Router);
   readonly nav = NAV;
   readonly menu = signal(false);

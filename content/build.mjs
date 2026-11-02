@@ -22,7 +22,12 @@ for (const t of tales) {
   if (!regionCodes.has(t.region)) at(`région inconnue ${t.region}`);
   if (!langCodes.has(t.language)) at(`langue inconnue ${t.language}`);
   for (const l of ['fr', 'en']) if (!t.i18n[l]?.title) at(`titre ${l} manquant`);
+  // chaque paragraphe a un identifiant stable : les voix y sont rattachées, quel que soit l'ordre
+  const ids = new Set();
   t.scenes.forEach((s, i) => {
+    if (!s.id) at(`scène ${i} : identifiant manquant`);
+    else if (ids.has(s.id)) at(`scène ${i} : identifiant en double ${s.id}`);
+    ids.add(s.id);
     for (const l of ['fr', 'en']) if (!s.text[l]) at(`scène ${i} : texte ${l} manquant`);
     if (s.choice && !s.choice.options[s.choice.answer]) at(`scène ${i} : réponse hors limites`);
   });

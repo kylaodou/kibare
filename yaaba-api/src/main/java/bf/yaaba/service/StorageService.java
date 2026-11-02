@@ -55,6 +55,29 @@ public class StorageService {
         return new Stored(name, base.equals("video/webm") ? "audio/webm" : base);
     }
 
+    /** Taille maximale d'une vidéo d'illustration. */
+    public static final long MAX_VIDEO_BYTES = 10L * 1024 * 1024;
+
+    private static final Map<String, String> VIDEO = Map.of("video/mp4", "mp4", "video/webm", "webm", "video/ogg", "ogv");
+
+    /** Vidéo d'illustration : MP4, WebM ou Ogg, 10 Mo au plus. */
+    public Stored storeVideo(MultipartFile file) {
+        if (file == null || file.isEmpty()) throw new IllegalArgumentException("Fichier vidéo vide");
+        if (file.getSize() > MAX_VIDEO_BYTES)
+            throw new IllegalArgumentException("Vidéo trop volumineuse : " + (file.getSize() / 1024 / 1024) + " Mo (10 Mo maximum)");
+        String type = Optional.ofNullable(file.getContentType()).orElse("").toLowerCase(Locale.ROOT);
+        String base = type.contains(";") ? type.substring(0, type.indexOf(';')).trim() : type;
+        String ext = VIDEO.get(base);
+        if (ext == null) throw new IllegalArgumentException("Format vidéo non pris en charge (MP4, WebM ou Ogg) : " + type);
+        String name = UUID.randomUUID() + "." + ext;
+        try (InputStream in = file.getInputStream()) {
+            Files.copy(in, root.resolve(name), StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            throw new IllegalStateException("Impossible d'enregistrer la vidéo", e);
+        }
+        return new Stored(name, base);
+    }
+
     public Optional<Resource> load(String fileName) {
         if (!fileName.matches("[a-f0-9\\-]{36}\\.[a-z0-9]{2,4}")) return Optional.empty();
         Path p = root.resolve(fileName).normalize();

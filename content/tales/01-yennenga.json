@@ -1,7 +1,7 @@
 {
   "slug": "yennenga",
   "type": "legende",
-  "region": "centre-est",
+  "region": "nakambe",
   "place": "Tenkodogo",
   "coords": [
     11.78,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "yennenga-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -91,11 +92,12 @@
         "fr": "Il y a très longtemps, au royaume de Gambaga, vivait le roi Nédéga. Sa fille, Yennenga, était la plus habile cavalière du pays. Elle maniait la lance et l'arc mieux que bien des guerriers, et menait les troupes de son père à la victoire.",
         "en": "Long, long ago, in the kingdom of Gambaga, lived King Nedega. His daughter, Yennenga, was the most skilful rider in the land. She handled the spear and the bow better than many warriors, and led her father's troops to victory.",
         "moore": "Sẽn deng wʋsgo, Gambaga soolmẽ la rĩm a Nedega da be. A bi-pugl a ye, a Yennenga ra yaa karẽn-biis sẽn da tar minim n yɩɩd b taabã fãa tẽngã pʋgẽ. A ra zãada tãb-biis ne a zabdbã n yɩɩd sodaas wʋsg ye. La a kɩtame t'a ba wã sodaasã tõog zabrã.",
-        "dioula": "Wagatijan tɛmɛnin na, masacɛ Nedega tun be Gambaga mara la. A denmuso Yennenga tun ye sotigiba ye o jamana na. A ye taman ni kalan kɛ ka tɛmɛ kɛlɛden caaman kan. O kɔ, a y'a facɛ ka sɔrɔdasiw ɲɛminɛ k'u dɛmɛ u sera Ala ma.",
+        "dioula": "Wagatijan tɛmɛnin na, masacɛ Nedega tun be Gambaga mara la. A denmuso Yennenga tun ye sotigiba ye o jamana na. A ka taman ni kalan tun ka fisa ni kɛlɛden caaman ye. A y'a facɛ ka sɔrɔdasiw ɲɛminɛ ka se sɔrɔdasiw kan.",
         "fulfulde": "Wakkati ɗuɗɗum, wakkati ɗuɗɗi, nder laamorde Gambaga, Laamiiɗo Nedega jooɗii. Ɓiɗɗo maako, Yennenga, o ɗon moodi dow ko ɓuri annduki nder lesdi. O huutoraaki laami e kaɓirɗe ɓurɗi haani, o hoɗini konu baaba maako haa o heɓti jaalorgal."
       }
     },
     {
+      "id": "yennenga-p2",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -144,6 +146,7 @@
       }
     },
     {
+      "id": "yennenga-p3",
       "art": {
         "sky": "dusk",
         "ground": "savanna",
@@ -220,6 +223,7 @@
       }
     },
     {
+      "id": "yennenga-p4",
       "art": {
         "sky": "night",
         "ground": "forest",
@@ -260,6 +264,7 @@
       }
     },
     {
+      "id": "yennenga-p5",
       "art": {
         "sky": "dawn",
         "ground": "forest",
@@ -300,6 +305,7 @@
       }
     },
     {
+      "id": "yennenga-p6",
       "art": {
         "sky": "day",
         "ground": "village",

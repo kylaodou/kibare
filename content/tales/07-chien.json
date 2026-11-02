@@ -1,7 +1,7 @@
 {
   "slug": "pourquoi-le-chien-vit-avec-l-homme",
   "type": "conte",
-  "region": "centre-nord",
+  "region": "kuilse",
   "place": "Kongoussi",
   "coords": [
     13.33,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "pourquoi-le-chien-vit-avec-l-homme-p1",
       "art": {
         "sky": "night",
         "ground": "savanna",
@@ -94,6 +95,7 @@
       }
     },
     {
+      "id": "pourquoi-le-chien-vit-avec-l-homme-p2",
       "art": {
         "sky": "night",
         "ground": "savanna",
@@ -129,6 +131,7 @@
       }
     },
     {
+      "id": "pourquoi-le-chien-vit-avec-l-homme-p3",
       "art": {
         "sky": "night",
         "ground": "village",
@@ -217,6 +220,7 @@
       }
     },
     {
+      "id": "pourquoi-le-chien-vit-avec-l-homme-p4",
       "art": {
         "sky": "night",
         "ground": "village",
@@ -259,6 +263,7 @@
       }
     },
     {
+      "id": "pourquoi-le-chien-vit-avec-l-homme-p5",
       "art": {
         "sky": "night",
         "ground": "savanna",

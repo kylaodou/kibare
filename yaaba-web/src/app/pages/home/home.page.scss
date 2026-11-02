@@ -34,28 +34,37 @@ h1 {
   gap: 12px;
 }
 
+.numbers {
+  padding-block: clamp(32px, 5vw, 56px);
+}
+
 .stats {
   display: flex;
-  gap: clamp(24px, 5vw, 48px);
-  margin: 44px 0 0;
-  padding-top: 28px;
-  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(32px, 9vw, 120px);
+  margin: 0 auto;
+  text-align: center;
 
   div {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    min-width: 140px;
   }
   dt {
     font-family: var(--font-display);
-    font-size: 2.2rem;
-    font-weight: 600;
+    font-size: clamp(2.8rem, 6vw, 4rem);
+    font-weight: 800;
     line-height: 1;
+    color: var(--y-red);
+    font-variant-numeric: tabular-nums;
   }
   dd {
-    margin: 6px 0 0;
-    font-size: 0.86rem;
-    color: var(--text-3);
-    font-weight: 500;
+    margin: 10px 0 0;
+    font-size: 0.95rem;
+    color: var(--text-2);
+    font-weight: 600;
   }
 }
 
@@ -241,10 +250,6 @@ h1 {
 .step {
   position: relative;
   padding: 28px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-l);
-  border-top: 4px solid var(--y-ochre);
 
   h3 {
     margin: 20px 0 8px;
@@ -296,8 +301,15 @@ h1 {
 
 .tales-grid {
   display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+}
+
+/* 10 histoires : 2 rangées de 5 sur grand écran */
+@media (min-width: 1280px) {
+  .tales-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 /* ---------- carte ---------- */
@@ -341,18 +353,68 @@ h1 {
 
 .map-box {
   position: relative;
-  padding: clamp(16px, 3vw, 32px);
-  background: var(--surface);
+  height: clamp(380px, 42vw, 520px);
   border: 1px solid var(--border);
   border-radius: var(--radius-l);
+  overflow: hidden;
+  background: var(--surface-2);
+
+  app-map2d,
+  app-map3d {
+    position: absolute;
+    inset: 0;
+  }
+}
+
+.map-skel {
+  position: absolute;
+  inset: 0;
+}
+
+/* bascule 2D / 3D */
+.map-seg {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 500;
+  display: flex;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: var(--shadow-2);
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 34px;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-2);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+
+    &.on {
+      background: var(--y-red);
+      color: #fff;
+    }
+  }
 }
 
 .map-hint {
   position: absolute;
-  right: 20px;
-  bottom: 16px;
+  z-index: 500;
+  right: 14px;
+  bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: var(--shadow-2);
   font-size: 0.8rem;
-  color: var(--text-3);
+  color: var(--text-2);
 }
 
 /* ---------- langues ---------- */

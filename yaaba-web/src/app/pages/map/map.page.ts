@@ -5,7 +5,7 @@ import { SelectModule } from 'primeng/select';
 import { TooltipModule } from 'primeng/tooltip';
 import { DataService } from '../../core/data.service';
 import { I18nService, TranslatePipe, TxPipe } from '../../core/i18n.service';
-import { Tale, TaleType } from '../../core/models';
+import { MapLevel, Tale, TaleType } from '../../core/models';
 import { ProgressService } from '../../core/progress.service';
 import { SceneArtComponent } from '../../shared/art/scene-art.component';
 import { TYPE_ICON, taleText } from '../../shared/tale-card/tale-card.component';
@@ -33,6 +33,16 @@ export class MapPage {
   readonly region = input<string>();
   readonly conte = input<string>();
   readonly mode = input<MapMode>();
+  readonly niveau = input<MapLevel>();
+
+  /** niveau de détail affiché : régions par défaut */
+  readonly level = signal<MapLevel>('region');
+  readonly levels: { code: MapLevel; icon: string }[] = [
+    { code: 'region', icon: 'fa-layer-group' },
+    { code: 'province', icon: 'fa-vector-square' },
+    { code: 'commune', icon: 'fa-border-all' },
+    { code: 'city', icon: 'fa-city' },
+  ];
 
   readonly view = signal<MapMode>(this.initialMode());
   readonly selectedRegion = signal<string | null>(null);
@@ -97,6 +107,11 @@ export class MapPage {
       const c = this.conte();
       const m = this.mode();
       if (m === '2d' || m === '3d') this.view.set(m);
+      const n = this.niveau();
+      if (n && ['region', 'province', 'commune', 'city'].includes(n)) {
+        this.level.set(n);
+        this.data.loadLevel(n);
+      }
       if (c && this.data.tale(c)) {
         this.selectTale(c, false);
       } else if (r) {
@@ -171,12 +186,19 @@ export class MapPage {
     );
   }
 
+  setLevel(l: MapLevel) {
+    this.level.set(l);
+    this.data.loadLevel(l);
+    this.syncUrl();
+  }
+
   private syncUrl() {
     void this.router.navigate([], {
       queryParams: {
         region: this.selectedTale() ? null : this.selectedRegion(),
         conte: this.selectedTale(),
         mode: this.view(),
+        niveau: this.level() === 'region' ? null : this.level(),
       },
       replaceUrl: true,
     });

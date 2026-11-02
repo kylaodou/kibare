@@ -252,7 +252,7 @@
 
   input[type='search'] {
     height: 40px;
-    min-width: 240px;
+    min-width: min(320px, 100%);
     padding: 0 12px;
     border: 1px solid var(--border-strong);
     border-radius: 6px;
@@ -263,6 +263,108 @@
   .grow {
     flex: 1;
   }
+  .search {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    i {
+      position: absolute;
+      left: 12px;
+      color: var(--text-3);
+      pointer-events: none;
+    }
+    input[type='search'] {
+      padding-left: 36px;
+    }
+  }
+}
+
+.ib:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* p-table (PrimeNG) aux couleurs de KIBARE */
+.ktable {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface);
+  font-size: 0.9rem;
+
+  ::ng-deep {
+    .p-datatable-thead > tr > th {
+      padding: 12px 14px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      background: var(--surface);
+      border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+    }
+    .p-datatable-thead > tr > th.p-datatable-column-sorted {
+      color: var(--y-red);
+      background: var(--y-red-soft);
+    }
+    .p-datatable-tbody > tr > td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+      background: var(--surface);
+      color: var(--text);
+    }
+    .p-datatable-tbody > tr:hover > td {
+      background: var(--surface-2);
+    }
+    .p-paginator {
+      border-top: 1px solid var(--border);
+      border-radius: 0;
+      background: var(--surface);
+      flex-wrap: wrap;
+    }
+    .p-paginator-page.p-paginator-page-selected {
+      background: var(--y-red);
+      color: #fff;
+    }
+    .p-datatable-mask {
+      background: rgb(255 255 255 / 0.55);
+    }
+  }
+  .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .t-title {
+    font-weight: 700;
+  }
+  small {
+    color: var(--text-3);
+  }
+  .empty {
+    text-align: center;
+    padding: 36px 14px !important;
+    color: var(--text-3);
+  }
+  @media (max-width: 760px) {
+    /* message « aucun résultat » visible sans défiler horizontalement */
+    .empty {
+      position: sticky;
+      left: 0;
+      text-align: left;
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .tbl {
@@ -321,8 +423,8 @@
     color: var(--text);
   }
   &.ok:hover {
-    background: var(--y-green);
-    border-color: var(--y-green);
+    background: var(--y-red);
+    border-color: var(--y-red);
     color: #fff;
   }
   &.no:hover {

@@ -33,7 +33,11 @@ public class AudioTrack {
     private String contentType;
     private Long contributionId;
 
-    /** Un fichier par paragraphe, quand le conteur a enregistré séquence par séquence. */
+    /** Paragraphe (identifiant stable de la scène) lu par cette voix ; null = conte entier. */
+    @Column(length = 140)
+    private String sceneId;
+
+    /** Un fichier par paragraphe, quand le conteur a enregistré séquence par séquence (ancien format). */
     @Column(length = 4000)
     private String segments;
     private Instant createdAt = Instant.now();
@@ -57,6 +61,8 @@ public class AudioTrack {
     public String getContentType() { return contentType; }
     public Long getContributionId() { return contributionId; }
     public Instant getCreatedAt() { return createdAt; }
+    public String getSceneId() { return sceneId; }
+    public void setSceneId(String sceneId) { this.sceneId = sceneId; }
     public String getSegments() { return segments; }
     public void setSegments(String segments) { this.segments = segments; }
 }

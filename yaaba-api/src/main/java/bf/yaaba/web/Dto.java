@@ -36,14 +36,37 @@ public final class Dto {
             @Size(max = 400) String bio) {}
 
     public record UserView(long id, String name, String email, String role, String region, String language, String bio,
-                           boolean active, Instant createdAt) {
+                           boolean active, boolean emailVerified, boolean hasPassword, boolean google, Instant createdAt) {
         public static UserView of(User u) {
             return new UserView(u.getId(), u.getName(), u.getEmail(), u.getRole().name(), u.getRegion(), u.getLanguage(),
-                    u.getBio(), u.isActive(), u.getCreatedAt());
+                    u.getBio(), u.isActive(), u.isEmailVerified(), u.hasPassword(), u.getGoogleId() != null, u.getCreatedAt());
         }
     }
 
-    public record AuthView(String token, UserView user) {}
+    /** emailSent : à l'inscription, l'e-mail de vérification est-il parti ? (absent à la connexion) */
+    public record AuthView(String token, UserView user, Boolean emailSent) {}
+
+    /* ------------------------------------------ e-mail et mot de passe */
+
+    /** currentPassword : exigé seulement si le compte a déjà un mot de passe */
+    public record PasswordChangeRequest(@Size(max = 100) String currentPassword, @NotBlank @Size(min = 8, max = 100) String newPassword) {}
+
+    public record GoogleRequest(@NotBlank @Size(max = 4096) String credential) {}
+
+    public record GoogleConfigView(boolean enabled, String clientId) {}
+
+    public record TokenRequest(@NotBlank @Size(max = 200) String token) {}
+
+    public record ForgotRequest(@NotBlank @Email @Size(max = 120) String email) {}
+
+    public record VerifyCodeRequest(@NotBlank @Email @Size(max = 120) String email,
+                                    @NotBlank @Pattern(regexp = "[0-9]{6}", message = "Le code comporte 6 chiffres") String code) {}
+
+    public record ResetRequest(@NotBlank @Size(max = 200) String resetToken, @NotBlank @Size(min = 8, max = 100) String password) {}
+
+    public record MessageView(String message) {}
+
+    public record ResetTokenView(String resetToken, long expiresInSeconds) {}
 
     /** Contributeur affiché publiquement (sans e-mail). */
     public record ContributorView(long id, String name, String region, String language, String bio, long approved,
@@ -51,12 +74,22 @@ public final class Dto {
 
     /* ----------------------------------------------------------- contes */
 
-    public record AudioView(long id, String lang, String url, String narrator, List<String> segments) {
+    /** Voix publiée ; sceneId = paragraphe lu (null : conte entier, ancien format). */
+    public record AudioView(long id, String lang, String url, String narrator, String sceneId, List<String> segments, Instant createdAt) {
         public static AudioView of(AudioTrack t) {
             return new AudioView(t.getId(), t.getLang(), StorageService.mediaUrl(t.getFileName()), t.getNarrator(),
-                    segmentUrls(t.getSegments()));
+                    t.getSceneId(), segmentUrls(t.getSegments()), t.getCreatedAt());
         }
     }
+
+    /** Page de résultats calculée côté serveur ; counts : compteurs annexes (onglets). */
+    public record PageView<T>(List<T> items, long total, int page, int size, Map<String, Long> counts) {}
+
+    /** Option du sélecteur de contes. */
+    public record TaleOption(String slug, String title, String region) {}
+
+    /** Vidéo téléversée. */
+    public record MediaView(String url, String contentType, long size) {}
 
     /** « a.webm,b.webm » → URLs publiques, dans l'ordre des paragraphes. */
     static List<String> segmentUrls(String files) {
@@ -89,14 +122,27 @@ public final class Dto {
     public record ContributionView(
             long id, String kind, String taleSlug, String publishedSlug, String title, String region, String language,
             String taleType, String summary, String moral, String text, String audioUrl, List<String> segments, String status,
-            String reviewNote, Long userId, String authorName, String authorEmail, Instant createdAt, Instant reviewedAt) {
+            String reviewNote, Long userId, String authorName, String authorEmail, Instant createdAt, Instant reviewedAt,
+            List<RecordingView> recordings) {
         public static ContributionView of(Contribution c) {
+            return of(c, List.of());
+        }
+
+        public static ContributionView of(Contribution c, List<RecordingView> recordings) {
             return new ContributionView(c.getId(), c.getKind().name(), c.getTaleSlug(), c.getPublishedSlug(), c.getTitle(),
                     c.getRegion(), c.getLanguage(), c.getTaleType(), c.getSummary(), c.getMoral(), c.getText(),
                     StorageService.mediaUrl(c.getAudioFile()), segmentUrls(c.getSegmentFiles()), c.getStatus().name(),
-                    c.getReviewNote(), c.getUserId(), c.getAuthorName(), c.getAuthorEmail(), c.getCreatedAt(), c.getReviewedAt());
+                    c.getReviewNote(), c.getUserId(), c.getAuthorName(), c.getAuthorEmail(), c.getCreatedAt(), c.getReviewedAt(),
+                    recordings);
         }
     }
+
+    /**
+     * Enregistrement d'une contribution et le paragraphe qu'il lit.
+     * matchedBy : « scene » (identifiant enregistré), « order » (ancienne contribution, rapprochée par l'ordre)
+     * ou « none » (paragraphe introuvable ; text vaut alors null).
+     */
+    public record RecordingView(String url, String sceneId, Integer paragraph, String text, String matchedBy) {}
 
     /* ------------------------------------------------------ commentaires */
 

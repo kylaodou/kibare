@@ -7,23 +7,26 @@ const SCALE = [146.83, 174.61, 196.0, 220.0, 261.63, 293.66, 349.23, 392.0, 440.
 /**
  * Ambiance musicale propre à chaque région : enregistrements historiques libres de droits
  * (Exposition coloniale de 1931, collection Gallica/BnF ; balafon sénoufo CC BY 4.0).
- * Le Sahel, sans enregistrement libre disponible, garde la synthèse en direct.
+ * Le Liptako et le Soum (ex-Sahel), sans enregistrement libre disponible, garde la synthèse en direct.
  */
 const MUSIC_KEY = 'kibare.music';
 
 export const REGION_SOUND: Record<string, { file: string; label: string }> = {
-  centre: { file: 'mossi-ouisse', label: 'Flûtes ouissé et percussions mossi (1931)' },
-  'plateau-central': { file: 'mossi-konde', label: 'Luth kondé et chant mossi (1931)' },
-  nord: { file: 'mossi-lounga', label: 'Tambours lounga, chants pour le roi (1931)' },
-  'centre-nord': { file: 'mossi-teko', label: 'Chant de nostalgie avec kondé (1931)' },
-  'centre-ouest': { file: 'labour-tiefo', label: 'Chant de labour, sonnailles et percussions (1931)' },
-  'centre-est': { file: 'fete-tiefo', label: 'Chant de fête avec sonnailles (1931)' },
-  est: { file: 'rituel', label: 'Chant rituel avec sonnailles (1931)' },
-  'centre-sud': { file: 'kassena-flute', label: 'Petite flûte kassena (1931)' },
-  cascades: { file: 'balafon-senoufo', label: 'Balafon sénoufo' },
-  'hauts-bassins': { file: 'balafon-djembe', label: 'Balafon et djembé' },
-  'sud-ouest': { file: 'balafon-rythmes', label: 'Rythmes de balafon' },
-  'boucle-du-mouhoun': { file: 'balafon-trad', label: 'Balafon traditionnel' },
+  kadiogo: { file: 'mossi-ouisse', label: 'Flûtes ouissé et percussions mossi (1931)' },
+  oubri: { file: 'mossi-konde', label: 'Luth kondé et chant mossi (1931)' },
+  yaadga: { file: 'mossi-lounga', label: 'Tambours lounga, chants pour le roi (1931)' },
+  kuilse: { file: 'mossi-teko', label: 'Chant de nostalgie avec kondé (1931)' },
+  nando: { file: 'labour-tiefo', label: 'Chant de labour, sonnailles et percussions (1931)' },
+  nakambe: { file: 'fete-tiefo', label: 'Chant de fête avec sonnailles (1931)' },
+  goulmou: { file: 'rituel', label: 'Chant rituel avec sonnailles (1931)' },
+  tapoa: { file: 'rituel', label: 'Chant rituel avec sonnailles (1931)' },
+  sirba: { file: 'rituel', label: 'Chant rituel avec sonnailles (1931)' },
+  nazinon: { file: 'kassena-flute', label: 'Petite flûte kassena (1931)' },
+  tannounyan: { file: 'balafon-senoufo', label: 'Balafon sénoufo' },
+  guiriko: { file: 'balafon-djembe', label: 'Balafon et djembé' },
+  djoro: { file: 'balafon-rythmes', label: 'Rythmes de balafon' },
+  bankui: { file: 'balafon-trad', label: 'Balafon traditionnel' },
+  sourou: { file: 'balafon-trad', label: 'Balafon traditionnel' },
 };
 
 /**
@@ -51,24 +54,26 @@ export class AmbienceService {
   readonly credit = signal<string | null>(null);
 
   constructor() {
-    // musique activée par défaut : les navigateurs exigent un premier geste de l'utilisateur
+    // musique activée par défaut à chaque visite ; seul un « couper » pendant la visite est retenu
     let wanted = true;
     try {
-      wanted = localStorage.getItem(MUSIC_KEY) !== 'off';
+      wanted = sessionStorage.getItem(MUSIC_KEY) !== 'off';
     } catch {}
     if (!wanted) return;
-    const go = (e: Event) => {
-      window.removeEventListener('pointerdown', go);
-      window.removeEventListener('keydown', go);
-      // un clic sur un bouton de musique est traité par toggle()
-      if ((e.target as Element | null)?.closest?.('[data-music]')) return;
-      if (!this.userStopped) this.start();
+    this.start();
+    // si le navigateur bloque le son avant toute interaction, il démarre au premier geste
+    const unlock = () => {
+      window.removeEventListener('pointerdown', unlock, true);
+      window.removeEventListener('keydown', unlock, true);
+      window.removeEventListener('touchstart', unlock, true);
+      if (!this.playing()) return;
+      void this.ctx?.resume();
+      if (this.rec?.paused) void this.rec.play().then(() => this.fade(this.rec!, this.recVolume(), 1200)).catch(() => {});
     };
-    window.addEventListener('pointerdown', go);
-    window.addEventListener('keydown', go);
+    window.addEventListener('pointerdown', unlock, true);
+    window.addEventListener('keydown', unlock, true);
+    window.addEventListener('touchstart', unlock, true);
   }
-
-  private userStopped = false;
 
   setMood(sky: Sky) {
     this.mood = sky;
@@ -114,9 +119,8 @@ export class AmbienceService {
 
   toggle() {
     const on = !this.playing();
-    this.userStopped = !on;
     try {
-      localStorage.setItem(MUSIC_KEY, on ? 'on' : 'off');
+      sessionStorage.setItem(MUSIC_KEY, on ? 'on' : 'off');
     } catch {}
     on ? this.start() : this.stop();
   }

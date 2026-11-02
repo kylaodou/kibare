@@ -7,7 +7,7 @@
         <span class="chip chip-red"><i class="fa-solid {{ typeIcon[t.type] }}"></i> {{ 'type.' + t.type | t }}</span>
         <a class="chip" routerLink="/carte" [queryParams]="{ conte: t.slug }"><i class="fa-solid fa-location-dot"></i> {{ t.place }} · {{ region()?.name }}</a>
         <span class="chip chip-green"><i class="fa-solid fa-people-group"></i> {{ t.people || ('tale.community' | t) }}</span>
-        <span class="chip"><i class="fa-regular fa-clock"></i> {{ t.duration }} min · {{ 'tale.age' | t: { age: t.age } }}</span>
+        <span class="chip"><i class="fa-regular fa-clock"></i> {{ t.duration }} min</span>
       </div>
       <h1>{{ text()!.title }}</h1>
       @if (text()!.subtitle) {
@@ -32,8 +32,11 @@
           <span class="sz">{{ fontSize() }}</span>
           <button type="button" (click)="fontSize.set(fontSize() < 29 ? fontSize() + 2 : 29)" [attr.aria-label]="'tale.bigger' | t" [pTooltip]="'tale.bigger' | t" tooltipPosition="bottom"><span class="a2">A</span></button>
         </div>
-        <button type="button" class="ib" [class.on]="favorite()" (click)="progress.toggleFavorite(t.slug)" [attr.aria-label]="'card.fav' | t" [pTooltip]="(favorite() ? 'card.unfav' : 'card.fav') | t" tooltipPosition="bottom">
-          <i class="fa-heart" [class.fa-solid]="favorite()" [class.fa-regular]="!favorite()"></i>
+        <button type="button" class="ib heart" [class.on]="favorite()" (click)="toggleFav()" [attr.aria-label]="'card.fav' | t" [pTooltip]="(favorite() ? 'card.unfav' : 'card.fav') | t" tooltipPosition="bottom">
+          @for (k of [favBurst()]; track k) {
+            <i class="fa-heart" [class.fa-solid]="favorite()" [class.fa-regular]="!favorite()" [class.spin]="k > 0 && favorite()"></i>
+          }
+          <app-heart-burst [trigger]="favBurst()" />
         </button>
         <button type="button" class="ib" (click)="share()" [attr.aria-label]="'tale.share' | t" [pTooltip]="'tale.share' | t" tooltipPosition="bottom"><i class="fa-solid fa-share-nodes"></i></button>
         <button type="button" class="ib hide-sm" (click)="print()" [attr.aria-label]="'tale.print' | t" [pTooltip]="'tale.print' | t" tooltipPosition="bottom"><i class="fa-solid fa-print"></i></button>
@@ -47,9 +50,11 @@
     <aside class="visual">
       <div class="frame">
         @for (s of [current()!]; track active()) {
-          <app-scene-art class="art-in" [art]="s.art" [parallax]="true" [cinema]="active()" />
-          @if (playing() && caption()) {
-            <p class="caption" aria-hidden="true">{{ caption() }}</p>
+          @if (s.video) {
+            <video class="art-in scene-video" [src]="data.mediaUrl(s.video)" controls playsinline preload="metadata"
+              [attr.aria-label]="'Vidéo du paragraphe ' + (active() + 1)"></video>
+          } @else {
+            <app-scene-art class="art-in" [art]="s.art" [parallax]="true" [cinema]="active()" [focus]="focus()" />
           }
         }
         <span class="counter">{{ active() + 1 }} / {{ t.scenes.length }}</span>
@@ -71,7 +76,7 @@
         </div>
 
         @if (t.scenes[i].choice; as c) {
-          <div class="choice" [class.answered]="answers()[i] !== undefined">
+          <div class="card choice" [class.answered]="answers()[i] !== undefined">
             <span class="c-label"><i class="fa-solid fa-hand-pointer"></i> {{ 'tale.yourTurn' | t }}</span>
             <h3>{{ c.q | tx: textLang() }}</h3>
             <div class="c-opts">
@@ -114,8 +119,12 @@
           <app-quiz [items]="t.quiz" [lang]="textLang()" (done)="quizDone($event)" />
         }
         <div class="end-actions">
-          <button type="button" class="btn btn-ghost btn-sm" [class.liked]="liked()" (click)="like()">
-            <i class="fa-thumbs-up" [class.fa-solid]="liked()" [class.fa-regular]="!liked()"></i> {{ 'tale.like' | t }}
+          <button type="button" class="btn btn-ghost btn-sm heart" [class.liked]="liked()" (click)="like()">
+            @for (k of [likeBurst()]; track k) {
+              <i class="fa-heart" [class.fa-solid]="liked()" [class.fa-regular]="!liked()" [class.spin]="k > 0 && liked()"></i>
+            }
+            <app-heart-burst [trigger]="likeBurst()" />
+            {{ 'tale.like' | t }}
             @if (t.likes) {
               <span class="cnt">{{ t.likes }}</span>
             }
@@ -149,11 +158,11 @@
               }
             </ul>
           }
-          @if (tracks().length) {
+          @if (voices().length) {
             <h3 class="mt"><i class="fa-solid fa-microphone-lines"></i> {{ 'tale.voices' | t }}</h3>
             <ul class="contribs">
-              @for (a of tracks(); track a.id) {
-                <li><strong>{{ a.narrator }}</strong> · {{ langName(a.lang) }}</li>
+              @for (v of voices(); track v.key) {
+                <li><strong>{{ v.narrator }}</strong> · {{ langName(v.lang) }}</li>
               }
             </ul>
           }
@@ -184,6 +193,13 @@
       <div class="pl-info">
         @if (track(); as tr) {
           <strong><i class="fa-solid fa-microphone-lines"></i> {{ langName(tr.lang) }} — {{ tr.narrator }}</strong>
+        } @else if (activeVoice(); as av) {
+          <strong>
+            @if (playing()) {
+              <span class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            }
+            <i class="fa-solid fa-microphone-lines"></i> {{ langName(av.voice.lang) }} — {{ av.voice.narrator }}
+          </strong>
         } @else if (canPlay()) {
           <strong>
             @if (playing()) {
@@ -196,11 +212,12 @@
         }
         <small>{{ 'tale.sceneOf' | t: { n: active() + 1, total: t.scenes.length } }}</small>
       </div>
-      @if (tracks().length) {
-        <select class="voice-sel" [ngModel]="track()?.id ?? 0" (ngModelChange)="pickTrack($event)" [attr.aria-label]="'tale.voices' | t">
-          <option [value]="0">{{ 'tale.textVoice' | t }}</option>
-          @for (a of tracks(); track a.id) {
-            <option [value]="a.id">{{ langName(a.lang) }} — {{ a.narrator }}</option>
+      @if (voices().length) {
+        <select class="voice-sel" [ngModel]="voiceChoice()" (ngModelChange)="pickVoice($event)" [attr.aria-label]="'tale.voices' | t">
+          <option value="auto">Voix des conteurs (automatique)</option>
+          <option value="text">{{ 'tale.textVoice' | t }}</option>
+          @for (v of voices(); track v.key) {
+            <option [value]="v.key">{{ langName(v.lang) }} — {{ v.narrator }}{{ v.whole ? '' : ' (' + coverage(v) + '/' + t.scenes.length + ' §)' }}</option>
           }
         </select>
       }
@@ -241,6 +258,8 @@
       </div>
     }
   </p-popover>
+} @else if (!data.ready()) {
+  <section class="container sk-reader"><app-skeleton kind="reader" [count]="3" /></section>
 } @else {
   <section class="container missing">
     <i class="fa-solid fa-book-open"></i>

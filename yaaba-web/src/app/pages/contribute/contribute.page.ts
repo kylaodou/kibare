@@ -1,4 +1,6 @@
-import { Component, computed, effect, inject, input, signal } from '@angular/core';
+import { Component, DestroyRef, computed, effect, inject, input, signal } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Subject, debounceTime, distinctUntilChanged, switchMap, catchError, of } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { MessageService } from 'primeng/api';
@@ -8,7 +10,7 @@ import { TextareaModule } from 'primeng/textarea';
 import { AuthService } from '../../core/auth.service';
 import { DataService } from '../../core/data.service';
 import { I18nService, TranslatePipe } from '../../core/i18n.service';
-import { ContributionPayload, TaleType } from '../../core/models';
+import { ContributionPayload, TaleOption, TaleType } from '../../core/models';
 import { SceneArtComponent } from '../../shared/art/scene-art.component';
 import { taleText } from '../../shared/tale-card/tale-card.component';
 import { RecorderComponent } from './recorder.component';
@@ -51,9 +53,23 @@ export class ContributePage {
 
   readonly stepKeys = ['contrib.s1', 'contrib.s2', 'contrib.s3', 'contrib.s4'];
 
-  readonly taleOptions = computed(() =>
-    this.data.tales().map((t) => ({ label: taleText(t, this.i18n.lang()).title, value: t.slug })),
-  );
+  /** sélecteur de contes : recherche côté serveur et chargement progressif (20 par page) */
+  private optionItems = signal<TaleOption[]>([]);
+  readonly optTotal = signal(0);
+  readonly optLoading = signal(false);
+  private optQuery = '';
+  private optPage = 0;
+  private optSearch$ = new Subject<string>();
+  readonly taleOptions = computed(() => {
+    const items = this.optionItems().map((o) => ({ label: o.title, value: o.slug, region: this.data.regionMap().get(o.region)?.name ?? '' }));
+    // conte présélectionné (lien « prêter ma voix ») absent de la page courante : ajouté en tête
+    const sel = this.taleSlug();
+    const t = sel ? this.data.tale(sel) : undefined;
+    if (sel && t && !items.some((i) => i.value === sel))
+      items.unshift({ label: taleText(t, 'fr').title, value: sel, region: this.data.regionMap().get(t.region)?.name ?? '' });
+    return items;
+  });
+  readonly optMore = computed(() => this.optionItems().length < this.optTotal());
   readonly langOptions = computed(() =>
     this.data.languages().map((l) => ({ label: `${l.name} (${l.native})`, value: l.code })),
   );
@@ -93,6 +109,25 @@ export class ContributePage {
   });
 
   constructor() {
+    this.optSearch$
+      .pipe(
+        debounceTime(300),
+        distinctUntilChanged(),
+        switchMap((q) => {
+          this.optLoading.set(true);
+          this.optQuery = q;
+          this.optPage = 0;
+          return this.data.taleOptions(q).pipe(catchError(() => of(null)));
+        }),
+        takeUntilDestroyed(inject(DestroyRef)),
+      )
+      .subscribe((r) => {
+        this.optLoading.set(false);
+        if (!r) return;
+        this.optionItems.set(r.items);
+        this.optTotal.set(r.total);
+      });
+    this.optSearch$.next('');
     // nouveau conte choisi : autant d'emplacements que de paragraphes
     effect(() => {
       const n = this.tale()?.scenes.length ?? 0;
@@ -107,6 +142,24 @@ export class ContributePage {
         this.step.set(1);
       }
       if (l) this.language.set(l);
+    });
+  }
+
+  searchTales(q: string) {
+    this.optSearch$.next(q ?? '');
+  }
+
+  moreTales() {
+    if (this.optLoading()) return;
+    this.optLoading.set(true);
+    this.data.taleOptions(this.optQuery, this.optPage + 1).subscribe({
+      next: (r) => {
+        this.optPage = r.page;
+        this.optionItems.update((l) => [...l, ...r.items.filter((x) => !l.some((y) => y.slug === x.slug))]);
+        this.optTotal.set(r.total);
+        this.optLoading.set(false);
+      },
+      error: () => this.optLoading.set(false),
     });
   }
 
@@ -145,7 +198,14 @@ export class ContributePage {
       consent: this.consent(),
     };
     this.sending.set(true);
-    const parts = this.kind() === 'voice' ? (this.segments().filter(Boolean) as Blob[]) : [];
+    // chaque enregistrement part avec l'identifiant réel de son paragraphe (jamais la seule position)
+    const scenes = t?.scenes ?? [];
+    const parts =
+      this.kind() === 'voice'
+        ? this.segments()
+            .map((blob, i) => ({ blob, sceneId: scenes[i]?.id }))
+            .filter((p): p is { blob: Blob; sceneId: string } => !!p.blob && !!p.sceneId)
+        : [];
     this.data.contribute(payload, this.kind() === 'story' ? (this.audio() ?? undefined) : undefined, parts).subscribe({
       next: () => {
         this.sending.set(false);
@@ -178,7 +238,7 @@ export class ContributePage {
       { k: 'baobab', x: 20, y: 26 },
       { k: 'woman-up', x: 46 },
       { k: 'child-up', x: 56, c: '#D62828' },
-      { k: 'man-up', x: 66, c: '#00894A' },
+      { k: 'man-up', x: 66, c: '#C9822B' },
       { k: 'drum', x: 76 },
     ],
   };

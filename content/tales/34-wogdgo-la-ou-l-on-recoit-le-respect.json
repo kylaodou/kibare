@@ -1,0 +1,343 @@
+{
+  "slug": "wogdgo-la-ou-l-on-recoit-le-respect",
+  "type": "legende",
+  "region": "kadiogo",
+  "place": "Ouagadougou",
+  "coords": [
+    12.37,
+    -1.52
+  ],
+  "people": "Mossi",
+  "language": "moore",
+  "duration": 5,
+  "age": 8,
+  "featured": true,
+  "cover": 3,
+  "tags": [
+    "fondation",
+    "royaume",
+    "respect",
+    "histoire"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Wogdgo, là où l'on reçoit le respect",
+      "subtitle": "La naissance de Ouagadougou",
+      "summary": "Le village s'appelait Kumbee-Tenga et ses habitants vivaient dans la peur. Un jeune chef mossi, Oubri, petit-fils de Ouédraogo, change son destin et son nom.",
+      "moral": "Le respect se gagne par la protection qu'on offre aux autres, non par la peur qu'on inspire."
+    },
+    "en": {
+      "title": "Wogdgo, Where Respect Is Received",
+      "subtitle": "The birth of Ouagadougou",
+      "summary": "The village was called Kumbee-Tenga and its people lived in fear. A young Mossi chief, Oubri, grandson of Ouédraogo, changed its fate and its name.",
+      "moral": "Respect is earned by the protection you give others, not by the fear you inspire."
+    },
+    "moore": {
+      "title": "Wogdgo, zĩig ning b sẽn waoogd nebã",
+      "subtitle": "Ouagadougou rogmã",
+      "summary": "Tẽnga yʋʋr da yaa Kumbee-Tenga, la nebã ra zoe n vɩ be. A Oubri sẽn yaa a Ouédraogo bi-bɩɩg n da wa be Mossi wã, kɩtame tɩ b toeem a yʋʋrã.",
+      "moral": "D sã n get nebã tɩ b waoogd-do, yaa ne koglg ning d sẽn kõt-b la d segd n tall-ba."
+    },
+    "dioula": {
+      "title": "Wagdgo, yɔrɔ min na mɔgɔw b'u bonya",
+      "subtitle": "Ouagadougou ka wagati la",
+      "summary": "Kumbee-Tenga tɔgɔ tun be dugu nin na ani mɔgɔw tun siranna. Mossi kuntigi kanbele dɔ, min tɔgɔ ko Oubri ani a tun ye Ouédraogo mamaden ye. Ale lo y'a ka koo yɛlɛma ani k'a tɔgɔ yɛlɛma.",
+      "moral": "I be mɔgɔ minw latanga, olu lo b'i bonya."
+    },
+    "fulfulde": {
+      "title": "Wogdgo, To Hande Ɗe Laamuɓe Ɓooyta",
+      "subtitle": "Ɓamtaare Ouagadougou",
+      "summary": "Duule nden nodditii Kumbee-Tenga, yimɓe maako boo ɗon kulol. Luttuɗo Mossi, Oubri, ɓii Ouédraogo, wayliti ko o waɗi e innde maako.",
+      "moral": "Ngam hakkilantaaku, ɗum ɓeydaaki ngam kulol ngol on ɗon hokkata yimɓe feere, naa ngam hulɗum ngal on ɗon kollata."
+    }
+  },
+  "scenes": [
+    {
+      "id": "wogdgo-la-ou-l-on-recoit-le-respect-p1",
+      "art": {
+        "sky": "dawn",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 240
+          },
+          {
+            "k": "hut",
+            "x": 26,
+            "y": 26
+          },
+          {
+            "k": "hut",
+            "x": 72,
+            "y": 30,
+            "s": 0.8
+          },
+          {
+            "k": "man-talk",
+            "x": 44,
+            "c": "#7C3109"
+          },
+          {
+            "k": "woman",
+            "x": 56
+          }
+        ]
+      },
+      "text": {
+        "fr": "Il y a très longtemps, au cœur du plateau, se trouvait un village que l'on appelait Kumbee-Tenga. Les Yonyonsé, qui y vivaient, étaient sans cesse inquiétés par les Ninsi, plus puissants qu'eux. Personne ne dormait tranquille.",
+        "en": "A very long time ago, in the heart of the plateau, there was a village called Kumbee-Tenga. The Yonyonsé who lived there were constantly troubled by the Ninsi, who were stronger than they were. No one slept in peace.",
+        "moore": "Yʋʋm wʋsg sẽn looge, tẽn-kʋdgẽ wã pʋgẽ, tẽng a ye n da be tɩ b boond t'a Kumbee-Tenga. Yonyonsé rãmbã sẽn da be be wã ra namsd-b lame, bala ninsi rãmb n yɩɩd bãmb wʋsgo. Ned baa a yen ra pa gãe laafɩ ye.",
+        "dioula": "Wagatijan tɛmɛnin na, kumbe-tenga dugu dɔ tun be yen. Yonyonsé minw tun be yen, ninsiw tun b'u tɔɔrɔ tuma bɛɛ. U fanga tun ka bon n'u ta ye. Mɔgɔ si ma la hɛrɛ la.",
+        "fulfulde": "Wakkati ɗuɗɗi, nder ɓernde plateau, woodi gariiri biyeteeɗo Kumbee-Tenga. Yonyonsé'en jooɗiiɓe ton ɗon ɓeyda hawtaago bee Ninsi, ɓe ɓuri maɓɓe sembe. Walaa gooduɗo ɗaanii nder jam."
+      }
+    },
+    {
+      "id": "wogdgo-la-ou-l-on-recoit-le-respect-p2",
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "rider",
+            "x": 30
+          },
+          {
+            "k": "horse",
+            "x": 46,
+            "s": 0.9
+          },
+          {
+            "k": "king",
+            "x": 64,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "acacia",
+            "x": 88,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un jour arriva Oubri, fils de Zoungrana et petit-fils de Ouédraogo, l'enfant de la princesse Yennenga. Il venait de Tenkodogo avec ses cavaliers. Les anciens du village allèrent à sa rencontre et lui demandèrent sa protection.",
+        "en": "One day Oubri arrived, son of Zoungrana and grandson of Ouédraogo, the child of Princess Yennenga. He came from Tenkodogo with his horsemen. The village elders went to meet him and asked for his protection.",
+        "moore": "Daar a ye, Oubri waa be. A Zoungrana biiga la Ouédraogo yaab sẽn yaa Prinsɛs Yennenga biig n wa be. A yii Tenkodogo ne a zãmb dãmbã. Tẽngã kãsem dãmbã kẽngame n tɩ yã-a la b kos t'a kogl-a.",
+        "dioula": "Loon dɔ, Oubri nana Zoungrana dencɛ ani Ouédraogo mamaden, min ye Prinsesse Yennenga deen ye. A bɔra Tenkodogo n'a ka sotigiw ye. Dugu cɛkɔrɔbaw tagara a kunbɛn ani u y'a ɲini a fɛ ko a k'u tanga.",
+        "fulfulde": "Go'o nyalnde Oubri wari, ɓiɗɗo Zoungrana e ɓii Ouédraogo, suka debbo Princess Yennenga. O wari diga Tenkodogo bee hawrotooɓe maako. Mawɓe gariiri ɓe njahi haa ɓe ndaari mo ngam o ɗowtana."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que doit faire Oubri ?",
+          "en": "What should Oubri do?",
+          "moore": "Bõe la a Oubri segd n maane?",
+          "dioula": "Oubri ka kan ka mun lo kɛ do?",
+          "fulfulde": "Ko Oubri waɗi?"
+        },
+        "options": [
+          {
+            "fr": "Protéger le village",
+            "en": "Protect the village",
+            "moore": "Gũus-y tẽn-kãng yelle.",
+            "dioula": "I ka dugu tanga",
+            "fulfulde": "Hakkilana wuro ngoo"
+          },
+          {
+            "fr": "Repartir chez lui",
+            "en": "Go back home",
+            "moore": "D leb n kẽng d zagsẽ.",
+            "dioula": "I ka kɔsegi soo.",
+            "fulfulde": "Wota wuro maaɗa."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Oubri promit de défendre ceux qui l'avaient accueilli…",
+          "en": "Oubri promised to defend those who had welcomed him…",
+          "moore": "A Oubri pʋlmame tɩ b na n kogla neb nins sẽn deeg-a wã.",
+          "dioula": "Oubri y'a daa di ko a bena mɔgɔ minw ladon, ale bena olu lafasa.",
+          "fulfulde": "Oubri waɗi alkawal ngam hisna ɓe njaɓani mo..."
+        }
+      }
+    },
+    {
+      "id": "wogdgo-la-ou-l-on-recoit-le-respect-p3",
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "rider",
+            "x": 24
+          },
+          {
+            "k": "horse-run",
+            "x": 40,
+            "s": 0.9
+          },
+          {
+            "k": "spear",
+            "x": 58
+          },
+          {
+            "k": "man-up",
+            "x": 70,
+            "c": "#7C3109"
+          },
+          {
+            "k": "cloud",
+            "x": 80,
+            "y": 270
+          }
+        ]
+      },
+      "text": {
+        "fr": "Oubri et ses compagnons affrontèrent les Ninsi et les éloignèrent du village. Pour la première fois depuis longtemps, les enfants purent jouer sans crainte et les femmes aller au marigot sans se cacher.",
+        "en": "Oubri and his companions confronted the Ninsi and drove them away from the village. For the first time in a long while, children could play without fear and women could go to the stream without hiding.",
+        "moore": "A Oubri ne a tũud-n-taasã wa n zab ne ninsi wã, la b dig-b lame. Sẽn sɩng ne yʋʋm wʋsg pʋgẽ, yaa pipi naoor tɩ kom-bɩɩsã ra tõe n yɩɩl b mensã bala. La pagb me ra tõe n kẽnga koomẽ wã n pa solg ye.",
+        "dioula": "Oubri n'a ka jɛnɲɔgɔnw ye Ninsiw kɛlɛ ani k'u gwɛn ka bɔ dugu kɔnɔ. O wagati la, a tun tora ka tɛmɛ sanga ni wagati bɛɛ kan. Denmisɛnw tun be se ka tulogwɛlɛya kɛ ani musow tun tɛ se k'u yɛrɛ dogo yen.",
+        "fulfulde": "Oubri e bandiraaɓe maako ɓe hawti bee Ninsi'en ɓe ɗon njahi nder gariiri. Ngam arande nder wakkati ɗuɗɗum, suka'en mbaawnoo huwugo ngam hulɓuki e rewɓe boo mbaawnoo yahugo to ndiyam ɓoyma."
+      }
+    },
+    {
+      "id": "wogdgo-la-ou-l-on-recoit-le-respect-p4",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "palace",
+            "x": 50,
+            "y": 34,
+            "s": 0.9
+          },
+          {
+            "k": "king-talk",
+            "x": 30,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "man",
+            "x": 66
+          },
+          {
+            "k": "woman-up",
+            "x": 76
+          },
+          {
+            "k": "drum",
+            "x": 14
+          }
+        ]
+      },
+      "text": {
+        "fr": "On donna au lieu un nouveau nom : Wogdgo, « là où l'on reçoit l'honneur et le respect ». Avec le temps, les Français l'écrivirent Ouagadougou. Aujourd'hui encore, c'est la capitale du pays et la cour du Moogho Naaba, héritier d'Oubri.",
+        "en": "The place was given a new name: Wogdgo, \"where honour and respect are received\". In time the French wrote it Ouagadougou. To this day it is the country's capital and the court of the Moogho Naaba, Oubri's heir.",
+        "moore": "B pʋdga zĩigã yʋʋr a ye: Wogdgo, sẽn dat n yeel tɩ \"b waoogda zĩ-kãng la b waoogd-a\". La wakat n wa ta, Frans nebã gʋls-a lame tɩ Ouagadougou. Hal tɩ ta rũndã, yaa Moogho Naaba sẽn ya Oubri pʋɩɩr tẽnga tẽn-kãsengã la a bʋʋdã.",
+        "dioula": "O yɔrɔ tɔgɔ kura dira o ma: Wogdgo, \"min be bonya la mɔgɔw kan ani k'u bonya\". Wagati dɔ nana se, Faransikaw y'o tɔgɔ sɛbɛ ko Ouagadougou. A kɛra jamana ka duguba ye ani Moogho Naaba, Oubri ka cɛɛn lo.",
+        "fulfulde": "nokkuure nden hokki innde kesum: Wogdgo, \"nde teddungal e mawninki ɗon heɓan\". Wakkati maajum Farayse'en winndi ɗum Ouagadougou. Haa hande ɗum laamorgo lesdi nden e suudu Moogho Naaba, mo Oubri mari."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Comment s'appelait le village avant Oubri ?",
+        "en": "What was the village called before Oubri?",
+        "moore": "Bõe la b ra boond tẽn-kãng n deng a Oubri?",
+        "dioula": "O dugu tun be wele cogo di sani Oubri ka na?",
+        "fulfulde": "No wuro ndu noddetee yeeso Oubri?"
+      },
+      "options": [
+        {
+          "fr": "Kumbee-Tenga",
+          "en": "Kumbee-Tenga",
+          "moore": "Kumbee-Tenga",
+          "dioula": "Kumbee-Tenga",
+          "fulfulde": "Kumbee-Tenga"
+        },
+        {
+          "fr": "Tenkodogo",
+          "en": "Tenkodogo",
+          "moore": "Tenkodogo",
+          "dioula": "Tenkodogo",
+          "fulfulde": "Tenkodogo"
+        },
+        {
+          "fr": "Gambaga",
+          "en": "Gambaga",
+          "moore": "Gambaga",
+          "dioula": "Gambaga",
+          "fulfulde": "Gambaga"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que veut dire Wogdgo ?",
+        "en": "What does Wogdgo mean?",
+        "moore": "Bõe la Wogdgo rat n yeel?",
+        "dioula": "Wogdgo kɔrɔ ko di?",
+        "fulfulde": "Ko Wogdgo yiɗi wi'ugo?"
+      },
+      "options": [
+        {
+          "fr": "Là où l'on reçoit le respect",
+          "en": "Where respect is received",
+          "moore": "Sã n yaa ne waoogre",
+          "dioula": "Ni bonya be sɔrɔ yɔrɔ min na",
+          "fulfulde": "To ɗum jaɓii"
+        },
+        {
+          "fr": "La grande rivière",
+          "en": "The great river",
+          "moore": "Ko-kãsengã sẽn yaa kãseng n yɩɩd",
+          "dioula": "Jiiba nin be tɛmɛ",
+          "fulfulde": "Lodo mawnde"
+        },
+        {
+          "fr": "La terre rouge",
+          "en": "The red earth",
+          "moore": "Tẽngã sẽn yaa miuugã",
+          "dioula": "Dugukolo bilenman",
+          "fulfulde": "Luttuɗum lesdi nduumiiɗo"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Moogho Naaba",
+      "lang": "moore",
+      "def": {
+        "fr": "Roi des Mossi de Ouagadougou, « chef du monde mossi ».",
+        "en": "King of the Mossi of Ouagadougou, \"chief of the Mossi world\".",
+        "moore": "A yaa Mozi wã rĩma, la a yaa \"Mozi dũniyã taoor soaba\".",
+        "dioula": "Ouagadougou dugu ka Mozi mara masacɛ, \"Mozi mara kuntigi\".",
+        "fulfulde": "Laamiiɗo Mossi nder Ouagadougou, \"laamu duuniyaaru Mossi\"."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Tradition orale mossi sur la fondation de Ouagadougou par Naaba Oubri (Kumbee-Tenga devenu Wogodogo), rapportée notamment par Sidwaya et les historiques des royaumes mossi. Les dates varient selon les sources. Mise en récit libre.",
+    "en": "Mossi oral tradition on the founding of Ouagadougou by Naaba Oubri (Kumbee-Tenga renamed Wogodogo), reported by Sidwaya and histories of the Mossi kingdoms. Dates vary between sources. Free retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

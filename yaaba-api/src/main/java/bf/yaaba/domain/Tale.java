@@ -33,6 +33,10 @@ public class Tale {
     @Column(length = 30)
     private String language;
 
+    /** titre français, en colonne pour la recherche côté serveur (le contenu complet reste dans content) */
+    @Column(length = 200)
+    private String title;
+
     private double latitude;
     private double longitude;
     private int duration;
@@ -68,6 +72,8 @@ public class Tale {
     public String getPeople() { return people; }
     public void setPeople(String people) { this.people = people; }
     public String getLanguage() { return language; }
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
     public void setLanguage(String language) { this.language = language; }
     public double getLatitude() { return latitude; }
     public void setLatitude(double latitude) { this.latitude = latitude; }

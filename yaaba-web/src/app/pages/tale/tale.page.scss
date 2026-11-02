@@ -170,33 +170,17 @@
   border: 6px solid var(--surface);
   outline: 1px solid var(--border);
 
-  app-scene-art {
+  app-scene-art,
+  .scene-video {
     position: absolute;
     inset: 0;
   }
-
-  /* sous-titres façon film pendant la narration */
-  .caption {
-    position: absolute;
-    left: 50%;
-    bottom: 16px;
-    transform: translateX(-50%);
-    width: max-content;
-    max-width: calc(100% - 40px);
-    margin: 0;
-    padding: 8px 14px;
-    border-radius: var(--radius-s);
-    background: rgb(30 22 17 / 0.82);
-    color: #fff;
-    font-size: 1rem;
-    line-height: 1.45;
-    text-align: center;
-    animation: caption-in 0.35s var(--ease);
+  .scene-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #000;
   }
-}
-
-@keyframes caption-in {
-  from { opacity: 0; transform: translate(-50%, 6px); }
 }
 
 .art-in {
@@ -308,9 +292,6 @@
 .choice {
   margin: 18px 0 18px 18px;
   padding: 18px;
-  border-radius: 8px;
-  background: var(--surface-2);
-  border-top: 4px solid var(--y-yellow);
   font-size: 1rem;
 
   h3 {
@@ -630,7 +611,33 @@
   background: var(--surface);
   color: var(--text);
   @media (max-width: 640px) {
-    display: none;
+    max-width: 112px;
+    padding: 6px 4px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .player-inner {
+    gap: 4px;
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+  }
+  .pl-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .pl-play {
+    width: 46px;
+    height: 46px;
+  }
+  .pl-info {
+    padding-inline: 4px;
+    strong {
+      font-size: 0.8rem;
+    }
+    small {
+      display: none;
+    }
   }
 }
 
@@ -773,4 +780,29 @@
     color: #000;
     border: 0;
   }
+}
+
+.sk-reader {
+  padding-block: 32px 64px;
+}
+
+/* « j'aime » : le cœur tourne et des petits cœurs jaillissent */
+.heart {
+  position: relative;
+  overflow: visible;
+
+  .spin {
+    display: inline-block;
+    animation: heart-spin 0.7s cubic-bezier(0.3, 1.4, 0.5, 1);
+  }
+  &.liked i,
+  &.on i {
+    color: var(--y-red);
+  }
+}
+
+@keyframes heart-spin {
+  0% { transform: rotate(0) scale(1); }
+  50% { transform: rotate(200deg) scale(1.4); }
+  100% { transform: rotate(360deg) scale(1); }
 }

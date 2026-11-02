@@ -80,7 +80,7 @@ const CREDITS: { t: L; items: L[] }[] = [
   {
     t: { fr: 'Cartes', en: 'Maps' },
     items: [
-      { fr: 'Limites administratives : geoBoundaries (Banque mondiale), licence CC BY 4.0.', en: 'Administrative boundaries: geoBoundaries (World Bank), CC BY 4.0 licence.' },
+      { fr: 'Découpage de juillet 2025 (17 régions, 47 provinces, Conseil des ministres du 2 juillet 2025) ; limites des provinces : geoBoundaries (CC BY 4.0) ; communes : Institut Géographique du Burkina 2020, via HDX (CC BY 3.0 IGO).', en: 'July 2025 division (17 regions, 47 provinces, Council of Ministers of 2 July 2025); province boundaries: geoBoundaries (CC BY 4.0); communes: Institut Géographique du Burkina 2020, via HDX (CC BY 3.0 IGO).' },
       { fr: 'Fonds de carte 2D : © Esri, HERE, Garmin, © contributeurs OpenStreetMap.', en: '2D basemap: © Esri, HERE, Garmin, © OpenStreetMap contributors.' },
     ],
   },
@@ -120,7 +120,7 @@ const CREDITS: { t: L; items: L[] }[] = [
 
       <div class="pillars">
         @for (p of pillars; track p.icon) {
-          <article class="pillar">
+          <article class="card pillar">
             <span class="p-ico"><i class="fa-solid {{ p.icon }}"></i></span>
             <h3>{{ p.t[lang()] }}</h3>
             <p>{{ p.d[lang()] }}</p>
@@ -129,7 +129,7 @@ const CREDITS: { t: L; items: L[] }[] = [
       </div>
 
       <div class="two">
-        <article class="block words">
+        <article class="card block words">
           <h3><i class="fa-solid fa-book-open"></i> {{ c().words }}</h3>
           <dl>
             @for (w of words; track w.w) {
@@ -140,7 +140,7 @@ const CREDITS: { t: L; items: L[] }[] = [
             }
           </dl>
         </article>
-        <article class="block cast">
+        <article class="card block cast">
           <h3><i class="fa-solid fa-paw"></i> {{ c().cast }}</h3>
           <ul>
             @for (a of cast; track a.icon) {
@@ -172,11 +172,11 @@ const CREDITS: { t: L; items: L[] }[] = [
     <!-- nom et logo -->
     <section class="section soft">
       <div class="container two">
-        <article class="block">
+        <article class="card block">
           <h2>{{ 'about.name.title' | t }}</h2>
           <p>{{ 'about.name.text' | t }}</p>
         </article>
-        <article class="block">
+        <article class="card block">
           <h2>{{ 'about.logo.title' | t }}</h2>
           <ul class="logo-parts">
             <li><span class="sw brown"></span>{{ 'about.logo.red' | t }}</li>
@@ -203,12 +203,12 @@ const CREDITS: { t: L; items: L[] }[] = [
       </div>
 
       <div class="two">
-        <article class="block">
+        <article class="card block">
           <h2>{{ 'about.method.title' | t }}</h2>
           <p>{{ 'about.method.text' | t }}</p>
           <p class="muted">{{ c().method }}</p>
         </article>
-        <article class="block">
+        <article class="card block">
           <h2>{{ 'about.tech.title' | t }}</h2>
           <ul class="tech">
             <li><i class="fa-brands fa-angular"></i> Angular 21 · PrimeNG 21</li>
@@ -223,7 +223,7 @@ const CREDITS: { t: L; items: L[] }[] = [
       <h2 class="sec">{{ 'about.credits.title' | t }}</h2>
       <div class="credits">
         @for (g of credits; track g.t.fr) {
-          <article class="block">
+          <article class="card block">
             <h3>{{ g.t[lang()] }}</h3>
             <ul>
               @for (i of g.items; track i.fr) {
@@ -250,13 +250,13 @@ const CREDITS: { t: L; items: L[] }[] = [
     .body { padding-block: 56px; }
     .intro { max-width: 720px; margin-bottom: 36px; }
     .pillars { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); margin-bottom: 28px; }
-    .pillar { padding: 24px; border: 1px solid var(--border); border-top: 4px solid var(--y-ochre); border-radius: var(--radius-l); background: var(--surface); }
+    .pillar { padding: 24px; }
     .pillar h3 { font-size: 1.1rem; margin: 16px 0 8px; }
     .pillar p { color: var(--text-2); font-size: 0.93rem; margin: 0; }
     .p-ico { width: 46px; height: 46px; border-radius: var(--radius); display: grid; place-items: center; background: var(--y-red-soft); color: var(--y-red-ink); font-size: 1.1rem; }
     .two { display: grid; gap: 20px; margin-bottom: 20px; }
     @media (min-width: 860px) { .two { grid-template-columns: 1fr 1fr; } }
-    .block { padding: 28px; border: 1px solid var(--border); border-radius: var(--radius-l); background: var(--surface); }
+    .block { padding: 28px; }
     .block h2 { font-size: 1.4rem; }
     .block h3 { font-size: 1.1rem; margin-bottom: 16px; }
     .block h3 i { color: var(--y-ochre); margin-right: 6px; }
@@ -281,7 +281,7 @@ const CREDITS: { t: L; items: L[] }[] = [
     .soft .two { margin-block: 0; }
     .logo-parts li { display: flex; align-items: center; gap: 12px; }
     .sw { flex: none; width: 22px; height: 22px; border-radius: var(--radius-s); }
-    .sw.brown { background: #7c3109; } .sw.green { background: #00894a; } .sw.yellow { background: #fbb117; } .sw.ochre { background: #e69135; }
+    .sw.brown { background: #7c3109; } .sw.green { background: #fbebd0; border: 1px solid var(--border); } .sw.yellow { background: #fbb117; } .sw.ochre { background: #e69135; }
     .tech i { width: 24px; color: var(--y-red); }
     .sec { font-size: 1.6rem; margin: 48px 0 20px; }
     .sec:first-child { margin-top: 0; }

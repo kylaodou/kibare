@@ -4,6 +4,15 @@ import Aura from '@primeuix/themes/aura';
 /** Thème PrimeNG aux couleurs du Burkina Faso : brun banco en couleur principale, aplats uniquement. */
 export const YaabaPreset = definePreset(Aura, {
   primitive: {
+    // aucune couleur verte dans l'interface : la palette « green » (succès) devient ocre
+    green: {
+      50: '#fdf6ec', 100: '#fbe9d0', 200: '#f6d0a0', 300: '#efb46d', 400: '#e69135',
+      500: '#c9771f', 600: '#b4581a', 700: '#8a4210', 800: '#6a3410', 900: '#4f270c', 950: '#2b1506',
+    },
+    emerald: {
+      50: '#fdf6ec', 100: '#fbe9d0', 200: '#f6d0a0', 300: '#efb46d', 400: '#e69135',
+      500: '#c9771f', 600: '#b4581a', 700: '#8a4210', 800: '#6a3410', 900: '#4f270c', 950: '#2b1506',
+    },
     borderRadius: { none: '0', xs: '4px', sm: '8px', md: '10px', lg: '14px', xl: '18px' },
   },
   semantic: {

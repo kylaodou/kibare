@@ -32,8 +32,8 @@ export interface Bar {
     </ul>
   `,
   styles: `
-    :host { display: block; --series: #b4581a; --good: #2f8f5b; --warning: #c98a00; --critical: #c0392b; }
-    :host-context(.app-dark) { --series: #e69135; --good: #4fbf83; --warning: #e7b43a; --critical: #ec6a5e; }
+    :host { display: block; --series: #b4581a; --good: #7c3109; --warning: #c98a00; --critical: #c0392b; }
+    :host-context(.app-dark) { --series: #e69135; --good: #f0a65a; --warning: #e7b43a; --critical: #ec6a5e; }
     .bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
     li { display: grid; grid-template-columns: minmax(90px, 38%) 1fr; align-items: center; gap: 12px; font-size: 0.86rem; }
     .lbl { color: var(--text-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

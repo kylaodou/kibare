@@ -1,0 +1,326 @@
+{
+  "slug": "le-pecheur-de-bagre-et-le-poisson-genie",
+  "type": "conte",
+  "region": "nakambe",
+  "place": "Bagré",
+  "coords": [
+    11.47,
+    -0.55
+  ],
+  "people": "Bissa",
+  "language": "bissa",
+  "duration": 4,
+  "age": 6,
+  "featured": false,
+  "cover": 1,
+  "tags": [
+    "pêche",
+    "génies",
+    "avidité",
+    "lac"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le pêcheur de Bagré et le poisson-génie",
+      "subtitle": "Le lac généreux",
+      "summary": "Sur le lac de Bagré, un pêcheur attrape un poisson qui parle et lui promet des prises abondantes, à une condition : ne jamais pêcher plus que ce dont il a besoin.",
+      "moral": "Le lac nourrit ceux qui le respectent ; l'avidité vide les filets."
+    },
+    "en": {
+      "title": "The Fisherman of Bagré and the Spirit Fish",
+      "subtitle": "The generous lake",
+      "summary": "On Lake Bagré, a fisherman catches a talking fish that promises him plentiful catches, on one condition: never fish more than he needs.",
+      "moral": "The lake feeds those who respect it; greed empties the nets."
+    },
+    "moore": {
+      "title": "Bagré zĩm-biisi la zĩm-bilã sẽn yaa sɩɩgã",
+      "subtitle": "Tãn-kãsengã sẽn yaa kãsenga",
+      "summary": "La koglg sẽn be Bagré ko-kãsengã zugã, zĩm-biis n paam zĩm a ye sẽn gomd ne yẽ wã, la b kãab-a tɩ b na n yõka zĩm wʋsgo. B sã n yeel t'a pa bao n yõkd zĩm wʋsg n yɩɩd a sẽn segdã, rẽnda a maan bũmb a yembre.",
+      "moral": "Ko-kãsengã rɩka neb nins sẽn waoogd-a wã, la tʋlsmã kɩtdame tɩ zĩm dãmbã lebg zaalem."
+    },
+    "dioula": {
+      "title": "Bagré ka mɔnnikɛla ni jigɛ farimanw",
+      "subtitle": "O kɔ, a ye danba dɔ kɛ.",
+      "summary": "Bagré baji daa la, mɔnnikɛla dɔ ye jigɛ kumabaga minɛ. A y'a fɔ a ye ko a bena jigɛ caaman sɔrɔ n'o tɛ: a kana jigɛ ka tɛmɛ a mako kan abada.",
+      "moral": "Mɔgɔ minw b'a bonya, o tigiw be dumuni sɔrɔ baji kɔnɔ."
+    },
+    "fulfulde": {
+      "title": "Limanko'en Bagré e Kalluɗum Ruuhu",
+      "subtitle": "Lodo mawnde",
+      "summary": "Nder maayo Bagré, mo lambiyanke wootere ɗon wolwugo ngam o hokkata maako limce ɗuuɗɗe, nder haala go'oto: to walaa ko ɓuri ɗum.",
+      "moral": "Laku ɗon nyaama yimɓe ɓe mawnina ɗum; ɓerɗe ina maɓɓata daande."
+    }
+  },
+  "scenes": [
+    {
+      "id": "le-pecheur-de-bagre-et-le-poisson-genie-p1",
+      "art": {
+        "sky": "dawn",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 240
+          },
+          {
+            "k": "man",
+            "x": 40,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "rope",
+            "x": 50
+          },
+          {
+            "k": "catfish",
+            "x": 62,
+            "y": 6
+          },
+          {
+            "k": "palm",
+            "x": 86,
+            "y": 30
+          }
+        ]
+      },
+      "text": {
+        "fr": "Sur les rives du grand lac de Bagré vivait Kassoum, un pêcheur bissa. Un matin, il remonta dans son filet un poisson aux écailles dorées, qui lui parla d'une voix douce : « Relâche-moi, et je te ferai riche. »",
+        "en": "On the shores of great Lake Bagré lived Kassoum, a Bissa fisherman. One morning he pulled up in his net a fish with golden scales, which spoke to him in a soft voice: \"Let me go, and I will make you rich.\"",
+        "moore": "B sẽn da be Bagré ko-kãsengã kʋɩlgã noore, b ra yaa zĩm-biis a ye. Daar a ye koabgẽ, a tall zĩm sẽn tar sãnem peelm n kẽes a pukrã pʋgẽ. A yeel-a lame ne koɛɛg sẽn yaa bʋgsem: \"Bɩ f bas maam tɩ m kẽng la mam na n kɩtame tɩ f lebg arzɛk soaba\".",
+        "dioula": "Kasum tun ye Bissa ka mɔnnikɛla dɔ ye. A tun be Bagré baji daa la. Loon dɔ sɔgɔma, a ye jigɛ dɔ sama ka bɔ a ka jɔɔ kɔnɔ ni sanu kilow ye. O jigɛ y'a fɔ a ye ni kaanba ye ko: \"A to n be taga, ne bena i kɛ nafolotigi ye\".",
+        "fulfulde": "Nder maayo Bagré mawɗo ɗon jooɗoto Kassoum, mo laamiijo ndiyam Bissa. Gooto subaka o ɓeydi nder kaɓɓirɗe maako, e ko'e mum ɗe ina woodi geese goɗɗe."
+      }
+    },
+    {
+      "id": "le-pecheur-de-bagre-et-le-poisson-genie-p2",
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "man-up",
+            "x": 40,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "catfish",
+            "x": 58,
+            "y": 6,
+            "s": 1.3
+          },
+          {
+            "k": "catfish",
+            "x": 70,
+            "y": 4
+          }
+        ]
+      },
+      "text": {
+        "fr": "Kassoum le relâcha. Le génie tint parole : chaque jour, son filet se remplissait. « Mais attention, dit le poisson, ne prends jamais plus que ce dont ta famille a besoin. »",
+        "en": "Kassoum let it go. The spirit kept its word: every day his net filled up. \"But beware,\" said the fish, \"never take more than your family needs.\"",
+        "moore": "A Kassoom bas-a lame. A sɩɩgã sakame n pids a goama, la daar fãa b pidsa yẽ zĩm-n-tɩrsã. Ko-yũudã yeelame: \"La gũus ne y zakã rãmb sẽn pa segd n dɩk bũmb ning b sẽn na n dɩ wã\".",
+        "dioula": "Kassoum y'a to o ma kɛ. O tun ka min fɔ, o le kɛra. Lon o lon a tun bɛ to k'a ta jɔw fa. O kɔ, a y'a fɔ ko: \"Aw k'aw yɛrɛ kɔlɔsi. Aw kana tɛmɛ aw ka denbaya mako kan\".",
+        "fulfulde": "Kassoum acci ɗum. Ruuhu ɗon tokkoto bolle maako, nyalawma fuu o keewi kaɓɓol muuɗum. \"Amma njogii\", sabi liɗɗi, \"taa' hocca ɓurɗum ko saare ma yiɗi\"."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que va faire Kassoum ?",
+          "en": "What will Kassoum do?",
+          "moore": "Bõe la a Kassoum na n maane?",
+          "dioula": "Kasum bena mun lo kɛ?",
+          "fulfulde": "Ko Kassoum waɗata?"
+        },
+        "options": [
+          {
+            "fr": "Respecter la règle",
+            "en": "Respect the rule",
+            "moore": "Sõng-y n sak sorã",
+            "dioula": "I ka sariya bonya",
+            "fulfulde": "Ɗaɓɓo ko woni sariyaaji"
+          },
+          {
+            "fr": "Pêcher toujours plus",
+            "en": "Fish more and more",
+            "moore": "Rɩk-y zĩm n paasdẽ",
+            "dioula": "Jigɛ caaman be na",
+            "fulfulde": "Fisi ɓeydi ɗuuɗugo"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Au début, Kassoum respecta la règle… puis un marchand arriva.",
+          "en": "At first Kassoum respected the rule… then a trader arrived.",
+          "moore": "Pipi, a Kassoum sak n deegame tɩ b pa segd n maan woto ye. La ra-kãng poore, ned n da tʋmdẽ wã waame.",
+          "dioula": "A daminɛ na, Kassoum tun be sariya bato. O kɔ, jagokɛla dɔ nana.",
+          "fulfulde": "Fuɗɗam Kassoum mawnini sariyaaji... ndenjo feere wari."
+        }
+      }
+    },
+    {
+      "id": "le-pecheur-de-bagre-et-le-poisson-genie-p3",
+      "art": {
+        "sky": "dusk",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "man-point",
+            "x": 30,
+            "c": "#7C3109"
+          },
+          {
+            "k": "man",
+            "x": 46,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "sack",
+            "x": 58
+          },
+          {
+            "k": "catfish",
+            "x": 74,
+            "y": 4
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le marchand lui proposa de tout acheter. Kassoum jeta ses filets matin et soir, vendit, puis pêcha encore. Mais un jour, son filet revint vide, puis le lendemain, puis le jour suivant.",
+        "en": "The trader offered to buy everything. Kassoum cast his nets morning and evening, sold, then fished again. But one day his net came back empty, then the next day, then the day after.",
+        "moore": "Ra-kãnga ra kõ-a lame tɩ b koos bũmb fãa. A Kassoom ra lobda a zĩm-gãosgo rũnna ne yʋngo, n koosd b zĩmã, la b leb n yõogd zĩm. La daar a ye, yẽ ra pa tar bũmb n na n yã ye.",
+        "dioula": "O jagokɛla y'a ɲini k'o bɛɛ san. Kasum y'a ka jɔɔw fili sɔgɔma ni wulafɛ, k'u feere ani o kɔ, a ye jigɛ kɛ tugun. Nka loon dɔ, a ka jɔ tun tora yen. O kɔ, o dugusagwɛ ani o dugusago.",
+        "fulfulde": "Jaaynoowo on hokki mo ko o yiɗi fuu. Kassoum ɗon fiya kaɓɓoore maako subaka e jemma, o jaayndi, nden o fuɗɗii yi'ugo. Ammaa nyalnde go'o, kaɓɓol maako warti meere, nden kam balɗe go'o."
+      }
+    },
+    {
+      "id": "le-pecheur-de-bagre-et-le-poisson-genie-p4",
+      "art": {
+        "sky": "day",
+        "ground": "lake",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "man",
+            "x": 40,
+            "c": "#2F3E6B"
+          },
+          {
+            "k": "child",
+            "x": 54
+          },
+          {
+            "k": "catfish",
+            "x": 70,
+            "y": 6
+          }
+        ]
+      },
+      "text": {
+        "fr": "Kassoum comprit sa faute et demanda pardon au lac. Il reprit une pêche mesurée, et les poissons revinrent peu à peu. Aujourd'hui, autour de Bagré, on respecte les saisons de pêche pour que le lac nourrisse tout le monde.",
+        "en": "Kassoum understood his mistake and asked the lake for forgiveness. He went back to fishing in moderation, and little by little the fish returned. Today, around Bagré, fishing seasons are respected so the lake can feed everyone.",
+        "moore": "A Kassoom bãnga a yel-wẽnã, la a kosa ko-kãsengã sugri. A leb n kẽnga zĩm-gãongẽ, la bilf-bilfu zĩmã lebg n waame. Rũndã-rũndã, Bagré soolmẽ wã, b waoogda zĩm-koglg wakat tɩ ko-kãsengã tõe n kõ ned fãa rɩɩb.",
+        "dioula": "Kassoum y'a faamu ko a ye fili kɛ ani a ye yafa deli baji la. A y'a daminɛ ka jigɛ dɔɔni dɔɔni. O kɔ, a ye jigɛ caaman sɔrɔ yen tugun. Bi, Bagré dugu gɛrɛfɛ, mɔgɔw be jɛgɛminɛ kɛ tuma o tuma walisa ka dumuni di mɔgɔ bɛɛ ma.",
+        "fulfulde": "Kassoum andini hakke maako o tori maayo ngam yaafugo. O fuɗɗiti yiɗde ndiyam nder ko o waɗi, nden kam ɓeydi ɓeydi e ɓeydi. Hannde, nder Bagré, sahaaji njamndi ɗon mawnina ngam maayo maako hokkata yimɓe fuu nyaamdu."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Quelle était la condition du poisson-génie ?",
+        "en": "What was the spirit fish's condition?",
+        "moore": "Kẽedã sẽn da yaa sɩɩgã ra tara zu-loees bʋse?",
+        "dioula": "O jɛgɛw tun be cogo di?",
+        "fulfulde": "Ko honɗun woni haala sabi ruuhu?"
+      },
+      "options": [
+        {
+          "fr": "Ne pas pêcher plus que nécessaire",
+          "en": "Not to fish more than needed",
+          "moore": "Ra saag n paam zĩm-gãong sẽn yɩɩd a sẽn segdã ye.",
+          "dioula": "Kana jɛgɛ minɛ ka tɛmɛ a mako daan kan",
+          "fulfulde": "Taa nyaama ɓurugo ko haani"
+        },
+        {
+          "fr": "Ne jamais pêcher",
+          "en": "Never to fish",
+          "moore": "Da saag ye.",
+          "dioula": "I kana jɛgɛ minɛ abada.",
+          "fulfulde": "To' to' fiyugo"
+        },
+        {
+          "fr": "Pêcher la nuit",
+          "en": "To fish at night",
+          "moore": "Sẽn na yɩl n zĩm yʋngo",
+          "dioula": "Ka taga jɛgɛminɛ kɛ suu kɔnɔ.",
+          "fulfulde": "To kallude jemma"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Pourquoi les filets sont-ils revenus vides ?",
+        "en": "Why did the nets come back empty?",
+        "moore": "Bõe yĩng tɩ zĩm-gãosgo lebg n wa ne koomã?",
+        "dioula": "Mun na u ye juruw bila k'u kɛ lakolon ye?",
+        "fulfulde": "Ngam ɗume cembal ngal wurtini meere?"
+      },
+      "options": [
+        {
+          "fr": "Kassoum avait trop pêché",
+          "en": "Kassoum had fished too much",
+          "moore": "A Kassoum ra namsa zĩm wʋsgo.",
+          "dioula": "Kassoum tun ye jɛgɛ caaman minɛ.",
+          "fulfulde": "Kassoum waɗi nyaamdu masin"
+        },
+        {
+          "fr": "Il pleuvait",
+          "en": "It was raining",
+          "moore": "Sa-kãsengã dag n yaa kãsenga.",
+          "dioula": "Sanji tun be ben.",
+          "fulfulde": "Wonaa ndiyam ɗon waɗa."
+        },
+        {
+          "fr": "Le filet était troué",
+          "en": "The net had a hole",
+          "moore": "Zĩ-kãnga ra tara gãagẽ.",
+          "dioula": "Sɔnnikɛyɔrɔ tun be jɔ kan.",
+          "fulfulde": "Fedde nden woodi dimbol"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "lac de Bagré",
+      "lang": "fr",
+      "def": {
+        "fr": "Grand lac de barrage sur le Nakambé, important pour la pêche et l'irrigation.",
+        "en": "A large reservoir on the Nakambé river, important for fishing and irrigation.",
+        "moore": "Yaa koom koglg sẽn be Nakambé kʋɩlgã zugu, tɩ yaa tɩlae ne zĩm-gãong la koobã.",
+        "dioula": "Jii min be Nakambe baji daa la, o tun ka ɲi jɛgɛminɛ ni jii sɔnni kama.",
+        "fulfulde": "Duubaaku mawɗo dow maayo Nakambé, mawnugo ngam haɓɓuki ndiyam e heɓaade."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte du poisson merveilleux et de l'avidité punie, répandu dans de nombreuses cultures. Version écrite pour KIBARE, située au lac de Bagré, avec un message sur la pêche durable.",
+    "en": "A tale of the magic fish and punished greed, found in many cultures. Version written for KIBARE, set at Lake Bagré, with a message about sustainable fishing."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

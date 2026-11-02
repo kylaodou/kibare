@@ -1,7 +1,7 @@
 {
   "slug": "la-queue-de-l-yboumbouni",
   "type": "conte",
-  "region": "est",
+  "region": "sirba",
   "place": "Gayéri",
   "coords": [
     12.65,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "la-queue-de-l-yboumbouni-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -92,6 +93,7 @@
       }
     },
     {
+      "id": "la-queue-de-l-yboumbouni-p2",
       "art": {
         "sky": "dawn",
         "ground": "savanna",
@@ -131,6 +133,7 @@
       }
     },
     {
+      "id": "la-queue-de-l-yboumbouni-p3",
       "art": {
         "sky": "night",
         "ground": "forest",
@@ -167,6 +170,7 @@
       }
     },
     {
+      "id": "la-queue-de-l-yboumbouni-p4",
       "art": {
         "sky": "dawn",
         "ground": "savanna",
@@ -249,6 +253,7 @@
       }
     },
     {
+      "id": "la-queue-de-l-yboumbouni-p5",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -411,7 +416,7 @@
       "def": {
         "fr": "Onomatopée du conte : le bruit de la queue qui fouette l'air (« flip, flap ! »).",
         "en": "A sound word from the tale: the swish of the tail cutting the air (“swish, swoosh!”).",
-        "moore": "B sẽn yeel tɩ b na n yɩɩg-a lame wã, yaa woto: \"Bɩ y maan sũ-noog ne a Zezi\".",
+        "moore": "Bãngr-gomdã pʋgẽ, gom-biig sẽn yaa sõma n yitẽ wã yaa woto: b sã n wa karemd bugmã, b na n wʋma bugmã (swish, swoosh!).",
         "dioula": "O kuma kɔrɔ dɔ bɔra o maana la: a ka fɔɲɔ be tigɛra (swish, swoosh!).",
         "fulfulde": "Wolde kalluɗum diga haala: swish of the tail cutting air (swish, swoosh!)."
       }

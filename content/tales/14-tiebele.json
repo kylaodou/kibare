@@ -1,7 +1,7 @@
 {
   "slug": "awa-et-les-murs-de-tiebele",
   "type": "recit",
-  "region": "centre-sud",
+  "region": "nazinon",
   "place": "Tiébélé",
   "coords": [
     11.1,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "awa-et-les-murs-de-tiebele-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -94,6 +95,7 @@
       }
     },
     {
+      "id": "awa-et-les-murs-de-tiebele-p2",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -129,6 +131,7 @@
       }
     },
     {
+      "id": "awa-et-les-murs-de-tiebele-p3",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -172,6 +175,7 @@
       }
     },
     {
+      "id": "awa-et-les-murs-de-tiebele-p4",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -244,6 +248,7 @@
       }
     },
     {
+      "id": "awa-et-les-murs-de-tiebele-p5",
       "art": {
         "sky": "dusk",
         "ground": "village",

@@ -7,7 +7,7 @@ export const ART_PRESETS: { id: string; label: string; art: Art }[] = [
     label: 'Veillée sous le baobab',
     art: { sky: 'night', ground: 'village', items: [
       { k: 'moon', x: 82, y: 300 }, { k: 'baobab', x: 20, y: 26 }, { k: 'hut', x: 78, y: 30, s: 0.85 },
-      { k: 'fire', x: 50 }, { k: 'yaaba-sit', x: 36 }, { k: 'child-sit', x: 62, flip: true }, { k: 'child-sit', x: 69, flip: true, c: '#00894A' },
+      { k: 'fire', x: 50 }, { k: 'yaaba-sit', x: 36 }, { k: 'child-sit', x: 62, flip: true }, { k: 'child-sit', x: 69, flip: true, c: '#C9822B' },
     ] },
   },
   {

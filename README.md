@@ -5,7 +5,8 @@
 
 Plateforme web multimédia pour **préserver, numériser et transmettre** le patrimoine oral burkinabè :
 carte interactive **2D / 3D**, contes **illustrés et animés**, **narration audio** en cinq langues,
-**narration interactive**, **comptes, contributions modérées, notifications et commentaires**.
+**voix de la communauté paragraphe par paragraphe**, comptes (e-mail ou **Google**), contributions
+modérées, notifications et commentaires.
 
 Projet du module *Technologies Web Multimédia* — Master 1.
 
@@ -13,29 +14,33 @@ Projet du module *Technologies Web Multimédia* — Master 1.
 
 | | |
 |---|---|
-| **Carte 2D / 3D** | Leaflet (2D, fond Esri) et Three.js (relief extrudé, ombres) synchronisés : la sélection est conservée quand on bascule. Recherche, filtres par type et par langue, fiches région. |
-| **33 contes** | Toutes les régions représentées : Yennenga, le Faux Départ du Moogho Naaba, les crocodiles de Sabou, le lac Bam, les pics de Sindou, contes gourmantchés (Équilbecq), gouin, lyélé, contes du recueil préscolaire MENAPLN/UNICEF… Chaque conte cite sa **source**. |
-| **Lecteur** | Illustration à gauche, **texte intégral** à droite ; paragraphe actif synchronisé avec l'image et la voix ; taille du texte réglable ; impression ; partage. |
+| **Carte 2D / 3D** | Leaflet (2D) et Three.js (relief extrudé) synchronisés. Les **17 régions** issues de la réforme de 2025, avec affichage par région, province ou commune, et les chefs-lieux. Recherche, filtres, fiches région. |
+| **56 contes** | Au moins trois contes par région : Yennenga, le Faux Départ du Moogho Naaba, les crocodiles de Sabou, le lac Bam, les pics de Sindou, contes gourmantchés, gouin, lyélé, peuls, bissa… Chaque conte cite sa **source**. |
+| **Lecteur** | Illustration animée à gauche (la caméra cadre l'élément nommé dans la phrase lue), **texte intégral** à droite, paragraphe actif synchronisé avec l'image et la voix. Vidéo de paragraphe facultative. Taille du texte, partage, favoris. |
 | **Langues** | Français et anglais rédigés ; **mooré, dioula, fulfulde** en premier jet de traduction automatique (NLLB-200), **signalé dans le lecteur** et à valider par des locuteurs. |
-| **Narration** | Un MP3 par paragraphe en cinq langues, en voix de synthèse par IA ; voix réelles de la communauté publiées après modération ; synthèse du navigateur en secours. |
-| **Ambiance sonore** | Un enregistrement par région : archives de l'Exposition de 1931 (Gallica/BnF, domaine public), balafon sénoufo (CC BY 4.0) ; balafon synthétisé (Web Audio API) pour le Sahel. |
-| **Narration interactive** | Choix à faire au fil du récit, glossaire contextuel (mooré, fulfulde…), morale, quiz, passeport de tampons et badges. |
-| **Communauté** | Inscription / connexion (JWT), proposition de contes ou de voix, **notifications** (nouvelle demande pour l'admin, acceptation ou refus pour l'auteur), page des contributeurs, **commentaires** avec réponses. |
-| **Administration** | Tableau de bord (activité sur 30 jours, contes les plus lus, répartitions), modération des contributions avec note, éditeur de contes multilingue, gestion des voix, des commentaires et des utilisateurs. |
-| **Accessibilité** | Navigation clavier, contrastes AA, ARIA, mouvement réduit, mode sombre, transcription intégrale de chaque audio, mode hors-ligne si l'API est indisponible. |
+| **Narration** | Un MP3 par paragraphe en cinq langues (voix de synthèse par IA). Les **voix de la communauté** sont rattachées à chaque paragraphe : la première voix disponible est jouée par défaut, l'auditeur peut en choisir une autre ; synthèse du navigateur en secours, et gestion des fichiers illisibles. |
+| **Narration interactive** | Choix au fil du récit, glossaire contextuel, morale, quiz, **passeport** de tampons et badges (accessible sans compte). |
+| **Comptes** | Inscription par e-mail avec **lien de confirmation**, ou **connexion avec Google**. **Mot de passe oublié** : code à 6 chiffres valable 5 minutes, limité en fréquence et en essais. Compte créé avec Google : e-mail de bienvenue avec un lien pour choisir son mot de passe. E-mails aux couleurs de KIBARE (logo et motifs intégrés). |
+| **Communauté** | Proposer un conte ou **prêter sa voix** paragraphe par paragraphe ; notifications (nouvelle demande pour l'admin, décision pour l'auteur) ; page des contributeurs ; commentaires avec réponses. |
+| **Administration** | Tableau de bord ; listes **paginées, recherchées et triées côté serveur** (contes, contributions, commentaires, utilisateurs) ; modération avec écoute de chaque enregistrement et **texte exact du paragraphe** ; une contribution validée ne peut plus être refusée ; éditeur de contes multilingue avec **voix par paragraphe** (enregistrement dans le navigateur ou import), **vidéo par paragraphe (10 Mo max.)** et aperçu de l'animation. |
+| **Accessibilité** | Responsive (testé de 360 px au bureau), navigation clavier, contrastes AA, ARIA, mouvement réduit, mode sombre, transcription intégrale de chaque audio, mode hors-ligne si l'API est indisponible. |
 
 ## Architecture
 
 ```
 projetMM/
 ├── content/          Contenu éditorial (source unique)
-│   ├── tales/*.json  Un fichier par conte (scènes, illustrations, quiz, glossaire, sources)
+│   ├── tales/*.json  Un fichier par conte (scènes avec identifiants stables, illustrations, quiz, glossaire, sources)
 │   ├── regions.json  languages.json
 │   └── build.mjs     Validation → yaaba-web/public/data et yaaba-api/.../seed (+ détection des MP3)
-├── tools/            Chaîne IA hors-ligne (Python) : translate.py (NLLB-200), narrate.py (Edge TTS, MMS-TTS)
+├── tools/            Chaîne hors-ligne (Python) : translate.py (NLLB-200), narrate.py (Edge TTS, MMS-TTS),
+│                     build_geo.py (régions, provinces, communes), build_mail_art.py (images des e-mails)
 ├── yaaba-web/        Angular 21 · PrimeNG 21 · Font Awesome · Three.js · Leaflet
-└── yaaba-api/        Spring Boot 3.5 · Spring Security (JWT) · JPA · H2 (ou PostgreSQL) · Swagger
+└── yaaba-api/        Spring Boot 3.5 · Spring Security (JWT) · JPA · H2 (ou PostgreSQL) · Spring Mail · Swagger
 ```
+
+Chaque paragraphe d'un conte a un **identifiant stable** (`<slug>-p<n>`, ou `p-<uuid>` pour un paragraphe
+créé dans l'éditeur) : les voix s'y rattachent, jamais à la simple position du paragraphe.
 
 ## Lancer en local
 
@@ -56,10 +61,43 @@ npm start
 ```
 
 Compte administrateur créé au démarrage : **admin@kibare.bf / kibare2026**
-(à changer via `ADMIN_EMAIL` / `ADMIN_PASSWORD` ; secret des jetons : `JWT_SECRET`).
+(à changer en production via `ADMIN_EMAIL` / `ADMIN_PASSWORD`).
 
-Tests de l'API : `cd yaaba-api && mvn test` (catalogue, inscription/connexion, droits admin,
-contribution → validation → publication et notifications, commentaires).
+Tests de l'API : `cd yaaba-api && mvn test` — 15 scénarios : catalogue, inscription et vérification
+d'e-mail, droits admin, voix paragraphe par paragraphe, transitions de statut, suppression, listes paginées,
+limite vidéo, mot de passe oublié (code valide, faux, expiré, réutilisé, trop d'essais), changement de
+mot de passe, Google non configuré, commentaires.
+
+## Configuration
+
+Les secrets ne sont **jamais commités**. En local, ils vont dans `yaaba-api/config/application.yml`
+(lu automatiquement par Spring Boot, ignoré par git) ; en production, dans des variables d'environnement.
+
+```yaml
+# yaaba-api/config/application.yml (exemple)
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: votre-adresse@gmail.com
+    password: mot-de-passe-d-application   # 16 lettres, myaccount.google.com/apppasswords
+yaaba:
+  mail:
+    from: "KIBARE <votre-adresse@gmail.com>"
+  google:
+    client-id: xxxxxxxx.apps.googleusercontent.com
+```
+
+| Variable | Rôle |
+|---|---|
+| `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAIL_FROM` | Serveur SMTP. Sans `MAIL_HOST`, les e-mails sont déposés en HTML dans `data/outbox` (développement). |
+| `APP_URL` | Adresse publique du site, pour les liens des e-mails (défaut `http://localhost:4200`). |
+| `REQUIRE_VERIFIED_EMAIL` | `true` par défaut : il faut avoir confirmé son adresse pour contribuer. |
+| `GOOGLE_CLIENT_ID` | ID client OAuth « Application Web » (Google Cloud Console). Vide : bouton Google masqué. Ajouter l'adresse du site aux « Origines JavaScript autorisées ». |
+| `JWT_SECRET` | Secret de signature des sessions — **obligatoire en production**. |
+| `ADMIN_EMAIL`, `ADMIN_PASSWORD` | Compte administrateur créé au premier démarrage. |
+| `DATABASE_URL`, `DATABASE_USER`, `DATABASE_PASSWORD` | Base de données (H2 fichier par défaut, PostgreSQL possible). |
+| `STORAGE_DIR`, `CORS_ORIGINS`, `PORT` | Fichiers envoyés (voix, vidéos), origines autorisées, port HTTP. |
 
 ## Traductions et voix (optionnel)
 
@@ -72,6 +110,7 @@ tools/.venv/Scripts/python tools/narrate.py fr en moore dioula fulfulde
 node content/build.mjs
 ```
 
+Les deux scripts reprennent là où ils s'étaient arrêtés (cache des traductions, MP3 existants conservés).
 Les textes saisis à la main dans l'éditeur ne sont jamais écrasés par la traduction automatique.
 
 ## Déploiement
@@ -83,8 +122,7 @@ docker build -t kibare .
 docker run -p 8080:8080 -e ADMIN_PASSWORD=motdepasse -e JWT_SECRET=un-long-secret -v kibare-data:/data kibare
 ```
 
-Compatible Render, Railway, Fly.io… (variables : `PORT`, `DATABASE_URL`, `DATABASE_USER`,
-`DATABASE_PASSWORD`, `STORAGE_DIR`, `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `JWT_SECRET`, `CORS_ORIGINS`).
+Compatible Render, Railway, Fly.io, Koyeb… avec les variables de la section *Configuration*.
 
 **Front statique seul** (Netlify, Vercel, GitHub Pages) : `cd yaaba-web && npx ng build`, puis publier
 `dist/yaaba-web/browser`. Contes, carte, voix et passeport fonctionnent ; comptes, contributions et
@@ -94,9 +132,9 @@ commentaires nécessitent l'API.
 
 - **Récits** : réécritures originales, source citée sur chaque conte — Équilbecq (1913–1916, domaine public),
   abcBurkina.net, *Recueil de contes pour les structures d'éducation préscolaire* (MENAPLN/UNICEF, 2022),
-  traditions orales publiques. Les ayants droit peuvent saisir les textes originaux dans l'éditeur (champ « droits »).
+  traditions orales publiques. Les ouvrages sous droits ne sont pas reproduits.
 - **Importance des contes** (page À propos) : J.-P. Ouédraogo, S. É. Sawadogo, A. D. K. Compaoré,
   « Les contes et légendes moaga : entre tradition orale, culture et éducation », *Recherches & Regards d'Afrique*, 2022.
 - **Sons** : Gallica/BnF 1931 (domaine public, via Wikimedia Commons) ; balafon par KONE IF (CC BY 4.0).
-- **Cartes** : geoBoundaries (CC BY 4.0) ; fond Esri, © contributeurs OpenStreetMap.
+- **Cartes** : geoBoundaries (CC BY 4.0), communes IGB 2020 (Humanitarian Data Exchange) ; fond Esri, © contributeurs OpenStreetMap.
 - **IA** : NLLB-200 (Meta) pour les traductions, synthèse vocale par IA pour la narration — usage signalé dans l'interface.

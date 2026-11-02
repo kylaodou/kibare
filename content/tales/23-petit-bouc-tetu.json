@@ -1,7 +1,7 @@
 {
   "slug": "le-petit-bouc-tetu",
   "type": "conte",
-  "region": "cascades",
+  "region": "tannounyan",
   "place": "Sindou",
   "coords": [
     10.72,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "le-petit-bouc-tetu-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -78,18 +79,30 @@
             "k": "forest-edge",
             "x": 88,
             "y": 20
+          },
+          {
+            "k": "lion",
+            "x": 74,
+            "s": 0.8,
+            "flip": true
+          },
+          {
+            "k": "hyena",
+            "x": 32,
+            "s": 0.9
           }
         ]
       },
       "text": {
         "fr": "Autrefois, dans un village, vivait un petit bouc têtu qui n'écoutait jamais sa mère. Un matin, il prit la route de la forêt. « Mon enfant, ne t'éloigne pas, lui dit sa mère : dans la forêt, il y a le lion, la panthère et l'hyène. » Mais il fit la sourde oreille.",
         "en": "Once upon a time, in a village, there lived a stubborn little goat who never listened to his mother. One morning he set off towards the forest. “My child, don't wander off,” his mother said. “In the forest there is the lion, the leopard and the hyena.” But he turned a deaf ear.",
-        "moore": "Daar a ye, tẽn-tẽng pʋgẽ, raoor sẽn yaa gãn-koabg n da pa kelgd a ma wã. Daar a ye, yẽ kẽnga weoogẽ. A ma yeela woto: \"M bi-ribl, bɩ y ra wa ye\". La a Zezi wʋma b tʋb n ka wʋm ye.",
+        "moore": "Daar a ye, tẽn-tẽng pʋgẽ, raoor sẽn yaa gãn-koabg n da pa kelgd a ma wã. Daar a ye, yẽ kẽnga weoogẽ. A ma yeela woto: \"M bi-ribl, bɩ y ra wa ye\". La a wʋma a tʋb n ka wʋmd ye.",
         "dioula": "Wagati dɔ la, bakɔrɔnin tun be dugu dɔ kɔnɔ ani a tun tɛ mɛnni kɛ a bamuso fɛ. Loon dɔ sɔgɔma, a tagara yiritu la. A bamuso ko: \"Ne deen, kana taga. Suman kɔnɔ, jara ni wara ani kongosogow be yen. Nka a ma mɛnni kɛ.",
         "fulfulde": "Wakkati feere, nder gariiri go'oto ɗon jooɗi e ɓikkoy boobooɗo mo nanaama. Go'o subaka o fuɗɗi yahugo haa leɗɗe. \"Ɓiɗɗo am, taa wurto\", inna maako wi'i. Naa ley ladde ɗon le'o, e leepaaru e hyena. Ammaa o yaafani noppi maako."
       }
     },
     {
+      "id": "le-petit-bouc-tetu-p2",
       "art": {
         "sky": "day",
         "ground": "forest",
@@ -114,6 +127,11 @@
           {
             "k": "bush",
             "x": 88
+          },
+          {
+            "k": "lion",
+            "x": 26,
+            "s": 0.8
           }
         ]
       },
@@ -126,6 +144,7 @@
       }
     },
     {
+      "id": "le-petit-bouc-tetu-p3",
       "art": {
         "sky": "day",
         "ground": "forest",
@@ -198,6 +217,7 @@
       }
     },
     {
+      "id": "le-petit-bouc-tetu-p4",
       "art": {
         "sky": "dusk",
         "ground": "village",
@@ -227,6 +247,11 @@
             "k": "hyena",
             "x": 14,
             "s": 0.7
+          },
+          {
+            "k": "child",
+            "x": 88,
+            "flip": true
           }
         ]
       },

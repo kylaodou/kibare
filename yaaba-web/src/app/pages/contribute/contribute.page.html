@@ -67,7 +67,23 @@
             <div class="fields">
               <label class="field">
                 <span>{{ 'contrib.tale' | t }}</span>
-                <p-select [options]="taleOptions()" [ngModel]="taleSlug()" (ngModelChange)="taleSlug.set($event)" [filter]="true" [placeholder]="'contrib.choose' | t" styleClass="w-full" />
+                <p-select [options]="taleOptions()" [ngModel]="taleSlug()" (ngModelChange)="taleSlug.set($event)" [filter]="true" filterBy="label,region"
+                  (onFilter)="searchTales($event.filter)" [loading]="optLoading()" [placeholder]="'contrib.choose' | t" styleClass="w-full"
+                  emptyFilterMessage="Aucun conte trouvé" emptyMessage="Aucun conte" [resetFilterOnHide]="false">
+                  <ng-template #item let-o>
+                    <span class="opt"><strong>{{ o.label }}</strong> <small>{{ o.region }}</small></span>
+                  </ng-template>
+                  <ng-template #footer>
+                    @if (optMore()) {
+                      <div class="opt-more">
+                        <button type="button" class="btn btn-ghost btn-sm" (click)="moreTales()" [disabled]="optLoading()">
+                          <i class="fa-solid" [class.fa-spinner]="optLoading()" [class.fa-spin]="optLoading()" [class.fa-angles-down]="!optLoading()"></i>
+                          Afficher plus de contes
+                        </button>
+                      </div>
+                    }
+                  </ng-template>
+                </p-select>
               </label>
               <label class="field">
                 <span>{{ 'contrib.language' | t }}</span>
@@ -122,7 +138,7 @@
             </div>
             <ol class="segs">
               @for (para of script(); track $index; let i = $index) {
-                <li class="seg" [class.ok]="segments()[i]">
+                <li class="card seg" [class.ok]="segments()[i]">
                   <div class="seg-text">
                     <span class="seg-n">{{ 'contrib.paraN' | t: { n: i + 1 } }}</span>
                     <p>{{ para }}</p>

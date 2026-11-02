@@ -1,7 +1,7 @@
 {
   "slug": "le-secret-des-ruines-de-loropeni",
   "type": "recit",
-  "region": "sud-ouest",
+  "region": "djoro",
   "place": "Loropéni",
   "coords": [
     10.3,
@@ -36,7 +36,7 @@
       "title": "Loropeni wã sẽn be roogã yel-solemdã",
       "subtitle": "A sẽn maan yʋʋm tusr n kõ-b la kugã.",
       "summary": "A Lobi tẽn-tẽngã pʋgẽ, b tara kug-wals sẽn yaa yel-solemse. Ãnd n naan-b lame, la bõe yĩnga? Bi-pugl a ye sokda a yaab-rãmbã, t'a yeel-b tɩ kãsem dãmbã... la b bãngd-b lame.",
-      "moral": "A Zezi sẽn da wa n kõ tõndã, b tẽega d neb nins sẽn deng-b wã. Yaa tõnd bal n na n wilg tɩ b yaa bãmb la b tall tõndo."
+      "moral": "Bãngr-goamã ket n tẽegda tõnd sẽn deng tõndã yelle, la yaa tõnd n segd n togs-b-la."
     },
     "dioula": {
       "title": "Loropeni ka yɔrɔ kɔrɔw ye min ye ngalon lo ye",
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "le-secret-des-ruines-de-loropeni-p1",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -92,6 +93,7 @@
       }
     },
     {
+      "id": "le-secret-des-ruines-de-loropeni-p2",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -129,6 +131,7 @@
       }
     },
     {
+      "id": "le-secret-des-ruines-de-loropeni-p3",
       "art": {
         "sky": "dusk",
         "ground": "river",
@@ -175,6 +178,7 @@
       }
     },
     {
+      "id": "le-secret-des-ruines-de-loropeni-p4",
       "art": {
         "sky": "dusk",
         "ground": "savanna",
@@ -249,6 +253,7 @@
       }
     },
     {
+      "id": "le-secret-des-ruines-de-loropeni-p5",
       "art": {
         "sky": "day",
         "ground": "savanna",

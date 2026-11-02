@@ -54,10 +54,6 @@
         <span>{{ 'editor.duration' | t }}</span>
         <input type="number" min="1" max="60" [ngModel]="tale.duration" (ngModelChange)="setField('duration', +$event)" />
       </label>
-      <label class="field">
-        <span>{{ 'editor.age' | t }}</span>
-        <input type="number" min="2" max="18" [ngModel]="tale.age" (ngModelChange)="setField('age', +$event)" />
-      </label>
     </div>
   </section>
 
@@ -96,21 +92,52 @@
     </div>
 
     <h2 class="mt">{{ 'editor.paragraphs' | t: { n: tale.scenes.length } }}</h2>
-    @for (s of tale.scenes; track $index; let i = $index) {
+    @for (s of tale.scenes; track s.id; let i = $index) {
+      @let v = voicesByScene().get(s.id!);
       <div class="para">
         <div class="p-art">
-          <div class="thumb"><app-scene-art [art]="s.art" [animate]="false" /></div>
-          <select (change)="setPreset(i, $any($event.target).value)">
+          <div class="thumb"><app-scene-art [art]="s.art" [animate]="playing().has(s.id!)" /></div>
+          <button type="button" class="anim" [class.on]="playing().has(s.id!)" [attr.aria-pressed]="playing().has(s.id!)" (click)="toggleAnim(s.id!)">
+            <i class="fa-solid" [class.fa-play]="!playing().has(s.id!)" [class.fa-pause]="playing().has(s.id!)"></i>
+            {{ playing().has(s.id!) ? 'Animation en cours' : 'Lancer l’animation' }}
+          </button>
+          <select (change)="setPreset(i, $any($event.target).value)" aria-label="Changer l’illustration">
             <option value="">{{ 'editor.changeArt' | t }}</option>
             @for (p of presets; track p.id) {
               <option [value]="p.id">{{ p.label }}</option>
             }
           </select>
+          <div class="vid">
+            @if (s.video) {
+              <video [src]="mediaUrl(s.video)" controls preload="metadata"></video>
+              <button type="button" class="btn btn-ghost btn-sm" (click)="removeVideo(s.id!)"><i class="fa-solid fa-xmark"></i> Retirer la vidéo</button>
+            } @else {
+              <label class="drop" [class.over]="videoBusy() === s.id">
+                <input type="file" accept="video/mp4,video/webm,video/ogg" (change)="pickVideo(i, s.id!, $event)" [disabled]="videoBusy() === s.id" />
+                @if (videoBusy() === s.id) {
+                  <i class="fa-solid fa-spinner fa-spin"></i>
+                  <span><strong>Envoi en cours…</strong><small>Ne quittez pas la page</small></span>
+                } @else {
+                  <i class="fa-solid fa-film"></i>
+                  <span><strong>Ajouter une vidéo</strong><small>MP4, WebM ou OGV · 10 Mo maximum</small></span>
+                }
+              </label>
+            }
+            @if (videoError()[s.id!]) {
+              <span class="err" role="alert"><i class="fa-solid fa-circle-exclamation"></i> {{ videoError()[s.id!] }}</span>
+            }
+          </div>
         </div>
         <div class="field">
           <div class="p-head">
             <strong>§ {{ i + 1 }}</strong>
             <span class="grow"></span>
+            <button type="button" class="ib voice" (click)="openVoice(s.id!, i)" title="Voix de ce paragraphe" aria-label="Ajouter une voix à ce paragraphe">
+              <i class="fa-solid fa-microphone-lines"></i>
+              @if ((v?.saved?.length ?? 0) + (v?.pending?.length ?? 0); as n) {
+                <span class="n">{{ n }}</span>
+              }
+            </button>
             <button type="button" class="ib" (click)="move(i, -1)" [disabled]="i === 0" [title]="'editor.up' | t"><i class="fa-solid fa-arrow-up"></i></button>
             <button type="button" class="ib" (click)="move(i, 1)" [disabled]="i === tale.scenes.length - 1" [title]="'editor.down' | t"><i class="fa-solid fa-arrow-down"></i></button>
             <button type="button" class="ib" (click)="addScene(i)" [title]="'editor.addAfter' | t"><i class="fa-solid fa-plus"></i></button>
@@ -119,6 +146,25 @@
           <textarea class="big" [ngModel]="s.text[lang()]" (ngModelChange)="setScene(i, $event)" [placeholder]="'editor.paraPh' | t: { lang: langName(lang()) }"></textarea>
           @if (lang() !== 'fr' && s.text['fr']) {
             <small>FR : {{ s.text['fr'] }}</small>
+          }
+          @if (v && (v.saved.length || v.pending.length)) {
+            <div class="v-title"><i class="fa-solid fa-microphone-lines"></i> Voix de ce paragraphe</div>
+            <ul class="voices">
+              @for (a of v.saved; track a.id) {
+                <li>
+                  <span class="who"><strong>{{ a.narrator }}</strong><small>{{ langName(a.lang) }}</small></span>
+                  <app-audio-player [src]="a.url" [label]="a.narrator" />
+                  <button type="button" class="ib no" (click)="deleteTrack(a)" [attr.aria-label]="'Supprimer la voix de ' + a.narrator"><i class="fa-solid fa-trash-can"></i></button>
+                </li>
+              }
+              @for (p of v.pending; track p.key) {
+                <li>
+                  <span class="who"><strong>{{ p.narrator }}</strong><small>{{ langName(p.lang) }} · <span class="tag">à publier</span></small></span>
+                  <app-audio-player [src]="p.url" [label]="p.narrator" />
+                  <button type="button" class="ib no" (click)="removePending(p)" [attr.aria-label]="'Retirer la voix de ' + p.narrator"><i class="fa-solid fa-xmark"></i></button>
+                </li>
+              }
+            </ul>
           }
         </div>
       </div>
@@ -131,9 +177,9 @@
     </div>
   </section>
 
-  <!-- source & droits -->
+  <!-- source -->
   <section class="card block">
-    <h2>{{ 'editor.sourceRights' | t }}</h2>
+    <h2>{{ 'tale.source' | t }}</h2>
     <div class="grid2">
       <label class="field">
         <span>{{ 'tale.source' | t }} (FR)</span>
@@ -143,55 +189,9 @@
         <span>{{ 'tale.source' | t }} (EN)</span>
         <textarea rows="3" [ngModel]="tale.source['en']" (ngModelChange)="setSource('en', $event)"></textarea>
       </label>
-      <label class="field full">
-        <span>{{ 'editor.rights' | t }}</span>
-        <input [ngModel]="tale.rights ?? ''" (ngModelChange)="setField('rights', $event)" [placeholder]="'editor.rightsPh' | t" />
-        <small>{{ 'editor.rightsHint' | t }}</small>
-      </label>
     </div>
   </section>
 
-  <!-- voix -->
-  <section class="card block">
-    <h2>{{ 'editor.voices' | t }}</h2>
-    @if (isNew()) {
-      <p class="hint">{{ 'editor.saveFirst' | t }}</p>
-    } @else {
-      <ul class="tracks">
-        @for (a of tracks(); track a.id) {
-          <li>
-            <strong>{{ langName(a.lang) }}</strong> · {{ a.narrator }}
-            <audio [src]="a.url" controls preload="none"></audio>
-            <button type="button" class="ib no" (click)="deleteTrack(a)" [title]="'admin.delete' | t"><i class="fa-solid fa-trash-can"></i></button>
-          </li>
-        } @empty {
-          <li class="muted">{{ 'editor.noVoice' | t }}</li>
-        }
-      </ul>
-      <div class="grid4">
-        <label class="field">
-          <span>{{ 'contrib.language' | t }}</span>
-          <select [ngModel]="upLang()" (ngModelChange)="upLang.set($event)">
-            @for (l of data.languages(); track l.code) {
-              <option [value]="l.code">{{ l.name }}</option>
-            }
-          </select>
-        </label>
-        <label class="field">
-          <span>{{ 'admin.narrator' | t }}</span>
-          <input [ngModel]="upNarrator()" (ngModelChange)="upNarrator.set($event)" />
-        </label>
-        <label class="field">
-          <span>{{ 'admin.file' | t }}</span>
-          <input type="file" accept="audio/*" (change)="pick($event)" />
-        </label>
-        <div class="field">
-          <span>&nbsp;</span>
-          <button type="button" class="btn btn-green btn-sm" (click)="upload()" [disabled]="!upFile() || !upNarrator().trim()"><i class="fa-solid fa-upload"></i> {{ 'admin.upload.cta' | t }}</button>
-        </div>
-      </div>
-    }
-  </section>
 
   <div class="savebar">
     <label class="check">
@@ -203,8 +203,11 @@
       {{ 'editor.featured' | t }}
     </label>
     <span class="grow"></span>
-    <a routerLink="/admin/contes" class="btn btn-ghost btn-sm">{{ 'pass.resetNo' | t }}</a>
-    <button type="button" class="btn btn-sm" (click)="save()" [disabled]="saving()">
+    @if (pending().length) {
+      <span class="tag">{{ pending().length }} voix à publier</span>
+    }
+    <a routerLink="/admin/contes" class="btn btn-ghost btn-sm" [class.disabled]="saving()">{{ 'pass.resetNo' | t }}</a>
+    <button type="button" class="btn btn-sm" (click)="save()" [disabled]="saving() || videoBusy()">
       @if (saving()) {
         <i class="fa-solid fa-spinner fa-spin"></i>
       } @else {
@@ -216,3 +219,41 @@
 } @else {
   <div class="skeleton"></div>
 }
+
+<p-dialog [visible]="!!voiceFor()" (visibleChange)="!$event && closeVoice()" [modal]="true" [draggable]="false" [dismissableMask]="!vBusy()"
+  [closable]="!vBusy()" [style]="{ width: 'min(520px, 94vw)' }" [header]="'Voix du paragraphe ' + ((voiceFor()?.index ?? 0) + 1)">
+  @if (voiceFor(); as vf) {
+    <div class="modal">
+      <div class="grid2">
+        <label class="field">
+          <span>Langue</span>
+          <select [ngModel]="vLang()" (ngModelChange)="vLang.set($event)">
+            @for (l of data.languages(); track l.code) {
+              <option [value]="l.code">{{ l.name }}</option>
+            }
+          </select>
+        </label>
+        <label class="field">
+          <span>Nom du conteur *</span>
+          <input [ngModel]="vNarrator()" (ngModelChange)="vNarrator.set($event); vError.set('')" maxlength="80" required autocomplete="name" />
+        </label>
+      </div>
+      @for (k of [recKey()]; track k) {
+        <app-recorder (recorded)="vBlob.set($event); vError.set('')" />
+      }
+      @if (vError()) {
+        <span class="err" role="alert"><i class="fa-solid fa-circle-exclamation"></i> {{ vError() }}</span>
+      }
+      @if (isNew() || !slug()) {
+        <small class="muted">Le conte n’est pas encore enregistré : la voix sera publiée avec lui.</small>
+      }
+      <div class="actions">
+        <button type="button" class="btn btn-ghost btn-sm" (click)="closeVoice()" [disabled]="vBusy()">Annuler</button>
+        <button type="button" class="btn btn-sm" (click)="addVoice()" [disabled]="vBusy() || !vBlob() || !vNarrator().trim()">
+          <i class="fa-solid" [class.fa-check]="!vBusy()" [class.fa-spinner]="vBusy()" [class.fa-spin]="vBusy()"></i> Valider la voix
+        </button>
+      </div>
+    </div>
+  }
+</p-dialog>
+<p-confirmDialog />

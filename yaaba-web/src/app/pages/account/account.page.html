@@ -24,6 +24,30 @@
     </div>
   </section>
 
+  @if (u.hasPassword === false) {
+    <div class="container">
+      <p class="verify" role="status">
+        <i class="fa-solid fa-key"></i>
+        <span>Vous vous êtes inscrit avec Google. Choisissez un mot de passe pour pouvoir aussi vous connecter avec votre e-mail.</span>
+        <button type="button" class="btn btn-ghost btn-sm" (click)="tab.set('profile')">Choisir mon mot de passe</button>
+      </p>
+    </div>
+  }
+  @if (u.emailVerified === false) {
+    <div class="container">
+      <p class="verify" role="status">
+        <i class="fa-solid fa-envelope-circle-check"></i>
+        <span>Confirmez votre adresse <strong>{{ u.email }}</strong> pour pouvoir contribuer : ouvrez le lien reçu par e-mail.</span>
+        <button type="button" class="btn btn-ghost btn-sm" (click)="resend()" [disabled]="resending()">
+          @if (resending()) {
+            <i class="fa-solid fa-spinner fa-spin"></i>
+          }
+          Renvoyer le lien
+        </button>
+      </p>
+    </div>
+  }
+
   <section class="container body">
     <div class="tabs" role="tablist">
       <button type="button" role="tab" [class.on]="tab() === 'contributions'" (click)="tab.set('contributions')">
@@ -141,6 +165,45 @@
           <div class="p-actions">
             <button type="button" class="btn btn-ghost" (click)="auth.logout()"><i class="fa-solid fa-right-from-bracket"></i> {{ 'nav.logout' | t }}</button>
             <button type="submit" class="btn" [disabled]="saving() || name().trim().length < 2">{{ 'account.save' | t }}</button>
+          </div>
+        </form>
+
+        <form id="mot-de-passe" class="profile card pwd" (ngSubmit)="savePassword()" novalidate>
+          <h2><i class="fa-solid fa-key"></i> {{ u.hasPassword === false ? 'Choisir un mot de passe' : 'Changer mon mot de passe' }}</h2>
+          @if (u.hasPassword === false) {
+            <p class="muted">Votre compte a été créé avec Google. Un mot de passe vous permettra aussi de vous connecter avec <strong>{{ u.email }}</strong>.</p>
+          } @else {
+            <label class="field">
+              <span>Mot de passe actuel</span>
+              <input [type]="showPass() ? 'text' : 'password'" name="cur" autocomplete="current-password" [ngModel]="curPass()" (ngModelChange)="curPass.set($event); passError.set('')" />
+            </label>
+          }
+          <div class="two">
+            <label class="field">
+              <span>Nouveau mot de passe</span>
+              <input [type]="showPass() ? 'text' : 'password'" name="new" autocomplete="new-password" minlength="8" maxlength="100" [ngModel]="newPass()" (ngModelChange)="newPass.set($event); passError.set('')" />
+              <small>8 caractères minimum, dont au moins une lettre et un chiffre.</small>
+            </label>
+            <label class="field">
+              <span>Confirmation</span>
+              <input [type]="showPass() ? 'text' : 'password'" name="new2" autocomplete="new-password" [ngModel]="newPass2()" (ngModelChange)="newPass2.set($event); passError.set('')" />
+              @if (newPass2() && newPass2() !== newPass()) {
+                <small class="bad">Les deux mots de passe ne correspondent pas.</small>
+              }
+            </label>
+          </div>
+          <label class="show"><input type="checkbox" [checked]="showPass()" (change)="showPass.set(!showPass())" /> Afficher les mots de passe</label>
+          @if (passError()) {
+            <p class="bad" role="alert"><i class="fa-solid fa-circle-exclamation"></i> {{ passError() }}</p>
+          }
+          <div class="p-actions">
+            <span></span>
+            <button type="submit" class="btn" [disabled]="!passOk() || passBusy()">
+              @if (passBusy()) {
+                <i class="fa-solid fa-spinner fa-spin"></i>
+              }
+              {{ u.hasPassword === false ? 'Enregistrer mon mot de passe' : 'Changer le mot de passe' }}
+            </button>
           </div>
         </form>
       }

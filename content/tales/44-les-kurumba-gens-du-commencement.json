@@ -1,0 +1,333 @@
+{
+  "slug": "les-kurumba-gens-du-commencement",
+  "type": "legende",
+  "region": "soum",
+  "place": "Arbinda",
+  "coords": [
+    14.23,
+    -0.87
+  ],
+  "people": "Kurumba",
+  "language": "moore",
+  "duration": 5,
+  "age": 8,
+  "featured": true,
+  "cover": 2,
+  "tags": [
+    "origines",
+    "terre",
+    "masques",
+    "peuples"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Les Kurumba, gens du commencement",
+      "subtitle": "Les maîtres de la terre du Lurum",
+      "summary": "Bien avant les royaumes, les Kurumba vivaient déjà sur les terres d'Arbinda. Quand de nouveaux venus arrivent, ce sont eux qui gardent l'alliance avec la terre.",
+      "moral": "Ceux qui arrivent les premiers ont le devoir de veiller sur la terre pour ceux qui viendront après."
+    },
+    "en": {
+      "title": "The Kurumba, People of the Beginning",
+      "subtitle": "Masters of the land of Lurum",
+      "summary": "Long before the kingdoms, the Kurumba already lived on the lands of Arbinda. When newcomers arrive, it is they who keep the alliance with the earth.",
+      "moral": "Those who arrive first have the duty to watch over the land for those who come after."
+    },
+    "moore": {
+      "title": "Kurumba rãmbã, sẽn da be sɩngrẽ wã nebã",
+      "subtitle": "Lurum tẽnga soaalbã",
+      "summary": "Sẽn deng rĩm-dãmbã, Kurumba rãmbã ra zoe n be Arbinda tẽngã zugu. Sẽn wa-b paalgã sã n wa, b na n kell n maana zood ne tẽngã.",
+      "moral": "Sẽn deng-b n wa wã segd n gũuda tẽngã sẽn na yɩl tɩ b yaool n wa."
+    },
+    "dioula": {
+      "title": "Kurumbaw, u tun be wagatijan kɔnɔ",
+      "subtitle": "Lurum jamana kuntigiw",
+      "summary": "Sanni masacɛw ka sigi, Kurumba dɔw tun be Arbinda mara la. Ni mɔgɔ kuraw nana, olu lo be jɛnɲɔgɔnya kɛ ni dugukolo ye.",
+      "moral": "Mɔgɔ minw kɔnna ka na, olu lo ka kan k'u janto jamana kɔnɔ."
+    },
+    "fulfulde": {
+      "title": "Ko Kurumba'en, Yimɓe Fuuɗde",
+      "subtitle": "Mawɓe lesdi Lurum",
+      "summary": "Ko ɓeydi duuɓi, Kurumba'en ɗon njooɗi nder lesdi Arbinda. To ɓuuɓoɓe ngari, ɓe ɗon tokkuki alkawal bee duniyaaru.",
+      "moral": "Yimɓe arandeeɓe ɓe ɗon wara, ko daraniiɓe ngam ɓe ɓaawo."
+    }
+  },
+  "scenes": [
+    {
+      "id": "les-kurumba-gens-du-commencement-p1",
+      "art": {
+        "sky": "dawn",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "sun",
+            "x": 16,
+            "y": 240
+          },
+          {
+            "k": "rock",
+            "x": 40
+          },
+          {
+            "k": "elder",
+            "x": 30
+          },
+          {
+            "k": "antelope",
+            "x": 64,
+            "s": 1.1
+          },
+          {
+            "k": "acacia",
+            "x": 86,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Au commencement, disent les Kurumba, les hommes et la terre ne se connaissaient pas encore. Les premiers ancêtres arrivèrent sur ces collines rocheuses, près d'Arbinda, et demandèrent à la terre la permission de s'y installer.",
+        "en": "In the beginning, say the Kurumba, people and the earth did not yet know each other. The first ancestors arrived on these rocky hills near Arbinda and asked the earth for permission to settle there.",
+        "moore": "Sɩngrẽ wã, Kurumba nebã yeelame tɩ tẽngã ne ninsaalbã ra pa mi taab ye. Pipi yaab-rãmbã waa Arbinda sẽn pẽ roogã pʋga, n kos tẽngã tɩ b kõ-ba sor n zĩnd be.",
+        "dioula": "Kurumbaw b'a fɔ ko fɔlɔfɔlɔ, adamadenw ni dugukolo tun tɛ ɲɔgɔn lɔn fɔlɔ. U bɛmaw fɔlɔw sera kulu kan Arbinda gɛrɛfɛ ani u ye dugukolo deli walisa k'u sigi yen.",
+        "fulfulde": "Nder fuɗɗoode, ko Kurumba'en mbi'a, yimɓe e duniyaaru ɗon anndaako. Kaakaaji arandeeji ngari haa kooseeje ɗe ɓadii Arbinda nden ɓe tori lesdi ngam heɓugo bandol ɗon."
+      }
+    },
+    {
+      "id": "les-kurumba-gens-du-commencement-p2",
+      "art": {
+        "sky": "night",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "fire",
+            "x": 46
+          },
+          {
+            "k": "elder-sit",
+            "x": 30
+          },
+          {
+            "k": "calabash",
+            "x": 56
+          },
+          {
+            "k": "rock",
+            "x": 72
+          }
+        ]
+      },
+      "text": {
+        "fr": "La terre accepta, à une condition : que les Kurumba lui offrent des sacrifices chaque saison et respectent ses interdits. C'est ainsi qu'ils devinrent les « maîtres de la terre », ceux qui parlent avec elle.",
+        "en": "The earth agreed, on one condition: that the Kurumba make offerings to it every season and respect its taboos. That is how they became the \"masters of the earth\", those who speak with it.",
+        "moore": "Tẽngã sakame tɩ bũmb a ye n kɩt t'a Kurumba wã maan maoong wakat fãa, la b waoogd-a. Woto, b lebga \"dũniyã zu-soab\" sẽn gomd ne tẽngã.",
+        "dioula": "Dugukolo tun sɔnna o ma ni شرط kelen ye ko Kurumbaw ka saraka bɔ a ye saan o saan ani k'a ka sariyaw labato. O cogo la, u kɛra \"diɲɛ kuntigiw\" ye.",
+        "fulfulde": "Luttudu ɗon njaɓɓa, nder haala go'o: Kurumba'en ɗon waɗa kirsaaji to maako nder sahaa fuu e ɓe ɗowtano dokke maɓɓe. Ngam maajum ɓe ngarti \"ko'e laamiiɓe lesdi\", yimɓe ɗon wolwugo bee leydi."
+      }
+    },
+    {
+      "id": "les-kurumba-gens-du-commencement-p3",
+      "art": {
+        "sky": "day",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "rider",
+            "x": 30
+          },
+          {
+            "k": "horse",
+            "x": 46,
+            "s": 0.9
+          },
+          {
+            "k": "elder",
+            "x": 66
+          },
+          {
+            "k": "hut",
+            "x": 84,
+            "y": 26
+          }
+        ]
+      },
+      "text": {
+        "fr": "Bien plus tard, des cavaliers mossi et des bergers peuls arrivèrent dans le pays. Ils apportaient la force des armes et de grands troupeaux. Mais pour cultiver et vivre en paix, il fallait l'accord de la terre.",
+        "en": "Much later, Mossi horsemen and Fulani herders arrived in the country. They brought the strength of weapons and great herds. But to farm and live in peace, the earth's agreement was needed.",
+        "moore": "Rẽ poore, Mossi neb sẽn da zao zãngã la Fulani piis-kɩɩmb n wa be tẽngã pʋgẽ. B talla zab-teedã pãng la b tall rũms wʋsgo. La sẽn na yɩl n tõog n maan koodã la b vɩɩmd ne laafɩ, tẽngã ra segd n zemsame.",
+        "dioula": "Kɔfɛ, Mozi ka sotigiw ni Fulani sagadɛndɛbagaw sera jamana na. U nana ni kɛlɛkɛminanw ani begɛnw ye. Nka walisa ka sɛnɛ kɛ ani ka ɲɛnamaya kɛ hɛɛrɛ la, dugukolo tun ka ɲi ka bɛn.",
+        "fulfulde": "Ɓaawo maajum, mooliiɓe Moosi e Fulani'en ɓe ɗon njaha nder lesdi. Ɓe ngari e sembe konu e kawral mawɗum. Ammaa ngam ɓe mbaadi bee jam, ɓe ngaɗaaki ko duniyaaru yiɗi."
+      },
+      "choice": {
+        "q": {
+          "fr": "Vers qui les nouveaux venus doivent-ils se tourner ?",
+          "en": "Whom must the newcomers turn to?",
+          "moore": "Yaa ãnd dãmb la b segd n kõ?",
+          "dioula": "Minw nana kura ye, olu ka ɲi ka taga jɔn lo fɛ?",
+          "fulfulde": "To moye ɓe ɓesnguɓe ɓen haani yaaki?"
+        },
+        "options": [
+          {
+            "fr": "Les Kurumba, maîtres de la terre",
+            "en": "The Kurumba, masters of the earth",
+            "moore": "Kurumba wã, tẽngã zu-soabbã",
+            "dioula": "Kurumbaw, dugukolo kuntigiw",
+            "fulfulde": "Kurumba'en, mawɓe duniyaaru"
+          },
+          {
+            "fr": "Personne",
+            "en": "Nobody",
+            "moore": "Ned ka be ye.",
+            "dioula": "Mɔgɔ si tɛ yen.",
+            "fulfulde": "Walaa goɗɗo."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Ils vinrent saluer le chef de terre kurumba…",
+          "en": "They came to greet the Kurumba earth chief…",
+          "moore": "B waame n na n pʋʋs Kurumba tẽnga naab...",
+          "dioula": "U nana Kurumba ka kuntigi kunbɛn.",
+          "fulfulde": "Ɓe ngari ngam ɓe kawta hooreejo leydi Kurumba..."
+        }
+      }
+    },
+    {
+      "id": "les-kurumba-gens-du-commencement-p4",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "antelope",
+            "x": 30,
+            "s": 1.1
+          },
+          {
+            "k": "man-up",
+            "x": 50,
+            "c": "#7C3109"
+          },
+          {
+            "k": "drum",
+            "x": 66
+          },
+          {
+            "k": "child-up",
+            "x": 78
+          }
+        ]
+      },
+      "text": {
+        "fr": "Ainsi se fit l'alliance : le roi gouverne, mais le chef de terre kurumba veille sur les champs et la pluie. Lors des grandes fêtes, les danseurs portent encore les cimiers en forme d'antilope, rappel du temps où tout a commencé.",
+        "en": "So the alliance was made: the king governs, but the Kurumba earth chief watches over the fields and the rain. At great festivals, dancers still wear antelope-shaped crests, in memory of the time when everything began.",
+        "moore": "Woto kɩtame tɩ b maan zoodã: rĩm n soogd tẽngã, la Kurumba tẽnga naab geta pʋʋg ne sa-kãnga. Tẽeg-rãmbã sasa, yɩɩl-dãmb ket n paka b gãndb sẽn yaa wa a nin-buudã. B tẽegda wakat ning bũmb fãa sẽn sɩngdã yelle.",
+        "dioula": "O kama, u ye bɛn sigi. Masacɛ lo be kuntigiya kɛ, nka Kurumba kuntigi lo b'a janto forow ni sanji la. Dɔnkililabagaw be to ka sinsinw don ɲanagwɛbaw la. O ye wagati min na koo bɛɛ daminɛna, u hakili b'o lo la.",
+        "fulfulde": "Ngam maajum ɓe njottini alkawal: laamiiɗo ɗon umri, ammaa mawɗo lesdi Kurumba ɗon jaɓɓa bee gese e ndiyam. Nder juulde mawɗe, yimɓe kolliɓe ɗon ɓorni koode ɗe nandi bee antelope ngam ɓe cujidana wakkati nde koo ɗume fuɗɗii."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Que signifie « Kurumba » selon la tradition ?",
+        "en": "What does \"Kurumba\" mean according to tradition?",
+        "moore": "Bõe la \"Kurumba\" rat n yeel tɩ yaa neloa?",
+        "dioula": "\"Kurumba\" kɔrɔ ye mun lo ye?",
+        "fulfulde": "Ko \"Kurumba\" firti e nder aada?"
+      },
+      "options": [
+        {
+          "fr": "Les gens du commencement",
+          "en": "The people of the beginning",
+          "moore": "Sẽn sɩng ne nebã",
+          "dioula": "Mɔgɔ minw tun be yen fɔlɔfɔlɔ,",
+          "fulfulde": "Yimɓe fuɗɗam"
+        },
+        {
+          "fr": "Les cavaliers",
+          "en": "The horsemen",
+          "moore": "B sẽn zao wã",
+          "dioula": "Sotigiw",
+          "fulfulde": "Yimɓe ɗon njaha dow kawtal"
+        },
+        {
+          "fr": "Les pêcheurs",
+          "en": "The fishermen",
+          "moore": "Rɩtbã sẽn da beẽ wã",
+          "dioula": "Jigitigɛlaw tun b'o kɛ.",
+          "fulfulde": "Yimɓe wuurɓe ndiyam"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Quel animal orne les cimiers des danseurs ?",
+        "en": "Which animal decorates the dancers' crests?",
+        "moore": "Rɩt bʋg n pakd ra-rãmbã?",
+        "dioula": "Dɔnkilaw ka nɛgɛsow be dilan ni begɛn sifa juman ye?",
+        "fulfulde": "Ko dabbaaji goɗɗi ɗon ɓanngina ko'e dansaɓe?"
+      },
+      "options": [
+        {
+          "fr": "L'antilope",
+          "en": "The antelope",
+          "moore": "A Antelope wã",
+          "dioula": "Antilopew",
+          "fulfulde": "Antilope"
+        },
+        {
+          "fr": "Le lion",
+          "en": "The lion",
+          "moore": "Yaa gɩgemdã.",
+          "dioula": "Jaraw ka kan k'a ye.",
+          "fulfulde": "Lamu ɗon"
+        },
+        {
+          "fr": "Le crocodile",
+          "en": "The crocodile",
+          "moore": "B sẽn yã wã, b pa tõe n bãng ye.",
+          "dioula": "Dɔgɔtɔrɔ tɛ yen.",
+          "fulfulde": "Ko crocodile"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "chef de terre",
+      "lang": "fr",
+      "def": {
+        "fr": "Responsable religieux qui fait les sacrifices à la terre et veille aux interdits.",
+        "en": "A religious leader who makes offerings to the earth and upholds its taboos.",
+        "moore": "Ned sẽn maand maan-kʋʋd a taabã yĩnga, la a sakd dũniyã noyã.",
+        "dioula": "Diinan kuntigiw be sarakaw bɔ dugukolo ye ani u b'a ka sariyaw labato.",
+        "fulfulde": "Mawɗo diina mo waɗata dokke to duniyaaru nden o ɗon tokka umrooje maako."
+      }
+    }
+  ],
+  "source": {
+    "fr": "D'après les travaux anthropologiques sur les Kurumba du Lurum (B.-F. Gérard, « Un village, un peuple, un roi », IRD), qui glosent Kurumba par « gens du commencement », et les cimiers-antilopes adone. Mise en récit libre et simplifiée.",
+    "en": "Based on anthropological work on the Kurumba of Lurum (B.-F. Gérard, \"Un village, un peuple, un roi\", IRD), which glosses Kurumba as \"people of the beginning\", and on the adone antelope crests. Free, simplified retelling."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

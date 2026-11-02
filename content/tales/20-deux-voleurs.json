@@ -1,7 +1,7 @@
 {
   "slug": "les-deux-voleurs",
   "type": "conte",
-  "region": "est",
+  "region": "tapoa",
   "place": "Kantchari",
   "coords": [
     12.48,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "les-deux-voleurs-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -89,6 +90,7 @@
       }
     },
     {
+      "id": "les-deux-voleurs-p2",
       "art": {
         "sky": "day",
         "ground": "savanna",
@@ -132,6 +134,7 @@
       }
     },
     {
+      "id": "les-deux-voleurs-p3",
       "art": {
         "sky": "dusk",
         "ground": "savanna",
@@ -203,6 +206,7 @@
       }
     },
     {
+      "id": "les-deux-voleurs-p4",
       "art": {
         "sky": "night",
         "ground": "village",

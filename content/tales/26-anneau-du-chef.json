@@ -1,7 +1,7 @@
 {
   "slug": "l-anneau-du-chef",
   "type": "conte",
-  "region": "centre-ouest",
+  "region": "nando",
   "place": "Réo",
   "coords": [
     12.32,
@@ -34,25 +34,26 @@
     },
     "moore": {
       "title": "A Zĩ-bɩɩgã zoobã ne a Katɩ wã",
-      "subtitle": "Wẽnnaam sã n ka kʋʋd, naabã me pa tõe n kʋ ye.",
-      "summary": "Ba a ye kõo a bi-riblã yʋʋr sẽn kɩɩsd pãn-soaadbã: \"Ned sã n pa kʋʋd Wẽnnaam, yẽ ka tõe n kʋ\". A sẽn wa n sãam a sũurã, naabã kõo yẽ sãnem sõorgã. la a gũuda t'a bas-a.",
+      "subtitle": "Wẽnd sã n ka kʋ, naab ka tõe n kʋ ye.",
+      "summary": "Ba n pʋd a bi-riblã yʋʋr sẽn kɩɩsd pãn-soaadbã: \"Wẽnnaam sã n ka kʋʋd nin-soabã, a ka tõe n kʋ ye\". A sẽn wa n sãam a sũurã, naabã kõo yẽ sãnem sõorgã. la a gũuda t'a bas-a.",
       "moral": "Ned ka tõe n dɩka a to sor ye: sɩd la tɩrlem tõogda pãng rãmbã wuk-m-mengã."
     },
     "dioula": {
       "title": "Masacɛ ka bolokunnaden ni jɛgɛw",
-      "subtitle": "Ni Ala tɛ mɔgɔ faga, kuntigi fana tɛ se ka mɔgɔ faga.",
-      "summary": "Fa dɔ y'a dencɛ tɔgɔ di min tɛ se ka fanga bali: \"Ni Ala ma mɔgɔ faga, a te se k'o tigi faga\". A dimina, a y'a ka sanufeeren di a ma. ani a b'a kɔnɔna ko a ka dimi kana ban.",
+      "subtitle": "N'o tɛ, kuntigi tɛ se ka mɔgɔ faga.",
+      "summary": "Facɛ dɔ ye tɔgɔ dɔ di a dencɛ ma min b'a yira ko a tɛ se k'a ka fanga lafasa. A dimina, a y'a ka sanufeeren di a ma. ani a b'a kɔnɔna ko a ka dimi kana ban.",
       "moral": "Mɔgɔ si tɛ se ka mɔgɔ wɛrɛ ta kow latigɛ a yɛrɛ ma. Tiɲɛ ni tilenninya be se ka fanga sɔrɔ mɔgɔbabaw kuncɛbaya kɔrɔ."
     },
     "fulfulde": {
       "title": "Ko'e hooreejo e Catfish",
-      "subtitle": "To Allah ɗon halki, mawɗo boo walaa baawɗe halki",
-      "summary": "Baaba hokki ɓiɗɗo maako innde nde ɗon haɓɓa laamu: \"To Allah-taaki-muttaako-jo ardiiɗo-maawataa-muttaago\". Ngam ɗum ɓeydi, hooreejo on hokki mo kuugal maako... e ɗon hoola mo o majjina ɗum.",
+      "subtitle": "To Alla maayataa, hooreejo maayataa maayugo",
+      "summary": "Baabiraawo hokki ɓiɗɗo maako innde je ɗon moƴƴina laamu: \"To-Alla-taaki-muttaaki-ko hooreejo-muttaako-muttaake\". Ngam ɗum ɓeydi, hooreejo on hokki mo kuugal maako... e ɗon hoola mo o majjina ɗum.",
       "moral": "Walaa mo ɗon laamugo darnde goɗɗo: goonga e gooŋgaaku ɗon ma'ana dow ko ɓuri baawɗe."
     }
   },
   "scenes": [
     {
+      "id": "l-anneau-du-chef-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -76,19 +77,20 @@
           {
             "k": "man",
             "x": 16,
-            "c": "#00894A"
+            "c": "#C9822B"
           }
         ]
       },
       "text": {
         "fr": "Dans un village lyéla, un homme donna à son fils un nom étonnant : « Si-Dieu-ne-tue-pas-le-chef-ne-peut-tuer ». Quand le chef l'apprit, il se sentit défié. Il fit venir l'enfant pour en faire son serviteur, bien décidé à lui prouver le contraire. Mais il cacha sa colère et le combla d'attentions.",
         "en": "In a Lyela village, a man gave his son an astonishing name: “If-God-does-not-kill-the-chief-cannot-kill”. When the chief heard of it, he felt challenged. He summoned the boy to be his servant, determined to prove the name wrong. But he hid his anger and showered the boy with kindness.",
-        "moore": "Tẽnga a ye pʋgẽ, rao n pʋd a bi-riblã yʋʋr sẽn yaa kãseng tɩ b yeel t'a \"Wẽnnaam sã n pa kʋd nin-kãsemdã, a ka tõe n kʋ ye\". A sẽn wʋm woto wã, a sũur sãama wʋsgo. A bool-a lame t'a yɩ a tʋmtʋmd n wilg tɩ yẽ yʋʋr pa sõma ye. La a solga a sũ-yikrã n ning bi-riblã sõmblem.",
-        "dioula": "Lyela dugu la, cɛɛ dɔ y'a dencɛ tɔgɔ ɲuman fɔ a ye ko: \"Ni Ala tɛ mɔgɔ faga, kuntigi tɛ se k'o tigi faga\". O koo mɛnnin kɔ, a y'a miiri ko u bena ale bali. A y'a ɲini a fɛ ko deen ka kɛ a ka baaraden ye. Nka, a y'a ka dimi dogo ani k'a dusu diya.",
-        "fulfulde": "Nder wuro Lyela, goɗɗo hokki ɓiɗɗo maako innde nanondirɗum: \"To Allah-taaki-muttaako-jo ardiiɗo-maawataa-muttaago\". Nde ardiiɗo'en nani haala maajum, o nana ko ɗum ɓeydi. O noddi suka on ngam o wartira mo maccuɗo, omo yiɗi holla innde maako naa' goonga. Ammaa o ɓoydi masin maako, o hokki suka on belɗum."
+        "moore": "Tẽng a ye sẽn boond tɩ Lyela wã pʋgẽ, rao a ye pʋd a bi-riblã yʋʋr sẽn yaa kãseng n yɩɩd woto: \"Ned sã n pa kʋʋd a Zeova, a pa tõe n kʋ-a ye\". A sẽn wʋm woto wã, a sũur sãama wʋsgo. A bool-a lame t'a yɩ a tʋmtʋmd n wilg tɩ yẽ yʋʋr pa sõma ye. La a solga a sũ-yikrã n ning bi-riblã sõmblem.",
+        "dioula": "Lyela dugu dɔ la, cɛɛ dɔ y'a dencɛ tɔgɔ ɲuman fɔ a ye. O koo mɛnnin kɔ, a y'a miiri ko u bena ale bali. A y'a ɲini a fɛ ko deen ka kɛ a ka baaraden ye. Nka, a y'a ka dimi dogo ani k'a dusu diya.",
+        "fulfulde": "Nder gariiri Lyela, gorko hokki ɓiɗɗo maako innde mawnde: To-Alla-taaki-muttaaki-ko hooreejo-muttaako. Nde ardiiɗo'en nani haala maajum, o nana ko ɗum ɓeydi. O noddi suka on ngam o wartira mo maccuɗo, omo yiɗi holla innde maako naa' goonga. Ammaa o ɓoydi masin maako, o hokki suka on belɗum."
       }
     },
     {
+      "id": "l-anneau-du-chef-p2",
       "art": {
         "sky": "day",
         "ground": "river",
@@ -103,7 +105,7 @@
             "k": "child",
             "x": 48,
             "y": 4,
-            "c": "#00894A"
+            "c": "#C9822B"
           },
           {
             "k": "gold",
@@ -120,6 +122,10 @@
             "k": "palm",
             "x": 90,
             "y": 40
+          },
+          {
+            "k": "king",
+            "x": 12
           }
         ]
       },
@@ -132,6 +138,7 @@
       }
     },
     {
+      "id": "l-anneau-du-chef-p3",
       "art": {
         "sky": "dusk",
         "ground": "village",
@@ -154,6 +161,10 @@
           {
             "k": "jar",
             "x": 80
+          },
+          {
+            "k": "king",
+            "x": 32
           }
         ]
       },
@@ -206,6 +217,7 @@
       }
     },
     {
+      "id": "l-anneau-du-chef-p4",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -239,7 +251,11 @@
           {
             "k": "man-up",
             "x": 86,
-            "c": "#00894A"
+            "c": "#C9822B"
+          },
+          {
+            "k": "king",
+            "x": 30
           }
         ]
       },
@@ -252,6 +268,7 @@
       }
     },
     {
+      "id": "l-anneau-du-chef-p5",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -284,16 +301,16 @@
           {
             "k": "man-up",
             "x": 80,
-            "c": "#00894A"
+            "c": "#C9822B"
           }
         ]
       },
       "text": {
         "fr": "Devant le chef, l'enfant posa l'anneau dans sa main tendue. Le chef le regarda longuement, puis le montra à tous : « C'est bien mon anneau. Ton père a dit vrai : si Dieu ne tue pas, le chef ne peut pas tuer. Ton nom est bon. » Tout le village applaudit, et le chef associa le jeune garçon à la direction du village.",
         "en": "Before the chief, the boy placed the ring in his outstretched hand. The chief looked at it for a long time, then showed it to everyone: “This is indeed my ring. Your father spoke the truth: if God does not kill, the chief cannot kill. Your name is good.” The whole village applauded, and the chief made the young boy one of the village leaders.",
-        "moore": "A sẽn wa n na n kõ a so-pakã, biigã gãda a nugẽ. A gãda a neng n ges-a lame, la b wilg-a neba fãa: \"Yaa sɩd mam nugẽ. Yãmb ba wã goma sɩda. Wẽnnaam sã n ka kʋ, naabã pa tõe n kʋ ye. Yãmb yʋʋr yaa sõma. Tẽngã fãa pẽga, la naabã kɩtame tɩ bi-bɩɩgã lebg tẽn-kãng taoor dãmb a ye.",
-        "dioula": "A y'o kɛ tuma min na a ye masacɛ ka soo kɔnɔ. A y'a filɛ ka mɛn, o kɔ a y'a yira bɛɛ la ko: \"Nin ye ne ka bolokunnaden yɛrɛ lo ye. Aw facɛ ka kuma ye tiɲɛ ye. Ni Ala ma mɔgɔ faga, kuntigi tɛ se k'a faga fana. I tɔgɔ ka ɲi. Dugu mɔgɔw bɛɛ ye teriya kɛ, ani kuntigi y'o kanbeleba sigi dugu ɲamɔgɔ dɔ nɔɔ na.",
-        "fulfulde": "Ɓiɗɗo on waɗi limce nder juuɗe maako yeeso mawɗo. Mawɗo ɗon ndaara ɗum wakkati ɗuɗɗum, nden o holliɗum yimɓe fuu: Ɗum woni ɓuɓɓugo am. Baabiraawo mon wi'i goonga: to Allah maayataa, mawɗo maako waawaa warugo. Innde maaɗa booɗɗum. Yimɓe nder gariiri fuu ɓe ngolla, nden mawɗo gariiri waɗi suka on go'oto ardiiɓe gariiri ndin."
+        "moore": "A sẽn wa n na n kõ a so-pakã, biigã gãda a nugẽ. A gãda a neng n ges-a lame, la b wilg-a neba fãa: \"Yaa sɩd mam nugẽ. Yãmb ba wã goma sɩda, a sã n pa kʋʋd nebã, naabã pa tõe n kʋ ye. Yãmb yʋʋr yaa sõma. Tẽngã fãa pẽga, la naabã kɩtame tɩ bi-bɩɩgã lebg tẽn-kãng taoor dãmb a ye.",
+        "dioula": "A y'o kɛ tuma min na a ye masacɛ ka soo kɔnɔ. A y'a filɛ ka mɛn, o kɔ a y'a yira bɛɛ la ko: \"Nin ye ne ka bolokunnaden yɛrɛ lo ye. Aw facɛ ka kuma ye tiɲɛ ye. N'o tɛ, kuntigi tɛ se ka mɔgɔ faga. I tɔgɔ ka ɲi. Dugu mɔgɔw bɛɛ ye teriya kɛ, ani kuntigi y'o kanbeleba sigi dugu ɲamɔgɔ dɔ nɔɔ na.",
+        "fulfulde": "Ɓiɗɗo on waɗi limce nder juuɗe maako yeeso mawɗo. Mawɗo ɗon ndaara ɗum wakkati ɗuɗɗum, nden o holliɗum yimɓe fuu: Ɗum woni ɓuɓɓugo am. Baabiraawo mooɗon wi'i goonga. To Alla maayataa, mawɗo'en boo mbaawataa maayugo. Innde maaɗa booɗɗum. Yimɓe nder gariiri fuu ɓe ngolla, nden mawɗo gariiri waɗi suka on go'oto ardiiɓe gariiri ndin."
       }
     }
   ],

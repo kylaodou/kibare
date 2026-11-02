@@ -10,9 +10,10 @@
   --y-red: #7c3109;          /* brun banco : couleur principale */
   --y-red-ink: #6a2907;
   --y-red-soft: #f8ece3;
-  --y-green: #009e49;        /* vert de la bande tissée : succès, validation */
-  --y-green-ink: #00703c;
-  --y-green-soft: #e3f4ea;
+  /* aucune couleur verte : les anciens jetons « green » portent l'ocre foncé (succès, validation) */
+  --y-green: #b4581a;
+  --y-green-ink: #8a4210;
+  --y-green-soft: #fdf1e3;
   --y-yellow: #fbb117;       /* étoile */
   --y-yellow-ink: #8a5a00;
   --y-yellow-soft: #fff4dc;
@@ -45,12 +46,13 @@
   --font-story: 'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
 
   --header-h: 72px;
-  --container: 1240px;
+  --container: 90vw; /* le contenu occupe 90 % de la largeur */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 
   --pattern-danfani: url('/patterns/dan-fani.svg');
   --pattern-tiebele: url('/patterns/tiebele.svg');
   --pattern-bogolan: url('/patterns/bogolan.svg');
+  --pattern-bogolan-light: url('/patterns/bogolan-light.svg');
 
   color-scheme: light;
 }
@@ -59,9 +61,9 @@
   --y-red: #e69135;
   --y-red-ink: #f0a65a;
   --y-red-soft: #3a2414;
-  --y-green: #27b06b;
-  --y-green-ink: #5fd396;
-  --y-green-soft: #14301f;
+  --y-green: #e69135;
+  --y-green-ink: #f0a65a;
+  --y-green-soft: #3a2414;
   --y-yellow: #fbb117;
   --y-yellow-ink: #fbb117;
   --y-yellow-soft: #3a2c0c;
@@ -181,16 +183,8 @@ button {
 /* ---------- utilitaires de mise en page ---------- */
 
 .container {
-  width: 100%;
-  max-width: var(--container);
+  width: 90%;
   margin-inline: auto;
-  padding-inline: 20px;
-}
-
-@media (min-width: 768px) {
-  .container {
-    padding-inline: 32px;
-  }
 }
 
 .section {
@@ -376,8 +370,10 @@ button {
   }
 }
 
+/* carte : fond blanc à signes bogolan discrets, bordure simple */
 .card {
-  background: var(--surface);
+  position: relative;
+  background: var(--surface) var(--pattern-bogolan-light) repeat;
   border: 1px solid var(--border);
   border-radius: var(--radius-l);
 }
@@ -436,12 +432,24 @@ button {
   max-width: calc(100vw - 32px);
 }
 
+/* messages en haut à droite, juste sous l'en-tête collant (ils ne masquent ni le menu ni l'avatar) */
+.p-toast.p-toast-top-right {
+  top: calc(var(--header-h, 72px) + 12px) !important;
+  right: 16px !important;
+}
+
 .p-dialog .p-dialog-title {
   font-family: var(--font-display);
   font-size: 1.35rem;
 }
 
 /* ---------- Leaflet ---------- */
+
+/* les panneaux Leaflet font 0 px de large : les SVG des panneaux personnalisés ne doivent pas être bridés */
+.leaflet-container svg {
+  max-width: none !important;
+  max-height: none !important;
+}
 
 .leaflet-container {
   font-family: var(--font-body);
@@ -510,7 +518,7 @@ button {
   }
 }
 
-.y-pin-conte { --pin: var(--y-green); }
+.y-pin-conte { --pin: var(--y-ink); }
 .y-pin-recit { --pin: var(--y-ochre); }
 
 @keyframes pin-bounce {
@@ -521,8 +529,10 @@ button {
 .y-label {
   padding: 3px 9px;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--surface) 88%, transparent);
-  color: var(--text-2);
+  /* fond blanc plein : les noms restent lisibles même quand une région est sélectionnée */
+  background: #ffffff;
+  color: var(--y-ink);
+  box-shadow: 0 1px 3px rgb(30 22 17 / 0.18);
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 700;
@@ -536,7 +546,7 @@ button {
     color: #fff;
   }
   &.dim {
-    opacity: 0.35;
+    color: var(--text-2);
   }
 }
 
@@ -566,4 +576,76 @@ button {
 .y-name-wrap .y-river {
   position: absolute;
   transform: translate(-50%, -50%);
+}
+
+/* états vides : toujours centrés */
+.empty,
+.empty-line,
+td.empty {
+  text-align: center !important;
+  justify-content: center;
+  color: var(--text-3);
+}
+td.empty {
+  padding: 32px 16px !important;
+}
+
+/* squelettes de chargement : aplat qui pulse (aucun dégradé) */
+.skeleton {
+  display: block;
+  border-radius: var(--radius);
+  background: var(--surface-3);
+  animation: skeleton-pulse 1.3s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  50% { opacity: 0.45; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton { animation: none; }
+}
+
+/* niveaux de détail de la carte */
+.y-label.small {
+  padding: 2px 7px;
+  font-size: 10px;
+}
+.y-city {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  text-shadow: 0 0 3px #fff, 0 0 3px #fff;
+  pointer-events: none;
+  transform: translateX(7px);
+
+  i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--y-ochre);
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
+  }
+  &.big {
+    font-size: 12px;
+    i {
+      width: 13px;
+      height: 13px;
+      background: var(--y-red);
+    }
+  }
+}
+.city-tip {
+  font-weight: 700;
+  font-size: 11px;
+  &.big {
+    font-size: 12px;
+    color: var(--y-red);
+  }
 }

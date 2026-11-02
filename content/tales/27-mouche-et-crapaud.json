@@ -1,7 +1,7 @@
 {
   "slug": "la-mouche-maconne-et-le-crapaud",
   "type": "conte",
-  "region": "plateau-central",
+  "region": "oubri",
   "place": "Zorgho",
   "coords": [
     12.25,
@@ -53,6 +53,7 @@
   },
   "scenes": [
     {
+      "id": "la-mouche-maconne-et-le-crapaud-p1",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -89,6 +90,7 @@
       }
     },
     {
+      "id": "la-mouche-maconne-et-le-crapaud-p2",
       "art": {
         "sky": "day",
         "ground": "village",
@@ -159,6 +161,7 @@
       }
     },
     {
+      "id": "la-mouche-maconne-et-le-crapaud-p3",
       "art": {
         "sky": "dusk",
         "ground": "lake",

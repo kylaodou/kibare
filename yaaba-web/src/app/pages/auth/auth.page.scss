@@ -11,15 +11,35 @@
   position: relative;
   display: none;
   overflow: hidden;
-  background: #ffffff;
   border-right: 1px solid var(--border);
+  background: url('/brand/auth-bg.webp') center / cover no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(244 241 237 / 0.84) var(--pattern-bogolan-light) repeat;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   @media (min-width: 960px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    min-height: 100%;
     gap: 28px;
-    padding: 48px clamp(32px, 5vw, 72px);
+    padding: 96px clamp(32px, 5vw, 72px) 48px;
   }
 
   app-scene-art {
@@ -29,6 +49,16 @@
     overflow: hidden;
     box-shadow: var(--shadow-3);
   }
+}
+
+.v-logo {
+  position: absolute !important;
+  top: 24px;
+  left: clamp(32px, 5vw, 72px);
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: var(--shadow-2);
 }
 
 .quote {
@@ -53,7 +83,9 @@
 
 .panel {
   width: 100%;
-  max-width: 520px;
+  /* le formulaire occupe 90 % de sa colonne */
+  max-width: none;
+  width: 90%;
   margin: 0 auto;
   padding: clamp(28px, 6vw, 64px) 24px;
 
@@ -207,27 +239,65 @@ form {
   }
 }
 
-.perks {
-  list-style: none;
-  padding: 18px 0 0;
-  margin: 20px 0 0;
-  border-top: 1px solid var(--border);
-  display: grid;
-  gap: 8px;
-  font-size: 0.9rem;
-  color: var(--text-2);
-  i {
-    width: 22px;
-    color: var(--y-ochre);
+
+.forgot {
+  justify-self: end;
+  align-self: flex-end;
+  margin-top: 4px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--y-red);
+  text-decoration: none;
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
   }
 }
 
-.back {
-  display: inline-flex;
-  align-items: center;
+/* étapes du mot de passe oublié */
+.steps {
+  display: flex;
+  gap: 6px;
+  margin: 4px 0 18px;
+  padding: 0;
+  list-style: none;
+  li {
+    flex: 1;
+    height: 5px;
+    border-radius: 3px;
+    background: var(--border);
+    &.on {
+      background: var(--y-red);
+    }
+  }
+}
+
+.code {
+  font-size: 1.6rem !important;
+  letter-spacing: 0.5em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.info {
+  display: flex;
   gap: 8px;
-  margin-top: 24px;
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--y-ochre-soft);
+  font-size: 0.9rem;
+}
+
+.link-btn {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--y-red);
   font-weight: 700;
-  font-size: 0.88rem;
-  color: var(--text-3);
+  cursor: pointer;
+  &:disabled {
+    color: var(--text-3);
+    cursor: default;
+  }
 }

@@ -27,7 +27,7 @@
       <h2><i class="fa-solid fa-stamp"></i> {{ 'pass.collection' | t }}</h2>
       <div class="stamp-grid">
         @for (r of regions(); track r.code) {
-          <a class="slot" [class.on]="r.stamped" routerLink="/carte" [queryParams]="{ region: r.code }" [attr.title]="r.name">
+          <button type="button" class="slot" [class.on]="r.stamped" (click)="shown.set(r)" [attr.title]="r.name">
             @if (r.stamped) {
               <svg viewBox="0 0 100 100" aria-hidden="true">
                 <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="4 3" />
@@ -37,11 +37,35 @@
               <i class="fa-solid fa-plus"></i>
             }
             <span>{{ r.name }}</span>
-          </a>
+          </button>
         }
       </div>
     </div>
   </div>
+
+  <!-- un clic sur un tampon : uniquement une fenêtre qui le présente -->
+  <p-dialog [visible]="!!shown()" (visibleChange)="!$event && shown.set(null)" [modal]="true" [dismissableMask]="true"
+    [draggable]="false" [resizable]="false" [style]="{ width: 'min(420px, 92vw)' }" [header]="shown()?.name ?? ''">
+    @if (shown(); as r) {
+      <div class="stamp-view" [class.on]="r.stamped">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="5" stroke-dasharray="7 5" />
+          <circle cx="100" cy="100" r="74" fill="none" stroke="currentColor" stroke-width="2.5" />
+          <path d="M100,48 L112,84 L150,84 L120,106 L131,143 L100,121 L69,143 L80,106 L50,84 L88,84Z" fill="currentColor" />
+          <path id="arc-top" d="M40,100 A60,60 0 0 1 160,100" fill="none" />
+          <text font-size="15" font-weight="800" letter-spacing="2" fill="currentColor"><textPath href="#arc-top" startOffset="50%" text-anchor="middle">{{ r.name.toUpperCase() }}</textPath></text>
+        </svg>
+        <p class="sv-cap">{{ r.capital }}</p>
+        <p class="sv-status">
+          @if (r.stamped) {
+            <i class="fa-solid fa-circle-check"></i> {{ 'pass.stampOn' | t }}
+          } @else {
+            <i class="fa-regular fa-circle"></i> {{ 'pass.stampOff' | t }}
+          }
+        </p>
+      </div>
+    }
+  </p-dialog>
 
   <h2 class="sec-title">{{ 'pass.badgesTitle' | t }}</h2>
   <div class="badges">

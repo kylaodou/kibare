@@ -15,6 +15,9 @@ import bf.yaaba.repo.Repositories.TaleRepository;
 import bf.yaaba.repo.Repositories.UserRepository;
 import bf.yaaba.web.Dto.AudioView;
 import bf.yaaba.web.Dto.ContributorView;
+import bf.yaaba.web.Dto.MediaView;
+import bf.yaaba.web.Dto.PageView;
+import bf.yaaba.web.Dto.TaleOption;
 import bf.yaaba.web.Dto.StatsView;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -29,7 +32,12 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -263,11 +271,121 @@ public class TaleService {
         } else {
             n.put("slug", t.getSlug());
         }
-        n.remove(List.of("views", "likes", "audio", "published", "origin"));
+        n.remove(List.of("views", "likes", "audio", "published", "origin", "age", "rights"));
+        ensureSceneIds(n);
         apply(t, n);
         if (body.has("published")) t.setPublished(body.path("published").asBoolean(true));
         tales.save(t);
+        // voix des paragraphes supprimés : retirées dans la même transaction
+        Set<String> kept = sceneIds(n);
+        for (AudioTrack a : audio.findByTaleSlugOrderByCreatedAtAsc(t.getSlug())) {
+            if (a.getSceneId() != null && !kept.contains(a.getSceneId())) {
+                audio.delete(a);
+                if (a.getContributionId() == null) storage.delete(a.getFileName());
+            }
+        }
         return adminGet(t.getSlug());
+    }
+
+    /** Chaque paragraphe reçoit un identifiant stable s'il n'en a pas (les voix s'y rattachent). */
+    private void ensureSceneIds(ObjectNode n) {
+        Set<String> seen = new java.util.HashSet<>();
+        for (JsonNode s : n.path("scenes")) {
+            if (!(s instanceof ObjectNode o)) continue;
+            String id = o.path("id").asText("");
+            if (id.isBlank() || !id.matches("[A-Za-z0-9._-]{1,140}") || !seen.add(id)) {
+                id = "p-" + UUID.randomUUID();
+                o.put("id", id);
+                seen.add(id);
+            }
+        }
+    }
+
+    private static Set<String> sceneIds(JsonNode n) {
+        Set<String> ids = new java.util.LinkedHashSet<>();
+        for (JsonNode s : n.path("scenes")) if (s.hasNonNull("id")) ids.add(s.path("id").asText());
+        return ids;
+    }
+
+    /** Paragraphes d'un conte, dans l'ordre : identifiant → textes par langue. */
+    @Transactional(readOnly = true)
+    public Map<String, JsonNode> sceneTexts(String slug) {
+        Map<String, JsonNode> out = new LinkedHashMap<>();
+        tales.findById(slug).ifPresent(t -> {
+            for (JsonNode s : parse(t.getContent()).path("scenes")) out.put(s.path("id").asText(""), s.path("text"));
+        });
+        return out;
+    }
+
+    /* ------------------------------------------ listes paginées (serveur) */
+
+    private static final Map<String, String> TALE_SORTS = Map.of(
+            "createdAt", "createdAt", "title", "title", "region", "region", "views", "views", "likes", "likes", "published", "published");
+
+    /** Tri « champ,asc|desc » limité à une liste blanche ; par défaut, du plus récent au plus ancien. */
+    static Sort sort(String spec, Map<String, String> allowed, Sort fallback) {
+        if (spec == null || spec.isBlank()) return fallback;
+        String[] p = spec.split(",");
+        String field = allowed.get(p[0].strip());
+        if (field == null) return fallback;
+        Sort.Direction dir = p.length > 1 && p[1].strip().equalsIgnoreCase("asc") ? Sort.Direction.ASC : Sort.Direction.DESC;
+        return Sort.by(dir, field);
+    }
+
+    static String like(String q) {
+        return q == null || q.isBlank() ? "" : "%" + q.strip().toLowerCase(Locale.ROOT) + "%";
+    }
+
+    static PageRequest pageable(int page, int size, Sort sort) {
+        return PageRequest.of(Math.max(0, page), Math.min(100, Math.max(1, size)), sort);
+    }
+
+    @Transactional(readOnly = true)
+    public PageView<Map<String, Object>> adminPage(String q, String origin, int page, int size, String sortSpec) {
+        Sort sort = sort(sortSpec, TALE_SORTS, Sort.by(Sort.Order.desc("createdAt"), Sort.Order.desc("position")));
+        Page<Tale> p = tales.search(like(q), origin == null ? "" : origin, pageable(page, size, sort));
+        return new PageView<>(p.getContent().stream().map(this::adminRow).toList(), p.getTotalElements(), p.getNumber(), p.getSize(), null);
+    }
+
+    private Map<String, Object> adminRow(Tale t) {
+        JsonNode c = parse(t.getContent());
+        Map<String, Object> m = new LinkedHashMap<>();
+        m.put("slug", t.getSlug());
+        m.put("title", c.path("i18n").path("fr").path("title").asText(t.getSlug()));
+        m.put("type", t.getType());
+        m.put("region", t.getRegion());
+        m.put("language", t.getLanguage());
+        m.put("origin", t.getOrigin());
+        m.put("published", t.isPublished());
+        m.put("featured", t.isFeatured());
+        m.put("views", t.getViews());
+        m.put("likes", t.getLikes());
+        m.put("comments", comments.countByTaleSlugAndStatus(t.getSlug(), Comment.Status.VISIBLE));
+        m.put("audio", audio.findByTaleSlugOrderByCreatedAtAsc(t.getSlug()).size());
+        m.put("languages", iterable(c.path("i18n").fieldNames()));
+        m.put("createdAt", t.getCreatedAt());
+        return m;
+    }
+
+    /** Recalcule la colonne titre (recherche, tri) depuis le contenu JSON. */
+    @Transactional
+    public void refreshTitle(Tale t) {
+        t.setTitle(parse(t.getContent()).path("i18n").path("fr").path("title").asText(t.getSlug()));
+        tales.save(t);
+    }
+
+    /** Sélecteur de contes : recherche et chargement page par page. */
+    @Transactional(readOnly = true)
+    public PageView<TaleOption> options(String q, int page, int size) {
+        Page<Tale> p = tales.options(like(q), pageable(page, size, Sort.by("title")));
+        return new PageView<>(p.getContent().stream().map(t -> new TaleOption(t.getSlug(), t.getTitle(), t.getRegion())).toList(),
+                p.getTotalElements(), p.getNumber(), p.getSize(), null);
+    }
+
+    /** Vidéo d'illustration d'un paragraphe : 10 Mo au plus, vérifiés ici quel que soit le client. */
+    public MediaView uploadVideo(MultipartFile file) {
+        StorageService.Stored s = storage.storeVideo(file);
+        return new MediaView(StorageService.mediaUrl(s.fileName()), s.contentType(), file.getSize());
     }
 
     @Transactional
@@ -280,11 +398,39 @@ public class TaleService {
         tales.delete(t);
     }
 
+    /** Voix d'un paragraphe (sceneId) ou, sans sceneId, du conte entier. */
     @Transactional
-    public AudioView addAudio(String slug, String lang, String narrator, MultipartFile file) {
-        find(slug);
+    public AudioView addAudio(String slug, String sceneId, String lang, String narrator, MultipartFile file) {
+        Tale t = find(slug);
+        if (narrator == null || narrator.isBlank()) throw new IllegalArgumentException("Le nom du conteur est obligatoire");
+        if (sceneId != null && !sceneId.isBlank() && !sceneIds(parse(t.getContent())).contains(sceneId))
+            throw new IllegalArgumentException("Ce paragraphe n'existe pas dans le conte");
         StorageService.Stored stored = storage.storeAudio(file);
-        return AudioView.of(audio.save(new AudioTrack(slug, lang, narrator, stored.fileName(), stored.contentType(), null)));
+        AudioTrack a = new AudioTrack(slug, lang, narrator.strip(), stored.fileName(), stored.contentType(), null);
+        a.setSceneId(sceneId == null || sceneId.isBlank() ? null : sceneId);
+        return AudioView.of(audio.save(a));
+    }
+
+    /**
+     * Anciennes voix communautaires (un fichier par paragraphe dans « segments ») :
+     * converties en une piste par paragraphe, rattachée à l'identifiant de la scène.
+     */
+    @Transactional
+    public int expandLegacyTracks() {
+        int n = 0;
+        for (AudioTrack a : audio.findAll()) {
+            if (a.getSceneId() != null || a.getSegments() == null || a.getSegments().isBlank()) continue;
+            List<String> ids = new ArrayList<>(sceneTexts(a.getTaleSlug()).keySet());
+            String[] files = a.getSegments().split(",");
+            for (int i = 0; i < files.length && i < ids.size(); i++) {
+                AudioTrack s = new AudioTrack(a.getTaleSlug(), a.getLang(), a.getNarrator(), files[i], a.getContentType(), a.getContributionId());
+                s.setSceneId(ids.get(i));
+                audio.save(s);
+                n++;
+            }
+            audio.delete(a);
+        }
+        return n;
     }
 
     @Transactional
@@ -310,6 +456,7 @@ public class TaleService {
         t.setPlace(n.path("place").asText(""));
         t.setPeople(n.path("people").asText(""));
         t.setLanguage(n.path("language").asText("fr"));
+        t.setTitle(n.path("i18n").path("fr").path("title").asText(""));
         t.setLatitude(n.path("coords").path(0).asDouble(12.37));
         t.setLongitude(n.path("coords").path(1).asDouble(-1.52));
         t.setDuration(n.path("duration").asInt(5));

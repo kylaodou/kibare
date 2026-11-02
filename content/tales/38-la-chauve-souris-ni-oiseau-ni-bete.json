@@ -1,0 +1,334 @@
+{
+  "slug": "la-chauve-souris-ni-oiseau-ni-bete",
+  "type": "conte",
+  "region": "bankui",
+  "place": "Dédougou",
+  "coords": [
+    12.46,
+    -3.46
+  ],
+  "people": "Bwaba",
+  "language": "bwamu",
+  "duration": 4,
+  "age": 5,
+  "featured": false,
+  "cover": 2,
+  "tags": [
+    "animaux",
+    "pourquoi",
+    "loyauté",
+    "nuit"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "La chauve-souris, ni oiseau ni bête",
+      "subtitle": "Pourquoi elle vole la nuit",
+      "summary": "Pendant la guerre entre les oiseaux et les bêtes, la chauve-souris change de camp à chaque victoire. Quand la paix revient, plus personne ne veut d'elle.",
+      "moral": "Qui change de camp au gré du vent finit seul."
+    },
+    "en": {
+      "title": "The Bat, Neither Bird Nor Beast",
+      "subtitle": "Why it flies at night",
+      "summary": "During the war between birds and beasts, the bat switches sides after every victory. When peace returns, nobody wants her any more.",
+      "moral": "Those who change sides with the wind end up alone."
+    },
+    "moore": {
+      "title": "Bʋ-kẽemdã, bõn-buudã la rũngã pa ye",
+      "subtitle": "Bõe yĩng t'a yɩgd yʋngo?",
+      "summary": "Sodaag fãa sẽn wa n be wã, a sã n tõogd bõn-yãgdbã la rũmsã sʋka, a pa lebgd a poorẽ ye. La laafɩ sã n wa lebgẽ, ned baa a yen pa na n le bao-a ye.",
+      "moral": "Neb nins sẽn toeemd b poorẽ wã baasda ne b mens."
+    },
+    "dioula": {
+      "title": "Dɔgɔtɔrɔ tɛ se ka kɔnɔ wala kongosogo ye.",
+      "subtitle": "Mun na a be manamana suu kɔnɔ?",
+      "summary": "Ni kɛlɛ be kɛra kɔnɔw ni kongosogow cɛ, u ye see sɔrɔ tuma o tuma, u be ɲɔgɔn weele. Ni hɛɛrɛ kɔsegira, mɔgɔ si tɛna a fɛ tugun.",
+      "moral": "Mɔgɔ minw be yɛlɛmani don fɔɲɔ fɛ, olu laban ye kelen ye."
+    },
+    "fulfulde": {
+      "title": "Bat, Walaa Njanta wala Dabba",
+      "subtitle": "Ngam ɗume o ɗon ndilli jemma",
+      "summary": "Nder konu hakkunde colli e dabbaaji, batti'en ɗon kolli dow kooɗume ɓe maayan. To jam wartii, walaa mo yiɗi.",
+      "moral": "Yimɓe ɓe ngaɗata ko woni e daande, ɗiin ɗon njokki bee hoore maɓɓe."
+    }
+  },
+  "scenes": [
+    {
+      "id": "la-chauve-souris-ni-oiseau-ni-bete-p1",
+      "art": {
+        "sky": "day",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "bird-small",
+            "x": 24,
+            "y": 40
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 36,
+            "s": 1.2
+          },
+          {
+            "k": "lion",
+            "x": 66,
+            "s": 0.8,
+            "flip": true
+          },
+          {
+            "k": "hyena",
+            "x": 84,
+            "flip": true
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un jour, les oiseaux et les bêtes à quatre pattes se disputèrent la savane du Mouhoun. La dispute tourna à la guerre. Chacun devait choisir son camp.",
+        "en": "One day the birds and the four-legged beasts quarrelled over the savannah of the Mouhoun. The quarrel turned into war. Everyone had to choose a side.",
+        "moore": "Daar a ye, bõn-buudã ne b rũms nins sẽn tar nao a naas n zabd Mohoun wã saʋnẽ. Bʋ-bɩɩgã lebga zabr ye. B fãa ra segd n yãka b poorẽ.",
+        "dioula": "Loon dɔ, kɔnɔw ni kongosogo naani tun be kɛlɛ kɛ Mouhoun ka kongokolon kɔnɔ. O kɛlɛ yɛlɛmana ka kɛ marifakɛlɛ ye. Mɔgɔw bɛɛ tun ka ɲi k'u yɛrɛ di.",
+        "fulfulde": "Go'o nyalnde go'oto colli e dabbaaji ɗi nayi koyɗe fuu ɗon haɓana dow saafana nder leydi Mouhoun. Wondiral ngal wayliti haa konu. Koo moye footi suɓugo goɗɗum."
+      }
+    },
+    {
+      "id": "la-chauve-souris-ni-oiseau-ni-bete-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "savanna",
+        "items": [
+          {
+            "k": "bat",
+            "x": 50,
+            "y": 120,
+            "s": 1.6
+          },
+          {
+            "k": "lion",
+            "x": 74,
+            "s": 0.8,
+            "flip": true
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 24,
+            "s": 1.2
+          }
+        ]
+      },
+      "text": {
+        "fr": "La chauve-souris attendit. Quand les bêtes gagnaient, elle disait : « Regardez mes dents et mes poils, je suis des vôtres ! » Quand les oiseaux gagnaient : « Voyez mes ailes, je suis votre sœur ! »",
+        "en": "The bat waited. When the beasts were winning, she said: \"Look at my teeth and my fur, I'm one of you!\" When the birds were winning: \"See my wings, I'm your sister!\"",
+        "moore": "B ra gũuda ne b sẽn na n maan bũmb ningã. Rũngã sã n wa tõogd a naamã, a yeela woto: \"Ges-y m zoobã la m fuugã, mam yaa yãmb ned a ye!\"",
+        "dioula": "O kɔ, a ye n' dɛmɛ. Tuma min na waraw tun be see sɔrɔ, a y'a fɔ ko: \"Aw ye n ɲin ni n fari filɛ, ne fana ye aw dɔ ye\".",
+        "fulfulde": "Baaba ɗonno. Nde dabbaaji ɗon mbaɗi jaalorgal, o wi'i: \"Ndaa njayri yam e ɓalli am, miɗo haani on!\""
+      },
+      "choice": {
+        "q": {
+          "fr": "Est-ce une bonne idée ?",
+          "en": "Is that a good idea?",
+          "moore": "Rẽ yĩnga yaa yam-sõng bɩ?",
+          "dioula": "Yala o ye miiriya ɲuman ye wa?",
+          "fulfulde": "Ɗum woni miijo goɗɗum?"
+        },
+        "options": [
+          {
+            "fr": "Non, il faut être loyal",
+            "en": "No, one must be loyal",
+            "moore": "A Zeova ratame tɩ d tall kɩs-sɩd ne a raabã.",
+            "dioula": "Ayi, mɔgɔ ka kan ka kɛ kantigi ye.",
+            "fulfulde": "Na, neɗɗo waawaa laataade goonɗinɗo"
+          },
+          {
+            "fr": "Oui, c'est malin",
+            "en": "Yes, it's clever",
+            "moore": "A yaa yam soaba.",
+            "dioula": "Ɔnhɔn, o ye hakiritigiya lo ye.",
+            "fulfulde": "Ee, ɗum booɗɗum."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "La ruse ne dure qu'un temps…",
+          "en": "Trickery only lasts so long…",
+          "moore": "Zĩigã kaoosda wakat wʋsgo.",
+          "dioula": "N'i ye mɔgɔ dɔ nɛgɛ, o tɛ se ka mɛn.",
+          "fulfulde": "Fuuɗal ɗon haa wakkati seɗɗa tan..."
+        }
+      }
+    },
+    {
+      "id": "la-chauve-souris-ni-oiseau-ni-bete-p3",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "lion",
+            "x": 30,
+            "s": 0.8
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 46,
+            "s": 1.3
+          },
+          {
+            "k": "elephant",
+            "x": 72,
+            "s": 0.7
+          },
+          {
+            "k": "bat",
+            "x": 50,
+            "y": 160,
+            "s": 1.2
+          }
+        ]
+      },
+      "text": {
+        "fr": "La guerre finit et les deux camps firent la paix autour d'un grand repas. La chauve-souris voulut s'asseoir avec les oiseaux : ils la chassèrent. Elle alla vers les bêtes : elles lui tournèrent le dos.",
+        "en": "The war ended and both sides made peace over a great meal. The bat tried to sit with the birds: they chased her away. She went to the beasts: they turned their backs on her.",
+        "moore": "zabrã saaga, la b rɩka rɩɩb n kɩt tɩ laafɩ zĩnd tẽns a yiibã sʋka. B sẽn da baood n na n zĩnd ne bõn-buudã, b digda a pʋgã. A kẽnga rũngã nengẽ, tɩ b bas-a.",
+        "dioula": "Kɛlɛ bannin kɔ, u ye hɛɛrɛ kɛ dumuniba dɔ kɔnɔ. O kɔ, a tagara sigi ni kɔnɔw ye. U y'a gbɛn ka taga. A tagara sogow fɛ; olugu ka o kɔ don a ra.",
+        "fulfulde": "konu timmi, nden koo ɗiɗo ɓaawo ɗon ɓe njottini jam dow nyaamdu mawnde. Bat wi'i o jooɗii bee colli: ɓe ɗon cembiɗina mo. O yahi to dabbaaji, ɓe ndilli mo."
+      }
+    },
+    {
+      "id": "la-chauve-souris-ni-oiseau-ni-bete-p4",
+      "art": {
+        "sky": "night",
+        "ground": "forest",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "karite",
+            "x": 40,
+            "y": 20,
+            "s": 1.2
+          },
+          {
+            "k": "bat",
+            "x": 40,
+            "y": 150,
+            "s": 1.4
+          },
+          {
+            "k": "owl",
+            "x": 64,
+            "y": 110
+          }
+        ]
+      },
+      "text": {
+        "fr": "Honteuse, la chauve-souris s'envola se cacher dans les arbres. Depuis ce jour, elle dort le jour, la tête en bas, et ne sort qu'à la nuit tombée, quand oiseaux et bêtes ne peuvent plus la voir.",
+        "en": "Ashamed, the bat flew off to hide in the trees. Since that day she sleeps by day, upside down, and only comes out at nightfall, when neither birds nor beasts can see her.",
+        "moore": "A yãndame, tɩ b leb n sig tɩɩsã pʋgẽ. Sẽn sɩng ne a raare, a gãnda wĩndgẽ n sobd a meng n pa tõe n yi ye. A sã n wa beẽ, yʋngo, bõn-buudã la rũngã ka yãend-a ye.",
+        "dioula": "A y'a yɛrɛ dogo yiriw kɔnɔ. Kabini o lon na, a be sinɔgɔ tile fɛ ni kunbiri gban ye. A tɛ bɔ kɛnɛ kan fɔ sufɛ. Hali kɔnɔw, ani kongosogow tɛ se k'a ye tuma min na.",
+        "fulfulde": "Ngam ɓe njamndi, ɓaleere ɗon ƴiwo ngam ɗowu nder leɗɗe. Gila nden nyalnde o ɗaani nder nyalawma, o ɗon ɓadake dow. O wurta tan nde jemma waɗi, sey to colli e leɗɗe mbaawataa yi'ugo mo."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Pourquoi la chauve-souris changeait-elle de camp ?",
+        "en": "Why did the bat keep switching sides?",
+        "moore": "Bõe yĩng tɩ b ra ket n wẽedd taab?",
+        "dioula": "Mun na a tora ka yɛlɛma?",
+        "fulfulde": "Ngam ɗume bat ɗon nyaamda toɗɗaaji?"
+      },
+      "options": [
+        {
+          "fr": "Pour être toujours avec les gagnants",
+          "en": "To always be with the winners",
+          "moore": "Sẽn na n yɩ ne neb nins sẽn paam-b tõogrã wakat fãa.",
+          "dioula": "Ka to ni mɔgɔ minw ye see sɔrɔ, olu ka kan ka kɛ i n'a fɔ ne.",
+          "fulfulde": "To be with the winners always be bee winners forever be be with the winner always be with the winners to be with the wins"
+        },
+        {
+          "fr": "Pour faire la paix",
+          "en": "To make peace",
+          "moore": "D sẽn na n maan laafɩ wã yĩnga",
+          "dioula": "Ka hɛɛrɛ kɛ ni mɔgɔ dɔ ye",
+          "fulfulde": "Ngam waɗugo jam"
+        },
+        {
+          "fr": "Par erreur",
+          "en": "By mistake",
+          "moore": "Yaa ne yel-wẽnde.",
+          "dioula": "O tun ye fili lo ye.",
+          "fulfulde": "Ngam hakke"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Quand sort la chauve-souris ?",
+        "en": "When does the bat come out?",
+        "moore": "Wakat bʋg la b na n yiis-a?",
+        "dioula": "O tuma na, a bena bɔ tuma juman?",
+        "fulfulde": "To nde batol ngol wurti?"
+      },
+      "options": [
+        {
+          "fr": "La nuit",
+          "en": "At night",
+          "moore": "Zĩigẽ wã,",
+          "dioula": "Suu fɛ,",
+          "fulfulde": "Nder jemma"
+        },
+        {
+          "fr": "À midi",
+          "en": "At noon",
+          "moore": "Zĩigẽ wã,",
+          "dioula": "Tilefɛ",
+          "fulfulde": "Ha wakkati noon"
+        },
+        {
+          "fr": "Jamais",
+          "en": "Never",
+          "moore": "Pa bao n bãng ye.",
+          "dioula": "Tuma si tɛ",
+          "fulfulde": "Walaa koo goɗɗum"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Mouhoun",
+      "lang": "fr",
+      "def": {
+        "fr": "Le plus long fleuve du Burkina Faso, autrefois appelé Volta Noire.",
+        "en": "Burkina Faso's longest river, formerly called the Black Volta.",
+        "moore": "Ko-kãsengã sẽn yaa kãseng n yɩɩdã Burkina Faso, b sẽn da boond tɩ Black Volta wã.",
+        "dioula": "Burkina Faso baji minw ka jan, u tun b'u weele ko Volta finmanw.",
+        "fulfulde": "Nguurdi ɓurɗi mawnugo Burkina Faso, ko ɗum noddaama Black Volta."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte étiologique répandu dans toute l'Afrique de l'Ouest (la chauve-souris entre oiseaux et bêtes), également connu dans la tradition ésopique. Version écrite pour KIBARE, située en pays bwaba.",
+    "en": "A \"why\" tale found throughout West Africa (the bat between birds and beasts), also known in the Aesopic tradition. Version written for KIBARE, set in Bwaba country."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

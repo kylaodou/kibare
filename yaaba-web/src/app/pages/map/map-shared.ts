@@ -9,14 +9,13 @@ export const REGION_TONES_DARK = ['#5A4F40', '#625645', '#574C3E', '#675A48', '#
 export const COLORS = {
   red: '#E69135', // sélection : ocre
   yellow: '#FBB117',
-  green: '#009E49',
   brown: '#7C3109',
   ochre: '#E69135',
 };
 
 export const TYPE_COLOR: Record<string, string> = {
   legende: COLORS.brown,
-  conte: COLORS.green,
+  conte: '#1E1611',
   recit: COLORS.ochre,
 };
 

@@ -1,16 +1,23 @@
 {
   "slug": "la-pintade-et-la-tortue",
   "type": "conte",
-  "region": "plateau-central",
+  "region": "oubri",
   "place": "Ziniaré",
-  "coords": [12.58, -1.3],
+  "coords": [
+    12.58,
+    -1.3
+  ],
   "people": "Mossi",
   "language": "moore",
   "duration": 4,
   "age": 4,
   "featured": false,
   "cover": 0,
-  "tags": ["pardon", "amitié", "animaux"],
+  "tags": [
+    "pardon",
+    "amitié",
+    "animaux"
+  ],
   "i18n": {
     "fr": {
       "title": "La mère pintade et la tortue",
@@ -23,120 +30,323 @@
       "subtitle": "The refused forgiveness",
       "summary": "Every day the tortoise looks after the chicks of her friend the guinea fowl while she goes to market. One afternoon the tortoise dozes off… and the furious guinea fowl refuses to forgive her.",
       "moral": "Knowing how to forgive a friend's mistake also protects ourselves."
+    },
+    "moore": {
+      "title": "La a Zeova sẽn kõ-b vʋʋsem sõngã zaeebã, b maana bõe?",
+      "subtitle": "B sẽn zãgs sugrã yĩnga",
+      "summary": "Daar fãa, sã n wa zĩ-gũudẽ wã, a zoa sẽn yaa gɛɛndg naaga a kamba. Wĩndg a ye, koom-koglgã ra pa mi n tõe n yãend ye. La a sẽn be sũ-yikrã, a pa rat n kõ-a sugri.",
+      "moral": "D sã n bãng d sẽn tõe n kõ d zoa sugri, rẽ me kogend-d lame."
+    },
+    "dioula": {
+      "title": "Guinée mamamuso ka kɔnɔ ani a ka kurukuru",
+      "subtitle": "U banna yafali ma",
+      "summary": "Loon o loon, torosun b'a teri ka denw kɔrɔsi. O ye a muso ka denɲɛnin ye. Loon dɔ wulafɛ, torosun nin be sinɔgɔra. ani a dimininba tɛ sɔn k'a yafa.",
+      "moral": "N'an be yafa an teri dɔ ma, o b'an tanga fana."
+    },
+    "fulfulde": {
+      "title": "Mama Guinea Fowl e Tortuise",
+      "subtitle": "Demmbe yaafugo",
+      "summary": "Ko nyalnde kala tortugol ɗon coki ɓikkoy marɗo maako, go'o guinea fool, nde o yaaki to kasu. Nder nyalnde go'o nder nyalawma, tortugo ɗon ɗaami... nden ɓeynguure boo ɗon njaɓa yaafugo mo.",
+      "moral": "To en anndi no min yaafi nyawɗo hakke, ɗum wallinan en."
     }
   },
   "scenes": [
     {
+      "id": "la-pintade-et-la-tortue-p1",
       "art": {
         "sky": "day",
         "ground": "lake",
         "items": [
-          { "k": "sun", "x": 82, "y": 300 },
-          { "k": "guinea-fowl", "x": 30, "s": 1.6 },
-          { "k": "partridge", "x": 40, "s": 0.8 },
-          { "k": "partridge", "x": 46, "s": 0.7 },
-          { "k": "tortoise", "x": 62, "s": 1.4 },
-          { "k": "acacia", "x": 88, "y": 28 }
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 30,
+            "s": 1.6
+          },
+          {
+            "k": "partridge",
+            "x": 40,
+            "s": 0.8
+          },
+          {
+            "k": "partridge",
+            "x": 46,
+            "s": 0.7
+          },
+          {
+            "k": "tortoise",
+            "x": 62,
+            "s": 1.4
+          },
+          {
+            "k": "acacia",
+            "x": 88,
+            "y": 28
+          },
+          {
+            "k": "woman",
+            "x": 12
+          }
         ]
       },
       "text": {
         "fr": "Au bord d'une mare vivaient deux grandes amies : la mère pintade et la tortue. Le marché était loin, très loin. Alors, chaque fois que la pintade partait chercher de quoi manger, elle confiait ses petits à sa voisine. « Veille bien sur eux, je reviens vite ! » « Va tranquille, répondait la tortue, et rapporte-nous quelque chose de bon. »",
-        "en": "Beside a pond lived two great friends: Mother Guinea Fowl and the Tortoise. The market was far, very far away. So whenever the guinea fowl went to look for food, she left her chicks with her neighbour. “Watch over them well, I'll be back soon!” “Off you go,” the tortoise would answer, “and bring us back something good.”"
+        "en": "Beside a pond lived two great friends: Mother Guinea Fowl and the Tortoise. The market was far, very far away. So whenever the guinea fowl went to look for food, she left her chicks with her neighbour. “Watch over them well, I'll be back soon!” “Off you go,” the tortoise would answer, “and bring us back something good.”",
+        "moore": "A Zʋr-dãmb a yiib n da be koom koglg pʋga. B yaa Gʋnẽe wã ne Tʋʋg-kɩɩgã. Zĩ-kãnga ra zãra wʋsgo. Woto yĩnga, sã n wa bao rɩɩb, a ra basda b kom-pugli ne a yagensã. B gũus-y ne bãmba, m na n le waa tao-tao!   B sẽn looge,  Pĩigã ra na n leokame,  la b wa ne bũmb sẽn yaa sõma.",
+        "dioula": "O kɔ, a ye teri fila dɔ sigi u gɛrɛfɛ. U tun ye Gɛrɛkikanw ni Tumuɲan ye. O yɔrɔ tun ka jan. O kama, n'a tagara dumuni ɲini yen, a tun b'a ka denmisɛnw to a sigiɲɔgɔn fɛ. Aw k'aw janto u la koɲuman, ne bena kɔsegi yanni dɔɔni!  Aw kana taga, torosun nin tun be se ka kuma an fɛ. A ye fɛɛn ɲuman dɔ di an ma.",
+        "fulfulde": "Haade poolum, bandiraaɓe ɗiɗo mawɓe njooɗi: Maama Guinea Fowl e Tortuise. Fuuɗorde nden ɗon haa yaasi. Ngam maajum to guinea bird yaaki ɗaɓɓugo nyaamdu, o acci ɓikkoy maako bee gardiiɗo maako. Taaje ɓe boo, mi waroto ɓaawo! Off yahugo maaɗa, turtle jaaboto, E hokkata en ko wooɗi."
       }
     },
     {
+      "id": "la-pintade-et-la-tortue-p2",
       "art": {
         "sky": "dusk",
         "ground": "lake",
         "items": [
-          { "k": "tortoise", "x": 24, "s": 1.4 },
-          { "k": "partridge", "x": 58, "s": 0.7 },
-          { "k": "guinea-fowl", "x": 86, "s": 1.4, "flip": true },
-          { "k": "bush", "x": 40, "y": 10 }
+          {
+            "k": "tortoise",
+            "x": 24,
+            "s": 1.4
+          },
+          {
+            "k": "partridge",
+            "x": 58,
+            "s": 0.7
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 86,
+            "s": 1.4,
+            "flip": true
+          },
+          {
+            "k": "bush",
+            "x": 40,
+            "y": 10
+          }
         ]
       },
       "text": {
         "fr": "Un après-midi brûlant, la tortue, épuisée, ferma les yeux un instant et s'endormit. L'un des petits aperçut sa mère qui revenait au loin et partit tout seul à sa rencontre. Quand la pintade vit son enfant marcher seul près de l'eau, son cœur bondit de colère.",
-        "en": "One scorching afternoon the exhausted tortoise closed her eyes for a moment and fell asleep. One of the chicks saw its mother coming back in the distance and set off alone to meet her. When the guinea fowl saw her little one walking alone near the water, her heart leapt with anger."
+        "en": "One scorching afternoon the exhausted tortoise closed her eyes for a moment and fell asleep. One of the chicks saw its mother coming back in the distance and set off alone to meet her. When the guinea fowl saw her little one walking alone near the water, her heart leapt with anger.",
+        "moore": "Daar a ye, tʋʋlg sẽn da yaa toog wʋsgã kɩtame tɩ b gãe n gõe. A bi-ribl a ye yãa a ma sẽn wa n be yɩɩga, t'a kẽng n tɩ seg-a. A sẽn yã a bi-bilã n kẽnd koomẽ wã, a sũur sãama wʋsgo.",
+        "dioula": "Loon dɔ, a y'a ɲaa tugu dɔɔni ani ka sinɔgɔ. U dɔ y'a bamuso ye yɔrɔjan ka na a kunbɛn. Tuma min na a y'a ka denɲɛnin ye k'a kelen to jii gɛrɛfɛ, dimi donna a la.",
+        "fulfulde": "Go'o nder nyalnde nde ɓeydaaki, tortuɗo mo ɗonno o suufi gite maako ngam wakkati gooto o ɗaani. Gooto nder ɓikkoy yi'i mammu maako wari diga dow, o yahi haa hawti bee maako. Nde guinea bird yi'i ɓiyum ɗon yaha bee maako to ndiyam, ɓernde mum maɓɓiti ngam ngonki."
       },
       "choice": {
-        "q": { "fr": "Que devrait faire la mère pintade ?", "en": "What should Mother Guinea Fowl do?" },
+        "q": {
+          "fr": "Que devrait faire la mère pintade ?",
+          "en": "What should Mother Guinea Fowl do?",
+          "moore": "Bõe la a Maagd-guinea Pĩigã segd n maane?",
+          "dioula": "O tuma na, u ka ɲi ka mun lo kɛ?",
+          "fulfulde": "Ko honɗun Mama Guinee Fowl waɗata?"
+        },
         "options": [
-          { "fr": "Écouter son amie et lui pardonner", "en": "Listen to her friend and forgive her" },
-          { "fr": "La chasser pour toujours", "en": "Drive her away for ever" }
+          {
+            "fr": "Écouter son amie et lui pardonner",
+            "en": "Listen to her friend and forgive her",
+            "moore": "Kelg-y a zoa wã la kõ-y sugri.",
+            "dioula": "A lamɛn a ka teri ma ani yafa a ma.",
+            "fulfulde": "Njaɓu bandiraawo maako boo ngam aafana mo."
+          },
+          {
+            "fr": "La chasser pour toujours",
+            "en": "Drive her away for ever",
+            "moore": "Kẽng-y-yã-a wakat fãa.",
+            "dioula": "A ka taga n'a ye fɔɔ abada.",
+            "fulfulde": "Wondira mo haa foroy."
+          }
         ],
         "answer": 0,
         "reveal": {
           "fr": "Hélas, la pintade n'écouta que sa colère…",
-          "en": "Alas, the guinea fowl listened only to her anger…"
+          "en": "Alas, the guinea fowl listened only to her anger…",
+          "moore": "La a sũ-yikrã bal n da kelgdẽ.",
+          "dioula": "O kama, a diminin tun be.",
+          "fulfulde": "Sabo, go'o ɓannduɗo ko'e maɓɓe ɗon nana tan habaru maako..."
         }
       }
     },
     {
+      "id": "la-pintade-et-la-tortue-p3",
       "art": {
         "sky": "dusk",
         "ground": "savanna",
         "items": [
-          { "k": "guinea-fowl", "x": 30, "s": 1.6 },
-          { "k": "tortoise", "x": 62, "s": 1.3, "flip": true },
-          { "k": "baobab", "x": 86, "y": 26, "s": 0.8 }
+          {
+            "k": "guinea-fowl",
+            "x": 30,
+            "s": 1.6
+          },
+          {
+            "k": "tortoise",
+            "x": 62,
+            "s": 1.3,
+            "flip": true
+          },
+          {
+            "k": "baobab",
+            "x": 86,
+            "y": 26,
+            "s": 0.8
+          }
         ]
       },
       "text": {
         "fr": "« Quelle voisine es-tu donc ? Tu as mis la vie de mes enfants en danger ! » La tortue baissa la tête : « Pardonne-moi, la fatigue m'a vaincue. » Elle s'excusa encore et encore, mais la pintade ne voulut rien entendre et la chassa de chez elle.",
-        "en": "“What kind of neighbour are you? You put my children's lives in danger!” The tortoise lowered her head: “Forgive me, tiredness got the better of me.” She apologised again and again, but the guinea fowl would not listen and drove her away."
+        "en": "“What kind of neighbour are you? You put my children's lives in danger!” The tortoise lowered her head: “Forgive me, tiredness got the better of me.” She apologised again and again, but the guinea fowl would not listen and drove her away.",
+        "moore": "Yãmb yaa naab wa bõe? Yãmb kɩtame tɩ m kambã vɩɩm be yell pʋgẽ! Pĩigã sẽn wa n tãag-a wã wõgemda a zug n yeele:  Kẽngr ne maam, sũ-sãangã tõogame. A kosa sugri naoor wʋsgo, la a pa sak n kelg ye.",
+        "dioula": "I ye mɔgɔ sifa juman lo sigiɲɔgɔn ye? I ye ne deenw niin bila farati la! Kurukuru y'a kuun biri duguma ko: N yafa, sɛgɛn sera n ma. A tun be yafa deli tuma bɛɛ, nka a tun t'a fɛ k'a lamɛn ani a y'a gwɛn ka taga.",
+        "fulfulde": "Ko honɗun woni ɓerɗe mon? On ɗon haɗana yonki ɓikkoy am! Turtle ɗon maaki hoore maako: Fafani yam, yidde ɓuri yam. O yaafanoyi haa o yaafanoyii, ammaa guinea bird naa' nana mo, o wurtini mo."
       }
     },
     {
+      "id": "la-pintade-et-la-tortue-p4",
       "art": {
         "sky": "day",
         "ground": "savanna",
         "items": [
-          { "k": "tortoise", "x": 16, "s": 1.2 },
-          { "k": "monkey", "x": 34, "s": 0.9 },
-          { "k": "hare", "x": 48, "s": 0.9 },
-          { "k": "partridge", "x": 60 },
-          { "k": "elephant", "x": 80, "s": 0.7 },
-          { "k": "guinea-fowl", "x": 96, "s": 1.3, "flip": true }
+          {
+            "k": "tortoise",
+            "x": 16,
+            "s": 1.2
+          },
+          {
+            "k": "monkey",
+            "x": 34,
+            "s": 0.9
+          },
+          {
+            "k": "hare",
+            "x": 48,
+            "s": 0.9
+          },
+          {
+            "k": "partridge",
+            "x": 60
+          },
+          {
+            "k": "elephant",
+            "x": 80,
+            "s": 0.7
+          },
+          {
+            "k": "guinea-fowl",
+            "x": 96,
+            "s": 1.3,
+            "flip": true
+          }
         ]
       },
       "text": {
         "fr": "Triste, la tortue alla trouver tous les animaux de la brousse : le singe, le lièvre, la perdrix, et même l'éléphant. Un à un, ils vinrent plaider sa cause auprès de la pintade. Mais la pintade resta fermée comme une calebasse bouchée : elle refusa tout pardon.",
-        "en": "Saddened, the tortoise went to see all the animals of the bush: the monkey, the hare, the partridge and even the elephant. One by one they came to plead her case with the guinea fowl. But the guinea fowl stayed shut like a stoppered calabash: she refused all forgiveness."
+        "en": "Saddened, the tortoise went to see all the animals of the bush: the monkey, the hare, the partridge and even the elephant. One by one they came to plead her case with the guinea fowl. But the guinea fowl stayed shut like a stoppered calabash: she refused all forgiveness.",
+        "moore": "A sẽn wa n sãam a sũurã, a kẽnga ne rũms nins fãa sẽn be weoogẽ wã: bõangã, sãnemdã, tãmbã la baa bõn-buudã. B ra waame n na n wilg a sẽn da namsd-a wã. La a pa tol n sak tɩ ned kõ-a sugri.",
+        "dioula": "O kɔ, a tagara kongo kɔnɔ kongosogow bɛɛ filɛ. U kelen kelen nana a ka koo fɔ. Nka, a tora ka to k'a yɛrɛ datugu i ko sinɔgɔ. A banna yafali ma.",
+        "fulfulde": "Wonde ɓeydi, tortugo boo yahi yi'ugo dabbaaji nder duunde: monkey, hare, partridge e koomoy. Gooto go'o ɓe ngari ngam haɓɓaaki dow haala maako bee guinea fowl. Ammaa guinea foofere duumii bana go'o gabbol: o wanyii yaafugo fuu."
       }
     },
     {
+      "id": "la-pintade-et-la-tortue-p5",
       "art": {
         "sky": "dusk",
         "ground": "lake",
         "items": [
-          { "k": "guinea-fowl", "x": 40, "s": 1.6, "flip": true },
-          { "k": "acacia", "x": 14, "y": 26 },
-          { "k": "birds", "x": 70, "y": 250 }
+          {
+            "k": "guinea-fowl",
+            "x": 40,
+            "s": 1.6,
+            "flip": true
+          },
+          {
+            "k": "acacia",
+            "x": 14,
+            "y": 26
+          },
+          {
+            "k": "birds",
+            "x": 70,
+            "y": 250
+          }
         ]
       },
       "text": {
         "fr": "Puis vint le jour où la pintade dut repartir au marché. Son amie n'étant plus là, elle laissa ses petits seuls au bord de la mare. À son retour, la mare était silencieuse : ses petits étaient tombés dans l'eau. Ce jour-là, la pintade comprit trop tard ce que coûte un pardon refusé.",
-        "en": "Then came the day when the guinea fowl had to go back to the market. With her friend gone, she left her chicks alone beside the pond. When she returned, the pond was silent: her little ones had fallen into the water. That day the guinea fowl understood, too late, the cost of refusing to forgive."
+        "en": "Then came the day when the guinea fowl had to go back to the market. With her friend gone, she left her chicks alone beside the pond. When she returned, the pond was silent: her little ones had fallen into the water. That day the guinea fowl understood, too late, the cost of refusing to forgive.",
+        "moore": "La daar n wa ta, tɩ b ra segd n leb sokẽ wã. A zoa sẽn loog n sa wã, a basa b kom-bõonegã ne yẽ bal koom koglgã sɛɛgẽ. A sẽn lebg n wa wã, koom koglgã ra yaa sĩndga: a kom-bõonegã lʋɩɩ koomẽ. Daar kãng, a sẽn pa rat n kõ sugri wã yõod yɩɩg bilfu.",
+        "dioula": "O kɔ, loon dɔ, u tun ka ɲi ka segi lɔgɔfiyɛ la. A ka teri tun ma bɔ yen minkɛ, a y'a deenw to u kelen fari yɔrɔ la. A kɔsegira tuma min na, a ye jii bɔ kɛnɛ kan. A ka denmisɛnw tun benna ji la. O loon yɛrɛ la, a tun ma sɔn ka yafa deli minkɛ, o ye min kɛ a la, a y'o faamu joona.",
+        "fulfulde": "Nden nyalnde nde go'o warti to suuɗorde. Nde o ɗon yahu, o acci suka'en maako bee maɓɓe to poolgu. Nde o warti, poolgu ɗon suuɗa: ɓikkoy maako mballi nder ndiyam. Nder nyalnde maajum, go'o maɓɓinɗo faamude ko ɗum waɗata ngam taa yaafana yimɓe."
       }
     }
   ],
   "quiz": [
     {
-      "q": { "fr": "Pourquoi la tortue n'a-t-elle pas surveillé les petits ?", "en": "Why didn't the tortoise watch the chicks?" },
+      "q": {
+        "fr": "Pourquoi la tortue n'a-t-elle pas surveillé les petits ?",
+        "en": "Why didn't the tortoise watch the chicks?",
+        "moore": "Bõe yĩng tɩ kurt-kãng pa get bi-bõonegã?",
+        "dioula": "Mun na torosun ma sɔn ka sunguruw kɔrɔsi?",
+        "fulfulde": "Ngam ɗume tortugo ɗon ndaara ɓikkoy?"
+      },
       "options": [
-        { "fr": "Elle s'est endormie de fatigue", "en": "She fell asleep from tiredness" },
-        { "fr": "Elle est partie au marché", "en": "She went to the market" },
-        { "fr": "Elle était fâchée", "en": "She was angry" }
+        {
+          "fr": "Elle s'est endormie de fatigue",
+          "en": "She fell asleep from tiredness",
+          "moore": "A ra gãeeda a sẽn da yãbgã yĩnga.",
+          "dioula": "A sɛgɛnna fɔɔ a sunɔgɔra.",
+          "fulfulde": "O ɗaani ngam o ɗon nani"
+        },
+        {
+          "fr": "Elle est partie au marché",
+          "en": "She went to the market",
+          "moore": "A kẽngame n tɩ raagẽ.",
+          "dioula": "A tagara lɔgɔfiyɛ la.",
+          "fulfulde": "O yahi to kasu"
+        },
+        {
+          "fr": "Elle était fâchée",
+          "en": "She was angry",
+          "moore": "A ra sũ-yikame.",
+          "dioula": "A tun diminin lo.",
+          "fulfulde": "O ɗon hawnda."
+        }
       ],
       "answer": 0
     },
     {
-      "q": { "fr": "Qui vient demander pardon pour la tortue ?", "en": "Who comes to ask forgiveness for the tortoise?" },
+      "q": {
+        "fr": "Qui vient demander pardon pour la tortue ?",
+        "en": "Who comes to ask forgiveness for the tortoise?",
+        "moore": "Ãnd n wa kos sugr ne koglgã?",
+        "dioula": "Jɔn lo nana yafa deli torosun kosɔn?",
+        "fulfulde": "Moy wari ngam toriugo yaafuki ngam tortugo?"
+      },
       "options": [
-        { "fr": "Les animaux de la brousse", "en": "The animals of the bush" },
-        { "fr": "Les petits de la pintade", "en": "The guinea fowl's chicks" },
-        { "fr": "Personne", "en": "No one" }
+        {
+          "fr": "Les animaux de la brousse",
+          "en": "The animals of the bush",
+          "moore": "Rõensã rũmsã",
+          "dioula": "Yiriw ka yirituw",
+          "fulfulde": "Dentuɓe nder duunde"
+        },
+        {
+          "fr": "Les petits de la pintade",
+          "en": "The guinea fowl's chicks",
+          "moore": "Gʋd-yãgdã biisi",
+          "dioula": "Gɛninɛ ka tɔnɔw",
+          "fulfulde": "Ɗuum ɓikkoy ɗi guinea fowls"
+        },
+        {
+          "fr": "Personne",
+          "en": "No one",
+          "moore": "Ned ka be ye.",
+          "dioula": "Mɔgɔ si tɛ yen.",
+          "fulfulde": "Walaa goɗɗo."
+        }
       ],
       "answer": 0
     }
@@ -147,7 +357,10 @@
       "lang": "fr",
       "def": {
         "fr": "Oiseau au plumage gris tacheté de blanc, très présent dans les cours et la brousse du Burkina Faso.",
-        "en": "A bird with grey, white-spotted plumage, very common in the yards and bush of Burkina Faso."
+        "en": "A bird with grey, white-spotted plumage, very common in the yards and bush of Burkina Faso.",
+        "moore": "A yaa bõn-buud sẽn tar sãnem, la a yĩn-paalgã yaa pemse. A leb n be Burkĩna Faso tẽn-tẽnsã pʋsẽ.",
+        "dioula": "A be kɛ kɔnɔ ye min fari gwɛman b'a kun na. O ɲɔgɔnna donyɔrɔ ka ca Burkina Faso jamana na.",
+        "fulfulde": "Luttugo bee fuɗnaange, be laabi njanngooji, je ɗon ɗuuɗa nder suudu e nder lesdi Burkina Faso."
       }
     },
     {
@@ -155,12 +368,20 @@
       "lang": "fr",
       "def": {
         "fr": "Petite étendue d'eau qui se remplit à la saison des pluies.",
-        "en": "A small body of water that fills up in the rainy season."
+        "en": "A small body of water that fills up in the rainy season.",
+        "moore": "Ko-kãseng sẽn be koomẽ, la a pid ne saag wakate.",
+        "dioula": "Ji min be fa sanji tuma na, o ye jii dennin dɔ ye.",
+        "fulfulde": "Ɗuum ndiyam ɓii-ɓuuɗam ngal heewi nder sahaa leɗɗe."
       }
     }
   ],
   "source": {
     "fr": "D'après « La mère pintade et la tortue » (conte n° 1), Recueil de contes pour les structures d'éducation préscolaire au Burkina Faso, MENAPLN avec l'appui de l'UNICEF, 2022. Réécriture libre ; le texte original, en français et en langues nationales, est à consulter dans le recueil.",
     "en": "Based on “La mère pintade et la tortue” (tale no. 1), Recueil de contes pour les structures d'éducation préscolaire au Burkina Faso, MENAPLN with support from UNICEF, 2022. Free retelling; the original text, in French and national languages, can be found in the collection."
-  }
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
 }

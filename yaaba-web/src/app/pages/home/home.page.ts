@@ -1,11 +1,13 @@
-import { Component, computed, inject } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, ElementRef, computed, inject, signal, viewChild } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { DataService } from '../../core/data.service';
 import { I18nService, TranslatePipe } from '../../core/i18n.service';
 import { Art } from '../../core/models';
 import { ProgressService } from '../../core/progress.service';
 import { SceneArtComponent } from '../../shared/art/scene-art.component';
-import { MapDot, MiniMapComponent } from '../../shared/mini-map/mini-map.component';
+import { Map2dComponent } from '../map/map2d.component';
+import { Map3dComponent } from '../map/map3d.component';
+import { SkeletonComponent } from '../../shared/skeleton/skeleton.component';
 import { TaleCardComponent, taleText } from '../../shared/tale-card/tale-card.component';
 import { TourService } from '../../shared/tour/tour.service';
 
@@ -20,19 +22,23 @@ const HERO: Art = {
     { k: 'fire', x: 52, y: -6, s: 1.1 },
     { k: 'yaaba-sit', x: 36, y: -6, s: 1.1 },
     { k: 'child-sit', x: 64, y: -6, flip: true, s: 1.1 },
-    { k: 'child-sit', x: 71, y: -10, flip: true, c: '#00894A', s: 1.1 },
+    { k: 'child-sit', x: 71, y: -10, flip: true, c: '#C9822B', s: 1.1 },
     { k: 'child-sit', x: 58, y: -26, flip: true, c: '#D62828', s: 1.15 },
   ],
 };
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, SceneArtComponent, TaleCardComponent, MiniMapComponent, TranslatePipe],
+  imports: [RouterLink, SceneArtComponent, TaleCardComponent, Map2dComponent, Map3dComponent, TranslatePipe, SkeletonComponent],
   templateUrl: './home.page.html',
   styleUrl: './home.page.scss',
 })
-export class HomePage {
+export class HomePage implements AfterViewInit {
   readonly data = inject(DataService);
+  private destroyRef = inject(DestroyRef);
+  private numbers = viewChild<ElementRef<HTMLElement>>('numbers');
+  /** valeurs affichées pendant l'animation de comptage */
+  readonly shown = signal({ tales: 0, regions: 0, languages: 0 });
   readonly i18n = inject(I18nService);
   readonly progress = inject(ProgressService);
   private router = inject(Router);
@@ -47,16 +53,17 @@ export class HomePage {
   });
   readonly todayText = computed(() => taleText(this.today(), this.i18n.lang()));
 
-  readonly featured = computed(() => this.data.tales().filter((t) => t.featured).slice(0, 6));
+  /** 10 histoires : celles mises à la une d'abord, complétées par les autres. */
+  readonly featured = computed(() => {
+    const all = this.data.tales();
+    return [...all.filter((t) => t.featured), ...all.filter((t) => !t.featured)].slice(0, 10);
+  });
   readonly resume = computed(() =>
     this.progress
       .inProgress()
       .map((p) => ({ ...p, tale: this.data.tale(p.slug)! }))
       .filter((p) => p.tale)
       .slice(0, 3),
-  );
-  readonly dots = computed<MapDot[]>(() =>
-    this.data.tales().map((t) => ({ id: t.slug, lat: t.coords[0], lon: t.coords[1], label: taleText(t, this.i18n.lang()).title })),
   );
   readonly nationalLanguages = computed(() => this.data.languages().filter((l) => l.greeting));
   readonly languageCount = computed(() => this.data.languages().filter((l) => l.code !== 'en').length);
@@ -80,7 +87,47 @@ export class HomePage {
     );
   }
 
+  ngAfterViewInit() {
+    const el = this.numbers()?.nativeElement;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((e) => e.isIntersecting)) return;
+        io.disconnect();
+        this.countUp();
+      },
+      { threshold: 0.5 },
+    );
+    io.observe(el);
+    this.destroyRef.onDestroy(() => io.disconnect());
+  }
+
+  /** Les chiffres montent de 0 à leur valeur en 1,6 s (ralenti en fin de course). */
+  private countUp() {
+    const target = { tales: this.data.tales().length, regions: this.data.regions().length, languages: this.languageCount() };
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return this.shown.set(target);
+    const t0 = performance.now();
+    const tick = (now: number) => {
+      const k = Math.min(1, (now - t0) / 1600);
+      const e = 1 - Math.pow(1 - k, 3);
+      this.shown.set({
+        tales: Math.round(target.tales * e),
+        regions: Math.round(target.regions * e),
+        languages: Math.round(target.languages * e),
+      });
+      if (k < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  /** carte de l'accueil : 3D par défaut, bascule 2D possible */
+  readonly mapView = signal<'2d' | '3d'>('3d');
+
   regionClick(code: string) {
-    void this.router.navigate(['/carte'], { queryParams: { region: code } });
+    void this.router.navigate(['/carte'], { queryParams: { region: code, mode: this.mapView() } });
+  }
+
+  openTale(slug: string) {
+    void this.router.navigate(['/contes', slug]);
   }
 }

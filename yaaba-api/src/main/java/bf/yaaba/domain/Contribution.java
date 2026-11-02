@@ -76,6 +76,10 @@ public class Contribution {
     @Column(length = 4000)
     private String segmentFiles;
 
+    /** Paragraphe lu par chaque enregistrement (identifiants de scène, même ordre que segmentFiles). */
+    @Column(length = 4000)
+    private String segmentScenes;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 10)
     private Status status = Status.PENDING;
@@ -117,6 +121,8 @@ public class Contribution {
     public String getAudioFile() { return audioFile; }
     public void setAudioFile(String audioFile) { this.audioFile = audioFile; }
     public String getAudioContentType() { return audioContentType; }
+    public String getSegmentScenes() { return segmentScenes; }
+    public void setSegmentScenes(String segmentScenes) { this.segmentScenes = segmentScenes; }
     public String getSegmentFiles() { return segmentFiles; }
     public void setSegmentFiles(String segmentFiles) { this.segmentFiles = segmentFiles; }
     public void setAudioContentType(String audioContentType) { this.audioContentType = audioContentType; }

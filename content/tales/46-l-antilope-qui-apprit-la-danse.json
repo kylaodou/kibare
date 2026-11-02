@@ -1,0 +1,326 @@
+{
+  "slug": "l-antilope-qui-apprit-la-danse",
+  "type": "conte",
+  "region": "soum",
+  "place": "Pobé-Mengao",
+  "coords": [
+    13.88,
+    -1.75
+  ],
+  "people": "Kurumba",
+  "language": "moore",
+  "duration": 4,
+  "age": 6,
+  "featured": false,
+  "cover": 3,
+  "tags": [
+    "danse",
+    "masques",
+    "animaux",
+    "fête"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "L'antilope qui apprit la danse aux hommes",
+      "subtitle": "D'où vient la danse des cimiers",
+      "summary": "Les hommes de Pobé ne savaient pas danser pour remercier la pluie. Une antilope, sauvée par un enfant, leur offre ses pas les plus légers.",
+      "moral": "La gratitude se partage : un bienfait rendu peut devenir une fête pour tous."
+    },
+    "en": {
+      "title": "The Antelope Who Taught People to Dance",
+      "subtitle": "Where the crest dance comes from",
+      "summary": "The people of Pobé did not know how to dance to thank the rain. An antelope, saved by a child, gives them her lightest steps.",
+      "moral": "Gratitude is shared: a kindness returned can become a celebration for all."
+    },
+    "moore": {
+      "title": "A Antelope sẽn zãms nebã yɩɩlã",
+      "subtitle": "Sẽn yitẽ la b sẽn ki wã yɩɩl yita",
+      "summary": "Pobé nebã ra pa mi n na n yɩɩl n pʋʋs saagã barka ye. Bi-ribl sẽn fãag a nin-soabã, b kõ-a-la a nao-vɩɩs nins fãa.",
+      "moral": "D sũur nooma ne nebã tɩ d sã n wa nong-b lame, b na n yɩɩ sũ-noog neb fãa yĩnga."
+    },
+    "dioula": {
+      "title": "Antilɔpi min ye dansi degi mɔgɔw la",
+      "subtitle": "Dɔnkilila min be bɔ o yɔrɔ la,",
+      "summary": "Pobé dugumɔgɔw tun tɛ dɔnkilila lɔn walisa ka sanji fo. Den dɔ ye kɔnɔkisɛ min kisi, a be tɛmɛ o kan.",
+      "moral": "Mɔgɔ bɛɛ be se ka ninsɔndiya n'u ye ɲumanya kɛ u ye."
+    },
+    "fulfulde": {
+      "title": "Antelope Mo Fuli Yimɓe Dantaade",
+      "subtitle": "To dansi ɓernde ɗon ƴiwo",
+      "summary": "Yimɓe Pobé anndaa no ɓe ngaɗi ngam ceede ndiyam. Antilope, mo sukaajo kisni, hokkata ɓe kuje maako ɓurɗe laaɓugo.",
+      "moral": "Ma'ana ko ɓe ngaɗata: belɗum ɗum hokkata fota waawaa warugo haalde ngam yimɓe fuu."
+    }
+  },
+  "scenes": [
+    {
+      "id": "l-antilope-qui-apprit-la-danse-p1",
+      "art": {
+        "sky": "day",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "sun",
+            "x": 82,
+            "y": 300
+          },
+          {
+            "k": "antelope",
+            "x": 50,
+            "s": 1.2
+          },
+          {
+            "k": "rope",
+            "x": 54
+          },
+          {
+            "k": "child",
+            "x": 30
+          },
+          {
+            "k": "rock",
+            "x": 74
+          }
+        ]
+      },
+      "text": {
+        "fr": "Un jour, le petit Issa trouva une antilope prise dans un piège, entre les rochers de Pobé. Elle tremblait. Malgré la faim de sa famille, Issa défit les cordes et la laissa partir.",
+        "en": "One day little Issa found an antelope caught in a trap among the rocks of Pobé. She was trembling. Despite his family's hunger, Issa undid the ropes and let her go.",
+        "moore": "Daar a ye, Issa yãaga bõn-buud sẽn be Pobé pĩigã sʋka. A ra yɛɛsdame. Baa ne kom sẽn da tar a zakã rãmb wã, Issa basa yẽ no-bãmba n bas-a t'a kẽng.",
+        "dioula": "Loon dɔ, Issa ye kɔnɔkisɛba dɔ sɔrɔ min tun donna farayɔrɔ la Pobé kuluw cɛma. A tun be yɛrɛyɛrɛla. Hali n'a somɔgɔw tun be kɔngɔ bolo, Issa ye juruw foni k'a to a tagara.",
+        "fulfulde": "Go'o go'o Issa ɓiyɗo tawi antelope mo hawti nder kaɓirɗe Pobé. O ɗon kolli. Koo nde saare maako ɗon nyaama, Issa ɓaŋgi ko'e maɓɓo o acci mo."
+      }
+    },
+    {
+      "id": "l-antilope-qui-apprit-la-danse-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "antelope",
+            "x": 60,
+            "s": 1.2,
+            "flip": true
+          },
+          {
+            "k": "child",
+            "x": 36
+          },
+          {
+            "k": "moon",
+            "x": 80,
+            "y": 290
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le soir, l'antilope revint et parla : « Tu m'as rendu la liberté. Je vais t'offrir ce que j'ai de plus précieux : ma danse. » Et elle se mit à bondir avec une grâce que l'enfant n'avait jamais vue.",
+        "en": "That evening the antelope returned and spoke: \"You gave me back my freedom. I will give you what I hold most precious: my dance.\" And she began to leap with a grace the child had never seen.",
+        "moore": "Zĩ-kãng wĩndgẽ, a lebg n waame n yeel woto: \"Yãmb kõo maam m lohorem. Mam na n kõo yãmb bũmb ning mam sẽn tar yõod wʋsg ne-yã: m dansã\". La a sɩngame n lebgd ne bark b sẽn da zɩ n yã.",
+        "dioula": "O suu yɛrɛ la, o tun be kɔsegi ka na a fɔ ko: \"Aw ye n' hɔɔrɔnya. Ne ka dɔnkilila ye ne ta ye\". A y'a daminɛ ka yɛlɛ ni ɲumanya ye, deen tun ma deli k'o kɛ.",
+        "fulfulde": "Nder jemma maajum, antelop ɓooyi o wi'i: \"On hokki yam hakke am. Mi hokkan ma ko mi jogii ɓurɗo mawnugo: dansi am\". O fuɗɗi wurtingol bee booɗɗum ɗi suka on meeɗaayi yi'ugo."
+      },
+      "choice": {
+        "q": {
+          "fr": "Que doit faire Issa ?",
+          "en": "What should Issa do?",
+          "moore": "Bõe la Issa segd n maane?",
+          "dioula": "Issa ka kan ka mun lo kɛ do?",
+          "fulfulde": "Ko Issa waɗata?"
+        },
+        "options": [
+          {
+            "fr": "Apprendre la danse et la partager",
+            "en": "Learn the dance and share it",
+            "moore": "Zãms-y yɩɩlã la y pʋɩ-a.",
+            "dioula": "I ka dansi degi ani k'a fɔ mɔgɔw ye",
+            "fulfulde": "Janngina dansi e jokkondira ɗum"
+          },
+          {
+            "fr": "La garder pour lui seul",
+            "en": "Keep it to himself",
+            "moore": "Bãng-y tɩ b pa na n gom ne yãmb ye.",
+            "dioula": "A to a k'a yɛrɛ tanga o ma.",
+            "fulfulde": "Hokka ɗum hoore maako."
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Issa apprit chaque pas, nuit après nuit…",
+          "en": "Issa learned every step, night after night…",
+          "moore": "Issa zãmsda a sẽn maand bũmb ningã, yʋngo ne yʋngo.",
+          "dioula": "Issa ye koo bɛɛ faamu suu fara suu kan.",
+          "fulfulde": "Issa janngi kala ko o waɗi, jemma e jemma..."
+        }
+      }
+    },
+    {
+      "id": "l-antilope-qui-apprit-la-danse-p3",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "child-up",
+            "x": 40
+          },
+          {
+            "k": "man-up",
+            "x": 56,
+            "c": "#7C3109"
+          },
+          {
+            "k": "drum",
+            "x": 70
+          },
+          {
+            "k": "woman-up",
+            "x": 82
+          }
+        ]
+      },
+      "text": {
+        "fr": "Quand la première pluie tomba, Issa dansa devant tout le village, en imitant les bonds de l'antilope. Les anciens furent émus : « Voilà comment remercier le ciel ! » Tous apprirent la danse.",
+        "en": "When the first rain fell, Issa danced in front of the whole village, imitating the antelope's leaps. The elders were moved: \"That is how to thank the sky!\" Everyone learned the dance.",
+        "moore": "Sa-kãsengã sẽn deng n sa wã, a Issa ra yɩɩla tẽn-kãng nebã fãa taoore. A ra rɩkda antilopã nugẽ wã n kelemd ne b sãnem. Kãsem dãmbã sẽn da wa n be wã kɩtame tɩ b yeel woto: \"Yaa woto la d tõe n pʋʋs yĩngr barka!\" B fãa zãmsame.",
+        "dioula": "Sanji fɔlɔ nana ben tuma min na, Issa ye dɔn kɛ dugu kɔnɔ mɔgɔw bɛɛ ɲɛfɛ. A tun be se ka bɔnin o ɲɔgɔn kan. O ye diinan mɔgɔkɔrɔw lasun k'a fɔ u ye ko: \"Aw ka barika la Ala ye o cogo le la!\" U bɛɛ y'o dɔnkilila degi.",
+        "fulfulde": "Nde ndiyam fuɗɗii, Issa waɗi ko o yi'i yeeso yimɓe fuu, o waɗani ɓe no antelope ɗon ƴoƴa. Mawɓe ɓen ɓeydi ɓe mbi'i: \"Ɗum woni no seeda Allah!\" Yimɓe fuu njanngini saali."
+      }
+    },
+    {
+      "id": "l-antilope-qui-apprit-la-danse-p4",
+      "art": {
+        "sky": "day",
+        "ground": "village",
+        "items": [
+          {
+            "k": "sun",
+            "x": 84,
+            "y": 300
+          },
+          {
+            "k": "antelope",
+            "x": 26,
+            "s": 1.1
+          },
+          {
+            "k": "man-up",
+            "x": 48,
+            "c": "#C9822B"
+          },
+          {
+            "k": "man-up",
+            "x": 62,
+            "c": "#7C3109"
+          },
+          {
+            "k": "drum",
+            "x": 78
+          }
+        ]
+      },
+      "text": {
+        "fr": "Pour ne jamais oublier, les sculpteurs taillèrent des cimiers en forme d'antilope que les danseurs portent sur la tête. Aujourd'hui encore, en pays kurumba, on danse ainsi lors des grandes fêtes.",
+        "en": "So as never to forget, the sculptors carved antelope-shaped crests that the dancers wear on their heads. To this day, in Kurumba country, people dance like this at great festivals.",
+        "moore": "Sẽn na yɩl tɩ b ra yĩm ye, b talla kareng sẽn yaa wa a nin-buudã n maan yɩɩl nins sẽn kẽed ne wã. Hal tɩ ta rũndã, Kurumba tẽngẽ wã neb yɩɩla woto kibs-kãsems sasa.",
+        "dioula": "O kama, dansibagaw tun be wotorow dilan ni yiriw ye k'u kuun don. Hali bi, Kurumba mara la, mɔgɔw be to ka dɔnkilila o cogo le la ɲanagwɛbaw na.",
+        "fulfulde": "Ngam ɓe meeɗaay sejjugo, taƴooɓe ɗi ɗon mbaɗi ko ɓanngii antelop. Haa hande, nder lesdi Kurumba yimɓe ɗon ngaɗi nandi bana non haa juulde mawɗe."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qu'a fait Issa pour l'antilope ?",
+        "en": "What did Issa do for the antelope?",
+        "moore": "Bõe la a Issa maan ne bõn-buudã?",
+        "dioula": "Issa ye mun lo kɛ antilope kosɔn?",
+        "fulfulde": "Ko Issa waɗi ngam antelope?"
+      },
+      "options": [
+        {
+          "fr": "Il l'a libérée d'un piège",
+          "en": "He freed her from a trap",
+          "moore": "A fãaga-a lame n bas a zãmbã.",
+          "dioula": "A y'a bɔ a ka jan na.",
+          "fulfulde": "O rimɗini mo daga kaɓirɗum"
+        },
+        {
+          "fr": "Il l'a chassée",
+          "en": "He hunted her",
+          "moore": "A ra yãgda a pagã.",
+          "dioula": "A tun b'a ɲini k'a faga.",
+          "fulfulde": "O ɗon yi'i mo."
+        },
+        {
+          "fr": "Il l'a nourrie",
+          "en": "He fed her",
+          "moore": "A rɩka a pagã.",
+          "dioula": "A y'a balo.",
+          "fulfulde": "O hokki mo nyaamdu."
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Que portent les danseurs sur la tête ?",
+        "en": "What do the dancers wear on their heads?",
+        "moore": "Bõe la ra-bãndb nins sẽn ki wã yeelg b zutẽ?",
+        "dioula": "Dɔnkilaw be mun lo don u kun na?",
+        "fulfulde": "Ko honɗun dansaɓe ɓen ɓornata dow hoore maɓɓe?"
+      },
+      "options": [
+        {
+          "fr": "Des cimiers en forme d'antilope",
+          "en": "Antelope-shaped crests",
+          "moore": "Dẽn-kẽemã sẽn tar pãng n yɩɩd ye",
+          "dioula": "Jigɛ minw be kɛ i n'a fɔ antilɔpiw, olu ka ɲi ka kɛ",
+          "fulfulde": "Ko'e ɓesnguɗe ɗe eedi"
+        },
+        {
+          "fr": "Des chapeaux de paille",
+          "en": "Straw hats",
+          "moore": "Bõn-kaalã sẽn yaa bĩisẽ wã",
+          "dioula": "Sumantigiw ka nɛgɛsow",
+          "fulfulde": "Koofɗe ɓooyɗe"
+        },
+        {
+          "fr": "Des couronnes d'or",
+          "en": "Gold crowns",
+          "moore": "Zĩis roogã",
+          "dioula": "sanufugulanw",
+          "fulfulde": "Kooreeji goɗɗe"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "cimier",
+      "lang": "fr",
+      "def": {
+        "fr": "Sculpture portée au sommet de la tête par un danseur masqué.",
+        "en": "A sculpture worn on top of the head by a masked dancer.",
+        "moore": "A sẽn maan yɩɩl ne maskã n yeelg a zug bõn-naandgã.",
+        "dioula": "Danbaga dɔ ye fani biri a kuun na.",
+        "fulfulde": "Ɗuum ko taƴre ɓorndi dow hoore mo dansaaku huutorɗo."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte écrit pour KIBARE, inspiré des cimiers-antilopes (adone) et des danses cérémonielles kurumba de Pobé-Mengao (archives sonores du CREM-CNRS). Récit de création, non une tradition recueillie.",
+    "en": "A tale written for KIBARE, inspired by the Kurumba antelope crests (adone) and ceremonial dances of Pobé-Mengao (CREM-CNRS sound archives). A creative retelling, not a collected tradition."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}

@@ -1,3 +1,4 @@
+import { PagerComponent, paginate } from '../../shared/pager/pager.component';
 import { DatePipe, NgTemplateOutlet } from '@angular/common';
 import { Component, computed, effect, inject, input, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +17,7 @@ interface Thread {
 /** Espace de discussion d'un conte : commentaires, réponses, suppression de ses propres messages. */
 @Component({
   selector: 'app-comments',
-  imports: [FormsModule, RouterLink, DatePipe, NgTemplateOutlet, TranslatePipe],
+  imports: [FormsModule, RouterLink, DatePipe, NgTemplateOutlet, TranslatePipe, PagerComponent],
   template: `
     <section class="comments" id="commentaires">
       <h2><i class="fa-regular fa-comments"></i> {{ 'comments.title' | t }} <span class="n">{{ items().length }}</span></h2>
@@ -47,7 +48,7 @@ interface Thread {
       }
 
       <ul class="threads">
-        @for (th of threads(); track th.c.id) {
+        @for (th of pageThreads(); track th.c.id) {
           <li>
             <ng-container *ngTemplateOutlet="one; context: { $implicit: th.c }" />
             @if (th.replies.length) {
@@ -62,6 +63,7 @@ interface Thread {
           <li class="empty">{{ 'comments.empty' | t }}</li>
         }
       </ul>
+      <app-pager [total]="threads().length" [size]="8" [(page)]="page" />
 
       <ng-template #one let-c>
         <article class="msg">
@@ -128,6 +130,8 @@ export class CommentsComponent {
 
   readonly slug = input.required<string>();
   readonly items = signal<CommentItem[]>([]);
+  readonly page = signal(1);
+  readonly pageThreads = computed(() => paginate(this.threads(), this.page(), 8));
   readonly text = signal('');
   readonly busy = signal(false);
   readonly replyTo = signal<CommentItem | null>(null);

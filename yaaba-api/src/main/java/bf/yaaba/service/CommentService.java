@@ -8,7 +8,10 @@ import bf.yaaba.repo.Repositories.CommentRepository;
 import bf.yaaba.repo.Repositories.UserRepository;
 import bf.yaaba.web.Dto.CommentRequest;
 import bf.yaaba.web.Dto.CommentView;
+import bf.yaaba.web.Dto.PageView;
 import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -73,6 +76,15 @@ public class CommentService {
         Comment c = comments.findById(id).orElseThrow(() -> new NotFoundException("Commentaire introuvable"));
         c.setStatus(status);
         return views(List.of(c)).get(0);
+    }
+
+    @Transactional(readOnly = true)
+    public PageView<CommentView> page(String status, String q, int page, int size, String sortSpec) {
+        Comment.Status st = status == null || status.isBlank() || status.equals("ALL") ? null : Comment.Status.valueOf(status);
+        Sort sort = TaleService.sort(sortSpec, Map.of("createdAt", "createdAt", "taleSlug", "taleSlug", "status", "status"),
+                Sort.by(Sort.Order.desc("createdAt")));
+        Page<Comment> p = comments.search(st, TaleService.like(q), TaleService.pageable(page, size, sort));
+        return new PageView<>(views(p.getContent()), p.getTotalElements(), p.getNumber(), p.getSize(), null);
     }
 
     @Transactional(readOnly = true)

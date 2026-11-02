@@ -1,16 +1,21 @@
 import { DatePipe } from '@angular/common';
-import { Component, computed, inject, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { TableModule } from 'primeng/table';
 import { DataService } from '../../core/data.service';
 import { I18nService, TranslatePipe } from '../../core/i18n.service';
 import { CommentItem } from '../../core/models';
 import { taleText } from '../../shared/tale-card/tale-card.component';
 import { AdminService } from './admin.service';
+import { LazyList } from './lazy-list';
 
+/** Modération des commentaires : pagination, recherche, tri et filtre côté serveur. */
 @Component({
   selector: 'app-admin-comments',
-  imports: [FormsModule, RouterLink, DatePipe, TranslatePipe],
+  imports: [RouterLink, DatePipe, TranslatePipe, TableModule, ConfirmDialogModule],
+  providers: [ConfirmationService],
   template: `
     <header class="ph">
       <div>
@@ -19,59 +24,71 @@ import { AdminService } from './admin.service';
       </div>
     </header>
     <div class="toolbar">
-      <input type="search" [ngModel]="q()" (ngModelChange)="q.set($event)" [placeholder]="'admin.searchComments' | t" />
-      <div class="seg" role="group">
-        <button type="button" [class.on]="status() === 'ALL'" (click)="status.set('ALL')">{{ 'admin.f.ALL' | t }}</button>
-        <button type="button" [class.on]="status() === 'VISIBLE'" (click)="status.set('VISIBLE')">{{ 'admin.visible' | t }}</button>
-        <button type="button" [class.on]="status() === 'HIDDEN'" (click)="status.set('HIDDEN')">{{ 'admin.hidden' | t }}</button>
+      <span class="search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" #s (input)="list.search(s.value)" [placeholder]="'admin.searchComments' | t" aria-label="Rechercher un commentaire" />
+      </span>
+      <div class="seg" role="group" aria-label="Visibilité">
+        @for (o of statuses; track o.v) {
+          <button type="button" [class.on]="(list.filters()['status'] ?? 'ALL') === o.v" [attr.aria-pressed]="(list.filters()['status'] ?? 'ALL') === o.v"
+            (click)="list.setFilter('status', o.v === 'ALL' ? undefined : o.v)">{{ o.k | t }}</button>
+        }
       </div>
+      <span class="grow"></span>
+      <span class="muted" aria-live="polite">{{ list.total() }} commentaire(s)</span>
     </div>
-    <div class="tbl-wrap">
-      <table class="tbl">
-        <thead>
-          <tr><th>{{ 'admin.c.author' | t }}</th><th>{{ 'admin.c.comment' | t }}</th><th>{{ 'admin.c.tale' | t }}</th><th>{{ 'admin.c.date' | t }}</th><th></th></tr>
-        </thead>
-        <tbody>
-          @for (c of rows(); track c.id) {
-            <tr [style.opacity]="c.status === 'HIDDEN' ? 0.55 : 1">
-              <td><strong>{{ c.userName }}</strong>@if (c.parentId) {<br /><small><i class="fa-solid fa-reply"></i> {{ 'admin.reply' | t }}</small>}</td>
-              <td class="txt">{{ c.text }}</td>
-              <td><a [routerLink]="['/contes', c.taleSlug]" fragment="commentaires" class="more small">{{ title(c.taleSlug) }}</a></td>
-              <td><small>{{ c.createdAt | date: 'd MMM y, HH:mm' }}</small></td>
-              <td class="acts">
-                @if (c.status === 'VISIBLE') {
-                  <button type="button" class="ib" (click)="set(c, 'HIDDEN')" [title]="'admin.hide' | t"><i class="fa-solid fa-eye-slash"></i></button>
-                } @else {
-                  <button type="button" class="ib ok" (click)="set(c, 'VISIBLE')" [title]="'admin.show' | t"><i class="fa-solid fa-eye"></i></button>
-                }
-                <button type="button" class="ib no" (click)="remove(c)" [title]="'admin.delete' | t"><i class="fa-solid fa-trash-can"></i></button>
-              </td>
-            </tr>
-          } @empty {
-            <tr><td colspan="5" class="muted">{{ 'admin.empty' | t }}</td></tr>
-          }
-        </tbody>
-      </table>
-    </div>
+
+    <p-table class="ktable" [value]="list.items()" [lazy]="true" (onLazyLoad)="list.onLazy($event)" [loading]="list.loading()"
+      [paginator]="true" [rows]="list.rows()" [first]="list.first()" [totalRecords]="list.total()" paginatorPosition="bottom"
+      [showCurrentPageReport]="true" currentPageReportTemplate="{first}–{last} sur {totalRecords}" dataKey="id"
+      [tableStyle]="{ 'min-width': '760px' }" [scrollable]="true">
+      <ng-template #header>
+        <tr>
+          <th>{{ 'admin.c.author' | t }}</th>
+          <th style="min-width: 240px">{{ 'admin.c.comment' | t }}</th>
+          <th pSortableColumn="taleSlug">{{ 'admin.c.tale' | t }} <p-sortIcon field="taleSlug" /></th>
+          <th pSortableColumn="createdAt">{{ 'admin.c.date' | t }} <p-sortIcon field="createdAt" /></th>
+          <th><span class="sr-only">Actions</span></th>
+        </tr>
+      </ng-template>
+      <ng-template #body let-c>
+        <tr [class.dim]="c.status === 'HIDDEN'">
+          <td><strong>{{ c.userName }}</strong>@if (c.parentId) {<br /><small><i class="fa-solid fa-reply"></i> {{ 'admin.reply' | t }}</small>}</td>
+          <td class="txt">{{ c.text }}</td>
+          <td><a [routerLink]="['/contes', c.taleSlug]" fragment="commentaires" target="_blank" rel="noopener" class="more small">{{ title(c.taleSlug) }}</a></td>
+          <td><small>{{ c.createdAt | date: 'dd/MM/yyyy HH:mm' }}</small></td>
+          <td class="acts">
+            @if (c.status === 'VISIBLE') {
+              <button type="button" class="ib" (click)="set(c, 'HIDDEN')" [disabled]="busy() === c.id" [title]="'admin.hide' | t"><i class="fa-solid fa-eye-slash"></i></button>
+            } @else {
+              <button type="button" class="ib ok" (click)="set(c, 'VISIBLE')" [disabled]="busy() === c.id" [title]="'admin.show' | t"><i class="fa-solid fa-eye"></i></button>
+            }
+            <button type="button" class="ib no" (click)="remove(c)" [disabled]="busy() === c.id" [title]="'admin.delete' | t"><i class="fa-solid fa-trash-can"></i></button>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template #emptymessage>
+        <tr><td colspan="5" class="empty">{{ list.error() ? 'Le serveur ne répond pas.' : ('admin.noComments' | t) }}</td></tr>
+      </ng-template>
+    </p-table>
+    <p-confirmDialog />
   `,
   styleUrl: './admin-shared.scss',
-  styles: `.txt { max-width: 480px; } .acts { white-space: nowrap; } .acts .ib { margin-left: 4px; }`,
+  styles: `.txt { max-width: 480px; } .acts { white-space: nowrap; } .acts .ib { margin-left: 4px; } .dim td { opacity: 0.55; }`,
 })
 export class AdminCommentsPage {
   private admin = inject(AdminService);
   private data = inject(DataService);
   private i18n = inject(I18nService);
-  readonly items = signal<CommentItem[]>([]);
-  readonly q = signal('');
-  readonly status = signal<'ALL' | 'VISIBLE' | 'HIDDEN'>('ALL');
-  readonly rows = computed(() => {
-    const q = this.q().toLowerCase();
-    return this.items().filter((c) => (this.status() === 'ALL' || c.status === this.status()) && (!q || c.text.toLowerCase().includes(q) || c.userName.toLowerCase().includes(q)));
-  });
-
-  constructor() {
-    this.admin.comments().subscribe({ next: (l) => this.items.set(l), error: () => {} });
-  }
+  private toast = inject(MessageService);
+  private confirm = inject(ConfirmationService);
+  readonly list = new LazyList<CommentItem>((q) => this.admin.comments(q));
+  readonly busy = signal<number | null>(null);
+  readonly statuses = [
+    { v: 'ALL', k: 'admin.f.ALL' },
+    { v: 'VISIBLE', k: 'admin.visible' },
+    { v: 'HIDDEN', k: 'admin.hidden' },
+  ];
 
   title(slug: string) {
     const t = this.data.tale(slug);
@@ -79,11 +96,41 @@ export class AdminCommentsPage {
   }
 
   set(c: CommentItem, s: 'VISIBLE' | 'HIDDEN') {
-    this.admin.moderateComment(c.id, s).subscribe((u) => this.items.update((l) => l.map((x) => (x.id === u.id ? u : x))));
+    this.busy.set(c.id);
+    this.admin.moderateComment(c.id, s).subscribe({
+      next: () => {
+        this.busy.set(null);
+        this.list.load();
+      },
+      error: () => {
+        this.busy.set(null);
+        this.toast.add({ severity: 'error', summary: 'Le commentaire n’a pas pu être modifié', life: 3500 });
+      },
+    });
   }
 
   remove(c: CommentItem) {
-    if (!confirm(this.i18n.t('admin.confirmDelete'))) return;
-    this.admin.deleteComment(c.id).subscribe(() => this.items.update((l) => l.filter((x) => x.id !== c.id)));
+    this.confirm.confirm({
+      header: 'Supprimer ce commentaire ?',
+      message: 'Le commentaire et ses réponses seront définitivement supprimés.',
+      icon: 'fa-solid fa-triangle-exclamation',
+      acceptLabel: 'Supprimer',
+      rejectLabel: 'Annuler',
+      rejectButtonProps: { severity: 'secondary', outlined: true },
+      accept: () => {
+        this.busy.set(c.id);
+        this.admin.deleteComment(c.id).subscribe({
+          next: () => {
+            this.busy.set(null);
+            this.toast.add({ severity: 'success', summary: 'Commentaire supprimé', life: 2500 });
+            this.list.load();
+          },
+          error: () => {
+            this.busy.set(null);
+            this.toast.add({ severity: 'error', summary: 'Le commentaire n’a pas pu être supprimé', life: 3500 });
+          },
+        });
+      },
+    });
   }
 }

@@ -1,0 +1,342 @@
+{
+  "slug": "le-crapaud-qui-appela-la-pluie",
+  "type": "conte",
+  "region": "sourou",
+  "place": "Tougan",
+  "coords": [
+    13.07,
+    -3.07
+  ],
+  "people": "Samo",
+  "language": "dioula",
+  "duration": 4,
+  "age": 4,
+  "featured": false,
+  "cover": 2,
+  "tags": [
+    "animaux",
+    "pluie",
+    "pourquoi",
+    "courage"
+  ],
+  "i18n": {
+    "fr": {
+      "title": "Le crapaud qui appela la pluie",
+      "subtitle": "Pourquoi il chante avant l'orage",
+      "summary": "La vallée du Sourou meurt de soif. Le lion, l'éléphant et le calao échouent à faire venir la pluie. Le petit crapaud, lui, ose monter jusqu'au ciel.",
+      "moral": "La taille ne fait pas le courage : le plus petit peut sauver tout le monde."
+    },
+    "en": {
+      "title": "The Toad Who Called the Rain",
+      "subtitle": "Why it sings before the storm",
+      "summary": "The Sourou valley is dying of thirst. The lion, the elephant and the hornbill fail to bring the rain. The little toad dares to climb up to the sky.",
+      "moral": "Size does not make courage: the smallest can save everyone."
+    },
+    "moore": {
+      "title": "Bãad ning sẽn bool-a t'a saagã na n wa saaga",
+      "subtitle": "Bõe yĩng t'a yɩɩnd tɩ sa-kãsengã ra wa n deng n maane?",
+      "summary": "Sourou pʋga rɩtame n ki. Yaa gɩgemd, bõn-buud la b sẽn yãgd n pa tõe n kõ saag ye. Bãad-bilã sẽn tõe n zẽk a meng yĩngr wã yaa kãsenga.",
+      "moral": "Ned sẽn yaa kãsenga pa tõe n kɩt tɩ ned tall raood ye. Sẽn yaa bilfã tõe n fãaga ned fãa."
+    },
+    "dioula": {
+      "title": "Kɔnɔmisɛn min ye sanji wele",
+      "subtitle": "Mun na a be dɔnkili la sanni fɔɲɔ ka ben?",
+      "summary": "Sourou kɛnɛgbɛ be sa minnɔgɔ fɛ. Jara, ntɔn ani gɔni tɛ sanji di. O kɔ, a y'a daminɛ ka yɛlɛ sanfɛ.",
+      "moral": "Mɔgɔ belebele tɛ se ka jagwɛlɛya sɔrɔ: mɔgɔ fitininw be se k'an bɛɛ kisi."
+    },
+    "fulfulde": {
+      "title": "Goomuɗo Wonde Yahugo",
+      "subtitle": "Ngam ɗume o ɗon werna yeeso ɓooyaare",
+      "summary": "Fuule Sourou ɗon maaya ngam marugo. Lewru, nduu e ɓooymaaru ɗon mbaawaay hokkude ndiyam. Ɗuum ɓooyɗo ɓooyaani ƴeewde haa asama.",
+      "moral": "Maande naa' ngam waɗugo sembe: ɓurɗo ɗuuɗuki yaawataa hisna yimɓe fuu."
+    }
+  },
+  "scenes": [
+    {
+      "id": "le-crapaud-qui-appela-la-pluie-p1",
+      "art": {
+        "sky": "day",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "sun",
+            "x": 80,
+            "y": 320,
+            "s": 1.4
+          },
+          {
+            "k": "toad",
+            "x": 40,
+            "s": 1.6
+          },
+          {
+            "k": "lion",
+            "x": 64,
+            "s": 0.7
+          },
+          {
+            "k": "elephant",
+            "x": 84,
+            "s": 0.6
+          },
+          {
+            "k": "baobab",
+            "x": 14,
+            "y": 26,
+            "c": "bare"
+          }
+        ]
+      },
+      "text": {
+        "fr": "Une année, la pluie ne vint pas sur la vallée du Sourou. Le fleuve n'était plus qu'un filet d'eau, et les animaux tinrent une grande assemblée sous le baobab.",
+        "en": "One year, the rain did not come to the Sourou valley. The river was no more than a trickle, and the animals held a great assembly under the baobab.",
+        "moore": "Yʋʋmd a ye pʋgẽ, saagã ka sa Sourou pʋga ye. Koɛɛgã ra yaa koom sẽn da be zĩig ningã, la rũmsã ra tigimdame n maand taab baobab tɩɩsã tẽngẽ.",
+        "dioula": "Saan kelen kɔnɔ, sanji ma na Sourou kɔkɛnɛ la. O kɔ, kongosogow tun be lajɛnba dɔ kɛ yiriba kɔrɔ.",
+        "fulfulde": "Nder hitaande go'oto, ndiyam waraayi haa lesdi Sourou. Nguurndam ndu ɗon ɓeyda ko ndiyam, dabbaaji boo ɗon mooɓta bee maare nder leɗɗe baobab."
+      }
+    },
+    {
+      "id": "le-crapaud-qui-appela-la-pluie-p2",
+      "art": {
+        "sky": "dusk",
+        "ground": "sahel",
+        "items": [
+          {
+            "k": "lion",
+            "x": 30,
+            "s": 0.8
+          },
+          {
+            "k": "elephant",
+            "x": 56,
+            "s": 0.7
+          },
+          {
+            "k": "bird-small",
+            "x": 76,
+            "y": 60
+          },
+          {
+            "k": "cloud",
+            "x": 60,
+            "y": 280
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le lion rugit vers le ciel : rien. L'éléphant barrit de toutes ses forces : rien. Le calao vola jusqu'aux nuages mais redescendit, épuisé. Alors une toute petite voix dit : « Laissez-moi essayer. »",
+        "en": "The lion roared at the sky: nothing. The elephant trumpeted with all his might: nothing. The hornbill flew up to the clouds but came back down, exhausted. Then a tiny voice said: \"Let me try.\"",
+        "moore": "Yaa gɩgemd n tãag yĩngr. A yãtã ra wẽeda a pãng fãa: bũmb ka be ye. A sẽn da wa n beẽ wã, a ra zoe n lebda yĩngr. La koɛɛg sẽn yaa bilf n yeel-a lame: \"Bɩ m mak-y\".",
+        "dioula": "Jara tun be kasi sankolo la. Fɛɛn si ma kɛ. Sankantigi ye fanga bɛɛ kɛ ka buru fiyɛ. A ma foyi fɔ. O kɔ, a y'a yɛrɛ sɛgɛn ka jigi. O kɔ, kumakan dɔ y'a fɔ ko: \"A to n' k'o filɛ\".",
+        "fulfulde": "Lewre ɗon ɓooya dow asama: walaa ko waɗi. Elefantu boo o wurtini bee sembe maako fuu: walaa ko. Wuro ɓooyɗo ɗon ƴeewta haa dow duule, ammaa o wurtini to duniyaaru, o nyaami. Nden wolde go'o wi'i: \"Mi yiɗi\"."
+      },
+      "choice": {
+        "q": {
+          "fr": "Qui a parlé ?",
+          "en": "Who spoke?",
+          "moore": "Ãnda n gomde?",
+          "dioula": "Jɔn lo kumana?",
+          "fulfulde": "Moy wolwani?"
+        },
+        "options": [
+          {
+            "fr": "Le petit crapaud",
+            "en": "The little toad",
+            "moore": "Bãag-bilgã",
+            "dioula": "O kɔ, a ye n' ka muso faga.",
+            "fulfulde": "Ɗuum ɓooyɗo"
+          },
+          {
+            "fr": "La hyène",
+            "en": "The hyena",
+            "moore": "A hyena wã",
+            "dioula": "O ye tulogwerenw ye.",
+            "fulfulde": "Hyenna"
+          }
+        ],
+        "answer": 0,
+        "reveal": {
+          "fr": "Tout le monde éclata de rire… sauf la tortue.",
+          "en": "Everyone burst out laughing… except the tortoise.",
+          "moore": "B fãa ra yãgda. Sẽn pa be-a wã bala.",
+          "dioula": "Mɔgɔw bɛɛ yɛlɛla. fɔɔ kurukuru.",
+          "fulfulde": "Yimɓe fuu ɓe njetti... sey tortugal ngal."
+        }
+      }
+    },
+    {
+      "id": "le-crapaud-qui-appela-la-pluie-p3",
+      "art": {
+        "sky": "night",
+        "ground": "rocks",
+        "items": [
+          {
+            "k": "moon",
+            "x": 76,
+            "y": 300
+          },
+          {
+            "k": "toad",
+            "x": 46,
+            "y": 120,
+            "s": 1.4
+          },
+          {
+            "k": "cloud",
+            "x": 40,
+            "y": 260,
+            "c": "storm"
+          },
+          {
+            "k": "cloud",
+            "x": 66,
+            "y": 280,
+            "c": "storm"
+          },
+          {
+            "k": "rock",
+            "x": 30
+          }
+        ]
+      },
+      "text": {
+        "fr": "Le crapaud grimpa sur le plus haut rocher et chanta toute la nuit : « Krou, krou, pluie, viens ! » Sa voix était si sincère que le ciel l'entendit. Les nuages se rassemblèrent au-dessus de la vallée.",
+        "en": "The toad climbed onto the highest rock and sang all night: \"Kroo, kroo, rain, come!\" His voice was so sincere that the sky heard him. The clouds gathered over the valley.",
+        "moore": "A sẽn wa n be roogã zugu, a yɩɩla woto yʋngo fãa: \"Kroo, kroo, saaga, bɩ y wa!\" Sa-tãamba ra tigimda tãensã.",
+        "dioula": "O kɔ, a ye yɛlɛyɛlɛnan dɔ kɛ ka taga farajan sanfɛ ani a y'a kaan kɔrɔta suu bɛɛ ko: \"Kroo, kroo, sanji!\" A kumakan tun be bɔ Ala fɛ fɔɔ sankolo y'a mɛn. Sankaba dɔw tun be ye ka taga kulu kan.",
+        "fulfulde": "Wuro ɗon ƴeewa dow leelo ɓurɗo fuu, o ɗon woya bee yimre: \"Kroo, kroo, ndiyam wara!\" Ɗuum ɗemngal maako ɗon maaki haa asama nanngi mo. Luttuɗe ɗon mooɓta dow dammugal."
+      }
+    },
+    {
+      "id": "le-crapaud-qui-appela-la-pluie-p4",
+      "art": {
+        "sky": "day",
+        "ground": "river",
+        "items": [
+          {
+            "k": "rain",
+            "x": 50,
+            "y": 300
+          },
+          {
+            "k": "cloud",
+            "x": 40,
+            "y": 270
+          },
+          {
+            "k": "toad",
+            "x": 30,
+            "s": 1.3
+          },
+          {
+            "k": "child-up",
+            "x": 60
+          },
+          {
+            "k": "field",
+            "x": 82,
+            "y": 20,
+            "s": 0.6
+          }
+        ]
+      },
+      "text": {
+        "fr": "La pluie tomba enfin, abondante. Les champs reverdirent et le Sourou se remplit. Depuis ce jour, quand l'orage approche, les crapauds chantent les premiers, pour rappeler au ciel sa promesse.",
+        "en": "At last the rain fell, plentiful. The fields turned green again and the Sourou filled up. Since that day, when a storm approaches, the toads sing first, to remind the sky of its promise.",
+        "moore": "La sa-kãsengã ra waame. Tãn-kãens lebgame tɩ b leb n yaa vãad la Sourou wã me pidgame. Sẽn sɩng ne daar kãng, sã n wa be sobg sẽn watã, b yɩɩla pipi tɩ tẽeg yĩngr t'a pʋlemame.",
+        "dioula": "A laban, sanjiba benna. O forow tun kɛra forow ye tugun ani u y'a kɛ Sourou dugu fanba fara. Kabi o loon na, ni fɔɲɔba dɔ nana se, tɔrisenw be dɔnkili la fɔlɔ walisa k'a hakili jigi sankolo la a ka layidu koo la.",
+        "fulfulde": "Aɗa ɓeydi ndiyam, ɗuuɗugo. Luki fuɗɗii warde e Sourou heewi. Gila nden wakkati, to duufe ɓadake, duɗe ɗon maɓɓina ngam ɓe nganndi dow alkawal maako."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "q": {
+        "fr": "Qui a réussi à faire venir la pluie ?",
+        "en": "Who managed to bring the rain?",
+        "moore": "Ãnda n wa ne saagã?",
+        "dioula": "Jɔn lo sera ka sanji di?",
+        "fulfulde": "Moy heɓii hokkude ndiyam?"
+      },
+      "options": [
+        {
+          "fr": "Le crapaud",
+          "en": "The toad",
+          "moore": "Bãagdã",
+          "dioula": "Kɔnɔbara",
+          "fulfulde": "Lodoowo"
+        },
+        {
+          "fr": "Le lion",
+          "en": "The lion",
+          "moore": "Yaa gɩgemdã.",
+          "dioula": "Jaraw ka kan k'a ye.",
+          "fulfulde": "Lamu ɗon"
+        },
+        {
+          "fr": "L'éléphant",
+          "en": "The elephant",
+          "moore": "A Zĩ-kãnga",
+          "dioula": "Elefanw",
+          "fulfulde": "Ɓiɗɗo nduu"
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "q": {
+        "fr": "Quand les crapauds chantent-ils ?",
+        "en": "When do the toads sing?",
+        "moore": "Wakat bʋg la b yɩɩla?",
+        "dioula": "Kɔnɔw be dɔnkili la tuma juman?",
+        "fulfulde": "To wakkatiye ɓooyɗe ɗon werna?"
+      },
+      "options": [
+        {
+          "fr": "Avant l'orage",
+          "en": "Before the storm",
+          "moore": "Sẽn deng sobgã sẽn wa n be wã,",
+          "dioula": "Sanni sanjiba ka ben,",
+          "fulfulde": "Kaŋko kaɓirɗe"
+        },
+        {
+          "fr": "À midi",
+          "en": "At noon",
+          "moore": "Zĩigẽ wã,",
+          "dioula": "Tilefɛ",
+          "fulfulde": "Ha wakkati noon"
+        },
+        {
+          "fr": "En hiver seulement",
+          "en": "Only in winter",
+          "moore": "Yaa sẽndẽ bal la woto.",
+          "dioula": "Nɛnɛ tuma dɔrɔn lo la.",
+          "fulfulde": "Ko to lewru tan"
+        }
+      ],
+      "answer": 0
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Sourou",
+      "lang": "fr",
+      "def": {
+        "fr": "Rivière et vallée du nord-ouest du Burkina, connues pour leurs cultures irriguées.",
+        "en": "A river and valley in north-western Burkina, known for irrigated farming.",
+        "moore": "Ko-kãseng la pʋɩɩr sẽn be Burkĩna rɩtg-beed soolmẽ wã, b mi n yaa kood ning b sẽn kõ koomã yĩnga.",
+        "dioula": "O ye baji ani kɔkɛnɛ dɔ ye Burukina saheli-dugudugu fan fɛ. A be weele fana ko sɛnɛkɛyɔrɔ.",
+        "fulfulde": "Nguurdi e dammugal nder Burkina fuɗnaɓu hirnaŋgo, anndiraa ngam lamndol ndiyam."
+      }
+    }
+  ],
+  "source": {
+    "fr": "Conte étiologique répandu dans les savanes d'Afrique de l'Ouest (le crapaud et la pluie). Version écrite pour KIBARE, située dans la vallée du Sourou, en pays samo.",
+    "en": "A \"why\" tale found across the West African savannahs (the toad and the rain). Version written for KIBARE, set in the Sourou valley, in Samo country."
+  },
+  "mt": [
+    "dioula",
+    "fulfulde",
+    "moore"
+  ]
+}
