@@ -39,7 +39,7 @@ export class MapPage {
   readonly level = signal<MapLevel>('region');
   readonly levels: { code: MapLevel; icon: string }[] = [
     { code: 'region', icon: 'fa-layer-group' },
-    { code: 'province', icon: 'fa-vector-square' },
+    { code: 'province', icon: 'fa-draw-polygon' },
     { code: 'commune', icon: 'fa-border-all' },
     { code: 'city', icon: 'fa-city' },
   ];

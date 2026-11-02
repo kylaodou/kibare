@@ -520,12 +520,39 @@
   .legend {
     display: none;
   }
+  /* téléphone : commandes compactes, sur deux lignes, sans masquer la carte */
+  .toolbar {
+    top: 10px;
+    left: 10px;
+    right: 60px;
+    gap: 6px;
+  }
+  .seg {
+    padding: 3px;
+  }
+  .seg button {
+    height: 32px !important;
+    padding: 0 10px !important;
+    gap: 6px;
+    font-size: 0.8rem;
+  }
+  .corner {
+    top: 10px;
+    right: 10px;
+    gap: 6px;
+  }
+  .round {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
   .search {
     min-width: 0;
     flex-basis: 100%;
   }
   .filters {
-    top: 124px;
+    top: 100px;
+    left: 10px;
     gap: 6px;
     :host ::ng-deep & .lang-select {
       display: none;
@@ -538,18 +565,12 @@
       display: none;
     }
   }
-  .seg button {
-    height: 34px;
-    padding: 0 12px;
-  }
   .search input {
-    height: 42px;
+    height: 40px;
+    font-size: 0.9rem;
   }
   .panel {
     max-height: 42dvh;
-  }
-  .toolbar {
-    right: 70px;
   }
 }
 
