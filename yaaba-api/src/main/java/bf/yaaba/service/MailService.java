@@ -51,7 +51,12 @@ public class MailService {
 
     /** Un moyen d'envoi est-il disponible (SMTP ou boîte de développement) ? */
     public boolean available() {
-        return !host.isEmpty() || outbox() != null;
+        return brevoKey() != null || !host.isEmpty() || outbox() != null;
+    }
+
+    private String brevoKey() {
+        String k = props.mail() == null ? null : props.mail().brevoApiKey();
+        return k == null || k.isBlank() ? null : k.strip();
     }
 
     public String appUrl() {
@@ -70,6 +75,10 @@ public class MailService {
         String html = layout(title, paragraphs, highlight, button);
         String text = String.join("\n\n", paragraphs) + (highlight == null ? "" : "\n\n" + highlight)
                 + (button == null ? "" : "\n\n" + button[1]);
+        if (brevoKey() != null) {
+            sendWithBrevo(to, subject, html, text);
+            return;
+        }
         if (!host.isEmpty()) {
             JavaMailSender mail = sender.getIfAvailable();
             if (mail == null) throw new MailDeliveryException("Service d'e-mail indisponible", null);
@@ -103,6 +112,48 @@ public class MailService {
             log.info("E-mail « {} » déposé dans la boîte de développement ({})", subject, dir);
         } catch (IOException e) {
             throw new MailDeliveryException("L'e-mail n'a pas pu être enregistré.", e);
+        }
+    }
+
+    /**
+     * Envoi par l'API HTTPS de Brevo (hébergeurs qui bloquent SMTP). Les images sont alors
+     * les fichiers publics du site (APP_URL/mail/…), puisque Brevo ne gère pas les images intégrées.
+     */
+    private void sendWithBrevo(String to, String subject, String html, String text) {
+        String body = html.replace("cid:kibare-header", appUrl() + "/mail/header.png")
+                .replace("cid:kibare-footer", appUrl() + "/mail/footer.png");
+        String from = from();
+        String name = "KIBARE";
+        String email = from;
+        java.util.regex.Matcher m = java.util.regex.Pattern.compile("^\\s*(.*?)\\s*<([^>]+)>\\s*$").matcher(from);
+        if (m.matches()) {
+            name = m.group(1).replace("\"", "");
+            email = m.group(2);
+        }
+        var json = new com.fasterxml.jackson.databind.ObjectMapper().createObjectNode();
+        json.putObject("sender").put("name", name).put("email", email);
+        json.putArray("to").addObject().put("email", to);
+        json.put("subject", subject).put("htmlContent", body).put("textContent", text);
+        try {
+            var req = java.net.http.HttpRequest.newBuilder(java.net.URI.create("https://api.brevo.com/v3/smtp/email"))
+                    .timeout(java.time.Duration.ofSeconds(20))
+                    .header("api-key", brevoKey())
+                    .header("Content-Type", "application/json")
+                    .header("Accept", "application/json")
+                    .POST(java.net.http.HttpRequest.BodyPublishers.ofString(json.toString(), StandardCharsets.UTF_8))
+                    .build();
+            var res = java.net.http.HttpClient.newHttpClient().send(req, java.net.http.HttpResponse.BodyHandlers.ofString());
+            if (res.statusCode() / 100 != 2) {
+                log.warn("Échec d'envoi de l'e-mail « {} » par Brevo : statut {}", subject, res.statusCode());
+                throw new MailDeliveryException("L'e-mail n'a pas pu être envoyé. Réessayez plus tard.", null);
+            }
+            log.info("E-mail « {} » envoyé (Brevo)", subject);
+        } catch (java.io.IOException e) {
+            log.warn("Échec d'envoi de l'e-mail « {} » par Brevo : {}", subject, e.getClass().getSimpleName());
+            throw new MailDeliveryException("L'e-mail n'a pas pu être envoyé. Réessayez plus tard.", e);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new MailDeliveryException("L'e-mail n'a pas pu être envoyé.", e);
         }
     }
 

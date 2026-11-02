@@ -46,6 +46,8 @@ yaaba:
     from: ${MAIL_FROM:KIBARE <no-reply@kibare.bf>}
     app-url: ${APP_URL:http://localhost:4200}
     outbox-dir: ${MAIL_OUTBOX:./data/outbox}
+    # Brevo (API HTTPS, gratuite) : prioritaire sur SMTP quand la clé est définie
+    brevo-api-key: ${BREVO_API_KEY:}
     require-verified: ${REQUIRE_VERIFIED_EMAIL:true}
   admin:
     email: ${ADMIN_EMAIL:admin@kibare.bf}
@@ -63,3 +65,7 @@ management:
     web:
       exposure:
         include: health
+  # la santé du site ne dépend pas du serveur d'e-mail (injoignable chez certains hébergeurs)
+  health:
+    mail:
+      enabled: false

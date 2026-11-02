@@ -16,6 +16,8 @@ services:
         sync: false
       - key: CLOUDINARY_URL        # cloudinary://clé:secret@nom-du-cloud
         sync: false
+      - key: BREVO_API_KEY         # clé API Brevo (SMTP bloqué sur l'offre gratuite de Render)
+        sync: false
       - key: MAIL_HOST
         value: smtp.gmail.com
       - key: MAIL_PORT

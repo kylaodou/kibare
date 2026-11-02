@@ -20,7 +20,7 @@ public record YaabaProperties(String storageDir, List<String> corsOrigins, Admin
      * @param outboxDir dossier de dépôt quand aucun SMTP n'est configuré ; vide = envoi impossible
      * @param requireVerified exiger un e-mail vérifié pour contribuer
      */
-    public record Mail(String from, String appUrl, String outboxDir, boolean requireVerified) {}
+    public record Mail(String from, String appUrl, String outboxDir, boolean requireVerified, String brevoApiKey) {}
 
     /**
      * Connexion avec Google (gratuite) : identifiant client OAuth « application Web » créé dans Google Cloud Console.
