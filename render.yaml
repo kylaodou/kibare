@@ -1,0 +1,38 @@
+# Déploiement Render (offre gratuite) : « New + » → « Blueprint » → ce dépôt.
+# Les valeurs marquées sync: false sont demandées par Render à la création (jamais dans le dépôt).
+services:
+  - type: web
+    name: kibare
+    runtime: docker
+    plan: free
+    branch: main
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: DATABASE_URL          # Neon : jdbc:postgresql://<hôte>/<base>?sslmode=require
+        sync: false
+      - key: DATABASE_USER
+        sync: false
+      - key: DATABASE_PASSWORD
+        sync: false
+      - key: CLOUDINARY_URL        # cloudinary://clé:secret@nom-du-cloud
+        sync: false
+      - key: MAIL_HOST
+        value: smtp.gmail.com
+      - key: MAIL_PORT
+        value: "587"
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD         # mot de passe d'application Gmail (16 lettres)
+        sync: false
+      - key: MAIL_FROM
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: APP_URL               # adresse publique, ex. https://kibare.onrender.com
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true

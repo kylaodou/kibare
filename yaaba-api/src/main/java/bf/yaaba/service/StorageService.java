@@ -15,7 +15,11 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-/** Stockage des fichiers audio sur disque, sous des noms aléatoires non devinables. */
+/**
+ * Stockage des voix et vidéos, sous des noms aléatoires non devinables :
+ * sur Cloudinary si CLOUDINARY_URL est définie (hébergement sans disque persistant), sinon sur disque.
+ * Avec Cloudinary, le « nom » enregistré est directement l'adresse HTTPS du fichier.
+ */
 @Service
 public class StorageService {
 
@@ -32,10 +36,26 @@ public class StorageService {
             "video/webm", "webm");
 
     private final Path root;
+    private final CloudinaryClient cloud;
 
     public StorageService(YaabaProperties props) throws IOException {
         this.root = Path.of(props.storageDir()).toAbsolutePath().normalize();
         Files.createDirectories(root);
+        this.cloud = CloudinaryClient.from(props.cloudinaryUrl());
+    }
+
+    /** Écrit le fichier sur Cloudinary ou sur disque ; renvoie l'adresse ou le nom enregistré. */
+    private String write(MultipartFile file, String ext, String contentType) {
+        String name = UUID.randomUUID() + "." + ext;
+        try {
+            if (cloud != null) return cloud.upload(file.getBytes(), name, contentType);
+            try (InputStream in = file.getInputStream()) {
+                Files.copy(in, root.resolve(name), StandardCopyOption.REPLACE_EXISTING);
+            }
+            return name;
+        } catch (IOException e) {
+            throw new IllegalStateException("Impossible d'enregistrer le fichier", e);
+        }
     }
 
     public record Stored(String fileName, String contentType) {}
@@ -46,13 +66,8 @@ public class StorageService {
         String base = type.contains(";") ? type.substring(0, type.indexOf(';')).trim() : type;
         String ext = EXTENSIONS.get(base);
         if (ext == null) throw new IllegalArgumentException("Format audio non pris en charge : " + type);
-        String name = UUID.randomUUID() + "." + ext;
-        try (InputStream in = file.getInputStream()) {
-            Files.copy(in, root.resolve(name), StandardCopyOption.REPLACE_EXISTING);
-        } catch (IOException e) {
-            throw new IllegalStateException("Impossible d'enregistrer le fichier", e);
-        }
-        return new Stored(name, base.equals("video/webm") ? "audio/webm" : base);
+        String type2 = base.equals("video/webm") ? "audio/webm" : base;
+        return new Stored(write(file, ext, type2), type2);
     }
 
     /** Taille maximale d'une vidéo d'illustration. */
@@ -69,13 +84,7 @@ public class StorageService {
         String base = type.contains(";") ? type.substring(0, type.indexOf(';')).trim() : type;
         String ext = VIDEO.get(base);
         if (ext == null) throw new IllegalArgumentException("Format vidéo non pris en charge (MP4, WebM ou Ogg) : " + type);
-        String name = UUID.randomUUID() + "." + ext;
-        try (InputStream in = file.getInputStream()) {
-            Files.copy(in, root.resolve(name), StandardCopyOption.REPLACE_EXISTING);
-        } catch (IOException e) {
-            throw new IllegalStateException("Impossible d'enregistrer la vidéo", e);
-        }
-        return new Stored(name, base);
+        return new Stored(write(file, ext, base), base);
     }
 
     public Optional<Resource> load(String fileName) {
@@ -87,6 +96,10 @@ public class StorageService {
 
     public void delete(String fileName) {
         if (fileName == null) return;
+        if (fileName.startsWith("https://")) {
+            if (cloud != null) cloud.delete(fileName);
+            return;
+        }
         try {
             Path p = root.resolve(fileName).normalize();
             if (p.startsWith(root)) Files.deleteIfExists(p);
@@ -96,6 +109,7 @@ public class StorageService {
     }
 
     public static String mediaUrl(String fileName) {
-        return fileName == null ? null : "/api/media/" + fileName;
+        if (fileName == null) return null;
+        return fileName.startsWith("https://") ? fileName : "/api/media/" + fileName;
     }
 }

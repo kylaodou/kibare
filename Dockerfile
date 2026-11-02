@@ -22,6 +22,8 @@ FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 COPY --from=api /app/target/yaaba-api-1.0.0.jar app.jar
 ENV PORT=8080 STORAGE_DIR=/data/uploads DATABASE_URL=jdbc:h2:file:/data/kibare
+# mémoire adaptée aux offres gratuites (512 Mo)
+ENV JAVA_TOOL_OPTIONS="-XX:MaxRAMPercentage=70 -XX:+UseSerialGC -Xss512k -XX:TieredStopAtLevel=1"
 VOLUME /data
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]

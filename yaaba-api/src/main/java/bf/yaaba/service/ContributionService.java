@@ -184,9 +184,12 @@ public class ContributionService {
         {
             if (c.getKind() == Contribution.Kind.voice && c.getSegmentFiles() != null && !c.getSegmentFiles().isBlank()) {
                 // une piste par paragraphe, rattachée à l'identifiant de scène enregistré avec la contribution
-                for (RecordingView r : view(c).recordings()) {
+                String[] files = c.getSegmentFiles().split(",");
+                List<RecordingView> recs = view(c).recordings();
+                for (int i = 0; i < recs.size() && i < files.length; i++) {
+                    RecordingView r = recs.get(i);
                     if (r.sceneId() == null || r.paragraph() == null) continue;
-                    String file = r.url().substring(r.url().lastIndexOf('/') + 1);
+                    String file = files[i];
                     AudioTrack track = new AudioTrack(c.getTaleSlug(), c.getLanguage(), c.getAuthorName(), file, c.getAudioContentType(), c.getId());
                     track.setSceneId(r.sceneId());
                     audio.save(track);

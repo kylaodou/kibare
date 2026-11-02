@@ -40,6 +40,8 @@ yaaba:
   jwt-hours: 168
   google:
     client-id: ${GOOGLE_CLIENT_ID:}
+  # stockage des voix et vidéos sur Cloudinary (vide : sur disque, dans storage-dir)
+  cloudinary-url: ${CLOUDINARY_URL:}
   mail:
     from: ${MAIL_FROM:KIBARE <no-reply@kibare.bf>}
     app-url: ${APP_URL:http://localhost:4200}

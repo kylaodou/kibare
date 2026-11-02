@@ -7,7 +7,6 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 import java.time.Instant;
 
@@ -64,7 +63,6 @@ public class Contribution {
     @Column(length = 120)
     private String authorEmail;
 
-    @Lob
     @Column(columnDefinition = "TEXT")
     private String text;
 
@@ -73,7 +71,7 @@ public class Contribution {
     private String audioContentType;
 
     /** Enregistrements paragraphe par paragraphe (noms de fichiers séparés par des virgules, dans l'ordre). */
-    @Column(length = 4000)
+    @Column(length = 8000)
     private String segmentFiles;
 
     /** Paragraphe lu par chaque enregistrement (identifiants de scène, même ordre que segmentFiles). */
