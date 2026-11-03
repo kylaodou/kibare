@@ -15,6 +15,7 @@ import { LogoComponent } from '../shared/logo/logo.component';
 export const NAV = [
   { path: '/', key: 'nav.home', icon: 'fa-house', exact: true },
   { path: '/carte', key: 'nav.map', icon: 'fa-map-location-dot', exact: false },
+  { path: '/veillee', key: 'nav.veillee', icon: 'fa-fire', exact: false },
   { path: '/contes', key: 'nav.library', icon: 'fa-book-open', exact: false },
   { path: '/langues', key: 'nav.languages', icon: 'fa-language', exact: false },
   { path: '/contributeurs', key: 'nav.contributors', icon: 'fa-people-group', exact: false },

@@ -8,6 +8,7 @@ const admin: CanActivateFn = (_r, state) => inject(AuthService).isAdmin() || inj
 export const routes: Routes = [
   { path: '', loadComponent: () => import('./pages/home/home.page').then((m) => m.HomePage), title: 'KIBARE — Contes & légendes du Burkina Faso' },
   { path: 'carte', loadComponent: () => import('./pages/map/map.page').then((m) => m.MapPage), title: 'Carte — KIBARE' },
+  { path: 'veillee', loadComponent: () => import('./pages/veillee/veillee.page').then((m) => m.VeilleePage), title: 'La Veillée 3D — KIBARE' },
   { path: 'contes', loadComponent: () => import('./pages/library/library.page').then((m) => m.LibraryPage), title: 'Contes — KIBARE' },
   { path: 'contes/:slug', loadComponent: () => import('./pages/tale/tale.page').then((m) => m.TalePage) },
   { path: 'langues', loadComponent: () => import('./pages/languages/languages.page').then((m) => m.LanguagesPage), title: 'Langues — KIBARE' },

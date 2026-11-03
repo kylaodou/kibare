@@ -342,7 +342,7 @@
   }
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 1280px) {
   .links {
     display: flex;
   }
@@ -363,6 +363,10 @@
     padding: 10px 8px;
     font-size: 0.84rem;
   }
+}
+
+/* la devise ne tient qu'en grand écran depuis l'ajout de la Veillée au menu */
+@media (max-width: 1560px) {
   .brand ::ng-deep .tag {
     display: none;
   }

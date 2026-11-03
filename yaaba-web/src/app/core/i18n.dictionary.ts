@@ -9,6 +9,7 @@ const fr: Record<string, string> = {
 
   'nav.home': 'Accueil',
   'nav.map': 'Carte',
+  'nav.veillee': 'Veillée 3D',
   'nav.library': 'Contes',
   'nav.languages': 'Langues',
   'nav.contribute': 'Contribuer',
@@ -411,6 +412,7 @@ const en: Record<string, string> = {
 
   'nav.home': 'Home',
   'nav.map': 'Map',
+  'nav.veillee': '3D Night',
   'nav.library': 'Tales',
   'nav.languages': 'Languages',
   'nav.contribute': 'Contribute',

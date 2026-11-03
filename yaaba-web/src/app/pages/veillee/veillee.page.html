@@ -1,0 +1,115 @@
+<section class="vl-stage" #stage [class.is-in]="state() === 'in'" aria-label="La Veillée, village en trois dimensions">
+  <div class="canvas" #canvas></div>
+
+  <!-- étiquettes des objets : vrais boutons, accessibles au clavier -->
+  <div class="labels" [class.show]="state() === 'in'">
+    @for (h of hotspots; track h.id) {
+      <button #label type="button" class="lbl" [attr.data-id]="h.id" [class.on]="spot()?.id === h.id" (click)="visit(h)" [attr.aria-label]="h.label">
+        <i class="fa-solid {{ h.icon }}" aria-hidden="true"></i><span>{{ h.label }}</span>
+      </button>
+    }
+  </div>
+
+  @if (state() === 'in') {
+    <div class="hud">
+      <button type="button" class="hud-btn" (click)="listOpen.set(!listOpen())" [attr.aria-expanded]="listOpen()" aria-controls="vl-list">
+        <i class="fa-solid fa-list" aria-hidden="true"></i> <span>Les histoires</span>
+      </button>
+      <span class="grow"></span>
+      <button type="button" class="hud-btn round" (click)="toggleMute()" [attr.aria-pressed]="muted()" [attr.aria-label]="muted() ? 'Remettre le son' : 'Couper le son'">
+        <i class="fa-solid" [class.fa-volume-high]="!muted()" [class.fa-volume-xmark]="muted()" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="hud-btn round fs" (click)="toggleFullscreen()" [attr.aria-label]="fullscreen() ? 'Quitter le plein écran' : 'Plein écran'">
+        <i class="fa-solid" [class.fa-expand]="!fullscreen()" [class.fa-compress]="fullscreen()" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    @if (listOpen()) {
+      <nav class="list" id="vl-list" aria-label="Les histoires du village">
+        @for (h of hotspots; track h.id) {
+          <button type="button" (click)="visit(h)"><i class="fa-solid {{ h.icon }}" aria-hidden="true"></i> {{ h.label }}</button>
+        }
+      </nav>
+    }
+
+    @if (!spot() && !telling()) {
+      <p class="hint" aria-hidden="true">
+        @if (coarse) {
+          Touchez le sol pour marcher, glissez pour regarder, touchez un objet pour entendre son histoire.
+        } @else {
+          Cliquez sur le sol pour marcher (ou Z Q S D / W A S D), glissez pour regarder, cliquez sur un objet pour entendre son histoire.
+        }
+      </p>
+    }
+
+    <!-- paroles du griot -->
+    @if (telling()) {
+      <div class="subtitles" aria-live="polite">
+        <p>{{ subtitle() }}</p>
+        <div class="sub-ctrl">
+          <small>{{ sceneIndex() + 1 }} / {{ tale()?.scenes?.length }}</small>
+          <button type="button" (click)="togglePause()" [attr.aria-label]="paused() ? 'Reprendre' : 'Mettre en pause'"><i class="fa-solid" [class.fa-pause]="!paused()" [class.fa-play]="paused()" aria-hidden="true"></i></button>
+          <button type="button" (click)="skip()" aria-label="Paragraphe suivant"><i class="fa-solid fa-forward-step" aria-hidden="true"></i></button>
+          <button type="button" (click)="stopTelling()" aria-label="Arrêter le récit"><i class="fa-solid fa-stop" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    } @else if (spot(); as s) {
+      <article class="card-tale" aria-live="polite">
+        <button type="button" class="x" (click)="close()" aria-label="Fermer"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <span class="eyebrow">{{ s.slug ? s.label : 'Le griot vous propose ce soir' }}</span>
+        @if (tale()) {
+          <h2>{{ title() }}</h2>
+          <small class="where"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ tale()?.place }} · {{ regionName() }}</small>
+          <p>{{ summary() }}</p>
+          <label class="lang">
+            <span>Langue du récit</span>
+            <select [value]="lang()" (change)="lang.set($any($event.target).value)">
+              @for (l of langs(); track l.code) {
+                <option [value]="l.code" [selected]="l.code === lang()">{{ l.name }}</option>
+              }
+            </select>
+          </label>
+          <div class="actions">
+            <button type="button" class="btn btn-sm" (click)="tell()"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Écouter le griot</button>
+            <a class="btn btn-ghost btn-sm" [routerLink]="['/contes', tale()?.slug]"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Lire le conte</a>
+            @if (!s.slug) {
+              <button type="button" class="link" (click)="otherTale()"><i class="fa-solid fa-shuffle" aria-hidden="true"></i> Un autre conte</button>
+            }
+          </div>
+        } @else {
+          <p>Ce conte n'est pas disponible pour le moment.</p>
+        }
+      </article>
+    }
+  }
+
+  <!-- écrans d'entrée et de secours -->
+  @switch (state()) {
+    @case ('loading') {
+      <div class="veil"><i class="fa-solid fa-fire fa-beat-fade flame" aria-hidden="true"></i><p role="status">Le griot allume le feu…</p></div>
+    }
+    @case ('ready') {
+      <div class="veil">
+        <span class="eyebrow">Expérience 3D</span>
+        <h1>La Veillée</h1>
+        <p>La nuit tombe sur le village. Autour du feu, le griot attend. Promenez-vous, et chaque objet vous racontera son histoire.</p>
+        <button type="button" class="btn enter" (click)="enter()"><i class="fa-solid fa-fire" aria-hidden="true"></i> Entrer dans le village</button>
+        <small><i class="fa-solid fa-headphones" aria-hidden="true"></i> Mettez le son, ou vos écouteurs.</small>
+      </div>
+    }
+    @case ('nogl') {
+      <div class="veil">
+        <h1>La Veillée</h1>
+        <p>Votre navigateur ne peut pas afficher la 3D. Tous les contes restent disponibles, avec leurs illustrations et leurs voix.</p>
+        <a class="btn" routerLink="/contes">Voir les contes</a>
+      </div>
+    }
+    @case ('lost') {
+      <div class="veil">
+        <h1>La scène s'est interrompue</h1>
+        <p>Votre appareil a manqué de mémoire graphique. Rechargez la page pour revenir au village.</p>
+        <a class="btn" routerLink="/contes">Voir les contes</a>
+      </div>
+    }
+  }
+</section>

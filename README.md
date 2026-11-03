@@ -15,6 +15,7 @@ Projet du module *Technologies Web Multimédia* — Master 1.
 | | |
 |---|---|
 | **Carte 2D / 3D** | Leaflet (2D) et Three.js (relief extrudé) synchronisés. Les **17 régions** issues de la réforme de 2025, avec affichage par région, province ou commune, et les chefs-lieux. Recherche, filtres, fiches région. |
+| **La Veillée 3D** | Village burkinabè en 3D temps réel (WebGL, Three.js), sans installation : on marche autour du feu, chaque objet (cheval de Yennenga, masque, crocodile, case de Tiébélé…) ouvre un conte, et le griot le raconte avec gestes, sous-titres et narration dans la langue choisie. Son qui suit le visiteur, qualité adaptée automatiquement à l'appareil. |
 | **56 contes** | Au moins trois contes par région : Yennenga, le Faux Départ du Moogho Naaba, les crocodiles de Sabou, le lac Bam, les pics de Sindou, contes gourmantchés, gouin, lyélé, peuls, bissa… Chaque conte cite sa **source**. |
 | **Lecteur** | Illustration animée à gauche (la caméra cadre l'élément nommé dans la phrase lue), **texte intégral** à droite, paragraphe actif synchronisé avec l'image et la voix. Vidéo de paragraphe facultative. Taille du texte, partage, favoris. |
 | **Langues** | Français et anglais rédigés ; **mooré, dioula, fulfulde** en premier jet de traduction automatique (NLLB-200), **signalé dans le lecteur** et à valider par des locuteurs. |
