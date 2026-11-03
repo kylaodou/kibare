@@ -24,11 +24,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- * Cycle de vie des contributions : dépôt par un utilisateur connecté, notification aux administrateurs,
- * puis modération. Valider une « voix » publie l'enregistrement sur le conte ; valider un « récit »
- * publie un nouveau conte crédité à son auteur. L'auteur est notifié de la décision.
- */
+/** Cycle de vie des contributions : dépôt par un utilisateur connecté, notification aux administrateurs, puis modération. */
 @Service
 public class ContributionService {
 
@@ -148,10 +144,7 @@ public class ContributionService {
         return new PageView<>(p.getContent().stream().map(this::view).toList(), p.getTotalElements(), p.getNumber(), p.getSize(), counts);
     }
 
-    /**
-     * Vue complète : chaque enregistrement avec le numéro et le texte exact de son paragraphe,
-     * retrouvés par l'identifiant de scène enregistré (ou, pour une ancienne contribution, par l'ordre).
-     */
+    /** Vue complète : chaque enregistrement avec le numéro et le texte exact de son paragraphe, retrouvés par l'identifiant de scène enregistré (ou, pour une ancienne contribution, par l'ordre). */
     private ContributionView view(Contribution c) {
         if (c.getSegmentFiles() == null || c.getSegmentFiles().isBlank() || c.getTaleSlug() == null) return ContributionView.of(c);
         Map<String, JsonNode> scenes = tales.sceneTexts(c.getTaleSlug());

@@ -9,10 +9,7 @@ import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import java.time.Instant;
 
-/**
- * Demande de réinitialisation du mot de passe : un code à usage unique envoyé par e-mail.
- * Seules des empreintes (HMAC) du code et du jeton de réinitialisation sont conservées.
- */
+/** Demande de réinitialisation du mot de passe : un code à usage unique envoyé par e-mail. */
 @Entity
 @Table(name = "password_reset", indexes = @Index(columnList = "userId"))
 public class PasswordReset {

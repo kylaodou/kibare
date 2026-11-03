@@ -23,12 +23,7 @@ import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * Connexion avec Google (Google Identity Services, gratuit).
- * Le navigateur obtient un jeton d'identité signé par Google ; il est vérifié ici avec les clés publiques
- * de Google (signature, émetteur, audience = notre identifiant client, expiration, adresse vérifiée).
- * Un compte existant avec la même adresse est lié ; sinon un compte est créé (adresse déjà vérifiée par Google).
- */
+/** Connexion avec Google (Google Identity Services, gratuit). */
 @Service
 public class GoogleAuthService {
 

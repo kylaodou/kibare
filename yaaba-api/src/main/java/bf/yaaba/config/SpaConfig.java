@@ -8,11 +8,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.resource.PathResourceResolver;
 
-/**
- * Permet de déployer le front Angular et l'API sur un seul serveur :
- * si le build Angular est placé dans resources/static, toute route inconnue
- * (hors /api) renvoie index.html pour laisser le routeur Angular décider.
- */
+/** Permet de déployer le front Angular et l'API sur un seul serveur : si le build Angular est placé dans resources/static, toute route inconnue (hors /api) renvoie index.html pour laisser le routeur Angular décider. */
 @Configuration
 public class SpaConfig implements WebMvcConfigurer {
 

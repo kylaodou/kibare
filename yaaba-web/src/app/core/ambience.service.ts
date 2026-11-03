@@ -4,11 +4,7 @@ import { Sky } from './models';
 /** Gamme pentatonique (ré mineur) jouée par le balafon. */
 const SCALE = [146.83, 174.61, 196.0, 220.0, 261.63, 293.66, 349.23, 392.0, 440.0, 523.25, 587.33];
 
-/**
- * Ambiance musicale propre à chaque région : enregistrements historiques libres de droits
- * (Exposition coloniale de 1931, collection Gallica/BnF ; balafon sénoufo CC BY 4.0).
- * Le Liptako et le Soum (ex-Sahel), sans enregistrement libre disponible, garde la synthèse en direct.
- */
+/** Ambiance musicale propre à chaque région : enregistrements historiques libres de droits (Exposition coloniale de 1931, collection Gallica/BnF ; balafon sénoufo CC BY 4.0). */
 const MUSIC_KEY = 'kibare.music';
 
 export const REGION_SOUND: Record<string, { file: string; label: string }> = {
@@ -29,10 +25,7 @@ export const REGION_SOUND: Record<string, { file: string; label: string }> = {
   sourou: { file: 'balafon-trad', label: 'Balafon traditionnel' },
 };
 
-/**
- * Bande sonore d'ambiance : enregistrement de la région du conte quand il existe,
- * sinon balafon pentatonique synthétisé (Web Audio API) ; grillons la nuit, oiseaux le jour.
- */
+/** Bande sonore d'ambiance : enregistrement de la région du conte quand il existe, sinon balafon pentatonique synthétisé (Web Audio API) ; grillons la nuit, oiseaux le jour. */
 @Injectable({ providedIn: 'root' })
 export class AmbienceService {
   readonly playing = signal(false);

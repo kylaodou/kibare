@@ -20,11 +20,7 @@ interface State {
 
 const KEY = 'kibare.passport';
 
-/**
- * « Passeport des contes » : la progression du visiteur, conservée dans son navigateur.
- * Il permet de reprendre un conte là où on l'a laissé et de collectionner les régions.
- * Chaque compte a son propre passeport ; le visiteur non connecté a le sien.
- */
+/** « Passeport des contes » : la progression du visiteur, conservée dans son navigateur. */
 @Injectable({ providedIn: 'root' })
 export class ProgressService {
   private data = inject(DataService);

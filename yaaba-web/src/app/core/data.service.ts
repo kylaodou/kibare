@@ -4,12 +4,7 @@ import { catchError, firstValueFrom, map, of, timeout } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { AudioTrack, City, CommentItem, Contribution, ContributionPayload, Contributor, Language, MapLevel, PageResult, PlatformStats, Region, Tale, TaleOption } from './models';
 
-/**
- * Point d'accès unique aux données.
- * L'application interroge d'abord l'API Spring Boot ; si elle ne répond pas,
- * elle bascule automatiquement sur les données embarquées (mode hors-ligne),
- * pour que l'expérience reste complète en toutes circonstances.
- */
+/** Point d'accès unique aux données. */
 @Injectable({ providedIn: 'root' })
 export class DataService {
   private http = inject(HttpClient);

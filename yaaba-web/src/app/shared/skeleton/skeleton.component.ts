@@ -1,12 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 
-/**
- * Squelettes de chargement, à la forme du contenu attendu :
- * - cards : cartes d'histoire (image + lignes) ;
- * - rows : lignes de tableau ou de liste ;
- * - tiles : chiffres clés du tableau de bord ;
- * - reader : lecteur de conte (illustration + paragraphes).
- */
+/** Squelettes de chargement, à la forme du contenu attendu : - cards : cartes d'histoire (image + lignes) ; - rows : lignes de tableau ou de liste ; - tiles : chiffres clés du tableau de bord ; - reader : lecteur de conte (illustration + paragraphes). */
 @Component({
   selector: 'app-skeleton',
   template: `

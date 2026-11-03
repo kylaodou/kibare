@@ -8,6 +8,7 @@
         [selectedTale]="selectedTale()"
         [level]="level()"
         (regionSelect)="selectRegion($event)"
+        (placeSelect)="selectedPlace.set($event)"
         (taleSelect)="selectTale($event)"
       />
     } @else {
@@ -139,6 +140,9 @@
         <a class="btn btn-block" [routerLink]="['/contes', t.slug]">
           <i class="fa-solid fa-play"></i> {{ 'map.listen' | t }}
         </a>
+        <a class="btn btn-ghost btn-block immerse" routerLink="/veillee" [queryParams]="{ region: t.region, conte: t.slug }">
+          <i class="fa-solid fa-vr-cardboard"></i> Voir ce conte en immersion 3D
+        </a>
       </div>
     } @else if (regionInfo(); as r) {
       <!-- fiche région -->
@@ -147,6 +151,16 @@
         <span class="eyebrow">{{ 'map.region' | t }}</span>
         <h2>{{ r.name }}</h2>
         <p class="muted">{{ r.description | tx }}</p>
+        <a class="btn btn-block immerse" routerLink="/veillee" [queryParams]="placeQuery(r.code)">
+          <i class="fa-solid fa-vr-cardboard"></i> Entrer en immersion 3D{{ selectedPlace() ? ' : ' + selectedPlace() : '' }}
+        </a>
+        @if (regionCities().length) {
+          <div class="places" aria-label="Autres villages à visiter en 3D">
+            @for (c of regionCities(); track c.name) {
+              <a class="place-link" routerLink="/veillee" [queryParams]="{ region: r.code, lieu: c.name }"><i class="fa-solid fa-location-dot"></i> {{ c.name }}</a>
+            }
+          </div>
+        }
         <dl class="region-facts">
           <div><dt>{{ 'map.capital' | t }}</dt><dd>{{ r.capital }}</dd></div>
           <div><dt>{{ 'map.peoples' | t }}</dt><dd>{{ r.peoples.join(', ') }}</dd></div>

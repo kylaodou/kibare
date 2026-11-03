@@ -1,8 +1,4 @@
-/**
- * Paysage sonore de la Veillée, synthétisé sur place (aucun fichier à charger) :
- * crépitement du feu selon la distance, grillons de la nuit, grenouilles près de la mare.
- * À créer lors d'un geste de l'utilisateur, sinon le navigateur bloque le son.
- */
+/** Paysage sonore de la Veillée, synthétisé sur place (aucun fichier à charger) : crépitement du feu selon la distance, grillons de la nuit, grenouilles près de la mare. */
 export class VeilleeSound {
   private ctx = new AudioContext();
   private master = this.ctx.createGain();

@@ -580,3 +580,36 @@
     display: none;
   }
 }
+
+/* entrée en immersion 3D depuis le panneau */
+.immerse {
+  margin: 10px 0 14px;
+}
+
+.places {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.place-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-2);
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  i {
+    color: var(--y-ochre);
+  }
+  &:hover {
+    border-color: var(--y-red);
+    color: var(--y-red);
+  }
+}

@@ -1,10 +1,5 @@
 """Images des e-mails KIBARE (intégrées aux messages, donc visibles dans Gmail sans serveur public).
-
-- header.png : logo officiel sur fond blanc semé de motifs bogolan (comme les cartes du site) ;
-- footer.png : bandeau brun à motifs (triangles, losanges, zigzags), comme le pied de page du site.
-
-usage : python tools/build_mail_art.py
-"""
+usage : python tools/build_mail_art.py"""
 from pathlib import Path
 
 from PIL import Image, ImageDraw

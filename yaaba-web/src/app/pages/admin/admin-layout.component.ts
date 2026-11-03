@@ -9,10 +9,7 @@ import { AppNotification, NOTIF_ICON, NotificationsService } from '../../core/no
 import { ThemeService } from '../../core/theme.service';
 import { LogoComponent } from '../../shared/logo/logo.component';
 
-/**
- * Coque du back-office, autonome : ni menu ni pied de page du site public.
- * Barre latérale, barre du haut (langue, thème, notifications), contenu.
- */
+/** Coque du back-office, autonome : ni menu ni pied de page du site public. */
 @Component({
   selector: 'app-admin-layout',
   imports: [RouterOutlet, RouterLink, RouterLinkActive, LogoComponent, TranslatePipe, PopoverModule, DatePipe],

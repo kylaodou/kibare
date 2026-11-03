@@ -15,11 +15,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- * Stockage des voix et vidéos, sous des noms aléatoires non devinables :
- * sur Cloudinary si CLOUDINARY_URL est définie (hébergement sans disque persistant), sinon sur disque.
- * Avec Cloudinary, le « nom » enregistré est directement l'adresse HTTPS du fichier.
- */
+/** Stockage des voix et vidéos, sous des noms aléatoires non devinables : sur Cloudinary si CLOUDINARY_URL est définie (hébergement sans disque persistant), sinon sur disque. */
 @Service
 public class StorageService {
 

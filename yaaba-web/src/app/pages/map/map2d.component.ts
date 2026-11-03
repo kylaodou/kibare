@@ -32,6 +32,8 @@ export class Map2dComponent implements AfterViewInit, OnDestroy {
   /** niveau de détail : régions, provinces, communes ou villes */
   readonly level = input<MapLevel>('region');
   readonly regionSelect = output<string>();
+  /** province, commune ou ville touchée */
+  readonly placeSelect = output<string>();
   readonly taleSelect = output<string>();
 
   private el = viewChild.required<ElementRef<HTMLDivElement>>('el');
@@ -234,7 +236,10 @@ export class Map2dComponent implements AfterViewInit, OnDestroy {
           const p = f.properties ?? {};
           const sub = level === 'province' ? `chef-lieu : ${p['capital']}` : `province : ${p['province']}`;
           layer.bindTooltip(`<strong>${p['name']}</strong><br><small>${sub}</small>`, { sticky: true, className: 'region-tip', direction: 'top', offset: [0, -8] });
-          layer.on('click', () => this.regionSelect.emit(p['region']));
+          layer.on('click', () => {
+            this.regionSelect.emit(p['region']);
+            this.placeSelect.emit(p['name']);
+          });
           // nom permanent des provinces, au centre de leur tracé
           if (level === 'province') {
             const c = (layer as L.Polygon).getBounds().getCenter();
@@ -261,7 +266,10 @@ export class Map2dComponent implements AfterViewInit, OnDestroy {
           fillOpacity: 1,
         })
           .bindTooltip(c.name, { permanent: big, direction: 'right', offset: [8, 0], className: big ? 'city-tip big' : 'city-tip' })
-          .on('click', () => this.regionSelect.emit(c.region))
+          .on('click', () => {
+            this.regionSelect.emit(c.region);
+            this.placeSelect.emit(c.name);
+          })
           .addTo(this.detail);
       }
     }

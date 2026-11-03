@@ -33,10 +33,7 @@ interface PendingVoice {
 
 const newSceneId = () => 'p-' + crypto.randomUUID();
 
-/**
- * Éditeur complet d'un conte : métadonnées, textes dans chaque langue,
- * paragraphes illustrés (animation, vidéo) et voix rattachées à chaque paragraphe.
- */
+/** Éditeur complet d'un conte : métadonnées, textes dans chaque langue, paragraphes illustrés (animation, vidéo) et voix rattachées à chaque paragraphe. */
 @Component({
   selector: 'app-tale-editor',
   imports: [FormsModule, RouterLink, SceneArtComponent, TranslatePipe, DialogModule, ConfirmDialogModule, RecorderComponent, AudioPlayerComponent],

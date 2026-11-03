@@ -13,15 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * Réinitialisation du mot de passe en trois temps :
- * <ol>
- *   <li>demande : un code à 6 chiffres, valable exactement 5 minutes, est envoyé par e-mail ;</li>
- *   <li>vérification : 5 essais au plus ; un code accepté remet un jeton valable 10 minutes ;</li>
- *   <li>nouveau mot de passe : le jeton est consommé, la demande est close.</li>
- * </ol>
- * La réponse à la demande est identique que le compte existe ou non. Seules des empreintes sont stockées.
- */
+/** Réinitialisation du mot de passe en trois temps : demande : un code à 6 chiffres, valable exactement 5 minutes, est envoyé par e-mail ; vérification : 5 essais au plus ; un code accepté remet un jeton valable 10 minutes ; nouveau mot de passe : le jeton est consommé, la demande est close. */
 @Service
 public class PasswordResetService {
 
@@ -92,10 +84,7 @@ public class PasswordResetService {
         return new ResetTokenView(token, TOKEN_TTL.toSeconds());
     }
 
-    /**
-     * Lien « choisir mon mot de passe » envoyé à l'inscription avec Google : jeton à usage unique, valable 7 jours,
-     * consommé par l'étape 3. Seule son empreinte est stockée. Renvoie false si l'e-mail n'a pas pu partir.
-     */
+    /** Lien « choisir mon mot de passe » envoyé à l'inscription avec Google : jeton à usage unique, valable 7 jours, consommé par l'étape 3. */
     @Transactional
     public boolean sendWelcomeSetup(User u) {
         String token = secrets.randomToken();

@@ -16,10 +16,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * Charge le contenu éditorial (contes, régions, langues) depuis resources/seed au démarrage.
- * Le contenu est mis à jour à chaque lancement, mais les compteurs (lectures, likes) sont conservés.
- */
+/** Charge le contenu éditorial (contes, régions, langues) depuis resources/seed au démarrage. */
 @Component
 public class SeedService implements ApplicationRunner {
 

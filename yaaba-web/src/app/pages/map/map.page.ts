@@ -37,6 +37,10 @@ export class MapPage {
 
   /** niveau de détail affiché : régions par défaut */
   readonly level = signal<MapLevel>('region');
+  /** province, commune ou ville touchée sur la carte : on peut y entrer en 3D */
+  readonly selectedPlace = signal<string | null>(null);
+  /** Villes de la région sélectionnée, chacune avec son village 3D. */
+  readonly regionCities = computed(() => (this.data.cities() ?? []).filter((c) => c.region === this.selectedRegion()));
   readonly levels: { code: MapLevel; icon: string }[] = [
     { code: 'region', icon: 'fa-layer-group' },
     { code: 'province', icon: 'fa-draw-polygon' },
@@ -135,7 +139,14 @@ export class MapPage {
     this.syncUrl();
   }
 
+  placeQuery(region: string) {
+    const lieu = this.selectedPlace();
+    return lieu ? { region, lieu } : { region };
+  }
+
   selectRegion(code: string | null, sync = true) {
+    this.selectedPlace.set(null);
+    this.data.loadLevel('city');
     this.selectedRegion.set(code);
     this.selectedTale.set(null);
     if (code) {

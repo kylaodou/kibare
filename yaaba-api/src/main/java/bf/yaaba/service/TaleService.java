@@ -411,10 +411,7 @@ public class TaleService {
         return AudioView.of(audio.save(a));
     }
 
-    /**
-     * Anciennes voix communautaires (un fichier par paragraphe dans « segments ») :
-     * converties en une piste par paragraphe, rattachée à l'identifiant de la scène.
-     */
+    /** Anciennes voix communautaires (un fichier par paragraphe dans « segments ») : converties en une piste par paragraphe, rattachée à l'identifiant de la scène. */
     @Transactional
     public int expandLegacyTracks() {
         int n = 0;

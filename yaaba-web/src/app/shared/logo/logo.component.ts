@@ -1,10 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-/**
- * Logo KIBARE (« histoire » en mooré) : la carte du Burkina, un conteur et un livre ouvert.
- * - variant "full" : logo complet avec le nom et la devise ;
- * - variant "mark" : emblème seul + nom en texte (en-tête, pied de page).
- */
+/** Logo KIBARE (« histoire » en mooré) : la carte du Burkina, un conteur et un livre ouvert. */
 @Component({
   selector: 'app-logo',
   template: `

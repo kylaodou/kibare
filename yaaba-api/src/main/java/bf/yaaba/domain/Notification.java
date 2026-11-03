@@ -9,10 +9,7 @@ import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import java.time.Instant;
 
-/**
- * Notification adressée à un utilisateur, ou à tous les administrateurs quand userId est null.
- * Le type permet au front de choisir l'icône et la traduction.
- */
+/** Notification adressée à un utilisateur, ou à tous les administrateurs quand userId est null. */
 @Entity
 @Table(name = "notification", indexes = @Index(columnList = "userId"))
 public class Notification {

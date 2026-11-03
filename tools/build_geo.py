@@ -1,17 +1,5 @@
 """Découpage administratif du Burkina Faso après la réforme de juillet 2025 (17 régions, 47 provinces).
-
-Sources :
-- Conseil des ministres du 2 juillet 2025 (presidencedufaso.bf) : noms et chefs-lieux des 17 régions,
-  provinces renommées (Sanmatenga → Sandbondtenga, Oubritenga → Bassitenga, Soum → Djelgodji, Kossi → Kossin)
-  et nouvelles provinces (Karo-Peli, Dyamongou) ;
-- limites des 45 anciennes provinces : geoBoundaries (CC BY 4.0) ;
-- 351 communes : Institut Géographique du Burkina 2020, via HDX / geoBoundaries (CC BY 3.0 IGO).
-
-Les régions sont obtenues en fusionnant leurs provinces. Les provinces Djelgodji / Karo-Peli (ex-Soum)
-et Dyamongou / Gobnangou (ex-Tapoa) n'ont pas encore de limites publiques : elles sont tracées ensemble.
-
-usage : tools/.venv/Scripts/python tools/build_geo.py <dossier contenant adm2.geojson et adm3.geojson>
-"""
+usage : tools/.venv/Scripts/python tools/build_geo.py <dossier contenant adm2.geojson et adm3.geojson>"""
 import json
 import sys
 import unicodedata

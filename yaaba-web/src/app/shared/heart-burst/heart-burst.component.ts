@@ -1,9 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-/**
- * Éclat de petits cœurs qui tournent autour du bouton « j'aime ».
- * Chaque nouvelle valeur de `trigger` rejoue l'animation (le bloc est recréé).
- */
+/** Éclat de petits cœurs qui tournent autour du bouton « j'aime ». */
 @Component({
   selector: 'app-heart-burst',
   template: `

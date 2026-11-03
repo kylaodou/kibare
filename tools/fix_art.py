@@ -1,11 +1,5 @@
 """Ajoute aux illustrations les personnages et animaux nommés dans le texte mais absents de l'image.
-
-Un mot ne compte que s'il désigne un acteur (« le lion », « une femme », « l'enfant ») ;
-les comparaisons (« peau d'éléphant », « cent éléphants ») sont ignorées. L'élément ajouté
-est posé au sol, dans l'espace le plus libre, tourné vers le centre de la scène.
-
-usage : python tools/fix_art.py [premier numéro] [dernier numéro]
-"""
+usage : python tools/fix_art.py [premier numéro] [dernier numéro]"""
 import json
 import re
 import sys

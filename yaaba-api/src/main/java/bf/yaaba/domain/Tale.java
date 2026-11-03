@@ -7,11 +7,7 @@ import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import java.time.Instant;
 
-/**
- * Un conte, une légende ou un récit historique.
- * Les métadonnées utiles aux recherches sont des colonnes ; le contenu narratif
- * multilingue (scènes, illustrations, quiz, glossaire) est stocké sous forme de document JSON.
- */
+/** Un conte, une légende ou un récit historique. */
 @Entity
 @Table(name = "tale", indexes = {@Index(columnList = "region"), @Index(columnList = "type")})
 public class Tale {

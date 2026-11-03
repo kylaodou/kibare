@@ -16,10 +16,7 @@ import { LazyList } from './lazy-list';
 
 type Filter = 'PENDING' | 'APPROVED' | 'REJECTED' | 'ALL';
 
-/**
- * Modération des contributions : onglets par statut (compteurs du serveur), recherche, tri et pagination côté serveur.
- * Chaque enregistrement est présenté avec le numéro et le texte exact du paragraphe auquel il est rattaché.
- */
+/** Modération des contributions : onglets par statut (compteurs du serveur), recherche, tri et pagination côté serveur. */
 @Component({
   selector: 'app-admin-contributions',
   imports: [FormsModule, RouterLink, DatePipe, DialogModule, ConfirmDialogModule, TableModule, TranslatePipe, AudioPlayerComponent],

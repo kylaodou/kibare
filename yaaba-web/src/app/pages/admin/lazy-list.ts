@@ -5,11 +5,7 @@ import { Observable, Subject, catchError, debounceTime, distinctUntilChanged, of
 import { PageResult } from '../../core/models';
 import { PageQuery } from './admin.service';
 
-/**
- * État d'une liste paginée côté serveur pour un p-table « lazy » :
- * pagination (10 par page), recherche différée, tri et filtres, une seule requête en vol.
- * À créer dans un contexte d'injection (champ de composant).
- */
+/** État d'une liste paginée côté serveur pour un p-table « lazy » : pagination (10 par page), recherche différée, tri et filtres, une seule requête en vol. */
 export class LazyList<T> {
   readonly items = signal<T[]>([]);
   readonly total = signal(0);

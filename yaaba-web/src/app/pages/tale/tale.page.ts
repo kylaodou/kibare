@@ -27,11 +27,7 @@ interface Part {
 /** Langues de lecture proposées, dans cet ordre. */
 const READ_LANGS = ['fr', 'en', 'moore', 'dioula', 'fulfulde'];
 
-/**
- * Lecteur d'un conte : illustration à gauche (elle suit le paragraphe en cours),
- * texte intégral à droite, narration audio synchronisée, choix interactifs,
- * puis morale, quiz, glossaire, source, contributeurs et commentaires.
- */
+/** Lecteur d'un conte : illustration à gauche (elle suit le paragraphe en cours), texte intégral à droite, narration audio synchronisée, choix interactifs, puis morale, quiz, glossaire, source, contributeurs et commentaires. */
 /** Mots (fr, en) qui désignent chaque élément d'illustration. */
 
 /** Une voix : un conteur dans une langue, avec ses fichiers par paragraphe (identifiant de scène → URL). */
@@ -110,10 +106,7 @@ export class TalePage implements AfterViewInit {
     }));
   });
 
-  /**
-   * Voix disponibles, regroupées par conteur et langue. Chaque voix associe un fichier
-   * à l'identifiant réel des paragraphes qu'elle couvre (jamais à leur position).
-   */
+  /** Voix disponibles, regroupées par conteur et langue. */
   readonly voices = computed<Voice[]>(() => {
     const t = this.tale();
     const out = new Map<string, Voice>();
@@ -174,10 +167,7 @@ export class TalePage implements AfterViewInit {
     );
   });
 
-  /**
-   * Élément de l'illustration nommé dans la phrase en cours de lecture (pour que la caméra le cadre).
-   * On cherche, dans l'ordre de la phrase, le premier mot qui désigne un élément présent dans la scène.
-   */
+  /** Élément de l'illustration nommé dans la phrase en cours de lecture (pour que la caméra le cadre). */
   readonly focus = computed<number | null>(() => {
     const si = this.narration.current();
     const para = this.paragraphs()[this.active()];
@@ -264,10 +254,7 @@ export class TalePage implements AfterViewInit {
     window.addEventListener('scroll', this.onScroll, { passive: true });
   }
 
-  /**
-   * Paragraphe actif = le dernier dont le haut a franchi la ligne de lecture (40 % de l'écran).
-   * En haut de page, c'est toujours le premier.
-   */
+  /** Paragraphe actif = le dernier dont le haut a franchi la ligne de lecture (40 % de l'écran). */
   private onScroll = () => {
     if (this.playing() || this.frame) return;
     this.frame = requestAnimationFrame(() => {

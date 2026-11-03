@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, ElementRef, NgZone, OnDestroy, computed, effect, inject, signal, viewChild, viewChildren } from '@angular/core';
+import { Component, ElementRef, HostListener, NgZone, OnDestroy, computed, effect, inject, input, signal, untracked, viewChild, viewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { AmbienceService } from '../../core/ambience.service';
 import { DataService } from '../../core/data.service';
@@ -11,68 +11,87 @@ import { ProgressService } from '../../core/progress.service';
 import { sceneFocus } from '../../shared/art/focus';
 import { SceneArtComponent } from '../../shared/art/scene-art.component';
 import { taleText } from '../../shared/tale-card/tale-card.component';
+import { Hotspot, VillagePlan, regionPlan, showcasePlan } from './veillee-plan';
 import { VeilleeSound } from './veillee-sound';
-import { HOTSPOTS, Hotspot, VeilleeWorld } from './veillee-world';
+import { VeilleeWorld } from './veillee-world';
 
 const LANGS = ['fr', 'en', 'moore', 'dioula', 'fulfulde'];
 
-/**
- * La Veillée : village 3D (WebGL) où chaque objet ouvre un conte, raconté par le griot,
- * avec la narration et les textes existants du site. La 3D n'est chargée que sur cette page.
- */
+/** La Veillée : village 3D où le griot raconte. ?region= et ?lieu= choisissent le village. */
 @Component({
   selector: 'app-veillee',
   imports: [RouterLink, FormsModule, SceneArtComponent],
   templateUrl: './veillee.page.html',
   styleUrl: './veillee.page.scss',
 })
-export class VeilleePage implements AfterViewInit, OnDestroy {
+export class VeilleePage implements OnDestroy {
   readonly data = inject(DataService);
   private i18n = inject(I18nService);
   private zone = inject(NgZone);
   private ambience = inject(AmbienceService);
   private progress = inject(ProgressService);
   private toast = inject(MessageService);
+  private router = inject(Router);
+
+  /* paramètres d'URL */
+  readonly region = input<string>();
+  readonly lieu = input<string>();
+  readonly conte = input<string>();
 
   private stage = viewChild.required<ElementRef<HTMLElement>>('stage');
   private canvasHost = viewChild.required<ElementRef<HTMLElement>>('canvas');
   private labelEls = viewChildren<ElementRef<HTMLElement>>('label');
 
-  readonly hotspots = HOTSPOTS;
   readonly state = signal<'loading' | 'ready' | 'in' | 'nogl' | 'lost'>('loading');
+  /** changement de village en cours */
+  readonly traveling = signal(false);
   readonly muted = signal(false);
   readonly listOpen = signal(false);
-  /** recherche dans tous les contes */
   readonly query = signal('');
-  /** l'illustration du paragraphe accompagne le récit (masquable) */
   readonly showArt = signal(true);
   readonly fullscreen = signal(false);
   readonly coarse = matchMedia('(pointer: coarse)').matches;
 
+  /** Le village à afficher, d'après l'URL. */
+  readonly plan = computed<VillagePlan | null>(() => {
+    const tales = this.data.tales();
+    if (!tales.length) return null;
+    const code = this.region();
+    const r = code ? this.data.regionMap().get(code) : undefined;
+    if (r) {
+      const here = tales.filter((t) => t.region === r.code);
+      if (here.length) return regionPlan(r, here, this.lieu());
+    }
+    return showcasePlan((s) => this.data.tale(s));
+  });
+  readonly hotspots = computed(() => this.plan()?.spots ?? []);
+  /** Bouton de retour à la carte, sur cette région. */
+  readonly backQuery = computed(() => (this.region() ? { region: this.region() } : {}));
+
   /* conte ouvert */
   readonly spot = signal<Hotspot | null>(null);
-  /** rang dans les contes à la une, pour « Un autre conte » du griot */
+  /** objet tout proche : touche Entrée */
+  readonly nearId = signal<string | null>(null);
+  readonly nearSpot = computed(() => this.hotspots().find((h) => h.id === this.nearId()) ?? null);
   private griotIndex = signal(this.dayIndex());
-  /** conte choisi dans la liste : c'est le griot qui le raconte */
-  readonly chosen = signal<string | null>(null);
   readonly lang = signal('fr');
-  /* récit en cours */
   readonly telling = signal(false);
   readonly paused = signal(false);
   readonly sceneIndex = signal(0);
   readonly subtitle = signal('');
 
-  private featured = computed(() => this.data.tales().filter((t) => t.featured));
+  /** Contes que le griot propose : ceux du village. */
+  private griotTales = computed(() => {
+    const local = this.hotspots().flatMap((h) => (h.slug ? [this.data.tale(h.slug)] : [])).filter((t): t is Tale => !!t);
+    return local.length ? local : this.data.tales().filter((t) => t.featured);
+  });
   readonly tale = computed<Tale | undefined>(() => {
     const s = this.spot();
     if (!s) return undefined;
     if (s.slug) return this.data.tale(s.slug);
-    const c = this.chosen();
-    if (c) return this.data.tale(c);
-    const l = this.featured();
+    const l = this.griotTales();
     return l.length ? l[this.griotIndex() % l.length] : undefined;
   });
-  /** Langues où le conte a une narration complète. */
   readonly langs = computed(() => {
     const t = this.tale();
     const list = t?.narration?.length ? t.narration : ['fr'];
@@ -86,21 +105,24 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
     const t = this.tale();
     return t ? taleText(t, this.lang()).summary : '';
   });
-  /** Tous les contes publiés, triés par titre et filtrés par la recherche. */
-  readonly allTales = computed(() => {
-    const fold = (x: string) => x.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
-    const q = fold(this.query().trim());
+
+  /** Les contes des autres régions : les choisir, c'est partir dans leur village. */
+  readonly elsewhere = computed(() => {
+    const q = this.fold(this.query().trim());
     const regions = this.data.regionMap();
+    const here = new Set(this.hotspots().map((h) => h.slug));
     return this.data
       .tales()
-      .map((t) => ({ slug: t.slug, title: taleText(t, 'fr').title, place: t.place, region: regions.get(t.region)?.name ?? '' }))
-      .filter((t) => !q || fold(`${t.title} ${t.place} ${t.region}`).includes(q))
+      .filter((t) => !here.has(t.slug))
+      .map((t) => ({ slug: t.slug, code: t.region, title: taleText(t, 'fr').title, place: t.place, region: regions.get(t.region)?.name ?? '' }))
+      .filter((t) => !q || this.fold(`${t.title} ${t.place} ${t.region}`).includes(q))
       .sort((a, b) => a.title.localeCompare(b.title, 'fr'));
   });
-  readonly total = computed(() => this.data.tales().length);
-  /** Paragraphe raconté : son illustration s'affiche pendant le récit. */
+  readonly localTales = computed(() => {
+    const q = this.fold(this.query().trim());
+    return this.hotspots().filter((h) => !q || this.fold(h.label).includes(q));
+  });
   readonly scene = computed(() => (this.telling() ? this.tale()?.scenes[this.sceneIndex()] : undefined));
-  /** La caméra de l'illustration cadre ce que nomme la phrase en cours. */
   readonly focus = computed(() => {
     const s = this.scene();
     return s && this.subtitle() ? sceneFocus(s.art, this.subtitle()) : null;
@@ -113,45 +135,83 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
   private textTimer?: number;
   private musicWasOn = false;
   private lostCheck?: number;
+  private builtKey = '';
 
   constructor() {
-    // les étiquettes HTML suivent les objets 3D à chaque image
+    // le village suit l'URL : arrivée depuis la carte, ou voyage vers un autre conte
+    effect(() => {
+      const plan = this.plan();
+      const conte = this.conte();
+      if (!plan) return;
+      untracked(() => {
+        if (plan.key !== this.builtKey) this.build(plan, conte);
+        else if (conte) this.focusTale(conte);
+      });
+    });
     effect(() => {
       const els = new Map(this.labelEls().map((e) => [e.nativeElement.dataset['id']!, e.nativeElement]));
       this.world?.setLabels(els);
     });
-    // la langue choisie doit exister pour le conte affiché
     effect(() => {
       const list = this.langs();
       if (list.length && !list.some((l) => l.code === this.lang())) this.lang.set(list[0].code);
     });
+    this.lostCheck = window.setInterval(() => {
+      if (this.world?.lost) {
+        clearInterval(this.lostCheck);
+        this.stopTelling();
+        this.state.set('lost');
+      }
+    }, 1000);
   }
 
-  ngAfterViewInit() {
-    // laisse la page s'afficher (écran d'accueil) avant de construire la scène
-    setTimeout(() => this.init(), 60);
+  private fold(x: string) {
+    return x.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
   }
 
-  private init() {
-    try {
-      this.zone.runOutsideAngular(() => {
-        this.world = new VeilleeWorld(this.canvasHost().nativeElement, {
-          select: (id) => this.zone.run(() => this.open(id)),
-          listener: (f, p) => this.sound?.listener(f, p),
-        });
-      });
-      this.world?.setLabels(new Map(this.labelEls().map((e) => [e.nativeElement.dataset['id']!, e.nativeElement])));
-      this.state.set('ready');
-      this.lostCheck = window.setInterval(() => {
-        if (this.world?.lost) {
-          clearInterval(this.lostCheck);
-          this.stopTelling();
-          this.state.set('lost');
-        }
-      }, 1000);
-    } catch {
-      this.state.set('nogl');
-    }
+  private build(plan: VillagePlan, conte?: string) {
+    const entered = this.state() === 'in';
+    this.traveling.set(entered);
+    this.stopTelling();
+    this.spot.set(null);
+    this.nearId.set(null);
+    this.listOpen.set(false);
+    this.query.set('');
+    this.builtKey = plan.key;
+    // laisse l'écran de chargement s'afficher avant de construire la scène
+    setTimeout(() => {
+      try {
+        this.world?.dispose();
+        this.world = undefined;
+        const world = this.zone.runOutsideAngular(
+          () =>
+            new VeilleeWorld(
+              this.canvasHost().nativeElement,
+              {
+                select: (id) => this.zone.run(() => this.open(id)),
+                listener: (f, p) => this.sound?.listener(f, p),
+                near: (id) => this.zone.run(() => this.nearId.set(id)),
+              },
+              plan,
+            ),
+        );
+        this.world = world;
+        world.setLabels(new Map(this.labelEls().map((e) => [e.nativeElement.dataset['id']!, e.nativeElement])));
+        if (!entered) this.state.set('ready');
+        this.traveling.set(false);
+        if (conte) this.focusTale(conte);
+      } catch {
+        this.traveling.set(false);
+        this.state.set('nogl');
+      }
+    }, 60);
+  }
+
+  private focusTale(slug: string) {
+    const h = this.hotspots().find((x) => x.slug === slug);
+    if (!h) return;
+    this.world?.walkTo(h.id);
+    this.spot.set(h);
   }
 
   ngOnDestroy() {
@@ -160,17 +220,14 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
     this.world?.dispose();
     this.sound?.dispose();
     if (document.fullscreenElement) void document.exitFullscreen().catch(() => {});
-    // la musique du site reprend en quittant le village
     if (this.musicWasOn) this.ambience.start();
   }
 
-  /** Geste de l'utilisateur : le son peut démarrer. */
   enter() {
     this.musicWasOn = this.ambience.playing();
     if (this.musicWasOn) this.ambience.stop();
     this.zone.runOutsideAngular(() => (this.sound = new VeilleeSound()));
     this.state.set('in');
-    this.canvasHost().nativeElement.querySelector('canvas')?.focus?.();
   }
 
   toggleMute() {
@@ -189,29 +246,52 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
     }
   }
 
-  /* ---------------------------------------------------------- contes */
+  /* commandes à l'écran */
 
-  /** Depuis la liste ou une étiquette : on marche jusqu'à l'objet et on ouvre le conte. */
+  press(code: string, on: boolean) {
+    this.world?.press(code, on);
+  }
+
+  zoom(factor: number) {
+    this.world?.zoomBy(factor);
+  }
+
+  /** Touche Entrée près d'un objet : ouvre son histoire, puis lance le récit. */
+  @HostListener('document:keydown.enter', ['$event'])
+  onEnter(e: Event) {
+    const t = e.target as HTMLElement;
+    if (this.state() !== 'in' || t?.matches?.('button, a, input, select, textarea')) return;
+    e.preventDefault();
+    this.interact();
+  }
+
+  interact() {
+    const near = this.nearSpot();
+    if (this.telling()) return;
+    if (this.spot() && (!near || this.spot()!.id === near.id)) {
+      this.tell();
+      return;
+    }
+    if (near) this.open(near.id);
+  }
+
+  /* contes */
+
   visit(h: Hotspot) {
     this.listOpen.set(false);
     this.world?.walkTo(h.id);
     this.open(h.id);
   }
 
-  /** Un conte de la liste : le griot le raconte, on rejoint sa place autour du feu. */
-  chooseTale(slug: string) {
+  /** Un conte d'une autre région : on part dans son village, où il a sa représentation. */
+  travel(t: { slug: string; code: string }) {
     this.listOpen.set(false);
-    this.stopTelling();
-    this.chosen.set(slug);
-    this.world?.walkTo('griot');
-    this.spot.set(HOTSPOTS.find((x) => x.id === 'griot') ?? null);
+    void this.router.navigate(['/veillee'], { queryParams: { region: t.code, conte: t.slug } });
   }
 
   private open(id: string) {
-    const h = HOTSPOTS.find((x) => x.id === id) ?? null;
+    const h = this.hotspots().find((x) => x.id === id) ?? null;
     if (this.telling() && h?.id !== this.spot()?.id) this.stopTelling();
-    // toucher le griot sans choisir de conte : il revient à sa proposition du soir
-    if (h?.id === 'griot' && !this.telling() && this.spot()?.id !== 'griot') this.chosen.set(null);
     this.spot.set(h);
   }
 
@@ -222,16 +302,14 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
 
   otherTale() {
     this.stopTelling();
-    this.chosen.set(null);
     this.griotIndex.update((i) => i + 1);
   }
 
-  /** Le griot raconte le conte : mêmes MP3 et mêmes textes que le lecteur classique. */
   tell() {
     const t = this.tale();
     if (!t) return;
     this.stopTelling();
-    // un seul élément audio, créé pendant le geste : les téléphones refusent sinon d'enchaîner les paragraphes
+    // un seul élément audio, créé pendant le geste : les téléphones refusent sinon d'enchaîner
     this.audio = new Audio();
     this.audio.muted = this.muted();
     this.telling.set(true);
@@ -276,6 +354,17 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
     void a.play().catch((e: DOMException) => {
       if (e.name !== 'AbortError') fallback();
     });
+  }
+
+  /** Change la langue en plein récit : le paragraphe en cours reprend dans la nouvelle langue. */
+  changeLang(code: string) {
+    this.lang.set(code);
+    const t = this.tale();
+    if (t && this.telling()) {
+      this.paused.set(false);
+      this.world?.setTalking(true);
+      this.playScene(t, this.sceneIndex());
+    }
   }
 
   togglePause() {

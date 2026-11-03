@@ -18,12 +18,7 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Envoi des voix et vidéos vers Cloudinary (offre gratuite), par son API REST signée :
- * les fichiers survivent aux redémarrages de l'hébergeur. Configuré par CLOUDINARY_URL
- * (« cloudinary://clé:secret@nom-du-cloud », fournie par le tableau de bord Cloudinary).
- * Audio et vidéo utilisent le type de ressource « video » de Cloudinary.
- */
+/** Envoi des voix et vidéos vers Cloudinary (offre gratuite), par son API REST signée : les fichiers survivent aux redémarrages de l'hébergeur. */
 class CloudinaryClient {
 
     private static final Pattern URL = Pattern.compile("cloudinary://([^:]+):([^@]+)@(.+)");

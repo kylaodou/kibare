@@ -18,15 +18,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.HtmlUtils;
 
-/**
- * Envoi des e-mails transactionnels (vérification d'adresse, code de réinitialisation).
- * <ul>
- *   <li>SMTP configuré (MAIL_HOST…) : envoi réel ;</li>
- *   <li>sinon : le message est déposé dans la boîte de développement (dossier privé du serveur).</li>
- * </ul>
- * Toute erreur lève {@link MailDeliveryException} : l'API ne répond jamais « envoyé » à tort.
- * Ni les codes ni les jetons ne sont écrits dans les journaux.
- */
+/** Envoi des e-mails transactionnels (vérification d'adresse, code de réinitialisation). */
 @Service
 public class MailService {
 
@@ -64,13 +56,7 @@ public class MailService {
         return url == null || url.isBlank() ? "http://localhost:4200" : url.replaceAll("/+$", "");
     }
 
-    /**
-     * Envoie un e-mail aux couleurs de KIBARE.
-     *
-     * @param paragraphs texte du message (échappé), un élément par paragraphe
-     * @param highlight valeur mise en avant (code), ou null
-     * @param button libellé et lien d'un bouton, ou null
-     */
+    /** Envoie un e-mail aux couleurs de KIBARE. */
     public void send(String to, String subject, String title, java.util.List<String> paragraphs, String highlight, String[] button) {
         String html = layout(title, paragraphs, highlight, button);
         String text = String.join("\n\n", paragraphs) + (highlight == null ? "" : "\n\n" + highlight)
@@ -115,10 +101,7 @@ public class MailService {
         }
     }
 
-    /**
-     * Envoi par l'API HTTPS de Brevo (hébergeurs qui bloquent SMTP). Les images sont alors
-     * les fichiers publics du site (APP_URL/mail/…), puisque Brevo ne gère pas les images intégrées.
-     */
+    /** Envoi par l'API HTTPS de Brevo (hébergeurs qui bloquent SMTP). */
     private void sendWithBrevo(String to, String subject, String html, String text) {
         String body = html.replace("cid:kibare-header", appUrl() + "/mail/header.png")
                 .replace("cid:kibare-footer", appUrl() + "/mail/footer.png");
@@ -175,11 +158,7 @@ public class MailService {
         return d == null || d.isBlank() ? null : Path.of(d).toAbsolutePath().normalize();
     }
 
-    /**
-     * Gabarit HTML aux couleurs de KIBARE : carte blanche à bordure simple (comme les cartes du site),
-     * en-tête avec le logo sur motifs bogolan, bandeau brun à motifs africains en pied.
-     * Tables et styles en ligne : lisible par les clients de messagerie.
-     */
+    /** Gabarit HTML aux couleurs de KIBARE : carte blanche à bordure simple (comme les cartes du site), en-tête avec le logo sur motifs bogolan, bandeau brun à motifs africains en pied. */
     private String layout(String title, java.util.List<String> paragraphs, String highlight, String[] button) {
         StringBuilder body = new StringBuilder();
         for (String p : paragraphs) {

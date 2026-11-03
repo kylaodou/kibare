@@ -11,20 +11,9 @@ public record YaabaProperties(String storageDir, List<String> corsOrigins, Admin
     /** Compte administrateur créé au premier démarrage. */
     public record Admin(String email, String password, String name) {}
 
-    /**
-     * Envoi des e-mails. Sans serveur SMTP configuré (spring.mail.host vide), les messages sont déposés
-     * dans {@code outboxDir} (dossier privé du serveur) : pratique en développement, jamais exposé au public.
-     *
-     * @param from adresse d'expédition
-     * @param appUrl adresse du site, pour les liens des e-mails
-     * @param outboxDir dossier de dépôt quand aucun SMTP n'est configuré ; vide = envoi impossible
-     * @param requireVerified exiger un e-mail vérifié pour contribuer
-     */
+    /** Envoi des e-mails. */
     public record Mail(String from, String appUrl, String outboxDir, boolean requireVerified, String brevoApiKey) {}
 
-    /**
-     * Connexion avec Google (gratuite) : identifiant client OAuth « application Web » créé dans Google Cloud Console.
-     * Vide = bouton « Continuer avec Google » masqué. L'identifiant client n'est pas un secret.
-     */
+    /** Connexion avec Google (gratuite) : identifiant client OAuth « application Web » créé dans Google Cloud Console. */
     public record Google(String clientId) {}
 }

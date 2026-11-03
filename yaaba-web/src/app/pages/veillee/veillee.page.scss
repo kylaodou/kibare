@@ -76,6 +76,130 @@
   }
 }
 
+.place {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 4px 14px;
+  border-radius: 10px;
+  background: rgb(30 18 10 / 0.8);
+  line-height: 1.2;
+  pointer-events: none;
+
+  strong {
+    overflow: hidden;
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  small {
+    overflow: hidden;
+    color: #cdbda7;
+    font-size: 0.72rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.pad {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: grid;
+  grid-template: repeat(2, 46px) / repeat(3, 46px);
+  gap: 4px;
+
+  button {
+    border: 1px solid rgb(255 255 255 / 0.25);
+    border-radius: 10px;
+    background: rgb(30 18 10 / 0.8);
+    color: #f4ebdb;
+    font-size: 1rem;
+    cursor: pointer;
+    touch-action: none;
+    user-select: none;
+
+    &:hover,
+    &:active {
+      background: #7c3109;
+    }
+    &:focus-visible {
+      outline: 2px solid #ffc35a;
+    }
+  }
+  .up {
+    grid-area: 1 / 2;
+  }
+  .left {
+    grid-area: 2 / 1;
+  }
+  .down {
+    grid-area: 2 / 2;
+  }
+  .right {
+    grid-area: 2 / 3;
+  }
+}
+
+.zoom {
+  position: absolute;
+  top: 62px;
+  right: 12px;
+  display: grid;
+  gap: 4px;
+
+  button {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgb(255 255 255 / 0.25);
+    border-radius: 10px;
+    background: rgb(30 18 10 / 0.8);
+    color: #f4ebdb;
+    cursor: pointer;
+
+    &:hover {
+      background: #7c3109;
+    }
+    &:focus-visible {
+      outline: 2px solid #ffc35a;
+    }
+  }
+}
+
+.near-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: calc(100% - 32px);
+  min-height: 48px;
+  padding: 8px 18px;
+  transform: translateX(-50%);
+  border: 1px solid #ffc35a;
+  border-radius: 999px;
+  background: #7c3109;
+  color: #fff;
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  kbd {
+    padding: 2px 8px;
+    border: 1px solid rgb(255 255 255 / 0.6);
+    border-radius: 6px;
+    background: rgb(0 0 0 / 0.25);
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+}
+
 .hud {
   position: absolute;
   top: 12px;
@@ -89,7 +213,8 @@
   .grow {
     flex: 1;
   }
-  > button {
+  > button,
+  > a {
     pointer-events: auto;
   }
 }
@@ -226,8 +351,8 @@
 .vision {
   position: absolute;
   top: 66px;
-  right: 14px;
-  width: min(42%, 620px);
+  right: 64px;
+  width: min(40%, 600px);
   aspect-ratio: 16 / 10;
   margin: 0;
   overflow: hidden;
@@ -317,6 +442,23 @@
     &:focus-visible {
       outline: 2px solid #ffc35a;
     }
+  }
+}
+
+.sub-lang {
+  height: 38px;
+  max-width: 130px;
+  padding: 0 8px;
+  border: 1px solid rgb(255 255 255 / 0.3);
+  border-radius: 8px;
+  background: #2a1a10;
+  color: #fff;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid #ffc35a;
   }
 }
 
@@ -449,6 +591,35 @@
 }
 
 @media (max-width: 640px) {
+  .place {
+    max-width: 48%;
+    padding: 3px 10px;
+  }
+  /* la fiche et les sous-titres occupent le bas de l'écran */
+  .pad.busy,
+  .zoom {
+    display: none;
+  }
+  .pad {
+    left: 8px;
+    bottom: 8px;
+    grid-template: repeat(2, 42px) / repeat(3, 42px);
+  }
+  .hint,
+  .near-btn {
+    left: auto;
+    right: 8px;
+    bottom: 8px;
+    width: calc(100% - 158px);
+    max-width: none;
+    transform: none;
+  }
+  .near-btn {
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 0.82rem;
+    text-align: center;
+  }
   .vision {
     top: 62px;
     right: 8px;
@@ -481,8 +652,7 @@
     padding: 10px 12px 8px;
   }
   .hint {
-    bottom: 8px;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
   }
   .lbl {
     height: 34px;
@@ -507,6 +677,10 @@
 @media (max-height: 560px) and (min-width: 500px) {
   .vl-stage {
     min-height: 0;
+  }
+  .pad.busy,
+  .zoom {
+    display: none;
   }
   .vision {
     top: 58px;

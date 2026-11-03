@@ -137,11 +137,7 @@ public final class Dto {
         }
     }
 
-    /**
-     * Enregistrement d'une contribution et le paragraphe qu'il lit.
-     * matchedBy : « scene » (identifiant enregistré), « order » (ancienne contribution, rapprochée par l'ordre)
-     * ou « none » (paragraphe introuvable ; text vaut alors null).
-     */
+    /** Enregistrement d'une contribution et le paragraphe qu'il lit. */
     public record RecordingView(String url, String sceneId, Integer paragraph, String text, String matchedBy) {}
 
     /* ------------------------------------------------------ commentaires */

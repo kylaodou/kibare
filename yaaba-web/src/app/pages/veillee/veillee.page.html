@@ -3,7 +3,7 @@
 
   <!-- étiquettes des objets : vrais boutons, accessibles au clavier -->
   <div class="labels" [class.show]="state() === 'in'">
-    @for (h of hotspots; track h.id) {
+    @for (h of hotspots(); track h.id) {
       <button #label type="button" class="lbl" [attr.data-id]="h.id" [class.on]="spot()?.id === h.id" (click)="visit(h)" [attr.aria-label]="h.label">
         <i class="fa-solid {{ h.icon }}" aria-hidden="true"></i><span>{{ h.label }}</span>
       </button>
@@ -15,6 +15,8 @@
       <button type="button" class="hud-btn" (click)="listOpen.set(!listOpen())" [attr.aria-expanded]="listOpen()" aria-controls="vl-list">
         <i class="fa-solid fa-list" aria-hidden="true"></i> <span>Les histoires</span>
       </button>
+      <a class="hud-btn round" routerLink="/carte" [queryParams]="backQuery()" aria-label="Retour à la carte" title="Retour à la carte"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></a>
+      <span class="place"><strong>{{ plan()?.name }}</strong><small>{{ plan()?.subtitle }}</small></span>
       <span class="grow"></span>
       <button type="button" class="hud-btn round" (click)="toggleMute()" [attr.aria-pressed]="muted()" [attr.aria-label]="muted() ? 'Remettre le son' : 'Couper le son'">
         <i class="fa-solid" [class.fa-volume-high]="!muted()" [class.fa-volume-xmark]="muted()" aria-hidden="true"></i>
@@ -30,32 +32,56 @@
           <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
           <input type="search" [ngModel]="query()" (ngModelChange)="query.set($event)" placeholder="Titre, lieu, région…" aria-label="Chercher un conte" />
         </label>
-        @if (!query().trim()) {
-          <h3>Dans le village</h3>
-          @for (h of hotspots; track h.id) {
+        @if (localTales().length) {
+          <h3>Dans ce village ({{ localTales().length }})</h3>
+          @for (h of localTales(); track h.id) {
             <button type="button" (click)="visit(h)"><i class="fa-solid {{ h.icon }}" aria-hidden="true"></i> {{ h.label }}</button>
           }
         }
-        <h3>Tous les contes ({{ allTales().length }}{{ query().trim() ? ' sur ' + total() : '' }})</h3>
-        @for (t of allTales(); track t.slug) {
-          <button type="button" class="tl" (click)="chooseTale(t.slug)">
-            <span>{{ t.title }}</span>
-            <small>{{ t.place }} · {{ t.region }}</small>
-          </button>
-        } @empty {
+        @if (elsewhere().length) {
+          <h3>Dans les autres villages ({{ elsewhere().length }})</h3>
+          @for (t of elsewhere(); track t.slug) {
+            <button type="button" class="tl" (click)="travel(t)">
+              <span>{{ t.title }}</span>
+              <small><i class="fa-solid fa-person-walking-arrow-right" aria-hidden="true"></i> {{ t.region }} · {{ t.place }}</small>
+            </button>
+          }
+        }
+        @if (!localTales().length && !elsewhere().length) {
           <p class="none">Aucun conte ne correspond à cette recherche.</p>
         }
       </nav>
     }
 
-    @if (!spot() && !telling()) {
-      <p class="hint" aria-hidden="true">
-        @if (coarse) {
-          Touchez le sol pour marcher, glissez pour regarder, touchez un objet pour entendre son histoire.
-        } @else {
-          Cliquez sur le sol pour marcher (ou Z Q S D / W A S D), glissez pour regarder, cliquez sur un objet pour entendre son histoire.
-        }
-      </p>
+    <!-- déplacement et zoom à l'écran (masqués sur téléphone pendant une fiche ou un récit) -->
+    <div class="pad" [class.busy]="spot() || telling()" role="group" aria-label="Se déplacer">
+      <button type="button" class="up" aria-label="Avancer" (pointerdown)="press('ArrowUp', true)" (pointerup)="press('ArrowUp', false)" (pointerleave)="press('ArrowUp', false)"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
+      <button type="button" class="left" aria-label="Tourner à gauche" (pointerdown)="press('ArrowLeft', true)" (pointerup)="press('ArrowLeft', false)" (pointerleave)="press('ArrowLeft', false)"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+      <button type="button" class="down" aria-label="Reculer" (pointerdown)="press('ArrowDown', true)" (pointerup)="press('ArrowDown', false)" (pointerleave)="press('ArrowDown', false)"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+      <button type="button" class="right" aria-label="Tourner à droite" (pointerdown)="press('ArrowRight', true)" (pointerup)="press('ArrowRight', false)" (pointerleave)="press('ArrowRight', false)"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+    </div>
+    <div class="zoom" role="group" aria-label="Zoom">
+      <button type="button" (click)="zoom(0.82)" aria-label="Zoomer"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+      <button type="button" (click)="zoom(1.22)" aria-label="Dézoomer"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
+    </div>
+
+    @if (!telling() && !spot()) {
+      @if (nearSpot(); as n) {
+        <button type="button" class="near-btn" (click)="interact()">
+          @if (!coarse) {
+            <kbd>Entrée</kbd>
+          }
+          <span>Écouter : <strong>{{ n.label }}</strong></span>
+        </button>
+      } @else {
+        <p class="hint" aria-hidden="true">
+          @if (coarse) {
+            Touchez le sol pour marcher, glissez pour regarder, pincez pour zoomer.
+          } @else {
+            Flèches ou Z Q S D pour marcher, glissez pour regarder, molette pour zoomer. Approchez-vous d'un objet, puis Entrée.
+          }
+        </p>
+      }
     }
 
     <!-- ce que raconte le griot : l'illustration animée du paragraphe, ou sa vidéo -->
@@ -79,6 +105,13 @@
         <p>{{ subtitle() }}</p>
         <div class="sub-ctrl">
           <small>{{ sceneIndex() + 1 }} / {{ tale()?.scenes?.length }}</small>
+          @if (langs().length > 1) {
+            <select class="sub-lang" (change)="changeLang($any($event.target).value)" aria-label="Langue du récit">
+              @for (l of langs(); track l.code) {
+                <option [value]="l.code" [selected]="l.code === lang()">{{ l.name }}</option>
+              }
+            </select>
+          }
           <button type="button" (click)="showArt.set(!showArt())" [attr.aria-pressed]="showArt()" [attr.aria-label]="showArt() ? 'Masquer l\'illustration' : 'Afficher l\'illustration'"><i class="fa-solid" [class.fa-image]="showArt()" [class.fa-eye-slash]="!showArt()" aria-hidden="true"></i></button>
           <button type="button" (click)="togglePause()" [attr.aria-label]="paused() ? 'Reprendre' : 'Mettre en pause'"><i class="fa-solid" [class.fa-pause]="!paused()" [class.fa-play]="paused()" aria-hidden="true"></i></button>
           <button type="button" (click)="skip()" aria-label="Paragraphe suivant"><i class="fa-solid fa-forward-step" aria-hidden="true"></i></button>
@@ -88,7 +121,7 @@
     } @else if (spot(); as s) {
       <article class="card-tale" aria-live="polite">
         <button type="button" class="x" (click)="close()" aria-label="Fermer"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-        <span class="eyebrow">{{ s.slug ? s.label : chosen() ? 'Le griot connaît cette histoire' : 'Le griot vous propose ce soir' }}</span>
+        <span class="eyebrow">{{ s.slug ? 'Conte de ce village' : 'Le griot vous propose ce soir' }}</span>
         @if (tale()) {
           <h2>{{ title() }}</h2>
           <small class="where"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ tale()?.place }} · {{ regionName() }}</small>
@@ -115,6 +148,10 @@
     }
   }
 
+  @if (traveling()) {
+    <div class="veil"><i class="fa-solid fa-person-walking-arrow-right fa-beat-fade flame" aria-hidden="true"></i><p role="status">En route vers {{ plan()?.name }}…</p></div>
+  }
+
   <!-- écrans d'entrée et de secours -->
   @switch (state()) {
     @case ('loading') {
@@ -122,9 +159,9 @@
     }
     @case ('ready') {
       <div class="veil">
-        <span class="eyebrow">Expérience 3D</span>
-        <h1>La Veillée</h1>
-        <p>La nuit tombe sur le village. Autour du feu, le griot attend. Promenez-vous, et chaque objet vous racontera son histoire.</p>
+        <span class="eyebrow">Immersion 3D</span>
+        <h1>{{ plan()?.name }}</h1>
+        <p>La nuit tombe. Autour du feu, le griot attend. Promenez-vous : chaque conte de ce village a sa place, et son histoire à vous raconter.</p>
         <button type="button" class="btn enter" (click)="enter()"><i class="fa-solid fa-fire" aria-hidden="true"></i> Entrer dans le village</button>
         <small><i class="fa-solid fa-headphones" aria-hidden="true"></i> Mettez le son, ou vos écouteurs.</small>
       </div>

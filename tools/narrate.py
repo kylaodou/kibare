@@ -1,14 +1,5 @@
 """Narration audio des contes, un MP3 par paragraphe.
-
-- français et anglais : voix neuronales Edge TTS (fr-FR Henri, en-NG Abeo) ;
-- mooré, dioula, fulfulde : MMS-TTS de Meta, à partir des textes traduits.
-
-Sortie : yaaba-web/public/audio/narration/{slug}/{lang}/{i}.mp3 ; les fichiers existants
-sont conservés (supprimez-les pour régénérer après une correction du texte).
-`content/build.mjs` déclare ensuite `tale.narration` d'après les fichiers présents.
-
-usage : tools/.venv/Scripts/python tools/narrate.py fr en [moore dioula fulfulde] [--only slug]
-"""
+usage : tools/.venv/Scripts/python tools/narrate.py fr en [moore dioula fulfulde] [--only slug]"""
 import asyncio
 import json
 import subprocess

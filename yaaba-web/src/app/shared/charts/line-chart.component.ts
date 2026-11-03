@@ -5,10 +5,7 @@ export interface Point {
   value: number;
 }
 
-/**
- * Courbe d'une seule série (aire légère + trait 2 px), réticule et infobulle au survol.
- * Pas de légende : le titre de la carte nomme la série.
- */
+/** Courbe d'une seule série (aire légère + trait 2 px), réticule et infobulle au survol. */
 @Component({
   selector: 'app-line-chart',
   template: `

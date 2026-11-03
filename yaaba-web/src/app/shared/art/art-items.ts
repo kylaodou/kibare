@@ -1,7 +1,4 @@
-/* ==========================================================================
-   Bibliothèque d'éléments d'illustration (SVG, aplats de couleurs).
-   Chaque élément est dessiné autour de son point d'ancrage (0,0) = pied de l'objet.
-   ========================================================================== */
+/* ========================================================================== Bibliothèque d'éléments d'illustration (SVG, aplats de couleurs). */
 
 import { ArtItem, Ground, Sky } from '../../core/models';
 

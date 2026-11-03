@@ -1,10 +1,6 @@
 import { Component, DestroyRef, ElementRef, effect, inject, input, signal, viewChild } from '@angular/core';
 
-/**
- * Lecteur audio HTML5 compact : lecture/pause, temps écoulé et durée,
- * barre de progression liée à « timeupdate » et déplaçable, états de chargement et d'erreur.
- * Les enregistrements WebM du navigateur annoncent souvent une durée infinie : elle est alors recalculée.
- */
+/** Lecteur audio HTML5 compact : lecture/pause, temps écoulé et durée, barre de progression liée à « timeupdate » et déplaçable, états de chargement et d'erreur. */
 @Component({
   selector: 'app-audio-player',
   template: `

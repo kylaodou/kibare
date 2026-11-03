@@ -6,10 +6,7 @@ import { AuthService } from '../../core/auth.service';
 
 type Step = 'email' | 'code' | 'password';
 
-/**
- * Mot de passe oublié, en trois étapes :
- * adresse e-mail → code à 6 chiffres (valable 5 minutes) → nouveau mot de passe.
- */
+/** Mot de passe oublié, en trois étapes : adresse e-mail → code à 6 chiffres (valable 5 minutes) → nouveau mot de passe. */
 @Component({
   selector: 'app-forgot-password',
   imports: [FormsModule, RouterLink],

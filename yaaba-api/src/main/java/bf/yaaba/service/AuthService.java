@@ -100,10 +100,7 @@ public class AuthService implements ApplicationRunner {
         return new AuthView(token(u), UserView.of(u), sent);
     }
 
-    /**
-     * Envoie (ou renvoie) le lien de vérification de l'adresse e-mail, valable 24 h.
-     * Seule l'empreinte du jeton est enregistrée. Renvoie false si l'e-mail n'a pas pu partir.
-     */
+    /** Envoie (ou renvoie) le lien de vérification de l'adresse e-mail, valable 24 h. */
     @Transactional
     public boolean sendVerification(User u) {
         String token = secrets.randomToken();

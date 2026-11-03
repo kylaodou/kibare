@@ -1,11 +1,5 @@
 """Traduction automatique des contes vers le mooré, le dioula et le fulfulde (NLLB-200).
-
-Source : le texte anglais (meilleure qualité NLLB que depuis le français).
-Les champs déjà remplis à la main ne sont jamais écrasés ; chaque langue produite
-est ajoutée à `tale.mt` pour être signalée « à valider par un locuteur » dans le lecteur.
-
-usage : tools/.venv/Scripts/python tools/translate.py [slug ...]
-"""
+usage : tools/.venv/Scripts/python tools/translate.py [slug ...]"""
 import json
 import re
 import sys

@@ -1,34 +1,15 @@
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
-
-/** Un objet du village relié à un conte. */
-export interface Hotspot {
-  id: string;
-  /** conte associé (null : le griot propose le conte du soir) */
-  slug: string | null;
-  label: string;
-  icon: string;
-  x: number;
-  z: number;
-  /** hauteur de l'étiquette */
-  h: number;
-  /** rayon de la zone cliquable et de l'obstacle */
-  r: number;
-}
-
-export const HOTSPOTS: Hotspot[] = [
-  { id: 'griot', slug: null, label: 'Le griot', icon: 'fa-comment-dots', x: 0, z: -2.5, h: 1.75, r: 0.7 },
-  { id: 'cheval', slug: 'yennenga', label: 'Le cheval de Yennenga', icon: 'fa-horse', x: -9, z: 5, h: 2.3, r: 1.5 },
-  { id: 'masque', slug: 'do-et-les-masques-de-feuilles', label: 'Le masque de feuilles', icon: 'fa-masks-theater', x: -6.5, z: -6.5, h: 3.3, r: 0.8 },
-  { id: 'calebasse', slug: 'la-calebasse-qui-avalait-tout', label: 'La calebasse', icon: 'fa-bowl-food', x: 5.5, z: 5, h: 1.5, r: 1 },
-  { id: 'crocodile', slug: 'crocodiles-sabou', label: 'Le crocodile sacré', icon: 'fa-water', x: 12, z: 7, h: 1.4, r: 3.4 },
-  { id: 'tiebele', slug: 'awa-et-les-murs-de-tiebele', label: 'La case de Tiébélé', icon: 'fa-house-chimney', x: 10, z: -7.5, h: 4.3, r: 2.9 },
-  { id: 'puits', slug: 'le-puits-du-lion', label: 'Le puits', icon: 'fa-faucet-drip', x: -12, z: -2, h: 2.8, r: 1.2 },
-];
+import { renderArt } from '../../shared/art/scene-art';
+import { Hotspot, VillagePlan } from './veillee-plan';
 
 const WALK_RADIUS = 21;
 const EYE = 1.6;
 const SPEED = 4.2;
+/** marche automatique, un peu plus rapide */
+const WALK_SPEED = 6.2;
+const CELL = 0.75;
+const GRID = 59;
 
 /** Bruit déterministe : le village est identique à chaque visite. */
 function rng(seed: number) {
@@ -55,6 +36,8 @@ export interface WorldEvents {
   walking?(): void;
   /** 5 fois par seconde : distances pour le son */
   listener?(fire: number, pond: number): void;
+  /** objet le plus proche du visiteur (null : aucun) */
+  near?(id: string | null): void;
 }
 
 /** Monde 3D de la Veillée : aucune dépendance à Angular, tout est libéré par dispose(). */
@@ -71,8 +54,17 @@ export class VeilleeWorld {
   private yaw = 0;
   private pitch = -0.07;
   private target: { x: number; z: number; face?: { x: number; z: number; y: number } } | null = null;
+  /** étapes du chemin calculé : une trajectoire fixe, donc aucun tremblement */
+  private path: { x: number; z: number }[] = [];
   private stuck = 0;
   private lastGap = Infinity;
+  private blocked = new Uint8Array(GRID * GRID);
+  private zoom = 1;
+  private baseFov = 62;
+  private pointers = new Map<number, { x: number; y: number }>();
+  private pinch = 0;
+  private nearId: string | null = null;
+  private pondAt: { x: number; z: number } | null = null;
   private keys = new Set<string>();
   private bob = 0;
   private obstacles: { x: number; z: number; r: number }[] = [];
@@ -85,7 +77,7 @@ export class VeilleeWorld {
   private fireLight!: THREE.PointLight;
   private fireBase = 95;
   private griot!: { head: THREE.Object3D; arm: THREE.Object3D; body: THREE.Object3D };
-  private horse!: { head: THREE.Object3D; tail: THREE.Object3D };
+  private horse?: { head: THREE.Object3D; tail: THREE.Object3D };
   private rings = new Map<string, THREE.Mesh>();
   private hits: THREE.Mesh[] = [];
   private labels = new Map<string, HTMLElement>();
@@ -111,6 +103,7 @@ export class VeilleeWorld {
   constructor(
     private host: HTMLElement,
     private events: WorldEvents,
+    private plan: VillagePlan,
   ) {
     const coarse = matchMedia('(pointer: coarse)').matches;
     this.low = coarse || (navigator.hardwareConcurrency ?? 8) <= 4;
@@ -124,6 +117,7 @@ export class VeilleeWorld {
     host.appendChild(this.renderer.domElement);
     this.renderer.domElement.style.touchAction = 'none';
     this.renderer.domElement.style.display = 'block';
+    this.renderer.domElement.tabIndex = -1;
 
     this.camera = new THREE.PerspectiveCamera(62, 1, 0.1, 320);
     this.scene.background = new THREE.Color(0x0b1024);
@@ -151,50 +145,176 @@ export class VeilleeWorld {
 
   /** Marche jusqu'à l'objet et se tourne vers lui. */
   walkTo(id: string) {
-    const h = HOTSPOTS.find((x) => x.id === id);
+    const h = this.plan.spots.find((x) => x.id === id);
     if (!h) return;
-    const face = { x: h.x, z: h.z, y: Math.max(0.9, h.h * 0.55) };
+    const face = { x: h.x, z: h.z, y: Math.max(0.9, h.h * 0.5) };
     if (id === 'griot') {
       // la place de l'auditeur : le griot est visible à côté des flammes, pas derrière
       this.goTo(3.6, 6.2, face);
       return;
     }
-    const dx = this.pos.x - h.x;
-    const dz = this.pos.z - h.z;
-    const d = Math.hypot(dx, dz) || 1;
     const stop = h.r + 3;
-    if (d <= stop + 0.3) this.goTo(this.pos.x, this.pos.z, face);
-    else this.goTo(h.x + (dx / d) * stop, h.z + (dz / d) * stop, face);
+    const d = Math.hypot(this.pos.x - h.x, this.pos.z - h.z);
+    if (d <= stop + 0.4) {
+      this.goTo(this.pos.x, this.pos.z, face);
+      return;
+    }
+    // on arrive du côté du feu : l'objet et son panneau peint sont face au visiteur
+    const c = Math.hypot(h.x, h.z) || 1;
+    this.goTo(h.x - (h.x / c) * stop, h.z - (h.z / c) * stop, face);
     this.events.walking?.();
   }
 
-  /** Fixe une destination, repoussée hors des obstacles et des limites du village. */
+  /** Flèches à l'écran : même effet que les touches du clavier. */
+  press(code: string, on: boolean) {
+    if (on) {
+      this.keys.add(code);
+      this.target = null;
+      this.path = [];
+    } else this.keys.delete(code);
+  }
+
+  /** Boutons + et − (facteur > 1 : on s'éloigne). */
+  zoomBy(factor: number) {
+    this.zoom = THREE.MathUtils.clamp(this.zoom * factor, 0.45, 1.35);
+  }
+
+  /** Fixe une destination et calcule le chemin une fois pour toutes. */
   private goTo(x: number, z: number, face?: { x: number; z: number; y: number }) {
     const d = Math.hypot(x, z);
     if (d > WALK_RADIUS) {
       x *= WALK_RADIUS / d;
       z *= WALK_RADIUS / d;
     }
-    for (const o of this.obstacles) {
-      const dx = x - o.x;
-      const dz = z - o.z;
-      const g = Math.hypot(dx, dz) || 1;
-      const min = o.r + 0.6;
-      if (g < min) {
-        x = o.x + (dx / g) * min;
-        z = o.z + (dz / g) * min;
-      }
-    }
-    this.target = { x, z, face };
+    const free = this.nearestFree(x, z);
+    this.target = { x: free.x, z: free.z, face };
+    this.path = this.findPath(free.x, free.z);
     this.stuck = 0;
     this.lastGap = Infinity;
+  }
+
+  private cellOf(v: number) {
+    return THREE.MathUtils.clamp(Math.round(v / CELL) + (GRID - 1) / 2, 0, GRID - 1);
+  }
+
+  private isBlocked(x: number, z: number) {
+    return !!this.blocked[this.cellOf(z) * GRID + this.cellOf(x)];
+  }
+
+  /** Grille des zones interdites, calculée une fois le village construit. */
+  private buildGrid() {
+    for (let j = 0; j < GRID; j++) {
+      for (let i = 0; i < GRID; i++) {
+        const x = (i - (GRID - 1) / 2) * CELL;
+        const z = (j - (GRID - 1) / 2) * CELL;
+        const out = Math.hypot(x, z) > WALK_RADIUS;
+        this.blocked[j * GRID + i] = out || this.obstacles.some((o) => Math.hypot(o.x - x, o.z - z) < o.r + 0.6) ? 1 : 0;
+      }
+    }
+  }
+
+  private nearestFree(x: number, z: number) {
+    if (!this.isBlocked(x, z)) return { x, z };
+    for (let r = 1; r < 14; r++) {
+      for (let k = 0; k < 16; k++) {
+        const a = (k / 16) * Math.PI * 2;
+        const nx = x + Math.cos(a) * r * CELL;
+        const nz = z + Math.sin(a) * r * CELL;
+        if (!this.isBlocked(nx, nz)) return { x: nx, z: nz };
+      }
+    }
+    return { x: this.pos.x, z: this.pos.z };
+  }
+
+  private clearLine(ax: number, az: number, bx: number, bz: number) {
+    const d = Math.hypot(bx - ax, bz - az);
+    const n = Math.ceil(d / 0.3);
+    for (let i = 1; i <= n; i++) if (this.isBlocked(ax + ((bx - ax) * i) / n, az + ((bz - az) * i) / n)) return false;
+    return true;
+  }
+
+  /** Recherche A* sur la grille, puis suppression des étapes inutiles : le visiteur va droit au but. */
+  private findPath(tx: number, tz: number): { x: number; z: number }[] {
+    if (this.clearLine(this.pos.x, this.pos.z, tx, tz)) return [{ x: tx, z: tz }];
+    const start = this.nearestFree(this.pos.x, this.pos.z);
+    const si = this.cellOf(start.x);
+    const sj = this.cellOf(start.z);
+    const ti = this.cellOf(tx);
+    const tj = this.cellOf(tz);
+    const n = GRID * GRID;
+    const g = new Float32Array(n).fill(Infinity);
+    const from = new Int32Array(n).fill(-1);
+    const done = new Uint8Array(n);
+    const open = [sj * GRID + si];
+    g[open[0]] = 0;
+    const goal = tj * GRID + ti;
+    while (open.length) {
+      let best = 0;
+      let bestF = Infinity;
+      for (let k = 0; k < open.length; k++) {
+        const c = open[k];
+        const f = g[c] + Math.hypot((c % GRID) - ti, Math.floor(c / GRID) - tj);
+        if (f < bestF) {
+          bestF = f;
+          best = k;
+        }
+      }
+      const c = open.splice(best, 1)[0];
+      if (c === goal) break;
+      done[c] = 1;
+      const ci = c % GRID;
+      const cj = Math.floor(c / GRID);
+      for (let dj = -1; dj <= 1; dj++) {
+        for (let di = -1; di <= 1; di++) {
+          if (!di && !dj) continue;
+          const ni = ci + di;
+          const nj = cj + dj;
+          if (ni < 0 || nj < 0 || ni >= GRID || nj >= GRID) continue;
+          const nc = nj * GRID + ni;
+          if (done[nc] || (this.blocked[nc] && nc !== goal)) continue;
+          // pas de coupe en diagonale à travers un coin
+          if (di && dj && (this.blocked[cj * GRID + ni] || this.blocked[nj * GRID + ci])) continue;
+          const cost = g[c] + (di && dj ? 1.414 : 1);
+          if (cost < g[nc]) {
+            if (g[nc] === Infinity) open.push(nc);
+            g[nc] = cost;
+            from[nc] = c;
+          }
+        }
+      }
+    }
+    if (from[goal] < 0) return [{ x: tx, z: tz }];
+    const cells: { x: number; z: number }[] = [];
+    for (let c = goal; c >= 0; c = from[c]) cells.unshift({ x: ((c % GRID) - (GRID - 1) / 2) * CELL, z: (Math.floor(c / GRID) - (GRID - 1) / 2) * CELL });
+    cells[cells.length - 1] = { x: tx, z: tz };
+    const out: { x: number; z: number }[] = [];
+    let cx = start.x;
+    let cz = start.z;
+    let i = 0;
+    while (i < cells.length) {
+      let far = i;
+      for (let k = cells.length - 1; k > i; k--) {
+        if (this.clearLine(cx, cz, cells[k].x, cells[k].z)) {
+          far = k;
+          break;
+        }
+      }
+      out.push(cells[far]);
+      cx = cells[far].x;
+      cz = cells[far].z;
+      i = far + 1;
+    }
+    return out;
   }
 
   highlight(id: string | null) {
     this.hovered = id;
   }
 
+  private disposed = false;
+
   dispose() {
+    this.disposed = true;
     cancelAnimationFrame(this.raf);
     this.resize.disconnect();
     this.unbind.forEach((f) => f());
@@ -251,17 +371,14 @@ export class VeilleeWorld {
     this.lights();
     this.fire(stat);
     this.baobab(stat, 0, -11);
-    this.village(stat);
     this.griotAndChildren(stat);
-    this.horseAt(-9, 5);
-    this.mask(stat, -6.5, -6.5);
-    this.calabash(stat, 5.5, 5);
-    this.pond(stat, 12, 7);
-    this.tiebele(stat, 10, -7.5);
-    this.well(stat, -12, -2);
+    for (const h of this.plan.spots) this.spotModel(stat, h);
+    this.village(stat);
+    this.signature(stat);
     this.scatter(stat);
     this.fireflies();
     this.hotspotRings();
+    this.buildGrid();
 
     // tout le décor immobile fusionné par matériau : une quinzaine d'appels de dessin au lieu de plusieurs centaines
     stat.updateMatrixWorld(true);
@@ -377,10 +494,14 @@ export class VeilleeWorld {
       const d = Math.hypot(x, z);
       const edge = Math.max(0, d - 27);
       // sol plat dans le village, collines au loin
-      const hill = edge * 0.035 * (Math.sin(x * 0.045) * Math.cos(z * 0.05) + 1.3) * Math.min(1, edge / 30) * 5;
+      const relief = this.plan.biome === 'sahel' ? 2.6 : this.plan.biome === 'foret' ? 6.5 : 5;
+      const hill = edge * 0.035 * (Math.sin(x * 0.045 + this.plan.seed) * Math.cos(z * 0.05) + 1.3) * Math.min(1, edge / 30) * relief;
       p.setY(i, hill + (edge > 0 ? (r() - 0.5) * 0.4 : 0));
       const t = Math.min(1, d / 26);
-      c.setRGB(0.42 - t * 0.13 + (r() - 0.5) * 0.04, 0.24 - t * 0.05 + (r() - 0.5) * 0.03, 0.13 - t * 0.02);
+      // sable clair au Sahel, latérite en savane, sol plus vert dans le sud-ouest
+      if (this.plan.biome === 'sahel') c.setRGB(0.56 - t * 0.12 + (r() - 0.5) * 0.04, 0.39 - t * 0.07 + (r() - 0.5) * 0.03, 0.21 - t * 0.03);
+      else if (this.plan.biome === 'foret') c.setRGB(0.3 - t * 0.14 + (r() - 0.5) * 0.04, 0.25 + t * 0.04 + (r() - 0.5) * 0.04, 0.11 - t * 0.01);
+      else c.setRGB(0.42 - t * 0.13 + (r() - 0.5) * 0.04, 0.24 - t * 0.05 + (r() - 0.5) * 0.03, 0.13 - t * 0.02);
       if (d < 7) c.lerp(new THREE.Color(0.28, 0.17, 0.11), 1 - d / 7);
       colors.set([c.r, c.g, c.b], i * 3);
     }
@@ -542,17 +663,37 @@ export class VeilleeWorld {
   }
 
   private village(stat: THREE.Group) {
-    const huts: [number, number, number, number, number, number][] = [
-      [-15, 8, 2.1, 2.4, 0x8d5833, 1], [-5.5, 15, 2.4, 2.6, 0x9a6238, 0], [5, 15.5, 2.0, 2.3, 0x8d5833, 1],
-      [15, -1, 2.1, 2.4, 0x96603a, 0], [-14.5, -11, 2.3, 2.5, 0x9a6238, 1], [-5, -15, 2.1, 2.3, 0x8d5833, 0],
-      [7, -15.5, 2.0, 2.3, 0x96603a, 1], [16.5, -12, 1.8, 2.1, 0x8d5833, 0],
-    ];
-    huts.forEach(([x, z, r, h, w, d]) => this.hut(stat, x, z, r, h, w, d));
+    const r = rng(this.plan.seed);
+    const walls = this.plan.biome === 'sahel' ? [0xb5824f, 0xa87548, 0xbf8e5a] : this.plan.biome === 'foret' ? [0x7d4a2b, 0x8a5733, 0x704226] : [0x8d5833, 0x9a6238, 0x96603a];
+    const taken: { x: number; z: number; r: number }[] = [...this.obstacles];
+    const place = (radius: number, minR: number, maxR: number) => {
+      for (let t = 0; t < 40; t++) {
+        const a = r() * Math.PI * 2;
+        const d = minR + r() * (maxR - minR);
+        const x = Math.sin(a) * d;
+        const z = -Math.cos(a) * d;
+        // l'arrivée du visiteur reste dégagée
+        if (Math.hypot(x, z - 10.5) < 5) continue;
+        if (taken.every((o) => Math.hypot(o.x - x, o.z - z) > o.r + radius + 1.6)) {
+          taken.push({ x, z, r: radius });
+          return { x, z };
+        }
+      }
+      return null;
+    };
+    const count = this.low ? 7 : 9;
+    for (let i = 0; i < count; i++) {
+      const size = 1.8 + r() * 0.6;
+      const p = place(size, 13.5, 20.5);
+      if (p) this.hut(stat, p.x, p.z, size, 2.1 + r() * 0.5, walls[i % 3], i % 2);
+    }
 
     // greniers sur pilotis et canaris : la vie du village
     const clay = this.mat(0xa56a3f);
-    const r = rng(17);
-    [[-10.5, 12.5], [12, 12.5], [-10.5, -13.5]].forEach(([x, z]) => {
+    for (let i = 0; i < 3; i++) {
+      const p = place(1.2, 12, 20);
+      if (!p) continue;
+      const { x, z } = p;
       this.obstacles.push({ x, z, r: 1.2 });
       for (let k = 0; k < 4; k++) {
         const a = (k * Math.PI) / 2 + 0.6;
@@ -560,16 +701,257 @@ export class VeilleeWorld {
       }
       this.part(stat, new THREE.CylinderGeometry(0.95, 0.75, 1.5, 10), clay, x, 1.5, z);
       this.part(stat, new THREE.ConeGeometry(1.25, 1.15, 10), this.mat(0x9c7a3e), x, 2.8, z);
-    });
+    }
     const pot = new THREE.SphereGeometry(0.34, 9, 6);
-    [[-12.5, 6.2], [-3.5, 13], [7, 13.2], [13, 0.5], [-12.5, -9.7]].forEach(([x, z]) => {
-      this.part(stat, pot, clay, x, 0.3, z, r() * 6, [1, 0.88, 1]);
-      this.part(stat, pot, this.mat(0x6e4427), x + 0.5, 0.22, z + 0.25, r() * 6, [0.7, 0.62, 0.7]);
-    });
+    for (let i = 0; i < 5; i++) {
+      const p = place(0.5, 11, 19);
+      if (!p) continue;
+      this.part(stat, pot, clay, p.x, 0.3, p.z, r() * 6, [1, 0.88, 1]);
+      this.part(stat, pot, this.mat(0x6e4427), p.x + 0.5, 0.22, p.z + 0.25, r() * 6, [0.7, 0.62, 0.7]);
+    }
 
-    // mortier et pilon
-    this.part(stat, new THREE.CylinderGeometry(0.34, 0.22, 0.62, 9), this.mat(0x4d2f1b), 7.5, 0.31, 11.7);
-    this.limb(stat, new THREE.Vector3(7.5, 0.3, 11.7), new THREE.Vector3(7.85, 1.7, 11.5), 0.055, 0.075, this.mat(0x7a5533));
+    // arbres dans le village : rares au Sahel, nombreux dans le sud-ouest
+    const trees = this.plan.biome === 'foret' ? 9 : this.plan.biome === 'savane' ? 3 : 1;
+    const trunk = this.mat(0x3a2617);
+    const leaf = this.mat(this.plan.biome === 'foret' ? 0x2f6a2c : 0x46682f);
+    for (let i = 0; i < trees; i++) {
+      const p = place(1, 12, 21);
+      if (!p) continue;
+      this.obstacles.push({ x: p.x, z: p.z, r: 0.7 });
+      const h = 3 + r() * 2;
+      this.limb(stat, new THREE.Vector3(p.x, 0, p.z), new THREE.Vector3(p.x, h, p.z), 0.32, 0.16, trunk);
+      for (let k = 0; k < 3; k++) this.part(stat, new THREE.IcosahedronGeometry(1.25 + r() * 0.5, 0), leaf, p.x + (r() - 0.5) * 1.4, h + (r() - 0.3), p.z + (r() - 0.5) * 1.4, r() * 6);
+    }
+  }
+
+  /** Site emblématique de la région, à l'horizon. */
+  private signature(stat: THREE.Group) {
+    const kind = this.plan.signature;
+    if (!kind) return;
+    const r = rng(this.plan.seed + 5);
+    const a = 0.5 + r() * 0.4;
+    const cx = Math.sin(a) * 42;
+    const cz = -Math.cos(a) * 42;
+    const y = 1.2;
+    if (kind === 'peaks' || kind === 'hills') {
+      const rock = this.mat(kind === 'peaks' ? 0x6c5a4a : 0x4a3a2c);
+      const n = kind === 'peaks' ? 22 : 7;
+      for (let i = 0; i < n; i++) {
+        const dx = (i - n / 2) * (kind === 'peaks' ? 2.6 : 9) + (r() - 0.5) * 2;
+        const h = kind === 'peaks' ? 8 + r() * 11 : 7 + r() * 5;
+        const w = kind === 'peaks' ? 1.5 + r() * 1.2 : 9 + r() * 6;
+        this.part(stat, new THREE.ConeGeometry(w, h, 6), rock, cx + dx * Math.cos(a), h / 2, cz + dx * Math.sin(a) + (r() - 0.5) * 3, r() * 6);
+      }
+    } else if (kind === 'lake') {
+      const water = new THREE.Mesh(new THREE.CircleGeometry(16, 24).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color: 0x1b3556, toneMapped: false }));
+      water.position.set(cx * 0.92, 1.2, cz * 0.92);
+      this.scene.add(water);
+    } else if (kind === 'mosque') {
+      // mosquée de banco, tours hérissées de pieux
+      const banco = this.mat(0xa56f42);
+      this.part(stat, new THREE.BoxGeometry(14, 5, 7), banco, cx, y + 2.5, cz, -a);
+      [-6.5, 0, 6.5].forEach((dx) => {
+        const tx = cx + dx * Math.cos(a);
+        const tz = cz + dx * Math.sin(a);
+        const h = dx === 0 ? 11 : 8;
+        this.part(stat, new THREE.ConeGeometry(1.5, h, 6), banco, tx, y + h / 2, tz);
+        for (let k = 0; k < 8; k++) this.limb(stat, new THREE.Vector3(tx, y + 2 + k * 0.7, tz), new THREE.Vector3(tx + Math.cos(k * 2.4) * 1.6, y + 2 + k * 0.7, tz + Math.sin(k * 2.4) * 1.6), 0.05, 0.05, this.mat(0x3a2415), 4);
+      });
+    } else if (kind === 'palace') {
+      const wall = this.mat(0x9a6238);
+      this.part(stat, new THREE.BoxGeometry(18, 4.5, 11), wall, cx, y + 2.25, cz, -a);
+      [[-9, -5.5], [9, -5.5], [-9, 5.5], [9, 5.5]].forEach(([dx, dz]) => {
+        const tx = cx + dx * Math.cos(a) - dz * Math.sin(a);
+        const tz = cz + dx * Math.sin(a) + dz * Math.cos(a);
+        this.part(stat, new THREE.CylinderGeometry(1.2, 1.6, 7, 8), wall, tx, y + 3.5, tz);
+        this.part(stat, new THREE.ConeGeometry(1.5, 1.8, 8), this.mat(0x7a4427), tx, y + 7.8, tz);
+      });
+    } else if (kind === 'ruins') {
+      const stone = this.mat(0x6e6456);
+      for (let i = 0; i < 18; i++) {
+        const dx = (i - 9) * 2;
+        const h = 2.5 + r() * 4;
+        this.part(stat, new THREE.BoxGeometry(2, h, 1.2), stone, cx + dx * Math.cos(a), y + h / 2, cz + dx * Math.sin(a), -a);
+      }
+    }
+  }
+
+  /** Représentation 3D d'un conte, et son illustration sur un panneau peint. */
+  private spotModel(stat: THREE.Group, h: Hotspot) {
+    const { x, z } = h;
+    switch (h.model) {
+      case 'griot': return;
+      case 'horse': this.horseAt(x, z); break;
+      case 'mask': this.mask(stat, x, z); break;
+      case 'calabash': this.calabash(stat, x, z); break;
+      case 'hive': this.calabash(stat, x, z); this.limb(stat, new THREE.Vector3(x + 1, 0, z), new THREE.Vector3(x + 1, 1.6, z), 0.06, 0.05, this.mat(0x3a2415)); this.part(stat, new THREE.SphereGeometry(0.34, 8, 6), this.mat(0x8d6425), x + 1, 1.75, z, 0, [0.9, 1.3, 0.9]); break;
+      case 'croc': this.pond(stat, x, z, 'croc'); break;
+      case 'hippo': this.pond(stat, x, z, 'hippo'); break;
+      case 'fish': this.pond(stat, x, z, 'fish'); break;
+      case 'painted': this.tiebele(stat, x, z); break;
+      case 'well': this.well(stat, x, z); break;
+      case 'palace': this.palaceSmall(stat, x, z); break;
+      case 'ruins': this.ruins(stat, x, z); break;
+      case 'owl': this.bird(stat, x, z, 0x8a6b45, 1.5, true); break;
+      case 'bird': this.bird(stat, x, z, 0x3c4a5e, 1, false); break;
+      case 'tortoise': this.tortoise(stat, x, z); break;
+      case 'toad': this.toad(stat, x, z); break;
+      case 'monkey': this.monkey(stat, x, z); break;
+      case 'stele': break;
+      default: this.animal(stat, h); break;
+    }
+    if (!['horse', 'mask', 'calabash', 'hive', 'croc', 'hippo', 'fish', 'painted', 'well', 'palace', 'ruins', 'griot', 'stele'].includes(h.model)) this.obstacles.push({ x, z, r: h.r });
+    if (h.art) this.panel(stat, h);
+  }
+
+  /** Panneau peint avec l'illustration du conte, tourné vers le feu. */
+  private panel(stat: THREE.Group, h: Hotspot) {
+    const c = Math.hypot(h.x, h.z) || 1;
+    const dist = h.model === 'stele' ? 0 : h.r + 0.7;
+    const x = h.x + (h.x / c) * dist;
+    const z = h.z + (h.z / c) * dist;
+    const a = Math.atan2(-x, -z);
+    this.obstacles.push({ x, z, r: 0.75 });
+    const board = new THREE.MeshBasicMaterial({ color: 0xc9b89a, toneMapped: false });
+    this.owned.push(board);
+    const g = new THREE.Group();
+    g.position.set(x, 0, z);
+    g.rotation.y = a;
+    stat.add(g);
+    this.part(g, new THREE.BoxGeometry(2.08, 1.36, 0.08), this.mat(0x2d1a0e), 0, 1.5, -0.05);
+    this.part(g, new THREE.PlaneGeometry(1.92, 1.2), board, 0, 1.5, 0);
+    this.part(g, new THREE.CylinderGeometry(0.05, 0.07, 2.3, 5), this.mat(0x2d1a0e), -0.9, 1.15, -0.05);
+    this.part(g, new THREE.CylinderGeometry(0.05, 0.07, 2.3, 5), this.mat(0x2d1a0e), 0.9, 1.15, -0.05);
+    this.part(g, new THREE.ConeGeometry(1.5, 0.45, 4).rotateY(Math.PI / 4), this.mat(0x9c7a3e), 0, 2.42, -0.05, 0, [1, 1, 0.35]);
+    // l'illustration SVG du conte devient la texture du panneau
+    const img = new Image();
+    img.onload = () => {
+      if (this.disposed) return;
+      const cv = document.createElement('canvas');
+      cv.width = 512;
+      cv.height = 320;
+      try {
+        cv.getContext('2d')!.drawImage(img, 0, 0, 512, 320);
+        const t = new THREE.CanvasTexture(cv);
+        t.colorSpace = THREE.SRGBColorSpace;
+        this.owned.push(t);
+        board.map = t;
+        board.color.set(0xffffff);
+        board.needsUpdate = true;
+      } catch {
+        // panneau sans image : le conte reste accessible
+      }
+    };
+    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(renderArt(h.art!, { animate: false }));
+  }
+
+  /** Animaux à quatre pattes, d'après leurs proportions. */
+  private animal(stat: THREE.Group, h: Hotspot) {
+    const look: Record<string, { c: number; s: number; legs: number; dark?: number }> = {
+      lion: { c: 0xb9894a, s: 1, legs: 0.62, dark: 0x5b3a1a },
+      hyena: { c: 0x75634a, s: 0.85, legs: 0.62, dark: 0x2c2218 },
+      elephant: { c: 0x70706f, s: 2, legs: 0.7 },
+      cow: { c: 0xd3c6ad, s: 1.05, legs: 0.72, dark: 0x4a3a2a },
+      antelope: { c: 0xa9753f, s: 0.82, legs: 0.95, dark: 0xefe6d2 },
+      goat: { c: 0xd7cfc1, s: 0.55, legs: 0.62, dark: 0x4a3a2a },
+      dog: { c: 0x9c7445, s: 0.55, legs: 0.62 },
+      hare: { c: 0xa8957a, s: 0.34, legs: 0.5 },
+    };
+    const l = look[h.model] ?? look['dog'];
+    const coat = this.mat(l.c);
+    const dark = this.mat(l.dark ?? 0x2c2218);
+    const a = Math.atan2(-h.x, -h.z) + Math.PI / 2;
+    const g = new THREE.Group();
+    g.position.set(h.x, 0, h.z);
+    g.rotation.y = a;
+    stat.add(g);
+    const s = l.s;
+    const leg = l.legs * s + (h.model === 'elephant' ? 0.1 : 0);
+    const body = new THREE.Mesh(new THREE.CapsuleGeometry(0.38 * s, 0.85 * s, 3, 8).rotateZ(Math.PI / 2), coat);
+    body.position.y = leg + 0.3 * s;
+    g.add(body);
+    [[0.48, 0.2], [0.48, -0.2], [-0.48, 0.2], [-0.48, -0.2]].forEach(([dx, dz]) => this.limb(g, new THREE.Vector3(dx * s, leg + 0.1 * s, dz * s), new THREE.Vector3(dx * s, 0, dz * s), h.model === 'elephant' ? 0.17 * s : 0.08 * s, h.model === 'elephant' ? 0.16 * s : 0.05 * s, coat));
+    const hx = 0.82 * s;
+    const hy = leg + 0.58 * s;
+    this.part(g, new THREE.IcosahedronGeometry(0.26 * s, 0), coat, hx, hy, 0);
+    this.limb(g, new THREE.Vector3(-0.72 * s, leg + 0.4 * s, 0), new THREE.Vector3(-0.98 * s, leg + 0.02 * s, 0), 0.05 * s, 0.025 * s, h.model === 'lion' ? dark : coat, 4);
+    if (h.model === 'lion') this.part(g, new THREE.IcosahedronGeometry(0.42 * s, 0), dark, hx - 0.1 * s, hy, 0);
+    if (h.model === 'elephant') {
+      this.limb(g, new THREE.Vector3(hx + 0.18 * s, hy - 0.05 * s, 0), new THREE.Vector3(hx + 0.42 * s, 0.25, 0), 0.09 * s, 0.04 * s, coat);
+      [0.34, -0.34].forEach((dz) => this.part(g, new THREE.BoxGeometry(0.06 * s, 0.46 * s, 0.4 * s), coat, hx - 0.14 * s, hy, dz * s));
+      [0.12, -0.12].forEach((dz) => this.limb(g, new THREE.Vector3(hx + 0.2 * s, hy - 0.18 * s, dz * s), new THREE.Vector3(hx + 0.42 * s, hy - 0.34 * s, dz * s), 0.022 * s, 0.01 * s, this.mat(0xefe6d2), 4));
+    }
+    if (h.model === 'cow' || h.model === 'goat' || h.model === 'antelope') {
+      [0.14, -0.14].forEach((dz) => this.limb(g, new THREE.Vector3(hx, hy + 0.16 * s, dz * s), new THREE.Vector3(hx - 0.06 * s, hy + (h.model === 'antelope' ? 0.72 : 0.42) * s, dz * 1.7 * s), 0.025, 0.01, dark, 4));
+    }
+    if (h.model === 'cow') this.part(g, new THREE.IcosahedronGeometry(0.22 * s, 0), coat, 0.42 * s, leg + 0.68 * s, 0);
+    if (h.model === 'hare') [0.08, -0.08].forEach((dz) => this.limb(g, new THREE.Vector3(hx, hy + 0.14 * s, dz), new THREE.Vector3(hx - 0.08, hy + 0.8 * s, dz), 0.035, 0.025, coat, 4));
+    if (h.model === 'hyena' || h.model === 'dog') [0.1, -0.1].forEach((dz) => this.part(g, new THREE.ConeGeometry(0.06 * s, 0.2 * s, 4), coat, hx - 0.03, hy + 0.27 * s, dz * s));
+    if (h.model === 'hyena') for (let i = 0; i < 6; i++) this.part(g, new THREE.IcosahedronGeometry(0.06, 0), dark, -0.5 * s + i * 0.17 * s, leg + 0.62 * s, i % 2 ? 0.13 : -0.13);
+  }
+
+  private bird(stat: THREE.Group, x: number, z: number, color: number, scale: number, owl: boolean) {
+    const coat = this.mat(color);
+    this.limb(stat, new THREE.Vector3(x, 0, z), new THREE.Vector3(x, 1.2, z), 0.07, 0.06, this.mat(0x3a2415));
+    const y = 1.2 + 0.32 * scale;
+    this.part(stat, new THREE.IcosahedronGeometry(0.3 * scale, 1), coat, x, y, z, 0, [1, 1.2, 1]);
+    this.part(stat, new THREE.IcosahedronGeometry(0.22 * scale, 1), coat, x, y + 0.36 * scale, z);
+    const a = Math.atan2(-x, -z);
+    const fx = Math.sin(a);
+    const fz = Math.cos(a);
+    this.part(stat, new THREE.ConeGeometry(0.05, 0.14, 4).rotateX(Math.PI / 2), this.mat(0xd9a93a), x + fx * 0.22 * scale, y + 0.33 * scale, z + fz * 0.22 * scale, a);
+    if (owl) {
+      const rx = fz;
+      const rz = -fx;
+      [1, -1].forEach((k) => {
+        const ex = x + fx * 0.17 * scale + rx * k * 0.1 * scale;
+        const ez = z + fz * 0.17 * scale + rz * k * 0.1 * scale;
+        this.part(stat, new THREE.IcosahedronGeometry(0.075 * scale, 0), new THREE.MeshBasicMaterial({ color: 0xf5e28a, toneMapped: false }), ex, y + 0.42 * scale, ez);
+      });
+    }
+  }
+
+  private tortoise(stat: THREE.Group, x: number, z: number) {
+    this.part(stat, new THREE.SphereGeometry(0.62, 9, 5, 0, Math.PI * 2, 0, Math.PI / 2), this.mat(0x5c5a2c), x, 0.1, z);
+    this.part(stat, new THREE.IcosahedronGeometry(0.15, 0), this.mat(0x76733c), x + 0.7, 0.2, z);
+    [[0.42, 0.42], [0.42, -0.42], [-0.42, 0.42], [-0.42, -0.42]].forEach(([a, b]) => this.part(stat, new THREE.IcosahedronGeometry(0.12, 0), this.mat(0x76733c), x + a, 0.08, z + b));
+  }
+
+  private toad(stat: THREE.Group, x: number, z: number) {
+    const c = this.mat(0x5b6a30);
+    this.part(stat, new THREE.IcosahedronGeometry(0.42, 1), c, x, 0.32, z, 0, [1.1, 0.8, 1]);
+    [0.16, -0.16].forEach((dz) => this.part(stat, new THREE.IcosahedronGeometry(0.1, 0), new THREE.MeshBasicMaterial({ color: 0xe2cd6b, toneMapped: false }), x + 0.26, 0.6, z + dz));
+  }
+
+  private monkey(stat: THREE.Group, x: number, z: number) {
+    const c = this.mat(0x6b5236);
+    this.part(stat, new THREE.ConeGeometry(0.26, 0.7, 7), c, x, 0.42, z);
+    this.part(stat, new THREE.IcosahedronGeometry(0.2, 0), c, x, 0.9, z);
+    this.limb(stat, new THREE.Vector3(x, 0.7, z), new THREE.Vector3(x + 0.34, 0.2, z), 0.05, 0.04, c);
+    this.limb(stat, new THREE.Vector3(x, 0.7, z), new THREE.Vector3(x - 0.34, 0.2, z), 0.05, 0.04, c);
+  }
+
+  private palaceSmall(stat: THREE.Group, x: number, z: number) {
+    this.obstacles.push({ x, z, r: 2.9 });
+    const wall = this.mat(0x9a6238);
+    this.part(stat, new THREE.BoxGeometry(4.4, 2.6, 3.6), wall, x, 1.3, z);
+    [[-2.2, -1.8], [2.2, -1.8], [-2.2, 1.8], [2.2, 1.8]].forEach(([a, b]) => {
+      this.part(stat, new THREE.CylinderGeometry(0.42, 0.55, 3.5, 8), wall, x + a, 1.75, z + b);
+      this.part(stat, new THREE.ConeGeometry(0.55, 0.7, 8), this.mat(0x7a4427), x + a, 3.85, z + b);
+    });
+    const a = Math.atan2(-x, -z);
+    this.part(stat, new THREE.BoxGeometry(1, 1.5, 0.15), this.mat(0x130b06), x + Math.sin(a) * 2.2, 0.75, z + Math.cos(a) * 2.2, a);
+  }
+
+  private ruins(stat: THREE.Group, x: number, z: number) {
+    this.obstacles.push({ x, z, r: 2.7 });
+    const stone = this.mat(0x6e6456);
+    const r = rng(this.plan.seed + 3);
+    for (let i = 0; i < 13; i++) {
+      const a = (i / 13) * Math.PI * 1.6 + 0.8;
+      const h = 1 + r() * 2.4;
+      this.part(stat, new THREE.BoxGeometry(1, h, 0.55), stone, x + Math.cos(a) * 2.3, h / 2, z + Math.sin(a) * 2.3, -a + Math.PI / 2);
+    }
   }
 
   /** Personnage assis, face au feu. */
@@ -760,8 +1142,9 @@ export class VeilleeWorld {
     this.part(stat, small, this.mat(0x9c7131), x - 0.72, 0.03, z + 0.4, 0, [0.8, 0.8, 0.8]);
   }
 
-  private pond(stat: THREE.Group, x: number, z: number) {
+  private pond(stat: THREE.Group, x: number, z: number, guest: 'croc' | 'hippo' | 'fish') {
     this.obstacles.push({ x, z, r: 3.4 });
+    this.pondAt = { x, z };
     const shape = new THREE.Mesh(
       new THREE.CircleGeometry(3.3, 24).rotateX(-Math.PI / 2),
       new THREE.ShaderMaterial({
@@ -793,6 +1176,22 @@ export class VeilleeWorld {
       const a = r() * Math.PI * 2;
       const d = 3.0 + r() * 0.8;
       this.limb(stat, new THREE.Vector3(x + Math.cos(a) * d, 0, z + Math.sin(a) * d), new THREE.Vector3(x + Math.cos(a) * (d + 0.1), 0.7 + r() * 0.8, z + Math.sin(a) * (d + 0.1)), 0.035, 0.008, reed, 4);
+    }
+
+    if (guest === 'hippo') {
+      const hide = this.mat(0x5e5560);
+      this.part(stat, new THREE.IcosahedronGeometry(0.85, 1), hide, x - 0.6, 0.25, z - 0.3, 0, [1.5, 0.75, 1]);
+      this.part(stat, new THREE.IcosahedronGeometry(0.46, 1), hide, x - 1.75, 0.34, z - 0.65, 0, [1.2, 0.8, 1]);
+      [0.2, -0.2].forEach((d) => this.part(stat, new THREE.ConeGeometry(0.07, 0.15, 4), hide, x - 1.65, 0.72, z - 0.65 + d));
+      return;
+    }
+    if (guest === 'fish') {
+      // un silure sacré dont le dos sort de l'eau
+      const skin = this.mat(0x4c5660);
+      this.part(stat, new THREE.IcosahedronGeometry(0.5, 1), skin, x - 0.3, 0.12, z - 0.2, 0, [2.4, 0.5, 0.8]);
+      this.part(stat, new THREE.ConeGeometry(0.28, 0.6, 3).rotateZ(Math.PI / 2), skin, x + 1, 0.14, z - 0.2);
+      [0.14, -0.14].forEach((d) => this.limb(stat, new THREE.Vector3(x - 1.4, 0.15, z - 0.2 + d), new THREE.Vector3(x - 1.9, 0.08, z - 0.2 + d * 2.4), 0.02, 0.008, skin, 4));
+      return;
     }
 
     // le crocodile sacré, posé sur la berge, tourné vers le village
@@ -887,9 +1286,9 @@ export class VeilleeWorld {
     const r = rng(77);
     // herbes sèches
     const tuft = new THREE.ConeGeometry(0.1, 0.42, 4);
-    const grass = [this.mat(0x8b7a3a), this.mat(0x6e6c2d), this.mat(0xa28d4b)];
+    const grass = this.plan.biome === 'foret' ? [this.mat(0x4d7a2f), this.mat(0x3c6a2a), this.mat(0x6b7f35)] : [this.mat(0x8b7a3a), this.mat(0x6e6c2d), this.mat(0xa28d4b)];
     const free = (x: number, z: number, m = 0.6) => this.obstacles.every((o) => Math.hypot(o.x - x, o.z - z) > o.r + m) && Math.hypot(x, z) > 7;
-    for (let i = 0; i < (this.low ? 70 : 170); i++) {
+    for (let i = 0; i < (this.low ? 70 : 170) * (this.plan.biome === 'sahel' ? 0.35 : 1); i++) {
       const a = r() * Math.PI * 2;
       const d = 7 + r() * 28;
       const x = Math.cos(a) * d;
@@ -910,10 +1309,11 @@ export class VeilleeWorld {
     }
     // savane au loin : acacias en ombrelle
     const trunk = this.mat(0x251810);
-    const crown = this.mat(0x2d4a24);
+    const crown = this.mat(this.plan.biome === 'foret' ? 0x2a5a26 : 0x2d4a24);
     const canopy = new THREE.IcosahedronGeometry(2.1, 0);
-    for (let i = 0; i < (this.low ? 16 : 34); i++) {
-      const a = (i / (this.low ? 16 : 34)) * Math.PI * 2 + r() * 0.15;
+    const far = Math.round((this.low ? 16 : 34) * (this.plan.biome === 'sahel' ? 0.45 : this.plan.biome === 'foret' ? 1.7 : 1));
+    for (let i = 0; i < far; i++) {
+      const a = (i / far) * Math.PI * 2 + r() * 0.15;
       const d = 29 + r() * 34;
       const x = Math.cos(a) * d;
       const z = Math.sin(a) * d;
@@ -964,7 +1364,7 @@ export class VeilleeWorld {
   private hotspotRings() {
     const hitMat = new THREE.MeshBasicMaterial({ visible: false });
     this.owned.push(hitMat);
-    for (const h of HOTSPOTS) {
+    for (const h of this.plan.spots) {
       const radius = h.r + 0.5;
       const ring = new THREE.Mesh(
         new THREE.RingGeometry(radius - 0.08, radius, 40).rotateX(-Math.PI / 2),
@@ -991,10 +1391,39 @@ export class VeilleeWorld {
       this.unbind.push(() => el.removeEventListener(t, f as EventListener));
     };
     on('pointerdown', (e) => {
-      this.drag = { x: e.clientX, y: e.clientY, moved: false, id: e.pointerId };
+      this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
       el.setPointerCapture(e.pointerId);
+      if (this.pointers.size === 2) {
+        // deux doigts : zoom, pas de déplacement
+        this.drag = null;
+        const [a, b] = [...this.pointers.values()];
+        this.pinch = Math.hypot(a.x - b.x, a.y - b.y);
+        return;
+      }
+      this.drag = { x: e.clientX, y: e.clientY, moved: false, id: e.pointerId };
     });
+    // molette et pavé tactile (le pincement arrive avec ctrlKey)
+    const wheel = (e: WheelEvent) => {
+      e.preventDefault();
+      this.zoomBy(Math.exp(e.deltaY * (e.ctrlKey ? 0.012 : 0.0012)));
+    };
+    el.addEventListener('wheel', wheel, { passive: false });
+    this.unbind.push(() => el.removeEventListener('wheel', wheel));
+    const lift = (e: PointerEvent) => {
+      this.pointers.delete(e.pointerId);
+      if (this.pointers.size < 2) this.pinch = 0;
+    };
+    on('pointerup', lift);
+    on('pointercancel', lift);
     on('pointermove', (e) => {
+      if (this.pointers.has(e.pointerId)) this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (this.pointers.size === 2 && this.pinch) {
+        const [a, b] = [...this.pointers.values()];
+        const d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (d > 0) this.zoomBy(this.pinch / d);
+        this.pinch = d;
+        return;
+      }
       if (this.drag && this.drag.id === e.pointerId) {
         const dx = e.clientX - this.drag.x;
         const dy = e.clientY - this.drag.y;
@@ -1047,6 +1476,7 @@ export class VeilleeWorld {
         e.preventDefault();
         this.keys.add(e.code);
         this.target = null;
+        this.path = [];
       }
     };
     const release = (e: KeyboardEvent) => this.keys.delete(e.code);
@@ -1089,7 +1519,8 @@ export class VeilleeWorld {
     this.renderer.domElement.style.height = '100%';
     this.camera.aspect = w / h;
     // en portrait, on élargit le champ pour garder la scène lisible
-    this.camera.fov = w < h ? 76 : 62;
+    this.baseFov = w < h ? 76 : 62;
+    this.camera.fov = this.baseFov * this.zoom;
     this.camera.updateProjectionMatrix();
   }
 
@@ -1129,37 +1560,42 @@ export class VeilleeWorld {
       this.pos.z += ((-mx * sin + mz * cos) / l) * SPEED * dt;
       moving = true;
     } else if (this.target) {
-      const dx = this.target.x - this.pos.x;
-      const dz = this.target.z - this.pos.z;
+      const way = this.path[0] ?? this.target;
+      const dx = way.x - this.pos.x;
+      const dz = way.z - this.pos.z;
       const d = Math.hypot(dx, dz);
       if (d > 0.08) {
-        const [sx, sz] = this.steer(dx / d, dz / d, d);
-        const step = Math.min(d, SPEED * dt);
-        this.pos.x += sx * step;
-        this.pos.z += sz * step;
+        const step = Math.min(d, WALK_SPEED * dt);
+        this.pos.x += (dx / d) * step;
+        this.pos.z += (dz / d) * step;
         moving = true;
-        // aucun progrès pendant 2 s : destination inaccessible, on s'arrête là
-        if (d < this.lastGap - 0.02) {
-          this.lastGap = d;
-          this.stuck = 0;
-        } else if ((this.stuck += dt) > 2) {
-          this.target = this.target.face ? { x: this.pos.x, z: this.pos.z, face: this.target.face } : null;
-        }
       }
-      const arrived = d <= 0.08;
-      const face = this.target?.face;
-      // regarde où il marche, puis l'objet une fois arrivé
-      const look = face && (arrived || d < 3) ? face : !arrived && d > 0.6 ? this.target : null;
+      if (d < 0.25 && this.path.length > 1) this.path.shift();
+      const left = Math.hypot(this.target.x - this.pos.x, this.target.z - this.pos.z);
+      if (left < this.lastGap - 0.02) {
+        this.lastGap = left;
+        this.stuck = 0;
+      } else if ((this.stuck += dt) > 1.5) {
+        // destination inaccessible : on s'arrête là, sans piétiner
+        this.path = [];
+        this.target = { x: this.pos.x, z: this.pos.z, face: this.target.face };
+      }
+      const arrived = left <= 0.1;
+      const face = this.target.face;
+      const look = face && (arrived || left < 2.5) ? face : !arrived ? way : null;
       if (look) {
         const want = Math.atan2(-(look.x - this.pos.x), -(look.z - this.pos.z));
         const diff = Math.atan2(Math.sin(want - this.yaw), Math.cos(want - this.yaw));
-        this.yaw += diff * Math.min(1, dt * 3.5);
+        // rotation douce et plafonnée : la vue ne tremble pas
+        const turn = Math.sign(diff) * Math.min(Math.abs(diff), Math.max(0.4, Math.abs(diff) * 3) * dt);
+        this.yaw += turn;
         const wantPitch = face && look === face ? Math.atan2(face.y - EYE, Math.hypot(face.x - this.pos.x, face.z - this.pos.z)) : -0.04;
         this.pitch += (wantPitch - this.pitch) * Math.min(1, dt * 3);
-        if (arrived && Math.abs(diff) < 0.02) this.target = null;
+        if (arrived && Math.abs(diff) < 0.015) this.target = null;
       } else if (arrived) {
         this.target = null;
       }
+      if (!this.target) this.path = [];
     }
     this.collide();
     if (moving && !this.reduced) this.bob += dt * 9;
@@ -1195,7 +1631,7 @@ export class VeilleeWorld {
 
   private updateLabels(w: number, h: number) {
     const v = new THREE.Vector3();
-    for (const s of HOTSPOTS) {
+    for (const s of this.plan.spots) {
       const el = this.labels.get(s.id);
       if (!el) continue;
       v.set(s.x, s.h, s.z).project(this.camera);
@@ -1219,6 +1655,11 @@ export class VeilleeWorld {
     const t = this.time;
 
     this.move(dt);
+    const fov = this.baseFov * this.zoom;
+    if (Math.abs(this.camera.fov - fov) > 0.02) {
+      this.camera.fov += (fov - this.camera.fov) * Math.min(1, dt * 9);
+      this.camera.updateProjectionMatrix();
+    }
 
     for (const a of this.animated) a.u.value = t;
     this.flameMat.forEach((m) => (m.uniforms['uTime'].value = t));
@@ -1236,9 +1677,11 @@ export class VeilleeWorld {
     g.head.rotation.y = this.talking ? Math.sin(t * 1.3) * 0.32 : Math.sin(t * 0.35) * 0.15;
     g.arm.rotation.x = this.talking ? -0.5 + Math.sin(t * 2.6) * 0.32 : Math.sin(t * 0.8) * 0.03;
     g.arm.rotation.z = this.talking ? Math.sin(t * 1.7) * 0.22 : 0;
-    this.horse.head.rotation.z = Math.sin(t * 0.5) * 0.05 - (Math.sin(t * 0.13) > 0.75 ? 0.35 : 0);
-    this.horse.tail.rotation.z = Math.sin(t * 2.4) * 0.16;
-    this.horse.tail.rotation.x = Math.sin(t * 1.9) * 0.2;
+    if (this.horse) {
+      this.horse.head.rotation.z = Math.sin(t * 0.5) * 0.05 - (Math.sin(t * 0.13) > 0.75 ? 0.35 : 0);
+      this.horse.tail.rotation.z = Math.sin(t * 2.4) * 0.16;
+      this.horse.tail.rotation.x = Math.sin(t * 1.9) * 0.2;
+    }
 
     for (const [id, ring] of this.rings) {
       const m = ring.material as THREE.MeshBasicMaterial;
@@ -1255,12 +1698,31 @@ export class VeilleeWorld {
     if (this.fireLight.castShadow && ++this.shadowTick % 24 === 0) this.renderer.shadowMap.needsUpdate = true;
 
     if (++this.listenTick % 12 === 0) {
-      this.events.listener?.(Math.hypot(this.pos.x, this.pos.z), Math.hypot(this.pos.x - 12, this.pos.z - 7));
+      this.events.listener?.(Math.hypot(this.pos.x, this.pos.z), this.pondAt ? Math.hypot(this.pos.x - this.pondAt.x, this.pos.z - this.pondAt.z) : 99);
+      this.checkNear();
     }
 
     this.renderer.render(this.scene, this.camera);
     this.adapt(raw);
   };
+
+  /** Objet tout proche : la page propose de l'écouter avec la touche Entrée. */
+  private checkNear() {
+    let best: string | null = null;
+    let bestD = Infinity;
+    for (const h of this.plan.spots) {
+      const d = Math.hypot(h.x - this.pos.x, h.z - this.pos.z);
+      const reach = h.id === 'griot' ? 10 : h.r + 3.8;
+      if (d < reach && d - h.r < bestD) {
+        bestD = d - h.r;
+        best = h.id;
+      }
+    }
+    if (best !== this.nearId) {
+      this.nearId = best;
+      this.events.near?.(best);
+    }
+  }
 
   /** Qualité réglée d'après la fluidité réelle : l'expérience reste jouable sur tout appareil. */
   private adapt(ms: number) {

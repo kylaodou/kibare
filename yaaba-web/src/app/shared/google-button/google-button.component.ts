@@ -30,10 +30,7 @@ function loadGis(): Promise<void> {
   return script;
 }
 
-/**
- * Bouton « Continuer avec Google » (Google Identity Services, gratuit).
- * N'apparaît que si le serveur a un identifiant client Google configuré ; émet le jeton d'identité reçu.
- */
+/** Bouton « Continuer avec Google » (Google Identity Services, gratuit). */
 @Component({
   selector: 'app-google-button',
   template: `

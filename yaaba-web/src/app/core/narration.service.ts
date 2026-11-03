@@ -5,10 +5,7 @@ const LOCALES: Record<string, string[]> = {
   en: ['en-GB', 'en-US', 'en'],
 };
 
-/**
- * Narration par synthèse vocale (Web Speech API), phrase par phrase,
- * pour pouvoir surligner la phrase lue à l'écran (lecture « karaoké »).
- */
+/** Narration par synthèse vocale (Web Speech API), phrase par phrase, pour pouvoir surligner la phrase lue à l'écran (lecture « karaoké »). */
 @Injectable({ providedIn: 'root' })
 export class NarrationService {
   readonly speaking = signal(false);

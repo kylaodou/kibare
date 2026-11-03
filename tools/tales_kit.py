@@ -1,7 +1,4 @@
-"""Petits outils pour écrire un conte KIBARE (JSON) de façon compacte.
-
-Un conte : 4 à 5 scènes (illustration + texte fr/en), un choix interactif, un quiz, un glossaire, une source.
-"""
+"""Petits outils pour écrire un conte KIBARE (JSON) de façon compacte."""
 import json
 from pathlib import Path
 

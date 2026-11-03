@@ -27,11 +27,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-/**
- * Sécurité : lecture publique ; inscription et connexion délivrent un jeton JWT signé (HS256).
- * Contribuer, commenter et consulter son compte demandent d'être connecté ;
- * l'espace d'administration est réservé au rôle ADMIN.
- */
+/** Sécurité : lecture publique ; inscription et connexion délivrent un jeton JWT signé (HS256). */
 @Configuration
 public class SecurityConfig {
 
