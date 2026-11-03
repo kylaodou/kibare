@@ -25,9 +25,25 @@
     </div>
 
     @if (listOpen()) {
-      <nav class="list" id="vl-list" aria-label="Les histoires du village">
-        @for (h of hotspots; track h.id) {
-          <button type="button" (click)="visit(h)"><i class="fa-solid {{ h.icon }}" aria-hidden="true"></i> {{ h.label }}</button>
+      <nav class="list" id="vl-list" aria-label="Les histoires">
+        <label class="find">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input type="search" [ngModel]="query()" (ngModelChange)="query.set($event)" placeholder="Titre, lieu, région…" aria-label="Chercher un conte" />
+        </label>
+        @if (!query().trim()) {
+          <h3>Dans le village</h3>
+          @for (h of hotspots; track h.id) {
+            <button type="button" (click)="visit(h)"><i class="fa-solid {{ h.icon }}" aria-hidden="true"></i> {{ h.label }}</button>
+          }
+        }
+        <h3>Tous les contes ({{ allTales().length }}{{ query().trim() ? ' sur ' + total() : '' }})</h3>
+        @for (t of allTales(); track t.slug) {
+          <button type="button" class="tl" (click)="chooseTale(t.slug)">
+            <span>{{ t.title }}</span>
+            <small>{{ t.place }} · {{ t.region }}</small>
+          </button>
+        } @empty {
+          <p class="none">Aucun conte ne correspond à cette recherche.</p>
         }
       </nav>
     }
@@ -42,12 +58,28 @@
       </p>
     }
 
+    <!-- ce que raconte le griot : l'illustration animée du paragraphe, ou sa vidéo -->
+    @if (scene(); as sc) {
+      @if (showArt()) {
+        <figure class="vision" [attr.aria-label]="'Illustration du paragraphe ' + (sceneIndex() + 1)">
+          @for (k of [sceneIndex()]; track k) {
+            @if (sc.video) {
+              <video class="art-in" [src]="data.mediaUrl(sc.video)" autoplay muted loop playsinline></video>
+            } @else {
+              <app-scene-art class="art-in" [art]="sc.art" [cinema]="sceneIndex()" [focus]="focus()" />
+            }
+          }
+        </figure>
+      }
+    }
+
     <!-- paroles du griot -->
     @if (telling()) {
       <div class="subtitles" aria-live="polite">
         <p>{{ subtitle() }}</p>
         <div class="sub-ctrl">
           <small>{{ sceneIndex() + 1 }} / {{ tale()?.scenes?.length }}</small>
+          <button type="button" (click)="showArt.set(!showArt())" [attr.aria-pressed]="showArt()" [attr.aria-label]="showArt() ? 'Masquer l\'illustration' : 'Afficher l\'illustration'"><i class="fa-solid" [class.fa-image]="showArt()" [class.fa-eye-slash]="!showArt()" aria-hidden="true"></i></button>
           <button type="button" (click)="togglePause()" [attr.aria-label]="paused() ? 'Reprendre' : 'Mettre en pause'"><i class="fa-solid" [class.fa-pause]="!paused()" [class.fa-play]="paused()" aria-hidden="true"></i></button>
           <button type="button" (click)="skip()" aria-label="Paragraphe suivant"><i class="fa-solid fa-forward-step" aria-hidden="true"></i></button>
           <button type="button" (click)="stopTelling()" aria-label="Arrêter le récit"><i class="fa-solid fa-stop" aria-hidden="true"></i></button>
@@ -56,7 +88,7 @@
     } @else if (spot(); as s) {
       <article class="card-tale" aria-live="polite">
         <button type="button" class="x" (click)="close()" aria-label="Fermer"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-        <span class="eyebrow">{{ s.slug ? s.label : 'Le griot vous propose ce soir' }}</span>
+        <span class="eyebrow">{{ s.slug ? s.label : chosen() ? 'Le griot connaît cette histoire' : 'Le griot vous propose ce soir' }}</span>
         @if (tale()) {
           <h2>{{ title() }}</h2>
           <small class="where"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ tale()?.place }} · {{ regionName() }}</small>

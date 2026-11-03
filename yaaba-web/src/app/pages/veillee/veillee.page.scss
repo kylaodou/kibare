@@ -129,7 +129,7 @@
   z-index: 3;
   display: grid;
   gap: 2px;
-  width: min(280px, calc(100% - 24px));
+  width: min(340px, calc(100% - 24px));
   max-height: calc(100% - 80px);
   overflow-y: auto;
   padding: 8px;
@@ -161,6 +161,98 @@
     &:focus-visible {
       background: #7c3109;
     }
+  }
+}
+
+.list h3 {
+  margin: 12px 12px 4px;
+  color: #ffc35a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.list .tl {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+  padding: 8px 12px;
+
+  small {
+    color: #cdbda7;
+    font-size: 0.76rem;
+  }
+}
+
+.list .none {
+  margin: 8px 12px;
+  color: #cdbda7;
+  font-size: 0.88rem;
+}
+
+.find {
+  position: sticky;
+  top: -8px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  background: rgb(30 18 10);
+
+  i {
+    color: #ffc35a;
+  }
+  input {
+    flex: 1;
+    min-width: 0;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid rgb(255 255 255 / 0.25);
+    border-radius: 8px;
+    background: rgb(255 255 255 / 0.08);
+    color: #fff;
+    font: inherit;
+    font-size: 0.9rem;
+    &::placeholder {
+      color: #cdbda7;
+    }
+  }
+}
+
+/* l'illustration du paragraphe raconté, à côté du griot */
+.vision {
+  position: absolute;
+  top: 66px;
+  right: 14px;
+  width: min(42%, 620px);
+  aspect-ratio: 16 / 10;
+  margin: 0;
+  overflow: hidden;
+  border: 4px solid #f4ebdb;
+  border-radius: 10px;
+  background: #1e1611;
+
+  app-scene-art,
+  video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.art-in {
+  animation: vl-art 0.7s ease both;
+}
+
+@keyframes vl-art {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
   }
 }
 
@@ -357,6 +449,14 @@
 }
 
 @media (max-width: 640px) {
+  .vision {
+    top: 62px;
+    right: 8px;
+    left: 8px;
+    width: auto;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
   .hud-btn span {
     display: none;
   }
@@ -395,7 +495,43 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .art-in {
+    animation: none;
+  }
   .labels {
     transition: none;
+  }
+}
+
+/* téléphone couché : illustration à droite, sous-titres à gauche, la scène tient dans l'écran */
+@media (max-height: 560px) and (min-width: 500px) {
+  .vl-stage {
+    min-height: 0;
+  }
+  .vision {
+    top: 58px;
+    right: 8px;
+    bottom: 8px;
+    left: auto;
+    width: 36%;
+    height: auto;
+    aspect-ratio: auto;
+  }
+  .subtitles {
+    left: 8px;
+    bottom: 8px;
+    width: calc(64% - 24px);
+    padding: 8px 12px 6px;
+    transform: none;
+
+    p {
+      min-height: 0;
+      margin-bottom: 4px;
+      font-size: 0.92rem;
+    }
+  }
+  .card-tale {
+    max-height: calc(100% - 16px);
+    bottom: 8px;
   }
 }

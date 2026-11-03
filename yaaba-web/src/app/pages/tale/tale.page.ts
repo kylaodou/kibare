@@ -11,6 +11,7 @@ import { I18nService, TranslatePipe, TxPipe } from '../../core/i18n.service';
 import { AudioTrack, GlossaryEntry } from '../../core/models';
 import { NarrationService } from '../../core/narration.service';
 import { ProgressService } from '../../core/progress.service';
+import { sceneFocus } from '../../shared/art/focus';
 import { SceneArtComponent } from '../../shared/art/scene-art.component';
 import { HeartBurstComponent } from '../../shared/heart-burst/heart-burst.component';
 import { SkeletonComponent } from '../../shared/skeleton/skeleton.component';
@@ -32,30 +33,6 @@ const READ_LANGS = ['fr', 'en', 'moore', 'dioula', 'fulfulde'];
  * puis morale, quiz, glossaire, source, contributeurs et commentaires.
  */
 /** Mots (fr, en) qui désignent chaque élément d'illustration. */
-const PEOPLE = ['homme', 'man', 'chasseur', 'hunter', 'roi', 'king', 'chef', 'chief', 'naaba', 'père', 'father', 'fils', 'son'];
-const FOCUS_WORDS: Record<string, string[]> = {
-  man: PEOPLE, 'man-talk': PEOPLE, 'man-point': PEOPLE, 'man-up': PEOPLE, hunter: ['chasseur', 'hunter'],
-  king: ['roi', 'king', 'chef', 'chief', 'naaba'], 'king-talk': ['roi', 'king', 'chef', 'chief', 'naaba'],
-  woman: ['femme', 'woman', 'mère', 'mother', 'fille', 'daughter', 'reine'], 'woman-talk': ['femme', 'woman', 'mère', 'mother'],
-  'woman-up': ['femme', 'woman', 'mère', 'mother'], 'woman-pound': ['femme', 'woman', 'mère', 'mother'],
-  princess: ['princesse', 'princess'], 'old-woman': ['vieille', 'old woman', 'grand-mère'],
-  child: ['enfant', 'child', 'petit', 'little', 'garçon', 'boy'], 'child-up': ['enfant', 'child', 'petit', 'little', 'garçon', 'boy'],
-  elder: ['vieil', 'vieux', 'ancien', 'elder', 'old man', 'sage'], 'elder-sit': ['vieil', 'vieux', 'ancien', 'elder', 'sage'],
-  shepherd: ['berger', 'herder', 'shepherd'], rider: ['cavalier', 'rider', 'horseman'],
-  lion: ['lion'], hyena: ['hyène', 'hyena'], hare: ['lièvre', 'hare'], elephant: ['éléphant', 'elephant'],
-  croc: ['crocodile'], crocodile: ['crocodile'], tortoise: ['tortue', 'tortoise'], snake: ['serpent', 'snake'],
-  monkey: ['singe', 'monkey'], dog: ['chien', 'dog', 'chacal', 'jackal'], cow: ['vache', 'cow', 'troupeau', 'herd'],
-  goat: ['chèvre', 'goat', 'bouc'], ram: ['bélier', 'ram'], horse: ['cheval', 'horse'], 'horse-run': ['cheval', 'horse'],
-  chicken: ['poule', 'hen', 'poulet', 'chicken', 'coq'], 'guinea-fowl': ['pintade', 'guinea fowl'], partridge: ['perdrix', 'partridge'],
-  owl: ['hibou', 'owl'], bat: ['chauve-souris', 'bat'], toad: ['crapaud', 'toad'], mouse: ['souris', 'mouse'],
-  antelope: ['antilope', 'antelope', 'biche', 'doe'], camel: ['chameau', 'camel'], lizard: ['margouillat', 'lizard'],
-  hippo: ['hippopotame', 'hippo'], catfish: ['poisson', 'fish', 'silure', 'catfish'], 'wild-cow': ['buffle', 'buffalo'],
-  yboumbouni: ['yboumbouni'], bees: ['abeille', 'bee'], beehive: ['miel', 'honey', 'ruche'], wasp: ['guêpe', 'wasp'],
-  baobab: ['baobab'], well: ['puits', 'well'], fire: ['feu', 'fire'], palace: ['palais', 'palace', 'cour'],
-  calabash: ['calebasse', 'calabash'], 'giant-calabash': ['calebasse', 'calabash'], drum: ['tambour', 'drum', 'tam-tam'],
-  jar: ['jarre', 'jar', 'canari'], granary: ['grenier', 'granary'], hut: ['case', 'hut'], moon: ['lune', 'moon'],
-  sun: ['soleil', 'sun'], rain: ['pluie', 'rain', 'orage', 'storm'], peaks: ['pics', 'peaks', 'rocher'],
-};
 
 /** Une voix : un conteur dans une langue, avec ses fichiers par paragraphe (identifiant de scène → URL). */
 interface Voice {
@@ -206,15 +183,7 @@ export class TalePage implements AfterViewInit {
     const para = this.paragraphs()[this.active()];
     const scene = this.current();
     if (!this.playing() || si < 0 || !para?.[si] || !scene) return null;
-    const sentence = para[si].map((p) => p.text).join('').toLowerCase();
-    let best: { i: number; at: number } | null = null;
-    scene.art.items.forEach((it, i) => {
-      for (const word of FOCUS_WORDS[it.k] ?? []) {
-        const at = sentence.search(new RegExp(String.raw`(^|[^\p{L}])` + word, 'u'));
-        if (at >= 0 && (!best || at < best.at)) best = { i, at };
-      }
-    });
-    return best ? (best as { i: number }).i : null;
+    return sceneFocus(scene.art, para[si].map((p) => p.text).join(''));
   });
 
   readonly related = computed(() => {

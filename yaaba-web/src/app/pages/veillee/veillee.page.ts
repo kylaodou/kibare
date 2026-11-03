@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, NgZone, OnDestroy, computed, effect, inject, signal, viewChild, viewChildren } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { AmbienceService } from '../../core/ambience.service';
@@ -7,6 +8,8 @@ import { I18nService } from '../../core/i18n.service';
 import { Tale } from '../../core/models';
 import { NarrationService } from '../../core/narration.service';
 import { ProgressService } from '../../core/progress.service';
+import { sceneFocus } from '../../shared/art/focus';
+import { SceneArtComponent } from '../../shared/art/scene-art.component';
 import { taleText } from '../../shared/tale-card/tale-card.component';
 import { VeilleeSound } from './veillee-sound';
 import { HOTSPOTS, Hotspot, VeilleeWorld } from './veillee-world';
@@ -19,7 +22,7 @@ const LANGS = ['fr', 'en', 'moore', 'dioula', 'fulfulde'];
  */
 @Component({
   selector: 'app-veillee',
-  imports: [RouterLink],
+  imports: [RouterLink, FormsModule, SceneArtComponent],
   templateUrl: './veillee.page.html',
   styleUrl: './veillee.page.scss',
 })
@@ -39,6 +42,10 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
   readonly state = signal<'loading' | 'ready' | 'in' | 'nogl' | 'lost'>('loading');
   readonly muted = signal(false);
   readonly listOpen = signal(false);
+  /** recherche dans tous les contes */
+  readonly query = signal('');
+  /** l'illustration du paragraphe accompagne le récit (masquable) */
+  readonly showArt = signal(true);
   readonly fullscreen = signal(false);
   readonly coarse = matchMedia('(pointer: coarse)').matches;
 
@@ -46,6 +53,8 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
   readonly spot = signal<Hotspot | null>(null);
   /** rang dans les contes à la une, pour « Un autre conte » du griot */
   private griotIndex = signal(this.dayIndex());
+  /** conte choisi dans la liste : c'est le griot qui le raconte */
+  readonly chosen = signal<string | null>(null);
   readonly lang = signal('fr');
   /* récit en cours */
   readonly telling = signal(false);
@@ -58,6 +67,8 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
     const s = this.spot();
     if (!s) return undefined;
     if (s.slug) return this.data.tale(s.slug);
+    const c = this.chosen();
+    if (c) return this.data.tale(c);
     const l = this.featured();
     return l.length ? l[this.griotIndex() % l.length] : undefined;
   });
@@ -74,6 +85,25 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
   readonly summary = computed(() => {
     const t = this.tale();
     return t ? taleText(t, this.lang()).summary : '';
+  });
+  /** Tous les contes publiés, triés par titre et filtrés par la recherche. */
+  readonly allTales = computed(() => {
+    const fold = (x: string) => x.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+    const q = fold(this.query().trim());
+    const regions = this.data.regionMap();
+    return this.data
+      .tales()
+      .map((t) => ({ slug: t.slug, title: taleText(t, 'fr').title, place: t.place, region: regions.get(t.region)?.name ?? '' }))
+      .filter((t) => !q || fold(`${t.title} ${t.place} ${t.region}`).includes(q))
+      .sort((a, b) => a.title.localeCompare(b.title, 'fr'));
+  });
+  readonly total = computed(() => this.data.tales().length);
+  /** Paragraphe raconté : son illustration s'affiche pendant le récit. */
+  readonly scene = computed(() => (this.telling() ? this.tale()?.scenes[this.sceneIndex()] : undefined));
+  /** La caméra de l'illustration cadre ce que nomme la phrase en cours. */
+  readonly focus = computed(() => {
+    const s = this.scene();
+    return s && this.subtitle() ? sceneFocus(s.art, this.subtitle()) : null;
   });
   readonly regionName = computed(() => this.data.regionMap().get(this.tale()?.region ?? '')?.name ?? '');
 
@@ -168,9 +198,20 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
     this.open(h.id);
   }
 
+  /** Un conte de la liste : le griot le raconte, on rejoint sa place autour du feu. */
+  chooseTale(slug: string) {
+    this.listOpen.set(false);
+    this.stopTelling();
+    this.chosen.set(slug);
+    this.world?.walkTo('griot');
+    this.spot.set(HOTSPOTS.find((x) => x.id === 'griot') ?? null);
+  }
+
   private open(id: string) {
     const h = HOTSPOTS.find((x) => x.id === id) ?? null;
     if (this.telling() && h?.id !== this.spot()?.id) this.stopTelling();
+    // toucher le griot sans choisir de conte : il revient à sa proposition du soir
+    if (h?.id === 'griot' && !this.telling() && this.spot()?.id !== 'griot') this.chosen.set(null);
     this.spot.set(h);
   }
 
@@ -181,6 +222,7 @@ export class VeilleePage implements AfterViewInit, OnDestroy {
 
   otherTale() {
     this.stopTelling();
+    this.chosen.set(null);
     this.griotIndex.update((i) => i + 1);
   }
 
