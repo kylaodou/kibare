@@ -65,7 +65,7 @@ public class SecurityConfig {
     @Bean
     SecretKey jwtKey(YaabaProperties props) {
         byte[] bytes = props.jwtSecret().getBytes(StandardCharsets.UTF_8);
-        if (bytes.length < 32) throw new IllegalStateException("yaaba.jwt-secret doit contenir au moins 32 caractères");
+        if (bytes.length < 32) throw new IllegalStateException("JWT_SECRET doit être défini (32 caractères minimum). En local, lancez le profil « dev ».");
         return new SecretKeySpec(bytes, "HmacSHA256");
     }
 

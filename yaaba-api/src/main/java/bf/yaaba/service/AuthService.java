@@ -64,10 +64,15 @@ public class AuthService implements ApplicationRunner {
     public void run(ApplicationArguments args) {
         String email = props.admin().email().toLowerCase(Locale.ROOT);
         if (users.existsByEmailIgnoreCase(email)) return;
+        String password = props.admin().password();
+        if (password == null || password.isBlank()) {
+            log.warn("ADMIN_PASSWORD n'est pas défini : aucun compte administrateur n'a été créé.");
+            return;
+        }
         User admin = new User();
         admin.setName(props.admin().name());
         admin.setEmail(email);
-        admin.setPasswordHash(encoder.encode(props.admin().password()));
+        admin.setPasswordHash(encoder.encode(password));
         admin.setRole(User.Role.ADMIN);
         users.save(admin);
         log.info("Compte administrateur créé : {}", email);

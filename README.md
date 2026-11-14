@@ -56,7 +56,7 @@ node content/build.mjs
 
 # 2. Lancer le serveur (http://localhost:8081)
 cd yaaba-api
-mvn spring-boot:run
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 
 # 3. Dans un autre terminal, lancer le site (http://localhost:4200)
 cd yaaba-web
@@ -80,7 +80,7 @@ Les mots de passe ne vont **jamais** dans le code. En local, ils vont dans `yaab
 | `GOOGLE_CLIENT_ID` | La connexion avec Google |
 | `APP_URL` | L'adresse du site, pour les liens des e-mails |
 | `ADMIN_EMAIL`, `ADMIN_PASSWORD` | Le compte administrateur |
-| `JWT_SECRET` | La sécurité des sessions |
+| `JWT_SECRET` | La sécurité des sessions (obligatoire, 32 caractères minimum : le serveur refuse de démarrer sans) |
 
 ## Mise en ligne (gratuite)
 
