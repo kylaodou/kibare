@@ -36,7 +36,9 @@ import org.springframework.test.web.servlet.MockMvc;
         "yaaba.mail.outbox-dir=target/test-outbox",
         "yaaba.mail.require-verified=false",
         "spring.mail.host=",
-        "yaaba.google.client-id="})
+        "yaaba.google.client-id=",
+        "yaaba.jwt-secret=secret-de-test-uniquement-pour-les-tests-automatiques",
+        "yaaba.admin.password=kibare2026"})
 @AutoConfigureMockMvc
 class YaabaApiTest {
 

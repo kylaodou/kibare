@@ -1,0 +1,6 @@
+# Profil de développement local uniquement : mvn spring-boot:run -Dspring-boot.run.profiles=dev
+# Ces valeurs sont publiques : ne jamais activer ce profil sur un serveur en ligne.
+yaaba:
+  jwt-secret: ${JWT_SECRET:developpement-local-uniquement-ne-pas-utiliser-en-ligne}
+  admin:
+    password: ${ADMIN_PASSWORD:admin-local-2026}
